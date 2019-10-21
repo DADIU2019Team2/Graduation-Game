@@ -10,7 +10,7 @@ namespace UnityEditor
         [MenuItem("Pipeline/Build: Android")]
         public static void BuildAndroid()
         {
-            string localFilePath = @"C:\Users\Dadiu student\Desktop\buildNumbers.txt";
+            string localFilePath = @"C:\Users\Dadiu student\Desktop\buildNumbers-Master.txt";
             string filepathInResources = Application.dataPath + "/Resources/buildNumbers.txt";
             setBuildNum(localFilePath, filepathInResources); //update our build number file
             Directory.CreateDirectory(pathname);
@@ -54,8 +54,8 @@ namespace UnityEditor
             get
             {
                 //string filepathInResources = Application.dataPath + "/Resources/buildNumbers.txt";
-                string pathToFile = @"C:\Users\Dadiu student\Desktop\buildNumbers.txt";
-                return (DateTime.Now.ToString("MMddHHmm-") + repoBranchName + "-" + getBuildNum(pathToFile).ToString() + ".apk");
+                string pathToBuildnum = @"C:\Users\Dadiu student\Desktop\buildNumbers.txt";
+                return (DateTime.Now.ToString("MMddHHmm-") + repoBranchName + "-" + getBuildNum(pathToBuildnum).ToString() + ".apk");
             }
         }
 
@@ -67,7 +67,7 @@ namespace UnityEditor
 
                 startInfo.UseShellExecute = false;
                 //startInfo.WorkingDirectory = @"C:\Users\Dadiu student\DADIU Team 2 - Minigame 1\Minigame1";
-                startInfo.WorkingDirectory = @"C:\Users\Dadiu student\.jenkins\workspace\Minigame2\Minigame2"; //hardcode path
+                startInfo.WorkingDirectory = @"C:\Users\Dadiu student\.jenkins\workspace\GraduationGame\GraduationGame unity"; //hardcode path
                 UnityEngine.Debug.LogError("The path to working directory: " + startInfo.WorkingDirectory);
                 startInfo.RedirectStandardInput = true;
                 startInfo.RedirectStandardOutput = true;
@@ -85,7 +85,7 @@ namespace UnityEditor
         //[MenuItem("Pipeline/Update build number")]
         public static void updateBuildNumber()
         {
-            string localFilePath = @"C:\Users\Dadiu student\Desktop\buildNumbers.txt";
+            string localFilePath = @"C:\Users\Dadiu student\Desktop\buildNumbers-Master.txt";
             string filepathInResources = Application.dataPath + "/Resources/buildNumbers.txt";
             setBuildNum(localFilePath, filepathInResources); //update our build number file
         }
