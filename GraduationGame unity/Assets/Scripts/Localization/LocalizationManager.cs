@@ -57,8 +57,8 @@ public class LocalizationManager : MonoBehaviour
         AutoTranslator[] autos2 = Resources.FindObjectsOfTypeAll<AutoTranslator>();
         foreach (AutoTranslator a in autos2)
             a.OnLanguageChange();
-        foreach (string k in dictionary.Keys)
-            Debug.Log(k + " is " + dictionary[k]);
+        //foreach (string k in dictionary.Keys)
+            //Debug.Log(k + " is " + dictionary[k]);
     }
 
     void ChangeLanguage(GameLanguage language)
