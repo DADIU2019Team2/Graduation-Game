@@ -8,7 +8,6 @@ public class FpsCounter : MonoBehaviour
     public enum FPSType{All, avgFPS, fps, highestFPS, LowestFPS}
     public FPSType fpsType;
     public TextMeshProUGUI tmText;
-    public static float fps;
     public static float actualFPS;
     public static float avgFPS { get; set; }
     public static float highestFPS { get; set; }
@@ -16,14 +15,20 @@ public class FpsCounter : MonoBehaviour
     public int frameRange;
     int[] fpsBuffer;
     int fpsBufferIndex;
-    Queue<int> oneSecfpsBuffer;
-    int framesInLastOneSec;
-    //int oneSecFPSIndex;
 
+
+    public float updateInterval = 1f;
+    private float accum;
+    private int frames;
+    private float timeLeft;
+    private float fps;
+    private float lastSample;
+    private int gottenIntervals;
     // Start is called before the first frame update
     void Start()
     {
-
+        timeLeft = updateInterval;
+        lastSample = Time.realtimeSinceStartup;
     }
 
     // Update is called once per frame
@@ -33,7 +38,6 @@ public class FpsCounter : MonoBehaviour
         {
             InitializeBuffer();
         }
-        updateOneSecFPS();
         UpdateBuffer();
         CalculateFPS();
         //Debug.Log("Avg FPS : " + avgFPS + ", Highest FPS : " + highestFPS + ", Lowest FPS : " + +lowestFPS + "    Value are for last " + frameRange + " frames");
@@ -41,13 +45,27 @@ public class FpsCounter : MonoBehaviour
         {
             writeFPS();
         }
+
+        //more fps
+        ++frames;
+        float newSample = Time.realtimeSinceStartup;
+        float deltaTime = newSample - lastSample;
+        lastSample = newSample;
+
+        timeLeft -= deltaTime;
+        accum += 1.0f / deltaTime;
+
+        //interval ended
+        if(timeLeft <= 0.0f)
+        {
+            fps = accum/frames;
+            timeLeft = updateInterval;
+            accum = 0.0f;
+            frames = 0;
+            ++gottenIntervals;
+        }
     }
 
-    private void updateOneSecFPS()
-    {
-        oneSecfpsBuffer.Enqueue(framesInLastOneSec);
-        StartCoroutine(popQueAfterSec());
-    }
     void InitializeBuffer()
     {
         if (frameRange <= 0)
@@ -56,9 +74,6 @@ public class FpsCounter : MonoBehaviour
         }
         fpsBuffer = new int[frameRange];
         fpsBufferIndex = 0;
-
-        oneSecfpsBuffer = new Queue<int>();
-        framesInLastOneSec = 0;
     }
 
     void UpdateBuffer()
@@ -76,17 +91,17 @@ public class FpsCounter : MonoBehaviour
         int lowest = int.MaxValue;
         for (int i = 0; i < frameRange; i++)
         {
-            int fps = fpsBuffer[i];
-            sum += fps;
-            if (fps > highest)
+            int _fps = fpsBuffer[i];
+            sum += _fps;
+            if (_fps > highest)
             {
-                highest = fps;
+                highest = _fps;
             }
-            if (fps < lowest)
+            if (_fps < lowest)
             {
-                lowest = fps;
+                lowest = _fps;
             }
-            if (fps < 10)
+            if (_fps < 10)
             {
                 //Debug.Log("LOW FPS " + fps);
 
@@ -100,7 +115,11 @@ public class FpsCounter : MonoBehaviour
     public float getFPSCount()
     {
         //return oneSecfpsBuffer.Count;
-        return 1f/Time.deltaTime;
+        return fps;
+    }
+    private bool hasFPS()
+    {
+        return gottenIntervals > 2;
     }
     public float GetAverageFPS()
     {
@@ -137,12 +156,5 @@ public class FpsCounter : MonoBehaviour
             tmText.text = lineToWrite;
             break;
         }
-    }
-
-    IEnumerator popQueAfterSec()
-    {
-        yield return new WaitForSeconds(1f);
-        if(oneSecfpsBuffer.Count > 0)
-            oneSecfpsBuffer.Dequeue();
     }
 }
