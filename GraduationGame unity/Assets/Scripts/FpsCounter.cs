@@ -5,7 +5,7 @@ using TMPro;
 
 public class FpsCounter : MonoBehaviour
 {
-    public enum FPSType{avgFPS, fps, highestFPS, LowestFPS}
+    public enum FPSType{All, avgFPS, fps, highestFPS, LowestFPS}
     public FPSType fpsType;
     public TextMeshProUGUI tmText;
     public static float fps;
@@ -88,7 +88,7 @@ public class FpsCounter : MonoBehaviour
             }
             if (fps < 10)
             {
-                Debug.Log("LOW FPS " + fps);
+                //Debug.Log("LOW FPS " + fps);
 
             }
         }
@@ -99,7 +99,8 @@ public class FpsCounter : MonoBehaviour
 
     public float getFPSCount()
     {
-        return oneSecfpsBuffer.Count;
+        //return oneSecfpsBuffer.Count;
+        return 1f/Time.deltaTime;
     }
     public float GetAverageFPS()
     {
@@ -129,6 +130,11 @@ public class FpsCounter : MonoBehaviour
             break;
         case FPSType.LowestFPS:
             tmText.text = "Lowest FPS: " + GetLowestFPS().ToString();
+            break;
+        case FPSType.All:
+            string lineToWrite = "FPS count: " + getFPSCount().ToString("F0") + "   avg FPS: " + GetAverageFPS().ToString() +
+                "   Highest FPS: " + GetHighestFPS().ToString() + "   Lowest FPS: " + GetLowestFPS().ToString();
+            tmText.text = lineToWrite;
             break;
         }
     }
