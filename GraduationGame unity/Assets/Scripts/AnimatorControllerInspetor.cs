@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.Animations;
@@ -40,7 +40,6 @@ public class AnimatorControllerInspetor : MonoBehaviour
         {
             for (int j = 0; j < paramsLocation.Length; j++)
             {
-
                 if(parametersToChange[i] == paramsLocation[j]._name)
                 {
                     if(controller.parameters[j].type == AnimatorControllerParameterType.Bool)
