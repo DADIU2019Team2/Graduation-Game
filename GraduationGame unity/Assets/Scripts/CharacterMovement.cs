@@ -6,12 +6,15 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     //public float acceleration;
+    public PlayerControllerSettings settings;
     float velocity;
     bool facingRight = true;
-    public float rampUpSpeed;
-    public float rampDownSpeed;
-    public float maxSpeed;
-
+    //get from scriptable object
+    float rampUpTime;
+    float rampDownTime;
+    float maxSpeed;
+    AnimationCurve rampUpCurve;
+    AnimationCurve rampDownCurve;
     CharacterController controller;
     Vector3 movement;
     bool stopped = false;
@@ -19,8 +22,7 @@ public class CharacterMovement : MonoBehaviour
     int direction = 1;
     bool rampingDown = false;
 
-    public AnimationCurve rampUpCurve;
-    public AnimationCurve rampDownCurve;
+   
     public float gravity;
     public float jumpPower;
     float verticalpower = 0;
@@ -32,9 +34,18 @@ public class CharacterMovement : MonoBehaviour
         stop,
     }
 
+    void Init()
+    {
+        rampUpTime = settings.rampUpTime;
+        rampDownTime = settings.rampDownTime;
+        maxSpeed = settings.maxSpeed;
+        rampUpCurve = settings.rampUpCurve;
+        rampDownCurve = settings.rampDownCurve;
+    }
     // Start is called before the first frame update
     void Start()
     {
+        Init();
         controller = this.GetComponent<CharacterController>();
         movement = new Vector3(1, 1, 0);
     }
@@ -59,7 +70,7 @@ public class CharacterMovement : MonoBehaviour
         {
             if (curveStep < 1)
             {
-                curveStep += (1 / rampDownSpeed * Time.deltaTime);
+                curveStep += (1 / rampDownTime * Time.deltaTime);
             }
             if (curveStep >= 1)
             {
@@ -72,7 +83,7 @@ public class CharacterMovement : MonoBehaviour
         {
             if (curveStep < 1)
             {
-                curveStep += (1 / rampUpSpeed * Time.deltaTime);
+                curveStep += (1 / rampUpTime * Time.deltaTime);
             }
             if (curveStep > 1)
             {
