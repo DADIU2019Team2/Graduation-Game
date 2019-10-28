@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}" SchemaVersion="94" RootDocumentID="{068457E8-DA15-4925-9135-9F893CB91A24}">
+	<AudioObjects>
+		<WorkUnit Name="SFX" ID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}" OwnerID="{068457E8-DA15-4925-9135-9F893CB91A24}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="Motion" ID="{8D1A1814-CF49-458A-8615-FE96B09C3363}" ShortID="85416185">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+				<ActorMixer Name="Objects" ID="{642349AE-A41A-4B8E-AD25-21B38AFD2F65}" ShortID="953604102">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Electricity1" ID="{26DAA057-2E7A-44B4-85E0-486541974B95}" ShortID="105777379">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Electricity1" ID="{6129AEB9-F6F8-4279-96C5-2D90F23BF777}" ShortID="329973459">
+									<Language>SFX</Language>
+									<AudioFile>Electricity1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Electricity1" ID="{6129AEB9-F6F8-4279-96C5-2D90F23BF777}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Electricity2" ID="{786B3BA1-8362-4227-AAFA-06B4378C4A50}" ShortID="384086986">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Electricity2" ID="{D6CCD7EE-CD49-4225-BBBF-CC0813646BAD}" ShortID="639238946">
+									<Language>SFX</Language>
+									<AudioFile>Electricity2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Electricity2" ID="{D6CCD7EE-CD49-4225-BBBF-CC0813646BAD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Rubble1" ID="{EF77BF80-5E06-48ED-A731-58B6C9356FE5}" ShortID="609357903">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Rubble1" ID="{8DBD87A7-A699-44A6-95DE-889C6CAA8A09}" ShortID="767431260">
+									<Language>SFX</Language>
+									<AudioFile>Rubble1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Rubble1" ID="{8DBD87A7-A699-44A6-95DE-889C6CAA8A09}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Rubble2" ID="{3D16BC39-DD8A-4464-B5AE-0F9DF20027ED}" ShortID="129535935">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Rubble2" ID="{B4406E74-6E79-485A-B64F-7D988AA353D3}" ShortID="866915917">
+									<Language>SFX</Language>
+									<AudioFile>Rubble2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Rubble2" ID="{B4406E74-6E79-485A-B64F-7D988AA353D3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Rubble3" ID="{83B46F89-5835-4C5F-A53B-6BC4D0DF95CA}" ShortID="565632079">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Rubble3" ID="{7A6AF4FF-269F-4881-A117-81DCAF08843C}" ShortID="979867000">
+									<Language>SFX</Language>
+									<AudioFile>Rubble3.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Rubble3" ID="{7A6AF4FF-269F-4881-A117-81DCAF08843C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

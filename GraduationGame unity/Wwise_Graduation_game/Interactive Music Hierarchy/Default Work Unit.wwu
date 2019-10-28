@@ -71,6 +71,16 @@
 								</Conversion>
 							</Custom>
 						</Reference>
+						<Reference Name="Effect0">
+							<Custom>
+								<Effect Name="Wwise_Peak_Limiter_(Custom)" ID="{0F9E8C3F-5BD6-46CE-A2B8-46DAA229CC80}" ShortID="508227036" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+									<PropertyList>
+										<Property Name="OutputGain" Type="Real32" Value="-2"/>
+										<Property Name="Threshold" Type="Real32" Value="-15.7"/>
+									</PropertyList>
+								</Effect>
+							</Custom>
+						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Music" ID="{29E19E7A-9FB0-4372-9D66-8A6584CF0F58}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
 						</Reference>
@@ -128,12 +138,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>1</XPos>
-																		<YPos>0</YPos>
+																		<YPos>2</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>2</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -356,12 +366,51 @@
 																	</Point>
 																	<Point>
 																		<XPos>3</XPos>
-																		<YPos>-0.31024</YPos>
+																		<YPos>2</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>2</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+														<RTPC Name="" ID="{C90BCFAA-5EB1-4E6F-92FF-A2BF3BBF6EF5}" ShortID="295562351">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Move_Accel" ID="{CDCFE5E5-C930-4B69-AA3F-31ED05D5E942}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{0130807B-9ACD-4370-866E-7D291B1DF7E7}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>26.54125</XPos>
+																		<YPos>1.86234</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>54.64995</XPos>
+																		<YPos>2</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>54.65095</XPos>
+																		<YPos>2</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>2</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -484,13 +533,13 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<RTPCList>
-														<RTPC Name="" ID="{D8CBFE0B-CC5F-4128-B68C-A4C8D3EA34F7}" ShortID="496499749">
+														<RTPC Name="" ID="{DA294448-77CB-4B1F-BFF7-C13FE41CB031}" ShortID="986176331">
 															<ReferenceList>
 																<Reference Name="ControlInput">
 																	<ObjectRef Name="Music_Layer_Z1" ID="{6C2C2E71-50BE-4633-A178-6C4C769657E7}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
 																</Reference>
 															</ReferenceList>
-															<Curve Name="" ID="{186CD49B-5A59-47E1-AA9F-A33C343C3D87}">
+															<Curve Name="" ID="{895821DB-BD70-4583-AAE4-97D86F7B4C80}">
 																<PropertyList>
 																	<Property Name="Flags" Type="int32" Value="3"/>
 																</PropertyList>
@@ -502,16 +551,55 @@
 																	</Point>
 																	<Point>
 																		<XPos>1</XPos>
-																		<YPos>-200</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>2</XPos>
+																		<XPos>9.999</XPos>
 																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+														<RTPC Name="" ID="{504CD4D6-0D72-464D-987B-B49FB79A3F86}" ShortID="857900084">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Move_Accel" ID="{CDCFE5E5-C930-4B69-AA3F-31ED05D5E942}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{C75C9835-1230-4892-BF1C-970230589BBA}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>19.12226</XPos>
+																		<YPos>-6.17434</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>45.03657</XPos>
+																		<YPos>-0.79743</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>67.08464</XPos>
+																		<YPos>0.15374</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -578,12 +666,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>1</XPos>
-																		<YPos>0</YPos>
+																		<YPos>2</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>2</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -707,10 +795,44 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<RTPCList>
-														<RTPC Name="" ID="{472F30B8-241E-486F-B8A9-3266AA47D29B}" ShortID="717923119">
+														<RTPC Name="" ID="{3F347F81-B4D8-4FAB-BB4A-C64437B3F2CC}" ShortID="970476827">
 															<ReferenceList>
 																<Reference Name="ControlInput">
 																	<ObjectRef Name="Music_Layer_Z1" ID="{6C2C2E71-50BE-4633-A178-6C4C769657E7}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{ACBDA28F-DD50-4CED-883E-F415627E2282}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.99269</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+														<RTPC Name="" ID="{472F30B8-241E-486F-B8A9-3266AA47D29B}" ShortID="717923119">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Move_Accel" ID="{CDCFE5E5-C930-4B69-AA3F-31ED05D5E942}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
 																</Reference>
 															</ReferenceList>
 															<Curve Name="" ID="{136FC6EF-824F-458E-B293-A86144281441}">
@@ -724,18 +846,23 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>2.99896</XPos>
-																		<YPos>-29.0969</YPos>
+																		<XPos>0.01</XPos>
+																		<YPos>-200</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>4.01254</XPos>
-																		<YPos>0</YPos>
+																		<XPos>21.1076</XPos>
+																		<YPos>-1.31358</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<XPos>41.5883</XPos>
+																		<YPos>2</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>2</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -872,8 +999,8 @@
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>4</XPos>
-																		<YPos>-0.15374</YPos>
+																		<XPos>3.98955</XPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -949,12 +1076,32 @@
 																	</Point>
 																	<Point>
 																		<XPos>2</XPos>
-																		<YPos>0</YPos>
+																		<YPos>2</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2.86311389759666</XPos>
+																		<YPos>2</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3</XPos>
+																		<YPos>0.91909</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.81400208986416</XPos>
+																		<YPos>0.928460067767557</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>4.00209</XPos>
+																		<YPos>-2</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-2</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -1029,8 +1176,28 @@
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>10</XPos>
+																		<XPos>2.85266457680251</XPos>
 																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3</XPos>
+																		<YPos>-3</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.80355</XPos>
+																		<YPos>-3</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>4.00209</XPos>
+																		<YPos>-4</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10</XPos>
+																		<YPos>-4</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -1101,11 +1268,50 @@
 																	</Point>
 																	<Point>
 																		<XPos>3</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-2</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.88715</XPos>
+																		<YPos>-2</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>4.01254</XPos>
+																		<YPos>-3</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
+																		<YPos>-3</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+														<RTPC Name="" ID="{7E3E75F1-FA79-4BB1-8D08-C9F4B8BAF814}" ShortID="740274069">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Move_Accel" ID="{CDCFE5E5-C930-4B69-AA3F-31ED05D5E942}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{501C066E-BA02-42F6-8A16-CE8DAA1F611A}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>8.88192</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -1177,12 +1383,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>4</XPos>
-																		<YPos>0</YPos>
+																		<YPos>2</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>2</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -1230,6 +1436,35 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<RTPCList>
+														<RTPC Name="" ID="{1BED5E1A-9468-4012-AC5F-C2A66B54F335}" ShortID="607627214">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Move_Accel" ID="{CDCFE5E5-C930-4B69-AA3F-31ED05D5E942}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{99712B13-2CF2-4A51-AF38-F6ECA0C84B5A}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10.03133</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
 														<RTPC Name="" ID="{09E40961-2B7E-450C-BE65-FB583E1DA6DD}" ShortID="573370829">
 															<ReferenceList>
 																<Reference Name="ControlInput">
@@ -1252,8 +1487,28 @@
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>10</XPos>
+																		<XPos>2.65412748171369</XPos>
 																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3</XPos>
+																		<YPos>-3</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.90804597701149</XPos>
+																		<YPos>-3</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>4</XPos>
+																		<YPos>-5</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10</XPos>
+																		<YPos>-4</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -1323,8 +1578,28 @@
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>10</XPos>
+																		<XPos>2.82131661442006</XPos>
 																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3</XPos>
+																		<YPos>-2</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.73040752351097</XPos>
+																		<YPos>-2</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>4.01254</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10</XPos>
+																		<YPos>-200</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -1372,13 +1647,13 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<RTPCList>
-														<RTPC Name="" ID="{D8CE1180-EE32-4091-9EB9-2FAAB217AB5A}" ShortID="577233931">
+														<RTPC Name="" ID="{C5230711-1612-465A-A7E4-EA5047819547}" ShortID="192100218">
 															<ReferenceList>
 																<Reference Name="ControlInput">
 																	<ObjectRef Name="Music_Layer_Z2" ID="{90A23AE1-771C-432F-89B4-6E144AACCE22}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
 																</Reference>
 															</ReferenceList>
-															<Curve Name="" ID="{362AD72F-24DB-47A9-B570-20262C09C075}">
+															<Curve Name="" ID="{0C931923-0349-4366-A152-3FA6946E5DA3}">
 																<PropertyList>
 																	<Property Name="Flags" Type="int32" Value="3"/>
 																</PropertyList>
@@ -1389,12 +1664,12 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>2</XPos>
+																		<XPos>3</XPos>
 																		<YPos>-200</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>3</XPos>
+																		<XPos>4</XPos>
 																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
@@ -1448,6 +1723,35 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<RTPCList>
+														<RTPC Name="" ID="{E7736115-D1C9-4EB2-914C-B6A80D67BEC5}" ShortID="620658377">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Move_Accel" ID="{CDCFE5E5-C930-4B69-AA3F-31ED05D5E942}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{ABCAF776-56E3-41CD-ADAC-A8FE18B8B924}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>30.82549</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
 														<RTPC Name="" ID="{B5EB74AA-D721-48A0-98FF-57C54F705937}" ShortID="1003007957">
 															<ReferenceList>
 																<Reference Name="ControlInput">
@@ -1471,12 +1775,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>4</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-2</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-2</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -1589,6 +1893,7 @@
 									<ChildrenList>
 										<MusicTrack Name="Z3_Dist_Arp" ID="{632CD0B6-961A-49CD-AD9B-ADCF41E8FB72}" ShortID="721919875">
 											<PropertyList>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
 													<RTPCList>
 														<RTPC Name="" ID="{4A0DFF5A-CBAE-40C6-B7B8-4A09BE41F700}" ShortID="864335227">
@@ -1618,13 +1923,33 @@
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>2</XPos>
-																		<YPos>0</YPos>
+																		<XPos>1.98955</XPos>
+																		<YPos>-5</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2.57053</XPos>
+																		<YPos>-4.75655</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3</XPos>
+																		<YPos>-6</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.8558</XPos>
+																		<YPos>-6</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>4.00209</XPos>
+																		<YPos>-8</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-8</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -1690,12 +2015,22 @@
 																	</Point>
 																	<Point>
 																		<XPos>1</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-7</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.89759665621735</XPos>
+																		<YPos>-7</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.98119</XPos>
+																		<YPos>-9</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-9</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -1741,6 +2076,7 @@
 										</MusicTrack>
 										<MusicTrack Name="Z3_Dist_Synth_Harm1" ID="{6B0D5E7C-8832-426B-8EED-FD23E455FF96}" ShortID="727696733">
 											<PropertyList>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
 													<RTPCList>
 														<RTPC Name="" ID="{25D58D12-B783-4888-9BFF-8CF57A73F86A}" ShortID="789771019">
@@ -1765,13 +2101,33 @@
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>2</XPos>
-																		<YPos>0</YPos>
+																		<XPos>2.22989</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2.52874</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.01985</XPos>
+																		<YPos>3</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.88715</XPos>
+																		<YPos>3</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>4.00209</XPos>
+																		<YPos>1</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>1</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -1836,18 +2192,28 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>3</XPos>
-																		<YPos>-200</YPos>
+																		<XPos>2.00731</XPos>
+																		<YPos>-35.1175</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.05121</XPos>
+																		<YPos>5</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.8453500522466</XPos>
+																		<YPos>5</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>4.03344</XPos>
-																		<YPos>0</YPos>
+																		<YPos>1</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>1</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -1917,13 +2283,23 @@
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>3</XPos>
-																		<YPos>0</YPos>
+																		<XPos>3.08359</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.40648</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.98955</XPos>
+																		<YPos>-2</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-2</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -1994,11 +2370,40 @@
 																	</Point>
 																	<Point>
 																		<XPos>2</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-4</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
+																		<YPos>-4</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+														<RTPC Name="" ID="{73442947-9024-40C9-9E84-1F4A98A854B6}" ShortID="605180183">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Move_Accel" ID="{CDCFE5E5-C930-4B69-AA3F-31ED05D5E942}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{5F1E91FF-CDF1-44E2-859B-9AE2D15073DF}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>6.58309</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -2065,12 +2470,22 @@
 																	</Point>
 																	<Point>
 																		<XPos>1</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-4</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2.8944618599791</XPos>
+																		<YPos>-4</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2.98851</XPos>
+																		<YPos>-5</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-4</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -2118,6 +2533,35 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<RTPCList>
+														<RTPC Name="" ID="{C65AA550-E9F9-46D1-AE7D-775169D84FC5}" ShortID="700352769">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Move_Accel" ID="{CDCFE5E5-C930-4B69-AA3F-31ED05D5E942}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{914EB548-0C77-4A18-A615-D7EC08A21159}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>17.55489</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
 														<RTPC Name="" ID="{77766378-1E05-437E-9765-5BA9F62ADDC0}" ShortID="251007016">
 															<ReferenceList>
 																<Reference Name="ControlInput">
@@ -2141,12 +2585,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>4</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-2</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-2</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -2216,8 +2660,28 @@
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>10</XPos>
+																		<XPos>1.72413793103448</XPos>
 																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2.00627</XPos>
+																		<YPos>-2</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2.81086729362591</XPos>
+																		<YPos>-2</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2.99896</XPos>
+																		<YPos>-4</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10</XPos>
+																		<YPos>-4</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -2288,12 +2752,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>4</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-4</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-4</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -2341,6 +2805,35 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<RTPCList>
+														<RTPC Name="" ID="{CC5BA3B7-961E-4B47-9672-0F5EEE5CF1C5}" ShortID="876506742">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Move_Accel" ID="{CDCFE5E5-C930-4B69-AA3F-31ED05D5E942}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{E61270CE-3B64-4256-B269-E91452ACB332}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>15.15153</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
 														<RTPC Name="" ID="{1ED0FDEF-E537-44CF-B776-A730616E2E7E}" ShortID="834225590">
 															<ReferenceList>
 																<Reference Name="ControlInput">
@@ -2359,12 +2852,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>1</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-2</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-2</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -2435,11 +2928,40 @@
 																	</Point>
 																	<Point>
 																		<XPos>4</XPos>
-																		<YPos>0</YPos>
+																		<YPos>-4</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
+																		<YPos>-4</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+														<RTPC Name="" ID="{1CB94EF2-53F9-425F-81EF-6997D3C8BAA0}" ShortID="806886216">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Move_Accel" ID="{CDCFE5E5-C930-4B69-AA3F-31ED05D5E942}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{FB143F9B-2AA4-4E02-B587-FB7605C6828B}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10.86728</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -2578,12 +3100,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>4</XPos>
-																		<YPos>0</YPos>
+																		<YPos>6</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>6</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -2654,12 +3176,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>2</XPos>
-																		<YPos>0</YPos>
+																		<YPos>5</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>5</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -2707,6 +3229,35 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<RTPCList>
+														<RTPC Name="" ID="{32092441-BBFA-447A-BE6C-B62F71B1A3FB}" ShortID="742289320">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Move_Accel" ID="{CDCFE5E5-C930-4B69-AA3F-31ED05D5E942}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{3C2E61FC-0CA5-4AE2-ADAB-FABB0A80A60D}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>11.38972</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
 														<RTPC Name="" ID="{EACE0C6B-7079-4873-8A4F-98BDEC95D2CA}" ShortID="48472961">
 															<ReferenceList>
 																<Reference Name="ControlInput">
@@ -2725,12 +3276,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>1</XPos>
-																		<YPos>0</YPos>
+																		<YPos>5</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>5</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -2796,12 +3347,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>1</XPos>
-																		<YPos>0</YPos>
+																		<YPos>10</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>10</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -2872,12 +3423,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>4</XPos>
-																		<YPos>0</YPos>
+																		<YPos>4</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>4</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -2925,6 +3476,35 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<RTPCList>
+														<RTPC Name="" ID="{B78CE86F-B9E7-49BC-A0D5-2FF502475696}" ShortID="366070332">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Move_Accel" ID="{CDCFE5E5-C930-4B69-AA3F-31ED05D5E942}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{29BDFB47-DC7F-45BB-9FB3-6F1A9166D440}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>16.19647</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
 														<RTPC Name="" ID="{7D3B89C8-93DD-4225-9D15-D383D874ACC3}" ShortID="60545131">
 															<ReferenceList>
 																<Reference Name="ControlInput">
@@ -2948,12 +3528,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>3</XPos>
-																		<YPos>0</YPos>
+																		<YPos>5</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>10</XPos>
-																		<YPos>0</YPos>
+																		<YPos>5</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
