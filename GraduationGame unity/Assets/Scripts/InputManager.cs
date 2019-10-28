@@ -26,11 +26,11 @@ public class InputManager : MonoBehaviour
 
                 case TouchPhase.Ended:
                     endPosition = touch.position;
-                    swipeDirection = (endPosition - initPosition).normalized;
+                    swipeDirection = (endPosition - initPosition);  
                     
-                    swipeAngle = Vector2.Angle(Vector2.zero, swipeDirection);
+                    swipeAngle = Vector2.Angle(Vector2.right, swipeDirection);
                     
-                    //TODO: Implement player using swipe here (SwipeAngle is all that is needed.):
+                    //TODO: Implement player using swipe here.
 
                     break;
             }
