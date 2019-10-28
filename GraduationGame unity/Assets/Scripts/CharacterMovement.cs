@@ -21,6 +21,10 @@ public class CharacterMovement : MonoBehaviour
 
     public AnimationCurve rampUpCurve;
     public AnimationCurve rampDownCurve;
+    public float gravity;
+    public float jumpPower;
+    float verticalpower = 0;
+    
     enum movementTypes
     {
         jump,
@@ -32,7 +36,7 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         controller = this.GetComponent<CharacterController>();
-        movement = new Vector3(1, 0, 0);
+        movement = new Vector3(1, 1, 0);
     }
 
     // Update is called once per frame
@@ -46,6 +50,10 @@ public class CharacterMovement : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.S))
         {
             MovePlayer(movementTypes.stop);
+        }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            MovePlayer(movementTypes.jump);
         }
         if (rampingDown)
         {
@@ -82,8 +90,17 @@ public class CharacterMovement : MonoBehaviour
                 velocity= maxSpeed*rampUpCurve.Evaluate(curveStep);
             }
         }
-
-        controller.Move((direction * velocity *movement)*Time.deltaTime);
+        movement.y -= (gravity * Time.deltaTime) - (verticalpower * Time.deltaTime);
+        if (verticalpower > 0)
+        {
+            verticalpower -= gravity * Time.deltaTime;
+        }
+        if (verticalpower < 0)
+        {
+            verticalpower = 0;
+        }
+        Debug.Log(movement.y);
+        controller.Move(new Vector3((direction * velocity *movement.x)*Time.deltaTime, movement.y*Time.deltaTime,0));
     }
 
     void MovePlayer(movementTypes input)
@@ -114,7 +131,9 @@ public class CharacterMovement : MonoBehaviour
         }
         if (input == movementTypes.jump)
         {
-
+            Debug.Log("Jump");
+            movement.y = 0;
+            verticalpower = jumpPower;
         }
 
 
