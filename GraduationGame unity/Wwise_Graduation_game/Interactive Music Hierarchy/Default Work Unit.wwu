@@ -6,7 +6,70 @@
 				<MusicSwitchContainer Name="Music" ID="{4A2A0596-816D-4FD7-9F64-914C3C785CBF}" ShortID="666188830">
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Music" ID="{093496D1-0D83-41D9-AEAB-7A6BF8D52B1A}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+							<Custom CreatedFrom="{093496D1-0D83-41D9-AEAB-7A6BF8D52B1A}">
+								<Conversion Name="Music (Custom)" ID="{74BDFD87-6030-4856-B1FA-097B2373EC0F}">
+									<PropertyList>
+										<Property Name="Channels" Type="int32">
+											<ValueList>
+												<Value Platform="Windows">4</Value>
+												<Value Platform="Mac">4</Value>
+												<Value Platform="Android">4</Value>
+											</ValueList>
+										</Property>
+										<Property Name="LRMix" Type="Real64">
+											<ValueList>
+												<Value Platform="Windows">0</Value>
+												<Value Platform="Mac">0</Value>
+												<Value Platform="Android">0</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MaxSampleRate" Type="int32">
+											<ValueList>
+												<Value Platform="Windows">0</Value>
+												<Value Platform="Mac">0</Value>
+												<Value Platform="Android">0</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MinSampleRate" Type="int32">
+											<ValueList>
+												<Value Platform="Windows">0</Value>
+												<Value Platform="Mac">0</Value>
+												<Value Platform="Android">0</Value>
+											</ValueList>
+										</Property>
+										<Property Name="SampleRate" Type="int32">
+											<ValueList>
+												<Value Platform="Windows">0</Value>
+												<Value Platform="Mac">0</Value>
+												<Value Platform="Android">0</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ConversionPluginInfoList>
+										<ConversionPluginInfo Platform="Windows">
+											<ConversionPlugin Name="" ID="{56C192BD-2729-48CD-8893-11984A89B8E2}" PluginName="Vorbis" CompanyID="0" PluginID="4">
+												<PropertyList>
+													<Property Name="QualityFactor" Type="Real32" Value="7"/>
+												</PropertyList>
+											</ConversionPlugin>
+										</ConversionPluginInfo>
+										<ConversionPluginInfo Platform="Mac">
+											<ConversionPlugin Name="" ID="{40366F74-3612-43E5-A4EE-75A705802804}" PluginName="Vorbis" CompanyID="0" PluginID="4">
+												<PropertyList>
+													<Property Name="QualityFactor" Type="Real32" Value="7"/>
+												</PropertyList>
+											</ConversionPlugin>
+										</ConversionPluginInfo>
+										<ConversionPluginInfo Platform="Android">
+											<ConversionPlugin Name="" ID="{535CEEC3-9676-4B49-A648-5F17F3C26002}" PluginName="Vorbis" CompanyID="0" PluginID="4">
+												<PropertyList>
+													<Property Name="QualityFactor" Type="Real32" Value="7"/>
+												</PropertyList>
+											</ConversionPlugin>
+										</ConversionPluginInfo>
+									</ConversionPluginInfoList>
+								</Conversion>
+							</Custom>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Music" ID="{29E19E7A-9FB0-4372-9D66-8A6584CF0F58}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
@@ -33,13 +96,6 @@
 								<MusicSegment Name="Z1_Music_Layers" ID="{BE15403D-34AD-43B6-B4D4-D29297FA5383}" ShortID="762511808">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="18198.5776805252"/>
-										<Property Name="Volume" Type="Real64">
-											<RTPCList>
-												<RTPC Name="" ID="{D3D4C33A-574F-4A68-BA67-BEF041DBC183}" ShortID="841108434">
-													<ReferenceList/>
-												</RTPC>
-											</RTPCList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
