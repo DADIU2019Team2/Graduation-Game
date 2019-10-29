@@ -11,4 +11,7 @@ public class PlayerControllerSettings : ScriptableObject
     public float gravity;
     public AnimationCurve rampUpCurve;
     public AnimationCurve rampDownCurve;
+    public float jumpHeight;
+    public Transform groundedTransform;
+    public float groundedDistance;
 }

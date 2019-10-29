@@ -5,15 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class CharacterMovement : MonoBehaviour
 {
-    //public float acceleration;
+    //scriptable object for settings
     public PlayerControllerSettings settings;
     float velocity;
-    bool facingRight = true;
+    public static bool facingRight = true;
     //get from scriptable object
-    float rampUpTime;
+    float rampUpTime; //how long to reach max point in curve
     float rampDownTime;
-    float maxSpeed;
-    AnimationCurve rampUpCurve;
+    float maxSpeed; 
+    AnimationCurve rampUpCurve; //speed curve
     AnimationCurve rampDownCurve;
     CharacterController controller;
     Vector3 movement;
@@ -22,16 +22,27 @@ public class CharacterMovement : MonoBehaviour
     int direction = 1;
     bool rampingDown = false;
 
-   
-    public float gravity;
+    float jumpHeight;
+    float gravity;
     public float jumpPower;
     float verticalpower = 0;
+    bool isGrounded;
+    public LayerMask grounLayers;
+    Transform groundedTransform;
+    [SerializeField]
+    float groundedDistance;
     
     enum movementTypes
     {
         jump,
         changeDirection,
         stop,
+    }
+    enum movementState
+    {
+        running,
+        walking,
+        sliding,
     }
 
     void Init()
@@ -41,6 +52,10 @@ public class CharacterMovement : MonoBehaviour
         maxSpeed = settings.maxSpeed;
         rampUpCurve = settings.rampUpCurve;
         rampDownCurve = settings.rampDownCurve;
+        gravity = settings.gravity;
+        jumpHeight = settings.jumpHeight;
+        groundedDistance = settings.groundedDistance;
+        groundedTransform = settings.groundedTransform;
     }
     // Start is called before the first frame update
     void Start()
@@ -48,12 +63,13 @@ public class CharacterMovement : MonoBehaviour
         Init();
         controller = this.GetComponent<CharacterController>();
         movement = new Vector3(1, 1, 0);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        //isGrounded = Physics.OverlapSphere();
         if (Input.GetKeyDown(KeyCode.W))
         {
             MovePlayer(movementTypes.changeDirection);
@@ -113,7 +129,7 @@ public class CharacterMovement : MonoBehaviour
         Debug.Log(movement.y);
         controller.Move(new Vector3((direction * velocity *movement.x)*Time.deltaTime, movement.y*Time.deltaTime,0));
     }
-
+    
     void MovePlayer(movementTypes input)
     {
         if (input == movementTypes.changeDirection)
@@ -148,6 +164,14 @@ public class CharacterMovement : MonoBehaviour
         }
 
 
+    }
+    public static bool GetIsFacingRight()
+    {
+        return facingRight;
+    }
+    public Vector3 GetVector()
+    {
+        return controller.velocity;
     }
     private void OnCollisionEnter(Collision collision)
     {
