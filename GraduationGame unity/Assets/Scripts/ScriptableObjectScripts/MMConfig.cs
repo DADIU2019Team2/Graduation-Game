@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿#if UNITY_EDITOR
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -34,3 +35,4 @@ public class MMConfig : ScriptableObject
     }
     
 }
+#endif
