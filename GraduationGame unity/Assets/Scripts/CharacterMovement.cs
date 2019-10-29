@@ -169,7 +169,7 @@ public class CharacterMovement : MonoBehaviour
     {
         return facingRight;
     }
-    public Vector3 GetVector()
+    public Vector3 GetVelocity()
     {
         return controller.velocity;
     }
