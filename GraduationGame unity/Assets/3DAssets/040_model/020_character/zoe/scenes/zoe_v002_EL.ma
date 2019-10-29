@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: zoe_v002_EL.ma
-//Last modified: Tue, Oct 29, 2019 04:17:40 PM
+//Last modified: Tue, Oct 29, 2019 04:35:13 PM
 //Codeset: 1252
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -17,17 +17,17 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "3391E412-4D6F-D31E-C5DC-6BBDD73E64DB";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -14.181229752854897 159.53631238176041 183.96680714142036 ;
-	setAttr ".r" -type "double3" -369.93835272957324 -724.99999999997374 0 ;
+	setAttr ".t" -type "double3" 91.571102181984969 119.00991946832418 23.909629042040706 ;
+	setAttr ".r" -type "double3" -378.33835272957094 -677.39999999999588 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1EC36C35-487D-A9AD-A120-4B80C2B85D8E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 197.82071439509463;
+	setAttr ".coi" 14.101031442608502;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0.41675186157226563 86.583151379600167 -0.081302642822265625 ;
+	setAttr ".tp" -type "double3" 82.511177062988281 114.57334136962891 14.057034492492676 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -20612,6 +20612,28 @@ createNode mesh -n "Body_geoShape" -p "Body_geo";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 3178 ".pt";
+	setAttr ".pt[2194:2359]" -type "float3"  -0.16590881 0.12740326 0.086247444 
+		-0.10105896 0.22360229 -0.096038818 -0.07219696 0.097221375 -0.15780926 -0.038986206 
+		-0.074119568 -0.076084137 -0.095153809 -0.12934113 -0.017993927 -0.11642456 -0.11716461 
+		-0.0010795593 -0.1541214 -0.06124115 0.054122925 -0.02948761 0.027549744 -0.15138054 
+		-0.031196594 -0.07144928 -0.12119198 -0.033859253 -0.15039063 -0.05444622 -0.086547852 
+		-0.15077972 0.029700279 -0.0079498291 0.047134399 -0.17853451 -0.026557922 0.033157349 
+		-0.068172455 -0.072532654 -0.010444641 0.040410995 -0.051704407 -0.12903595 -0.056257248 
+		-0.085044861 -0.15537262 -0.043515205 -0.095909119 -0.16551971 -0.026191711 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0.0012741089 0.0051422119 -0.020546913 -0.0034179688 0.0090255737 -0.011688232 -0.022033691 
+		0.0053482056 -0.004240036 -0.0055084229 -0.002784729 -0.0012655258 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 	setAttr -s 3178 ".vt";
 	setAttr ".vt[0:165]"  12.81182957 44.19633865 3.0070242882 12.51039982 45.82182693 3.41030645
 		 8.17706299 45.70761108 3.052249908 8.36977577 44.20804596 2.82036614 -8.36684513 44.15294647 2.7974782
@@ -29133,19 +29155,19 @@ createNode mesh -n "Body_geoShape" -p "Body_geo";
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "02590C2B-4B9C-D53C-C1EB-21B61ED96C55";
+	rename -uid "67592211-47FA-48DF-D4F4-62B165EC3F58";
 	setAttr -s 13 ".lnk";
 	setAttr -s 13 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "93AAC16F-492A-4ACF-B640-CC8B9EF8AA86";
+	rename -uid "9515CFCC-4544-B455-FE16-0C96144303B1";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "E707588A-4F7C-BCD7-49A4-91BE78A2BBAC";
+	rename -uid "51B8D28C-4025-AE0F-F3FE-349F5661899F";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "FBA6BEF0-4BEC-8C54-D411-3A8857010963";
+	rename -uid "DC48D6CA-46AE-E979-02F8-59B10CC134B7";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "A629088F-4C84-2D53-100C-088B5F3C5A41";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "8CAEE7E8-4B95-4C6E-A4FB-219B9E9B507B";
+	rename -uid "9890B91D-489B-5C86-9CF6-41A72FFC0032";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "F60E05B7-4D63-8B45-C90C-FA9AD2A3E500";
 	setAttr ".g" yes;
