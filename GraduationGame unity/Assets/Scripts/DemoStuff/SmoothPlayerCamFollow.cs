@@ -6,7 +6,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
 {
     [SerializeField] private Transform playerToFollow;
     //character controller for ref to movespeed/direction???
-    public MoveAroundOBJ moveScript; //this is a temp,,, should be replaced with actual script that makes char move
+    [SerializeField] private CharacterMovement moveScript; 
 
     [SerializeField] private float smoothTime = 0.1f;
 
@@ -17,7 +17,6 @@ public class SmoothPlayerCamFollow : MonoBehaviour
     private void Start()
     {
         localPosInfrontOfPlayer = new Vector3(2, 0, 0); //update this dynamicly
-        moveScript = playerToFollow.GetComponent<MoveAroundOBJ>();
 
     }
     private void LateUpdate()
