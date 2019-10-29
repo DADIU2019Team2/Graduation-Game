@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
-//Name: zoe.ma
-//Last modified: Tue, Oct 29, 2019 04:17:41 PM
+//Name: zoe_v002_EL.ma
+//Last modified: Tue, Oct 29, 2019 04:17:40 PM
 //Codeset: 1252
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -29515,4 +29515,4 @@ connectAttr "UMesh_Body1_ncl1_2.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "body1_ncl1_2.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of zoe.ma
+// End of zoe_v002_EL.ma
