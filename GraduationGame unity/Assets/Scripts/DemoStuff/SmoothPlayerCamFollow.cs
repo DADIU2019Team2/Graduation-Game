@@ -35,11 +35,11 @@ public class SmoothPlayerCamFollow : MonoBehaviour
     {
         //do some dynamic localPos infront of player
         Vector3 worldPosInFrontOfPlayer = Vector3.zero;
-        if (moveScript.moveDir == MoveAroundOBJ.MoveDirection.Clockwise)
+        if (!CharacterMovement.GetIsFacingRight())
         {
             worldPosInFrontOfPlayer = playerToFollow.TransformPoint(localPosInfrontOfPlayer);
         }
-        else if (moveScript.moveDir == MoveAroundOBJ.MoveDirection.CounterClockwise)
+        else if (CharacterMovement.GetIsFacingRight())
         {
             worldPosInFrontOfPlayer = playerToFollow.TransformPoint(-localPosInfrontOfPlayer);
         }
