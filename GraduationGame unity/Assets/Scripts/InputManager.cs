@@ -52,11 +52,9 @@ public class InputManager : MonoBehaviour
                     endPosition = touch.position;
                     swipeDirection = (endPosition - initPosition);
                     swipeAngle = Vector2.Angle(Vector2.right, swipeDirection);
-                    /*isFacingRight = CharacterController.GetIsFacingRight();*/ //Uncomment this when merged.
-                    isFacingRight = true;
+                    isFacingRight = CharacterMovement.GetIsFacingRight(); 
                     mostRecentSwipeType = SwipeTypeOfAngle(swipeAngle, isFacingRight);
                     OnSwipeEvent.Raise();
-                    //TODO: Implement player using swipe here.
 
                     break;
             }
