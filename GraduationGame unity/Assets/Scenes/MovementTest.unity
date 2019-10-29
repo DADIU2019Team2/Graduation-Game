@@ -302,57 +302,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb4ae078ce4d9040bcdf6ed316d82d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rampUpSpeed: 0.5
-  rampDownSpeed: 5
-  maxSpeed: 25
-  rampUpCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  rampDownCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: -0.023902526
-      outSlope: -0.023902526
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.08807588
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -1.4534465
-      outSlope: -1.4534465
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.04200542
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  settings: {fileID: 11400000, guid: 17089354316c02e44a07c13a8481a302, type: 2}
+  gravity: 9
+  jumpPower: 20
 --- !u!143 &1665934676
 CharacterController:
   m_ObjectHideFlags: 0
