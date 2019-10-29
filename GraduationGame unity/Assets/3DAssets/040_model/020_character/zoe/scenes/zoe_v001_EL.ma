@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
-//Name: retop05.ma
-//Last modified: Tue, Oct 29, 2019 01:14:23 PM
+//Name: zoe_v001_EL.ma
+//Last modified: Tue, Oct 29, 2019 01:16:51 PM
 //Codeset: 1252
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -15,8 +15,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "3391E412-4D6F-D31E-C5DC-6BBDD73E64DB";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -57.854836025105541 153.28160866131799 274.20383786177428 ;
-	setAttr ".r" -type "double3" -369.9383527295679 -11.399999999983873 0 ;
+	setAttr ".t" -type "double3" 72.851551998083892 237.57455437334281 -240.95067724653853 ;
+	setAttr ".r" -type "double3" -387.93835272955744 162.60000000001571 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1EC36C35-487D-A9AD-A120-4B80C2B85D8E";
 	setAttr -k off ".v" no;
@@ -29087,4 +29087,4 @@ connectAttr "Armor_geo_ncl1_2.msg" ":defaultShaderList1.s" -na;
 connectAttr "Belt_geo_ncl1_2.msg" ":defaultShaderList1.s" -na;
 connectAttr "Earrings_geo_ncl1_2.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of retop05.ma
+// End of zoe_v001_EL.ma
