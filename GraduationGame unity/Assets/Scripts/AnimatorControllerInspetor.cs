@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Animations;
-using UnityEditor;
+//using UnityEditor.Animations;
+//using UnityEditor;
 
 [System.Serializable]
 public class AnimatorControllerInspetor : MonoBehaviour
 {
     //[SerializeField]public AnimatorControllerParameter parameter; cant see in inspector
     //public RuntimeAnimatorController runtimeController;
-    public AnimatorController controller;
+    //public AnimatorController controller;
     public List<AnimControllerParamToChange> parametersToChange;
 
     private AnimatorControllerParameter[] animControllerParams;
@@ -52,7 +52,7 @@ public class AnimatorControllerInspetor : MonoBehaviour
         }
     }*/
 
-    private ParamIndex[] getControllerParamsNames()
+    /*private ParamIndex[] getControllerParamsNames()
     {
         ParamIndex[] parameterNames = new ParamIndex[controller.parameters.Length];
         for (int i = 0; i < parameterNames.Length; i++)
@@ -61,6 +61,6 @@ public class AnimatorControllerInspetor : MonoBehaviour
             parameterNames[i].index = i;
         }
         return parameterNames;
-    }
+    }*/
 
 }
