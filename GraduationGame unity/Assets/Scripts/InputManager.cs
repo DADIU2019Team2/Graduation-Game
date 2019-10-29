@@ -20,7 +20,7 @@ public class InputManager : MonoBehaviour
     private bool isFacingRight;
     public SwipeAngleThresholds swipeAngleThresholds;
     public VoidEvent OnSwipeEvent;
-    private SwipeType mostRecentSwipeType;
+    private static SwipeType mostRecentSwipeType;
 
 
 
@@ -62,7 +62,7 @@ public class InputManager : MonoBehaviour
     }
 
     //Should take into account different input-types when they are implemented.
-    public SwipeType GetMostRecentInputType()
+    public static SwipeType GetMostRecentInputType()
     {
         return mostRecentSwipeType; 
     }
