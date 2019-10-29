@@ -32,6 +32,5 @@ public class MMConfig : ScriptableObject
         File.WriteAllText(filePathAndName,sb.ToString());
         UnityEditor.AssetDatabase.ImportAsset(filePathAndName);
     }
-    
-}
 #endif
+}
