@@ -23,7 +23,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8586298690304775808
+    m_lastTime: -8586298683434775808
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -184,14 +184,25 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: a9fbbffd6d82f84e923dba695a2fda43
     GuidInternal: 
-    m_lastTime: -8586298690314775808
-    List: []
+    m_lastTime: -8586293478274775808
+    List:
+    - name: Reverb
+      guid: 30596669bdfd2f43bdefbe4ebf8b790a
+      id: 348963605
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Reverb
+        ObjectType: 1
+      Path: Default Work Unit/Master Audio Bus/Reverb
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4219221ac0890d4bbef9f0f6d1c95982
     GuidInternal: 
-    m_lastTime: -8586298690304775808
+    m_lastTime: -8586293467004775808
     List:
     - name: Main
       guid: 8d0f58feffbb4a40aa7ae59b199a4834
@@ -207,142 +218,211 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: b8a3484928cea848bad5ae38d8dae02b
     GuidInternal: 
-    m_lastTime: -8586298690304775808
+    m_lastTime: -8586293467004775808
+    List: []
+  - PhysicalPath: Events/Music.wwu
+    ParentPhysicalPath: Events/Default Work Unit.wwu
+    guid: 3631f1d8df531f488aa67fbe67e566e8
+    GuidInternal: 
+    m_lastTime: -8586293467004775808
+    List:
+    - name: Play_Zone1_Music
+      guid: 69c85576a4b4ab49ae92be06f10cd93e
+      id: 4098982749
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Play_Zone1_Music
+        ObjectType: 3
+      Path: Default Work Unit/Music/Play_Zone1_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Zone2_Music
+      guid: 2e52e2ad16d0294a91bccbcda37bc80e
+      id: 3584129722
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Play_Zone2_Music
+        ObjectType: 3
+      Path: Default Work Unit/Music/Play_Zone2_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Zone3_Music
+      guid: d94cf0e7f28e444486beb2c9b0dca3ab
+      id: 556439219
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Play_Zone3_Music
+        ObjectType: 3
+      Path: Default Work Unit/Music/Play_Zone3_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Zone4_Music
+      guid: abdbbe50b4ed3347a802326ac0a5b489
+      id: 3303975224
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Play_Zone4_Music
+        ObjectType: 3
+      Path: Default Work Unit/Music/Play_Zone4_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events/SFX.wwu
+    ParentPhysicalPath: Events/Default Work Unit.wwu
+    guid: 70427e337ecab74391244b5ed6520621
+    GuidInternal: 
+    m_lastTime: -8586293477064775808
     List: []
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f43175f75549614ca91d5b00e2d5af72
     GuidInternal: 
-    m_lastTime: -8586298690304775808
+    m_lastTime: -8586293478274775808
     List: []
-  - PhysicalPath: Game Parameters/Factory Motion.wwu
-    ParentPhysicalPath: 
-    guid: 225213d7dbd1d042adc0930743567776
+  - PhysicalPath: Game Parameters/Musical_Layers.wwu
+    ParentPhysicalPath: Game Parameters/Default Work Unit.wwu
+    guid: 6c11d9cd8155bb4ab9311b942d719fd8
     GuidInternal: 
-    m_lastTime: -8586298690304775808
+    m_lastTime: -8586293478284775808
     List:
-    - name: Playback_Rate
-      guid: e37e38283ac11643b9c3db5c521624af
-      id: 1524500807
+    - name: Music_Layer_Z1
+      guid: 712e2c6cbe503346a1786c4c769657e7
+      id: 1022520460
       PathAndIcons:
-      - ElementName: Factory Motion
+      - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Playback_Rate
+      - ElementName: Musical_Layers
+        ObjectType: 12
+      - ElementName: Music_Layer_Z1
         ObjectType: 13
-      Path: Factory Motion/Playback_Rate
-    - name: RPM
-      guid: 05aa129177f5fd449f4e4424158129e6
-      id: 796049864
+      Path: Default Work Unit/Musical_Layers/Music_Layer_Z1
+    - name: Music_Layer_Z2
+      guid: e13aa2901c772f4389b46e144aacce22
+      id: 1022520463
       PathAndIcons:
-      - ElementName: Factory Motion
+      - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: RPM
+      - ElementName: Musical_Layers
+        ObjectType: 12
+      - ElementName: Music_Layer_Z2
         ObjectType: 13
-      Path: Factory Motion/RPM
-  - PhysicalPath: Game Parameters/Factory SoundSeed Air Game Syncs.wwu
-    ParentPhysicalPath: 
-    guid: 5577163b42fb8b4598bf96f557afb3b9
+      Path: Default Work Unit/Musical_Layers/Music_Layer_Z2
+    - name: Music_Layer_Z3
+      guid: d24921862256c84e92e41245037f3fa5
+      id: 1022520462
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Musical_Layers
+        ObjectType: 12
+      - ElementName: Music_Layer_Z3
+        ObjectType: 13
+      Path: Default Work Unit/Musical_Layers/Music_Layer_Z3
+    - name: Music_Layer_Z4
+      guid: d630f428b1175345a19fa537de7cd1b4
+      id: 1022520457
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Musical_Layers
+        ObjectType: 12
+      - ElementName: Music_Layer_Z4
+        ObjectType: 13
+      Path: Default Work Unit/Musical_Layers/Music_Layer_Z4
+  - PhysicalPath: Game Parameters/Volume_Sliders.wwu
+    ParentPhysicalPath: Game Parameters/Default Work Unit.wwu
+    guid: b839a88db22e094ca598e279f0c2360e
     GuidInternal: 
-    m_lastTime: -8586298690304775808
+    m_lastTime: -8586293478284775808
     List:
-    - name: SS_Air_Fear
-      guid: 59062ef746431c4ea1b1dab46a05101e
-      id: 1351367891
+    - name: Music_Volume
+      guid: 907526827b466f458daaa1f9eb9ae246
+      id: 1006694123
       PathAndIcons:
-      - ElementName: Factory SoundSeed Air Game Syncs
+      - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: SS_Air_Fear
+      - ElementName: Volume_Sliders
+        ObjectType: 12
+      - ElementName: Music_Volume
         ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Fear
-    - name: SS_Air_Freefall
-      guid: 37fe2d2f9e4f944d83d853cca39781ad
-      id: 3002758120
+      Path: Default Work Unit/Volume_Sliders/Music_Volume
+    - name: SFX_Volume
+      guid: fce365c53feff745bf959c9e26ba74be
+      id: 1564184899
       PathAndIcons:
-      - ElementName: Factory SoundSeed Air Game Syncs
+      - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: SS_Air_Freefall
-        ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Freefall
-    - name: SS_Air_Fury
-      guid: dc79aea23acaba4696529986c322a87b
-      id: 1029930033
-      PathAndIcons:
-      - ElementName: Factory SoundSeed Air Game Syncs
+      - ElementName: Volume_Sliders
         ObjectType: 12
-      - ElementName: SS_Air_Fury
+      - ElementName: SFX_Volume
         ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Fury
-    - name: SS_Air_Month
-      guid: 45b4e209a3c47f44b3ca818a1d925ef7
-      id: 2648548617
-      PathAndIcons:
-      - ElementName: Factory SoundSeed Air Game Syncs
-        ObjectType: 12
-      - ElementName: SS_Air_Month
-        ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Month
-    - name: SS_Air_Presence
-      guid: 1a81b7e32f7b0f49b44f5fe51b468041
-      id: 3847924954
-      PathAndIcons:
-      - ElementName: Factory SoundSeed Air Game Syncs
-        ObjectType: 12
-      - ElementName: SS_Air_Presence
-        ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Presence
-    - name: SS_Air_RPM
-      guid: ab9048a3d5b92645a64d5290c43ef2dc
-      id: 822163944
-      PathAndIcons:
-      - ElementName: Factory SoundSeed Air Game Syncs
-        ObjectType: 12
-      - ElementName: SS_Air_RPM
-        ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_RPM
-    - name: SS_Air_Size
-      guid: efeb291393a12e47a38c64668b494879
-      id: 3074696722
-      PathAndIcons:
-      - ElementName: Factory SoundSeed Air Game Syncs
-        ObjectType: 12
-      - ElementName: SS_Air_Size
-        ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Size
-    - name: SS_Air_Storm
-      guid: db8c3fe9d1063747acaf7cd44bbed783
-      id: 3715662592
-      PathAndIcons:
-      - ElementName: Factory SoundSeed Air Game Syncs
-        ObjectType: 12
-      - ElementName: SS_Air_Storm
-        ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Storm
-    - name: SS_Air_TimeOfDay
-      guid: 2ca76f537e8c8b4cae03ef34fdadc314
-      id: 3203397129
-      PathAndIcons:
-      - ElementName: Factory SoundSeed Air Game Syncs
-        ObjectType: 12
-      - ElementName: SS_Air_TimeOfDay
-        ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_TimeOfDay
-    - name: SS_Air_Turbulence
-      guid: 197ba8edaa73a0409f192073606db710
-      id: 4160247818
-      PathAndIcons:
-      - ElementName: Factory SoundSeed Air Game Syncs
-        ObjectType: 12
-      - ElementName: SS_Air_Turbulence
-        ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Turbulence
+      Path: Default Work Unit/Volume_Sliders/SFX_Volume
   StateWwu:
   - PhysicalPath: States/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 6dd5ac529c349441bea23ed61995e31b
     GuidInternal: 
-    m_lastTime: -8586298690304775808
-    List: []
+    m_lastTime: -8586293478274775808
+    List:
+    - name: Zones
+      guid: 0ad03dc0d2a6d048b31b77c73d93e5c0
+      id: 831766718
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Zones
+        ObjectType: 9
+      Path: Default Work Unit/Zones
+      values:
+      - name: None
+        guid: a979949c4b076a42953379178cee8914
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: Zone1
+        guid: b58490a7a512334a83c65bbf6b4d2972
+        id: 831766780
+        PathAndIcons:
+        - ElementName: Zone1
+          ObjectType: 8
+      - name: Zone2
+        guid: a1faebc3448f0647ac5eec1e154e5cdb
+        id: 831766783
+        PathAndIcons:
+        - ElementName: Zone2
+          ObjectType: 8
+      - name: Zone3
+        guid: 58fd3579ccd1d64686cd05c26b460e10
+        id: 831766782
+        PathAndIcons:
+        - ElementName: Zone3
+          ObjectType: 8
+      - name: Zone4
+        guid: b7e376ffec126b4588cd184476f87dcd
+        id: 831766777
+        PathAndIcons:
+        - ElementName: Zone4
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches/Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -359,5 +439,8 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Wwise_Graduation_game
+  - /Wwise_Graduation_game/Events
+  - /Wwise_Graduation_game/Events/Default Work Unit
+  - /Wwise_Graduation_game/Events/Default Work Unit/Music
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
