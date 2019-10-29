@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewMMConfig", menuName = "Motion Matching/Config", order = 10)]
@@ -14,6 +13,7 @@ public class MMConfig : ScriptableObject
     public string[] ignoreTags = new string[32];
     public string[] favourTags = new string[32];
 
+#if UNITY_EDITOR
     public void CreateEnum(string enumName, string[] enumArray)
     {
         string filePathAndName = "Assets/Scripts/Enums/" + enumName + ".cs";
@@ -30,7 +30,7 @@ public class MMConfig : ScriptableObject
         sb.AppendFormat("\n }}");
         
         File.WriteAllText(filePathAndName,sb.ToString());
-        AssetDatabase.ImportAsset(filePathAndName);
+        UnityEditor.AssetDatabase.ImportAsset(filePathAndName);
     }
-    
+#endif
 }
