@@ -56,7 +56,7 @@ public class CharacterMovement : MonoBehaviour
         maxSpeed = settings.maxSpeed;
         rampUpCurve = settings.rampUpCurve;
         rampDownCurve = settings.rampDownCurve;
-        gravity = settings.gravity;
+        gravity = settings.baseGravity;
         jumpHeight = settings.jumpHeight;
         groundedDistance = settings.groundedDistance;
         groundedTransform = settings.groundedTransform;

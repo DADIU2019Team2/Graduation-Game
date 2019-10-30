@@ -494,15 +494,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Motor: {fileID: 195157402}
   settings: {fileID: 11400000, guid: 17089354316c02e44a07c13a8481a302, type: 2}
-  MaxStableMoveSpeed: 10
+  MaxStableMoveSpeed: 0
   StableMovementSharpness: 15
   OrientationSharpness: 10
-  MaxAirMoveSpeed: 10
+  _jumpedThisFrame: 0
+  hangTimeVelocityThreshold: 0
+  _jumpRequested: 0
+  JumpSpeed: 10
+  JumpPreGroundingGraceTime: 0
+  JumpPostGroundingGraceTime: 0
+  MaxAirMoveSpeed: 0
   AirAccelerationSpeed: 5
   Drag: 0.1
   RotationObstruction: 0
   Gravity: {x: 0, y: -30, z: 0}
+  baseGravity: {x: 0, y: -10, z: 0}
+  floatGravity: 0
+  upGravity: 3
+  downGravity: 0
   MeshRoot: {fileID: 0}
+  AllowDoubleJump: 0
+  AllowJumpingWhenSliding: 0
 --- !u!114 &195157402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1823,22 +1835,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1929591060}
     m_Modifications:
-    - target: {fileID: 6400004, guid: 8ff8d641e32922b46af689259eba176b, type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6400000, guid: 8ff8d641e32922b46af689259eba176b, type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6400002, guid: 8ff8d641e32922b46af689259eba176b, type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6400006, guid: 8ff8d641e32922b46af689259eba176b, type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8ff8d641e32922b46af689259eba176b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.2837381
@@ -1870,6 +1866,22 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 8ff8d641e32922b46af689259eba176b, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: 8ff8d641e32922b46af689259eba176b, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400002, guid: 8ff8d641e32922b46af689259eba176b, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400004, guid: 8ff8d641e32922b46af689259eba176b, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400006, guid: 8ff8d641e32922b46af689259eba176b, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ff8d641e32922b46af689259eba176b, type: 3}
