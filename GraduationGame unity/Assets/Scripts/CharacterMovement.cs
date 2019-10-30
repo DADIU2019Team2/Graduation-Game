@@ -130,7 +130,7 @@ public class CharacterMovement : MonoBehaviour
         {
             verticalpower = 0;
         }
-        Debug.Log(movement.y);
+        //Debug.Log(movement.y);
         controller.Move(new Vector3((direction * velocity * movement.x) * Time.deltaTime, movement.y * Time.deltaTime, 0));
     }
 
