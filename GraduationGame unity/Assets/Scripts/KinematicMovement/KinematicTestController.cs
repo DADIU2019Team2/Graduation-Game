@@ -6,18 +6,34 @@ using System;
 
 namespace KinematicTest.controller
 {
+    enum PlayerStates
+    {
+        Running,
+        Stopped,
+        Sliding,
+    }
     public struct PlayerCharacterInputs
     {
-        public float MoveAxisForward;
-        public float MoveAxisRight;
-        public string inputString;
+        //public string inputString;
+        public bool changeDirection;
     }
 
     public class KinematicTestController : MonoBehaviour, ICharacterController
     {
         public KinematicCharacterMotor Motor;
 
-        [Header("Stable Movement")]
+        bool isRunningRight = true;
+        bool rampingDown;
+        float curveStep;
+        float rampUpTime = 2f;
+        float rampDownTime = 0.5f;
+        bool stopped = false;
+        public PlayerControllerSettings settings;
+        AnimationCurve rampUpCurve; //speed curve
+    AnimationCurve rampDownCurve;
+    CharacterController controller;
+        int runningRight = 1;
+        [Header("Running Movement")]
         public float MaxStableMoveSpeed = 10f;
         public float StableMovementSharpness = 15;
         public float OrientationSharpness = 10;
@@ -36,10 +52,18 @@ namespace KinematicTest.controller
         private Vector3 _lookInputVector;
         private string _inputString;
 
+        void Init()
+        {
+            rampUpTime = settings.rampUpTime;
+            rampDownTime = settings.rampDownTime;
+            rampUpCurve = settings.rampUpCurve;
+            rampDownCurve = settings.rampDownCurve;
+        }
         private void Start()
         {
             // Assign to motor
             Motor.CharacterController = this;
+            Init();
         }
 
         /// <summary>
@@ -47,12 +71,34 @@ namespace KinematicTest.controller
         /// </summary>
         public void SetInputs(ref PlayerCharacterInputs inputs)
         {
+            if (inputs.changeDirection)
+            {
+               
+                if (stopped)
+                {
+                    Debug.Log("stopped");
+                    stopped = false;
+                    rampingDown = false;
+                    curveStep = 0;
+
+                }
+                else
+                {
+                    Debug.Log("not stopped");
+                    curveStep = 1 - curveStep;
+                    rampingDown = true;
+                }
+
+                //isRunningRight = !isRunningRight;
+
+            }
+            //runningRight = isRunningRight ? 1 : -1 ;
             // Clamp input
-            Vector3 moveInputVector = Vector3.ClampMagnitude(new Vector3(inputs.MoveAxisRight, 0f, inputs.MoveAxisForward), 1f);
-            
+            //Vector3 moveInputVector = Vector3.ClampMagnitude(new Vector3(inputs.MoveAxisRight, 0f, inputs.MoveAxisForward), 1f);
+            Vector3 moveInputVector = Vector3.right * runningRight;
             // Move and look inputs
             _moveInputVector = moveInputVector;
-            _inputString = inputs.inputString;
+           
         }
 
         /// <summary>
@@ -90,13 +136,55 @@ namespace KinematicTest.controller
             Vector3 targetMovementVelocity = Vector3.zero;
             if (Motor.GroundingStatus.IsStableOnGround)
             {
+                Debug.Log("Stable Ground");
                 // Reorient source velocity on current ground slope (this is because we don't want our smoothing to cause any velocity losses in slope changes)
                 currentVelocity = Motor.GetDirectionTangentToSurface(currentVelocity, Motor.GroundingStatus.GroundNormal) * currentVelocity.magnitude;
 
                 // Calculate target velocity
                 Vector3 inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
                 Vector3 reorientedInput = Vector3.Cross(Motor.GroundingStatus.GroundNormal, inputRight).normalized * _moveInputVector.magnitude;
-                targetMovementVelocity = reorientedInput * MaxStableMoveSpeed;
+                float velocity = 0f;
+
+                if (rampingDown)
+                {
+                    Debug.Log("ramping down");
+                    if (curveStep < 1)
+                    {
+                        curveStep += (1 / rampDownTime * Time.deltaTime);
+                    }
+                    if (curveStep >= 1)
+                    {
+                        curveStep = 0;
+                        rampingDown = false;
+                        runningRight = runningRight * -1;
+                    }
+                }
+                else
+                {
+                    if (curveStep < 1)
+                    {
+                        curveStep += (1 / rampUpTime * Time.deltaTime);
+                    }
+                    if (curveStep > 1)
+                    {
+                        curveStep = 1;
+                    }
+                }
+                if (!stopped)
+                {
+                    Debug.Log("not stopped");
+                    if (rampingDown)
+                    {
+                        velocity = MaxStableMoveSpeed * rampDownCurve.Evaluate(curveStep);
+                    }
+                    else
+                    {
+                        velocity = MaxStableMoveSpeed * rampUpCurve.Evaluate(curveStep);
+                    }
+                }
+
+
+                targetMovementVelocity = reorientedInput * velocity;
 
                 // Smooth movement Velocity
                 currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity, 1 - Mathf.Exp(-StableMovementSharpness * deltaTime));
@@ -143,6 +231,7 @@ namespace KinematicTest.controller
 
         public void OnGroundHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint, ref HitStabilityReport hitStabilityReport)
         {
+
         }
 
         public void OnMovementHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint, ref HitStabilityReport hitStabilityReport)
