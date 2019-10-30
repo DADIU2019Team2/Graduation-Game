@@ -10,7 +10,8 @@ namespace KinematicTest.player
 {
     public class KinematicTestPlayer : MonoBehaviour
     {
-       
+
+        public InputManager.SwipeType swipeType;
         public Transform CameraFollowPoint;
         public KinematicTestController Character;
 
@@ -19,6 +20,8 @@ namespace KinematicTest.player
         private const string MouseScrollInput = "Mouse ScrollWheel";
         private const string HorizontalInput = "Horizontal";
         private const string VerticalInput = "Vertical";
+
+       
 
         private void Start()
         {
@@ -68,5 +71,25 @@ namespace KinematicTest.player
             // Apply inputs to character
             Character.SetInputs(ref characterInputs);
         }
+        public void GetInputFromEvent()
+        {
+            swipeType = InputManager.GetMostRecentInputType();
+            PlayerCharacterInputs characterInputs = new PlayerCharacterInputs();
+            switch (swipeType)
+                {
+                    case InputManager.SwipeType.swipeForwardUp:
+                    characterInputs.jumpDown = true;
+                        break;
+                    case InputManager.SwipeType.swipeBackwards:
+                    characterInputs.changeDirection = true;
+                        break;
+                    case InputManager.SwipeType.swipeDown:
+                        break;
+                }
+            Character.SetInputs(ref characterInputs);
+
+        }
+
     }
+    
 }
