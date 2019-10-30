@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
-//Name: zoe.ma
-//Last modified: Wed, Oct 30, 2019 11:01:27 AM
+//Name: zoe_v004_EL.ma
+//Last modified: Wed, Oct 30, 2019 11:01:25 AM
 //Codeset: 1252
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -32291,7 +32291,7 @@ createNode shadingEngine -n "lambert35SG";
 createNode materialInfo -n "materialInfo44";
 	rename -uid "14077361-4FA7-FE51-AD3B-6E82FE5D9333";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "5E03B225-4539-4A5A-9E74-10BDF7C06ECD";
+	rename -uid "B36DC2B7-406E-286E-AD60-90B4000A646B";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -330.95236780151544 -323.80951094248991 ;
 	setAttr ".tgi[0].vh" -type "double2" 317.85713022663526 338.09522466054096 ;
@@ -32699,4 +32699,4 @@ connectAttr "bootThing.msg" ":defaultShaderList1.s" -na;
 connectAttr "eyes.msg" ":defaultShaderList1.s" -na;
 connectAttr "mouth.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of zoe.ma
+// End of zoe_v004_EL.ma
