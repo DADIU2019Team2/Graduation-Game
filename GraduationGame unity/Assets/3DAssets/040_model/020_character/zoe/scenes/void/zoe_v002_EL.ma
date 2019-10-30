@@ -1,10 +1,8 @@
 //Maya ASCII 2019 scene
 //Name: zoe_v002_EL.ma
-//Last modified: Tue, Oct 29, 2019 04:35:13 PM
+//Last modified: Tue, Oct 29, 2019 04:57:13 PM
 //Codeset: 1252
 requires maya "2019";
-requires "mtoa" "3.1.2";
-requires "stereoCamera" "10.0";
 requires "mtoa" "3.1.2";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
@@ -17,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "3391E412-4D6F-D31E-C5DC-6BBDD73E64DB";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 91.571102181984969 119.00991946832418 23.909629042040706 ;
-	setAttr ".r" -type "double3" -378.33835272957094 -677.39999999999588 0 ;
+	setAttr ".t" -type "double3" -20.515504718993114 88.498165522800349 260.11562432545185 ;
+	setAttr ".r" -type "double3" -368.73835272956484 -724.99999999993156 -9.9771996363878348e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1EC36C35-487D-A9AD-A120-4B80C2B85D8E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 14.101031442608502;
+	setAttr ".coi" 280.41691658939897;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -19530,7 +19528,7 @@ createNode mesh -n "Body_geoShape" -p "Body_geo";
 	setAttr ".iog[0].og[1].gcl" -type "componentList" 1 "f[288:3166]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.5 ;
+	setAttr ".pv" -type "double2" 0.5 1 ;
 	setAttr ".uvst[0].uvsn" -type "string" "DiffuseUV";
 	setAttr -s 11704 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.53815103 0 0.53815103 1 0.461849
@@ -20612,28 +20610,52 @@ createNode mesh -n "Body_geoShape" -p "Body_geo";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 3178 ".pt";
-	setAttr ".pt[2194:2359]" -type "float3"  -0.16590881 0.12740326 0.086247444 
-		-0.10105896 0.22360229 -0.096038818 -0.07219696 0.097221375 -0.15780926 -0.038986206 
-		-0.074119568 -0.076084137 -0.095153809 -0.12934113 -0.017993927 -0.11642456 -0.11716461 
-		-0.0010795593 -0.1541214 -0.06124115 0.054122925 -0.02948761 0.027549744 -0.15138054 
-		-0.031196594 -0.07144928 -0.12119198 -0.033859253 -0.15039063 -0.05444622 -0.086547852 
-		-0.15077972 0.029700279 -0.0079498291 0.047134399 -0.17853451 -0.026557922 0.033157349 
-		-0.068172455 -0.072532654 -0.010444641 0.040410995 -0.051704407 -0.12903595 -0.056257248 
-		-0.085044861 -0.15537262 -0.043515205 -0.095909119 -0.16551971 -0.026191711 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0.0012741089 0.0051422119 -0.020546913 -0.0034179688 0.0090255737 -0.011688232 -0.022033691 
-		0.0053482056 -0.004240036 -0.0055084229 -0.002784729 -0.0012655258 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 190 ".pt";
+	setAttr ".pt[140]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[141]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[142]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[143]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[144]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[145]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[148]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[149]" -type "float3" 0 0 -0.93001384 ;
+	setAttr ".pt[150]" -type "float3" 0 0 -0.93001384 ;
+	setAttr ".pt[151]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[152]" -type "float3" 0 0 -0.93001384 ;
+	setAttr ".pt[153]" -type "float3" 0 0 -0.93001384 ;
+	setAttr ".pt[154]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[157]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[158]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[161]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[162]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[164]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[166]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[169]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[170]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[173]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[174]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[176]" -type "float3" 0 0 -1.6647356 ;
+	setAttr ".pt[2194]" -type "float3" -0.16590881 0.12740326 0.086247444 ;
+	setAttr ".pt[2195]" -type "float3" -0.10105896 0.22360229 -0.096038818 ;
+	setAttr ".pt[2196]" -type "float3" -0.07219696 0.097221375 -0.15780926 ;
+	setAttr ".pt[2197]" -type "float3" -0.038986206 -0.074119568 -0.076084137 ;
+	setAttr ".pt[2198]" -type "float3" -0.095153809 -0.12934113 -0.017993927 ;
+	setAttr ".pt[2199]" -type "float3" -0.11642456 -0.11716461 -0.0010795593 ;
+	setAttr ".pt[2200]" -type "float3" -0.1541214 -0.06124115 0.054122925 ;
+	setAttr ".pt[2201]" -type "float3" -0.02948761 0.027549744 -0.15138054 ;
+	setAttr ".pt[2202]" -type "float3" -0.031196594 -0.07144928 -0.12119198 ;
+	setAttr ".pt[2203]" -type "float3" -0.033859253 -0.15039063 -0.05444622 ;
+	setAttr ".pt[2204]" -type "float3" -0.086547852 -0.15077972 0.029700279 ;
+	setAttr ".pt[2205]" -type "float3" -0.0079498291 0.047134399 -0.17853451 ;
+	setAttr ".pt[2206]" -type "float3" -0.026557922 0.033157349 -0.068172455 ;
+	setAttr ".pt[2207]" -type "float3" -0.072532654 -0.010444641 0.040410995 ;
+	setAttr ".pt[2208]" -type "float3" -0.051704407 -0.12903595 -0.056257248 ;
+	setAttr ".pt[2209]" -type "float3" -0.085044861 -0.15537262 -0.043515205 ;
+	setAttr ".pt[2210]" -type "float3" -0.095909119 -0.16551971 -0.026191711 ;
+	setAttr ".pt[2253]" -type "float3" 0.0012741089 0.0051422119 -0.020546913 ;
+	setAttr ".pt[2254]" -type "float3" -0.0034179688 0.0090255737 -0.011688232 ;
+	setAttr ".pt[2255]" -type "float3" -0.022033691 0.0053482056 -0.004240036 ;
+	setAttr ".pt[2256]" -type "float3" -0.0055084229 -0.002784729 -0.0012655258 ;
 	setAttr -s 3178 ".vt";
 	setAttr ".vt[0:165]"  12.81182957 44.19633865 3.0070242882 12.51039982 45.82182693 3.41030645
 		 8.17706299 45.70761108 3.052249908 8.36977577 44.20804596 2.82036614 -8.36684513 44.15294647 2.7974782
@@ -29155,19 +29177,19 @@ createNode mesh -n "Body_geoShape" -p "Body_geo";
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "67592211-47FA-48DF-D4F4-62B165EC3F58";
+	rename -uid "8026198F-4C44-9A8E-DB9D-F78B3CFC16BE";
 	setAttr -s 13 ".lnk";
 	setAttr -s 13 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "9515CFCC-4544-B455-FE16-0C96144303B1";
+	rename -uid "5B89FB4E-4CAB-A089-F3AA-519052165482";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "51B8D28C-4025-AE0F-F3FE-349F5661899F";
+	rename -uid "CDB2B355-44E6-322E-F139-75B0AC9C206E";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "DC48D6CA-46AE-E979-02F8-59B10CC134B7";
+	rename -uid "BCE12A9B-4D8B-35A8-0968-868A5F2C5428";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "A629088F-4C84-2D53-100C-088B5F3C5A41";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "9890B91D-489B-5C86-9CF6-41A72FFC0032";
+	rename -uid "5FD8C12E-420A-A889-B9A9-248BB9694C19";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "F60E05B7-4D63-8B45-C90C-FA9AD2A3E500";
 	setAttr ".g" yes;
@@ -29415,8 +29437,6 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "groupId2.id" "Boots_geoShape.iog.og[0].gid";
 connectAttr "Boots_geoSG.mwc" "Boots_geoShape.iog.og[0].gco";
 connectAttr "groupId3.id" "Wristband_geoShape.iog.og[0].gid";
