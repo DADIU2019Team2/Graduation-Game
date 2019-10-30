@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: zoeRig_v002_AD.ma
-//Last modified: Wed, Oct 30, 2019 11:33:16 AM
+//Last modified: Wed, Oct 30, 2019 11:41:11 AM
 //Codeset: 1252
 file -rdi 1 -ns ":" -rfn "zoeRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Dadiu student/Documents/Graduation-Game/GraduationGame unity/Assets/3DAssets/040_model/020_character/zoe/live/zoe.ma";
 file -r -ns ":" -dr 1 -rfn "zoeRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Dadiu student/Documents/Graduation-Game/GraduationGame unity/Assets/3DAssets/040_model/020_character/zoe/live/zoe.ma";
@@ -19,8 +19,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "7F95E272-4A7C-4EEF-6877-EB81E6DF4B71";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -31.803188153188209 79.98909857349723 162.38142577190277 ;
-	setAttr ".r" -type "double3" -374.73835272794832 -1101.8000000000075 4.2819106514369197e-16 ;
+	setAttr ".t" -type "double3" 116.20777715253585 75.346643656822266 140.99445189781363 ;
+	setAttr ".r" -type "double3" -372.93835272794803 -1041.0000000000068 1.0231522903047696e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "B1E2D02A-447D-A2BE-6030-408FC3D30EE8";
 	setAttr -k off ".v" no;
@@ -1314,7 +1314,7 @@ createNode joint -n "RightFinger5Tip" -p "RightFinger5Distal";
 	setAttr ".radi" 3;
 	setAttr -k on ".filmboxTypeID" 4;
 createNode fosterParent -n "zoeRNfosterParent1";
-	rename -uid "138F6AD8-46D6-7F2A-3DA3-FBBD4F8E2AA6";
+	rename -uid "FD104564-4AA7-6710-68D3-61BD285465A9";
 createNode mesh -n "Body_geoShapeDeformed" -p "zoeRNfosterParent1";
 	rename -uid "515812CC-48B8-CAB3-C39B-9FBB5CC9608A";
 	setAttr -k off ".v";
@@ -14734,7 +14734,7 @@ createNode unitConversion -n "unitConversion4";
 	rename -uid "178D2976-494F-5E9A-C43C-309F5CF59089";
 	setAttr ".cf" 0.017453292519943295;
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
-	rename -uid "82E3CA16-4371-5413-FA42-D0BF62363220";
+	rename -uid "4ACA8316-4C12-B6B4-5495-E193FFF59D00";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -765.86978430127476 -913.50143375350467 ;
 	setAttr ".tgi[0].vh" -type "double2" 1496.8718520274838 191.72426046169767 ;
