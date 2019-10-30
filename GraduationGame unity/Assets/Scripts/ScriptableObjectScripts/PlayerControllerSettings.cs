@@ -8,7 +8,11 @@ public class PlayerControllerSettings : ScriptableObject
     public float rampUpTime;
     public float rampDownTime;
     public float maxSpeed;
-    public float gravity;
+    public float baseGravity;
+    public float hangTimeVelocityCutoff;
+    public float riseGravity;
+    public float hangGravity;
+    public float fallGravity;
     public AnimationCurve rampUpCurve;
     public AnimationCurve rampDownCurve;
     public float jumpHeight;
