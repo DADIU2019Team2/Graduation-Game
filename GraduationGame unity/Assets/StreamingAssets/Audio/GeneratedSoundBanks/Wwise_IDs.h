@@ -13,10 +13,13 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_FOOTSTEP_LOOP_PH = 39250664U;
+        static const AkUniqueID PLAY_JUMPS_PH = 1761266224U;
         static const AkUniqueID PLAY_ZONE1_MUSIC = 4098982749U;
         static const AkUniqueID PLAY_ZONE2_MUSIC = 3584129722U;
         static const AkUniqueID PLAY_ZONE3_MUSIC = 556439219U;
         static const AkUniqueID PLAY_ZONE4_MUSIC = 3303975224U;
+        static const AkUniqueID STOP_FOOTSTEP_LOOP_PH = 1201902998U;
     } // namespace EVENTS
 
     namespace STATES
@@ -38,6 +41,8 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID FOOTSTEP_VELOCITY = 3740773599U;
+        static const AkUniqueID MOVE_ACCEL = 1050950791U;
         static const AkUniqueID MUSIC_LAYER_Z1 = 1022520460U;
         static const AkUniqueID MUSIC_LAYER_Z2 = 1022520463U;
         static const AkUniqueID MUSIC_LAYER_Z3 = 1022520462U;
