@@ -60,9 +60,10 @@ namespace KinematicTest.player
             PlayerCharacterInputs characterInputs = new PlayerCharacterInputs();
 
             // Build the CharacterInputs struct
-            characterInputs.MoveAxisForward = Input.GetAxisRaw(VerticalInput);
-            characterInputs.MoveAxisRight = Input.GetAxisRaw(HorizontalInput);
-            characterInputs.inputString = Input.inputString;
+            ////characterInputs.MoveAxisForward = Input.GetAxisRaw(VerticalInput);
+            ////characterInputs.MoveAxisRight = Input.GetAxisRaw(HorizontalInput);
+            //characterInputs.inputString = Input.inputString;
+            characterInputs.changeDirection = Input.GetKeyDown(KeyCode.Space);
             // Apply inputs to character
             Character.SetInputs(ref characterInputs);
         }
