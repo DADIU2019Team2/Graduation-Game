@@ -11,6 +11,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
     [SerializeField] private float smoothTime = 0.1f;
 
     [SerializeField] private Vector3 localOffSet;
+    [SerializeField] private float maxDistToLookAtPoint = 5f;
     private Vector3 camVelocity;
     private Vector3 localPosInfrontOfPlayer;
 
@@ -34,14 +35,22 @@ public class SmoothPlayerCamFollow : MonoBehaviour
     Vector3 updateLookAt()
     {
         //do some dynamic localPos infront of player
+        Vector3 charToFollowVelocity = moveScript.GetVelocity();
+        Vector3 dynamicLookAtPoint = new Vector3(charToFollowVelocity.x / 2, transform.position.y, transform.position.z);
+        float distToLookatPoint = Mathf.Clamp(dynamicLookAtPoint.magnitude, 0f, maxDistToLookAtPoint);
+
+        localPosInfrontOfPlayer = dynamicLookAtPoint.normalized * distToLookatPoint;
+
         Vector3 worldPosInFrontOfPlayer = Vector3.zero;
-        if (!CharacterMovement.GetIsFacingRight())
+        if (!CharacterMovement.GetIsFacingRight()) //therefore giong left (counterClockwise)
         {
-            worldPosInFrontOfPlayer = playerToFollow.TransformPoint(localPosInfrontOfPlayer);
+            worldPosInFrontOfPlayer = playerToFollow.TransformPoint(-localPosInfrontOfPlayer.x, 
+                localPosInfrontOfPlayer.y, localPosInfrontOfPlayer.z);
         }
-        else if (CharacterMovement.GetIsFacingRight())
+        else if (CharacterMovement.GetIsFacingRight()) //therefore giong right (Clockwise)
         {
-            worldPosInFrontOfPlayer = playerToFollow.TransformPoint(-localPosInfrontOfPlayer);
+            worldPosInFrontOfPlayer = playerToFollow.TransformPoint(localPosInfrontOfPlayer.x, 
+                localPosInfrontOfPlayer.y, localPosInfrontOfPlayer.z);
         }
         transform.LookAt(worldPosInFrontOfPlayer, Vector3.up);
         return worldPosInFrontOfPlayer;
@@ -49,7 +58,10 @@ public class SmoothPlayerCamFollow : MonoBehaviour
 
     private void OnDrawGizmos()
     {        
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, updateLookAt());
+        if(Application.isPlaying)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(transform.position, updateLookAt());
+        }
     }
 }

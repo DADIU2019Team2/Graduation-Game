@@ -574,7 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb4ae078ce4d9040bcdf6ed316d82d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settings: {fileID: 0}
+  settings: {fileID: 11400000, guid: 17089354316c02e44a07c13a8481a302, type: 2}
   jumpPower: 0
   grounLayers:
     serializedVersion: 2
@@ -742,9 +742,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerToFollow: {fileID: 1024013203}
-  moveScript: {fileID: 0}
+  moveScript: {fileID: 1024013205}
   smoothTime: 0.1
   localOffSet: {x: 0, y: 0, z: 5}
+  maxDistToLookAtPoint: 0
 --- !u!81 &2032236486
 AudioListener:
   m_ObjectHideFlags: 0

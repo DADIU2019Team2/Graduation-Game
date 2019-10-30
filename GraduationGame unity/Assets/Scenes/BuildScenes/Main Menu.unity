@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -753,7 +753,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 202.89, y: 30}
+  m_SizeDelta: {x: 467.38, y: 103.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1502841380
 MonoBehaviour:
@@ -896,8 +896,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 40}
-  m_SizeDelta: {x: 202.89, y: 30}
+  m_AnchoredPosition: {x: 0, y: 120.1}
+  m_SizeDelta: {x: 467.38, y: 103.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1635654240
 MonoBehaviour:
@@ -1028,8 +1028,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -40}
-  m_SizeDelta: {x: 202.89, y: 30}
+  m_AnchoredPosition: {x: 0, y: -115.7}
+  m_SizeDelta: {x: 467.38, y: 103.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1915141662
 MonoBehaviour:
@@ -1317,6 +1317,7 @@ GameObject:
   - component: {fileID: 2045405746}
   - component: {fileID: 2045405748}
   - component: {fileID: 2045405745}
+  - component: {fileID: 2045405749}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1417,3 +1418,17 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &2045405749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045405744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae56c4635b3e4654fa68ad93aa45ef21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swipeAngleThresholds: {fileID: 0}
+  OnSwipeEvent: {fileID: 0}
