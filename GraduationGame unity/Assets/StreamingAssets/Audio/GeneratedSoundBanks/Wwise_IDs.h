@@ -11,20 +11,39 @@
 
 namespace AK
 {
+    namespace EVENTS
+    {
+        static const AkUniqueID PLAY_ZONE1_MUSIC = 4098982749U;
+        static const AkUniqueID PLAY_ZONE2_MUSIC = 3584129722U;
+        static const AkUniqueID PLAY_ZONE3_MUSIC = 556439219U;
+        static const AkUniqueID PLAY_ZONE4_MUSIC = 3303975224U;
+    } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace ZONES
+        {
+            static const AkUniqueID GROUP = 831766718U;
+
+            namespace STATE
+            {
+                static const AkUniqueID ZONE1 = 831766780U;
+                static const AkUniqueID ZONE2 = 831766783U;
+                static const AkUniqueID ZONE3 = 831766782U;
+                static const AkUniqueID ZONE4 = 831766777U;
+            } // namespace STATE
+        } // namespace ZONES
+
+    } // namespace STATES
+
     namespace GAME_PARAMETERS
     {
-        static const AkUniqueID PLAYBACK_RATE = 1524500807U;
-        static const AkUniqueID RPM = 796049864U;
-        static const AkUniqueID SS_AIR_FEAR = 1351367891U;
-        static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
-        static const AkUniqueID SS_AIR_FURY = 1029930033U;
-        static const AkUniqueID SS_AIR_MONTH = 2648548617U;
-        static const AkUniqueID SS_AIR_PRESENCE = 3847924954U;
-        static const AkUniqueID SS_AIR_RPM = 822163944U;
-        static const AkUniqueID SS_AIR_SIZE = 3074696722U;
-        static const AkUniqueID SS_AIR_STORM = 3715662592U;
-        static const AkUniqueID SS_AIR_TIMEOFDAY = 3203397129U;
-        static const AkUniqueID SS_AIR_TURBULENCE = 4160247818U;
+        static const AkUniqueID MUSIC_LAYER_Z1 = 1022520460U;
+        static const AkUniqueID MUSIC_LAYER_Z2 = 1022520463U;
+        static const AkUniqueID MUSIC_LAYER_Z3 = 1022520462U;
+        static const AkUniqueID MUSIC_LAYER_Z4 = 1022520457U;
+        static const AkUniqueID MUSIC_VOLUME = 1006694123U;
+        static const AkUniqueID SFX_VOLUME = 1564184899U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
@@ -36,8 +55,14 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
-        static const AkUniqueID MOTION_FACTORY_BUS = 985987111U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID REVERB = 348963605U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {
