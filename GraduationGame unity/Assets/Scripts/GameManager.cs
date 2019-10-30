@@ -4,23 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public enum GameState
-    {
-        levelStart,
-        mainGameplayLoop,
-        levelLoss,
-        cinematic/*Dialogue and cinematic bullshit*/,
-        levelComplete, 
-        optionsMenuOpened
-    }
 
     [SerializeField]
-    private GameState gameState;
-
-    void Start()
-    {
-        
-    }
+    private static GameState gameState;
 
     // Update is called once per frame
     void Update()
@@ -34,21 +20,21 @@ public class GameManager : MonoBehaviour
                 break;
             #region maingameplay
             case GameState.mainGameplayLoop:
-            //Main logic of the game goes on here. The player has control over Zoe. 
+                //Main logic of the game goes on here. The player has control over Zoe. 
                 break;
             #endregion maingameplay
             case GameState.levelLoss:
-            /*Fade to black, return all objects in scene to their initial states. 
-            “Reload” scene and fade back into level-start state. 
-            Zoe and camerashould be returned to most recent checkpoint met, rather than at the initial position at start of the level */
+                /*Fade to black, return all objects in scene to their initial states. 
+                “Reload” scene and fade back into level-start state. 
+                Zoe and camerashould be returned to most recent checkpoint met, rather than at the initial position at start of the level */
                 break;
             case GameState.cinematic:
-            /*(No player control at all until they end)
-             – except skipping dialogue by tapping and swiping to skip to next player-controllable state. */
+                /*(No player control at all until they end)
+                 – except skipping dialogue by tapping and swiping to skip to next player-controllable state. */
                 break;
             case GameState.levelComplete:
-            /* Fade to black, load next scene, transition into level-start state.
-            (Possibly set state to be level-start before calling the load-next-scene function) */
+                /* Fade to black, load next scene, transition into level-start state.
+                (Possibly set state to be level-start before calling the load-next-scene function) */
                 break;
             case GameState.optionsMenuOpened:
                 //Should pause all game-logic and behaviours. 
@@ -56,5 +42,10 @@ public class GameManager : MonoBehaviour
 
                 break;
         }
+    }
+
+    public static GameState GetGameState()
+    {
+        return gameState;
     }
 }
