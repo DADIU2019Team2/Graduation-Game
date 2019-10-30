@@ -86,15 +86,15 @@ public class InputManager : MonoBehaviour
         }
         else if (!isFacingRight)
         {
-            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeUpRightAngles0) && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeUpRightAngles1))
+            if (swipeAngle+360 < mirroredAngle(swipeAngleThresholds.swipeUpRightAngles0) && swipeAngle+360 > mirroredAngle(swipeAngleThresholds.swipeUpRightAngles1))
             {
                 return SwipeType.swipeForwardUp;
             }
-            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles0) && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles1))
+            if (swipeAngle+360 < mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles0) && swipeAngle+360 > mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles1))
             {
                 return SwipeType.swipeBackwards;
             }
-            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeDownAngles0) && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeDownAngles1))
+            if (swipeAngle+360 < mirroredAngle(swipeAngleThresholds.swipeDownAngles0) && swipeAngle+360 > mirroredAngle(swipeAngleThresholds.swipeDownAngles1))
             {
                 return SwipeType.swipeDown;
             }
