@@ -12,7 +12,7 @@ public class CharacterMovement : MonoBehaviour
     //get from scriptable object
     float rampUpTime; //how long to reach max point in curve
     float rampDownTime;
-    float maxSpeed; 
+    float maxSpeed;
     AnimationCurve rampUpCurve; //speed curve
     AnimationCurve rampDownCurve;
     CharacterController controller;
@@ -31,19 +31,23 @@ public class CharacterMovement : MonoBehaviour
     Transform groundedTransform;
     [SerializeField]
     float groundedDistance;
-    
+
     enum movementTypes
     {
         jump,
         changeDirection,
         stop,
     }
-    enum movementState
+    enum MovementState
     {
         running,
         walking,
         sliding,
     }
+
+    private MovementState movementState;
+
+    public InputManager.SwipeType swipeType;
 
     void Init()
     {
@@ -63,7 +67,7 @@ public class CharacterMovement : MonoBehaviour
         Init();
         controller = this.GetComponent<CharacterController>();
         movement = new Vector3(1, 1, 0);
-        
+
     }
 
     // Update is called once per frame
@@ -114,7 +118,7 @@ public class CharacterMovement : MonoBehaviour
             }
             else
             {
-                velocity= maxSpeed*rampUpCurve.Evaluate(curveStep);
+                velocity = maxSpeed * rampUpCurve.Evaluate(curveStep);
             }
         }
         movement.y -= (gravity * Time.deltaTime) - (verticalpower * Time.deltaTime);
@@ -126,12 +130,14 @@ public class CharacterMovement : MonoBehaviour
         {
             verticalpower = 0;
         }
-        Debug.Log(movement.y);
-        controller.Move(new Vector3((direction * velocity *movement.x)*Time.deltaTime, movement.y*Time.deltaTime,0));
+        //Debug.Log(movement.y);
+        controller.Move(new Vector3((direction * velocity * movement.x) * Time.deltaTime, movement.y * Time.deltaTime, 0));
     }
-    
+
     void MovePlayer(movementTypes input)
     {
+
+        #region debuggingstuff
         if (input == movementTypes.changeDirection)
         {
             if (stopped)
@@ -139,14 +145,14 @@ public class CharacterMovement : MonoBehaviour
                 stopped = false;
                 rampingDown = false;
                 curveStep = 0;
-                
+
             }
             else
             {
                 curveStep = 1 - curveStep;
                 rampingDown = true;
             }
-            
+
             facingRight = !facingRight;
         }
         if (input == movementTypes.stop)
@@ -162,9 +168,38 @@ public class CharacterMovement : MonoBehaviour
             movement.y = 0;
             verticalpower = jumpPower;
         }
+        #endregion debuggingstuff
+
+    }
+
+    public void MovePlayer()
+    {
+        swipeType = InputManager.GetMostRecentInputType();
+
+        switch (movementState)
+        {
+            #region case-running
+            case MovementState.running:
+                //Baseline character is running 
+                switch (swipeType)
+                {
+                    case InputManager.SwipeType.swipeForwardUp:
+                        MovePlayer(movementTypes.jump);
+                        break;
+                    case InputManager.SwipeType.swipeBackwards:
+                        MovePlayer(movementTypes.changeDirection);
+                        break;
+                    case InputManager.SwipeType.swipeDown:
+                        break;
+                }
+                break;
+                #endregion case-running
+        }
 
 
     }
+
+
     public static bool GetIsFacingRight()
     {
         return facingRight;
