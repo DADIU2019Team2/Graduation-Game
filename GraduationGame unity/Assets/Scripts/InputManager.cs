@@ -34,7 +34,7 @@ public class InputManager : MonoBehaviour
 
     float mirroredAngle(float angle)
     {
-        return 540 - angle; //540 chosen to avoid negative numbers.
+        return 180 + 360 - angle; 
     }
 
     void Update()
@@ -86,15 +86,15 @@ public class InputManager : MonoBehaviour
         }
         else if (!isFacingRight)
         {
-            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeUpRightAngles0) && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeUpRightAngles1))
+            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeUpRightAngles0)%360 && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeUpRightAngles1)%360)
             {
                 return SwipeType.swipeForwardUp;
             }
-            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles0) && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles1))
+            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles0)%360 && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles1)%360)
             {
                 return SwipeType.swipeBackwards;
             }
-            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeDownAngles0) && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeDownAngles1))
+            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeDownAngles0)%360 && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeDownAngles1)%360)
             {
                 return SwipeType.swipeDown;
             }

@@ -130,8 +130,10 @@ public class CharacterMovement : MonoBehaviour
         {
             verticalpower = 0;
         }
-        Debug.Log(movement.y);
+        //Debug.Log(movement.y);
         controller.Move(new Vector3((direction * velocity * movement.x) * Time.deltaTime, movement.y * Time.deltaTime, 0));
+
+        facingRight = direction > 0 ? true : false;
     }
 
     void MovePlayer(movementTypes input)
@@ -153,7 +155,6 @@ public class CharacterMovement : MonoBehaviour
                 rampingDown = true;
             }
 
-            facingRight = !facingRight;
         }
         if (input == movementTypes.stop)
         {
@@ -202,7 +203,8 @@ public class CharacterMovement : MonoBehaviour
 
     public static bool GetIsFacingRight()
     {
-        return facingRight;
+        return KinematicTest.controller.KinematicTestController.GetIsRunningRight();
+        //return facingRight;
     }
     public Vector3 GetVelocity()
     {

@@ -35,7 +35,8 @@ namespace KinematicTest.controller
         AnimationCurve rampUpCurve; //speed curve
         AnimationCurve rampDownCurve;
         CharacterController controller;
-        int runningRight = 1;
+        
+        public static int runningRight = 1;
         [Header("Running Movement")] public float MaxStableMoveSpeed = 10f;
         public float StableMovementSharpness = 15;
         public float OrientationSharpness = 10;
@@ -401,5 +402,17 @@ namespace KinematicTest.controller
         {
             return Mathf.Sqrt(2f * grav * jumpHeight);
         }
+        public static bool GetIsRunningRight()
+        {
+
+            if (runningRight == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            } 
+        
     }
 }
