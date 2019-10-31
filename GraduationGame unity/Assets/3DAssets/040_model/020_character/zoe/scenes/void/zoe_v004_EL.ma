@@ -1,10 +1,8 @@
 //Maya ASCII 2019 scene
 //Name: zoe_v004_EL.ma
-//Last modified: Wed, Oct 30, 2019 11:01:25 AM
+//Last modified: Wed, Oct 30, 2019 01:08:39 PM
 //Codeset: 1252
 requires maya "2019";
-requires "mtoa" "3.1.2";
-requires "stereoCamera" "10.0";
 requires "mtoa" "3.1.2";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
@@ -17,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "3391E412-4D6F-D31E-C5DC-6BBDD73E64DB";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -36.517982417701688 105.65474920390096 261.34230922288037 ;
-	setAttr ".r" -type "double3" -359.73835272749352 -4328.1999999998598 -3.138093575218405e-18 ;
+	setAttr ".t" -type "double3" -0.37179792289403579 53.717458230300956 134.73086637135987 ;
+	setAttr ".r" -type "double3" -353.73835272747982 -4311.7999999997974 5.0209497203537676e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1EC36C35-487D-A9AD-A120-4B80C2B85D8E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 259.79556055662664;
+	setAttr ".coi" 144.8868959811779;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -19435,7 +19433,7 @@ createNode transform -n "Body_geo" -p "zoe_geo_grp";
 createNode mesh -n "Body_geoShape" -p "Body_geo";
 	rename -uid "233A8B49-4E02-2D12-44B9-808C41AAC2C9";
 	setAttr -k off ".v";
-	setAttr -s 10 ".iog[0].og";
+	setAttr -s 7 ".iog[0].og";
 	setAttr ".iog[0].og[2].gcl" -type "componentList" 72 "f[0]" "f[2]" "f[4]" "f[6]" "f[8]" "f[10]" "f[12]" "f[14]" "f[16]" "f[18]" "f[20]" "f[22]" "f[24]" "f[26]" "f[28]" "f[30]" "f[32:33]" "f[35]" "f[37]" "f[39]" "f[41]" "f[43]" "f[45]" "f[47]" "f[49]" "f[51]" "f[53]" "f[55]" "f[57]" "f[59]" "f[61]" "f[63]" "f[65]" "f[67]" "f[69]" "f[71]" "f[73]" "f[75]" "f[77]" "f[79]" "f[81]" "f[83]" "f[85]" "f[87]" "f[89]" "f[91]" "f[93]" "f[95]" "f[97]" "f[99]" "f[101]" "f[103]" "f[105:108]" "f[110]" "f[112:116]" "f[118]" "f[120:123]" "f[128]" "f[130]" "f[144]" "f[146]" "f[180:191]" "f[252:263]" "f[296:481]" "f[486:557]" "f[562:745]" "f[750:753]" "f[794:1705]" "f[2474:2485]" "f[2510:2513]" "f[2534:2669]" "f[3145:3166]";
 	setAttr ".iog[0].og[3].gcl" -type "componentList" 1 "f[1706:2369]";
 	setAttr ".iog[0].og[4].gcl" -type "componentList" 1 "f[2670:3144]";
@@ -20531,31 +20529,16 @@ createNode mesh -n "Body_geoShape" -p "Body_geo";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 26 ".pt";
-	setAttr ".pt[3178]" -type "float3" 0.71316773 -0.35214752 0.95952964 ;
-	setAttr ".pt[3179]" -type "float3" 0.90271151 0.209502 0.25687385 ;
-	setAttr ".pt[3180]" -type "float3" -0.90273017 0.84065288 -0.52588916 ;
-	setAttr ".pt[3181]" -type "float3" -0.90375429 0.26041445 0.25719628 ;
-	setAttr ".pt[3182]" -type "float3" 0.90168715 0.78936529 -0.52610242 ;
-	setAttr ".pt[3183]" -type "float3" -0.71421105 -0.30131775 0.95987433 ;
-	setAttr ".pt[3184]" -type "float3" -0.83582878 1.4030029 -0.64324999 ;
-	setAttr ".pt[3185]" -type "float3" -0.90271169 0.92904818 0.083576225 ;
-	setAttr ".pt[3186]" -type "float3" 0.61051059 -0.41322571 0.71424711 ;
-	setAttr ".pt[3187]" -type "float3" 0.90166807 0.98231137 0.083210774 ;
-	setAttr ".pt[3188]" -type "float3" -0.61155343 -0.466943 0.71474296 ;
-	setAttr ".pt[3189]" -type "float3" 0.83478564 1.4556088 -0.64342403 ;
-	setAttr ".pt[3190]" -type "float3" 0.097787857 -1.4030029 1.2616951 ;
-	setAttr ".pt[3191]" -type "float3" 0.52341473 -1.0522108 1.2589993 ;
-	setAttr ".pt[3192]" -type "float3" -0.41027415 -1.39245 1.0383967 ;
-	setAttr ".pt[3193]" -type "float3" -0.52445745 -1.0009429 1.2592158 ;
-	setAttr ".pt[3194]" -type "float3" -0.098830484 -1.3507066 1.2616115 ;
-	setAttr ".pt[3195]" -type "float3" 0.40923104 -1.3392496 1.0380524 ;
-	setAttr ".pt[3196]" -type "float3" -0.11104606 0.58056444 -1.2616957 ;
-	setAttr ".pt[3197]" -type "float3" -0.66471016 0.4473221 -0.93713731 ;
-	setAttr ".pt[3198]" -type "float3" 0.4672156 1.0025884 -1.2230687 ;
-	setAttr ".pt[3199]" -type "float3" 0.66366726 0.39578468 -0.93727523 ;
-	setAttr ".pt[3200]" -type "float3" 0.11000335 0.52854884 -1.261695 ;
-	setAttr ".pt[3201]" -type "float3" -0.46825829 0.95022565 -1.2229668 ;
+	setAttr -s 24 ".pt[3178:3201]" -type "float3"  0.71316773 -0.35214752 0.95952964 
+		0.90271151 0.209502 0.25687385 -0.90273017 0.84065288 -0.52588916 -0.90375429 0.26041445 
+		0.25719628 0.90168715 0.78936529 -0.52610242 -0.71421105 -0.30131775 0.95987433 -0.83582878 
+		1.4030029 -0.64324999 -0.90271169 0.92904818 0.083576225 0.61051059 -0.41322571 0.71424711 
+		0.90166807 0.98231137 0.083210774 -0.61155343 -0.466943 0.71474296 0.83478564 1.4556088 
+		-0.64342403 0.097787857 -1.4030029 1.2616951 0.52341473 -1.0522108 1.2589993 -0.41027415 
+		-1.39245 1.0383967 -0.52445745 -1.0009429 1.2592158 -0.098830484 -1.3507066 1.2616115 
+		0.40923104 -1.3392496 1.0380524 -0.11104606 0.58056444 -1.2616957 -0.66471016 0.4473221 
+		-0.93713731 0.4672156 1.0025884 -1.2230687 0.66366726 0.39578468 -0.93727523 0.11000335 
+		0.52854884 -1.261695 -0.46825829 0.95022565 -1.2229668;
 	setAttr -s 3202 ".vt";
 	setAttr ".vt[0:165]"  12.81182957 44.19633865 3.0070242882 12.51039982 45.82182693 3.41030645
 		 8.17706299 45.70761108 3.052249908 8.36977577 44.20804596 2.82036614 -8.36684513 44.15294647 2.7974782
@@ -29262,7 +29245,7 @@ createNode mesh -n "EyeBrow_L_geoShape" -p "EyeBrow_L_geo";
 createNode transform -n "EyeBrow_R_geo" -p "zoe_geo_grp";
 	rename -uid "262695E1-49CB-D485-8856-83BEEEFEDD5B";
 	setAttr ".t" -type "double3" -0.089042939310516545 -0.074266238408426943 -0.40129881533273698 ;
-	setAttr ".r" -type "double3" 0 16.054156100077893 0 ;
+	setAttr ".r" -type "double3" 0 16.054156100077897 0 ;
 	setAttr ".rp" -type "double3" 8.3475064768567488 152.14489917041792 14.425171721846578 ;
 	setAttr ".sp" -type "double3" 8.3475064768567488 152.14489917041792 14.425171721846578 ;
 createNode mesh -n "EyeBrow_R_geoShape" -p "EyeBrow_R_geo";
@@ -31836,19 +31819,19 @@ createNode mesh -n "Eye_R_geoShape" -p "Eye_R_geo";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "DBA74E7E-47CA-DA79-37E0-5CB7A0FAB6BA";
-	setAttr -s 44 ".lnk";
-	setAttr -s 44 ".slnk";
+	rename -uid "F101C110-470D-FA8F-D9BF-198E8AFD804C";
+	setAttr -s 31 ".lnk";
+	setAttr -s 31 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "D201FF60-4080-928D-6358-5885A9E9E139";
+	rename -uid "4E49F8FD-41C4-C0CE-39EA-7EA6DC53D508";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "4DE92F55-48F1-06D5-DF86-84BA25CF47FC";
+	rename -uid "17B2633C-4704-A7D8-4FC4-69A7A8824FC6";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "342B6E2D-4F3A-97DD-8E25-308718E274D5";
+	rename -uid "4B38398F-49CA-639F-27F6-349E664E2BB2";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "A629088F-4C84-2D53-100C-088B5F3C5A41";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "4FFAB3D5-4A18-8C2F-6400-F5B50850F014";
+	rename -uid "30389E30-4774-1DF5-D80B-F898D32C1B73";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "F60E05B7-4D63-8B45-C90C-FA9AD2A3E500";
 	setAttr ".g" yes;
@@ -32286,23 +32269,22 @@ createNode lambert -n "mouth";
 createNode shadingEngine -n "lambert35SG";
 	rename -uid "0274D1AD-4306-D3D5-9198-45AC3052E360";
 	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo44";
 	rename -uid "14077361-4FA7-FE51-AD3B-6E82FE5D9333";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "B36DC2B7-406E-286E-AD60-90B4000A646B";
+	rename -uid "6AE1276B-4FFA-E117-8A3D-B0A5DA71F46F";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -330.95236780151544 -323.80951094248991 ;
-	setAttr ".tgi[0].vh" -type "double2" 317.85713022663526 338.09522466054096 ;
+	setAttr ".tgi[0].vl" -type "double2" -330.35712972992997 -324.40474901407543 ;
+	setAttr ".tgi[0].vh" -type "double2" 318.45236829822079 337.49998658895549 ;
 	setAttr -s 4 ".tgi[0].ni";
 	setAttr ".tgi[0].ni[0].x" -252.85714721679688;
 	setAttr ".tgi[0].ni[0].y" 145.71427917480469;
 	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" 54.285713195800781;
+	setAttr ".tgi[0].ni[1].x" -252.85714721679688;
 	setAttr ".tgi[0].ni[1].y" 145.71427917480469;
 	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" -252.85714721679688;
+	setAttr ".tgi[0].ni[2].x" 54.285713195800781;
 	setAttr ".tgi[0].ni[2].y" 145.71427917480469;
 	setAttr ".tgi[0].ni[2].nvs" 1923;
 	setAttr ".tgi[0].ni[3].x" 54.285713195800781;
@@ -32335,8 +32317,6 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "groupId47.id" "Boots_geoShape.iog.og[1].gid";
 connectAttr "lambert32SG.mwc" "Boots_geoShape.iog.og[1].gco";
 connectAttr "groupId49.id" "Boots_geoShape.iog.og[2].gid";
@@ -32632,11 +32612,11 @@ connectAttr "mouth.oc" "lambert35SG.ss";
 connectAttr "Mouth_geoShape.iog" "lambert35SG.dsm" -na;
 connectAttr "lambert35SG.msg" "materialInfo44.sg";
 connectAttr "mouth.msg" "materialInfo44.m";
-connectAttr "mouth.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "eyes.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "lambert35SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "mouth.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr "eyes.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "lambert35SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
 connectAttr "lambert34SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
