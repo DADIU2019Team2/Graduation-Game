@@ -47,6 +47,7 @@ namespace KinematicTest.controller
         private bool _jumpConsumed;
         private float _timeSinceJumpRequested;
         public float JumpSpeed = 10f;
+        public float desiredJumpHeight;
         public float JumpPreGroundingGraceTime = 0f;
         public float JumpPostGroundingGraceTime = 0f;
 
@@ -79,6 +80,8 @@ namespace KinematicTest.controller
             floatGravity = settings.hangGravity;
             downGravity = settings.fallGravity;
             hangTimeVelocityThreshold = settings.hangTimeVelocityCutoff;
+            //Gravity = new Vector3();
+            JumpSpeed = GetJumpSpeedFromHeight(-Gravity.y, desiredJumpHeight);
         }
 
         private void Start()
@@ -238,8 +241,8 @@ namespace KinematicTest.controller
                     Vector3 velocityDiff = Vector3.ProjectOnPlane(targetMovementVelocity - currentVelocity, Gravity);
                     currentVelocity += velocityDiff * AirAccelerationSpeed * deltaTime;
                 }
-                //
-                Gravity = baseGravity * upGravity;
+                //Variable gravity
+                /*Gravity = baseGravity * upGravity;
                 if (currentVelocity.y <= hangTimeVelocityThreshold && currentVelocity.y > 0f)
                 {
                     Gravity = baseGravity * floatGravity;
@@ -247,7 +250,7 @@ namespace KinematicTest.controller
                 else if (currentVelocity.y < -hangTimeVelocityThreshold)
                 {
                     Gravity = baseGravity * downGravity;
-                }
+                }*/
                 
                 // Gravity
                 currentVelocity += Gravity * deltaTime;
@@ -394,6 +397,11 @@ namespace KinematicTest.controller
         public void OnDiscreteCollisionDetected(Collider hitCollider)
         {
         }
+
+        public float GetJumpSpeedFromHeight(float grav, float jumpHeight)
+        {
+            return Mathf.Sqrt(2f * grav * jumpHeight);
+        }
         public static bool GetIsRunningRight()
         {
 
@@ -405,6 +413,6 @@ namespace KinematicTest.controller
             {
                 return false;
             } 
-        }
+        
     }
 }
