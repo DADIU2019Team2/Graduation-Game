@@ -66,8 +66,9 @@ namespace KinematicTest.player
             ////characterInputs.MoveAxisForward = Input.GetAxisRaw(VerticalInput);
             ////characterInputs.MoveAxisRight = Input.GetAxisRaw(HorizontalInput);
             //characterInputs.inputString = Input.inputString;
-            characterInputs.changeDirection = Input.GetKeyDown(KeyCode.Space);
-            characterInputs.jumpDown = Input.GetKeyDown(KeyCode.B);
+            characterInputs.changeDirection = Input.GetKeyDown(KeyCode.B);
+            characterInputs.slideDown = Input.GetKeyDown(KeyCode.N);
+            characterInputs.jumpDown = Input.GetKeyDown(KeyCode.Space);
             // Apply inputs to character
             Character.SetInputs(ref characterInputs);
         }

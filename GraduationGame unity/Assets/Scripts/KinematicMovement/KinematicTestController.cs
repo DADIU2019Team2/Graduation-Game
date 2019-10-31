@@ -17,6 +17,7 @@ namespace KinematicTest.controller
     {
         //public string inputString;
         public bool jumpDown;
+        public bool slideDown;
         public bool changeDirection;
     }
 
