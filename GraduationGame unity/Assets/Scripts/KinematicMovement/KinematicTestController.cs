@@ -6,10 +6,10 @@ using System;
 
 namespace KinematicTest.controller
 {
-    enum PlayerStates
+    public enum PlayerStates
     {
         Running,
-        Stopped,
+        Idling,
         Sliding,
     }
 
@@ -18,6 +18,9 @@ namespace KinematicTest.controller
         //public string inputString;
         public bool jumpDown;
         public bool slideDown;
+        public bool idleDown;
+        public bool runDown;
+        
         public bool changeDirection;
     }
 
@@ -37,6 +40,8 @@ namespace KinematicTest.controller
         AnimationCurve rampDownCurve;
         CharacterController controller;
 
+
+        public PlayerStates CurrentCharacterState;
         public static int runningRight = 1;
         [Header("Running Movement")] public float MaxStableMoveSpeed = 10f;
         public float StableMovementSharpness = 15;
@@ -95,18 +100,82 @@ namespace KinematicTest.controller
             Init();
         }
 
+
+        public void TransitionToState(PlayerStates newState)
+        {
+            PlayerStates tmpInitialState = CurrentCharacterState;
+            OnStateExit(tmpInitialState, newState);
+            CurrentCharacterState = newState;
+            OnStateEnter(newState, tmpInitialState);
+        }
+
+        /// <summary>
+        /// Event when entering a state
+        /// </summary>
+        public void OnStateEnter(PlayerStates state, PlayerStates fromState)
+        {
+            switch (state)
+            {
+                case PlayerStates.Running:
+                {
+                    MaxAirMoveSpeed = 10f;
+                    MaxStableMoveSpeed = 10f;
+                    break;
+                }
+                case PlayerStates.Idling:
+                {
+                    stopped = true;
+                    MaxAirMoveSpeed = 0f;
+                    MaxStableMoveSpeed = 0f;
+                    curveStep = 0f;
+                    break;
+                }
+                case PlayerStates.Sliding:
+                {
+                    break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Event when exiting a state
+        /// </summary>
+        public void OnStateExit(PlayerStates state, PlayerStates toState)
+        {
+            switch (state)
+            {
+                case PlayerStates.Running:
+                {
+                    break;
+                }
+                case PlayerStates.Idling:
+                {
+                    break;
+                }
+                case PlayerStates.Sliding:
+                {
+                    break;
+                }
+            }
+        }
+
         /// <summary>
         /// This is called every frame by MyPlayer in order to tell the character what its inputs are
         /// </summary>
         public void SetInputs(ref PlayerCharacterInputs inputs)
         {
+            if(inputs.idleDown)
+                TransitionToState(PlayerStates.Idling);
+            
             if (canChangedirection && inputs.changeDirection)
             {
+                if(CurrentCharacterState == PlayerStates.Idling)
+                    TransitionToState(PlayerStates.Running);
                 if (stopped)
                 {
                     stopped = false;
-                    rampingDown = false;
-                    curveStep = 0;
+                    rampingDown = true;
+                    curveStep = 1;
                 }
                 else
                 {
@@ -167,6 +236,7 @@ namespace KinematicTest.controller
             Vector3 targetMovementVelocity = Vector3.zero;
             if (Motor.GroundingStatus.IsStableOnGround)
             {
+                Gravity = baseGravity * upGravity;
                 // Reorient source velocity on current ground slope (this is because we don't want our smoothing to cause any velocity losses in slope changes)
                 currentVelocity =
                     Motor.GetDirectionTangentToSurface(currentVelocity, Motor.GroundingStatus.GroundNormal) *
@@ -368,6 +438,8 @@ namespace KinematicTest.controller
         public void OnMovementHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
             ref HitStabilityReport hitStabilityReport)
         {
+            if (hitCollider.CompareTag("Wall") && CurrentCharacterState != PlayerStates.Idling && Motor.GroundingStatus.IsStableOnGround)
+                TransitionToState(PlayerStates.Idling);
         }
 
         public void PostGroundingUpdate(float deltaTime)
@@ -385,11 +457,13 @@ namespace KinematicTest.controller
 
         protected void OnLanded()
         {
+            canChangedirection = true;
             Debug.Log("Landed");
         }
 
         protected void OnLeaveStableGround()
         {
+            canChangedirection = false;
             Debug.Log("Left ground");
         }
 

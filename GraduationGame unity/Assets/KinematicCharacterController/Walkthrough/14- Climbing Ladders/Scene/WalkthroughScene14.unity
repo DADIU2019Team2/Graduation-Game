@@ -494,17 +494,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Motor: {fileID: 195157402}
   settings: {fileID: 11400000, guid: 17089354316c02e44a07c13a8481a302, type: 2}
-  MaxStableMoveSpeed: 0
+  CurrentCharacterState: 0
+  MaxStableMoveSpeed: 10
   StableMovementSharpness: 15
   OrientationSharpness: 10
   _jumpedThisFrame: 0
   hangTimeVelocityThreshold: 0
   _jumpRequested: 0
-  JumpSpeed: 10
+  JumpSpeed: 20
   desiredJumpHeight: 3
   JumpPreGroundingGraceTime: 0
   JumpPostGroundingGraceTime: 0
-  MaxAirMoveSpeed: 0
+  MaxAirMoveSpeed: 10
   AirAccelerationSpeed: 5
   Drag: 0.1
   RotationObstruction: 0
@@ -516,6 +517,7 @@ MonoBehaviour:
   MeshRoot: {fileID: 0}
   AllowDoubleJump: 0
   AllowJumpingWhenSliding: 0
+  useOldHangTime: 1
 --- !u!114 &195157402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -858,7 +860,7 @@ GameObject:
   - component: {fileID: 365958120}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2487,6 +2489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb63eab31779a474896eafb6d2d13695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swipeType: 0
   CameraFollowPoint: {fileID: 0}
   Character: {fileID: 195157401}
 --- !u!4 &1067801523
@@ -4672,7 +4675,7 @@ GameObject:
   - component: {fileID: 2017774444}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4743,8 +4746,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017774443}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.323, y: 1.528, z: -0.67906046}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.91, y: 1.528, z: -0.67906046}
+  m_LocalScale: {x: 3.5719, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
