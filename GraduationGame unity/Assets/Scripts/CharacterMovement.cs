@@ -203,7 +203,8 @@ public class CharacterMovement : MonoBehaviour
 
     public static bool GetIsFacingRight()
     {
-        return facingRight;
+        return KinematicTest.controller.KinematicTestController.GetIsRunningRight();
+        //return facingRight;
     }
     public Vector3 GetVelocity()
     {
