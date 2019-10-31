@@ -6,6 +6,7 @@ public class ToggleGameObject : MonoBehaviour
 {
     public void toggleGameObject()
     {
+        Debug.Log("Here");
         gameObject.SetActive(!gameObject.activeSelf);
     }
 }
