@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{34B92B84-4DD4-498D-8D44-61282ABE4319}" SchemaVersion="94" RootDocumentID="{4948A3B8-CE28-48A8-BAD5-AE38D8DAE02B}">
+	<Events>
+		<WorkUnit Name="Movement" ID="{34B92B84-4DD4-498D-8D44-61282ABE4319}" OwnerID="{4948A3B8-CE28-48A8-BAD5-AE38D8DAE02B}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Play_Footsteps" ID="{E58CAD22-8DF6-4898-8E91-E0189B31993B}">
+					<ChildrenList>
+						<Action Name="" ID="{C3EA04F3-6E6C-488E-ACFF-6BE7AC41B5BC}" ShortID="62229809">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{80A53190-9059-4E90-8171-6AF1D2D4D3DF}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Footstep_loop_PH" ID="{1D5E9F1D-AD2C-4EE6-A9AC-70F019085EB8}">
+					<ChildrenList>
+						<Action Name="" ID="{8D878AF6-B30D-4A42-9ED8-5A90F9EE80ED}" ShortID="797035761">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footstep_Loop_Placeholder" ID="{63D06FC8-ED39-40EE-A01D-9090A8E9781A}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Footstep_loop_PH" ID="{28C20752-CCCB-42C9-B9AE-89D4F08560A6}">
+					<ChildrenList>
+						<Action Name="" ID="{F678ED31-CC8F-4B15-87F9-0489D9631B89}" ShortID="745243633">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footstep_Loop_Placeholder" ID="{63D06FC8-ED39-40EE-A01D-9090A8E9781A}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Jumps_PH" ID="{4421294E-E87B-4BF6-8154-BA72753E4FF9}">
+					<ChildrenList>
+						<Action Name="" ID="{7C3745FE-3B8D-4B34-B7C0-8D74D7E64953}" ShortID="794715321">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jumps_Voice_PH" ID="{CB9DEA1D-9564-4F0B-B062-1F4F44708A16}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

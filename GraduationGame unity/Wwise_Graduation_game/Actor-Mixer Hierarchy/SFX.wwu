@@ -12,7 +12,7 @@
 							<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+							<ObjectRef Name="SFX" ID="{9782ED15-10B1-4637-9818-5B49A6880915}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -81,8 +81,14 @@
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Metal" ID="{EB18C931-D43B-4508-BB2F-9F74CC82BB9E}" WorkUnitID="{F3B2F2D9-9EEA-44DE-9BD3-C7D0237F0A69}"/>
+								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="Footstep_Type" ID="{CC4C15D2-3667-4308-877E-3B99D4515829}" WorkUnitID="{F3B2F2D9-9EEA-44DE-9BD3-C7D0237F0A69}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -762,6 +768,26 @@
 										<ItemRef Name="Glass_Footsteps" ID="{8A1A5658-A5C7-41A8-9A90-0ECF750DE874}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Metal" ID="{EB18C931-D43B-4508-BB2F-9F74CC82BB9E}"/>
+										<ItemList>
+											<ItemRef Name="Metal_Footsteps" ID="{7F54CE08-4974-4B78-93E7-BFF0C7EB8C92}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Normal" ID="{D562DB89-0CD2-4008-97FB-5B4325D90F16}"/>
+										<ItemList>
+											<ItemRef Name="Norm_Footsteps" ID="{F6317C26-C130-4DD4-A18C-FD65D43FB810}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Glass" ID="{89081C8B-4E49-424A-A408-27559BFBE7E8}"/>
+										<ItemList>
+											<ItemRef Name="Glass_Footsteps" ID="{8A1A5658-A5C7-41A8-9A90-0ECF750DE874}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
 						<BlendContainer Name="Jumps_Blend" ID="{34F6B1A2-11EA-41EC-B7ED-60BFDAFF8351}" ShortID="858258564">
@@ -1024,7 +1050,7 @@
 							<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+							<ObjectRef Name="SFX" ID="{9782ED15-10B1-4637-9818-5B49A6880915}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -1148,7 +1174,7 @@
 							<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+							<ObjectRef Name="SFX" ID="{9782ED15-10B1-4637-9818-5B49A6880915}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
 						</Reference>
 					</ReferenceList>
 				</ActorMixer>

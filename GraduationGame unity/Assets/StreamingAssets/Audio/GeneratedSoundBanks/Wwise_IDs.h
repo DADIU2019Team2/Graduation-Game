@@ -19,6 +19,22 @@ namespace AK
         static const AkUniqueID PLAY_ZONE2_MUSIC = 3584129722U;
         static const AkUniqueID PLAY_ZONE3_MUSIC = 556439219U;
         static const AkUniqueID PLAY_ZONE4_MUSIC = 3303975224U;
+        static const AkUniqueID SET_Z1_MUSIC_1 = 478922477U;
+        static const AkUniqueID SET_Z1_MUSIC_2 = 478922478U;
+        static const AkUniqueID SET_Z1_MUSIC_3 = 478922479U;
+        static const AkUniqueID SET_Z1_MUSIC_4 = 478922472U;
+        static const AkUniqueID SET_Z2_MUSIC_1 = 1619242214U;
+        static const AkUniqueID SET_Z2_MUSIC_2 = 1619242213U;
+        static const AkUniqueID SET_Z2_MUSIC_3 = 1619242212U;
+        static const AkUniqueID SET_Z2_MUSIC_4 = 1619242211U;
+        static const AkUniqueID SET_Z3_MUSIC_1 = 388669847U;
+        static const AkUniqueID SET_Z3_MUSIC_2 = 388669844U;
+        static const AkUniqueID SET_Z3_MUSIC_3 = 388669845U;
+        static const AkUniqueID SET_Z3_MUSIC_4 = 388669842U;
+        static const AkUniqueID SET_Z4_MUSIC_1 = 1653563808U;
+        static const AkUniqueID SET_Z4_MUSIC_2 = 1653563811U;
+        static const AkUniqueID SET_Z4_MUSIC_3 = 1653563810U;
+        static const AkUniqueID SET_Z4_MUSIC_4 = 1653563813U;
         static const AkUniqueID STOP_FOOTSTEP_LOOP_PH = 1201902998U;
     } // namespace EVENTS
 
@@ -38,6 +54,22 @@ namespace AK
         } // namespace ZONES
 
     } // namespace STATES
+
+    namespace SWITCHES
+    {
+        namespace FOOTSTEP_TYPE
+        {
+            static const AkUniqueID GROUP = 2615620554U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID GLASS = 2449969375U;
+                static const AkUniqueID METAL = 2473969246U;
+                static const AkUniqueID NORMAL = 1160234136U;
+            } // namespace SWITCH
+        } // namespace FOOTSTEP_TYPE
+
+    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {
