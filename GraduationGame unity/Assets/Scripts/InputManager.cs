@@ -34,7 +34,7 @@ public class InputManager : MonoBehaviour
 
     float mirroredAngle(float angle)
     {
-        return 180 + 360 - angle; 
+        return 180 + 360 - angle;
     }
 
     void Update()
@@ -51,10 +51,15 @@ public class InputManager : MonoBehaviour
                 case TouchPhase.Ended:
                     endPosition = touch.position;
                     swipeDirection = (endPosition - initPosition);
-                    swipeAngle = Vector2.Angle(Vector2.right, swipeDirection);
-                    isFacingRight = CharacterMovement.GetIsFacingRight(); 
-                    mostRecentSwipeType = SwipeTypeOfAngle(swipeAngle, isFacingRight);
-                    OnSwipeEvent.Raise();
+                    if (swipeDirection.magnitude > 5f)
+                    {
+                        swipeAngle = Vector2.Angle(Vector2.right, swipeDirection);
+                        isFacingRight = CharacterMovement.GetIsFacingRight();
+                        mostRecentSwipeType = SwipeTypeOfAngle(swipeAngle, isFacingRight);
+                        OnSwipeEvent.Raise();
+                    }
+                    
+                    
 
                     break;
             }
@@ -64,7 +69,7 @@ public class InputManager : MonoBehaviour
     //Should take into account different input-types when they are implemented.
     public static SwipeType GetMostRecentInputType()
     {
-        return mostRecentSwipeType; 
+        return mostRecentSwipeType;
     }
     public SwipeType SwipeTypeOfAngle(float swipeAngle, bool isFacingRight)
     {
@@ -86,15 +91,15 @@ public class InputManager : MonoBehaviour
         }
         else if (!isFacingRight)
         {
-            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeUpRightAngles0)%360 && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeUpRightAngles1)%360)
+            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeUpRightAngles0) % 360 && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeUpRightAngles1) % 360)
             {
                 return SwipeType.swipeForwardUp;
             }
-            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles0)%360 && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles1)%360)
+            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles0) % 360 && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles1) % 360)
             {
                 return SwipeType.swipeBackwards;
             }
-            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeDownAngles0)%360 && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeDownAngles1)%360)
+            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeDownAngles0) % 360 && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeDownAngles1) % 360)
             {
                 return SwipeType.swipeDown;
             }
