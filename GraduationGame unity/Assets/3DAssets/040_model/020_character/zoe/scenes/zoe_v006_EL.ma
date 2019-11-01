@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: zoe_v006_EL.ma
-//Last modified: Thu, Oct 31, 2019 03:40:13 PM
+//Last modified: Thu, Oct 31, 2019 03:57:44 PM
 //Codeset: 1252
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -82,7 +82,7 @@ createNode transform -n "Boots_geo" -p "zoe_geo_grp";
 createNode mesh -n "Boots_geoShape" -p "Boots_geo";
 	rename -uid "54C2B23C-4C23-04EE-502D-578CA127476B";
 	setAttr -k off ".v";
-	setAttr -s 10 ".iog[0].og";
+	setAttr -s 4 ".iog[0].og";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:1023]";
 	setAttr ".iog[0].og[1].gcl" -type "componentList" 5 "f[0:313]" "f[356:753]" "f[796:1023]" "f[356:753]" "f[796:1023]";
 	setAttr ".iog[0].og[2].gcl" -type "componentList" 3 "f[314:355]" "f[754:795]" "f[754:795]";
@@ -450,7 +450,7 @@ createNode mesh -n "Boots_geoShape" -p "Boots_geo";
 		 0.60883224 0.45084676;
 	setAttr ".cuvs" -type "string" "DiffuseUV";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr -s 166 ".pt";
+	setAttr -s 144 ".pt";
 	setAttr ".pt[303]" -type "float3" 0 -5.9604645e-08 0 ;
 	setAttr ".pt[305]" -type "float3" 0 -5.9604645e-08 0 ;
 	setAttr ".pt[312]" -type "float3" 0 -5.9604645e-08 0 ;
@@ -29723,19 +29723,19 @@ createNode mesh -n "Hair_geoShape" -p "Hair_geo";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "94A43F77-4E2E-79C7-8E08-A181267DD769";
-	setAttr -s 20 ".lnk";
-	setAttr -s 20 ".slnk";
+	rename -uid "F410FB32-457D-8E46-A216-7B92ECFF6B83";
+	setAttr -s 5 ".lnk";
+	setAttr -s 5 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "3BE9DF07-4640-51B8-FEB6-D0B17A821DF0";
+	rename -uid "90161AF3-4615-EAE3-89E8-ED8B6807E93F";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "8F3604B7-4905-7831-4D7B-73BF11ADC1E4";
+	rename -uid "EBA1E4CB-4848-B4EC-2D43-E7AF571AB054";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "B02E0E9E-4645-23F6-AFAB-EFA45AF72F9F";
+	rename -uid "281E42D0-494E-A012-7328-FB8B9B414386";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "A629088F-4C84-2D53-100C-088B5F3C5A41";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "1E3549EE-4F79-557D-A4C0-2795879BFAFE";
+	rename -uid "0F0F92DF-4272-3212-41BB-6FB03FBB18DF";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "F60E05B7-4D63-8B45-C90C-FA9AD2A3E500";
 	setAttr ".g" yes;
@@ -29863,8 +29863,6 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "groupId49.id" "Boots_geoShape.iog.og[11].gid";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
