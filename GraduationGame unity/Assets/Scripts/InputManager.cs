@@ -51,7 +51,7 @@ public class InputManager : MonoBehaviour
                 case TouchPhase.Ended:
                     endPosition = touch.position;
                     swipeDirection = (endPosition - initPosition);
-                    if (swipeDirection.magnitude > 5f)
+                    if (swipeDirection.magnitude > 50f)
                     {
                         swipeAngle = Vector2.Angle(Vector2.right, swipeDirection);
                         isFacingRight = CharacterMovement.GetIsFacingRight();
