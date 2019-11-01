@@ -13,8 +13,15 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_ELECTRICITY = 1560622413U;
         static const AkUniqueID PLAY_FOOTSTEP_LOOP_PH = 39250664U;
+        static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_JUMPS_PH = 1761266224U;
+        static const AkUniqueID PLAY_LAZER = 1933691314U;
+        static const AkUniqueID PLAY_PYLON_PARKOUR = 1832262049U;
+        static const AkUniqueID PLAY_ROBOT_APPEARENCE = 3030735331U;
+        static const AkUniqueID PLAY_SAW = 3225017965U;
+        static const AkUniqueID PLAY_SLIDES = 1306435192U;
         static const AkUniqueID PLAY_ZONE1_MUSIC = 4098982749U;
         static const AkUniqueID PLAY_ZONE2_MUSIC = 3584129722U;
         static const AkUniqueID PLAY_ZONE3_MUSIC = 556439219U;
