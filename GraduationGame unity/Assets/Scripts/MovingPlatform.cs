@@ -38,20 +38,22 @@ namespace KinematicCharacterController.Examples
         public void resetPlatform()
         {
             resetNow = true;
-            //reset is happening in the move function (otherwise it wont work)
-        }
-        private void Start()
-        {
+            //reset of position and rotation is happening in the move function (otherwise it wont work)
+            
+            currentWaypoint = _originalWaypoint;
+            setDestination(currentWaypoint.getPosition());
             resetNow = false;
             hasReachedEnd = false;
             movingForward = true;
             activated = false;
-
+        }
+        private void Start()
+        {
             _originalPosition = Mover.Rigidbody.position;
             _originalRotation = Mover.Rigidbody.rotation;
             _originalWaypoint = currentWaypoint;
 
-
+            resetPlatform();
             setDestination(currentWaypoint.transform.position);
 
             Mover.MoverController = this;
@@ -104,13 +106,12 @@ namespace KinematicCharacterController.Examples
                 }
             }
 
-            //reset needs to happen in this function
+            //Resetting the position and rotation cause it's necessarry to do here.
             if (resetNow)
             {
+                //reset position and rotation
                 goalPosition = _originalPosition;
                 goalRotation = _originalRotation;
-                currentWaypoint = _originalWaypoint;
-                setDestination(currentWaypoint.getPosition());
 
                 //end reset
                 resetNow = false;
