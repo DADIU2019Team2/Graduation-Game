@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using KinematicCharacterController;
 
 public class SmoothPlayerCamFollow : MonoBehaviour
 {
     [SerializeField] private Transform playerToFollow;
     //character controller for ref to movespeed/direction???
-    [SerializeField] private CharacterMovement moveScript; 
+    //[SerializeField] private CharacterMovement moveScript; 
+    [SerializeField] private KinematicCharacterMotor charMotor;
 
     [SerializeField] private float smoothTime = 0.1f;
 
@@ -35,7 +37,8 @@ public class SmoothPlayerCamFollow : MonoBehaviour
     Vector3 updateLookAt()
     {
         //do some dynamic localPos infront of player
-        Vector3 charToFollowVelocity = moveScript.GetVelocity();
+        Vector3 charToFollowVelocity = charMotor.Velocity;
+        
         Vector3 dynamicLookAtPoint = new Vector3(charToFollowVelocity.x / 2, transform.position.y, transform.position.z);
         float distToLookatPoint = Mathf.Clamp(dynamicLookAtPoint.magnitude, 0f, maxDistToLookAtPoint);
 
