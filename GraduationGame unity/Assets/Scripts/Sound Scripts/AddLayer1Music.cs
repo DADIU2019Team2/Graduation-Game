@@ -25,10 +25,10 @@ private bool IsInCollider = false;
     {
         if (other.tag != "Player" || IsInCollider) { return; }
         IsInCollider = true;
-        AkSoundEngine.PostEvent("Set_Z1_Music_1", gameObject);
-        AkSoundEngine.PostEvent("Set_Z2_Music_1", gameObject);
-        AkSoundEngine.PostEvent("Set_Z3_Music_1", gameObject);
-        AkSoundEngine.PostEvent("Set_Z4_Music_1", gameObject);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z1", 2);
+        AkSoundEngine.PostEvent("Music_Layer_Z2", 2);
+        AkSoundEngine.PostEvent("Music_Layer_Z3", 2);
+        AkSoundEngine.PostEvent("Music_Layer_Z4", 2);
     }
 }
     

@@ -23,12 +23,11 @@ private bool IsInCollider = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag != "Player" || IsInCollider) { return; }
-        IsInCollider = true;
-        AkSoundEngine.PostEvent("Set_Z1_Music_2", gameObject);
-        AkSoundEngine.PostEvent("Set_Z2_Music_2", gameObject);
-        AkSoundEngine.PostEvent("Set_Z3_Music_2", gameObject);
-        AkSoundEngine.PostEvent("Set_Z4_Music_2", gameObject);
+        
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z1", 3);
+        AkSoundEngine.PostEvent("Music_Layer_Z2", 3);
+        AkSoundEngine.PostEvent("Music_Layer_Z3", 3);
+        AkSoundEngine.PostEvent("Music_Layer_Z4", 3);
     }
 }
     
