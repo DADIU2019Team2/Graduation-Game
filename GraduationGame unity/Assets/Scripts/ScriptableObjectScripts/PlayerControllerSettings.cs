@@ -35,6 +35,7 @@ public class PlayerControllerSettings : ScriptableObject
     public float JumpPreGroundingGraceTime;
     public float JumpPostGroundingGraceTime;
     public float jumpHeight;
+    public bool canChangeMidAir;
     
     [Header("Misc")]
     public bool AllowDoubleJump;
