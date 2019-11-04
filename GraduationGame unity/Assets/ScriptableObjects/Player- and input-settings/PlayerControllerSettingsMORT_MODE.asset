@@ -14,16 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rampUpTime: 2
   rampDownTime: 0.5
-  maxSpeed: 50
+  maxSpeed: 500
   baseGravity: 10
   hangTimeVelocityCutoff: 0.5
-  riseGravity: 1
-  hangGravity: 2
+  riseGravity: 4
+  hangGravity: 0.5
   fallGravity: 5
-  dropGravity: 0
-  MaxStableMoveSpeed: 20
-  StableMovementSharpness: 20
-  OrientationSharpness: 2
   rampUpCurve:
     serializedVersion: 2
     m_Curve:
@@ -81,12 +77,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  hangTimeVelocityThreshold: 1
-  JumpSpeed: 10
-  desiredJumpHeight: 20
-  JumpPreGroundingGraceTime: 2
-  JumpPostGroundingGraceTime: 2
-  jumpHeight: 20
-  AllowDoubleJump: 0
-  AllowJumpingWhenSliding: 0
-  useOldHangTime: 1
+  jumpHeight: 58.57
+  groundedTransform: {fileID: 0}
+  groundedDistance: 0
