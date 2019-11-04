@@ -45,8 +45,8 @@ namespace KinematicTest.controller
 
         public PlayerStates CurrentCharacterState;
         public static int runningRight = 1;
-        [HideInInspector] public float MaxStableMoveSpeed = 10f;
-        [HideInInspector] public float StableMovementSharpness = 15;
+        public float MaxStableMoveSpeed;
+        public float StableMovementSharpness;
         [HideInInspector] public float OrientationSharpness = 10;
 
         [HideInInspector] public bool _jumpedThisFrame;
@@ -108,7 +108,8 @@ namespace KinematicTest.controller
 
             StableMovementSharpness = settings.StableMovementSharpness;
             OrientationSharpness = settings.OrientationSharpness;
-
+            MaxStableMoveSpeed = settings.MaxStableMoveSpeed;
+            StableMovementSharpness = settings.StableMovementSharpness;
 
             hangTimeVelocityThreshold = settings.hangTimeVelocityThreshold;
             desiredJumpHeight = settings.jumpHeight;
@@ -118,8 +119,7 @@ namespace KinematicTest.controller
             JumpPreGroundingGraceTime = settings.JumpPreGroundingGraceTime;
             JumpPostGroundingGraceTime = settings.JumpPostGroundingGraceTime;
 
-            MaxAirMoveSpeed = 10f;
-            AirAccelerationSpeed = 5f;
+            MaxAirMoveSpeed = settings.maxSpeed;
             Drag = 0.1f;
 
             AllowDoubleJump = settings.AllowDoubleJump;
@@ -151,8 +151,8 @@ namespace KinematicTest.controller
             {
                 case PlayerStates.Running:
                 {
-                    MaxAirMoveSpeed = 10f;
-                    MaxStableMoveSpeed = 10f;
+                    MaxAirMoveSpeed = settings.maxSpeed;
+                    MaxStableMoveSpeed = settings.maxSpeed;
                     break;
                 }
                 case PlayerStates.Idling:
