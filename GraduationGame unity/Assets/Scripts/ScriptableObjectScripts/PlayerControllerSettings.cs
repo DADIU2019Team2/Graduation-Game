@@ -32,8 +32,6 @@ public class PlayerControllerSettings : ScriptableObject
     //public float groundedDistance;
     [Header("Jumping Related Stuff")]
     public float hangTimeVelocityThreshold;
-    public float JumpSpeed;
-    public float desiredJumpHeight;
     public float JumpPreGroundingGraceTime;
     public float JumpPostGroundingGraceTime;
     public float jumpHeight;
@@ -41,5 +39,4 @@ public class PlayerControllerSettings : ScriptableObject
     [Header("Misc")]
     public bool AllowDoubleJump;
     public bool AllowJumpingWhenSliding;
-    public bool useOldHangTime = true;
 }
