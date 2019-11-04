@@ -13,6 +13,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
     [SerializeField] private float smoothTime = 0.1f;
 
     [SerializeField] private Vector3 localOffSet;
+    private Vector3 worldOffset;
     [SerializeField] private float maxDistToLookAtPoint = 5f;
     private Vector3 camVelocity;
     private Vector3 localPosInfrontOfPlayer;
@@ -30,7 +31,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
 
     void moveCam()
     {
-        Vector3 worldOffset = playerToFollow.TransformDirection(localOffSet);
+        worldOffset = playerToFollow.TransformDirection(localOffSet);
         transform.position = Vector3.SmoothDamp(transform.position, playerToFollow.position + worldOffset, ref camVelocity, smoothTime);
     }
 
@@ -39,10 +40,12 @@ public class SmoothPlayerCamFollow : MonoBehaviour
         //do some dynamic localPos infront of player
         Vector3 charToFollowVelocity = charMotor.Velocity;
         
-        Vector3 dynamicLookAtPoint = new Vector3(charToFollowVelocity.x / 2, transform.position.y, transform.position.z);
+        Vector3 dynamicLookAtPoint = new Vector3(charToFollowVelocity.x / 2, 0 + worldOffset.y, 0);
+        //Debug.Log("Dynamic lookat point = " + dynamicLookAtPoint);
         float distToLookatPoint = Mathf.Clamp(dynamicLookAtPoint.magnitude, 0f, maxDistToLookAtPoint);
 
         localPosInfrontOfPlayer = dynamicLookAtPoint.normalized * distToLookatPoint;
+        //Debug.Log("local in-front of player = " + localPosInfrontOfPlayer);
 
         Vector3 worldPosInFrontOfPlayer = Vector3.zero;
         if (!CharacterMovement.GetIsFacingRight()) //therefore giong left (counterClockwise)
