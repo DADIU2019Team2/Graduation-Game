@@ -492,7 +492,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d3484dac67fc84e93a2742a966cbad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  updateSettingsLive: 1
   Motor: {fileID: 195157402}
+  scarf: {fileID: 0}
   settings: {fileID: 11400000, guid: 17089354316c02e44a07c13a8481a302, type: 2}
   CurrentCharacterState: 0
   MaxStableMoveSpeed: 10
@@ -511,13 +513,15 @@ MonoBehaviour:
   RotationObstruction: 0
   Gravity: {x: 0, y: -30, z: 0}
   baseGravity: {x: 0, y: -10, z: 0}
-  floatGravity: 0
-  upGravity: 3
-  downGravity: 0
+  hangGravity: 0
+  riseGravity: 3
+  fallGravity: 0
+  dropGravity: 0
   MeshRoot: {fileID: 0}
   AllowDoubleJump: 0
   AllowJumpingWhenSliding: 0
-  useOldHangTime: 1
+  useOldHangTime: 0
+  jumpInitiated: 0
 --- !u!114 &195157402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -864,7 +868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &365958120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4679,7 +4683,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &2017774444
 BoxCollider:
   m_ObjectHideFlags: 0

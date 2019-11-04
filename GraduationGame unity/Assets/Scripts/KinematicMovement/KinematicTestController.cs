@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using KinematicCharacterController;
 using System;
+using KinematicCharacterController.Examples;
 
 namespace KinematicTest.controller
 {
@@ -32,18 +33,16 @@ namespace KinematicTest.controller
         [Space(10)]
         public KinematicCharacterMotor Motor;
         public GameObject scarf;
-        [HideInInspector]
-        bool canChangedirection = true;
-        bool isRunningRight = true;
-        bool rampingDown;
-        float curveStep;
-        float rampUpTime = 2f;
-        float rampDownTime = 0.5f;
-        bool stopped = false;
+        private bool canChangedirection = true;
+        private bool isRunningRight = true;
+        private bool rampingDown;
+        private float curveStep;
+        private float rampUpTime = 2f;
+        private float rampDownTime = 0.5f;
+        private bool stopped; 
         public PlayerControllerSettings settings;
-        AnimationCurve rampUpCurve; //speed curve
-        AnimationCurve rampDownCurve;
-        CharacterController controller;
+        private AnimationCurve rampUpCurve; //speed curve
+        private AnimationCurve rampDownCurve;
 
         
         public PlayerStates CurrentCharacterState;
@@ -81,16 +80,19 @@ namespace KinematicTest.controller
         public float Drag = 0.1f;
         [HideInInspector]
         public bool RotationObstruction;
-        [HideInInspector]
+        //[HideInInspector]
         public Vector3 Gravity = new Vector3(0, -10f, 0);
         [HideInInspector]
         public Vector3 baseGravity = new Vector3(0, -10f, 0);
         [HideInInspector]
-        public float floatGravity;
+        public float hangGravity;
         [HideInInspector]
-        public float upGravity = 3f;
+        public float riseGravity = 3f;
         [HideInInspector]
-        public float downGravity;
+        public float fallGravity;
+
+        [HideInInspector]
+        public float dropGravity;
         [HideInInspector]
         public Transform MeshRoot;
         [HideInInspector]
@@ -102,9 +104,16 @@ namespace KinematicTest.controller
         private Vector3 _lookInputVector;
         private string _inputString;
         private float _timeSinceLastAbleToJump = 0f;
-        [HideInInspector]
+        //[HideInInspector]
         public bool useOldHangTime = true;
+        
+        public bool jumpInitiated;        
+        
+        //This will later be scriptable object
+        [Header("Sound settings")]
+        public AK.Wwise.Event jumpSound;
 
+        public AK.Wwise.Event landSound;
         void Init()
         {
             rampUpTime = settings.rampUpTime;
@@ -112,9 +121,10 @@ namespace KinematicTest.controller
             rampUpCurve = settings.rampUpCurve;
             rampDownCurve = settings.rampDownCurve;
             baseGravity = new Vector3(0f, -settings.baseGravity, 0f);
-            upGravity = settings.riseGravity;
-            floatGravity = settings.hangGravity;
-            downGravity = settings.fallGravity;
+            riseGravity = settings.riseGravity;
+            hangGravity = settings.hangGravity;
+            fallGravity = settings.fallGravity;
+            dropGravity = settings.dropGravity;
             hangTimeVelocityThreshold = settings.hangTimeVelocityCutoff;
 
 
@@ -131,12 +141,6 @@ namespace KinematicTest.controller
             MaxAirMoveSpeed = 10f;
             AirAccelerationSpeed = 5f;
             Drag = 0.1f;
-
-
-            Gravity = settings.Gravity;
-            floatGravity = settings.floatGravity;
-            upGravity = settings.upGravity;
-            downGravity = settings.downGravity;
 
             AllowDoubleJump = settings.AllowDoubleJump;
             AllowJumpingWhenSliding = settings.AllowJumpingWhenSliding;
@@ -299,7 +303,7 @@ namespace KinematicTest.controller
             Vector3 targetMovementVelocity = Vector3.zero;
             if (Motor.GroundingStatus.IsStableOnGround)
             {
-                Gravity = baseGravity * upGravity;
+                Gravity = baseGravity * riseGravity;
                 // Reorient source velocity on current ground slope (this is because we don't want our smoothing to cause any velocity losses in slope changes)
                 currentVelocity =
                     Motor.GetDirectionTangentToSurface(currentVelocity, Motor.GroundingStatus.GroundNormal) *
@@ -383,17 +387,21 @@ namespace KinematicTest.controller
                 //Variable gravity
                 if (useOldHangTime)
                 {
-                    Gravity = baseGravity * upGravity;
+                    Gravity = baseGravity * riseGravity;
                     if (currentVelocity.y <= hangTimeVelocityThreshold && currentVelocity.y > 0f)
                     {
-                        Gravity = baseGravity * floatGravity;
+                        Gravity = baseGravity * hangGravity;
                     }
                     else if (currentVelocity.y < -hangTimeVelocityThreshold)
                     {
-                        Gravity = baseGravity * downGravity;
+                        Gravity = baseGravity * fallGravity;
                     }
                 }
-
+                else
+                {
+                    if(currentVelocity.y < 0)
+                        Gravity = baseGravity * (jumpInitiated ? fallGravity : dropGravity);
+                }
                 // Gravity
                 currentVelocity += Gravity * deltaTime;
 
@@ -432,6 +440,8 @@ namespace KinematicTest.controller
                               : Motor.GroundingStatus.IsStableOnGround) ||
                           _timeSinceLastAbleToJump <= JumpPostGroundingGraceTime)))
                     {
+                        jumpInitiated = true;
+                        jumpSound.Post(gameObject);
                         // Calculate jump direction before ungrounding
                         Vector3 jumpDirection = Motor.CharacterUp;
                         if (Motor.GroundingStatus.FoundAnyGround && !Motor.GroundingStatus.IsStableOnGround)
@@ -497,7 +507,6 @@ namespace KinematicTest.controller
         public void OnGroundHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
             ref HitStabilityReport hitStabilityReport)
         {
-            Debug.Log("ground hit");
             if (hitCollider.CompareTag("MovingPlatform"))
             {
                 //code
@@ -522,6 +531,10 @@ namespace KinematicTest.controller
                 }
                 TransitionToState(PlayerStates.Idling);
             }
+            else if (hitCollider.CompareTag("MovingPlatform"))
+            { 
+                hitCollider.GetComponent<MovingPlatform>().activatePlatform();
+            }
         }
 
         public void PostGroundingUpdate(float deltaTime)
@@ -539,7 +552,9 @@ namespace KinematicTest.controller
 
         protected void OnLanded()
         {
+            landSound.Post(gameObject);
             canChangedirection = true;
+            jumpInitiated = false;
             Debug.Log("Landed");
         }
 
