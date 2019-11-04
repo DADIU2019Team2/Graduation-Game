@@ -55,7 +55,7 @@ namespace KinematicTest.controller
 
         private bool _jumpConsumed;
         private float _timeSinceJumpRequested;
-        [HideInInspector] public float JumpSpeed = 10f;
+        public float JumpSpeed;
         [HideInInspector] public float desiredJumpHeight;
         [HideInInspector] public float JumpPreGroundingGraceTime = 0f;
         [HideInInspector] public float JumpPostGroundingGraceTime = 0f;
@@ -111,7 +111,7 @@ namespace KinematicTest.controller
             hangTimeVelocityThreshold = settings.hangTimeVelocityThreshold;
             desiredJumpHeight = settings.jumpHeight;
 
-            JumpSpeed = Mathf.Sqrt(2 * riseGravity * desiredJumpHeight);
+            JumpSpeed = Mathf.Sqrt(2 * riseGravity * desiredJumpHeight * -baseGravity.y);
 
             JumpPreGroundingGraceTime = settings.JumpPreGroundingGraceTime;
             JumpPostGroundingGraceTime = settings.JumpPostGroundingGraceTime;
@@ -357,7 +357,7 @@ namespace KinematicTest.controller
                     currentVelocity += velocityDiff * AirAccelerationSpeed * deltaTime;
                 }
 
-                //Variable gravity
+                //Calculate variable gravity
                 Gravity = dropGravity * baseGravity;
                 if(jumpInitiated)
                 {

@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: zoe_v007_EL.ma
-//Last modified: Mon, Nov 04, 2019 10:20:38 AM
+//Last modified: Mon, Nov 04, 2019 01:41:13 PM
 //Codeset: 1252
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -14,13 +14,13 @@ fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 17134)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "3391E412-4D6F-D31E-C5DC-6BBDD73E64DB";
-	setAttr ".t" -type "double3" -1.1045551615482125 146.10577819230485 56.41006643121321 ;
-	setAttr ".r" -type "double3" 716.06164728014164 -9359.4000000006854 7.4548337879457825e-17 ;
+	setAttr ".t" -type "double3" 16.068212737587679 36.599558617925638 90.88450589550888 ;
+	setAttr ".r" -type "double3" 712.46164728007943 -9361.0000000014625 6.2129671272228543e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1EC36C35-487D-A9AD-A120-4B80C2B85D8E";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 42.639573032112807;
+	setAttr ".coi" 73.612247275493431;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -24924,7 +24924,6 @@ createNode mesh -n "Mouth_geoShape" -p "Mouth_geo";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.23860368877649307 0.092333145439624786 ;
-	setAttr -s 2 ".uvst";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -24938,7 +24937,6 @@ createNode mesh -n "polySurfaceShape2" -p "Mouth_geo";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.23858327726737605 0.092349008670734117 ;
-	setAttr -s 2 ".uvst";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 176 ".uvst[0].uvsp[0:175]" -type "float2" 0.23826098 0.10614614
 		 0.23938605 0.10647462 0.23978227 0.10929318 0.23543811 0.10710289 0.23909344 0.10585012
@@ -25394,7 +25392,6 @@ createNode mesh -n "Eyee_geoShape" -p "Eyee_geo";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.32906979100524986 0.28447250716169092 ;
-	setAttr -s 2 ".uvst";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -25408,7 +25405,6 @@ createNode mesh -n "polySurfaceShape1" -p "Eyee_geo";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.31328906607068008 0.2892984917935203 ;
-	setAttr -s 2 ".uvst";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 254 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.12835306 0.66633546 0.11941147
@@ -26113,7 +26109,6 @@ createNode mesh -n "body1" -p "EyeBrows_geo";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.35856560935386977 0.090441179231685764 ;
-	setAttr -s 3 ".uvst";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 244 ".uvst[0].uvsp[0:243]" -type "float2" 0.32529908 0.064707644
 		 0.32997048 0.064638563 0.33020312 0.073494621 0.32534766 0.073584385 0.33045954 0.082396932
@@ -26719,19 +26714,19 @@ createNode mesh -n "body1" -p "EyeBrows_geo";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "BE33C290-42FE-B1EA-DAF2-78BBF8061FB2";
+	rename -uid "7C684281-48D2-69C1-B2A8-63BCA1A31989";
 	setAttr -s 6 ".lnk";
 	setAttr -s 6 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "2A8C7326-426D-F3AD-CA1B-A28574C26439";
+	rename -uid "E3FCF26C-444E-7B6D-1F21-9182DC61DE7F";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "E28706B9-4DF7-D171-7D50-D5A9BC636D88";
+	rename -uid "0AD0655E-45A3-FAF0-E183-4294E07AC290";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "1D677A05-49C6-464A-B8D5-F1A5ED6A21C2";
+	rename -uid "6401F6E1-49A2-1E00-4010-D68C6553664E";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "A629088F-4C84-2D53-100C-088B5F3C5A41";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "495BAC11-4A96-B680-B4A8-2A8C68EC992B";
+	rename -uid "76E5F37F-4F3E-99EE-E4D8-B6B020DB4EE1";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "F60E05B7-4D63-8B45-C90C-FA9AD2A3E500";
 	setAttr ".g" yes;
@@ -26860,7 +26855,7 @@ createNode polyLayoutUV -n "polyLayoutUV1";
 createNode polyTweakUV -n "polyTweakUV1";
 	rename -uid "F3677429-402F-4286-0F17-46910DBAF6E2";
 	setAttr ".uopa" yes;
-	setAttr -s 128 ".uvtk";
+	setAttr -s 127 ".uvtk";
 	setAttr ".uvtk[121]" -type "float2" -0.066718996 -0.059953392 ;
 	setAttr ".uvtk[122]" -type "float2" 0.068600237 -0.049093902 ;
 	setAttr ".uvtk[123]" -type "float2" 0.05718483 -0.046664476 ;
