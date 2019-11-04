@@ -20,6 +20,7 @@ MonoBehaviour:
   riseGravity: 3
   hangGravity: 1
   fallGravity: 10
+  dropGravity: 3
   rampUpCurve:
     serializedVersion: 2
     m_Curve:
@@ -72,19 +73,11 @@ MonoBehaviour:
   MaxStableMoveSpeed: 10
   StableMovementSharpness: 15
   OrientationSharpness: 10
-  _jumpedThisFrame: 0
   hangTimeVelocityThreshold: 5
-  _jumpRequested: 1
   JumpSpeed: 40
   desiredJumpHeight: 3
   JumpPreGroundingGraceTime: 0.2
   JumpPostGroundingGraceTime: 0.2
-  RotationObstruction: 0
-  Gravity: {x: 0, y: -30, z: 0}
-  floatGravity: 10
-  upGravity: 10
-  downGravity: 10
-  MeshRoot: {fileID: 0}
   AllowDoubleJump: 0
   AllowJumpingWhenSliding: 0
   useOldHangTime: 0
