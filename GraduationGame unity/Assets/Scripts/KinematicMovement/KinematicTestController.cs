@@ -60,8 +60,8 @@ namespace KinematicTest.controller
         [HideInInspector] public float JumpPreGroundingGraceTime = 0f;
         [HideInInspector] public float JumpPostGroundingGraceTime = 0f;
 
-        [HideInInspector] public float MaxAirMoveSpeed = 10f;
-        [HideInInspector] public float AirAccelerationSpeed = 5f;
+        [HideInInspector] public float MaxAirMoveSpeed;
+        [HideInInspector] public float AirAccelerationSpeed;
         [HideInInspector] public float Drag = 0.1f;
 
         [HideInInspector] public bool RotationObstruction;
@@ -99,27 +99,27 @@ namespace KinematicTest.controller
             rampUpCurve = settings.rampUpCurve;
             rampDownCurve = settings.rampDownCurve;
             baseGravity = new Vector3(0f, -settings.baseGravity, 0f);
-            riseGravity = settings.riseGravity;
-            hangGravity = settings.hangGravity;
-            fallGravity = settings.fallGravity;
-            dropGravity = settings.dropGravity;
+            riseGravity = settings.riseGravityMultiplier;
+            hangGravity = settings.hangGravityMultiplier;
+            fallGravity = settings.fallGravityMultiplier;
+            dropGravity = settings.dropGravityMultiplier;
             hangTimeVelocityThreshold = settings.hangTimeVelocityCutoff;
 
 
             StableMovementSharpness = settings.StableMovementSharpness;
             OrientationSharpness = settings.OrientationSharpness;
-            MaxStableMoveSpeed = settings.MaxStableMoveSpeed;
+            MaxStableMoveSpeed = settings.maxMoveSpeed;
             StableMovementSharpness = settings.StableMovementSharpness;
 
             hangTimeVelocityThreshold = settings.hangTimeVelocityThreshold;
             desiredJumpHeight = settings.jumpHeight;
 
-            JumpSpeed = Mathf.Sqrt(2 * riseGravity * desiredJumpHeight * -baseGravity.y);
+            JumpSpeed = Mathf.Sqrt(2 * riseGravity * desiredJumpHeight * settings.baseGravity);
 
             JumpPreGroundingGraceTime = settings.JumpPreGroundingGraceTime;
             JumpPostGroundingGraceTime = settings.JumpPostGroundingGraceTime;
 
-            MaxAirMoveSpeed = settings.maxSpeed;
+            MaxAirMoveSpeed = settings.maxAirMoveSpeed;
             Drag = 0.1f;
 
             AllowDoubleJump = settings.AllowDoubleJump;
@@ -151,16 +151,18 @@ namespace KinematicTest.controller
             {
                 case PlayerStates.Running:
                 {
-                    MaxAirMoveSpeed = settings.maxSpeed;
-                    MaxStableMoveSpeed = settings.maxSpeed;
+                    
+                    MaxAirMoveSpeed = settings.maxAirMoveSpeed;
+                    MaxStableMoveSpeed = settings.maxMoveSpeed;
                     break;
                 }
                 case PlayerStates.Idling:
                 {
                     stopped = true;
-                    MaxAirMoveSpeed = 0f;
+                    MaxAirMoveSpeed = settings.idleAirMoveSpeed;
                     MaxStableMoveSpeed = 0f;
                     curveStep = 0f;
+                    JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.idleJumpHeight * settings.baseGravity);
                     break;
                 }
                 case PlayerStates.Sliding:
@@ -187,6 +189,7 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.Idling:
                 {
+                    stopped = false;
                     break;
                 }
                 case PlayerStates.Sliding:
@@ -390,11 +393,11 @@ namespace KinematicTest.controller
                             Debug.Log("not stopped");
                             if (rampingDown)
                             {
-                                AirAccelerationSpeed = MaxStableMoveSpeed * rampDownCurve.Evaluate(curveStep);
+                                AirAccelerationSpeed = MaxAirMoveSpeed * rampDownCurve.Evaluate(curveStep);
                             }
                             else
                             {
-                                AirAccelerationSpeed = MaxStableMoveSpeed * rampUpCurve.Evaluate(curveStep);
+                                AirAccelerationSpeed = MaxAirMoveSpeed * rampUpCurve.Evaluate(curveStep);
                             }
                         }
                     }
