@@ -89,9 +89,11 @@ namespace KinematicTest.controller
         [Header("Sound settings")] public AK.Wwise.Event jumpSound;
 
         public AK.Wwise.Event landSound;
+        bool canChangeMidAir = true;
 
         void Init()
         {
+            canChangeMidAir = settings.canChangeMidAir;
             rampUpTime = settings.rampUpTime;
             rampDownTime = settings.rampDownTime;
             rampUpCurve = settings.rampUpCurve;
@@ -353,6 +355,51 @@ namespace KinematicTest.controller
                             Vector3.ProjectOnPlane(targetMovementVelocity, perpenticularObstructionNormal);
                     }
 
+                    if (canChangeMidAir)
+                    {
+                        if (rampingDown)
+                        {
+                            if (curveStep < 1)
+                            {
+                                curveStep += (1 / rampDownTime * Time.deltaTime);
+                            }
+
+                            if (curveStep >= 1)
+                            {
+                                curveStep = 0;
+                                rampingDown = false;
+                                runningRight = runningRight * -1;
+                                scarf.transform.Rotate(Vector3.up, 180);
+                            }
+                        }
+                        else
+                        {
+                            if (curveStep < 1)
+                            {
+                                curveStep += (1 / rampUpTime * Time.deltaTime);
+                            }
+
+                            if (curveStep > 1)
+                            {
+                                curveStep = 1;
+                            }
+                        }
+
+                        if (!stopped)
+                        {
+                            Debug.Log("not stopped");
+                            if (rampingDown)
+                            {
+                                AirAccelerationSpeed = MaxStableMoveSpeed * rampDownCurve.Evaluate(curveStep);
+                            }
+                            else
+                            {
+                                AirAccelerationSpeed = MaxStableMoveSpeed * rampUpCurve.Evaluate(curveStep);
+                            }
+                        }
+                    }
+
+
                     Vector3 velocityDiff = Vector3.ProjectOnPlane(targetMovementVelocity - currentVelocity, Gravity);
                     currentVelocity += velocityDiff * AirAccelerationSpeed * deltaTime;
                 }
@@ -524,11 +571,23 @@ namespace KinematicTest.controller
             canChangedirection = true;
             jumpInitiated = false;
             Debug.Log("Landed");
+            if (CurrentCharacterState == PlayerStates.Idling)
+            {
+                TransitionToState(PlayerStates.Running);
+            }
         }
 
         protected void OnLeaveStableGround()
         {
-            canChangedirection = false;
+            if (canChangeMidAir)
+            {
+                canChangedirection = true;
+            }
+            else
+            {
+                canChangedirection = false;
+            }
+           
             Debug.Log("Left ground");
         }
 
