@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{34B92B84-4DD4-498D-8D44-61282ABE4319}" SchemaVersion="94" RootDocumentID="{4948A3B8-CE28-48A8-BAD5-AE38D8DAE02B}">
+	<Events>
+		<WorkUnit Name="Movement" ID="{34B92B84-4DD4-498D-8D44-61282ABE4319}" OwnerID="{4948A3B8-CE28-48A8-BAD5-AE38D8DAE02B}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Play_Jumps_Takeoff" ID="{4421294E-E87B-4BF6-8154-BA72753E4FF9}">
+					<ChildrenList>
+						<Action Name="" ID="{7C3745FE-3B8D-4B34-B7C0-8D74D7E64953}" ShortID="794715321">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jumps_Blend" ID="{34F6B1A2-11EA-41EC-B7ED-60BFDAFF8351}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Slides" ID="{7166422F-CE3D-43FE-BD99-933DBB699408}">
+					<ChildrenList>
+						<Action Name="" ID="{BBC801F9-7E99-4B68-890C-4DEDE1625959}" ShortID="22890748">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Slides" ID="{6AC4EB18-9F57-48FD-9DA9-C8DCC5810CD8}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Footsteps_Normal_Loop" ID="{3A6BA870-3643-4CB6-856C-8E54C1B72A23}">
+					<ChildrenList>
+						<Action Name="" ID="{0F17A8D3-23E5-4810-AD26-A0B7E724DF15}" ShortID="54757292">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps_Normal_Loop" ID="{2143A37F-38BF-41E0-8EA5-66723A5403F7}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Footsteps_Normal_Loop" ID="{79CE2B01-7FBA-4F51-88F5-DE47A009BF2F}">
+					<ChildrenList>
+						<Action Name="" ID="{694250A6-562E-4D41-81FB-CE4435073488}" ShortID="624560598">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps_Normal_Loop" ID="{2143A37F-38BF-41E0-8EA5-66723A5403F7}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Land_Hard" ID="{1AAC9874-66F7-4CD2-9DE3-C2132E1C2D17}">
+					<ChildrenList>
+						<Action Name="" ID="{AAD0FC19-6D94-4551-9509-ABB70BFDB6A6}" ShortID="1007111588">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Land_Hard" ID="{9AD2537A-7A73-4CEE-AF99-C0C07218B0B5}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
