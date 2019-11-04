@@ -1,15 +1,15 @@
 Event	ID	Name			Wwise Object Path	Notes
-	39250664	Play_Footstep_loop_PH			\Default Work Unit\Movement\Play_Footstep_loop_PH	
 	388669842	Set_Z3_Music_4			\Default Work Unit\Music\Set_Z3_Music_4	
 	388669844	Set_Z3_Music_2			\Default Work Unit\Music\Set_Z3_Music_2	
 	388669845	Set_Z3_Music_3			\Default Work Unit\Music\Set_Z3_Music_3	
 	388669847	Set_Z3_Music_1			\Default Work Unit\Music\Set_Z3_Music_1	
+	404466471	Play_Land_Hard			\Default Work Unit\Movement\Play_Land_Hard	
 	478922472	Set_Z1_Music_4			\Default Work Unit\Music\Set_Z1_Music_4	
 	478922477	Set_Z1_Music_1			\Default Work Unit\Music\Set_Z1_Music_1	
 	478922478	Set_Z1_Music_2			\Default Work Unit\Music\Set_Z1_Music_2	
 	478922479	Set_Z1_Music_3			\Default Work Unit\Music\Set_Z1_Music_3	
 	556439219	Play_Zone3_Music			\Default Work Unit\Music\Play_Zone3_Music	
-	1201902998	Stop_Footstep_loop_PH			\Default Work Unit\Movement\Stop_Footstep_loop_PH	
+	610391300	Play_Footsteps_Normal_Loop			\Default Work Unit\Movement\Play_Footsteps_Normal_Loop	
 	1306435192	Play_Slides			\Default Work Unit\Movement\Play_Slides	
 	1560622413	Play_Electricity			\Default Work Unit\SFX\Play_Electricity	
 	1619242211	Set_Z2_Music_4			\Default Work Unit\Music\Set_Z2_Music_4	
@@ -20,23 +20,14 @@ Event	ID	Name			Wwise Object Path	Notes
 	1653563810	Set_Z4_Music_3			\Default Work Unit\Music\Set_Z4_Music_3	
 	1653563811	Set_Z4_Music_2			\Default Work Unit\Music\Set_Z4_Music_2	
 	1653563813	Set_Z4_Music_4			\Default Work Unit\Music\Set_Z4_Music_4	
-	1761266224	Play_Jumps_PH			\Default Work Unit\Movement\Play_Jumps_PH	
+	1828118792	Play_Jumps_Takeoff			\Default Work Unit\Movement\Play_Jumps_Takeoff	
 	1832262049	Play_Pylon_Parkour			\Default Work Unit\SFX\Play_Pylon_Parkour	
 	1933691314	Play_Lazer			\Default Work Unit\SFX\Play_Lazer	
 	3030735331	Play_Robot_Appearence			\Default Work Unit\SFX\Play_Robot_Appearence	
 	3225017965	Play_Saw			\Default Work Unit\SFX\Play_Saw	
 	3303975224	Play_Zone4_Music			\Default Work Unit\Music\Play_Zone4_Music	
 	3584129722	Play_Zone2_Music			\Default Work Unit\Music\Play_Zone2_Music	
-	3854155799	Play_Footsteps			\Default Work Unit\Movement\Play_Footsteps	
 	4098982749	Play_Zone1_Music			\Default Work Unit\Music\Play_Zone1_Music	
-
-Switch Group	ID	Name			Wwise Object Path	Notes
-	2615620554	Footstep_Type			\Default Work Unit\Footstep_Type	
-
-Switch	ID	Name	Switch Group			Notes
-	1160234136	Normal	Footstep_Type			
-	2449969375	Glass	Footstep_Type			
-	2473969246	Metal	Footstep_Type			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	831766718	Zones			\Default Work Unit\Zones	
@@ -49,100 +40,77 @@ State	ID	Name	State Group			Notes
 	831766783	Zone2	Zones			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	1022520457	Music_Layer_Z4			\Default Work Unit\Musical_Layers\Music_Layer_Z4	
 	1022520460	Music_Layer_Z1			\Default Work Unit\Musical_Layers\Music_Layer_Z1	
-	1022520462	Music_Layer_Z3			\Default Work Unit\Musical_Layers\Music_Layer_Z3	
-	1022520463	Music_Layer_Z2			\Default Work Unit\Musical_Layers\Music_Layer_Z2	
-	1050950791	Move_Accel			\Default Work Unit\Movement\Move_Accel	
 	3740773599	Footstep_velocity			\Default Work Unit\Movement\Footstep_velocity	
 
 Effect plug-ins	ID	Name	Type				Notes
 	508227036	Wwise_Peak_Limiter_(Custom)	Wwise Peak Limiter			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	50753374	Z4_Noisy_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Noisy_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Noisy_Arp		334573
-	55787116	Z1_Metal_Pad	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Metal_Pad_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Metal_Pad		239569
-	86992867	Z3_Sub_Kicks	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Sub_Kicks_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Sub_Kicks		110970
-	94220057	Z1_Ascending_Metal	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Ascending_Metal_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Ascending_Metal		244316
-	103643297	Metal_Footsteps_4	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Metal_Footsteps_4_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Metal_Footsteps\Metal_Footsteps_4		5375
+	7699699	Z1_Ascending_Metal	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Ascending_Metal_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Ascending_Metal		251281
+	22842696	Z4_Rising_Thingy	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Rising_Thingy_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Rising_Thingy		310032
+	25731778	Z4_Metal_Pad	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Metal_Pad_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Metal_Pad		318301
+	32006921	Z2_Nasal_Bass	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Nasal_Bass_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Nasal_Bass		286347
+	33645410	Z3_Secondary_Drumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Secondary_Drumz_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Secondary_Drumz		284133
+	40232207	Z2_Hope_Rising_Synth	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Hope_Rising_Synth_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Hope_Rising_Synth		265194
+	71967050	Z3_Drumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Drumz_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Drumz		275668
+	78088031	Z3_Dist_Synth_Melodic_Pattern	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Dist_Synth_Melodic_Pattern_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dist_Synth_Melodic_Pattern		266102
+	84951733	Transition_1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Transition_1_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Transition_1\Transition_1		72427
+	99105497	Jump_Takeoff_4	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Takeoff_4_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Takeoff\Jump_Takeoff_4		18595
 	104469724	Slide_3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Slide_3_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Slides\Slide_3		12133
-	110242503	Glass_Footsteps_1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Glass_Footsteps_1_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Glass_Footsteps\Glass_Footsteps_1		5020
-	121499936	Footstep_Loop_Placeholder	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Footstep_loop_placeholder_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footstep_Loop_Placeholder		94365
-	137210422	Z4_Metal_Pad	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Metal_Pad_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Metal_Pad		314530
-	139041905	Glass_Footsteps_7	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Glass_Footsteps_7_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Glass_Footsteps\Glass_Footsteps_7		4026
-	143063631	Z1_Nasal_Bass	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Nasal_Bass_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Nasal_Bass		278878
+	145167596	Z2_Hero_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Hero_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Hero_Arp		292814
 	154154251	Robot_Appearence	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Robot_Appearence_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Objects\Robot_Appearence		105252
-	164395655	Z2_Metal_Pad	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Metal_Pad_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Metal_Pad		260279
-	174862817	Metal_Footsteps_5	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Metal_Footsteps_5_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Metal_Footsteps\Metal_Footsteps_5		5932
-	179183711	Transition_1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Transition_1_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Transition_1\Transition_1		31415
-	203697618	Z1_Hatter_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Hatter_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Hatter_Arp		297460
+	154960993	Z3_Dist_Synth_Harm2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Dist_Synth_Harm2_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dist_Synth_Harm2		236817
+	178363245	Z3_Hatter_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Hatter_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Hatter_Arp		276666
+	179692943	Z4_Flyde_Chords	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Flyde_Chords_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Flyde_Chords		319335
+	188704187	Z1_Dist_Klaver	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Dist_Klaver_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Dist_Klaver		255182
+	240221581	Z2_Sub_Kicks	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Sub_Kicks_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Sub_Kicks		243413
 	247152723	Slide_4	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Slide_4_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Slides\Slide_4		12230
-	256964190	Glass_Footsteps_2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Glass_Footsteps_2_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Glass_Footsteps\Glass_Footsteps_2		4109
-	278776942	Z4_Flyde_Chords	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Flyde_Chords_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Flyde_Chords		316212
+	262328241	Z1_Noisy_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Noisy_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Noisy_Arp		294023
+	278798423	Z1_Nasal_Bass	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Nasal_Bass_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Nasal_Bass		275646
 	283526253	Slide_1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Slide_1_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Slides\Slide_1		12087
 	288158282	Saw	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Saw_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Objects\Saw		85691
-	292889950	Metal_Footsteps_2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Metal_Footsteps_2_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Metal_Footsteps\Metal_Footsteps_2		5093
-	294176335	Z3_Drumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Drumz_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Drumz		226659
-	297535415	Z3_Dist_Synth_Harm2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Dist_Synth_Harm2_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dist_Synth_Harm2		250009
-	302278654	Glass_Footsteps_6	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Glass_Footsteps_6_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Glass_Footsteps\Glass_Footsteps_6		5005
-	340861817	Metal_Footsteps_6	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Metal_Footsteps_6_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Metal_Footsteps\Metal_Footsteps_6		4402
-	359772158	Z3_Dist_Synth_Melodic_Pattern	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Dist_Synth_Melodic_Pattern_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dist_Synth_Melodic_Pattern		280305
-	364584443	Z1_Metal_Drums	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Metal_Drums_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Metal_Drums		275137
-	369314344	Z3_Hatter_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Hatter_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Hatter_Arp		278963
-	375339853	Z4_Kick	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Kick_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Kick		322575
+	290365648	Jump_Hu_2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Hu_2_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Voice_PH\Jump_Hu_2		2646
+	327162572	Jump_Hu_4	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Hu_4_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Voice_PH\Jump_Hu_4		2171
+	340231492	Transition_2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Transition_2_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Transition_2\Transition_2		71699
+	346023756	Jump_Takeoff_2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Takeoff_2_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Takeoff\Jump_Takeoff_2		9139
 	394712826	Pylon_Parkour	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Pylon_Parkour_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Objects\Pylon_Parkour		160039
-	397530222	Metal_Footsteps_10	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Metal_Footsteps_10_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Metal_Footsteps\Metal_Footsteps_10		5377
-	400761694	Norm_footstep_4	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Norm_footstep_4_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Norm_Footsteps\Norm_footstep_4		3995
-	420538401	Z2_Metal_Drums	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Metal_Drums_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Metal_Drums		266261
-	429822528	Metal_Footsteps_3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Metal_Footsteps_3_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Metal_Footsteps\Metal_Footsteps_3		4759
-	435669100	Glass_Footsteps_3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Glass_Footsteps_3_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Glass_Footsteps\Glass_Footsteps_3		3759
-	441993847	Z2_Hero_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Hero_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Hero_Arp		352823
-	444641541	Glass_Footsteps_10	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Glass_Footsteps_10_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Glass_Footsteps\Glass_Footsteps_10		4611
-	454500765	Z1_Dist_Klaver	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Dist_Klaver_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Dist_Klaver		232119
-	476032932	Norm_footstep_10	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Norm_footstep_10_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Norm_Footsteps\Norm_footstep_10		3864
-	518872067	Metal_Footsteps_1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Metal_Footsteps_1_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Metal_Footsteps\Metal_Footsteps_1		4091
-	525820556	Norm_footstep_11	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Norm_footstep_11_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Norm_Footsteps\Norm_footstep_11		3874
-	532786460	Norm_footstep_9	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Norm_footstep_9_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Norm_Footsteps\Norm_footstep_9		3915
-	537066996	Z2_Dist_Klaver	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Dist_Klaver_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Dist_Klaver		271549
-	545506022	Z1_Airy_Pad	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Airy_Pad_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Airy_Pad		258847
-	548044927	Norm_footstep_3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Norm_footstep_3_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Norm_Footsteps\Norm_footstep_3		3960
+	398622469	Z1_Airy_Pad	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Airy_Pad_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Airy_Pad		258294
+	410136948	Z2_Metal_Pad	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Metal_Pad_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Metal_Pad		263308
+	444516199	Z3_Dist_Synth_Harm1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Dist_Synth_Harm1_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dist_Synth_Harm1		246911
+	456080129	Z1_Metal_Drums	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Metal_Drums_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Metal_Drums		275431
+	462863095	Z4_Nasal_Bass	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Nasal_Bass_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Nasal_Bass		315070
+	479430240	Jump_Hu_8	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Hu_8_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Voice_PH\Jump_Hu_8		2373
+	491829066	Jump_Takeoff_1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Takeoff_1_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Takeoff\Jump_Takeoff_1		11820
+	500114743	Jump_Hu_11	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Hu_11_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Voice_PH\Jump_Hu_11		3099
+	503665789	Z4_Noisy_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Noisy_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Noisy_Arp		326437
+	547051224	Footsteps_Normal_Loop	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Footsteps_Normal_Loop_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps_Normal_Loop		69597
+	561551880	Jump_Takeoff_3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Takeoff_3_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Takeoff\Jump_Takeoff_3		8463
+	569405528	Z4_Kick	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Kick_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Kick		324954
+	577677076	Jump_Hu_7	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Hu_7_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Voice_PH\Jump_Hu_7		3813
 	578611982	Electricity	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Electricity_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Objects\Electricity		108226
-	580614017	Z3_Secondary_Drumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Secondary_Drumz_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Secondary_Drumz		266241
-	613454070	Metal_Footsteps_9	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Metal_Footsteps_9_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Metal_Footsteps\Metal_Footsteps_9		4638
-	620377400	Glass_Footsteps_5	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Glass_Footsteps_5_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Glass_Footsteps\Glass_Footsteps_5		4524
-	620875266	Z3_Dusty_Snare	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Dusty_Snare_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dusty_Snare		246015
-	628716536	Jump3_PH	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump3_PH_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Voice_PH\Jump3_PH		7767
-	637241348	Z1_Noisy_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Noisy_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Noisy_Arp		340890
-	638977762	Jump2_PH	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump2_PH_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Voice_PH\Jump2_PH		9793
-	652597007	Metal_Footsteps_11	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Metal_Footsteps_111_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Metal_Footsteps\Metal_Footsteps_11		5018
-	679890498	Norm_footstep_2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Norm_footstep_2_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Norm_Footsteps\Norm_footstep_2		4076
-	685208650	Transition_3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Transition_3_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Transition_3\Transition_3		31270
-	715119430	Z2_Drumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Drumz_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Drumz		244059
-	718270575	Z1_Hope_Synth	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Hope_Synth_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Hope_Synth		273245
-	727494292	Metal_Footsteps_7	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Metal_Footsteps_7_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Metal_Footsteps\Metal_Footsteps_7		5718
-	729312015	Norm_footstep_5	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Norm_footstep_5_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Norm_Footsteps\Norm_footstep_5		4012
-	737472761	Z2_Dist_Synth	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Dist_Synth_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Dist_Synth		282296
-	737898072	Z4_Dist_Klaver	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Dist_Klaver_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Dist_Klaver		303589
-	740124357	Z3_Dist_Bassline	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Dist_Bassline_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dist_Bassline		261772
-	740801088	Glass_Footsteps_4	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Glass_Footsteps_4_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Glass_Footsteps\Glass_Footsteps_4		3729
-	754888056	Glass_Footsteps_8	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Glass_Footsteps_8_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Glass_Footsteps\Glass_Footsteps_8		3742
-	787915160	Z3_Dist_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Dist_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dist_Arp		299969
-	808994160	Transition_2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Transition_2_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Transition_2\Transition_2		32870
-	815602062	Norm_footstep_1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Norm_footstep_1_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Norm_Footsteps\Norm_footstep_1		3165
-	837245856	Norm_footstep_8	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Norm_footstep_8_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Norm_Footsteps\Norm_footstep_8		4167
-	888313344	Norm_footstep_6	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Norm_footstep_6_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Norm_Footsteps\Norm_footstep_6		4220
-	924917144	Z4_Nasal_Bass	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Nasal_Bass_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Nasal_Bass		316612
-	928224784	Z2_Sub_Kicks	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Sub_Kicks_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Sub_Kicks		234575
-	933956375	Glass_Footsteps_9	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Glass_Footsteps_9_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Glass_Footsteps\Glass_Footsteps_9		3721
-	948945455	Jump1_PH	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump1_PH_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Voice_PH\Jump1_PH		9174
-	958896079	Z3_Dist_Synth_Harm1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Dist_Synth_Harm1_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dist_Synth_Harm1		253862
-	968555956	Z2_Hope_Rising_Synth	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Hope_Rising_Synth_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Hope_Rising_Synth		268037
-	998378073	Metal_Footsteps_8	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Metal_Footsteps_8_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Metal_Footsteps\Metal_Footsteps_8		5688
-	1003023724	Glass_Footsteps_11	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Glass_Footsteps_11_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Glass_Footsteps\Glass_Footsteps_11		5134
-	1003434096	Z2_Nasal_Bass	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Nasal_Bass_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Nasal_Bass		329901
+	593156668	Z2_Dist_Synth	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Dist_Synth_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Dist_Synth		281441
+	593785112	Z3_Sub_Kicks	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Sub_Kicks_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Sub_Kicks		181152
+	597387265	Jump_Hu_1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Hu_1_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Voice_PH\Jump_Hu_1		2922
+	614478671	Z3_Metal_Pad	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Metal_Pad_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Metal_Pad		230178
+	635677682	Jump_Hu_10	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Hu_10_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Voice_PH\Jump_Hu_10		3081
+	663008857	Z3_Dist_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Dist_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dist_Arp		269964
+	761137464	Jump_Hu_6	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Hu_6_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Voice_PH\Jump_Hu_6		2505
+	764501437	Z2_Metal_Drums	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Metal_Drums_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Metal_Drums		271668
+	814161298	Z1_Hope_Synth	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Hope_Synth_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Hope_Synth		268414
+	849700586	Transition_3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Transition_3_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Transition_3\Transition_3		68288
+	859322015	Z1_Hatter_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Hatter_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Hatter_Arp		295974
+	863299211	Fall_High	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Fall_High_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Landing_Switch\Land_Hard\Fall_High		15387
+	918686559	Z2_Drumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Drumz_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Drumz		292335
+	924700304	Jump_Hu_3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Hu_3_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Voice_PH\Jump_Hu_3		3304
+	935462027	Z1_Metal_Pad	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Metal_Pad_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Metal_Pad		250813
+	962265329	Z3_Rising_Metal	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Rising_Metal_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Rising_Metal		231681
+	979909387	Z4_Dist_Klaver	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Dist_Klaver_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Dist_Klaver		312096
 	1003560984	Slide_2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Slide_2_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Slides\Slide_2		12617
-	1015269462	Z3_Metal_Pad	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Metal_Pad_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Metal_Pad		212749
-	1021206422	Z3_Rising_Metal	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Rising_Metal_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Rising_Metal		225490
-	1030324918	Norm_footstep_7	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Norm_footstep_7_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Footsteps\Norm_Footsteps\Norm_footstep_7		4351
+	1010279705	Z3_Dist_Bassline	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Dist_Bassline_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dist_Bassline		245574
+	1038287459	Jump_Hu_9	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Hu_9_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Voice_PH\Jump_Hu_9		2666
 	1042472735	Lazer	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Lazer_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Objects\Lazer		269262
+	1048347315	Z3_Dusty_Snare	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Dusty_Snare_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dusty_Snare		246051
+	1066407594	Jump_Hu_5	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Hu_5_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Voice_PH\Jump_Hu_5		2619
+	1067738165	Z2_Dist_Klaver	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Dist_Klaver_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Dist_Klaver		261677
 

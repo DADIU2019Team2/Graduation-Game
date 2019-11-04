@@ -22,9 +22,9 @@
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1560622413" Name="Play_Electricity" ObjectPath="\Events\Default Work Unit\SFX\Play_Electricity" DurationType="Infinite"/>
-				<Event Id="39250664" Name="Play_Footstep_loop_PH" ObjectPath="\Events\Default Work Unit\Movement\Play_Footstep_loop_PH" DurationType="Infinite"/>
-				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Movement\Play_Footsteps" DurationType="OneShot" DurationMin="0.190136" DurationMax="0.380295"/>
-				<Event Id="1761266224" Name="Play_Jumps_PH" ObjectPath="\Events\Default Work Unit\Movement\Play_Jumps_PH" DurationType="OneShot" DurationMin="0.480045" DurationMax="0.638821"/>
+				<Event Id="610391300" Name="Play_Footsteps_Normal_Loop" ObjectPath="\Events\Default Work Unit\Movement\Play_Footsteps_Normal_Loop" DurationType="OneShot" DurationMin="4.816803" DurationMax="4.816803"/>
+				<Event Id="1828118792" Name="Play_Jumps_Takeoff" ObjectPath="\Events\Default Work Unit\Movement\Play_Jumps_Takeoff" DurationType="OneShot" DurationMin="0.507052" DurationMax="1.204218"/>
+				<Event Id="404466471" Name="Play_Land_Hard" ObjectPath="\Events\Default Work Unit\Movement\Play_Land_Hard" DurationType="OneShot" DurationMin="1.023447" DurationMax="1.023447"/>
 				<Event Id="1933691314" Name="Play_Lazer" ObjectPath="\Events\Default Work Unit\SFX\Play_Lazer" DurationType="Infinite"/>
 				<Event Id="1832262049" Name="Play_Pylon_Parkour" ObjectPath="\Events\Default Work Unit\SFX\Play_Pylon_Parkour" DurationType="Infinite"/>
 				<Event Id="3030735331" Name="Play_Robot_Appearence" ObjectPath="\Events\Default Work Unit\SFX\Play_Robot_Appearence" DurationType="OneShot" DurationMin="4.863542" DurationMax="4.863542"/>
@@ -50,84 +50,91 @@
 				<Event Id="1653563811" Name="Set_Z4_Music_2" ObjectPath="\Events\Default Work Unit\Music\Set_Z4_Music_2" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1653563810" Name="Set_Z4_Music_3" ObjectPath="\Events\Default Work Unit\Music\Set_Z4_Music_3" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1653563813" Name="Set_Z4_Music_4" ObjectPath="\Events\Default Work Unit\Music\Set_Z4_Music_4" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1201902998" Name="Stop_Footstep_loop_PH" ObjectPath="\Events\Default Work Unit\Movement\Stop_Footstep_loop_PH" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="50753374" Language="SFX">
-					<ShortName>Z4_Noisy_Arp.wav</ShortName>
-					<Path>SFX/Z4_Noisy_Arp_3EBA1927.wem</Path>
-				</File>
-				<File Id="55787116" Language="SFX">
-					<ShortName>Z1_Metal_Pad.wav</ShortName>
-					<Path>SFX/Z1_Metal_Pad_3EBA1927.wem</Path>
-				</File>
-				<File Id="86992867" Language="SFX">
-					<ShortName>Z3_Sub_Kicks.wav</ShortName>
-					<Path>SFX/Z3_Sub_Kicks_3EBA1927.wem</Path>
-				</File>
-				<File Id="94220057" Language="SFX">
+				<File Id="7699699" Language="SFX">
 					<ShortName>Z1_Ascending_Metal.wav</ShortName>
 					<Path>SFX/Z1_Ascending_Metal_3EBA1927.wem</Path>
 				</File>
-				<File Id="103643297" Language="SFX">
-					<ShortName>Metal_Footsteps_4.wav</ShortName>
-					<Path>SFX/Metal_Footsteps_4_6296B0F9.wem</Path>
+				<File Id="22842696" Language="SFX">
+					<ShortName>Z4_Rising_Thingy.wav</ShortName>
+					<Path>SFX/Z4_Rising_Thingy_3EBA1927.wem</Path>
+				</File>
+				<File Id="25731778" Language="SFX">
+					<ShortName>Z4_Metal_Pad.wav</ShortName>
+					<Path>SFX/Z4_Metal_Pad_3EBA1927.wem</Path>
+				</File>
+				<File Id="32006921" Language="SFX">
+					<ShortName>Z2_Nasal_Bass.wav</ShortName>
+					<Path>SFX/Z2_Nasal_Bass_3EBA1927.wem</Path>
+				</File>
+				<File Id="33645410" Language="SFX">
+					<ShortName>Z3_Secondary_Drumz.wav</ShortName>
+					<Path>SFX/Z3_Secondary_Drumz_3EBA1927.wem</Path>
+				</File>
+				<File Id="40232207" Language="SFX">
+					<ShortName>Z2_Hope_Rising_Synth.wav</ShortName>
+					<Path>SFX/Z2_Hope_Rising_Synth_3EBA1927.wem</Path>
+				</File>
+				<File Id="71967050" Language="SFX">
+					<ShortName>Z3_Drumz.wav</ShortName>
+					<Path>SFX/Z3_Drumz_3EBA1927.wem</Path>
+				</File>
+				<File Id="78088031" Language="SFX">
+					<ShortName>Z3_Dist_Synth_Melodic_Pattern.wav</ShortName>
+					<Path>SFX/Z3_Dist_Synth_Melodic_Pattern_3EBA1927.wem</Path>
+				</File>
+				<File Id="84951733" Language="SFX">
+					<ShortName>Transition_1.wav</ShortName>
+					<Path>SFX/Transition_1_3EBA1927.wem</Path>
+				</File>
+				<File Id="99105497" Language="SFX">
+					<ShortName>Jump_Takeoff_4.wav</ShortName>
+					<Path>SFX/Jump_Takeoff_4_6296B0F9.wem</Path>
 				</File>
 				<File Id="104469724" Language="SFX">
 					<ShortName>Slide_3.wav</ShortName>
 					<Path>SFX/Slide_3_6296B0F9.wem</Path>
 				</File>
-				<File Id="110242503" Language="SFX">
-					<ShortName>Glass_Footsteps_1.wav</ShortName>
-					<Path>SFX/Glass_Footsteps_1_6296B0F9.wem</Path>
-				</File>
-				<File Id="121499936" Language="SFX">
-					<ShortName>Footstep_loop_placeholder.wav</ShortName>
-					<Path>SFX/Footstep_loop_placeholder_9B96ECC7.wem</Path>
-				</File>
-				<File Id="137210422" Language="SFX">
-					<ShortName>Z4_Metal_Pad.wav</ShortName>
-					<Path>SFX/Z4_Metal_Pad_3EBA1927.wem</Path>
-				</File>
-				<File Id="139041905" Language="SFX">
-					<ShortName>Glass_Footsteps_7.wav</ShortName>
-					<Path>SFX/Glass_Footsteps_7_6296B0F9.wem</Path>
-				</File>
-				<File Id="143063631" Language="SFX">
-					<ShortName>Z1_Nasal_Bass.wav</ShortName>
-					<Path>SFX/Z1_Nasal_Bass_3EBA1927.wem</Path>
+				<File Id="145167596" Language="SFX">
+					<ShortName>Z2_Hero_Arp.wav</ShortName>
+					<Path>SFX/Z2_Hero_Arp_3EBA1927.wem</Path>
 				</File>
 				<File Id="154154251" Language="SFX">
 					<ShortName>Robot_Appearence.wav</ShortName>
 					<Path>SFX/Robot_Appearence_6296B0F9.wem</Path>
 				</File>
-				<File Id="164395655" Language="SFX">
-					<ShortName>Z2_Metal_Pad.wav</ShortName>
-					<Path>SFX/Z2_Metal_Pad_3EBA1927.wem</Path>
+				<File Id="154960993" Language="SFX">
+					<ShortName>Z3_Dist_Synth_Harm2.wav</ShortName>
+					<Path>SFX/Z3_Dist_Synth_Harm2_3EBA1927.wem</Path>
 				</File>
-				<File Id="174862817" Language="SFX">
-					<ShortName>Metal_Footsteps_5.wav</ShortName>
-					<Path>SFX/Metal_Footsteps_5_6296B0F9.wem</Path>
+				<File Id="178363245" Language="SFX">
+					<ShortName>Z3_Hatter_Arp.wav</ShortName>
+					<Path>SFX/Z3_Hatter_Arp_3EBA1927.wem</Path>
 				</File>
-				<File Id="179183711" Language="SFX">
-					<ShortName>Transition_1.wav</ShortName>
-					<Path>SFX/Transition_1_3EBA1927.wem</Path>
+				<File Id="179692943" Language="SFX">
+					<ShortName>Z4_Flyde_Chords.wav</ShortName>
+					<Path>SFX/Z4_Flyde_Chords_3EBA1927.wem</Path>
 				</File>
-				<File Id="203697618" Language="SFX">
-					<ShortName>Z1_Hatter_Arp.wav</ShortName>
-					<Path>SFX/Z1_Hatter_Arp_3EBA1927.wem</Path>
+				<File Id="188704187" Language="SFX">
+					<ShortName>Z1_Dist_Klaver.wav</ShortName>
+					<Path>SFX/Z1_Dist_Klaver_3EBA1927.wem</Path>
+				</File>
+				<File Id="240221581" Language="SFX">
+					<ShortName>Z2_Sub_Kicks.wav</ShortName>
+					<Path>SFX/Z2_Sub_Kicks_3EBA1927.wem</Path>
 				</File>
 				<File Id="247152723" Language="SFX">
 					<ShortName>Slide_4.wav</ShortName>
 					<Path>SFX/Slide_4_6296B0F9.wem</Path>
 				</File>
-				<File Id="256964190" Language="SFX">
-					<ShortName>Glass_Footsteps_2.wav</ShortName>
-					<Path>SFX/Glass_Footsteps_2_6296B0F9.wem</Path>
+				<File Id="262328241" Language="SFX">
+					<ShortName>Z1_Noisy_Arp.wav</ShortName>
+					<Path>SFX/Z1_Noisy_Arp_3EBA1927.wem</Path>
 				</File>
-				<File Id="278776942" Language="SFX">
-					<ShortName>Z4_Flyde_Chords.wav</ShortName>
-					<Path>SFX/Z4_Flyde_Chords_3EBA1927.wem</Path>
+				<File Id="278798423" Language="SFX">
+					<ShortName>Z1_Nasal_Bass.wav</ShortName>
+					<Path>SFX/Z1_Nasal_Bass_3EBA1927.wem</Path>
 				</File>
 				<File Id="283526253" Language="SFX">
 					<ShortName>Slide_1.wav</ShortName>
@@ -137,261 +144,177 @@
 					<ShortName>Saw.wav</ShortName>
 					<Path>SFX/Saw_9B96ECC7.wem</Path>
 				</File>
-				<File Id="292889950" Language="SFX">
-					<ShortName>Metal_Footsteps_2.wav</ShortName>
-					<Path>SFX/Metal_Footsteps_2_6296B0F9.wem</Path>
+				<File Id="290365648" Language="SFX">
+					<ShortName>Jump_Hu_2.wav</ShortName>
+					<Path>SFX/Jump_Hu_2_6296B0F9.wem</Path>
 				</File>
-				<File Id="294176335" Language="SFX">
-					<ShortName>Z3_Drumz.wav</ShortName>
-					<Path>SFX/Z3_Drumz_3EBA1927.wem</Path>
+				<File Id="327162572" Language="SFX">
+					<ShortName>Jump_Hu_4.wav</ShortName>
+					<Path>SFX/Jump_Hu_4_6296B0F9.wem</Path>
 				</File>
-				<File Id="297535415" Language="SFX">
-					<ShortName>Z3_Dist_Synth_Harm2.wav</ShortName>
-					<Path>SFX/Z3_Dist_Synth_Harm2_3EBA1927.wem</Path>
+				<File Id="340231492" Language="SFX">
+					<ShortName>Transition_2.wav</ShortName>
+					<Path>SFX/Transition_2_3EBA1927.wem</Path>
 				</File>
-				<File Id="302278654" Language="SFX">
-					<ShortName>Glass_Footsteps_6.wav</ShortName>
-					<Path>SFX/Glass_Footsteps_6_6296B0F9.wem</Path>
-				</File>
-				<File Id="340861817" Language="SFX">
-					<ShortName>Metal_Footsteps_6.wav</ShortName>
-					<Path>SFX/Metal_Footsteps_6_6296B0F9.wem</Path>
-				</File>
-				<File Id="359772158" Language="SFX">
-					<ShortName>Z3_Dist_Synth_Melodic_Pattern.wav</ShortName>
-					<Path>SFX/Z3_Dist_Synth_Melodic_Pattern_3EBA1927.wem</Path>
-				</File>
-				<File Id="364584443" Language="SFX">
-					<ShortName>Z1_Metal_Drums.wav</ShortName>
-					<Path>SFX/Z1_Metal_Drums_3EBA1927.wem</Path>
-				</File>
-				<File Id="369314344" Language="SFX">
-					<ShortName>Z3_Hatter_Arp.wav</ShortName>
-					<Path>SFX/Z3_Hatter_Arp_3EBA1927.wem</Path>
-				</File>
-				<File Id="375339853" Language="SFX">
-					<ShortName>Z4_Kick.wav</ShortName>
-					<Path>SFX/Z4_Kick_3EBA1927.wem</Path>
+				<File Id="346023756" Language="SFX">
+					<ShortName>Jump_Takeoff_2.wav</ShortName>
+					<Path>SFX/Jump_Takeoff_2_6296B0F9.wem</Path>
 				</File>
 				<File Id="394712826" Language="SFX">
 					<ShortName>Pylon_Parkour.wav</ShortName>
 					<Path>SFX/Pylon_Parkour_9B96ECC7.wem</Path>
 				</File>
-				<File Id="397530222" Language="SFX">
-					<ShortName>Metal_Footsteps_10.wav</ShortName>
-					<Path>SFX/Metal_Footsteps_10_6296B0F9.wem</Path>
-				</File>
-				<File Id="400761694" Language="SFX">
-					<ShortName>Norm_footstep_4.wav</ShortName>
-					<Path>SFX/Norm_footstep_4_6296B0F9.wem</Path>
-				</File>
-				<File Id="420538401" Language="SFX">
-					<ShortName>Z2_Metal_Drums.wav</ShortName>
-					<Path>SFX/Z2_Metal_Drums_3EBA1927.wem</Path>
-				</File>
-				<File Id="429822528" Language="SFX">
-					<ShortName>Metal_Footsteps_3.wav</ShortName>
-					<Path>SFX/Metal_Footsteps_3_6296B0F9.wem</Path>
-				</File>
-				<File Id="435669100" Language="SFX">
-					<ShortName>Glass_Footsteps_3.wav</ShortName>
-					<Path>SFX/Glass_Footsteps_3_6296B0F9.wem</Path>
-				</File>
-				<File Id="441993847" Language="SFX">
-					<ShortName>Z2_Hero_Arp.wav</ShortName>
-					<Path>SFX/Z2_Hero_Arp_3EBA1927.wem</Path>
-				</File>
-				<File Id="444641541" Language="SFX">
-					<ShortName>Glass_Footsteps_10.wav</ShortName>
-					<Path>SFX/Glass_Footsteps_10_6296B0F9.wem</Path>
-				</File>
-				<File Id="454500765" Language="SFX">
-					<ShortName>Z1_Dist_Klaver.wav</ShortName>
-					<Path>SFX/Z1_Dist_Klaver_3EBA1927.wem</Path>
-				</File>
-				<File Id="476032932" Language="SFX">
-					<ShortName>Norm_footstep_10.wav</ShortName>
-					<Path>SFX/Norm_footstep_10_6296B0F9.wem</Path>
-				</File>
-				<File Id="518872067" Language="SFX">
-					<ShortName>Metal_Footsteps_1.wav</ShortName>
-					<Path>SFX/Metal_Footsteps_1_6296B0F9.wem</Path>
-				</File>
-				<File Id="525820556" Language="SFX">
-					<ShortName>Norm_footstep_11.wav</ShortName>
-					<Path>SFX/Norm_footstep_11_6296B0F9.wem</Path>
-				</File>
-				<File Id="532786460" Language="SFX">
-					<ShortName>Norm_footstep_9.wav</ShortName>
-					<Path>SFX/Norm_footstep_9_6296B0F9.wem</Path>
-				</File>
-				<File Id="537066996" Language="SFX">
-					<ShortName>Z2_Dist_Klaver.wav</ShortName>
-					<Path>SFX/Z2_Dist_Klaver_3EBA1927.wem</Path>
-				</File>
-				<File Id="545506022" Language="SFX">
+				<File Id="398622469" Language="SFX">
 					<ShortName>Z1_Airy_Pad.wav</ShortName>
 					<Path>SFX/Z1_Airy_Pad_3EBA1927.wem</Path>
 				</File>
-				<File Id="548044927" Language="SFX">
-					<ShortName>Norm_footstep_3.wav</ShortName>
-					<Path>SFX/Norm_footstep_3_6296B0F9.wem</Path>
+				<File Id="410136948" Language="SFX">
+					<ShortName>Z2_Metal_Pad.wav</ShortName>
+					<Path>SFX/Z2_Metal_Pad_3EBA1927.wem</Path>
+				</File>
+				<File Id="444516199" Language="SFX">
+					<ShortName>Z3_Dist_Synth_Harm1.wav</ShortName>
+					<Path>SFX/Z3_Dist_Synth_Harm1_3EBA1927.wem</Path>
+				</File>
+				<File Id="456080129" Language="SFX">
+					<ShortName>Z1_Metal_Drums.wav</ShortName>
+					<Path>SFX/Z1_Metal_Drums_3EBA1927.wem</Path>
+				</File>
+				<File Id="462863095" Language="SFX">
+					<ShortName>Z4_Nasal_Bass.wav</ShortName>
+					<Path>SFX/Z4_Nasal_Bass_3EBA1927.wem</Path>
+				</File>
+				<File Id="479430240" Language="SFX">
+					<ShortName>Jump_Hu_8.wav</ShortName>
+					<Path>SFX/Jump_Hu_8_6296B0F9.wem</Path>
+				</File>
+				<File Id="491829066" Language="SFX">
+					<ShortName>Jump_Takeoff_1.wav</ShortName>
+					<Path>SFX/Jump_Takeoff_1_6296B0F9.wem</Path>
+				</File>
+				<File Id="500114743" Language="SFX">
+					<ShortName>Jump_Hu_11.wav</ShortName>
+					<Path>SFX/Jump_Hu_11_6296B0F9.wem</Path>
+				</File>
+				<File Id="503665789" Language="SFX">
+					<ShortName>Z4_Noisy_Arp.wav</ShortName>
+					<Path>SFX/Z4_Noisy_Arp_3EBA1927.wem</Path>
+				</File>
+				<File Id="547051224" Language="SFX">
+					<ShortName>Footsteps_Normal_Loop.wav</ShortName>
+					<Path>SFX/Footsteps_Normal_Loop_6296B0F9.wem</Path>
+				</File>
+				<File Id="561551880" Language="SFX">
+					<ShortName>Jump_Takeoff_3.wav</ShortName>
+					<Path>SFX/Jump_Takeoff_3_6296B0F9.wem</Path>
+				</File>
+				<File Id="569405528" Language="SFX">
+					<ShortName>Z4_Kick.wav</ShortName>
+					<Path>SFX/Z4_Kick_3EBA1927.wem</Path>
+				</File>
+				<File Id="577677076" Language="SFX">
+					<ShortName>Jump_Hu_7.wav</ShortName>
+					<Path>SFX/Jump_Hu_7_6296B0F9.wem</Path>
 				</File>
 				<File Id="578611982" Language="SFX">
 					<ShortName>Electricity.wav</ShortName>
 					<Path>SFX/Electricity_9B96ECC7.wem</Path>
 				</File>
-				<File Id="580614017" Language="SFX">
-					<ShortName>Z3_Secondary_Drumz.wav</ShortName>
-					<Path>SFX/Z3_Secondary_Drumz_3EBA1927.wem</Path>
-				</File>
-				<File Id="613454070" Language="SFX">
-					<ShortName>Metal_Footsteps_9.wav</ShortName>
-					<Path>SFX/Metal_Footsteps_9_6296B0F9.wem</Path>
-				</File>
-				<File Id="620377400" Language="SFX">
-					<ShortName>Glass_Footsteps_5.wav</ShortName>
-					<Path>SFX/Glass_Footsteps_5_6296B0F9.wem</Path>
-				</File>
-				<File Id="620875266" Language="SFX">
-					<ShortName>Z3_Dusty_Snare.wav</ShortName>
-					<Path>SFX/Z3_Dusty_Snare_3EBA1927.wem</Path>
-				</File>
-				<File Id="628716536" Language="SFX">
-					<ShortName>Jump3_PH.wav</ShortName>
-					<Path>SFX/Jump3_PH_6296B0F9.wem</Path>
-				</File>
-				<File Id="637241348" Language="SFX">
-					<ShortName>Z1_Noisy_Arp.wav</ShortName>
-					<Path>SFX/Z1_Noisy_Arp_3EBA1927.wem</Path>
-				</File>
-				<File Id="638977762" Language="SFX">
-					<ShortName>Jump2_PH.wav</ShortName>
-					<Path>SFX/Jump2_PH_6296B0F9.wem</Path>
-				</File>
-				<File Id="652597007" Language="SFX">
-					<ShortName>Metal_Footsteps_111.wav</ShortName>
-					<Path>SFX/Metal_Footsteps_111_6296B0F9.wem</Path>
-				</File>
-				<File Id="679890498" Language="SFX">
-					<ShortName>Norm_footstep_2.wav</ShortName>
-					<Path>SFX/Norm_footstep_2_6296B0F9.wem</Path>
-				</File>
-				<File Id="685208650" Language="SFX">
-					<ShortName>Transition_3.wav</ShortName>
-					<Path>SFX/Transition_3_3EBA1927.wem</Path>
-				</File>
-				<File Id="715119430" Language="SFX">
-					<ShortName>Z2_Drumz.wav</ShortName>
-					<Path>SFX/Z2_Drumz_3EBA1927.wem</Path>
-				</File>
-				<File Id="718270575" Language="SFX">
-					<ShortName>Z1_Hope_Synth.wav</ShortName>
-					<Path>SFX/Z1_Hope_Synth_3EBA1927.wem</Path>
-				</File>
-				<File Id="727494292" Language="SFX">
-					<ShortName>Metal_Footsteps_7.wav</ShortName>
-					<Path>SFX/Metal_Footsteps_7_6296B0F9.wem</Path>
-				</File>
-				<File Id="729312015" Language="SFX">
-					<ShortName>Norm_footstep_5.wav</ShortName>
-					<Path>SFX/Norm_footstep_5_6296B0F9.wem</Path>
-				</File>
-				<File Id="737472761" Language="SFX">
+				<File Id="593156668" Language="SFX">
 					<ShortName>Z2_Dist_Synth.wav</ShortName>
 					<Path>SFX/Z2_Dist_Synth_3EBA1927.wem</Path>
 				</File>
-				<File Id="737898072" Language="SFX">
-					<ShortName>Z4_Dist_Klaver.wav</ShortName>
-					<Path>SFX/Z4_Dist_Klaver_3EBA1927.wem</Path>
+				<File Id="593785112" Language="SFX">
+					<ShortName>Z3_Sub_Kicks.wav</ShortName>
+					<Path>SFX/Z3_Sub_Kicks_3EBA1927.wem</Path>
 				</File>
-				<File Id="740124357" Language="SFX">
-					<ShortName>Z3_Dist_Bassline.wav</ShortName>
-					<Path>SFX/Z3_Dist_Bassline_3EBA1927.wem</Path>
+				<File Id="597387265" Language="SFX">
+					<ShortName>Jump_Hu_1.wav</ShortName>
+					<Path>SFX/Jump_Hu_1_6296B0F9.wem</Path>
 				</File>
-				<File Id="740801088" Language="SFX">
-					<ShortName>Glass_Footsteps_4.wav</ShortName>
-					<Path>SFX/Glass_Footsteps_4_6296B0F9.wem</Path>
+				<File Id="614478671" Language="SFX">
+					<ShortName>Z3_Metal_Pad.wav</ShortName>
+					<Path>SFX/Z3_Metal_Pad_3EBA1927.wem</Path>
 				</File>
-				<File Id="754888056" Language="SFX">
-					<ShortName>Glass_Footsteps_8.wav</ShortName>
-					<Path>SFX/Glass_Footsteps_8_6296B0F9.wem</Path>
+				<File Id="635677682" Language="SFX">
+					<ShortName>Jump_Hu_10.wav</ShortName>
+					<Path>SFX/Jump_Hu_10_6296B0F9.wem</Path>
 				</File>
-				<File Id="787915160" Language="SFX">
+				<File Id="663008857" Language="SFX">
 					<ShortName>Z3_Dist_Arp.wav</ShortName>
 					<Path>SFX/Z3_Dist_Arp_3EBA1927.wem</Path>
 				</File>
-				<File Id="808994160" Language="SFX">
-					<ShortName>Transition_2.wav</ShortName>
-					<Path>SFX/Transition_2_3EBA1927.wem</Path>
+				<File Id="761137464" Language="SFX">
+					<ShortName>Jump_Hu_6.wav</ShortName>
+					<Path>SFX/Jump_Hu_6_6296B0F9.wem</Path>
 				</File>
-				<File Id="815602062" Language="SFX">
-					<ShortName>Norm_footstep_1.wav</ShortName>
-					<Path>SFX/Norm_footstep_1_6296B0F9.wem</Path>
+				<File Id="764501437" Language="SFX">
+					<ShortName>Z2_Metal_Drums.wav</ShortName>
+					<Path>SFX/Z2_Metal_Drums_3EBA1927.wem</Path>
 				</File>
-				<File Id="837245856" Language="SFX">
-					<ShortName>Norm_footstep_8.wav</ShortName>
-					<Path>SFX/Norm_footstep_8_6296B0F9.wem</Path>
+				<File Id="814161298" Language="SFX">
+					<ShortName>Z1_Hope_Synth.wav</ShortName>
+					<Path>SFX/Z1_Hope_Synth_3EBA1927.wem</Path>
 				</File>
-				<File Id="888313344" Language="SFX">
-					<ShortName>Norm_footstep_6.wav</ShortName>
-					<Path>SFX/Norm_footstep_6_6296B0F9.wem</Path>
+				<File Id="849700586" Language="SFX">
+					<ShortName>Transition_3.wav</ShortName>
+					<Path>SFX/Transition_3_3EBA1927.wem</Path>
 				</File>
-				<File Id="924917144" Language="SFX">
-					<ShortName>Z4_Nasal_Bass.wav</ShortName>
-					<Path>SFX/Z4_Nasal_Bass_3EBA1927.wem</Path>
+				<File Id="859322015" Language="SFX">
+					<ShortName>Z1_Hatter_Arp.wav</ShortName>
+					<Path>SFX/Z1_Hatter_Arp_3EBA1927.wem</Path>
 				</File>
-				<File Id="928224784" Language="SFX">
-					<ShortName>Z2_Sub_Kicks.wav</ShortName>
-					<Path>SFX/Z2_Sub_Kicks_3EBA1927.wem</Path>
+				<File Id="863299211" Language="SFX">
+					<ShortName>Fall_High.wav</ShortName>
+					<Path>SFX/Fall_High_6296B0F9.wem</Path>
 				</File>
-				<File Id="933956375" Language="SFX">
-					<ShortName>Glass_Footsteps_9.wav</ShortName>
-					<Path>SFX/Glass_Footsteps_9_6296B0F9.wem</Path>
+				<File Id="918686559" Language="SFX">
+					<ShortName>Z2_Drumz.wav</ShortName>
+					<Path>SFX/Z2_Drumz_3EBA1927.wem</Path>
 				</File>
-				<File Id="948945455" Language="SFX">
-					<ShortName>Jump1_PH.wav</ShortName>
-					<Path>SFX/Jump1_PH_6296B0F9.wem</Path>
+				<File Id="924700304" Language="SFX">
+					<ShortName>Jump_Hu_3.wav</ShortName>
+					<Path>SFX/Jump_Hu_3_6296B0F9.wem</Path>
 				</File>
-				<File Id="958896079" Language="SFX">
-					<ShortName>Z3_Dist_Synth_Harm1.wav</ShortName>
-					<Path>SFX/Z3_Dist_Synth_Harm1_3EBA1927.wem</Path>
+				<File Id="935462027" Language="SFX">
+					<ShortName>Z1_Metal_Pad.wav</ShortName>
+					<Path>SFX/Z1_Metal_Pad_3EBA1927.wem</Path>
 				</File>
-				<File Id="968555956" Language="SFX">
-					<ShortName>Z2_Hope_Rising_Synth.wav</ShortName>
-					<Path>SFX/Z2_Hope_Rising_Synth_3EBA1927.wem</Path>
+				<File Id="962265329" Language="SFX">
+					<ShortName>Z3_Rising_Metal.wav</ShortName>
+					<Path>SFX/Z3_Rising_Metal_3EBA1927.wem</Path>
 				</File>
-				<File Id="998378073" Language="SFX">
-					<ShortName>Metal_Footsteps_8.wav</ShortName>
-					<Path>SFX/Metal_Footsteps_8_6296B0F9.wem</Path>
-				</File>
-				<File Id="1003023724" Language="SFX">
-					<ShortName>Glass_Footsteps_11.wav</ShortName>
-					<Path>SFX/Glass_Footsteps_11_6296B0F9.wem</Path>
-				</File>
-				<File Id="1003434096" Language="SFX">
-					<ShortName>Z2_Nasal_Bass.wav</ShortName>
-					<Path>SFX/Z2_Nasal_Bass_3EBA1927.wem</Path>
+				<File Id="979909387" Language="SFX">
+					<ShortName>Z4_Dist_Klaver.wav</ShortName>
+					<Path>SFX/Z4_Dist_Klaver_3EBA1927.wem</Path>
 				</File>
 				<File Id="1003560984" Language="SFX">
 					<ShortName>Slide_2.wav</ShortName>
 					<Path>SFX/Slide_2_6296B0F9.wem</Path>
 				</File>
-				<File Id="1015269462" Language="SFX">
-					<ShortName>Z3_Metal_Pad.wav</ShortName>
-					<Path>SFX/Z3_Metal_Pad_3EBA1927.wem</Path>
+				<File Id="1010279705" Language="SFX">
+					<ShortName>Z3_Dist_Bassline.wav</ShortName>
+					<Path>SFX/Z3_Dist_Bassline_3EBA1927.wem</Path>
 				</File>
-				<File Id="1021206422" Language="SFX">
-					<ShortName>Z3_Rising_Metal.wav</ShortName>
-					<Path>SFX/Z3_Rising_Metal_3EBA1927.wem</Path>
-				</File>
-				<File Id="1030324918" Language="SFX">
-					<ShortName>Norm_footstep_7.wav</ShortName>
-					<Path>SFX/Norm_footstep_7_6296B0F9.wem</Path>
+				<File Id="1038287459" Language="SFX">
+					<ShortName>Jump_Hu_9.wav</ShortName>
+					<Path>SFX/Jump_Hu_9_6296B0F9.wem</Path>
 				</File>
 				<File Id="1042472735" Language="SFX">
 					<ShortName>Lazer.wav</ShortName>
 					<Path>SFX/Lazer_9B96ECC7.wem</Path>
+				</File>
+				<File Id="1048347315" Language="SFX">
+					<ShortName>Z3_Dusty_Snare.wav</ShortName>
+					<Path>SFX/Z3_Dusty_Snare_3EBA1927.wem</Path>
+				</File>
+				<File Id="1066407594" Language="SFX">
+					<ShortName>Jump_Hu_5.wav</ShortName>
+					<Path>SFX/Jump_Hu_5_6296B0F9.wem</Path>
+				</File>
+				<File Id="1067738165" Language="SFX">
+					<ShortName>Z2_Dist_Klaver.wav</ShortName>
+					<Path>SFX/Z2_Dist_Klaver_3EBA1927.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

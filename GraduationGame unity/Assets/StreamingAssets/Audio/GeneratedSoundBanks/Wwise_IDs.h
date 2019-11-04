@@ -14,9 +14,9 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_ELECTRICITY = 1560622413U;
-        static const AkUniqueID PLAY_FOOTSTEP_LOOP_PH = 39250664U;
-        static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
-        static const AkUniqueID PLAY_JUMPS_PH = 1761266224U;
+        static const AkUniqueID PLAY_FOOTSTEPS_NORMAL_LOOP = 610391300U;
+        static const AkUniqueID PLAY_JUMPS_TAKEOFF = 1828118792U;
+        static const AkUniqueID PLAY_LAND_HARD = 404466471U;
         static const AkUniqueID PLAY_LAZER = 1933691314U;
         static const AkUniqueID PLAY_PYLON_PARKOUR = 1832262049U;
         static const AkUniqueID PLAY_ROBOT_APPEARENCE = 3030735331U;
@@ -42,7 +42,6 @@ namespace AK
         static const AkUniqueID SET_Z4_MUSIC_2 = 1653563811U;
         static const AkUniqueID SET_Z4_MUSIC_3 = 1653563810U;
         static const AkUniqueID SET_Z4_MUSIC_4 = 1653563813U;
-        static const AkUniqueID STOP_FOOTSTEP_LOOP_PH = 1201902998U;
     } // namespace EVENTS
 
     namespace STATES
