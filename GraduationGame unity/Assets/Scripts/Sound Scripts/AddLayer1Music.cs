@@ -23,8 +23,7 @@ private bool IsInCollider = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag != "Player" || IsInCollider) { return; }
-        IsInCollider = true;
+        
         AkSoundEngine.SetRTPCValue("Music_Layer_Z1", 2);
         AkSoundEngine.PostEvent("Music_Layer_Z2", 2);
         AkSoundEngine.PostEvent("Music_Layer_Z3", 2);
