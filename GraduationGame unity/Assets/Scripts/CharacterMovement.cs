@@ -58,8 +58,8 @@ public class CharacterMovement : MonoBehaviour
         rampDownCurve = settings.rampDownCurve;
         gravity = settings.baseGravity;
         jumpHeight = settings.jumpHeight;
-        groundedDistance = settings.groundedDistance;
-        groundedTransform = settings.groundedTransform;
+        ////groundedDistance = settings.groundedDistance;
+        ////groundedTransform = settings.groundedTransform;
     }
     // Start is called before the first frame update
     void Start()

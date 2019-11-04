@@ -71,6 +71,7 @@ namespace KinematicTest.player
             characterInputs.runDown = Input.GetKeyDown(KeyCode.C);
             characterInputs.idleDown = Input.GetKeyDown(KeyCode.X);
             characterInputs.jumpDown = Input.GetKeyDown(KeyCode.Space);
+            characterInputs.ledgeGrabHold = Input.GetKey(KeyCode.LeftShift);
             // Apply inputs to character
             Character.SetInputs(ref characterInputs);
         }
