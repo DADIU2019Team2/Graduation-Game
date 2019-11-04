@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 128d5a01cfc2fa942b5cad73eb25b606, type: 3}
-  m_Name: PlayerControllerSettings
+  m_Name: PlayerControllerSettingsMORT_MODE
   m_EditorClassIdentifier: 
   rampUpTime: 2
   rampDownTime: 0.5
-  maxSpeed: 25
+  maxSpeed: 500
   baseGravity: 10
   hangTimeVelocityCutoff: 0.5
   riseGravity: 4
@@ -78,22 +78,5 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   jumpHeight: 58.57
-  MaxStableMoveSpeed: 10
-  StableMovementSharpness: 15
-  OrientationSharpness: 10
-  _jumpedThisFrame: 0
-  hangTimeVelocityThreshold: 5
-  _jumpRequested: 1
-  JumpSpeed: 40
-  desiredJumpHeight: 3
-  JumpPreGroundingGraceTime: 0.2
-  JumpPostGroundingGraceTime: 0.2
-  RotationObstruction: 0
-  Gravity: {x: 0, y: -30, z: 0}
-  floatGravity: 10
-  upGravity: 10
-  downGravity: 10
-  MeshRoot: {fileID: 0}
-  AllowDoubleJump: 0
-  AllowJumpingWhenSliding: 0
-  useOldHangTime: 0
+  groundedTransform: {fileID: 0}
+  groundedDistance: 0
