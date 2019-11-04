@@ -120,13 +120,23 @@ MonoBehaviour:
   RotationObstruction: 0
   Gravity: {x: 0, y: -10, z: 0}
   baseGravity: {x: 0, y: -10, z: 0}
-  floatGravity: 0
-  upGravity: 3
-  downGravity: 0
+  hangGravity: 0
+  riseGravity: 3
+  fallGravity: 0
+  dropGravity: 0
   MeshRoot: {fileID: 0}
   AllowDoubleJump: 0
   AllowJumpingWhenSliding: 0
   useOldHangTime: 1
+  jumpInitiated: 0
+  jumpSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  landSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1001 &3325513009486544416
 PrefabInstance:
   m_ObjectHideFlags: 0

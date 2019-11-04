@@ -21,6 +21,9 @@ MonoBehaviour:
   hangGravity: 1
   fallGravity: 10
   dropGravity: 3
+  MaxStableMoveSpeed: 10
+  StableMovementSharpness: 15
+  OrientationSharpness: 10
   rampUpCurve:
     serializedVersion: 2
     m_Curve:
@@ -78,15 +81,11 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  jumpHeight: 58.57
-  MaxStableMoveSpeed: 10
-  StableMovementSharpness: 15
-  OrientationSharpness: 10
-  hangTimeVelocityThreshold: 5
+  hangTimeVelocityThreshold: 2
   JumpSpeed: 40
-  desiredJumpHeight: 3
   JumpPreGroundingGraceTime: 0.2
   JumpPostGroundingGraceTime: 0.2
+  jumpHeight: 3
   AllowDoubleJump: 0
   AllowJumpingWhenSliding: 0
   useOldHangTime: 0
