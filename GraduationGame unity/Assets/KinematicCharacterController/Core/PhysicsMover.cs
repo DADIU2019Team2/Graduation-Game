@@ -25,6 +25,9 @@ namespace KinematicCharacterController
     [RequireComponent(typeof(Rigidbody))]
     public class PhysicsMover : MonoBehaviour
     {
+        Vector3 destination;
+        bool reachedDestination;
+
         /// <summary>
         /// The mover's Rigidbody
         /// </summary>
@@ -227,5 +230,16 @@ namespace KinematicCharacterController
                 Rigidbody.angularVelocity = (Mathf.Deg2Rad * rotationFromCurrentToGoal.eulerAngles) / deltaTime;
             }
         }
+
+        /*/// <summary>
+        /// Sets the target destination of the PhysicsMover (does not work yet)
+        /// </summary>
+        public void setDestination(Vector3 destination)
+        {
+            this.destination = destination;
+            reachedDestination = false;
+        }*/
+
+        
     }
 }
