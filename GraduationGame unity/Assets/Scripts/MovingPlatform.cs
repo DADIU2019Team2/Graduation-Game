@@ -12,7 +12,7 @@ namespace KinematicCharacterController.Examples
         private Vector3 _destination;
         
         public enum PlatformType { oneTimeMove, PingPong, oneTimePlayer, oneTimePlayerWithReturn, 
-            EndAndBackPlayer, FallingPlatformPlayer};
+            EndAndBackPlayer};
         public PlatformType platformType;
 
         public float delay;
@@ -95,14 +95,6 @@ namespace KinematicCharacterController.Examples
                 if (activated)
                 {
                     updateOneTimeMove(out goalPosition, out goalRotation, deltatime);
-                }
-            }
-            if(platformType == PlatformType.FallingPlatformPlayer)
-            {
-                if (activated)
-                {
-                    updateDestination();
-                    //dome some seperate logic on this...
                 }
             }
 
@@ -250,9 +242,6 @@ namespace KinematicCharacterController.Examples
                             }
                         }
                     }
-                    break;
-                case PlatformType.FallingPlatformPlayer:
-                    Debug.LogWarning("Falling platforms is not implemented yet...");
                     break;
                 default:
                     if (activated)
