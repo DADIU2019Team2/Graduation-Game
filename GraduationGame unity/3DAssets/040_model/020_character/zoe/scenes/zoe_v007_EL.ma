@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
-//Name: zoe.ma
-//Last modified: Mon, Nov 04, 2019 10:20:39 AM
+//Name: zoe_v007_EL.ma
+//Last modified: Mon, Nov 04, 2019 10:20:38 AM
 //Codeset: 1252
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -27225,4 +27225,4 @@ connectAttr "outfit.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "groupId49.msg" ":defaultLastHiddenSet.gn" -na;
 connectAttr "Boots_geoShape.iog.og[0]" ":defaultLastHiddenSet.dsm" -na;
-// End of zoe.ma
+// End of zoe_v007_EL.ma
