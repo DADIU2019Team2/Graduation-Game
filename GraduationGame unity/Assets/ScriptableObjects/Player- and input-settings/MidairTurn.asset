@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128d5a01cfc2fa942b5cad73eb25b606, type: 3}
+  m_Name: MidairTurn
+  m_EditorClassIdentifier: 
+  baseGravity: 10
+  riseGravityMultiplier: 3
+  hangGravityMultiplier: 3
+  fallGravityMultiplier: 3
+  dropGravityMultiplier: 3
+  maxMoveSpeed: 12
+  StableMovementSharpness: 30
+  OrientationSharpness: 10
+  rampUpTime: 2
+  rampDownTime: 0.02
+  rampUpCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.4117181
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.7034996
+      value: 0.51753855
+      inSlope: 0.48580167
+      outSlope: 0.48580167
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.046875
+      value: 0.67352676
+      inSlope: -0.051808048
+      outSlope: -0.051808048
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.4187997
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  rampDownCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0079956055
+      value: 0.59274673
+      inSlope: 0.018496001
+      outSlope: 0.018496001
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.11382114
+    - serializedVersion: 3
+      time: 0.4125061
+      value: 0.0047302246
+      inSlope: -1.5116911
+      outSlope: -1.5116911
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.050135493
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  jumpHeight: 3
+  maxAirMoveSpeed: 0
+  hangTimeVelocityThreshold: 2
+  JumpPreGroundingGraceTime: 0.2
+  JumpPostGroundingGraceTime: 0.2
+  idleJumpHeight: 1.5
+  idleAirMoveSpeed: 5
+  slideMoveSpeed: 7
+  slideJumpHeight: 1.5
+  slideDuration: 2
+  decelerateWhileSliding: 0
+  slideCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  canChangeDirectionsMidair: 1
+  AllowDoubleJump: 0
+  AllowJumpingWhenSliding: 1

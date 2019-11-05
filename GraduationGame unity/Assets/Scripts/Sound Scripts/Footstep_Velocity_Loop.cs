@@ -11,7 +11,7 @@ public class Footstep_Velocity_Loop : MonoBehaviour
     void Start()
     {
         // Plays the footstep loop soundfile on start - only heard when velocity is above 0
-        AkSoundEngine.PostEvent("Play_Footsteps_Normal_Loop", gameObject);
+        AkSoundEngine.PostEvent("Play_New_Norm_Ftstp_Loop", gameObject);
         playerMovement = FindObjectOfType<KinematicCharacterMotor>();
     }
 
