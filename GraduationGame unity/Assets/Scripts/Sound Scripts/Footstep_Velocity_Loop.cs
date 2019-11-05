@@ -7,6 +7,7 @@ public class Footstep_Velocity_Loop : MonoBehaviour
 {
     KinematicCharacterMotor playerMovement;
     // Start is called before the first frame update
+
     void Start()
     {
         // Plays the footstep loop soundfile on start - only heard when velocity is above 0

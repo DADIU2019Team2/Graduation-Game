@@ -15,7 +15,9 @@ namespace KinematicCharacterController.Examples
             EndAndBackPlayer};
         public PlatformType platformType;
 
-        public float delay;
+        public float startDelay;
+        public float waypointWaitTime;
+        private bool isInWaypointWaitTime = false;
 
 
         public float TranslationSpeed = 1;
@@ -46,6 +48,7 @@ namespace KinematicCharacterController.Examples
             hasReachedEnd = false;
             movingForward = true;
             activated = false;
+            isInWaypointWaitTime = false;
         }
         private void Start()
         {
@@ -114,31 +117,19 @@ namespace KinematicCharacterController.Examples
         {
             goalPosition = Mover.Rigidbody.position;
             goalRotation = Mover.Rigidbody.rotation;
-            if (Mover.Rigidbody.position != _destination)
+
+            Vector3 destinationDirection = _destination - Mover.Rigidbody.position;
+            float destinationDistance = destinationDirection.magnitude;
+            if (destinationDistance >= minDist2DestReached)
             {
-                Vector3 destinationDirection = _destination - Mover.Rigidbody.position;
-
-                float destinationDistance = destinationDirection.magnitude;
-
-                if (destinationDistance >= minDist2DestReached)
-                {
-                    //reachedDestination = false;
-
-                    //do some rotation if necessarry
-                    goalRotation = Mover.Rigidbody.rotation;
-
-                    goalPosition = destinationDirection.normalized * TranslationSpeed * Time.deltaTime + Mover.Rigidbody.position;
-                }
-                else
-                {
-                    //reachedDestination = true;
-                    goalPosition = Mover.Rigidbody.position;
-                    goalRotation = Mover.Rigidbody.rotation;
-                    updateDestination();
-                }
+                //do some rotation if necessarry
+                goalRotation = Mover.Rigidbody.rotation;
+                goalPosition = destinationDirection.normalized * TranslationSpeed * Time.deltaTime + Mover.Rigidbody.position;  
             }
             else
             {
+                goalPosition = Mover.Rigidbody.position;
+                goalRotation = Mover.Rigidbody.rotation;
                 updateDestination();
             }
         }
@@ -151,7 +142,10 @@ namespace KinematicCharacterController.Examples
                     if (currentWaypoint.nextWaypoint != null)
                     {
                         currentWaypoint = currentWaypoint.nextWaypoint;
-                        setDestination(currentWaypoint.getPosition());
+                        
+                        if(!isInWaypointWaitTime) //update destination
+                            StartCoroutine(waitAtWaypoint(waypointWaitTime));
+
                     }
                     else
                     {
@@ -165,7 +159,8 @@ namespace KinematicCharacterController.Examples
                         if(currentWaypoint.previousWaypoint != null)
                         {
                             currentWaypoint = currentWaypoint.previousWaypoint;
-                            setDestination(currentWaypoint.getPosition());
+                            if (!isInWaypointWaitTime) //update destination
+                                StartCoroutine(waitAtWaypoint(waypointWaitTime));
                         }
                         else
                         {
@@ -177,7 +172,8 @@ namespace KinematicCharacterController.Examples
                         if (currentWaypoint.nextWaypoint != null)
                         {
                             currentWaypoint = currentWaypoint.nextWaypoint;
-                            setDestination(currentWaypoint.getPosition());
+                            if (!isInWaypointWaitTime) //update destination
+                                StartCoroutine(waitAtWaypoint(waypointWaitTime));
                         }
                         else
                         {
@@ -191,7 +187,8 @@ namespace KinematicCharacterController.Examples
                         if (currentWaypoint.previousWaypoint != null)
                         {
                             currentWaypoint = currentWaypoint.previousWaypoint;
-                            setDestination(currentWaypoint.getPosition());
+                            if (!isInWaypointWaitTime) //update destination
+                                StartCoroutine(waitAtWaypoint(waypointWaitTime));
                         }
                         else
                         {
@@ -204,7 +201,8 @@ namespace KinematicCharacterController.Examples
                         if (currentWaypoint.nextWaypoint != null)
                         {
                             currentWaypoint = currentWaypoint.nextWaypoint;
-                            setDestination(currentWaypoint.getPosition());
+                            if (!isInWaypointWaitTime) //update destination
+                                StartCoroutine(waitAtWaypoint(waypointWaitTime));
                         }
                         else
                         {
@@ -221,7 +219,8 @@ namespace KinematicCharacterController.Examples
                             if(currentWaypoint.nextWaypoint != null)
                             {
                                 currentWaypoint = currentWaypoint.nextWaypoint;
-                                setDestination(currentWaypoint.getPosition());
+                                if (!isInWaypointWaitTime) //update destination
+                                    StartCoroutine(waitAtWaypoint(waypointWaitTime));
                             }
                             else
                             {
@@ -233,7 +232,8 @@ namespace KinematicCharacterController.Examples
                             if(currentWaypoint.previousWaypoint != null)
                             {
                                 currentWaypoint = currentWaypoint.previousWaypoint;
-                                setDestination(currentWaypoint.getPosition());
+                                if (!isInWaypointWaitTime) //update destination
+                                    StartCoroutine(waitAtWaypoint(waypointWaitTime));
                             }
                             else
                             {
@@ -249,7 +249,8 @@ namespace KinematicCharacterController.Examples
                         if (currentWaypoint.nextWaypoint != null)
                         {
                             currentWaypoint = currentWaypoint.nextWaypoint;
-                            setDestination(currentWaypoint.getPosition());
+                            if (!isInWaypointWaitTime) //update destination
+                                StartCoroutine(waitAtWaypoint(waypointWaitTime));
                         }
                         else
                         {
@@ -269,12 +270,32 @@ namespace KinematicCharacterController.Examples
         }
         public void activatePlatform()
         {
+            if (activated)
+                return; //don't start the delayed activate if the platform is already activated
             //call this function in character controller in OnMovementHit() if it is indeed a moving platform
-            Invoke("delayedActivatePlatform", delay);
+            Invoke("delayedActivatePlatform", startDelay);
         }
         private void delayedActivatePlatform()
         {
             activated = true;
+        }
+
+        IEnumerator waitAtWaypoint(float waitTime)
+        {
+            //Debug.Log("I am in Wait At Waypoint!!!");
+            //Debug.Log("Time since start = " + Time.realtimeSinceStartup);
+
+            isInWaypointWaitTime = true;
+            yield return new WaitForSeconds(waitTime);
+            setDestination(currentWaypoint.getPosition());
+            //Debug.Log("Time since start = " + Time.realtimeSinceStartup);
+            StartCoroutine(isInWAypointWaitTime());
+        }
+
+        IEnumerator isInWAypointWaitTime()
+        {
+            yield return new WaitForSeconds(0f);
+            isInWaypointWaitTime = false;
         }
     }
 }
