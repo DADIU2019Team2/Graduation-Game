@@ -86,6 +86,7 @@ namespace KinematicTest.player
                     characterInputs.changeDirection = true;
                         break;
                     case InputManager.SwipeType.swipeDown:
+                    characterInputs.slideDown = true;
                         break;
                 }
             Character.SetInputs(ref characterInputs);
