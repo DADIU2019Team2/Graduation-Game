@@ -56,6 +56,18 @@ public class PlayerControllerSettings : ScriptableObject
     public float idleJumpHeight;
     [Tooltip("Jump move speed when initiated from idle")]
     public float idleAirMoveSpeed;
+
+    [Header("Slide Settings")]
+    [Tooltip("The initial slide speed")]
+    public float slideMoveSpeed;
+    [Tooltip("Jump height while sliding in Zoés")]
+    public float slideJumpHeight;
+    [Tooltip("Slide duration in seconds")]
+    public float slideDuration;
+    [Tooltip("Toggle to allow velocity changes while sliding")]
+    public bool decelerateWhileSliding;
+    [Tooltip("When allowed, this curve will determine the speed change while sliding")]
+    public AnimationCurve slideCurve;
     
     [Header("Misc")]
     [Tooltip("Toggle to allow midair direction changes")]
