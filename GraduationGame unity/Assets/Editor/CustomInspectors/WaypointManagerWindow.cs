@@ -131,7 +131,7 @@ public class WaypointManagerWindow : EditorWindow
         }
 
         selectedWaypoint.nextWaypoint = newWaypoint;
-        newWaypoint.transform.SetSiblingIndex(selectedWaypoint.transform.GetSiblingIndex());
+        newWaypoint.transform.SetSiblingIndex(selectedWaypoint.transform.GetSiblingIndex()+1);
 
         Selection.activeGameObject = newWaypoint.gameObject;
     }
