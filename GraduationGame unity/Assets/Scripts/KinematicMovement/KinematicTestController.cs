@@ -154,13 +154,14 @@ namespace KinematicTest.controller
                     
                     MaxAirMoveSpeed = settings.maxAirMoveSpeed;
                     MaxStableMoveSpeed = settings.maxMoveSpeed;
+                    JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.jumpHeight * settings.baseGravity);
                     break;
                 }
                 case PlayerStates.Idling:
                 {
                     stopped = true;
                     MaxAirMoveSpeed = settings.idleAirMoveSpeed;
-                    MaxStableMoveSpeed = 0f;
+                    MaxStableMoveSpeed = 0;
                     curveStep = 0f;
                     JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.idleJumpHeight * settings.baseGravity);
                     break;
@@ -189,7 +190,6 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.Idling:
                 {
-                    stopped = false;
                     break;
                 }
                 case PlayerStates.Sliding:
@@ -409,7 +409,7 @@ namespace KinematicTest.controller
 
                 //Calculate variable gravity
                 Gravity = dropGravity * baseGravity;
-                if(jumpInitiated)
+                if (jumpInitiated)
                 {
                     if (currentVelocity.y < 0f)
                         Gravity = hangGravity * baseGravity;
@@ -546,7 +546,7 @@ namespace KinematicTest.controller
                     //runningRight = runningRight * -1;
                     //scarf.transform.Rotate(Vector3.up, 180);
                 }
-
+                Debug.Log("Tranisitioning");
                 TransitionToState(PlayerStates.Idling);
             }
             else if (hitCollider.CompareTag("MovingPlatform"))
@@ -574,14 +574,18 @@ namespace KinematicTest.controller
             canChangedirection = true;
             jumpInitiated = false;
             Debug.Log("Landed");
+            
             if (CurrentCharacterState == PlayerStates.Idling)
             {
+                stopped = false;
                 TransitionToState(PlayerStates.Running);
             }
+            
         }
 
         protected void OnLeaveStableGround()
         {
+           
             if (canChangeMidAir)
             {
                 canChangedirection = true;
@@ -590,7 +594,7 @@ namespace KinematicTest.controller
             {
                 canChangedirection = false;
             }
-           
+
             Debug.Log("Left ground");
         }
 
