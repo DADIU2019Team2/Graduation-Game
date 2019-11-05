@@ -104,29 +104,7 @@ MonoBehaviour:
   scarf: {fileID: 5830088560812401708}
   settings: {fileID: 11400000, guid: 17089354316c02e44a07c13a8481a302, type: 2}
   CurrentCharacterState: 0
-  MaxStableMoveSpeed: 10
-  StableMovementSharpness: 100000
-  OrientationSharpness: 10
-  _jumpedThisFrame: 0
-  hangTimeVelocityThreshold: 0
-  _jumpRequested: 0
-  JumpSpeed: 10
-  desiredJumpHeight: 0
-  JumpPreGroundingGraceTime: 0
-  JumpPostGroundingGraceTime: 0
-  MaxAirMoveSpeed: 10
-  AirAccelerationSpeed: 5
-  Drag: 0.1
-  RotationObstruction: 0
   Gravity: {x: 0, y: -10, z: 0}
-  baseGravity: {x: 0, y: -10, z: 0}
-  hangGravity: 0
-  riseGravity: 3
-  fallGravity: 0
-  dropGravity: 0
-  AllowDoubleJump: 0
-  AllowJumpingWhenSliding: 0
-  jumpInitiated: 0
   jumpSound:
     idInternal: 0
     valueGuidInternal: 
@@ -428,11 +406,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6183691656151045117}
     m_Modifications:
-    - target: {fileID: 124115622615170960, guid: f328cefe458e2dc4e885e3fbb2b06c73,
-        type: 3}
-      propertyPath: m_Name
-      value: Zoe Programming nested prefab
-      objectReference: {fileID: 0}
     - target: {fileID: 8095815650604976855, guid: f328cefe458e2dc4e885e3fbb2b06c73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -487,6 +460,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 124115622615170960, guid: f328cefe458e2dc4e885e3fbb2b06c73,
+        type: 3}
+      propertyPath: m_Name
+      value: Zoe Programming nested prefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f328cefe458e2dc4e885e3fbb2b06c73, type: 3}

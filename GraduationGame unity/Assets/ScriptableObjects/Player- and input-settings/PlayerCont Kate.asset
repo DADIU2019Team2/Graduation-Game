@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128d5a01cfc2fa942b5cad73eb25b606, type: 3}
+  m_Name: PlayerCont Kate
+  m_EditorClassIdentifier: 
+  baseGravity: 7
+  riseGravityMultiplier: 3
+  hangGravityMultiplier: 3
+  fallGravityMultiplier: 3
+  dropGravityMultiplier: 3
+  maxMoveSpeed: 8
+  StableMovementSharpness: 7
+  OrientationSharpness: 10
+  rampUpTime: 2
+  rampDownTime: 0.5
+  rampUpCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0050735474
+      value: 0.45013973
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.47855455
+      value: 0.5284486
+      inSlope: 0.48580167
+      outSlope: 0.48580167
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0773315
+      value: 0.6241951
+      inSlope: -0.051808048
+      outSlope: -0.051808048
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.4187997
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  rampDownCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0079956055
+      value: 0.59274673
+      inSlope: 0.018496001
+      outSlope: 0.018496001
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.11382114
+    - serializedVersion: 3
+      time: 0.4125061
+      value: 0.0047302246
+      inSlope: -1.5116911
+      outSlope: -1.5116911
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.050135493
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  jumpHeight: 2
+  maxAirMoveSpeed: 5
+  hangTimeVelocityThreshold: 2
+  JumpPreGroundingGraceTime: 0.2
+  JumpPostGroundingGraceTime: 0.2
+  idleJumpHeight: 2
+  idleAirMoveSpeed: 5
+  canChangeDirectionsMidair: 1
+  AllowDoubleJump: 0
+  AllowJumpingWhenSliding: 1
