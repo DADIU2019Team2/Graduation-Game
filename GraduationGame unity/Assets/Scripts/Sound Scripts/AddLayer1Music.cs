@@ -25,9 +25,9 @@ private bool IsInCollider = false;
     {
         
         AkSoundEngine.SetRTPCValue("Music_Layer_Z1", 2);
-        AkSoundEngine.PostEvent("Music_Layer_Z2", 2);
-        AkSoundEngine.PostEvent("Music_Layer_Z3", 2);
-        AkSoundEngine.PostEvent("Music_Layer_Z4", 2);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z2", 2);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z3", 2);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z4", 2);
     }
 }
     
