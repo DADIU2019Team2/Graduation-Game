@@ -29,7 +29,7 @@ namespace KinematicTest.controller
         [Space(10)] public bool updateSettingsLive = true;
         [Space(10)] public KinematicCharacterMotor Motor;
         public GameObject scarf;
-
+        
         // Gravity
         private Vector3 baseGravity = new Vector3(0, -10f, 0);
         private float hangGravity;
@@ -82,14 +82,18 @@ namespace KinematicTest.controller
         // Sliding
         private float _timeSinceStartedSliding;
         private bool _isStoppedSliding;
+        private Collider[] _probedColliders = new Collider[8]; 
+        private bool _shouldBeCrouching;
 
+        private bool _isCrouching;
         // Settings
         public PlayerControllerSettings settings;
 
         // Debug stuff
         public PlayerStates CurrentCharacterState;
         public Vector3 Gravity = new Vector3(0, -10f, 0);
-
+        public Transform MeshRoot;
+        
         //This will later be scriptable object
         [Header("Sound settings")] public AK.Wwise.Event jumpSound;
 
@@ -180,6 +184,16 @@ namespace KinematicTest.controller
                     curveStep = 0f;
                     JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.slideJumpHeight * settings.baseGravity *
                                            Motor.Capsule.height);
+                    
+                    _shouldBeCrouching = true;
+
+                    if (!_isCrouching)
+                    {
+                        _isCrouching = true;
+                        Motor.SetCapsuleDimensions(0.5f, 1f, 0.5f);
+                        MeshRoot.localScale = new Vector3(1.2f, 0.5f, 1.2f);
+                    }
+                    
                     break;
                 }
                 case PlayerStates.LedgeGrabbing:
@@ -206,6 +220,10 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.Sliding:
                 {
+                    Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
+                    MeshRoot.localScale = new Vector3(1f, 1f, 1f);
+                    _isCrouching = false;
+                    _isStoppedSliding = true;
                     _timeSinceStartedSliding = 0f;
                     canChangedirection = true;
                     break;
@@ -218,7 +236,7 @@ namespace KinematicTest.controller
         /// </summary>
         public void SetInputs(ref PlayerCharacterInputs inputs)
         {
-            if (inputs.slideDown)
+            if (inputs.slideDown && CurrentCharacterState == PlayerStates.Running && Motor.GroundingStatus.FoundAnyGround)
             {
                 TransitionToState(PlayerStates.Sliding);
             }
@@ -564,9 +582,30 @@ namespace KinematicTest.controller
                     {
                         if (!_isStoppedSliding && _timeSinceStartedSliding > settings.slideDuration)
                         {
-                            TransitionToState(PlayerStates.Running);
-                            _isStoppedSliding = true;
+                            _shouldBeCrouching = false;
                         }
+                        if (_isCrouching && !_shouldBeCrouching)
+                        {
+                            // Do an overlap test with the character's standing height to see if there are any obstructions
+                            Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
+                            if (Motor.CharacterOverlap(
+                                    Motor.TransientPosition,
+                                    Motor.TransientRotation,
+                                    _probedColliders,
+                                    Motor.CollidableLayers,
+                                    QueryTriggerInteraction.Ignore) > 0)
+                            {
+                                // If obstructions, just stick to crouching dimensions
+                                Motor.SetCapsuleDimensions(0.5f, 1f, 0.5f);
+                            }
+                            else
+                            {
+                                // If no obstructions, uncrouch
+                                TransitionToState(PlayerStates.Running);
+                                _isStoppedSliding = true;
+                            }
+                        }
+                        
 
                         break;
                     }
