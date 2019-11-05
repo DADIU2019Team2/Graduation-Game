@@ -20,8 +20,6 @@ namespace KinematicTest.controller
         //public string inputString;
         public bool jumpDown;
         public bool slideDown;
-        public bool idleDown;
-        public bool runDown;
         public bool ledgeGrabHold;
         public bool changeDirection;
     }
@@ -31,60 +29,71 @@ namespace KinematicTest.controller
         [Space(10)] public bool updateSettingsLive = true;
         [Space(10)] public KinematicCharacterMotor Motor;
         public GameObject scarf;
-        private bool canChangedirection = true;
-        private bool isRunningRight = true;
-        private bool rampingDown;
+        
+        // Gravity
+        private Vector3 baseGravity = new Vector3(0, -10f, 0);
+        private float hangGravity;
+        private float riseGravity = 3f;
+        private float fallGravity;
+        private float dropGravity;
+
+        // Movement tweaks
         private float curveStep;
         private float rampUpTime = 2f;
         private float rampDownTime = 0.5f;
         private bool stopped;
-        public PlayerControllerSettings settings;
+        private bool rampingDown;
+        private bool isRunningRight = true;
+        private bool canChangedirection = true;
+        public static int runningRight = 1;
         private AnimationCurve rampUpCurve; //speed curve
         private AnimationCurve rampDownCurve;
 
+        // Running
+        private float MaxStableMoveSpeed;
+        private float StableMovementSharpness;
+        private float OrientationSharpness = 10;
+        private Vector3 lastVelocityBeforeJump;
 
-        public PlayerStates CurrentCharacterState;
-        public static int runningRight = 1;
-        [HideInInspector] public float MaxStableMoveSpeed = 10f;
-        [HideInInspector] public float StableMovementSharpness = 15;
-        [HideInInspector] public float OrientationSharpness = 10;
-
-        [HideInInspector] public bool _jumpedThisFrame;
-        [HideInInspector] public float hangTimeVelocityThreshold;
-        [HideInInspector] public bool _jumpRequested;
-
-        private bool _jumpConsumed;
-        private float _timeSinceJumpRequested;
-        public float JumpSpeed;
-        [HideInInspector] public float desiredJumpHeight;
-        [HideInInspector] public float JumpPreGroundingGraceTime = 0f;
-        [HideInInspector] public float JumpPostGroundingGraceTime = 0f;
-
-        [HideInInspector] public float MaxAirMoveSpeed = 10f;
-        [HideInInspector] public float AirAccelerationSpeed = 5f;
-        [HideInInspector] public float Drag = 0.1f;
-
-        [HideInInspector] public bool RotationObstruction;
-
-        //[HideInInspector]
-        public Vector3 Gravity = new Vector3(0, -10f, 0);
-        [HideInInspector] public Vector3 baseGravity = new Vector3(0, -10f, 0);
-        [HideInInspector] public float hangGravity;
-        [HideInInspector] public float riseGravity = 3f;
-        [HideInInspector] public float fallGravity;
-
-        [HideInInspector] public float dropGravity;
-        [HideInInspector] public bool AllowDoubleJump;
-        [HideInInspector] public bool AllowJumpingWhenSliding;
+        // Jumping
+        private bool AllowDoubleJump;
+        private bool AllowJumpingWhenSliding;
         private bool _doubleJumpConsumed;
         private Vector3 _moveInputVector;
         private Vector3 _lookInputVector;
         private string _inputString;
-
         private float _timeSinceLastAbleToJump = 0f;
+        private bool jumpInitiated;
+        private bool _jumpedThisFrame;
+        private float hangTimeVelocityThreshold;
+        private bool _jumpRequested;
+        private bool _jumpConsumed;
+        private float _timeSinceJumpRequested;
+        private float JumpSpeed;
+        private float desiredJumpHeight;
+        private float JumpPreGroundingGraceTime = 0f;
+        private float JumpPostGroundingGraceTime = 0f;
 
-        public bool jumpInitiated;
+        // Air movement
+        private float MaxAirMoveSpeed;
+        private float AirAccelerationSpeed;
+        private float Drag = 0.1f;
 
+        // Sliding
+        private float _timeSinceStartedSliding;
+        private bool _isStoppedSliding;
+        private Collider[] _probedColliders = new Collider[8]; 
+        private bool _shouldBeCrouching;
+
+        private bool _isCrouching;
+        // Settings
+        public PlayerControllerSettings settings;
+
+        // Debug stuff
+        public PlayerStates CurrentCharacterState;
+        public Vector3 Gravity = new Vector3(0, -10f, 0);
+        public Transform MeshRoot;
+        
         //This will later be scriptable object
         [Header("Sound settings")] public AK.Wwise.Event jumpSound;
 
@@ -93,33 +102,32 @@ namespace KinematicTest.controller
 
         void Init()
         {
-            canChangeMidAir = settings.canChangeMidAir;
+            canChangeMidAir = settings.canChangeDirectionsMidair;
             rampUpTime = settings.rampUpTime;
             rampDownTime = settings.rampDownTime;
             rampUpCurve = settings.rampUpCurve;
             rampDownCurve = settings.rampDownCurve;
             baseGravity = new Vector3(0f, -settings.baseGravity, 0f);
-            riseGravity = settings.riseGravity;
-            hangGravity = settings.hangGravity;
-            fallGravity = settings.fallGravity;
-            dropGravity = settings.dropGravity;
-            hangTimeVelocityThreshold = settings.hangTimeVelocityCutoff;
+            riseGravity = settings.riseGravityMultiplier;
+            hangGravity = settings.hangGravityMultiplier;
+            fallGravity = settings.fallGravityMultiplier;
+            dropGravity = settings.dropGravityMultiplier;
+            hangTimeVelocityThreshold = settings.hangTimeVelocityThreshold;
 
 
             StableMovementSharpness = settings.StableMovementSharpness;
             OrientationSharpness = settings.OrientationSharpness;
+            MaxStableMoveSpeed = settings.maxMoveSpeed;
+            StableMovementSharpness = settings.StableMovementSharpness;
 
+            desiredJumpHeight = settings.jumpHeight * Motor.Capsule.height;
 
-            hangTimeVelocityThreshold = settings.hangTimeVelocityThreshold;
-            desiredJumpHeight = settings.jumpHeight;
-
-            JumpSpeed = Mathf.Sqrt(2 * riseGravity * desiredJumpHeight * -baseGravity.y);
+            JumpSpeed = Mathf.Sqrt(2 * riseGravity * desiredJumpHeight * settings.baseGravity);
 
             JumpPreGroundingGraceTime = settings.JumpPreGroundingGraceTime;
             JumpPostGroundingGraceTime = settings.JumpPostGroundingGraceTime;
 
-            MaxAirMoveSpeed = 10f;
-            AirAccelerationSpeed = 5f;
+            MaxAirMoveSpeed = settings.maxAirMoveSpeed;
             Drag = 0.1f;
 
             AllowDoubleJump = settings.AllowDoubleJump;
@@ -151,20 +159,41 @@ namespace KinematicTest.controller
             {
                 case PlayerStates.Running:
                 {
-                    MaxAirMoveSpeed = 10f;
-                    MaxStableMoveSpeed = 10f;
+                    MaxAirMoveSpeed = settings.maxAirMoveSpeed;
+                    MaxStableMoveSpeed = settings.maxMoveSpeed;
+                    JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.jumpHeight * settings.baseGravity *
+                                           Motor.Capsule.height);
                     break;
                 }
                 case PlayerStates.Idling:
                 {
                     stopped = true;
-                    MaxAirMoveSpeed = 0f;
+                    MaxAirMoveSpeed = settings.idleAirMoveSpeed;
                     MaxStableMoveSpeed = 0f;
                     curveStep = 0f;
+                    JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.idleJumpHeight * settings.baseGravity *
+                                           Motor.Capsule.height);
                     break;
                 }
                 case PlayerStates.Sliding:
                 {
+                    canChangedirection = false;
+                    _isStoppedSliding = false;
+                    MaxAirMoveSpeed = settings.slideMoveSpeed;
+                    MaxStableMoveSpeed = settings.slideMoveSpeed;
+                    curveStep = 0f;
+                    JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.slideJumpHeight * settings.baseGravity *
+                                           Motor.Capsule.height);
+                    
+                    _shouldBeCrouching = true;
+
+                    if (!_isCrouching)
+                    {
+                        _isCrouching = true;
+                        Motor.SetCapsuleDimensions(0.5f, 1f, 0.5f);
+                        MeshRoot.localScale = new Vector3(1.2f, 0.5f, 1.2f);
+                    }
+                    
                     break;
                 }
                 case PlayerStates.LedgeGrabbing:
@@ -191,6 +220,12 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.Sliding:
                 {
+                    Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
+                    MeshRoot.localScale = new Vector3(1f, 1f, 1f);
+                    _isCrouching = false;
+                    _isStoppedSliding = true;
+                    _timeSinceStartedSliding = 0f;
+                    canChangedirection = true;
                     break;
                 }
             }
@@ -201,8 +236,11 @@ namespace KinematicTest.controller
         /// </summary>
         public void SetInputs(ref PlayerCharacterInputs inputs)
         {
-            if (inputs.idleDown)
-                TransitionToState(PlayerStates.Idling);
+            if (inputs.slideDown && CurrentCharacterState == PlayerStates.Running && Motor.GroundingStatus.FoundAnyGround)
+            {
+                TransitionToState(PlayerStates.Sliding);
+            }
+
 
             if (canChangedirection && inputs.changeDirection)
             {
@@ -226,6 +264,8 @@ namespace KinematicTest.controller
             //runningRight = isRunningRight ? 1 : -1 ;
             // Clamp input
             //Vector3 moveInputVector = Vector3.ClampMagnitude(new Vector3(inputs.MoveAxisRight, 0f, inputs.MoveAxisForward), 1f);
+
+
             Vector3 moveInputVector = Vector3.right * runningRight;
             // Move and look inputs
             _moveInputVector = moveInputVector;
@@ -243,6 +283,14 @@ namespace KinematicTest.controller
         /// </summary>
         public void BeforeCharacterUpdate(float deltaTime)
         {
+            switch (CurrentCharacterState)
+            {
+                case PlayerStates.Sliding:
+                {
+                    _timeSinceStartedSliding += deltaTime;
+                    break;
+                }
+            }
         }
 
         /// <summary>
@@ -355,47 +403,66 @@ namespace KinematicTest.controller
                             Vector3.ProjectOnPlane(targetMovementVelocity, perpenticularObstructionNormal);
                     }
 
-                    if (canChangeMidAir)
+                    switch (CurrentCharacterState)
                     {
-                        if (rampingDown)
+                        case PlayerStates.Running:
                         {
-                            if (curveStep < 1)
+                            if (canChangeMidAir)
                             {
-                                curveStep += (1 / rampDownTime * Time.deltaTime);
-                            }
+                                if (rampingDown)
+                                {
+                                    if (curveStep < 1)
+                                    {
+                                        curveStep += (1 / rampDownTime * Time.deltaTime);
+                                    }
 
-                            if (curveStep >= 1)
-                            {
-                                curveStep = 0;
-                                rampingDown = false;
-                                runningRight = runningRight * -1;
-                                scarf.transform.Rotate(Vector3.up, 180);
-                            }
-                        }
-                        else
-                        {
-                            if (curveStep < 1)
-                            {
-                                curveStep += (1 / rampUpTime * Time.deltaTime);
-                            }
+                                    if (curveStep >= 1)
+                                    {
+                                        curveStep = 0;
+                                        rampingDown = false;
+                                        runningRight = runningRight * -1;
+                                        scarf.transform.Rotate(Vector3.up, 180);
+                                    }
+                                }
+                                else
+                                {
+                                    if (curveStep < 1)
+                                    {
+                                        curveStep += (1 / rampUpTime * Time.deltaTime);
+                                    }
 
-                            if (curveStep > 1)
-                            {
-                                curveStep = 1;
-                            }
-                        }
+                                    if (curveStep > 1)
+                                    {
+                                        curveStep = 1;
+                                    }
+                                }
 
-                        if (!stopped)
-                        {
-                            Debug.Log("not stopped");
-                            if (rampingDown)
-                            {
-                                AirAccelerationSpeed = MaxStableMoveSpeed * rampDownCurve.Evaluate(curveStep);
+                                if (!stopped)
+                                {
+                                    Debug.Log("not stopped");
+                                    if (rampingDown)
+                                    {
+                                        AirAccelerationSpeed = MaxAirMoveSpeed * rampDownCurve.Evaluate(curveStep);
+                                    }
+                                    else
+                                    {
+                                        AirAccelerationSpeed = MaxAirMoveSpeed * rampUpCurve.Evaluate(curveStep);
+                                    }
+                                }
                             }
                             else
                             {
-                                AirAccelerationSpeed = MaxStableMoveSpeed * rampUpCurve.Evaluate(curveStep);
+                                // this is where the prevvel goes
+                                targetMovementVelocity = lastVelocityBeforeJump;
                             }
+
+                            break;
+                        }
+                        case PlayerStates.Idling:
+                        {
+                            targetMovementVelocity = _moveInputVector * MaxAirMoveSpeed;
+                            AirAccelerationSpeed = MaxAirMoveSpeed;
+                            break;
                         }
                     }
 
@@ -406,7 +473,7 @@ namespace KinematicTest.controller
 
                 //Calculate variable gravity
                 Gravity = dropGravity * baseGravity;
-                if(jumpInitiated)
+                if (jumpInitiated)
                 {
                     if (currentVelocity.y < 0f)
                         Gravity = hangGravity * baseGravity;
@@ -508,6 +575,41 @@ namespace KinematicTest.controller
                     // Keep track of time since we were last able to jump (for grace period)
                     _timeSinceLastAbleToJump += deltaTime;
                 }
+
+                switch (CurrentCharacterState)
+                {
+                    case PlayerStates.Sliding:
+                    {
+                        if (!_isStoppedSliding && _timeSinceStartedSliding > settings.slideDuration)
+                        {
+                            _shouldBeCrouching = false;
+                        }
+                        if (_isCrouching && !_shouldBeCrouching)
+                        {
+                            // Do an overlap test with the character's standing height to see if there are any obstructions
+                            Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
+                            if (Motor.CharacterOverlap(
+                                    Motor.TransientPosition,
+                                    Motor.TransientRotation,
+                                    _probedColliders,
+                                    Motor.CollidableLayers,
+                                    QueryTriggerInteraction.Ignore) > 0)
+                            {
+                                // If obstructions, just stick to crouching dimensions
+                                Motor.SetCapsuleDimensions(0.5f, 1f, 0.5f);
+                            }
+                            else
+                            {
+                                // If no obstructions, uncrouch
+                                TransitionToState(PlayerStates.Running);
+                                _isStoppedSliding = true;
+                            }
+                        }
+                        
+
+                        break;
+                    }
+                }
             }
         }
 
@@ -544,6 +646,7 @@ namespace KinematicTest.controller
                     //scarf.transform.Rotate(Vector3.up, 180);
                 }
 
+                Debug.Log("Tranisitioning");
                 TransitionToState(PlayerStates.Idling);
             }
             else if (hitCollider.CompareTag("MovingPlatform"))
@@ -571,8 +674,10 @@ namespace KinematicTest.controller
             canChangedirection = true;
             jumpInitiated = false;
             Debug.Log("Landed");
+
             if (CurrentCharacterState == PlayerStates.Idling)
             {
+                stopped = false;
                 TransitionToState(PlayerStates.Running);
             }
         }
@@ -585,9 +690,10 @@ namespace KinematicTest.controller
             }
             else
             {
+                lastVelocityBeforeJump = Motor.Velocity;
                 canChangedirection = false;
             }
-           
+
             Debug.Log("Left ground");
         }
 

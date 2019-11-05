@@ -19,9 +19,9 @@ namespace KinematicCharacterController.Examples
         public float waypointWaitTime;
         private bool isInWaypointWaitTime = false;
 
-
+        [Range(0,4.5f)]
         public float TranslationSpeed = 1;
-        private float minDist2DestReached = .3f;
+        private float minDist2DestReached = .05f;
         //public float rotationSpeed = 30f;
 
 
