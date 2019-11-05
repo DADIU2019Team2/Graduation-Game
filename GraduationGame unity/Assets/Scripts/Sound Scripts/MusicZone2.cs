@@ -1,0 +1,22 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MusicZone2 : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        AkSoundEngine.SetState("Zones", "Zone2");
+        
+        AkSoundEngine.PostEvent("Play_Zone2_Music", gameObject);
+        
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z2", 1);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
