@@ -19,10 +19,12 @@ namespace AK
         static const AkUniqueID PLAY_AMBIENCE_Z3 = 1001479276U;
         static const AkUniqueID PLAY_AMBIENCE_Z4 = 1001479275U;
         static const AkUniqueID PLAY_ELECTRICITY = 1560622413U;
-        static const AkUniqueID PLAY_FOOTSTEPS_NORMAL_LOOP = 610391300U;
         static const AkUniqueID PLAY_JUMPS_TAKEOFF = 1828118792U;
         static const AkUniqueID PLAY_LAND_HARD = 404466471U;
+        static const AkUniqueID PLAY_LAND_MED = 639478362U;
         static const AkUniqueID PLAY_LAZER = 1933691314U;
+        static const AkUniqueID PLAY_NEW_METAL_FTSTP_LOOP = 1462703573U;
+        static const AkUniqueID PLAY_NEW_NORM_FTSTP_LOOP = 1215491506U;
         static const AkUniqueID PLAY_PYLON_PARKOUR = 1832262049U;
         static const AkUniqueID PLAY_ROBOT_APPEARENCE = 3030735331U;
         static const AkUniqueID PLAY_SAW = 3225017965U;
