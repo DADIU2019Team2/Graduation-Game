@@ -13,6 +13,11 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_AMBIENCE_Z0 = 1001479279U;
+        static const AkUniqueID PLAY_AMBIENCE_Z1 = 1001479278U;
+        static const AkUniqueID PLAY_AMBIENCE_Z2 = 1001479277U;
+        static const AkUniqueID PLAY_AMBIENCE_Z3 = 1001479276U;
+        static const AkUniqueID PLAY_AMBIENCE_Z4 = 1001479275U;
         static const AkUniqueID PLAY_ELECTRICITY = 1560622413U;
         static const AkUniqueID PLAY_FOOTSTEPS_NORMAL_LOOP = 610391300U;
         static const AkUniqueID PLAY_JUMPS_TAKEOFF = 1828118792U;

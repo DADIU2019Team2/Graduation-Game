@@ -21,6 +21,11 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1001479279" Name="Play_Ambience_Z0" ObjectPath="\Events\Default Work Unit\Ambience\Play_Ambience_Z0" DurationType="Infinite"/>
+				<Event Id="1001479278" Name="Play_Ambience_Z1" ObjectPath="\Events\Default Work Unit\Ambience\Play_Ambience_Z1" DurationType="Infinite"/>
+				<Event Id="1001479277" Name="Play_Ambience_Z2" ObjectPath="\Events\Default Work Unit\Ambience\Play_Ambience_Z2" DurationType="Infinite"/>
+				<Event Id="1001479276" Name="Play_Ambience_Z3" ObjectPath="\Events\Default Work Unit\Ambience\Play_Ambience_Z3" DurationType="Infinite"/>
+				<Event Id="1001479275" Name="Play_Ambience_Z4" ObjectPath="\Events\Default Work Unit\Ambience\Play_Ambience_Z4" DurationType="Infinite"/>
 				<Event Id="1560622413" Name="Play_Electricity" ObjectPath="\Events\Default Work Unit\SFX\Play_Electricity" DurationType="Infinite"/>
 				<Event Id="610391300" Name="Play_Footsteps_Normal_Loop" ObjectPath="\Events\Default Work Unit\Movement\Play_Footsteps_Normal_Loop" DurationType="OneShot" DurationMin="4.816803" DurationMax="4.816803"/>
 				<Event Id="1828118792" Name="Play_Jumps_Takeoff" ObjectPath="\Events\Default Work Unit\Movement\Play_Jumps_Takeoff" DurationType="OneShot" DurationMin="0.507052" DurationMax="1.204218"/>
@@ -29,7 +34,7 @@
 				<Event Id="1832262049" Name="Play_Pylon_Parkour" ObjectPath="\Events\Default Work Unit\SFX\Play_Pylon_Parkour" DurationType="Infinite"/>
 				<Event Id="3030735331" Name="Play_Robot_Appearence" ObjectPath="\Events\Default Work Unit\SFX\Play_Robot_Appearence" DurationType="OneShot" DurationMin="4.863542" DurationMax="4.863542"/>
 				<Event Id="3225017965" Name="Play_Saw" ObjectPath="\Events\Default Work Unit\SFX\Play_Saw" DurationType="Infinite"/>
-				<Event Id="1306435192" Name="Play_Slides" ObjectPath="\Events\Default Work Unit\Movement\Play_Slides" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
+				<Event Id="1306435192" Name="Play_Slides" ObjectPath="\Events\Default Work Unit\Movement\Play_Slides" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="4098982749" Name="Play_Zone1_Music" ObjectPath="\Events\Default Work Unit\Music\Play_Zone1_Music" DurationType="Infinite"/>
 				<Event Id="3584129722" Name="Play_Zone2_Music" ObjectPath="\Events\Default Work Unit\Music\Play_Zone2_Music" DurationType="Infinite"/>
 				<Event Id="556439219" Name="Play_Zone3_Music" ObjectPath="\Events\Default Work Unit\Music\Play_Zone3_Music" DurationType="Infinite"/>
@@ -92,10 +97,6 @@
 					<ShortName>Jump_Takeoff_4.wav</ShortName>
 					<Path>SFX/Jump_Takeoff_4_6296B0F9.wem</Path>
 				</File>
-				<File Id="104469724" Language="SFX">
-					<ShortName>Slide_3.wav</ShortName>
-					<Path>SFX/Slide_3_6296B0F9.wem</Path>
-				</File>
 				<File Id="145167596" Language="SFX">
 					<ShortName>Z2_Hero_Arp.wav</ShortName>
 					<Path>SFX/Z2_Hero_Arp_3EBA1927.wem</Path>
@@ -124,10 +125,6 @@
 					<ShortName>Z2_Sub_Kicks.wav</ShortName>
 					<Path>SFX/Z2_Sub_Kicks_3EBA1927.wem</Path>
 				</File>
-				<File Id="247152723" Language="SFX">
-					<ShortName>Slide_4.wav</ShortName>
-					<Path>SFX/Slide_4_6296B0F9.wem</Path>
-				</File>
 				<File Id="262328241" Language="SFX">
 					<ShortName>Z1_Noisy_Arp.wav</ShortName>
 					<Path>SFX/Z1_Noisy_Arp_3EBA1927.wem</Path>
@@ -135,10 +132,6 @@
 				<File Id="278798423" Language="SFX">
 					<ShortName>Z1_Nasal_Bass.wav</ShortName>
 					<Path>SFX/Z1_Nasal_Bass_3EBA1927.wem</Path>
-				</File>
-				<File Id="283526253" Language="SFX">
-					<ShortName>Slide_1.wav</ShortName>
-					<Path>SFX/Slide_1_6296B0F9.wem</Path>
 				</File>
 				<File Id="288158282" Language="SFX">
 					<ShortName>Saw.wav</ShortName>
@@ -159,6 +152,14 @@
 				<File Id="346023756" Language="SFX">
 					<ShortName>Jump_Takeoff_2.wav</ShortName>
 					<Path>SFX/Jump_Takeoff_2_6296B0F9.wem</Path>
+				</File>
+				<File Id="361501470" Language="SFX">
+					<ShortName>Ambience_Z0.wav</ShortName>
+					<Path>SFX/Ambience_Z0_9B96ECC7.wem</Path>
+				</File>
+				<File Id="376925067" Language="SFX">
+					<ShortName>Ambience_Z1.wav</ShortName>
+					<Path>SFX/Ambience_Z1_9B96ECC7.wem</Path>
 				</File>
 				<File Id="394712826" Language="SFX">
 					<ShortName>Pylon_Parkour.wav</ShortName>
@@ -199,6 +200,10 @@
 				<File Id="503665789" Language="SFX">
 					<ShortName>Z4_Noisy_Arp.wav</ShortName>
 					<Path>SFX/Z4_Noisy_Arp_3EBA1927.wem</Path>
+				</File>
+				<File Id="523264904" Language="SFX">
+					<ShortName>Ambience_Z2.wav</ShortName>
+					<Path>SFX/Ambience_Z2_9B96ECC7.wem</Path>
 				</File>
 				<File Id="547051224" Language="SFX">
 					<ShortName>Footsteps_Normal_Loop.wav</ShortName>
@@ -252,6 +257,10 @@
 					<ShortName>Z2_Metal_Drums.wav</ShortName>
 					<Path>SFX/Z2_Metal_Drums_3EBA1927.wem</Path>
 				</File>
+				<File Id="787556428" Language="SFX">
+					<ShortName>Ambience_Z3.wav</ShortName>
+					<Path>SFX/Ambience_Z3_9B96ECC7.wem</Path>
+				</File>
 				<File Id="814161298" Language="SFX">
 					<ShortName>Z1_Hope_Synth.wav</ShortName>
 					<Path>SFX/Z1_Hope_Synth_3EBA1927.wem</Path>
@@ -267,6 +276,10 @@
 				<File Id="863299211" Language="SFX">
 					<ShortName>Fall_High.wav</ShortName>
 					<Path>SFX/Fall_High_6296B0F9.wem</Path>
+				</File>
+				<File Id="900936792" Language="SFX">
+					<ShortName>Ambience_Z4.wav</ShortName>
+					<Path>SFX/Ambience_Z4_9B96ECC7.wem</Path>
 				</File>
 				<File Id="918686559" Language="SFX">
 					<ShortName>Z2_Drumz.wav</ShortName>
@@ -287,10 +300,6 @@
 				<File Id="979909387" Language="SFX">
 					<ShortName>Z4_Dist_Klaver.wav</ShortName>
 					<Path>SFX/Z4_Dist_Klaver_3EBA1927.wem</Path>
-				</File>
-				<File Id="1003560984" Language="SFX">
-					<ShortName>Slide_2.wav</ShortName>
-					<Path>SFX/Slide_2_6296B0F9.wem</Path>
 				</File>
 				<File Id="1010279705" Language="SFX">
 					<ShortName>Z3_Dist_Bassline.wav</ShortName>
