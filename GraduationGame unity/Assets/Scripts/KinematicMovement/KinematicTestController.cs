@@ -55,6 +55,7 @@ namespace KinematicTest.controller
         private float MaxStableMoveSpeed;
         private float StableMovementSharpness;
         private float OrientationSharpness = 10;
+        private Vector3 lastVelocityBeforeJump;
         
         // Jumping
         private bool AllowDoubleJump;
@@ -279,6 +280,7 @@ namespace KinematicTest.controller
         /// </summary>
         public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)
         {
+            
             Vector3 targetMovementVelocity = Vector3.zero;
             if (Motor.GroundingStatus.IsStableOnGround)
             {
@@ -401,6 +403,10 @@ namespace KinematicTest.controller
                                 AirAccelerationSpeed = MaxAirMoveSpeed * rampUpCurve.Evaluate(curveStep);
                             }
                         }
+                    }
+                    else
+                    {
+                        targetMovementVelocity = lastVelocityBeforeJump;
                     }
 
 
@@ -593,6 +599,7 @@ namespace KinematicTest.controller
             }
             else
             {
+                lastVelocityBeforeJump = Motor.Velocity;
                 canChangedirection = false;
             }
 
