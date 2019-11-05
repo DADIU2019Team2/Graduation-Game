@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using MiniGame2.Events;
 
+namespace GraduationProject.Events
+{
+
 public class OnCollisionWithObjectEvent : MonoBehaviour
 {
     public enum Filter { Tag, Object };
@@ -133,4 +136,5 @@ public class OnCollisionWithObjectEvent : MonoBehaviour
         }
     }
 
+}
 }
