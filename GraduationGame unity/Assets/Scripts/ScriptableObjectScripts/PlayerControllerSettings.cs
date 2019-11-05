@@ -41,7 +41,7 @@ public class PlayerControllerSettings : ScriptableObject
     [Header("Running Jump Settings")]
     [Tooltip("Jump height multiplier in Zoés")]
     public float jumpHeight;
-    [Tooltip("Maximum movespeed while in air")]
+    [Tooltip("Maximum move speed while in air")]
     public float maxAirMoveSpeed;
     [Tooltip("Falling velocity threshold where the \"fall gravity\" kicks in. Increase to have more hang time")]
     public float hangTimeVelocityThreshold;
