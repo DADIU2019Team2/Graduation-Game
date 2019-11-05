@@ -12,17 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 128d5a01cfc2fa942b5cad73eb25b606, type: 3}
   m_Name: PlayerControllerSettings
   m_EditorClassIdentifier: 
-  rampUpTime: 0.05
-  rampDownTime: 0.05
-  maxSpeed: 1
-  baseGravity: 10
   hangTimeVelocityCutoff: 0.5
-  riseGravity: 1
-  hangGravity: 1
-  fallGravity: 2
-  dropGravity: 2
-  MaxStableMoveSpeed: 1
-  StableMovementSharpness: 1
+  baseGravity: 10
+  riseGravityMultiplier: 3
+  hangGravityMultiplier: 1
+  fallGravityMultiplier: 10
+  dropGravityMultiplier: 3
+  rampUpTime: 2
+  rampDownTime: 0.5
+  maxMoveSpeed: 25
+  StableMovementSharpness: 15
   OrientationSharpness: 10
   rampUpCurve:
     serializedVersion: 2
@@ -81,9 +80,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  idleJumpHeight: 5
+  idleAirMoveSpeed: 5
+  maxAirMoveSpeed: 25
   hangTimeVelocityThreshold: 2
   JumpPreGroundingGraceTime: 0.2
   JumpPostGroundingGraceTime: 0.2
-  jumpHeight: 4
+  jumpHeight: 10
+  canChangeMidAir: 1
   AllowDoubleJump: 0
   AllowJumpingWhenSliding: 0
