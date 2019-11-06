@@ -68,7 +68,14 @@ public class PlayerControllerSettings : ScriptableObject
     public bool decelerateWhileSliding;
     [Tooltip("When allowed, this curve will determine the speed change while sliding")]
     public AnimationCurve slideCurve;
+
+    [Header("Ledge Grabbing Settings")]
+    [Tooltip("How long zoe can ledge grab for")]
+    public float hangTime;
+    [Tooltip("How much time needs to pass before zoe can hang from a ledge again")]
+    public float graceTimeBeforeHangAgain;
     
+
     [Header("Misc")]
     [Tooltip("Toggle to allow midair direction changes")]
     public bool canChangeDirectionsMidair;
