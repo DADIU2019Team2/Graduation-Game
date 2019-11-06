@@ -1,301 +1,315 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using KinematicCharacterController;
 
-namespace KinematicCharacterController.Examples
+
+public class MovingPlatform : MonoBehaviour, IMoverController
 {
-    public class MovingPlatform : MonoBehaviour, IMoverController
+    public PhysicsMover Mover;
+
+    public Waypoint currentWaypoint;
+    private Vector3 _destination;
+
+    public LayerMask activationLayers;
+    public enum ActivationType { none, player, trigger};
+    public ActivationType activationType;
+    public Collider trigger;
+
+    public enum PlatformType { oneTimeMove, PingPong, oneTimePlayer, oneTimePlayerWithReturn, 
+        EndAndBackPlayer};
+    public PlatformType platformType;
+
+    public float startDelay;
+    public float waypointWaitTime;
+    private bool canMove = false;
+
+    [Range(0,4.5f)]
+    public float TranslationSpeed = 1;
+    private float minDist2DestReached = .05f;
+    //public float rotationSpeed = 30f;
+
+
+
+    private Vector3 _originalPosition;
+    private Quaternion _originalRotation;
+    private Waypoint _originalWaypoint;
+    private bool resetNow;
+
+    private bool destinationReached;
+    private bool isInWaypointWaitTime = false;
+    //private bool shouldUpdateDestination = false;
+    private bool hasReachedEnd;
+    private bool movingForward;
+    private bool activated;
+
+    //public bool ActivatePlatform = false;
+
+    public void resetPlatform()
     {
-        public PhysicsMover Mover;
-
-        public Waypoint currentWaypoint;
-        private Vector3 _destination;
-        
-        public enum PlatformType { oneTimeMove, PingPong, oneTimePlayer, oneTimePlayerWithReturn, 
-            EndAndBackPlayer};
-        public PlatformType platformType;
-
-        public float startDelay;
-        public float waypointWaitTime;
-        private bool isInWaypointWaitTime = false;
-
-        [Range(0,4.5f)]
-        public float TranslationSpeed = 1;
-        private float minDist2DestReached = .05f;
-        //public float rotationSpeed = 30f;
-
-
-
-        private Vector3 _originalPosition;
-        private Quaternion _originalRotation;
-        private Waypoint _originalWaypoint;
-        private bool resetNow;
-
-        private bool hasReachedEnd;
-        private bool movingForward;
-        private bool activated;
-
-        //public bool ActivatePlatform = false;
-
-        public void resetPlatform()
-        {
-            resetNow = true;
-            //reset of position and rotation is happening in the move function (otherwise it wont work)
+        resetNow = true;
+        //reset of position and rotation is happening in the move function (otherwise it wont work)
             
-            currentWaypoint = _originalWaypoint;
-            setDestination(currentWaypoint.getPosition());
+        currentWaypoint = _originalWaypoint;
+        setDestination(currentWaypoint.getPosition());
+        resetNow = false;
+        hasReachedEnd = false;
+        movingForward = true;
+        activated = false;
+        isInWaypointWaitTime = false;
+        trigger.gameObject.SetActive(true);
+    }
+    private void Start()
+    {
+        _originalPosition = Mover.Rigidbody.position;
+        _originalRotation = Mover.Rigidbody.rotation;
+        _originalWaypoint = currentWaypoint;
+
+        resetPlatform();
+        setDestination(currentWaypoint.transform.position);
+
+        Mover.MoverController = this;
+        if(activationType == ActivationType.none)
+            activatePlatform();
+        //activation type trigger is handeled by sendmessageupwards from the trigger
+        //activation type player is handled by the kinematic controller in OnMovementHit()
+    }
+
+    public void UpdateMovement(out Vector3 goalPosition, out Quaternion goalRotation, float deltatime)
+    {
+        goalPosition = Mover.Rigidbody.position;
+        goalRotation = Mover.Rigidbody.rotation;
+
+        if(activated)
+            updateOneTimeMove(out goalPosition, out goalRotation, deltatime);
+        
+
+        //Resetting the position and rotation cause it's necessarry to do here.
+        if (resetNow)
+        {
+            //reset position and rotation
+            goalPosition = _originalPosition;
+            goalRotation = _originalRotation;
+
+            //end reset
             resetNow = false;
-            hasReachedEnd = false;
-            movingForward = true;
-            activated = false;
-            isInWaypointWaitTime = false;
         }
-        private void Start()
+    }
+
+    void updateOneTimeMove(out Vector3 goalPosition, out Quaternion goalRotation, float deltatime)
+    {
+        goalPosition = Mover.Rigidbody.position;
+        goalRotation = Mover.Rigidbody.rotation;
+
+        Vector3 destinationDirection = _destination - Mover.Rigidbody.position;
+        float destinationDistance = destinationDirection.magnitude;
+        //Debug.Log("dist to destination: " + destinationDistance);
+        if (destinationDistance >= minDist2DestReached)
         {
-            _originalPosition = Mover.Rigidbody.position;
-            _originalRotation = Mover.Rigidbody.rotation;
-            _originalWaypoint = currentWaypoint;
 
-            resetPlatform();
-            setDestination(currentWaypoint.transform.position);
-
-            Mover.MoverController = this;
+            //do some rotation if necessarry
+            goalRotation = Mover.Rigidbody.rotation;
+            goalPosition = destinationDirection.normalized * TranslationSpeed * Time.deltaTime + Mover.Rigidbody.position;  
         }
-
-        public void UpdateMovement(out Vector3 goalPosition, out Quaternion goalRotation, float deltatime)
+        else
         {
+            destinationReached = true;
             goalPosition = Mover.Rigidbody.position;
             goalRotation = Mover.Rigidbody.rotation;
-            /*if (ActivatePlatform)
-            {
-                activatePlatform();
-                ActivatePlatform = false;
-            }*/
-            if (platformType == PlatformType.oneTimeMove)
-            {
-                updateOneTimeMove(out goalPosition, out goalRotation, deltatime);
-            }
-            if(platformType == PlatformType.PingPong)
-            {
-                updateOneTimeMove(out goalPosition, out goalRotation, deltatime);
-            }
-            if(platformType == PlatformType.oneTimePlayer)
-            {
-                if (activated)
-                {
-                    updateOneTimeMove(out goalPosition, out goalRotation, deltatime);
-                }
-            }
-            if(platformType == PlatformType.oneTimePlayerWithReturn)
-            {
-                if (activated)
-                {
-                    updateOneTimeMove(out goalPosition, out goalRotation, deltatime);
-                }
-            }
-            if(platformType == PlatformType.EndAndBackPlayer)
-            {
-                if (activated)
-                {
-                    updateOneTimeMove(out goalPosition, out goalRotation, deltatime);
-                }
-            }
-
-            //Resetting the position and rotation cause it's necessarry to do here.
-            if (resetNow)
-            {
-                //reset position and rotation
-                goalPosition = _originalPosition;
-                goalRotation = _originalRotation;
-
-                //end reset
-                resetNow = false;
-            }
-        }
-
-        void updateOneTimeMove(out Vector3 goalPosition, out Quaternion goalRotation, float deltatime)
-        {
-            goalPosition = Mover.Rigidbody.position;
-            goalRotation = Mover.Rigidbody.rotation;
-
-            Vector3 destinationDirection = _destination - Mover.Rigidbody.position;
-            float destinationDistance = destinationDirection.magnitude;
-            if (destinationDistance >= minDist2DestReached)
-            {
-                //do some rotation if necessarry
-                goalRotation = Mover.Rigidbody.rotation;
-                goalPosition = destinationDirection.normalized * TranslationSpeed * Time.deltaTime + Mover.Rigidbody.position;  
-            }
-            else
-            {
-                goalPosition = Mover.Rigidbody.position;
-                goalRotation = Mover.Rigidbody.rotation;
+            if(destinationReached)
                 updateDestination();
-            }
         }
+    }
 
-        void updateDestination()
+    void updateDestination()
+    {
+        Debug.Log("Updating destination");
+        switch (platformType)
         {
-            switch (platformType)
-            {
-                case PlatformType.oneTimeMove:
-                    if (currentWaypoint.nextWaypoint != null)
+            case PlatformType.oneTimeMove:
+                if (currentWaypoint.nextWaypoint != null)
+                {
+                    if(!isInWaypointWaitTime) //update destination
                     {
                         currentWaypoint = currentWaypoint.nextWaypoint;
                         
-                        if(!isInWaypointWaitTime) //update destination
-                            StartCoroutine(waitAtWaypoint(waypointWaitTime));
+                        StartCoroutine(waitAtWaypoint(waypointWaitTime));
+                    }
 
+                }
+                else
+                {
+                    hasReachedEnd = true;
+                    //nothing happens
+                }
+                break;
+            case PlatformType.PingPong:
+                if (hasReachedEnd)
+                {
+                    if(currentWaypoint.previousWaypoint != null)
+                    {
+                        if (!isInWaypointWaitTime) //update destination
+                        {
+                            Debug.Log("tHIS IS ONLY CALLED ONCE PLZ");
+                            currentWaypoint = currentWaypoint.previousWaypoint;
+                            StartCoroutine(waitAtWaypoint(waypointWaitTime));
+                        }
+                    }
+                    else
+                    {
+                        hasReachedEnd = false;
+                    }
+                }
+                else
+                {
+                    if (currentWaypoint.nextWaypoint != null)
+                    {
+                        if (!isInWaypointWaitTime) //update destination
+                        {
+                            currentWaypoint = currentWaypoint.nextWaypoint;
+                            StartCoroutine(waitAtWaypoint(waypointWaitTime));
+                        }
                     }
                     else
                     {
                         hasReachedEnd = true;
-                        //nothing happens
                     }
-                    break;
-                case PlatformType.PingPong:
-                    if (hasReachedEnd)
+                }
+                break;
+            case PlatformType.oneTimePlayerWithReturn:
+                if (hasReachedEnd && activated)
+                {
+                    if (currentWaypoint.previousWaypoint != null)
                     {
-                        if(currentWaypoint.previousWaypoint != null)
+                        if (!isInWaypointWaitTime) //update destination
                         {
                             currentWaypoint = currentWaypoint.previousWaypoint;
-                            if (!isInWaypointWaitTime) //update destination
-                                StartCoroutine(waitAtWaypoint(waypointWaitTime));
-                        }
-                        else
-                        {
-                            hasReachedEnd = false;
+                            StartCoroutine(waitAtWaypoint(waypointWaitTime));
                         }
                     }
                     else
                     {
-                        if (currentWaypoint.nextWaypoint != null)
+                        hasReachedEnd = false;
+                        deactivatePlatform();
+                    }
+                }
+                else if(!hasReachedEnd && activated)
+                {
+                    if (currentWaypoint.nextWaypoint != null)
+                    {
+                        if (!isInWaypointWaitTime) //update destination
                         {
                             currentWaypoint = currentWaypoint.nextWaypoint;
-                            if (!isInWaypointWaitTime) //update destination
-                                StartCoroutine(waitAtWaypoint(waypointWaitTime));
-                        }
-                        else
-                        {
-                            hasReachedEnd = true;
+                            StartCoroutine(waitAtWaypoint(waypointWaitTime));
                         }
                     }
-                    break;
-                case PlatformType.oneTimePlayerWithReturn:
-                    if (hasReachedEnd && activated)
+                    else
                     {
-                        if (currentWaypoint.previousWaypoint != null)
-                        {
-                            currentWaypoint = currentWaypoint.previousWaypoint;
-                            if (!isInWaypointWaitTime) //update destination
-                                StartCoroutine(waitAtWaypoint(waypointWaitTime));
-                        }
-                        else
-                        {
-                            hasReachedEnd = false;
-                            activated = false;
-                        }
+                        hasReachedEnd = true;
+                        deactivatePlatform();
                     }
-                    else if(!hasReachedEnd && activated)
+                }
+                break;
+            case PlatformType.EndAndBackPlayer:
+                if (activated)
+                {
+                    if(movingForward) 
                     {
-                        if (currentWaypoint.nextWaypoint != null)
+                        if(currentWaypoint.nextWaypoint != null)
                         {
-                            currentWaypoint = currentWaypoint.nextWaypoint;
                             if (!isInWaypointWaitTime) //update destination
-                                StartCoroutine(waitAtWaypoint(waypointWaitTime));
-                        }
-                        else
-                        {
-                            hasReachedEnd = true;
-                            activated = false;
-                        }
-                    }
-                    break;
-                case PlatformType.EndAndBackPlayer:
-                    if (activated)
-                    {
-                        if(movingForward) 
-                        {
-                            if(currentWaypoint.nextWaypoint != null)
                             {
                                 currentWaypoint = currentWaypoint.nextWaypoint;
-                                if (!isInWaypointWaitTime) //update destination
-                                    StartCoroutine(waitAtWaypoint(waypointWaitTime));
-                            }
-                            else
-                            {
-                                movingForward = false;
+                                StartCoroutine(waitAtWaypoint(waypointWaitTime));
                             }
                         }
                         else
                         {
-                            if(currentWaypoint.previousWaypoint != null)
+                            movingForward = false;
+                        }
+                    }
+                    else
+                    {
+                        if(currentWaypoint.previousWaypoint != null)
+                        {
+                            if (!isInWaypointWaitTime) //update destination
                             {
                                 currentWaypoint = currentWaypoint.previousWaypoint;
-                                if (!isInWaypointWaitTime) //update destination
-                                    StartCoroutine(waitAtWaypoint(waypointWaitTime));
-                            }
-                            else
-                            {
-                                activated = false;
-                                movingForward = true;
-                            }
-                        }
-                    }
-                    break;
-                default:
-                    if (activated)
-                    {
-                        if (currentWaypoint.nextWaypoint != null)
-                        {
-                            currentWaypoint = currentWaypoint.nextWaypoint;
-                            if (!isInWaypointWaitTime) //update destination
                                 StartCoroutine(waitAtWaypoint(waypointWaitTime));
+                            }
                         }
                         else
                         {
-                            hasReachedEnd = true;
-                            activated = false;
-                            //nothing happens
+                            deactivatePlatform();
+                            movingForward = true;
                         }
                     }
-                    break;
-            }
+                }
+                break;
+            default:
+                if (activated)
+                {
+                    if (currentWaypoint.nextWaypoint != null)
+                    {
+                        if (!isInWaypointWaitTime) //update destination
+                        {
+                            currentWaypoint = currentWaypoint.nextWaypoint;
+                            StartCoroutine(waitAtWaypoint(waypointWaitTime));
+                        }
+                    }
+                    else
+                    {
+                        hasReachedEnd = true;
+                        deactivatePlatform();
+                        //nothing happens
+                    }
+                }
+                break;
+
+        }
             
-        }
-        void setDestination(Vector3 destination)
-        {
-            this._destination = destination;
-            //reachedDestination = false; 
-        }
-        public void activatePlatform()
-        {
-            if (activated)
-                return; //don't start the delayed activate if the platform is already activated
-            //call this function in character controller in OnMovementHit() if it is indeed a moving platform
-            Invoke("delayedActivatePlatform", startDelay);
-        }
-        private void delayedActivatePlatform()
-        {
-            activated = true;
-        }
+    }
+    void setDestination(Vector3 destination)
+    {
+        this._destination = destination;
+        //reachedDestination = false; 
+    }
+    public void activatePlatform()
+    {
+        if (activated)
+            return; //don't start the delayed activate if the platform is already activated
+                    //call this function in character controller in OnMovementHit() if it is indeed a moving platform
+        Invoke("delayedActivatePlatform", startDelay);
+        Debug.Log("Platform was activated!");
+    }
+    private void deactivatePlatform()
+    {
+        activated = false;
+        canMove = false;
+    }
+    private void delayedActivatePlatform()
+    {
+        activated = true;
+        canMove = true;
+    }
 
-        IEnumerator waitAtWaypoint(float waitTime)
-        {
-            //Debug.Log("I am in Wait At Waypoint!!!");
-            //Debug.Log("Time since start = " + Time.realtimeSinceStartup);
+    IEnumerator waitAtWaypoint(float waitTime)
+    {
+        canMove = false;
+        isInWaypointWaitTime = true;
+        yield return new WaitForSeconds(waitTime);
 
-            isInWaypointWaitTime = true;
-            yield return new WaitForSeconds(waitTime);
-            setDestination(currentWaypoint.getPosition());
-            //Debug.Log("Time since start = " + Time.realtimeSinceStartup);
-            StartCoroutine(isInWAypointWaitTime());
-        }
+        setDestination(currentWaypoint.getPosition());
+        destinationReached = false;
+        isInWaypointWaitTime = false;
+        canMove = true;
+        //StartCoroutine(haveUpdatedDestination());
+    }
 
-        IEnumerator isInWAypointWaitTime()
-        {
-            yield return new WaitForSeconds(0f);
-            isInWaypointWaitTime = false;
-        }
+    IEnumerator haveUpdatedDestination()
+    {
+        yield return new WaitForSeconds(.2f);
+        //shouldUpdateDestination = false;
     }
 }
+
