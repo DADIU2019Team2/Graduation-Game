@@ -17,7 +17,7 @@ MonoBehaviour:
   hangGravityMultiplier: 3
   fallGravityMultiplier: 3
   dropGravityMultiplier: 3
-  maxMoveSpeed: 15
+  maxMoveSpeed: 10
   StableMovementSharpness: 15
   OrientationSharpness: 10
   rampUpTime: 2
@@ -77,7 +77,7 @@ MonoBehaviour:
   JumpPostGroundingGraceTime: 0.2
   idleJumpHeight: 2
   idleAirMoveSpeed: 10
-  slideMoveSpeed: 25
+  slideMoveSpeed: 15
   slideJumpHeight: 1
   slideDuration: 1
   decelerateWhileSliding: 1
@@ -86,15 +86,6 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
       value: 1
       inSlope: 2
       outSlope: 2
@@ -102,9 +93,18 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.2
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  canChangeDirectionsMidair: 0
+  canChangeDirectionsMidair: 1
   AllowDoubleJump: 0
   AllowJumpingWhenSliding: 0

@@ -85,6 +85,7 @@ namespace KinematicTest.controller
         // Sliding
         private float _timeSinceStartedSliding;
         private float _slideCurveStep;
+        private float _slideEndSpeed;
         private bool _isStoppedSliding;
         private Collider[] _probedColliders = new Collider[8];
         private bool _shouldBeCrouching;
@@ -267,7 +268,7 @@ namespace KinematicTest.controller
                     stopped = false;
                     rampingDown = false;
                     curveStep = 0;
-                    runningRight = runningRight * -1;
+                    runningRight *= -1;
                     //scarf.transform.Rotate(Vector3.up, 180);
                 }
                 else
@@ -498,6 +499,7 @@ namespace KinematicTest.controller
                             {
                                 // this is where the prevvel goes
                                 targetMovementVelocity = lastVelocityBeforeJump;
+                                Debug.Log(lastVelocityBeforeJump.magnitude);
                             }
 
                             break;
@@ -506,6 +508,12 @@ namespace KinematicTest.controller
                         {
                             targetMovementVelocity = _moveInputVector * MaxAirMoveSpeed;
                             AirAccelerationSpeed = MaxAirMoveSpeed;
+                            break;
+                        }
+                        case PlayerStates.Sliding:
+                        {
+                            targetMovementVelocity = lastVelocityBeforeJump;
+                            Debug.Log(lastVelocityBeforeJump.magnitude);
                             break;
                         }
                     }
@@ -629,7 +637,7 @@ namespace KinematicTest.controller
                             _shouldBeCrouching = false;
                         }
 
-                        if (_isCrouching && !_shouldBeCrouching)
+                        if (_isCrouching && !_shouldBeCrouching && Motor.GroundingStatus.IsStableOnGround)
                         {
                             // Do an overlap test with the character's standing height to see if there are any obstructions
                             Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
@@ -725,11 +733,20 @@ namespace KinematicTest.controller
                 stopped = false;
                 TransitionToState(PlayerStates.Running);
             }
+
+            if (CurrentCharacterState == PlayerStates.Sliding)
+            {
+                //??
+                _slideEndSpeed =
+                    (Motor.GetDirectionTangentToSurface(Motor.Velocity, Motor.GroundingStatus.GroundNormal) *
+                     Motor.Velocity.magnitude).magnitude;
+                Debug.Log(_slideEndSpeed);
+            }
         }
 
         protected void OnLeaveStableGround()
         {
-            if (canChangeMidAir)
+            if (canChangeMidAir && CurrentCharacterState != PlayerStates.Sliding)
             {
                 canChangedirection = true;
             }
