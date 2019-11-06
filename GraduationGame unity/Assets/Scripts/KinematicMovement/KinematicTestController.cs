@@ -22,13 +22,15 @@ namespace KinematicTest.controller
         public bool slideDown;
         public bool ledgeGrabHold;
         public bool changeDirection;
+        public bool crouchDown;
+        public bool crouchUp;
     }
 
     public class KinematicTestController : MonoBehaviour, ICharacterController
     {
         [Space(10)] public bool updateSettingsLive = true;
         [Space(10)] public KinematicCharacterMotor Motor;
-        public GameObject scarf;
+        //public GameObject scarf;
         
         // Gravity
         private Vector3 baseGravity = new Vector3(0, -10f, 0);
@@ -242,6 +244,14 @@ namespace KinematicTest.controller
                 TransitionToState(PlayerStates.Sliding);
             }
 
+            if (inputs.crouchDown)
+            {
+                MeshRoot.localScale = new Vector3(1.2f, 0.5f, 1.2f);
+            }
+            if (inputs.crouchUp)
+            {
+                MeshRoot.localScale = new Vector3(1f, 1f, 1f);
+            }
 
             if (canChangedirection && inputs.changeDirection)
             {
@@ -253,7 +263,7 @@ namespace KinematicTest.controller
                     rampingDown = false;
                     curveStep = 0;
                     runningRight = runningRight * -1;
-                    scarf.transform.Rotate(Vector3.up, 180);
+                    //scarf.transform.Rotate(Vector3.up, 180);
                 }
                 else
                 {
@@ -353,7 +363,7 @@ namespace KinematicTest.controller
                         curveStep = 0;
                         rampingDown = false;
                         runningRight = runningRight * -1;
-                        scarf.transform.Rotate(Vector3.up, 180);
+                        //scarf.transform.Rotate(Vector3.up, 180);
                     }
                 }
                 else
@@ -424,7 +434,7 @@ namespace KinematicTest.controller
                                         curveStep = 0;
                                         rampingDown = false;
                                         runningRight = runningRight * -1;
-                                        scarf.transform.Rotate(Vector3.up, 180);
+                                        //scarf.transform.Rotate(Vector3.up, 180);
                                     }
                                 }
                                 else
