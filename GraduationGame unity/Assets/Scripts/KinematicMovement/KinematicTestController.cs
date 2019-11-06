@@ -168,6 +168,7 @@ namespace KinematicTest.controller
                 case PlayerStates.Idling:
                 {
                     stopped = true;
+                        rampingDown = false;
                     MaxAirMoveSpeed = settings.idleAirMoveSpeed;
                     MaxStableMoveSpeed = 0f;
                     curveStep = 0f;
@@ -249,8 +250,10 @@ namespace KinematicTest.controller
                 if (stopped)
                 {
                     stopped = false;
-                    rampingDown = true;
-                    curveStep = 1;
+                    rampingDown = false;
+                    curveStep = 0;
+                    runningRight = runningRight * -1;
+                    scarf.transform.Rotate(Vector3.up, 180);
                 }
                 else
                 {
