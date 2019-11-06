@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using MiniGame2.Events;
+using TMPro;
 
 public class InputManager : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class InputManager : MonoBehaviour
         none //only ever happening if a bug occured.
     }
 
+    public TextMeshProUGUI inputText;
+
     private bool isDragging;
     Vector2 initPosition, endPosition;
     Vector2 swipeDirection;
@@ -22,10 +25,13 @@ public class InputManager : MonoBehaviour
     public VoidEvent OnSwipeEvent;
     private static SwipeType mostRecentSwipeType;
 
-
+    private string intoTextString;
 
     private void Start()
     {
+        intoTextString = "Most recent input: ";
+        GameObject go = GameObject.Find("Input text");
+        inputText = go.GetComponent<TextMeshProUGUI>();
         Debug.Assert(mirroredAngle(10) == 170, "10 mirrored = 170");
         Debug.Assert(mirroredAngle(190) == -10, "190 mirrored = -10");
         Debug.Assert(mirroredAngle(200) == -20, "200 mirrored = -20");
@@ -69,6 +75,10 @@ public class InputManager : MonoBehaviour
                         swipeAngle = Vector2.Angle(Vector2.right, swipeDirection);
                         isFacingRight = CharacterMovement.GetIsFacingRight();
                         mostRecentSwipeType = SwipeTypeOfAngle(swipeAngle, isFacingRight);
+
+                        string mostRecentInput = mostRecentSwipeType == SwipeType.swipeDown ? "Down" : mostRecentSwipeType == SwipeType.swipeBackwards ? "Backwards" :
+                         mostRecentSwipeType == SwipeType.swipeForwardUp ? "Forward" : "Unknown input";
+                        inputText.text = (intoTextString+mostRecentInput);
                         OnSwipeEvent.Raise();
                     }
 
