@@ -78,7 +78,7 @@ public class InputManager : MonoBehaviour
 
                         string mostRecentInput = mostRecentSwipeType == SwipeType.swipeDown ? "Down" : mostRecentSwipeType == SwipeType.swipeBackwards ? "Backwards" :
                          mostRecentSwipeType == SwipeType.swipeForwardUp ? "Forward" : "Unknown input";
-                        inputText.text = (intoTextString+mostRecentInput);
+                        inputText.text = (intoTextString+mostRecentInput + " " + swipeAngle);
                         OnSwipeEvent.Raise();
                     }
 
