@@ -1076,6 +1076,7 @@
 						</BlendContainer>
 						<Sound Name="Footsteps_Normal_Loop" ID="{2143A37F-38BF-41E0-8EA5-66723A5403F7}" ShortID="883984149">
 							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
 										<RTPC Name="" ID="{3BE32EC6-DBCF-4950-9542-13A1B52156E6}" ShortID="426767128">
@@ -1220,6 +1221,9 @@
 							</GroupingInfo>
 						</SwitchContainer>
 						<Sound Name="New_Metal_Ftstp_Loop" ID="{3D96F2EB-4D53-4E4D-8AC0-5E4A5CB14184}" ShortID="811497790">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
@@ -1240,6 +1244,7 @@
 						</Sound>
 						<Sound Name="New_Norm_Ftstp_Loop" ID="{10DA7C90-2B66-49F8-8647-BFBC880230DC}" ShortID="298384543">
 							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
 										<RTPC Name="" ID="{55316929-5651-4C87-822D-C8DA18656CF9}" ShortID="563155315">
@@ -1292,7 +1297,84 @@
 								<ActiveSource Name="New_Norm_Ftstp_Loop" ID="{D9E0016E-CD61-4DD1-B919-635FC9A8C204}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<BlendContainer Name="Slides" ID="{F8A43990-53C9-4293-9235-7B59A50105F9}" ShortID="938653522">
+						<RandomSequenceContainer Name="Slide" ID="{2556F561-95DA-4AB9-AA75-456A3AC68B2A}" ShortID="60762190">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{9782ED15-10B1-4637-9818-5B49A6880915}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Slide_1" ID="{3B5C515D-94DB-4F11-969F-9DB265FB218B}" ShortID="1034974182">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Slide_1" ID="{6317C1D8-5CA0-45E0-9EC2-E2CC4C6146ED}" ShortID="283942315">
+											<Language>SFX</Language>
+											<AudioFile>Slide_1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Slide_1" ID="{6317C1D8-5CA0-45E0-9EC2-E2CC4C6146ED}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Slide_2" ID="{760246E9-259F-43FD-8DA9-ECF0271BCA2D}" ShortID="641287225">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Slide_2" ID="{C302EC9A-48BB-4FB1-A44D-DF45D8B926A8}" ShortID="931153672">
+											<Language>SFX</Language>
+											<AudioFile>Slide_2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Slide_2" ID="{C302EC9A-48BB-4FB1-A44D-DF45D8B926A8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Slide_3" ID="{CD460E4C-7346-40CF-B9E9-3A40FF76D474}" ShortID="952540196">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Slide_3" ID="{DE1BD8B5-5B5E-4FD2-B736-B66CB511F200}" ShortID="39273287">
+											<Language>SFX</Language>
+											<AudioFile>Slide_3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Slide_3" ID="{DE1BD8B5-5B5E-4FD2-B736-B66CB511F200}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Grabs" ID="{78A876B2-412A-49E7-BDE3-54D845710A85}" ShortID="97834196">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
@@ -1302,14 +1384,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<RandomSequenceContainer Name="Slide" ID="{2556F561-95DA-4AB9-AA75-456A3AC68B2A}" ShortID="60762190">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>4</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
+								<Sound Name="Grab1" ID="{81FAE995-67FB-484D-9F7D-C4C3399B166D}" ShortID="592878173">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
@@ -1319,66 +1394,16 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Slide_1" ID="{3B5C515D-94DB-4F11-969F-9DB265FB218B}" ShortID="1034974182">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Slide_1" ID="{6317C1D8-5CA0-45E0-9EC2-E2CC4C6146ED}" ShortID="283942315">
-													<Language>SFX</Language>
-													<AudioFile>Slide_1.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Slide_1" ID="{6317C1D8-5CA0-45E0-9EC2-E2CC4C6146ED}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Slide_2" ID="{760246E9-259F-43FD-8DA9-ECF0271BCA2D}" ShortID="641287225">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Slide_2" ID="{C302EC9A-48BB-4FB1-A44D-DF45D8B926A8}" ShortID="931153672">
-													<Language>SFX</Language>
-													<AudioFile>Slide_2.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Slide_2" ID="{C302EC9A-48BB-4FB1-A44D-DF45D8B926A8}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Slide_3" ID="{CD460E4C-7346-40CF-B9E9-3A40FF76D474}" ShortID="952540196">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Slide_3" ID="{DE1BD8B5-5B5E-4FD2-B736-B66CB511F200}" ShortID="39273287">
-													<Language>SFX</Language>
-													<AudioFile>Slide_3.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Slide_3" ID="{DE1BD8B5-5B5E-4FD2-B736-B66CB511F200}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+										<AudioFileSource Name="Grab1" ID="{C4F6ED09-9C98-460D-A1FE-AF0165730595}" ShortID="541793192">
+											<Language>SFX</Language>
+											<AudioFile>Grab1.wav</AudioFile>
+										</AudioFileSource>
 									</ChildrenList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Slide_Guitar" ID="{A2020A3D-3121-4D85-9E38-FE478EEC47A3}" ShortID="184809996">
+									<ActiveSourceList>
+										<ActiveSource Name="Grab1" ID="{C4F6ED09-9C98-460D-A1FE-AF0165730595}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Grab2" ID="{1FF4D4D8-83F7-4B0D-B4B9-2CE14CBFE8C8}" ShortID="738500399">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
@@ -1388,73 +1413,16 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Slide_Dist1" ID="{13A30079-5899-462D-8A97-A8F5017082A9}" ShortID="600645287">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Slide_Dist1" ID="{8514228E-524D-4F35-8877-A8D00E848E40}" ShortID="191542896">
-													<Language>SFX</Language>
-													<AudioFile>Slide_Dist1.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Slide_Dist1" ID="{8514228E-524D-4F35-8877-A8D00E848E40}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Slide_Dist2" ID="{9DBD08F6-540D-40B3-8A40-D021D7697F2B}" ShortID="431329442">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Slide_Dist2" ID="{91E14518-034A-4C1D-9380-8CE495C7CC42}" ShortID="876884471">
-													<Language>SFX</Language>
-													<AudioFile>Slide_Dist2.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Slide_Dist2" ID="{91E14518-034A-4C1D-9380-8CE495C7CC42}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Slide_Dist3" ID="{93290370-E438-439D-A131-3CB84A2778C0}" ShortID="1051944845">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Slide_Dist3" ID="{1420CEB1-AD0C-4B9D-A15E-E3048D583AEE}" ShortID="575230086">
-													<Language>SFX</Language>
-													<AudioFile>Slide_Dist3.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Slide_Dist3" ID="{1420CEB1-AD0C-4B9D-A15E-E3048D583AEE}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+										<AudioFileSource Name="Grab2" ID="{E39F5E4B-8332-44B3-96CF-A9E8C6D2DFF7}" ShortID="614726966">
+											<Language>SFX</Language>
+											<AudioFile>Grab2.wav</AudioFile>
+										</AudioFileSource>
 									</ChildrenList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Slide_Perc" ID="{FDBCB9A7-5E39-4BF5-9685-5BD94C4D9F8E}" ShortID="437180933">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-9</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
+									<ActiveSourceList>
+										<ActiveSource Name="Grab2" ID="{E39F5E4B-8332-44B3-96CF-A9E8C6D2DFF7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Grab3" ID="{EC3C25BC-A588-432E-8F65-E32A475A4957}" ShortID="636110035">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
@@ -1464,66 +1432,16 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Slide_Perc1" ID="{EEB9E0D0-0FE3-4BA5-B76B-84C4ADAECE20}" ShortID="199856302">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Slide_Perc1" ID="{9A2EFAB9-10EE-45AC-8C10-F1FF3D7BF47C}" ShortID="959393164">
-													<Language>SFX</Language>
-													<AudioFile>Slide_Perc1.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Slide_Perc1" ID="{9A2EFAB9-10EE-45AC-8C10-F1FF3D7BF47C}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Slide_Perc2" ID="{8570DCC3-4925-419F-A234-D30AAF9C0A14}" ShortID="731578209">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Slide_Perc2" ID="{07FE59F3-AAA3-4742-AC5E-7F86FCF575B1}" ShortID="968461843">
-													<Language>SFX</Language>
-													<AudioFile>Slide_Perc2.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Slide_Perc2" ID="{07FE59F3-AAA3-4742-AC5E-7F86FCF575B1}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Slide_Perc3" ID="{9457BC91-B073-4814-9B2F-5F69B1F798AC}" ShortID="705835669">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Slide_Perc3" ID="{5C140144-4321-4DCE-9D81-06956BE1E54B}" ShortID="148132125">
-													<Language>SFX</Language>
-													<AudioFile>Slide_Perc3.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Slide_Perc3" ID="{5C140144-4321-4DCE-9D81-06956BE1E54B}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+										<AudioFileSource Name="Grab3" ID="{00FD13D4-9C09-4D80-8306-C6CFD4EA2DCA}" ShortID="283163331">
+											<Language>SFX</Language>
+											<AudioFile>Grab3.wav</AudioFile>
+										</AudioFileSource>
 									</ChildrenList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Slide_Wind" ID="{9AF695D1-5E21-4BFC-AA14-3C7D66F3567C}" ShortID="172768862">
+									<ActiveSourceList>
+										<ActiveSource Name="Grab3" ID="{00FD13D4-9C09-4D80-8306-C6CFD4EA2DCA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Grab4" ID="{2601AD77-2609-476E-8345-B5EE3EDF0455}" ShortID="615724413">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
@@ -1533,67 +1451,17 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Slide_Wind1" ID="{F9096598-B01A-4395-BC06-EFA19E8A0773}" ShortID="152160448">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Slide_Wind1" ID="{FF8B212E-5E10-43E9-B47A-0D2421E9668E}" ShortID="1014189311">
-													<Language>SFX</Language>
-													<AudioFile>Slide_Wind1.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Slide_Wind1" ID="{FF8B212E-5E10-43E9-B47A-0D2421E9668E}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Slide_Wind2" ID="{B5ABBE97-ECA1-4497-B34E-50721340D838}" ShortID="513067674">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Slide_Wind2" ID="{46BD0B98-435F-4A2C-B7BF-D135589F759E}" ShortID="16812644">
-													<Language>SFX</Language>
-													<AudioFile>Slide_Wind2.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Slide_Wind2" ID="{46BD0B98-435F-4A2C-B7BF-D135589F759E}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Slide_Wind3" ID="{8FF86587-15F8-48DF-AADD-426A817DE3CB}" ShortID="256549624">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Slide_Wind3" ID="{4475EF36-92AA-48BE-8AA0-9A6E1FD73DE3}" ShortID="71522592">
-													<Language>SFX</Language>
-													<AudioFile>Slide_Wind3.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Slide_Wind3" ID="{4475EF36-92AA-48BE-8AA0-9A6E1FD73DE3}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+										<AudioFileSource Name="Grab4" ID="{A177DC36-F92D-48F4-8C11-1E4E02540FDB}" ShortID="40096853">
+											<Language>SFX</Language>
+											<AudioFile>Grab4.wav</AudioFile>
+										</AudioFileSource>
 									</ChildrenList>
-								</RandomSequenceContainer>
+									<ActiveSourceList>
+										<ActiveSource Name="Grab4" ID="{A177DC36-F92D-48F4-8C11-1E4E02540FDB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-						</BlendContainer>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Objects" ID="{642349AE-A41A-4B8E-AD25-21B38AFD2F65}" ShortID="953604102">
