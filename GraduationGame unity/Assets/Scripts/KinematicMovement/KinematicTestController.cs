@@ -89,8 +89,6 @@ namespace KinematicTest.controller
         private bool _shouldBeCrouching;
 
         private bool _isCrouching;
-<<<<<<< Updated upstream
-=======
 
         // Hanging
         private float hangTime;
@@ -98,7 +96,6 @@ namespace KinematicTest.controller
         private float timeAtLastLedgeGrab = 0f;
         private bool jumpFromWallRequested = false;
 
->>>>>>> Stashed changes
         // Settings
         public PlayerControllerSettings settings;
 
@@ -106,12 +103,8 @@ namespace KinematicTest.controller
         public PlayerStates CurrentCharacterState;
         public Vector3 Gravity = new Vector3(0, -10f, 0);
         public Transform MeshRoot;
-<<<<<<< Updated upstream
-        
-=======
         private float ledgeGrabGravityMultiplier = 0f;
 
->>>>>>> Stashed changes
         //This will later be scriptable object
         [Header("Sound settings")] public AK.Wwise.Event jumpSound;
 
@@ -365,11 +358,7 @@ namespace KinematicTest.controller
         /// </summary>
         public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)
         {
-            Debug.Log(MaxStableMoveSpeed);
-            Debug.Log(MaxAirMoveSpeed);
-
-            Debug.Log(AirAccelerationSpeed);
-            Debug.Log(JumpSpeed);
+           
             Vector3 targetMovementVelocity = Vector3.zero;
             if (Motor.GroundingStatus.IsStableOnGround)
             {
@@ -407,13 +396,6 @@ namespace KinematicTest.controller
                         curveStep += (1 / rampUpTime * Time.deltaTime);
                     }
 
-<<<<<<< Updated upstream
-                    if (curveStep > 1)
-                    {
-                        curveStep = 1;
-                    }
-                }
-=======
                             if (curveStep > 1)
                             {
                                 curveStep = 1;
@@ -432,11 +414,10 @@ namespace KinematicTest.controller
                                 velocity = MaxStableMoveSpeed * rampUpCurve.Evaluate(curveStep);
                             }
                         }
->>>>>>> Stashed changes
 
                 if (!stopped)
                 {
-                    Debug.Log("not stopped");
+                    //Debug.Log("not stopped");
                     if (rampingDown)
                     {
                         velocity = MaxStableMoveSpeed * rampDownCurve.Evaluate(curveStep);
@@ -507,7 +488,7 @@ namespace KinematicTest.controller
 
                                 if (!stopped)
                                 {
-                                    Debug.Log("not stopped");
+                                    //Debug.Log("not stopped");
                                     if (rampingDown)
                                     {
                                         AirAccelerationSpeed = MaxAirMoveSpeed * rampDownCurve.Evaluate(curveStep);
@@ -718,8 +699,10 @@ namespace KinematicTest.controller
         public void OnMovementHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
             ref HitStabilityReport hitStabilityReport)
         {
-            if (hitCollider.CompareTag("Ledge") && Time.time > (timeAtLastLedgeGrab + graceTimeBeforeHangAgain))
+            Debug.Log("normal : " + hitNormal + " point : " + hitPoint);
+            if (hitCollider.CompareTag("Ledge") && Time.time > (timeAtLastLedgeGrab + graceTimeBeforeHangAgain) && hitNormal.y == 0 && Mathf.Sign(hitNormal.x) == -Mathf.Sign(runningRight))
             {
+                Debug.Log("normal : " + hitNormal + " point : " +hitPoint);
                 Debug.Log("Ledge Grab?");
                 timeAtLastLedgeGrab = Time.time;
                 TransitionToState(PlayerStates.LedgeGrabbing);
