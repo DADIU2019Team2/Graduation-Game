@@ -396,7 +396,6 @@ namespace KinematicTest.controller
 
                         if (!stopped)
                         {
-                            Debug.Log("not stopped");
                             if (rampingDown)
                             {
                                 velocity = MaxStableMoveSpeed * rampDownCurve.Evaluate(curveStep);
@@ -484,7 +483,6 @@ namespace KinematicTest.controller
 
                                 if (!stopped)
                                 {
-                                    Debug.Log("not stopped");
                                     if (rampingDown)
                                     {
                                         AirAccelerationSpeed = MaxAirMoveSpeed * rampDownCurve.Evaluate(curveStep);
@@ -497,9 +495,7 @@ namespace KinematicTest.controller
                             }
                             else
                             {
-                                // this is where the prevvel goes
                                 targetMovementVelocity = lastVelocityBeforeJump;
-                                Debug.Log(lastVelocityBeforeJump.magnitude);
                             }
 
                             break;
@@ -513,7 +509,6 @@ namespace KinematicTest.controller
                         case PlayerStates.Sliding:
                         {
                             targetMovementVelocity = lastVelocityBeforeJump;
-                            Debug.Log(lastVelocityBeforeJump.magnitude);
                             break;
                         }
                     }
