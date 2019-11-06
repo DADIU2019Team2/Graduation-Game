@@ -83,11 +83,13 @@ namespace KinematicTest.controller
 
         // Sliding
         private float _timeSinceStartedSliding;
+        private float _slideCurveStep;
         private bool _isStoppedSliding;
-        private Collider[] _probedColliders = new Collider[8]; 
+        private Collider[] _probedColliders = new Collider[8];
         private bool _shouldBeCrouching;
 
         private bool _isCrouching;
+
         // Settings
         public PlayerControllerSettings settings;
 
@@ -95,7 +97,7 @@ namespace KinematicTest.controller
         public PlayerStates CurrentCharacterState;
         public Vector3 Gravity = new Vector3(0, -10f, 0);
         public Transform MeshRoot;
-        
+
         //This will later be scriptable object
         [Header("Sound settings")] public AK.Wwise.Event jumpSound;
 
@@ -170,7 +172,7 @@ namespace KinematicTest.controller
                 case PlayerStates.Idling:
                 {
                     stopped = true;
-                        rampingDown = false;
+                    rampingDown = false;
                     MaxAirMoveSpeed = settings.idleAirMoveSpeed;
                     MaxStableMoveSpeed = 0f;
                     curveStep = 0f;
@@ -187,7 +189,7 @@ namespace KinematicTest.controller
                     curveStep = 0f;
                     JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.slideJumpHeight * settings.baseGravity *
                                            Motor.Capsule.height);
-                    
+
                     _shouldBeCrouching = true;
 
                     if (!_isCrouching)
@@ -196,7 +198,7 @@ namespace KinematicTest.controller
                         Motor.SetCapsuleDimensions(0.5f, 1f, 0.5f);
                         MeshRoot.localScale = new Vector3(1.2f, 0.5f, 1.2f);
                     }
-                    
+
                     break;
                 }
                 case PlayerStates.LedgeGrabbing:
@@ -239,7 +241,8 @@ namespace KinematicTest.controller
         /// </summary>
         public void SetInputs(ref PlayerCharacterInputs inputs)
         {
-            if (inputs.slideDown && CurrentCharacterState == PlayerStates.Running && Motor.GroundingStatus.FoundAnyGround)
+            if (inputs.slideDown && CurrentCharacterState == PlayerStates.Running &&
+                Motor.GroundingStatus.FoundAnyGround)
             {
                 TransitionToState(PlayerStates.Sliding);
             }
@@ -301,6 +304,10 @@ namespace KinematicTest.controller
                 case PlayerStates.Sliding:
                 {
                     _timeSinceStartedSliding += deltaTime;
+                    if (settings.decelerateWhileSliding)
+                    {
+                        _slideCurveStep = _timeSinceStartedSliding / settings.slideDuration;
+                    }
                     break;
                 }
             }
@@ -351,12 +358,16 @@ namespace KinematicTest.controller
                                           _moveInputVector.magnitude;
                 float velocity = 0f;
 
-                if (rampingDown)
+                switch (CurrentCharacterState)
                 {
-                    if (curveStep < 1)
+                    case PlayerStates.Running:
                     {
-                        curveStep += (1 / rampDownTime * Time.deltaTime);
-                    }
+                        if (rampingDown)
+                        {
+                            if (curveStep < 1)
+                            {
+                                curveStep += (1 / rampDownTime * Time.deltaTime);
+                            }
 
                     if (curveStep >= 1)
                     {
@@ -373,22 +384,39 @@ namespace KinematicTest.controller
                         curveStep += (1 / rampUpTime * Time.deltaTime);
                     }
 
-                    if (curveStep > 1)
-                    {
-                        curveStep = 1;
-                    }
-                }
+                            if (curveStep > 1)
+                            {
+                                curveStep = 1;
+                            }
+                        }
 
-                if (!stopped)
-                {
-                    Debug.Log("not stopped");
-                    if (rampingDown)
-                    {
-                        velocity = MaxStableMoveSpeed * rampDownCurve.Evaluate(curveStep);
+                        if (!stopped)
+                        {
+                            Debug.Log("not stopped");
+                            if (rampingDown)
+                            {
+                                velocity = MaxStableMoveSpeed * rampDownCurve.Evaluate(curveStep);
+                            }
+                            else
+                            {
+                                velocity = MaxStableMoveSpeed * rampUpCurve.Evaluate(curveStep);
+                            }
+                        }
+
+                        break;
                     }
-                    else
+                    case PlayerStates.Sliding:
                     {
-                        velocity = MaxStableMoveSpeed * rampUpCurve.Evaluate(curveStep);
+                        if (settings.decelerateWhileSliding)
+                        {
+                            velocity = settings.slideMoveSpeed * settings.slideCurve.Evaluate(_slideCurveStep);
+                        }
+                        else
+                        {
+                            velocity = Mathf.Min(settings.slideMoveSpeed, currentVelocity.magnitude);
+                        }
+
+                        break;
                     }
                 }
 
@@ -597,6 +625,7 @@ namespace KinematicTest.controller
                         {
                             _shouldBeCrouching = false;
                         }
+
                         if (_isCrouching && !_shouldBeCrouching)
                         {
                             // Do an overlap test with the character's standing height to see if there are any obstructions
@@ -618,7 +647,7 @@ namespace KinematicTest.controller
                                 _isStoppedSliding = true;
                             }
                         }
-                        
+
 
                         break;
                     }
@@ -649,7 +678,7 @@ namespace KinematicTest.controller
             }
 
             if (hitCollider.CompareTag("Wall") && CurrentCharacterState != PlayerStates.Idling &&
-                Motor.GroundingStatus.IsStableOnGround)
+                Motor.GroundingStatus.IsStableOnGround && !rampingDown)
             {
                 if (rampingDown)
                 {
