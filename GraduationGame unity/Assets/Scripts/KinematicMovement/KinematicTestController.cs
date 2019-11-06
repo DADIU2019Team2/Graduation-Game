@@ -29,9 +29,10 @@ namespace KinematicTest.controller
     public class KinematicTestController : MonoBehaviour, ICharacterController
     {
         [Space(10)] public bool updateSettingsLive = true;
+
         [Space(10)] public KinematicCharacterMotor Motor;
         //public GameObject scarf;
-        
+
         // Gravity
         private Vector3 baseGravity = new Vector3(0, -10f, 0);
         private float hangGravity;
@@ -251,6 +252,7 @@ namespace KinematicTest.controller
             {
                 MeshRoot.localScale = new Vector3(1.2f, 0.5f, 1.2f);
             }
+
             if (inputs.crouchUp)
             {
                 MeshRoot.localScale = new Vector3(1f, 1f, 1f);
@@ -308,6 +310,7 @@ namespace KinematicTest.controller
                     {
                         _slideCurveStep = _timeSinceStartedSliding / settings.slideDuration;
                     }
+
                     break;
                 }
             }
@@ -369,20 +372,20 @@ namespace KinematicTest.controller
                                 curveStep += (1 / rampDownTime * Time.deltaTime);
                             }
 
-                    if (curveStep >= 1)
-                    {
-                        curveStep = 0;
-                        rampingDown = false;
-                        runningRight = runningRight * -1;
-                        //scarf.transform.Rotate(Vector3.up, 180);
-                    }
-                }
-                else
-                {
-                    if (curveStep < 1)
-                    {
-                        curveStep += (1 / rampUpTime * Time.deltaTime);
-                    }
+                            if (curveStep >= 1)
+                            {
+                                curveStep = 0;
+                                rampingDown = false;
+                                runningRight = runningRight * -1;
+                                //scarf.transform.Rotate(Vector3.up, 180);
+                            }
+                        }
+                        else
+                        {
+                            if (curveStep < 1)
+                            {
+                                curveStep += (1 / rampUpTime * Time.deltaTime);
+                            }
 
                             if (curveStep > 1)
                             {
