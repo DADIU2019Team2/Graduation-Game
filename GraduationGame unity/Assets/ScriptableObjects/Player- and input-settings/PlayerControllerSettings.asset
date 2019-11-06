@@ -17,7 +17,7 @@ MonoBehaviour:
   hangGravityMultiplier: 3
   fallGravityMultiplier: 3
   dropGravityMultiplier: 3
-  maxMoveSpeed: 5
+  maxMoveSpeed: 10
   StableMovementSharpness: 15
   OrientationSharpness: 10
   rampUpTime: 2
@@ -27,30 +27,21 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.4117181
-      inSlope: 0
-      outSlope: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.7034996
-      value: 0.51753855
-      inSlope: 0.48580167
-      outSlope: 0.48580167
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1.046875
-      value: 0.67352676
-      inSlope: -0.051808048
-      outSlope: -0.051808048
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.4187997
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -59,66 +50,57 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.0079956055
-      value: 0.59274673
-      inSlope: 0.018496001
-      outSlope: 0.018496001
-      tangentMode: 0
+      time: 0
+      value: 1
+      inSlope: -1.5004977
+      outSlope: -1.5004977
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.11382114
-    - serializedVersion: 3
-      time: 0.4125061
-      value: 0.0047302246
-      inSlope: -1.5116911
-      outSlope: -1.5116911
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.050135493
       outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: -0.5004977
+      inSlope: -1.5004977
+      outSlope: -1.5004977
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  jumpHeight: 5
-  maxAirMoveSpeed: 5
+  jumpHeight: 4
+  maxAirMoveSpeed: 10
   hangTimeVelocityThreshold: 2
   JumpPreGroundingGraceTime: 0.2
   JumpPostGroundingGraceTime: 0.2
   idleJumpHeight: 2
   idleAirMoveSpeed: 10
-  slideMoveSpeed: 10
+  slideMoveSpeed: 15
   slideJumpHeight: 1
   slideDuration: 1
-  decelerateWhileSliding: 0
+  decelerateWhileSliding: 1
   slideCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 1
-      inSlope: -0.99999994
-      outSlope: -0.99999994
-      tangentMode: 34
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.22506066
-      value: 0.77493936
-      inSlope: -1
-      outSlope: -1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: -1
-      outSlope: -1
-      tangentMode: 34
+      value: 0.2
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
