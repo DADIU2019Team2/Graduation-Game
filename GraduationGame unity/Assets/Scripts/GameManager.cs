@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MiniGame2.Events;
 
 public class GameManager : MonoBehaviour
 {
 
-    [SerializeField]
-    private static GameStateScriptableObject.GameState gameState;
+    public static GameStateScriptableObject.GameState gameState;
 
     // Update is called once per frame
     void Update()
@@ -18,11 +18,13 @@ public class GameManager : MonoBehaviour
                 Nothing happens until player gives some sort of input to start the level. 
                 Transitions into gameplay-state. */
                 break;
+
             #region maingameplay
             case GameStateScriptableObject.GameState.mainGameplayLoop:
                 //Main logic of the game goes on here. The player has control over Zoe. 
                 break;
             #endregion maingameplay
+
             case GameStateScriptableObject.GameState.levelLoss:
                 /*Fade to black, return all objects in scene to their initial states. 
                 “Reload” scene and fade back into level-start state. 
@@ -41,6 +43,7 @@ public class GameManager : MonoBehaviour
                 Time.timeScale = 0;
 
                 break;
+
         }
     }
 
