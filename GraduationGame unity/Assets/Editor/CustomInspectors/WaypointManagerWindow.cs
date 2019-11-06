@@ -8,10 +8,11 @@ public class WaypointManagerWindow : EditorWindow
     [MenuItem("Tools/Waypoint Editor")]
     public static void open()
     {
-        GetWindow<WaypointManagerWindow>();
+        WaypointManagerWindow window = GetWindow<WaypointManagerWindow>();
     }
 
     public Transform waypointRoot;
+
 
     public void OnGUI()
     {
@@ -33,23 +34,38 @@ public class WaypointManagerWindow : EditorWindow
 
     void DrawButtons()
     {
-        if(GUILayout.Button("create Waypoint"))
+        if(GUILayout.Button("Ping Waypoint Root"))
         {
-            CreateWaypoint();
+            EditorGUIUtility.PingObject(waypointRoot.gameObject);
         }
+        
+
+        EditorGUILayout.Space();
+        EditorGUILayout.Space();
+
         if(Selection.activeGameObject != null && Selection.activeGameObject.GetComponent<Waypoint>())
         {
-            if(GUILayout.Button("Create waypoint before"))
+            if(GUILayout.Button("Create waypoint before", GUILayout.ExpandHeight(true), 
+                GUILayout.MaxHeight(EditorGUIUtility.singleLineHeight * 2)))
             {
                 createWaypointBefore();
             }
-            if(GUILayout.Button("Create waypoint after"))
+            if(GUILayout.Button("Create waypoint after", GUILayout.ExpandHeight(true), 
+                GUILayout.MaxHeight(EditorGUIUtility.singleLineHeight*2)))
             {
                 createWaypointAfter();
             }
+            EditorGUILayout.Space();
             if(GUILayout.Button("Remove waypoint"))
             {
                 removeWaypoint();
+            }
+        }
+        else
+        {
+            if(GUILayout.Button("create Waypoint"))
+            {
+                CreateWaypoint();
             }
         }
     }
@@ -115,7 +131,7 @@ public class WaypointManagerWindow : EditorWindow
         }
 
         selectedWaypoint.nextWaypoint = newWaypoint;
-        newWaypoint.transform.SetSiblingIndex(selectedWaypoint.transform.GetSiblingIndex());
+        newWaypoint.transform.SetSiblingIndex(selectedWaypoint.transform.GetSiblingIndex()+1);
 
         Selection.activeGameObject = newWaypoint.gameObject;
     }
