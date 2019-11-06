@@ -17,10 +17,10 @@ MonoBehaviour:
   hangGravityMultiplier: 3
   fallGravityMultiplier: 3
   dropGravityMultiplier: 3
-  maxMoveSpeed: 8
+  maxMoveSpeed: 10
   StableMovementSharpness: 7
   OrientationSharpness: 10
-  rampUpTime: 2
+  rampUpTime: 1
   rampDownTime: 0.5
   rampUpCurve:
     serializedVersion: 2
@@ -86,13 +86,31 @@ MonoBehaviour:
   JumpPostGroundingGraceTime: 0.2
   idleJumpHeight: 1.5
   idleAirMoveSpeed: 5
-  slideMoveSpeed: 20
+  slideMoveSpeed: 10
   slideJumpHeight: 1.5
-  slideDuration: 2
-  decelerateWhileSliding: 0
+  slideDuration: 1.5
+  decelerateWhileSliding: 1
   slideCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0008022748
+      value: 0.60183144
+      inSlope: 0.047149412
+      outSlope: 0.047149412
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.9944458
+      value: 0.32657623
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
