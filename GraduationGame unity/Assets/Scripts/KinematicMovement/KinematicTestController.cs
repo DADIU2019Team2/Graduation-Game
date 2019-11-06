@@ -14,6 +14,7 @@ namespace KinematicTest.controller
         Sliding,
         LedgeGrabbing,
         Tired,
+        Falling,
     }
 
     public struct PlayerCharacterInputs
@@ -95,6 +96,11 @@ namespace KinematicTest.controller
         private float graceTimeBeforeHangAgain = 1f;
         private float timeAtLastLedgeGrab = 0f;
         private bool jumpFromWallRequested = false;
+        private float ledgeGrabJumpHeight = 2;
+        private float ledgeGrabAirMoveSpeed = 5;
+        [SerializeField]
+        private bool forward;
+
 
         // Settings
         public PlayerControllerSettings settings;
@@ -124,8 +130,9 @@ namespace KinematicTest.controller
             fallGravity = settings.fallGravityMultiplier;
             dropGravity = settings.dropGravityMultiplier;
             hangTimeVelocityThreshold = settings.hangTimeVelocityThreshold;
-
-            hangTime = settings.hangTime;
+            ledgeGrabJumpHeight = settings.ledgeGrabForwardJumpHeight;
+            ledgeGrabAirMoveSpeed = settings.ledgeGrabForwardAirMoveSpeed;
+            //hangTime = settings.hangTime;
             graceTimeBeforeHangAgain = settings.graceTimeBeforeHangAgain;
             StableMovementSharpness = settings.StableMovementSharpness;
             OrientationSharpness = settings.OrientationSharpness;
@@ -215,6 +222,37 @@ namespace KinematicTest.controller
                         MaxStableMoveSpeed = 0;
                         break;
                 }
+                case PlayerStates.Tired:
+                    {
+                        stopped = true;
+                        rampingDown = false;
+                        MaxStableMoveSpeed = 0f;
+                        curveStep = 0f;
+                        if (forward)
+                        {
+                            MaxAirMoveSpeed = settings.ledgeGrabForwardAirMoveSpeed;
+                            JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.ledgeGrabForwardJumpHeight * settings.baseGravity *
+                                               Motor.Capsule.height);
+                        }
+                        else
+                        {
+                            MaxAirMoveSpeed = settings.ledgeGrabBackwardsAirMoveSpeed;
+                            JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.ledgeGrabBackwardsJumpHeight * settings.baseGravity *
+                                               Motor.Capsule.height);
+                        }
+                        
+                        
+                        break;
+                    }
+                case PlayerStates.Falling:
+                    {
+                        stopped = true;
+                        rampingDown = false;
+                        MaxAirMoveSpeed = 0;
+                        MaxStableMoveSpeed = 0f;
+                        curveStep = 0f;
+                        break;
+                    }
             }
         }
 
@@ -260,6 +298,10 @@ namespace KinematicTest.controller
             {
                 TransitionToState(PlayerStates.Sliding);
             }
+            if (inputs.slideDown && CurrentCharacterState == PlayerStates.LedgeGrabbing)
+            {
+                TransitionToState(PlayerStates.Falling);
+            }
 
             if (inputs.crouchDown)
             {
@@ -269,6 +311,8 @@ namespace KinematicTest.controller
             {
                 MeshRoot.localScale = new Vector3(1f, 1f, 1f);
             }
+
+            
 
             if (canChangedirection && inputs.changeDirection)
             {
@@ -290,6 +334,18 @@ namespace KinematicTest.controller
 
                 //isRunningRight = !isRunningRight;
             }
+            if (CurrentCharacterState == PlayerStates.LedgeGrabbing && inputs.changeDirection)
+            {
+                forward = false;
+                TransitionToState(PlayerStates.Tired);
+                rampingDown = false;
+                curveStep = 0;
+                runningRight = runningRight * -1;
+                jumpFromWallRequested = true;
+                _timeSinceJumpRequested = 0f;
+                _jumpRequested = true;
+                
+            }
 
             //runningRight = isRunningRight ? 1 : -1 ;
             // Clamp input
@@ -306,7 +362,8 @@ namespace KinematicTest.controller
                 _jumpRequested = true;
                 if (CurrentCharacterState == PlayerStates.LedgeGrabbing)
                 {
-                    TransitionToState(PlayerStates.Idling);
+                    forward = true;
+                    TransitionToState(PlayerStates.Tired);
                     jumpFromWallRequested = true;
                 }
             }
@@ -518,7 +575,13 @@ namespace KinematicTest.controller
                             AirAccelerationSpeed = 0;
                             break;
                         }
-                        
+                        case PlayerStates.Tired:
+                        {
+                            targetMovementVelocity = _moveInputVector * MaxAirMoveSpeed;
+                            AirAccelerationSpeed = MaxAirMoveSpeed;
+                            break;
+                        }
+
                     }
 
 
@@ -748,7 +811,7 @@ namespace KinematicTest.controller
             jumpInitiated = false;
             Debug.Log("Landed");
 
-            if (CurrentCharacterState == PlayerStates.Idling)
+            if (CurrentCharacterState == PlayerStates.Idling || CurrentCharacterState == PlayerStates.Falling || CurrentCharacterState == PlayerStates.Tired)
             {
                 stopped = false;
                 TransitionToState(PlayerStates.Running);

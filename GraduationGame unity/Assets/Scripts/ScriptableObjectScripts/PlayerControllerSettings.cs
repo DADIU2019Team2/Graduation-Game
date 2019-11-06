@@ -70,11 +70,19 @@ public class PlayerControllerSettings : ScriptableObject
     public AnimationCurve slideCurve;
 
     [Header("Ledge Grabbing Settings")]
-    [Tooltip("How long zoe can ledge grab for")]
-    public float hangTime;
+    //[Tooltip("How long zoe can ledge grab for")]
+    //public float hangTime;
     [Tooltip("How much time needs to pass before zoe can hang from a ledge again")]
     public float graceTimeBeforeHangAgain;
-    
+    [Tooltip("Forward Jump height while ledge grabbing in Zoés")]
+    public float ledgeGrabForwardJumpHeight;
+    [Tooltip("Forward Jump move speed when initiated from ledge grab")]
+    public float ledgeGrabForwardAirMoveSpeed;
+    [Tooltip("Backwards Jump height while ledge grabbing in Zoés")]
+    public float ledgeGrabBackwardsJumpHeight;
+    [Tooltip("Backwards Jump move speed when initiated from ledge grab")]
+    public float ledgeGrabBackwardsAirMoveSpeed;
+
 
     [Header("Misc")]
     [Tooltip("Toggle to allow midair direction changes")]
