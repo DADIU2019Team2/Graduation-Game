@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -21742,6 +21742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae56c4635b3e4654fa68ad93aa45ef21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputText: {fileID: 0}
   swipeAngleThresholds: {fileID: 11400000, guid: 83497409de7665447853fc82b49edcaf,
     type: 2}
   OnSwipeEvent: {fileID: 11400000, guid: 6979c2a72ad2d16438213c3e69114b58, type: 2}
@@ -27410,6 +27411,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5600471502235337036, guid: cd001a0d229b66042813363a7c6fabd2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760159104967773388, guid: cd001a0d229b66042813363a7c6fabd2,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760159104967773388, guid: cd001a0d229b66042813363a7c6fabd2,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760159104967773388, guid: cd001a0d229b66042813363a7c6fabd2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760159104967773388, guid: cd001a0d229b66042813363a7c6fabd2,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
@@ -68947,6 +68968,12 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.00000011920929
       objectReference: {fileID: 0}
+    - target: {fileID: 5998060723252850069, guid: f1d47304afcd5914a9b89fc0f6d4f675,
+        type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 82fc3eaa33a164c5d816be7683291ea4,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d47304afcd5914a9b89fc0f6d4f675, type: 3}
 --- !u!4 &1909949878 stripped
