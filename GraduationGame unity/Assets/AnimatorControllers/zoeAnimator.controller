@@ -106,23 +106,23 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 3537694346809657662}
-    m_Position: {x: 130, y: 250, z: 0}
+    m_Position: {x: 100, y: 80, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: 9188868114532230474}
-    m_Position: {x: 680, y: -150, z: 0}
+    m_Position: {x: 600, y: -260, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 1334430376803511668}
-    m_Position: {x: 1050, y: 250, z: 0}
+    m_Position: {x: 1110, y: 80, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 5871482051429658816}
-    m_Position: {x: 1050, y: 430, z: 0}
+    m_Position: {x: 1110, y: 290, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: -9218415108530360330}
-    m_Position: {x: 690, y: 720, z: 0}
+    m_Position: {x: 590, y: 480, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 5023731733140334419}
-    m_Position: {x: 350, y: 710, z: 0}
+    m_Position: {x: 300, y: 480, z: 0}
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
@@ -146,8 +146,8 @@ AnimatorStateMachine:
     - {fileID: 6527682203130404689}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 30, y: -50, z: 0}
-  m_EntryPosition: {x: -240, y: 250, z: 0}
-  m_ExitPosition: {x: 1480, y: 220, z: 0}
+  m_EntryPosition: {x: -180, y: 80, z: 0}
+  m_ExitPosition: {x: 1320, y: 180, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 3537694346809657662}
 --- !u!1101 &-7152097229796366090
@@ -697,7 +697,13 @@ AnimatorController:
   m_PrefabAsset: {fileID: 0}
   m_Name: zoeAnimator
   serializedVersion: 5
-  m_AnimatorParameters: []
+  m_AnimatorParameters:
+  - m_Name: Blend
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
