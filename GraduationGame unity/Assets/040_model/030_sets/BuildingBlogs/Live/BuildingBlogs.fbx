@@ -1,0 +1,1077 @@
+; FBX 7.5.0 project file
+; Copyright (C) 1997-2010 Autodesk Inc. and/or its licensors.
+; All rights reserved.
+; ----------------------------------------------------
+
+FBXHeaderExtension:  {
+	FBXHeaderVersion: 1003
+	FBXVersion: 7500
+	CreationTimeStamp:  {
+		Version: 1000
+		Year: 2019
+		Month: 11
+		Day: 4
+		Hour: 14
+		Minute: 52
+		Second: 9
+		Millisecond: 167
+	}
+	Creator: "FBX SDK/FBX Plugins version 2016.1.1"
+	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
+		Type: "UserData"
+		Version: 100
+		MetaData:  {
+			Version: 100
+			Title: ""
+			Subject: ""
+			Author: ""
+			Keywords: ""
+			Revision: ""
+			Comment: ""
+		}
+		Properties70:  {
+			P: "DocumentUrl", "KString", "Url", "", "C:\Users\mich3c99\Desktop\Dadiu\Sci-Fi_Houses\BuildingBlogs"
+			P: "SrcDocumentUrl", "KString", "Url", "", "C:\Users\mich3c99\Desktop\Dadiu\Sci-Fi_Houses\BuildingBlogs"
+			P: "Original", "Compound", "", ""
+			P: "Original|ApplicationVendor", "KString", "", "", "SideFX Software"
+			P: "Original|ApplicationName", "KString", "", "", "Houdini"
+			P: "Original|ApplicationVersion", "KString", "", "", "17.5.425"
+			P: "Original|DateTime_GMT", "DateTime", "", "", ""
+			P: "Original|FileName", "KString", "", "", ""
+			P: "LastSaved", "Compound", "", ""
+			P: "LastSaved|ApplicationVendor", "KString", "", "", "SideFX Software"
+			P: "LastSaved|ApplicationName", "KString", "", "", "Houdini"
+			P: "LastSaved|ApplicationVersion", "KString", "", "", "17.5.425"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", ""
+		}
+	}
+}
+GlobalSettings:  {
+	Version: 1000
+	Properties70:  {
+		P: "UpAxis", "int", "Integer", "",1
+		P: "UpAxisSign", "int", "Integer", "",1
+		P: "FrontAxis", "int", "Integer", "",2
+		P: "FrontAxisSign", "int", "Integer", "",1
+		P: "CoordAxis", "int", "Integer", "",0
+		P: "CoordAxisSign", "int", "Integer", "",1
+		P: "OriginalUpAxis", "int", "Integer", "",-1
+		P: "OriginalUpAxisSign", "int", "Integer", "",1
+		P: "UnitScaleFactor", "double", "Number", "",1
+		P: "OriginalUnitScaleFactor", "double", "Number", "",1
+		P: "AmbientColor", "ColorRGB", "Color", "",0,0,0
+		P: "DefaultCamera", "KString", "", "", "Producer Perspective"
+		P: "TimeMode", "enum", "", "",0
+		P: "TimeProtocol", "enum", "", "",2
+		P: "SnapOnFrameMode", "enum", "", "",0
+		P: "TimeSpanStart", "KTime", "Time", "",0
+		P: "TimeSpanStop", "KTime", "Time", "",46186158000
+		P: "CustomFrameRate", "double", "Number", "",-1
+		P: "TimeMarker", "Compound", "", ""
+		P: "CurrentTimeMarker", "int", "Integer", "",-1
+	}
+}
+
+; Documents Description
+;------------------------------------------------------------------
+
+Documents:  {
+	Count: 1
+	Document: 2121623808, "", "Scene" {
+		Properties70:  {
+			P: "SourceObject", "object", "", ""
+			P: "ActiveAnimStackName", "KString", "", "", ""
+		}
+		RootNode: 0
+	}
+}
+
+; Document References
+;------------------------------------------------------------------
+
+References:  {
+}
+
+; Object definitions
+;------------------------------------------------------------------
+
+Definitions:  {
+	Version: 100
+	Count: 65
+	ObjectType: "GlobalSettings" {
+		Count: 1
+	}
+	ObjectType: "Model" {
+		Count: 32
+		PropertyTemplate: "FbxNode" {
+			Properties70:  {
+				P: "QuaternionInterpolate", "enum", "", "",0
+				P: "RotationOffset", "Vector3D", "Vector", "",0,0,0
+				P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingOffset", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingPivot", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationActive", "bool", "", "",0
+				P: "TranslationMin", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationMax", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationMinX", "bool", "", "",0
+				P: "TranslationMinY", "bool", "", "",0
+				P: "TranslationMinZ", "bool", "", "",0
+				P: "TranslationMaxX", "bool", "", "",0
+				P: "TranslationMaxY", "bool", "", "",0
+				P: "TranslationMaxZ", "bool", "", "",0
+				P: "RotationOrder", "enum", "", "",0
+				P: "RotationSpaceForLimitOnly", "bool", "", "",0
+				P: "RotationStiffnessX", "double", "Number", "",0
+				P: "RotationStiffnessY", "double", "Number", "",0
+				P: "RotationStiffnessZ", "double", "Number", "",0
+				P: "AxisLen", "double", "Number", "",10
+				P: "PreRotation", "Vector3D", "Vector", "",0,0,0
+				P: "PostRotation", "Vector3D", "Vector", "",0,0,0
+				P: "RotationActive", "bool", "", "",0
+				P: "RotationMin", "Vector3D", "Vector", "",0,0,0
+				P: "RotationMax", "Vector3D", "Vector", "",0,0,0
+				P: "RotationMinX", "bool", "", "",0
+				P: "RotationMinY", "bool", "", "",0
+				P: "RotationMinZ", "bool", "", "",0
+				P: "RotationMaxX", "bool", "", "",0
+				P: "RotationMaxY", "bool", "", "",0
+				P: "RotationMaxZ", "bool", "", "",0
+				P: "InheritType", "enum", "", "",0
+				P: "ScalingActive", "bool", "", "",0
+				P: "ScalingMin", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingMax", "Vector3D", "Vector", "",1,1,1
+				P: "ScalingMinX", "bool", "", "",0
+				P: "ScalingMinY", "bool", "", "",0
+				P: "ScalingMinZ", "bool", "", "",0
+				P: "ScalingMaxX", "bool", "", "",0
+				P: "ScalingMaxY", "bool", "", "",0
+				P: "ScalingMaxZ", "bool", "", "",0
+				P: "GeometricTranslation", "Vector3D", "Vector", "",0,0,0
+				P: "GeometricRotation", "Vector3D", "Vector", "",0,0,0
+				P: "GeometricScaling", "Vector3D", "Vector", "",1,1,1
+				P: "MinDampRangeX", "double", "Number", "",0
+				P: "MinDampRangeY", "double", "Number", "",0
+				P: "MinDampRangeZ", "double", "Number", "",0
+				P: "MaxDampRangeX", "double", "Number", "",0
+				P: "MaxDampRangeY", "double", "Number", "",0
+				P: "MaxDampRangeZ", "double", "Number", "",0
+				P: "MinDampStrengthX", "double", "Number", "",0
+				P: "MinDampStrengthY", "double", "Number", "",0
+				P: "MinDampStrengthZ", "double", "Number", "",0
+				P: "MaxDampStrengthX", "double", "Number", "",0
+				P: "MaxDampStrengthY", "double", "Number", "",0
+				P: "MaxDampStrengthZ", "double", "Number", "",0
+				P: "PreferedAngleX", "double", "Number", "",0
+				P: "PreferedAngleY", "double", "Number", "",0
+				P: "PreferedAngleZ", "double", "Number", "",0
+				P: "LookAtProperty", "object", "", ""
+				P: "UpVectorProperty", "object", "", ""
+				P: "Show", "bool", "", "",1
+				P: "NegativePercentShapeSupport", "bool", "", "",1
+				P: "DefaultAttributeIndex", "int", "Integer", "",-1
+				P: "Freeze", "bool", "", "",0
+				P: "LODBox", "bool", "", "",0
+				P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+				P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+				P: "Lcl Scaling", "Lcl Scaling", "", "A",1,1,1
+				P: "Visibility", "Visibility", "", "A",1
+				P: "Visibility Inheritance", "Visibility Inheritance", "", "",1
+			}
+		}
+	}
+	ObjectType: "Geometry" {
+		Count: 32
+		PropertyTemplate: "FbxMesh" {
+			Properties70:  {
+				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
+				P: "BBoxMin", "Vector3D", "Vector", "",0,0,0
+				P: "BBoxMax", "Vector3D", "Vector", "",0,0,0
+				P: "Primary Visibility", "bool", "", "",1
+				P: "Casts Shadows", "bool", "", "",1
+				P: "Receive Shadows", "bool", "", "",1
+			}
+		}
+	}
+}
+
+; Object properties
+;------------------------------------------------------------------
+
+Objects:  {
+	Geometry: 2004754944, "Geometry::geo2", "Mesh" {
+		Vertices: *24 {
+			a: -2,0,-2,2,0,-2,2,0,2,-2,0,2,-2,4,-2,2,4,-2,2,4,2,-2,4,2
+		} 
+		PolygonVertexIndex: *24 {
+			a: 0,4,5,-2,1,5,6,-3,2,6,7,-4,3,7,4,-1,3,0,1,-3,4,7,6,-6
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2004759552, "Geometry::geo6", "Mesh" {
+		Vertices: *24 {
+			a: -2,0,0,2,0,0,2,0,4,-2,0,4,-2,4,0,2,4,0,2,4,4,-2,4,4
+		} 
+		PolygonVertexIndex: *24 {
+			a: 0,4,5,-2,1,5,6,-3,2,6,7,-4,3,7,4,-1,3,0,1,-3,4,7,6,-6
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2004755456, "Geometry::geo10", "Mesh" {
+		Vertices: *24 {
+			a: -2,0,0,2,0,0,2,0,4,-2,0,4,-2,4,0,2,4,0,2,4,4,-2,4,4
+		} 
+		PolygonVertexIndex: *24 {
+			a: 0,4,5,-2,1,5,6,-3,2,6,7,-4,3,7,4,-1,3,0,1,-3,4,7,6,-6
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2004762112, "Geometry::geo14", "Mesh" {
+		Vertices: *24 {
+			a: -2,0,0,2,0,0,2,0,4,-2,0,4,-2,4,0,2,4,0,2,4,4,-2,4,4
+		} 
+		PolygonVertexIndex: *24 {
+			a: 0,4,5,-2,1,5,6,-3,2,6,7,-4,3,7,4,-1,3,0,1,-3,4,7,6,-6
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2004753408, "Geometry::geo7", "Mesh" {
+		Vertices: *24 {
+			a: -2,0,0,2,0,0,2,0,4,-2,0,4,-2,4,0,2,4,0,2,4,4,-2,4,4
+		} 
+		PolygonVertexIndex: *24 {
+			a: 0,4,5,-2,1,5,6,-3,2,6,7,-4,3,7,4,-1,3,0,1,-3,4,7,6,-6
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2004756480, "Geometry::geo11", "Mesh" {
+		Vertices: *24 {
+			a: -2,0,0,2,0,0,2,0,4,-2,0,4,-2,4,0,2,4,0,2,4,4,-2,4,4
+		} 
+		PolygonVertexIndex: *24 {
+			a: 0,4,5,-2,1,5,6,-3,2,6,7,-4,3,7,4,-1,3,0,1,-3,4,7,6,-6
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2004753920, "Geometry::geo15", "Mesh" {
+		Vertices: *24 {
+			a: -2,0,0,2,0,0,2,0,4,-2,0,4,-2,4,0,2,4,0,2,4,4,-2,4,4
+		} 
+		PolygonVertexIndex: *24 {
+			a: 0,4,5,-2,1,5,6,-3,2,6,7,-4,3,7,4,-1,3,0,1,-3,4,7,6,-6
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2004761600, "Geometry::geo3", "Mesh" {
+		Vertices: *24 {
+			a: -2,0,0,2,0,0,2,0,4,-2,0,4,-2,4,0,2,4,0,2,4,4,-2,4,4
+		} 
+		PolygonVertexIndex: *24 {
+			a: 0,4,5,-2,1,5,6,-3,2,6,7,-4,3,7,4,-1,3,0,1,-3,4,7,6,-6
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2705497088, "Geometry::geo9", "Mesh" {
+		Vertices: *24 {
+			a: -2,0,0,2,0,0,2,0,4,-2,0,4,-2,4,0,2,4,0,2,4,4,-2,4,4
+		} 
+		PolygonVertexIndex: *24 {
+			a: 0,4,5,-2,1,5,6,-3,2,6,7,-4,3,7,4,-1,3,0,1,-3,4,7,6,-6
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2705497600, "Geometry::geo13", "Mesh" {
+		Vertices: *24 {
+			a: -2,0,0,2,0,0,2,0,4,-2,0,4,-2,4,0,2,4,0,2,4,4,-2,4,4
+		} 
+		PolygonVertexIndex: *24 {
+			a: 0,4,5,-2,1,5,6,-3,2,6,7,-4,3,7,4,-1,3,0,1,-3,4,7,6,-6
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2705498112, "Geometry::geo17", "Mesh" {
+		Vertices: *24 {
+			a: -2,0,0,2,0,0,2,0,4,-2,0,4,-2,4,0,2,4,0,2,4,4,-2,4,4
+		} 
+		PolygonVertexIndex: *24 {
+			a: 0,4,5,-2,1,5,6,-3,2,6,7,-4,3,7,4,-1,3,0,1,-3,4,7,6,-6
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2705499648, "Geometry::geo5", "Mesh" {
+		Vertices: *24 {
+			a: -2,0,0,2,0,0,2,0,4,-2,0,4,-2,4,0,2,4,0,2,4,4,-2,4,4
+		} 
+		PolygonVertexIndex: *24 {
+			a: 0,4,5,-2,1,5,6,-3,2,6,7,-4,3,7,4,-1,3,0,1,-3,4,7,6,-6
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2705498624, "Geometry::geo12", "Mesh" {
+		Vertices: *24 {
+			a: -2,0,0,2,0,0,2,0,4,-2,0,4,-2,4,0,2,4,0,2,4,4,-2,4,4
+		} 
+		PolygonVertexIndex: *24 {
+			a: 0,4,5,-2,1,5,6,-3,2,6,7,-4,3,7,4,-1,3,0,1,-3,4,7,6,-6
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2705499136, "Geometry::geo18", "Mesh" {
+		Vertices: *24 {
+			a: -2,0,-2,2,0,-2,2,0,2,-2,0,2,-2,4,-2,2,4,-2,2,4,2,-2,4,2
+		} 
+		PolygonVertexIndex: *24 {
+			a: 0,4,5,-2,1,5,6,-3,2,6,7,-4,3,7,4,-1,3,0,1,-3,4,7,6,-6
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2705494016, "Geometry::geo8", "Mesh" {
+		Vertices: *24 {
+			a: -2,0,0,2,0,0,2,0,4,-2,0,4,-2,4,0,2,4,0,2,4,4,-2,4,4
+		} 
+		PolygonVertexIndex: *24 {
+			a: 0,4,5,-2,1,5,6,-3,2,6,7,-4,3,7,4,-1,3,0,1,-3,4,7,6,-6
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2705494528, "Geometry::geo4", "Mesh" {
+		Vertices: *24 {
+			a: -2,0,0,2,0,0,2,0,4,-2,0,4,-2,4,0,2,4,0,2,4,4,-2,4,4
+		} 
+		PolygonVertexIndex: *24 {
+			a: 0,4,5,-2,1,5,6,-3,2,6,7,-4,3,7,4,-1,3,0,1,-3,4,7,6,-6
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2705495040, "Geometry::geo19", "Mesh" {
+		Vertices: *12 {
+			a: 2,0,0,2,0,4,2,4,0,2,4,4
+		} 
+		PolygonVertexIndex: *4 {
+			a: 0,2,3,-2
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2705496576, "Geometry::geo20", "Mesh" {
+		Vertices: *12 {
+			a: 2,0,0,2,0,4,2,4,0,2,4,4
+		} 
+		PolygonVertexIndex: *4 {
+			a: 0,2,3,-2
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2703211520, "Geometry::geo21", "Mesh" {
+		Vertices: *12 {
+			a: 2,0,0,2,0,4,2,4,0,2,4,4
+		} 
+		PolygonVertexIndex: *4 {
+			a: 0,2,3,-2
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2703211008, "Geometry::geo22", "Mesh" {
+		Vertices: *12 {
+			a: 2,0,0,2,0,4,2,4,0,2,4,4
+		} 
+		PolygonVertexIndex: *4 {
+			a: 0,2,3,-2
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2703210496, "Geometry::geo26", "Mesh" {
+		Vertices: *12 {
+			a: 2,0,0,2,0,4,2,4,0,2,4,4
+		} 
+		PolygonVertexIndex: *4 {
+			a: 0,2,3,-2
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2703209984, "Geometry::geo25", "Mesh" {
+		Vertices: *12 {
+			a: 2,0,0,2,0,4,2,4,0,2,4,4
+		} 
+		PolygonVertexIndex: *4 {
+			a: 0,2,3,-2
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2703209472, "Geometry::geo24", "Mesh" {
+		Vertices: *12 {
+			a: 2,0,0,2,0,4,2,4,0,2,4,4
+		} 
+		PolygonVertexIndex: *4 {
+			a: 0,2,3,-2
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2703208960, "Geometry::geo23", "Mesh" {
+		Vertices: *12 {
+			a: 2,0,0,2,0,4,2,4,0,2,4,4
+		} 
+		PolygonVertexIndex: *4 {
+			a: 0,2,3,-2
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2703208448, "Geometry::geo30", "Mesh" {
+		Vertices: *12 {
+			a: 2,0,0,2,0,4,2,4,0,2,4,4
+		} 
+		PolygonVertexIndex: *4 {
+			a: 0,2,3,-2
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2703207424, "Geometry::geo29", "Mesh" {
+		Vertices: *12 {
+			a: 2,0,0,2,0,4,2,4,0,2,4,4
+		} 
+		PolygonVertexIndex: *4 {
+			a: 0,2,3,-2
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2703206912, "Geometry::geo28", "Mesh" {
+		Vertices: *12 {
+			a: 2,0,0,2,0,4,2,4,0,2,4,4
+		} 
+		PolygonVertexIndex: *4 {
+			a: 0,2,3,-2
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2703206400, "Geometry::geo27", "Mesh" {
+		Vertices: *12 {
+			a: 2,0,0,2,0,4,2,4,0,2,4,4
+		} 
+		PolygonVertexIndex: *4 {
+			a: 0,2,3,-2
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2703205888, "Geometry::geo34", "Mesh" {
+		Vertices: *12 {
+			a: 2,0,0,2,0,4,2,4,0,2,4,4
+		} 
+		PolygonVertexIndex: *4 {
+			a: 0,2,3,-2
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2703205376, "Geometry::geo33", "Mesh" {
+		Vertices: *12 {
+			a: 2,0,0,2,0,4,2,4,0,2,4,4
+		} 
+		PolygonVertexIndex: *4 {
+			a: 0,2,3,-2
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2703204864, "Geometry::geo32", "Mesh" {
+		Vertices: *12 {
+			a: 2,0,0,2,0,4,2,4,0,2,4,4
+		} 
+		PolygonVertexIndex: *4 {
+			a: 0,2,3,-2
+		} 
+		GeometryVersion: 124
+	}
+	Geometry: 2703204352, "Geometry::geo31", "Mesh" {
+		Vertices: *12 {
+			a: 2,0,0,2,0,4,2,4,0,2,4,4
+		} 
+		PolygonVertexIndex: *4 {
+			a: 0,2,3,-2
+		} 
+		GeometryVersion: 124
+	}
+	Model: 2703398400, "Model::geo2", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,2
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703395712, "Model::geo6", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,4,2
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703393024, "Model::geo10", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,8,2
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703291776, "Model::geo14", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,12,2
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703289088, "Model::geo7", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,4,-2
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703286400, "Model::geo11", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,8,-2
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703283712, "Model::geo15", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,12,-2
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703281024, "Model::geo3", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,2
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703278336, "Model::geo9", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,4,-6
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703259008, "Model::geo13", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,8,-6
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703256320, "Model::geo17", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,12,-6
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703253632, "Model::geo5", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,-6
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703250944, "Model::geo12", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,8,-10
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703248256, "Model::geo18", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,12,-8
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703245568, "Model::geo8", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,4,-10
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703242624, "Model::geo4", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,-10
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703239936, "Model::geo19", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-4,0,-10
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703237248, "Model::geo20", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-4,0,-6
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703234560, "Model::geo21", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-4,0,-2
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703231872, "Model::geo22", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-4,0,2
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703229184, "Model::geo26", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-4,4,2
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703127936, "Model::geo25", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-4,4,-10
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703125248, "Model::geo24", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-4,4,-2
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703122560, "Model::geo23", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-4,4,-6
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703119872, "Model::geo30", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-4,8,2
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703117184, "Model::geo29", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-4,8,-6
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703114496, "Model::geo28", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-4,8,-10
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703078784, "Model::geo27", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-4,8,-2
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703076096, "Model::geo34", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-4,12,-10
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703073408, "Model::geo33", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-4,12,2
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703070720, "Model::geo32", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-4,12,-2
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2703065344, "Model::geo31", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-4,12,-6
+			P: "Visibility Inheritance", "Visibility Inheritance", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+}
+
+; Object connections
+;------------------------------------------------------------------
+
+Connections:  {
+	
+	;Model::geo2, Model::RootNode
+	C: "OO",2703398400,0
+	
+	;Geometry::geo2, Model::geo2
+	C: "OO",2004754944,2703398400
+	
+	;Model::geo6, Model::geo2
+	C: "OO",2703395712,2703398400
+	
+	;Model::geo10, Model::geo2
+	C: "OO",2703393024,2703398400
+	
+	;Model::geo14, Model::geo2
+	C: "OO",2703291776,2703398400
+	
+	;Model::geo7, Model::geo2
+	C: "OO",2703289088,2703398400
+	
+	;Model::geo11, Model::geo2
+	C: "OO",2703286400,2703398400
+	
+	;Model::geo15, Model::geo2
+	C: "OO",2703283712,2703398400
+	
+	;Model::geo3, Model::geo2
+	C: "OO",2703281024,2703398400
+	
+	;Model::geo9, Model::geo2
+	C: "OO",2703278336,2703398400
+	
+	;Model::geo13, Model::geo2
+	C: "OO",2703259008,2703398400
+	
+	;Model::geo17, Model::geo2
+	C: "OO",2703256320,2703398400
+	
+	;Model::geo5, Model::geo2
+	C: "OO",2703253632,2703398400
+	
+	;Model::geo12, Model::geo2
+	C: "OO",2703250944,2703398400
+	
+	;Model::geo18, Model::geo2
+	C: "OO",2703248256,2703398400
+	
+	;Model::geo8, Model::geo2
+	C: "OO",2703245568,2703398400
+	
+	;Model::geo4, Model::geo2
+	C: "OO",2703242624,2703398400
+	
+	;Model::geo19, Model::geo2
+	C: "OO",2703239936,2703398400
+	
+	;Model::geo20, Model::geo2
+	C: "OO",2703237248,2703398400
+	
+	;Model::geo21, Model::geo2
+	C: "OO",2703234560,2703398400
+	
+	;Model::geo22, Model::geo2
+	C: "OO",2703231872,2703398400
+	
+	;Model::geo26, Model::geo2
+	C: "OO",2703229184,2703398400
+	
+	;Model::geo25, Model::geo2
+	C: "OO",2703127936,2703398400
+	
+	;Model::geo24, Model::geo2
+	C: "OO",2703125248,2703398400
+	
+	;Model::geo23, Model::geo2
+	C: "OO",2703122560,2703398400
+	
+	;Model::geo30, Model::geo2
+	C: "OO",2703119872,2703398400
+	
+	;Model::geo29, Model::geo2
+	C: "OO",2703117184,2703398400
+	
+	;Model::geo28, Model::geo2
+	C: "OO",2703114496,2703398400
+	
+	;Model::geo27, Model::geo2
+	C: "OO",2703078784,2703398400
+	
+	;Model::geo34, Model::geo2
+	C: "OO",2703076096,2703398400
+	
+	;Model::geo33, Model::geo2
+	C: "OO",2703073408,2703398400
+	
+	;Model::geo32, Model::geo2
+	C: "OO",2703070720,2703398400
+	
+	;Model::geo31, Model::geo2
+	C: "OO",2703065344,2703398400
+	
+	;Geometry::geo6, Model::geo6
+	C: "OO",2004759552,2703395712
+	
+	;Geometry::geo10, Model::geo10
+	C: "OO",2004755456,2703393024
+	
+	;Geometry::geo14, Model::geo14
+	C: "OO",2004762112,2703291776
+	
+	;Geometry::geo7, Model::geo7
+	C: "OO",2004753408,2703289088
+	
+	;Geometry::geo11, Model::geo11
+	C: "OO",2004756480,2703286400
+	
+	;Geometry::geo15, Model::geo15
+	C: "OO",2004753920,2703283712
+	
+	;Geometry::geo3, Model::geo3
+	C: "OO",2004761600,2703281024
+	
+	;Geometry::geo9, Model::geo9
+	C: "OO",2705497088,2703278336
+	
+	;Geometry::geo13, Model::geo13
+	C: "OO",2705497600,2703259008
+	
+	;Geometry::geo17, Model::geo17
+	C: "OO",2705498112,2703256320
+	
+	;Geometry::geo5, Model::geo5
+	C: "OO",2705499648,2703253632
+	
+	;Geometry::geo12, Model::geo12
+	C: "OO",2705498624,2703250944
+	
+	;Geometry::geo18, Model::geo18
+	C: "OO",2705499136,2703248256
+	
+	;Geometry::geo8, Model::geo8
+	C: "OO",2705494016,2703245568
+	
+	;Geometry::geo4, Model::geo4
+	C: "OO",2705494528,2703242624
+	
+	;Geometry::geo19, Model::geo19
+	C: "OO",2705495040,2703239936
+	
+	;Geometry::geo20, Model::geo20
+	C: "OO",2705496576,2703237248
+	
+	;Geometry::geo21, Model::geo21
+	C: "OO",2703211520,2703234560
+	
+	;Geometry::geo22, Model::geo22
+	C: "OO",2703211008,2703231872
+	
+	;Geometry::geo26, Model::geo26
+	C: "OO",2703210496,2703229184
+	
+	;Geometry::geo25, Model::geo25
+	C: "OO",2703209984,2703127936
+	
+	;Geometry::geo24, Model::geo24
+	C: "OO",2703209472,2703125248
+	
+	;Geometry::geo23, Model::geo23
+	C: "OO",2703208960,2703122560
+	
+	;Geometry::geo30, Model::geo30
+	C: "OO",2703208448,2703119872
+	
+	;Geometry::geo29, Model::geo29
+	C: "OO",2703207424,2703117184
+	
+	;Geometry::geo28, Model::geo28
+	C: "OO",2703206912,2703114496
+	
+	;Geometry::geo27, Model::geo27
+	C: "OO",2703206400,2703078784
+	
+	;Geometry::geo34, Model::geo34
+	C: "OO",2703205888,2703076096
+	
+	;Geometry::geo33, Model::geo33
+	C: "OO",2703205376,2703073408
+	
+	;Geometry::geo32, Model::geo32
+	C: "OO",2703204864,2703070720
+	
+	;Geometry::geo31, Model::geo31
+	C: "OO",2703204352,2703065344
+}
+;Takes section
+;----------------------------------------------------
+
+Takes:  {
+	Current: ""
+}

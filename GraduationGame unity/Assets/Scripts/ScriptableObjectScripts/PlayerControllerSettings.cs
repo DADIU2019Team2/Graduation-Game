@@ -56,7 +56,34 @@ public class PlayerControllerSettings : ScriptableObject
     public float idleJumpHeight;
     [Tooltip("Jump move speed when initiated from idle")]
     public float idleAirMoveSpeed;
-    
+
+    [Header("Slide Settings")]
+    [Tooltip("The initial slide speed")]
+    public float slideMoveSpeed;
+    [Tooltip("Jump height while sliding in Zoés")]
+    public float slideJumpHeight;
+    [Tooltip("Slide duration in seconds")]
+    public float slideDuration;
+    [Tooltip("Toggle to allow velocity changes while sliding")]
+    public bool decelerateWhileSliding;
+    [Tooltip("When allowed, this curve will determine the speed change while sliding")]
+    public AnimationCurve slideCurve;
+
+    [Header("Ledge Grabbing Settings")]
+    //[Tooltip("How long zoe can ledge grab for")]
+    //public float hangTime;
+    [Tooltip("How much time needs to pass before zoe can hang from a ledge again")]
+    public float graceTimeBeforeHangAgain;
+    [Tooltip("Forward Jump height while ledge grabbing in Zoés")]
+    public float ledgeGrabForwardJumpHeight;
+    [Tooltip("Forward Jump move speed when initiated from ledge grab")]
+    public float ledgeGrabForwardAirMoveSpeed;
+    [Tooltip("Backwards Jump height while ledge grabbing in Zoés")]
+    public float ledgeGrabBackwardsJumpHeight;
+    [Tooltip("Backwards Jump move speed when initiated from ledge grab")]
+    public float ledgeGrabBackwardsAirMoveSpeed;
+
+
     [Header("Misc")]
     [Tooltip("Toggle to allow midair direction changes")]
     public bool canChangeDirectionsMidair;

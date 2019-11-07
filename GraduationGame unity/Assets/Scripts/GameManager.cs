@@ -1,28 +1,54 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MiniGame2.Events;
 
 public class GameManager : MonoBehaviour
 {
 
-    [SerializeField]
-    private static GameStateScriptableObject.GameState gameState;
+    public static GameStateScriptableObject.GameState gameState;
+
+    // transition related
+    [Header("Transition Related")]
+    public TransitionFader transitionFader;
+    public BoolVariable isSceneLaod;
+    public FloatVariable sceneLoadFadeTime;
+    public FloatVariable blackFadeTime;
+    private bool callOnce;
+    private float transitionTime;
+
+    private void Start()
+    {
+        callOnce = true;
+    }
 
     // Update is called once per frame
     void Update()
     {
+        switch (isSceneLaod.GetBool())
+        {
+            case true:
+                transitionTime = sceneLoadFadeTime.getValue();
+                break;
+            case false:
+                transitionTime = blackFadeTime.getValue();
+                break;
+        }
         switch (gameState)
         {
             case GameStateScriptableObject.GameState.levelStart:
+                //transitionFader.fadeIn(transitionTime, isSceneLaod.GetBool());
                 /*Fade from black. 
                 Nothing happens until player gives some sort of input to start the level. 
                 Transitions into gameplay-state. */
                 break;
+
             #region maingameplay
             case GameStateScriptableObject.GameState.mainGameplayLoop:
                 //Main logic of the game goes on here. The player has control over Zoe. 
                 break;
             #endregion maingameplay
+
             case GameStateScriptableObject.GameState.levelLoss:
                 /*Fade to black, return all objects in scene to their initial states. 
                 “Reload” scene and fade back into level-start state. 
@@ -41,6 +67,7 @@ public class GameManager : MonoBehaviour
                 Time.timeScale = 0;
 
                 break;
+
         }
     }
 
