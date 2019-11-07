@@ -72,6 +72,7 @@ namespace KinematicTest.player
             characterInputs.ledgeGrabHold = Input.GetKey(KeyCode.LeftShift);
             characterInputs.crouchDown = Input.GetKeyDown(KeyCode.S);
             characterInputs.crouchUp = Input.GetKeyUp(KeyCode.S);
+            characterInputs.worldMoveDown = Input.GetKeyDown(KeyCode.M);
             // Apply inputs to character
             Character.SetInputs(ref characterInputs);
         }
