@@ -28,28 +28,21 @@ public class TransitionFader : MonoBehaviour
         isSceneLoad = false;
     }
 
-    private void Update()
+    /*private void Update()
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            fadeOut(10f, false);
+            GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelLoss);
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            fadeIn(10f, false);
+            GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelStart);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //Debug.Log("I should be fading out");
-            GameManager.gameState = GameStateScriptableObject.GameState.levelLoss;
-            //Debug.Log("Game state: " + GameManager.gameState.ToString());
-            if(GameManager.gameState == GameStateScriptableObject.GameState.levelLoss)
-            {
-                //Debug.Log("Begin fade");
-                fadeOut(10f, false);
-            }
+            GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelComplete);
         }
-    }
+    }*/
 
     void disableCanvas()
     {
@@ -135,5 +128,10 @@ public class TransitionFader : MonoBehaviour
             yield return new WaitForSeconds(0);
         }
         //disableCanvas();
+    }
+
+    public float getAlpha()
+    {
+        return canvasGroup.alpha;
     }
 }
