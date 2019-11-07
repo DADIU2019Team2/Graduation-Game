@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 2247c985e50e7ff4b9b9f3877dbebbd1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
   currentWaypoint: {fileID: 0}
   activationLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1024
   activationType: 2
   trigger: {fileID: 1446800942}
   platformType: 1
@@ -190,7 +190,6 @@ GameObject:
   - component: {fileID: 392940778589647491}
   - component: {fileID: 392940778589647500}
   - component: {fileID: 392940778589647501}
-  - component: {fileID: 392940778589647490}
   m_Layer: 0
   m_Name: MovingPlatform
   m_TagString: MovingPlatform
@@ -242,29 +241,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rigidbody: {fileID: 392940778589647500}
---- !u!114 &392940778589647490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392940778589647488}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdc991bb35c40cb4b95c33a93c8bc4bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mover: {fileID: 392940778589647501}
-  currentWaypoint: {fileID: 0}
-  activationLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  activationType: 0
-  trigger: {fileID: 1446800942}
-  platformType: 1
-  startDelay: 0
-  waypointWaitTime: 1
-  TranslationSpeed: 1
 --- !u!1 &392940778663327181
 GameObject:
   m_ObjectHideFlags: 0
