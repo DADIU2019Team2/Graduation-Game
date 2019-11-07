@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: stranger_v004_EL.ma
-//Last modified: Thu, Nov 07, 2019 03:36:01 PM
+//Last modified: Thu, Nov 07, 2019 04:02:01 PM
 //Codeset: 1252
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -19639,19 +19639,19 @@ createNode mesh -n "polySurfaceShape7" -p "Hair_geo";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9185CC3F-4920-8879-93CA-30B6BEB703CA";
-	setAttr -s 6 ".lnk";
-	setAttr -s 6 ".slnk";
+	rename -uid "94761981-41A3-5BDB-FF99-51A14286D779";
+	setAttr -s 5 ".lnk";
+	setAttr -s 5 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "5BBF44E5-4947-88DD-2D24-F4B5A0917D8D";
+	rename -uid "D22676A0-401A-5210-3BE6-70B6BE877AF8";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "9573B7B6-45F9-6106-EC57-84B5B18833D2";
+	rename -uid "EF8EEABD-4577-EBD5-B64D-99BB8326F212";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "E9C7249A-4ABB-810F-314D-26A34836169B";
+	rename -uid "A59AF2A5-497F-D5FF-2CC0-BD8712CC13F9";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "F88E3D96-4A2A-F90E-F680-FAA77D44496D";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7E1B0C0D-4CE5-A9CF-2BDE-2D814A4174D1";
+	rename -uid "F4565396-4161-4A96-D0E0-20A623C56AAB";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "F0A0FE2D-4159-9CA0-1334-6E8D58CFCD9E";
 	setAttr ".g" yes;
