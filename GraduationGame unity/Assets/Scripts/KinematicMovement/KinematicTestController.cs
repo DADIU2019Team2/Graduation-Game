@@ -643,6 +643,10 @@ namespace KinematicTest.controller
                                 ? !Motor.GroundingStatus.FoundAnyGround
                                 : !Motor.GroundingStatus.IsStableOnGround))
                         {
+                            if (CurrentCharacterState == PlayerStates.Idling)
+                            {
+                                TransitionToState(PlayerStates.Running);
+                            }
                             Motor.ForceUnground(0.1f);
 
                             // Add to the return velocity and reset jump state
