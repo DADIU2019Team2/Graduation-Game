@@ -10,6 +10,7 @@ public class OnTriggerEnterMovingPlatform : MonoBehaviour
         if (relatedPlatform.activationLayers.Contains(other.gameObject.layer))
         {
             SendMessageUpwards("activatePlatform", null, SendMessageOptions.RequireReceiver);
+            Debug.Log("The active state of: " + gameObject.name + " = " + gameObject.activeSelf);
             gameObject.SetActive(false);
         }
     }
