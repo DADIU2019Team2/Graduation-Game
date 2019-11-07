@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using MiniGame2.Events;
+using TMPro;
 
 public class InputManager : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class InputManager : MonoBehaviour
         none //only ever happening if a bug occured.
     }
 
+    public TextMeshProUGUI inputText;
+
     private bool isDragging;
     Vector2 initPosition, endPosition;
     Vector2 swipeDirection;
@@ -22,20 +25,39 @@ public class InputManager : MonoBehaviour
     public VoidEvent OnSwipeEvent;
     private static SwipeType mostRecentSwipeType;
 
-
+    private string intoTextString;
 
     private void Start()
     {
-        //Debug.Assert(mirroredAngle(10) == 170, "10 mirrored = 170");
-        //Debug.Assert(mirroredAngle(190) == -10, "190 mirrored = -10");
+        intoTextString = "Most recent input: ";
+        GameObject go = GameObject.Find("Input text");
+        if (go != null)
+        {
+            inputText = go.GetComponent<TextMeshProUGUI>();
+        }
+        Debug.Assert(mirroredAngle(10) == 170, "10 mirrored = 170");
+        Debug.Assert(mirroredAngle(190) == -10, "190 mirrored = -10");
+        Debug.Assert(mirroredAngle(200) == -20, "200 mirrored = -20");
+        Debug.Assert((-20 + 360) % 360 == 340, "-20%360 == 340");
+        Debug.Assert(340 % 360 == 340);
+
+
+        Debug.Assert(!(30 > (mirroredAngle(swipeAngleThresholds.swipeUpRightAngles0) + 360) % 360 && (mirroredAngle(swipeAngleThresholds.swipeUpRightAngles1) + 360) % 360 > 30),
+         "Testing with 30 deg swipe backwards");
+        Debug.Log((mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles0) + 360) % 360);
+        Debug.Log((mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles1) + 360) % 360);
+
+        Debug.Assert(Is_P3_between_P1_and_P2(swipeAngleThresholds.swipeUpRightAngles1, swipeAngleThresholds.swipeUpRightAngles0, 30), "swipeangletest with new function");
+
 
 
     }
 
     float mirroredAngle(float angle)
     {
-        return 180 + 360 - angle;
+        return 180 - angle;
     }
+
 
     void Update()
     {
@@ -53,13 +75,24 @@ public class InputManager : MonoBehaviour
                     swipeDirection = (endPosition - initPosition);
                     if (swipeDirection.magnitude > 50f)
                     {
-                        swipeAngle = Vector2.Angle(Vector2.right, swipeDirection);
+                        swipeAngle = Vector2.SignedAngle(Vector2.right, swipeDirection);
+                        if (swipeAngle < 0)
+                        {
+                            swipeAngle = swipeAngle + 360;
+                        }
                         isFacingRight = CharacterMovement.GetIsFacingRight();
                         mostRecentSwipeType = SwipeTypeOfAngle(swipeAngle, isFacingRight);
+
+                        string mostRecentInput = mostRecentSwipeType == SwipeType.swipeDown ? "Down" : mostRecentSwipeType == SwipeType.swipeBackwards ? "Backwards" :
+                         mostRecentSwipeType == SwipeType.swipeForwardUp ? "Forward" : "Unknown input";
+                        if (inputText != null)
+                        {
+                            inputText.text = (intoTextString + mostRecentInput + " " + swipeAngle);
+                        }
                         OnSwipeEvent.Raise();
                     }
-                    
-                    
+
+
 
                     break;
             }
@@ -91,20 +124,29 @@ public class InputManager : MonoBehaviour
         }
         else if (!isFacingRight)
         {
-            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeUpRightAngles0) % 360 && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeUpRightAngles1) % 360)
+            if (Is_P3_between_P1_and_P2(mirroredAngle(swipeAngleThresholds.swipeDownAngles1), mirroredAngle(swipeAngleThresholds.swipeDownAngles0), swipeAngle))
+            {
+
+                return SwipeType.swipeDown;
+            }
+            if (Is_P3_between_P1_and_P2(mirroredAngle(swipeAngleThresholds.swipeUpRightAngles1), mirroredAngle(swipeAngleThresholds.swipeUpRightAngles0), swipeAngle))
             {
                 return SwipeType.swipeForwardUp;
             }
-            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles0) % 360 && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles1) % 360)
+            if (Is_P3_between_P1_and_P2(mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles1), mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles0), swipeAngle))
             {
                 return SwipeType.swipeBackwards;
-            }
-            if (swipeAngle < mirroredAngle(swipeAngleThresholds.swipeDownAngles0) % 360 && swipeAngle > mirroredAngle(swipeAngleThresholds.swipeDownAngles1) % 360)
-            {
-                return SwipeType.swipeDown;
             }
         }
         return SwipeType.none; //Stuff bugged out or the inputsettings on SwipeAngleThreshholds
     }
 
+    bool Is_P3_between_P1_and_P2(double p1, double p2, double p3)
+    {
+        double p1_p2, p1_p3;
+        p1_p2 = (p2 - p1 + 360) % 360;
+        p1_p3 = (p3 - p1 + 360) % 360;
+
+        return (p1_p2 <= 180) != (p1_p3 > p1_p2);
+    }
 }
