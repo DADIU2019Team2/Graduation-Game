@@ -720,11 +720,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8553, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
       propertyPath: TranslationSpeed
-      value: 4.5
+      value: 1.88
       objectReference: {fileID: 0}
     - target: {fileID: 8553, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
       propertyPath: platformType
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
+      propertyPath: waypointWaitTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
+      propertyPath: activationLayers.m_Bits
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 1446800946, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1442,16 +1450,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282995186}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 25.14, y: 9.5, z: 0}
-  m_LocalScale: {x: 1.0663552, y: 1.0663552, z: 1.0663552}
+  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
+  m_LocalPosition: {x: 0.079999946, y: -0.17000008, z: 1.5}
+  m_LocalScale: {x: 1.0663557, y: 1.0663557, z: 1.0663552}
   m_Children:
   - {fileID: 774682933}
   - {fileID: 1210132031}
   - {fileID: 384311135}
   - {fileID: 1684572414}
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 656961938}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1001 &283185870
 PrefabInstance:
@@ -2496,6 +2504,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecd2efcbd935dd245a6f9620845fd242, type: 3}
+--- !u!4 &656961938 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 392940778663327180, guid: 7c3f78b2963230e4bb6841673fd1cca7,
+    type: 3}
+  m_PrefabInstance: {fileID: 88958771}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &658429556
 GameObject:
   m_ObjectHideFlags: 0
