@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
-//Name: stranger.ma
-//Last modified: Thu, Nov 07, 2019 03:32:04 PM
+//Name: stranger_v004_EL.ma
+//Last modified: Thu, Nov 07, 2019 03:32:03 PM
 //Codeset: 1252
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -20404,4 +20404,4 @@ connectAttr "polySurfaceShape1HiddenFacesSet11.msg" ":defaultHideFaceDataSet.dns
 		 -na;
 connectAttr "groupId1.msg" ":defaultLastHiddenSet.gn" -na;
 connectAttr "Belt_geoShape.iog.og[7]" ":defaultLastHiddenSet.dsm" -na;
-// End of stranger.ma
+// End of stranger_v004_EL.ma
