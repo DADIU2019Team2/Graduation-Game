@@ -8,12 +8,36 @@ public class GameManager : MonoBehaviour
 
     public static GameStateScriptableObject.GameState gameState;
 
+    // transition related
+    [Header("Transition Related")]
+    public TransitionFader transitionFader;
+    public BoolVariable isSceneLaod;
+    public FloatVariable sceneLoadFadeTime;
+    public FloatVariable blackFadeTime;
+    private bool callOnce;
+    private float transitionTime;
+
+    private void Start()
+    {
+        callOnce = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        switch (isSceneLaod.GetBool())
+        {
+            case true:
+                transitionTime = sceneLoadFadeTime.getValue();
+                break;
+            case false:
+                transitionTime = blackFadeTime.getValue();
+                break;
+        }
         switch (gameState)
         {
             case GameStateScriptableObject.GameState.levelStart:
+                //transitionFader.fadeIn(transitionTime, isSceneLaod.GetBool());
                 /*Fade from black. 
                 Nothing happens until player gives some sort of input to start the level. 
                 Transitions into gameplay-state. */
