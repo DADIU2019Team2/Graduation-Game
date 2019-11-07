@@ -99,13 +99,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d3484dac67fc84e93a2742a966cbad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateSettingsLive: 1
+  updateSettingsLive: 0
   Motor: {fileID: 6576553047221927676}
   forward: 0
   settings: {fileID: 11400000, guid: 686e5c67799350747905d61df33818f9, type: 2}
   CurrentCharacterState: 0
   Gravity: {x: 0, y: -10, z: 0}
-  MeshRoot: {fileID: 0}
+  MeshRoot: {fileID: 4113814045122738841}
   jumpSound:
     idInternal: 0
     valueGuidInternal: 
@@ -114,7 +114,7 @@ MonoBehaviour:
   landSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 3790f554cb28649b7942cb4d33943dc1,
+    WwiseObjectReference: {fileID: 11400000, guid: 20037e2a203f74010a1ba9b189670e83,
       type: 2}
 --- !u!1001 &3325513009486544416
 PrefabInstance:
@@ -412,6 +412,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870155185468259866, guid: dc7098dac8030bb4ab3b94b3ea9d43f5,
+        type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc7098dac8030bb4ab3b94b3ea9d43f5, type: 3}

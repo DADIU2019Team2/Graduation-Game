@@ -28,7 +28,6 @@ namespace AK
         static const AkUniqueID PLAY_PYLON_PARKOUR = 1832262049U;
         static const AkUniqueID PLAY_ROBOT_APPEARENCE = 3030735331U;
         static const AkUniqueID PLAY_SAW = 3225017965U;
-        static const AkUniqueID PLAY_SLIDES = 1306435192U;
         static const AkUniqueID PLAY_ZONE1_MUSIC = 4098982749U;
         static const AkUniqueID PLAY_ZONE2_MUSIC = 3584129722U;
         static const AkUniqueID PLAY_ZONE3_MUSIC = 556439219U;
