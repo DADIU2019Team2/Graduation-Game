@@ -71,12 +71,12 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   jumpHeight: 4
-  maxAirMoveSpeed: 10
+  maxAirMoveSpeed: 15
   hangTimeVelocityThreshold: 2
   JumpPreGroundingGraceTime: 0.2
   JumpPostGroundingGraceTime: 0.2
   idleJumpHeight: 2
-  idleAirMoveSpeed: 10
+  idleAirMoveSpeed: 4
   slideMoveSpeed: 15
   slideJumpHeight: 1
   slideDuration: 1
@@ -105,6 +105,11 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  graceTimeBeforeHangAgain: 0
+  ledgeGrabForwardJumpHeight: 0
+  ledgeGrabForwardAirMoveSpeed: 0
+  ledgeGrabBackwardsJumpHeight: 0
+  ledgeGrabBackwardsAirMoveSpeed: 0
   canChangeDirectionsMidair: 1
-  AllowDoubleJump: 0
+  AllowDoubleJump: 1
   AllowJumpingWhenSliding: 0
