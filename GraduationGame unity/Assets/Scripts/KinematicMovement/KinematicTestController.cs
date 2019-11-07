@@ -304,6 +304,12 @@ namespace KinematicTest.controller
                     timeAtLastLedgeGrab = Time.time;
                     break;
                 }
+                case PlayerStates.NoInput:
+                {
+                    runningRight = 1;
+                    curveStep = 0; //for now
+                    break;
+                }
             }
         }
 
