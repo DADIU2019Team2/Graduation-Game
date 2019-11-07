@@ -61,6 +61,12 @@ public class MovingPlatform : MonoBehaviour, IMoverController
         isInWaypointWaitTime = false;
         trigger.gameObject.SetActive(triggerDefaultState);
     }
+    void Awake()
+    {
+        triggerDefaultState = trigger.gameObject.activeSelf;
+       // Debug.Log("Trigger default = " + triggerDefaultState);
+    }
+
     private void Start()
     {
         _originalPosition = Mover.Rigidbody.position;
@@ -76,8 +82,7 @@ public class MovingPlatform : MonoBehaviour, IMoverController
         //activation type trigger is handeled by sendmessageupwards from the trigger
         //activation type player is handled by the kinematic controller in OnMovementHit()
 
-        triggerDefaultState = trigger.gameObject.activeSelf;
-
+       
     }
 
     public void UpdateMovement(out Vector3 goalPosition, out Quaternion goalRotation, float deltatime)
