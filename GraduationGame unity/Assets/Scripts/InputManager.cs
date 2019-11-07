@@ -31,7 +31,10 @@ public class InputManager : MonoBehaviour
     {
         intoTextString = "Most recent input: ";
         GameObject go = GameObject.Find("Input text");
-        inputText = go.GetComponent<TextMeshProUGUI>();
+        if (go != null)
+        {
+            inputText = go.GetComponent<TextMeshProUGUI>();
+        }
         Debug.Assert(mirroredAngle(10) == 170, "10 mirrored = 170");
         Debug.Assert(mirroredAngle(190) == -10, "190 mirrored = -10");
         Debug.Assert(mirroredAngle(200) == -20, "200 mirrored = -20");
@@ -72,13 +75,20 @@ public class InputManager : MonoBehaviour
                     swipeDirection = (endPosition - initPosition);
                     if (swipeDirection.magnitude > 50f)
                     {
-                        swipeAngle = Vector2.Angle(Vector2.right, swipeDirection);
+                        swipeAngle = Vector2.SignedAngle(Vector2.right, swipeDirection);
+                        if (swipeAngle < 0)
+                        {
+                            swipeAngle = swipeAngle + 360;
+                        }
                         isFacingRight = CharacterMovement.GetIsFacingRight();
                         mostRecentSwipeType = SwipeTypeOfAngle(swipeAngle, isFacingRight);
 
                         string mostRecentInput = mostRecentSwipeType == SwipeType.swipeDown ? "Down" : mostRecentSwipeType == SwipeType.swipeBackwards ? "Backwards" :
                          mostRecentSwipeType == SwipeType.swipeForwardUp ? "Forward" : "Unknown input";
-                        inputText.text = (intoTextString+mostRecentInput + " " + swipeAngle);
+                        if (inputText != null)
+                        {
+                            inputText.text = (intoTextString + mostRecentInput + " " + swipeAngle);
+                        }
                         OnSwipeEvent.Raise();
                     }
 
@@ -134,8 +144,8 @@ public class InputManager : MonoBehaviour
     bool Is_P3_between_P1_and_P2(double p1, double p2, double p3)
     {
         double p1_p2, p1_p3;
-        p1_p2 = (p2 - p1 + 360)%360;
-        p1_p3 = (p3 - p1 + 360)%360;
+        p1_p2 = (p2 - p1 + 360) % 360;
+        p1_p3 = (p3 - p1 + 360) % 360;
 
         return (p1_p2 <= 180) != (p1_p3 > p1_p2);
     }
