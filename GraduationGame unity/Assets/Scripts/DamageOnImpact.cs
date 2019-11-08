@@ -6,6 +6,15 @@ using UnityEngine;
 
 public class DamageOnImpact : MonoBehaviour
 {
-    public IntVariable damage;
-  
+    public int damage;
+    public IntEvent damagePlayer;
+    private void OnCollisionEnter(Collision other)
+    {
+        Debug.Log("player hit");
+        if (other.collider.CompareTag("Player"))
+        {
+            damagePlayer.Raise(damage);
+        }
+    }
+    
 }
