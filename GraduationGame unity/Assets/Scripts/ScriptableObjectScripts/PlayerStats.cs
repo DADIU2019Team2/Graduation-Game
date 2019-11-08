@@ -24,7 +24,8 @@ public class PlayerStats : ScriptableObject
     {
         currentHealth -= value;
         if (currentHealth <= 0)
-            GameManager.gameState = GameStateScriptableObject.GameState.levelLoss;
+            GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelLoss);
+            //GameManager.gameState = GameStateScriptableObject.GameState.levelLoss;
     }
     public void resetHealth()
     {
