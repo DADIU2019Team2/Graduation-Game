@@ -310,7 +310,7 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.NoInput:
                 {
-                    runningRight = 1;
+                    //runningRight = 1;
                     curveStep = 0; //for now
                     _timeSinceTransitioning = 0f;
                     break;
