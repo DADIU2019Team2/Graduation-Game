@@ -4,7 +4,7 @@ using UnityEngine;
 using KinematicCharacterController;
 
 
-public class MovingPlatform : MonoBehaviour, IMoverController
+public class MovingPlatform : MonoBehaviour, IMoverController, IOnSceneReset
 {
     public PhysicsMover Mover;
 
@@ -69,6 +69,7 @@ public class MovingPlatform : MonoBehaviour, IMoverController
 
     private void Start()
     {
+        //AddObj2ResetList(GameManager.ObjsToReset, this);
         _originalPosition = Mover.Rigidbody.position;
         _originalRotation = Mover.Rigidbody.rotation;
         _originalWaypoint = currentWaypoint;
@@ -321,5 +322,16 @@ public class MovingPlatform : MonoBehaviour, IMoverController
         yield return new WaitForSeconds(.2f);
         //shouldUpdateDestination = false;
     }
+
+    public void OnResetLevel()
+    {
+        resetPlatform();
+        Debug.Log("Resetting " + gameObject.name);
+    }
+
+    /*public void AddObj2ResetList(List<IOnSceneReset> objResetList, IOnSceneReset thisObj)
+    {
+        objResetList.Add(thisObj);
+    }*/
 }
 
