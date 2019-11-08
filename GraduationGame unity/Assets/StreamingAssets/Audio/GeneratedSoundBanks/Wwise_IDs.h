@@ -13,41 +13,27 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID MACHINE_SOUND = 431421808U;
+        static const AkUniqueID MOVINGPLATFORM_SOUND = 2635440718U;
         static const AkUniqueID PLAY_AMBIENCE_Z0 = 1001479279U;
         static const AkUniqueID PLAY_AMBIENCE_Z1 = 1001479278U;
         static const AkUniqueID PLAY_AMBIENCE_Z2 = 1001479277U;
         static const AkUniqueID PLAY_AMBIENCE_Z3 = 1001479276U;
         static const AkUniqueID PLAY_AMBIENCE_Z4 = 1001479275U;
         static const AkUniqueID PLAY_ELECTRICITY = 1560622413U;
+        static const AkUniqueID PLAY_IMPACT_SPIKYPLATFORM = 1314600606U;
         static const AkUniqueID PLAY_JUMPS_TAKEOFF = 1828118792U;
         static const AkUniqueID PLAY_LAND_HARD = 404466471U;
         static const AkUniqueID PLAY_LAND_MED = 639478362U;
         static const AkUniqueID PLAY_LAZER = 1933691314U;
         static const AkUniqueID PLAY_NEW_METAL_FTSTP_LOOP = 1462703573U;
         static const AkUniqueID PLAY_NEW_NORM_FTSTP_LOOP = 1215491506U;
-        static const AkUniqueID PLAY_PYLON_PARKOUR = 1832262049U;
         static const AkUniqueID PLAY_ROBOT_APPEARENCE = 3030735331U;
         static const AkUniqueID PLAY_SAW = 3225017965U;
         static const AkUniqueID PLAY_ZONE1_MUSIC = 4098982749U;
         static const AkUniqueID PLAY_ZONE2_MUSIC = 3584129722U;
         static const AkUniqueID PLAY_ZONE3_MUSIC = 556439219U;
         static const AkUniqueID PLAY_ZONE4_MUSIC = 3303975224U;
-        static const AkUniqueID SET_Z1_MUSIC_1 = 478922477U;
-        static const AkUniqueID SET_Z1_MUSIC_2 = 478922478U;
-        static const AkUniqueID SET_Z1_MUSIC_3 = 478922479U;
-        static const AkUniqueID SET_Z1_MUSIC_4 = 478922472U;
-        static const AkUniqueID SET_Z2_MUSIC_1 = 1619242214U;
-        static const AkUniqueID SET_Z2_MUSIC_2 = 1619242213U;
-        static const AkUniqueID SET_Z2_MUSIC_3 = 1619242212U;
-        static const AkUniqueID SET_Z2_MUSIC_4 = 1619242211U;
-        static const AkUniqueID SET_Z3_MUSIC_1 = 388669847U;
-        static const AkUniqueID SET_Z3_MUSIC_2 = 388669844U;
-        static const AkUniqueID SET_Z3_MUSIC_3 = 388669845U;
-        static const AkUniqueID SET_Z3_MUSIC_4 = 388669842U;
-        static const AkUniqueID SET_Z4_MUSIC_1 = 1653563808U;
-        static const AkUniqueID SET_Z4_MUSIC_2 = 1653563811U;
-        static const AkUniqueID SET_Z4_MUSIC_3 = 1653563810U;
-        static const AkUniqueID SET_Z4_MUSIC_4 = 1653563813U;
     } // namespace EVENTS
 
     namespace STATES
