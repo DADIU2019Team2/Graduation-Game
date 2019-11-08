@@ -35,6 +35,7 @@ namespace KinematicTest.controller
         public bool changeDirection;
         public bool crouchDown;
         public bool crouchUp;
+        public bool stopDown;
         public bool worldMoveDown;
     }
 
@@ -128,6 +129,8 @@ namespace KinematicTest.controller
         public Vector3 Gravity = new Vector3(0, -10f, 0);
         public Transform MeshRoot;
         private float ledgeGrabGravityMultiplier = 0f;
+        [HideInInspector]
+        public static GameObject ledgeGrabbed = null;
 
         //This will later be scriptable object
         [Header("Sound settings")] public AK.Wwise.Event jumpSound;
@@ -302,6 +305,7 @@ namespace KinematicTest.controller
                 case PlayerStates.LedgeGrabbing:
                 {
                     timeAtLastLedgeGrab = Time.time;
+                    Motor.ZoeAttachedRigidbody = null;
                     break;
                 }
                 case PlayerStates.NoInput:
@@ -426,6 +430,10 @@ namespace KinematicTest.controller
                     TransitionToState(PlayerStates.Tired);
                     jumpFromWallRequested = true;
                 }
+            }
+            if (inputs.stopDown)
+            {
+                TransitionToState(PlayerStates.Idling);
             }
         }
 
@@ -856,11 +864,10 @@ namespace KinematicTest.controller
         public void OnMovementHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
             ref HitStabilityReport hitStabilityReport)
         {
-            Debug.Log("normal : " + hitNormal + " point : " + hitPoint);
             if (hitCollider.CompareTag("Ledge") && Time.time > (timeAtLastLedgeGrab + graceTimeBeforeHangAgain) && hitNormal.y == 0 && Mathf.Sign(hitNormal.x) == -Mathf.Sign(runningRight))
             {
-                Debug.Log("normal : " + hitNormal + " point : " +hitPoint);
-                Debug.Log("Ledge Grab?");
+                ledgeGrabbed = hitCollider.gameObject;
+                Motor.ZoeAttachedRigidbody = hitCollider.gameObject.GetComponentInParent<Rigidbody>();
                 timeAtLastLedgeGrab = Time.time;
                 TransitionToState(PlayerStates.LedgeGrabbing);
             }
@@ -881,7 +888,11 @@ namespace KinematicTest.controller
             }
             else if (hitCollider.CompareTag("MovingPlatform"))
             {
-                hitCollider.GetComponent<MovingPlatform>().activatePlatform();
+                MovingPlatform movingPlatform = hitCollider.gameObject.GetComponent<MovingPlatform>();
+                if (movingPlatform.activationType == MovingPlatform.ActivationType.player)
+                {
+                    movingPlatform.activatePlatform();
+                }
             }
         }
 
