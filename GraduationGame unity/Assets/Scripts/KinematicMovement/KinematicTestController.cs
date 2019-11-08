@@ -107,7 +107,7 @@ namespace KinematicTest.controller
         private bool _isCrouching;
 
         // Hanging
-        private float hangTime;
+        private float timeBeforeFallFromLedge;
         private float graceTimeBeforeHangAgain = 1f;
         private float timeAtLastLedgeGrab = 0f;
         private bool jumpFromWallRequested = false;
@@ -115,6 +115,10 @@ namespace KinematicTest.controller
         private float ledgeGrabAirMoveSpeed = 5;
         [SerializeField]
         private bool forward;
+        [HideInInspector]
+        public static GameObject ledgeGrabbed = null;
+        private bool canFallFromLedgeAfterDelay;
+        private float timeAtLastGrab;
 
         //World changes
         private float _timeSinceTransitioning;
@@ -129,8 +133,6 @@ namespace KinematicTest.controller
         public Vector3 Gravity = new Vector3(0, -10f, 0);
         public Transform MeshRoot;
         private float ledgeGrabGravityMultiplier = 0f;
-        [HideInInspector]
-        public static GameObject ledgeGrabbed = null;
 
         //This will later be scriptable object
         [Header("Sound settings")] public AK.Wwise.Event jumpSound;
@@ -169,7 +171,8 @@ namespace KinematicTest.controller
 
             MaxAirMoveSpeed = settings.maxAirMoveSpeed;
             Drag = 0.1f;
-
+            canFallFromLedgeAfterDelay = settings.canFallFromLedgeAfterDelay;
+            timeBeforeFallFromLedge = settings.timeBeforeFallFromLedge;
             AllowDoubleJump = settings.AllowDoubleJump;
             AllowJumpingWhenSliding = settings.AllowJumpingWhenSliding;
         }
@@ -239,6 +242,7 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.LedgeGrabbing:
                 {
+                        timeAtLastGrab = Time.time;
                         MaxAirMoveSpeed = 0;
                         MaxStableMoveSpeed = 0;
                         break;
@@ -306,6 +310,7 @@ namespace KinematicTest.controller
                 {
                     timeAtLastLedgeGrab = Time.time;
                     Motor.ZoeAttachedRigidbody = null;
+                    _doubleJumpConsumed = false;
                     break;
                 }
                 case PlayerStates.NoInput:
@@ -841,6 +846,15 @@ namespace KinematicTest.controller
                         }
 
 
+                        break;
+                    }
+                    case PlayerStates.LedgeGrabbing:
+                    {
+                            if (canFallFromLedgeAfterDelay && timeAtLastGrab + timeBeforeFallFromLedge <= Time.time)
+                            {
+                                timeAtLastGrab = Time.time;
+                                TransitionToState(PlayerStates.Tired);
+                            }
                         break;
                     }
                 }
