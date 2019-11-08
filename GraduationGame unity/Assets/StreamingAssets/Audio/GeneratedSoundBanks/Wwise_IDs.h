@@ -13,6 +13,9 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID IMPACT_SPIKYPLATFORM = 1295587045U;
+        static const AkUniqueID MACHINE_SOUND = 431421808U;
+        static const AkUniqueID MOVINGPLATFORM_SOUND = 2635440718U;
         static const AkUniqueID PLAY_AMBIENCE_Z0 = 1001479279U;
         static const AkUniqueID PLAY_AMBIENCE_Z1 = 1001479278U;
         static const AkUniqueID PLAY_AMBIENCE_Z2 = 1001479277U;
@@ -25,29 +28,13 @@ namespace AK
         static const AkUniqueID PLAY_LAZER = 1933691314U;
         static const AkUniqueID PLAY_NEW_METAL_FTSTP_LOOP = 1462703573U;
         static const AkUniqueID PLAY_NEW_NORM_FTSTP_LOOP = 1215491506U;
-        static const AkUniqueID PLAY_PYLON_PARKOUR = 1832262049U;
         static const AkUniqueID PLAY_ROBOT_APPEARENCE = 3030735331U;
         static const AkUniqueID PLAY_SAW = 3225017965U;
         static const AkUniqueID PLAY_ZONE1_MUSIC = 4098982749U;
         static const AkUniqueID PLAY_ZONE2_MUSIC = 3584129722U;
         static const AkUniqueID PLAY_ZONE3_MUSIC = 556439219U;
         static const AkUniqueID PLAY_ZONE4_MUSIC = 3303975224U;
-        static const AkUniqueID SET_Z1_MUSIC_1 = 478922477U;
-        static const AkUniqueID SET_Z1_MUSIC_2 = 478922478U;
-        static const AkUniqueID SET_Z1_MUSIC_3 = 478922479U;
-        static const AkUniqueID SET_Z1_MUSIC_4 = 478922472U;
-        static const AkUniqueID SET_Z2_MUSIC_1 = 1619242214U;
-        static const AkUniqueID SET_Z2_MUSIC_2 = 1619242213U;
-        static const AkUniqueID SET_Z2_MUSIC_3 = 1619242212U;
-        static const AkUniqueID SET_Z2_MUSIC_4 = 1619242211U;
-        static const AkUniqueID SET_Z3_MUSIC_1 = 388669847U;
-        static const AkUniqueID SET_Z3_MUSIC_2 = 388669844U;
-        static const AkUniqueID SET_Z3_MUSIC_3 = 388669845U;
-        static const AkUniqueID SET_Z3_MUSIC_4 = 388669842U;
-        static const AkUniqueID SET_Z4_MUSIC_1 = 1653563808U;
-        static const AkUniqueID SET_Z4_MUSIC_2 = 1653563811U;
-        static const AkUniqueID SET_Z4_MUSIC_3 = 1653563810U;
-        static const AkUniqueID SET_Z4_MUSIC_4 = 1653563813U;
+        static const AkUniqueID STOPALL = 3086540886U;
     } // namespace EVENTS
 
     namespace STATES
@@ -86,12 +73,14 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID FOOTSTEP_VELOCITY = 3740773599U;
+        static const AkUniqueID MACHINE_MOVEMENT = 3811964820U;
         static const AkUniqueID MOVE_ACCEL = 1050950791U;
         static const AkUniqueID MUSIC_LAYER_Z1 = 1022520460U;
         static const AkUniqueID MUSIC_LAYER_Z2 = 1022520463U;
         static const AkUniqueID MUSIC_LAYER_Z3 = 1022520462U;
         static const AkUniqueID MUSIC_LAYER_Z4 = 1022520457U;
         static const AkUniqueID MUSIC_VOLUME = 1006694123U;
+        static const AkUniqueID PLATFORM_MOVEMENT = 3744734464U;
         static const AkUniqueID SFX_VOLUME = 1564184899U;
     } // namespace GAME_PARAMETERS
 

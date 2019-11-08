@@ -47,23 +47,45 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Pylon_Parkour" ID="{60E9DC14-C499-43BF-9E58-791DD30EF25B}">
-					<ChildrenList>
-						<Action Name="" ID="{908F0F1B-31E6-43D9-B475-7368401DCC7E}" ShortID="586838658">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Pylon_Parkour" ID="{2D2DEAFB-A804-424B-B263-EF235A6CF7C0}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_Robot_Appearence" ID="{F6F38557-5413-4948-ABFB-578E08336A56}">
 					<ChildrenList>
 						<Action Name="" ID="{3C40EC87-837A-4819-B774-C82DE501EF50}" ShortID="153223300">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Robot_Appearence" ID="{FEBE4464-6EEF-4C26-B2FF-DBE7D82390D1}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Machine_Sound" ID="{8E40ABCC-1C7E-469C-95F9-CB5F86A51F00}">
+					<ChildrenList>
+						<Action Name="" ID="{198C4780-5800-4ACA-9AE7-11D559A633F0}" ShortID="854007375">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Machines" ID="{0149FB00-E38C-4F18-BB32-E2172576D4FD}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MovingPlatform_Sound" ID="{45FD0FA7-787B-4139-9312-DCE9CADFAC89}">
+					<ChildrenList>
+						<Action Name="" ID="{DF324841-0A88-41BF-BCEA-3ABA51F4E0A7}" ShortID="368696002">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Moving_Platforms" ID="{047E1504-256A-4FD7-A6AF-6891F7DB7FAB}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Impact_SpikyPlatform" ID="{FEC49892-FAEF-4BA9-8F79-44231065B453}">
+					<ChildrenList>
+						<Action Name="" ID="{08E86EDE-B124-46B1-8CD9-43FC75389DF7}" ShortID="523200377">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Impact_SpikyPlatform" ID="{2DC157D5-0391-4961-9CDA-6A2566AEB9CA}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
