@@ -8,10 +8,8 @@ public class GameManager : MonoBehaviour
 {
 
     private static GameStateScriptableObject.GameState gameState;
+    private float originalTimescale;
 
-    //[Header("Objects to reset on lvl reset")]
-    //public static List<IOnSceneReset> ObjsToReset;
-    
     // transition related
     [Header("Transition Related")]
     public TransitionFader transitionFader;
@@ -22,11 +20,14 @@ public class GameManager : MonoBehaviour
     private float transitionTime;
     private bool isSceneLoadTransition;
 
+    [Header("Check If Active")]// bad i know
+    public GameObject optionsMenu;
 
-    /*private void Awake()
+    private void Awake()
     {
-        ObjsToReset = new List<IOnSceneReset>();
-    }*/
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 120;
+    }
     private void Start()
     {
         callOnce = true;
@@ -36,10 +37,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
-            DoResetObjects();
-        }*/
         switch (gameState)
         {
             case GameStateScriptableObject.GameState.levelStart:
@@ -59,6 +56,12 @@ public class GameManager : MonoBehaviour
 
             #region maingameplay
             case GameStateScriptableObject.GameState.mainGameplayLoop:
+                if (optionsMenu.activeSelf) // if options menu gets entered
+                {
+                    originalTimescale = Time.timeScale;
+                    Time.timeScale = 0f;
+                    ChangeGameState(GameStateScriptableObject.GameState.optionsMenuOpened);
+                }
                 //Main logic of the game goes on here. The player has control over Zoe. 
                 break;
             #endregion maingameplay
@@ -94,12 +97,18 @@ public class GameManager : MonoBehaviour
                 (Possibly set state to be level-start before calling the load-next-scene function) */
                 break;
             case GameStateScriptableObject.GameState.optionsMenuOpened:
+                if (!optionsMenu.activeSelf) // if options menu is closed
+                {
+                    Time.timeScale = originalTimescale;
+                    ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
+                }
                 //Should pause all game-logic and behaviours. 
-                Time.timeScale = 0;
+                //Time.timeScale = 0;
 
                 break;
 
         }
+        Debug.Log("Time scale = " + Time.timeScale);
     }
 
     public static GameStateScriptableObject.GameState GetGameState()
@@ -119,7 +128,7 @@ public class GameManager : MonoBehaviour
             case true:
                 transitionTime = sceneLoadFadeTime.getValue();
 
-                if(fadeIn)
+                if (fadeIn)
                     transitionFader.fadeIn(transitionTime, true);
                 else
                     transitionFader.fadeOut(transitionTime, true);
@@ -128,7 +137,7 @@ public class GameManager : MonoBehaviour
             case false:
                 transitionTime = blackFadeTime.getValue();
 
-                if(fadeIn)
+                if (fadeIn)
                     transitionFader.fadeIn(transitionTime, false);
                 else
                     transitionFader.fadeOut(transitionTime, false);
