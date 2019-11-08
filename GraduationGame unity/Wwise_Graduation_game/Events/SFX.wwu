@@ -3,17 +3,6 @@
 	<Events>
 		<WorkUnit Name="SFX" ID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" OwnerID="{4948A3B8-CE28-48A8-BAD5-AE38D8DAE02B}" PersistMode="Nested">
 			<ChildrenList>
-				<Event Name="Play_Electricity1" ID="{6558C932-68A1-4011-9865-061B6483B8DE}">
-					<ChildrenList>
-						<Action Name="" ID="{02AF673B-A42D-46DD-8CB4-0BBC61695BCB}" ShortID="496148465">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Electricity1" ID="{26DAA057-2E7A-44B4-85E0-486541974B95}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_Saw" ID="{35E0AE0A-240F-4C7A-9D84-ACBF0F85C5CA}">
 					<ChildrenList>
 						<Action Name="" ID="{63DAE47A-7540-4DF9-ABE1-CBF3E3F1E924}" ShortID="388915968">
@@ -58,34 +47,78 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Machine_Sound" ID="{8E40ABCC-1C7E-469C-95F9-CB5F86A51F00}">
-					<ChildrenList>
-						<Action Name="" ID="{198C4780-5800-4ACA-9AE7-11D559A633F0}" ShortID="854007375">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Machines" ID="{0149FB00-E38C-4F18-BB32-E2172576D4FD}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="MovingPlatform_Sound" ID="{45FD0FA7-787B-4139-9312-DCE9CADFAC89}">
-					<ChildrenList>
-						<Action Name="" ID="{DF324841-0A88-41BF-BCEA-3ABA51F4E0A7}" ShortID="368696002">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Moving_Platforms" ID="{047E1504-256A-4FD7-A6AF-6891F7DB7FAB}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Impact_SpikyPlatform" ID="{FEC49892-FAEF-4BA9-8F79-44231065B453}">
 					<ChildrenList>
 						<Action Name="" ID="{08E86EDE-B124-46B1-8CD9-43FC75389DF7}" ShortID="523200377">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Impact_SpikyPlatform" ID="{2DC157D5-0391-4961-9CDA-6A2566AEB9CA}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Machine_2" ID="{08B514CA-0076-45D7-92F8-270614F07686}">
+					<ChildrenList>
+						<Action Name="" ID="{38735F39-7199-4368-828A-4F43CFD4278D}" ShortID="464277336">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Machine_2" ID="{6EDD6488-7081-4D9B-834D-32C4B90D591D}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Machine_1" ID="{84A6146F-375B-4CE9-A9F3-AB4A354A5032}">
+					<ChildrenList>
+						<Action Name="" ID="{DDB491A8-2452-4E60-BAA9-3140470B5668}" ShortID="457820459">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Machine_1" ID="{C438D3BC-D874-49DE-814E-977819CCE93B}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Machine_3" ID="{7AFF3947-D288-46E8-8061-B6934E78E5B0}">
+					<ChildrenList>
+						<Action Name="" ID="{D7A32D29-2BE4-4BAE-AEAB-B8DDF06D28C2}" ShortID="857766518">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Machine_3" ID="{40882591-CF8F-4FD8-8932-4D08C69CDB32}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Platform_1" ID="{AC3DB8A9-12C4-4160-BAE9-0E50984F920C}">
+					<ChildrenList>
+						<Action Name="" ID="{2315B924-68EE-4465-9E21-21FADD9540DF}" ShortID="458707639">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Platform_1" ID="{B941C1EA-0243-40B9-9407-2ECD63E04B58}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Platform_2" ID="{14DE8EFF-1C0E-4C1D-B643-819330D8F72E}">
+					<ChildrenList>
+						<Action Name="" ID="{AA848189-0BF0-4597-ADCA-D0173774489B}" ShortID="194684463">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Platform_2" ID="{31021567-8229-488A-9772-F593108CA720}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Platform_3" ID="{1B579D0B-724B-4452-BBE4-385250485466}">
+					<ChildrenList>
+						<Action Name="" ID="{5F34E10F-59CB-4E1B-96DB-AC8FBEC6342E}" ShortID="934756064">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Platform_3" ID="{781650EA-B683-43A0-BD9F-2D1DEE18373F}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
