@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using MiniGame2.Events;
+using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
 
     public static GameStateScriptableObject.GameState gameState;
 
+    //[Header("Objects to reset on lvl reset")]
+    //public static List<IOnSceneReset> ObjsToReset;
+    
     // transition related
     [Header("Transition Related")]
     public TransitionFader transitionFader;
@@ -18,6 +22,11 @@ public class GameManager : MonoBehaviour
     private float transitionTime;
     private bool isSceneLoadTransition;
 
+
+    /*private void Awake()
+    {
+        ObjsToReset = new List<IOnSceneReset>();
+    }*/
     private void Start()
     {
         callOnce = true;
@@ -27,6 +36,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            doResetObjects();
+        }
         switch (gameState)
         {
             case GameStateScriptableObject.GameState.levelStart:
@@ -111,6 +124,15 @@ public class GameManager : MonoBehaviour
                 else
                     transitionFader.fadeOut(transitionTime, false);
                 break;
+        }
+    }
+
+    private void doResetObjects()
+    {
+        var objectsToBeReset =  FindObjectsOfType<MonoBehaviour>().OfType<IOnSceneReset>();
+        foreach (IOnSceneReset obj in objectsToBeReset)
+        {
+            obj.OnResetLevel();
         }
     }
 }
