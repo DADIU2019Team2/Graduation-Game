@@ -15,6 +15,15 @@ namespace KinematicTest.controller
         LedgeGrabbing,
         Tired,
         Falling,
+        NoInput,
+    }
+
+    public enum WorldForward
+    {
+        Right,
+        Forward,
+        Left,
+        Back,
     }
 
     public struct PlayerCharacterInputs
@@ -27,6 +36,7 @@ namespace KinematicTest.controller
         public bool crouchDown;
         public bool crouchUp;
         public bool stopDown;
+        public bool worldMoveDown;
     }
 
     public class KinematicTestController : MonoBehaviour, ICharacterController
@@ -56,6 +66,7 @@ namespace KinematicTest.controller
         private AnimationCurve rampDownCurve;
 
         // Running
+        private Vector3 worldMoveDirection = Vector3.right;
         private float MaxStableMoveSpeed;
         private float StableMovementSharpness;
         private float OrientationSharpness = 10;
@@ -105,12 +116,16 @@ namespace KinematicTest.controller
         [SerializeField]
         private bool forward;
 
-
+        //World changes
+        private float _timeSinceTransitioning;
+        private float transitionTime = 2f;
+        
         // Settings
         public PlayerControllerSettings settings;
 
         // Debug stuff
         public PlayerStates CurrentCharacterState;
+        public WorldForward CurrentWorldForward;
         public Vector3 Gravity = new Vector3(0, -10f, 0);
         public Transform MeshRoot;
         private float ledgeGrabGravityMultiplier = 0f;
@@ -293,6 +308,12 @@ namespace KinematicTest.controller
                     Motor.ZoeAttachedRigidbody = null;
                     break;
                 }
+                case PlayerStates.NoInput:
+                {
+                    runningRight = 1;
+                    curveStep = 0; //for now
+                    break;
+                }
             }
         }
 
@@ -301,6 +322,16 @@ namespace KinematicTest.controller
         /// </summary>
         public void SetInputs(ref PlayerCharacterInputs inputs)
         {
+            if (CurrentCharacterState == PlayerStates.NoInput)
+                return;
+
+            if (inputs.worldMoveDown)
+            {
+                TransitionToState(PlayerStates.NoInput);
+                CurrentWorldForward = WorldForward.Left;
+                return;
+            }
+            
             if (inputs.slideDown && CurrentCharacterState == PlayerStates.Running &&
                 Motor.GroundingStatus.FoundAnyGround)
             {
@@ -361,7 +392,31 @@ namespace KinematicTest.controller
             //Vector3 moveInputVector = Vector3.ClampMagnitude(new Vector3(inputs.MoveAxisRight, 0f, inputs.MoveAxisForward), 1f);
 
 
-            Vector3 moveInputVector = Vector3.right * runningRight;
+            switch (CurrentWorldForward)
+            {
+                case WorldForward.Right:
+                {
+                    worldMoveDirection = Vector3.right;
+                    break;
+                }
+                case WorldForward.Forward:
+                {
+                    worldMoveDirection = Vector3.forward;
+                    break;
+                }
+                case WorldForward.Left:
+                {
+                    worldMoveDirection = Vector3.left;
+                    break;
+                }
+                case WorldForward.Back:
+                {
+                    worldMoveDirection = Vector3.back;
+                    break;
+                }
+            }
+
+            Vector3 moveInputVector = worldMoveDirection * runningRight;
             // Move and look inputs
             _moveInputVector = moveInputVector;
 
@@ -390,6 +445,11 @@ namespace KinematicTest.controller
         {
             switch (CurrentCharacterState)
             {
+                case PlayerStates.NoInput:
+                {
+                    _timeSinceTransitioning += deltaTime;
+                    break;
+                }
                 case PlayerStates.Sliding:
                 {
                     _timeSinceStartedSliding += deltaTime;
@@ -651,6 +711,10 @@ namespace KinematicTest.controller
                                 ? !Motor.GroundingStatus.FoundAnyGround
                                 : !Motor.GroundingStatus.IsStableOnGround))
                         {
+                            if (CurrentCharacterState == PlayerStates.Idling)
+                            {
+                                TransitionToState(PlayerStates.Running);
+                            }
                             Motor.ForceUnground(0.1f);
 
                             // Add to the return velocity and reset jump state
@@ -738,6 +802,15 @@ namespace KinematicTest.controller
 
                 switch (CurrentCharacterState)
                 {
+                    case PlayerStates.NoInput:
+                    {
+                        if (_timeSinceTransitioning > transitionTime)
+                        {
+                            TransitionToState(PlayerStates.Running);
+                        }
+
+                        break;
+                    }
                     case PlayerStates.Sliding:
                     {
                         if (!_isStoppedSliding && _timeSinceStartedSliding > settings.slideDuration)
