@@ -310,8 +310,9 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.NoInput:
                 {
-                    runningRight = 1;
+                    //runningRight = 1;
                     curveStep = 0; //for now
+                    _timeSinceTransitioning = 0f;
                     break;
                 }
             }
@@ -325,12 +326,6 @@ namespace KinematicTest.controller
             if (CurrentCharacterState == PlayerStates.NoInput)
                 return;
 
-            if (inputs.worldMoveDown)
-            {
-                TransitionToState(PlayerStates.NoInput);
-                CurrentWorldForward = WorldForward.Left;
-                return;
-            }
             
             if (inputs.slideDown && CurrentCharacterState == PlayerStates.Running &&
                 Motor.GroundingStatus.FoundAnyGround)
@@ -883,7 +878,6 @@ namespace KinematicTest.controller
                     //scarf.transform.Rotate(Vector3.up, 180);
                 }
 
-                Debug.Log("Tranisitioning");
                 TransitionToState(PlayerStates.Idling);
             }
             else if (hitCollider.CompareTag("MovingPlatform"))
@@ -975,6 +969,13 @@ namespace KinematicTest.controller
             {
                 return false;
             }
+        }
+
+        public void MidLevelTransition(int dir)
+        {
+            Debug.Log(dir);
+            TransitionToState(PlayerStates.NoInput);
+            CurrentWorldForward = (WorldForward) (((int) CurrentWorldForward + dir) % 4);
         }
     }
 }
