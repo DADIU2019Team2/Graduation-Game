@@ -7,7 +7,7 @@ using System.Linq;
 public class GameManager : MonoBehaviour
 {
 
-    public static GameStateScriptableObject.GameState gameState;
+    private static GameStateScriptableObject.GameState gameState;
 
     //[Header("Objects to reset on lvl reset")]
     //public static List<IOnSceneReset> ObjsToReset;
@@ -36,10 +36,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
-            doResetObjects();
-        }
+            DoResetObjects();
+        }*/
         switch (gameState)
         {
             case GameStateScriptableObject.GameState.levelStart:
@@ -47,6 +47,10 @@ public class GameManager : MonoBehaviour
                 {
                     DoFade(true);
                     callOnce = false;
+                }
+                if(transitionFader.getAlpha() == 0)//have finished fading in
+                {
+                    ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
                 }
                 /*Fade from black. 
                 Nothing happens until player gives some sort of input to start the level. 
@@ -65,6 +69,11 @@ public class GameManager : MonoBehaviour
                     isSceneLoadTransition = false;
                     DoFade(false);
                     callOnce = false;
+                }
+                if(transitionFader.getAlpha() == 1) //faded to black
+                {
+                    DoResetObjects();
+                    ChangeGameState(GameStateScriptableObject.GameState.levelStart);
                 }
                 /*Fade to black, return all objects in scene to their initial states. 
                 “Reload” scene and fade back into level-start state. 
@@ -127,7 +136,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void doResetObjects()
+    private void DoResetObjects()
     {
         var objectsToBeReset =  FindObjectsOfType<MonoBehaviour>().OfType<IOnSceneReset>();
         foreach (IOnSceneReset obj in objectsToBeReset)

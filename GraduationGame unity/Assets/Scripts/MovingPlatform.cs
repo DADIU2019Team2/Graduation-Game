@@ -326,7 +326,7 @@ public class MovingPlatform : MonoBehaviour, IMoverController, IOnSceneReset
     public void OnResetLevel()
     {
         resetPlatform();
-        Debug.Log("Resetting " + gameObject.name);
+        //Debug.Log("Resetting " + gameObject.name);
     }
 
     /*public void AddObj2ResetList(List<IOnSceneReset> objResetList, IOnSceneReset thisObj)
