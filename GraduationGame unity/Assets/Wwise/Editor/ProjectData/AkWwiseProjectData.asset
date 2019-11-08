@@ -184,7 +184,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: a9fbbffd6d82f84e923dba695a2fda43
     GuidInternal: 
-    m_lastTime: -8586292515184775808
+    m_lastTime: -8586286455584775808
     List:
     - name: Reverb
       guid: 30596669bdfd2f43bdefbe4ebf8b790a
@@ -202,7 +202,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 4219221ac0890d4bbef9f0f6d1c95982
     GuidInternal: 
-    m_lastTime: -8586291754984775808
+    m_lastTime: -8586284877234775808
     List:
     - name: Main
       guid: 8d0f58feffbb4a40aa7ae59b199a4834
@@ -214,29 +214,183 @@ MonoBehaviour:
         ObjectType: 7
       Path: Default Work Unit/Main
   EventWwu:
+  - PhysicalPath: Events/Ambience.wwu
+    ParentPhysicalPath: Events/Default Work Unit.wwu
+    guid: 3834d9eced89024fb5c088baeb343066
+    GuidInternal: 
+    m_lastTime: -8586286594894775808
+    List:
+    - name: Play_Ambience_Z0
+      guid: e83a3bf23f22f84e82a0950c98ba5abb
+      id: 1001479279
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambience
+        ObjectType: 12
+      - ElementName: Play_Ambience_Z0
+        ObjectType: 3
+      Path: Default Work Unit/Ambience/Play_Ambience_Z0
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Ambience_Z1
+      guid: eafa4ad83991c3468bb52c6d5c298d46
+      id: 1001479278
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambience
+        ObjectType: 12
+      - ElementName: Play_Ambience_Z1
+        ObjectType: 3
+      Path: Default Work Unit/Ambience/Play_Ambience_Z1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Ambience_Z2
+      guid: f6c82ccc1ad1b046b9506b735cb34dd8
+      id: 1001479277
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambience
+        ObjectType: 12
+      - ElementName: Play_Ambience_Z2
+        ObjectType: 3
+      Path: Default Work Unit/Ambience/Play_Ambience_Z2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Ambience_Z3
+      guid: e2a54e3df6f15e43839929f8a9ab5715
+      id: 1001479276
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambience
+        ObjectType: 12
+      - ElementName: Play_Ambience_Z3
+        ObjectType: 3
+      Path: Default Work Unit/Ambience/Play_Ambience_Z3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Ambience_Z4
+      guid: a56745be5fd75641854335ed4c626c9d
+      id: 1001479275
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambience
+        ObjectType: 12
+      - ElementName: Play_Ambience_Z4
+        ObjectType: 3
+      Path: Default Work Unit/Ambience/Play_Ambience_Z4
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b8a3484928cea848bad5ae38d8dae02b
     GuidInternal: 
-    m_lastTime: -8586292515184775808
+    m_lastTime: -8586286475714775808
+    List: []
+  - PhysicalPath: Events/Movement.wwu
+    ParentPhysicalPath: Events/Default Work Unit.wwu
+    guid: 842bb934d44d8d498d4461282abe4319
+    GuidInternal: 
+    m_lastTime: -8586286399884775808
     List:
-    - name: Play_Electricity1
-      guid: 32c95865a16811409865061b6483b8de
-      id: 3157452806
+    - name: Play_Jumps_Takeoff
+      guid: 4e2921447be8f64b8154ba72753e4ff9
+      id: 1828118792
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Electricity1
+      - ElementName: Movement
+        ObjectType: 12
+      - ElementName: Play_Jumps_Takeoff
         ObjectType: 3
-      Path: Default Work Unit/Play_Electricity1
+      Path: Default Work Unit/Movement/Play_Jumps_Takeoff
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.204218
+      minDuration: 0.507052
+    - name: Play_Land_Hard
+      guid: 7498ac1af766d24c9de3c2132e1c2d17
+      id: 404466471
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Movement
+        ObjectType: 12
+      - ElementName: Play_Land_Hard
+        ObjectType: 3
+      Path: Default Work Unit/Movement/Play_Land_Hard
+      maxAttenuation: 0
+      maxDuration: 0.911787
+      minDuration: 0.911787
+    - name: Play_Land_Med
+      guid: dab820a14d298c44b6dcedddc1dd4981
+      id: 639478362
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Movement
+        ObjectType: 12
+      - ElementName: Play_Land_Med
+        ObjectType: 3
+      Path: Default Work Unit/Movement/Play_Land_Med
+      maxAttenuation: 0
+      maxDuration: 0.392559
+      minDuration: 0.392559
+    - name: Play_New_Metal_Ftstp_Loop
+      guid: 2c63fe1b1f5f2b408c5fa939656413be
+      id: 1462703573
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Movement
+        ObjectType: 12
+      - ElementName: Play_New_Metal_Ftstp_Loop
+        ObjectType: 3
+      Path: Default Work Unit/Movement/Play_New_Metal_Ftstp_Loop
+      maxAttenuation: 0
+      maxDuration: 4.886213
+      minDuration: 4.886213
+    - name: Play_New_Norm_Ftstp_Loop
+      guid: 4135c6c289c64146bf6588ad9158f3d1
+      id: 1215491506
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Movement
+        ObjectType: 12
+      - ElementName: Play_New_Norm_Ftstp_Loop
+        ObjectType: 3
+      Path: Default Work Unit/Movement/Play_New_Norm_Ftstp_Loop
+      maxAttenuation: 0
+      maxDuration: 4.816803
+      minDuration: 4.816803
+    - name: Play_Slides
+      guid: c8e39910cd80d040a706dd2570415675
+      id: 1306435192
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Movement
+        ObjectType: 12
+      - ElementName: Play_Slides
+        ObjectType: 3
+      Path: Default Work Unit/Movement/Play_Slides
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events/Music.wwu
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 3631f1d8df531f488aa67fbe67e566e8
     GuidInternal: 
-    m_lastTime: -8586293294914775808
+    m_lastTime: -8586287281724775808
     List:
     - name: Play_Zone1_Music
       guid: 69c85576a4b4ab49ae92be06f10cd93e
@@ -294,82 +448,544 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Set_Z1_Music_1
+      guid: 3992fe67ecdc2948b582e67701425d22
+      id: 478922477
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z1_Music_1
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z1_Music_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Z1_Music_2
+      guid: 9b887904c6627a4097a513ce1cdba654
+      id: 478922478
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z1_Music_2
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z1_Music_2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Z1_Music_3
+      guid: 7544ada98801534eb83f2565937bf8c4
+      id: 478922479
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z1_Music_3
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z1_Music_3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Z1_Music_4
+      guid: 30367225508e7b4da123e5d862f81c40
+      id: 478922472
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z1_Music_4
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z1_Music_4
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Z1_Music_5
+      guid: ca4a68a78981874290edc86aa20b2fa5
+      id: 478922473
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z1_Music_5
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z1_Music_5
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Z1_Music_6
+      guid: 38d4208321619245b656861950273576
+      id: 478922474
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z1_Music_6
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z1_Music_6
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Z1_Music_7
+      guid: a7e9ca04282c124ea35da2e1284df8a8
+      id: 478922475
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z1_Music_7
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z1_Music_7
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Z1_Music_8
+      guid: 1a1d974b193cf24194cb6109aa4cba36
+      id: 478922468
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z1_Music_8
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z1_Music_8
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Z2_Music_1
+      guid: 1cc78b830d430d429500998276cf5aa4
+      id: 1619242214
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z2_Music_1
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z2_Music_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Z2_Music_2
+      guid: c8fe8e08a205d84fb6fb0d4dcca81fbd
+      id: 1619242213
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z2_Music_2
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z2_Music_2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Z2_Music_3
+      guid: 35976033aecf594d9eab22c95d66d370
+      id: 1619242212
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z2_Music_3
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z2_Music_3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Z2_Music_4
+      guid: 3feff012814ebf489764838b5a12c58b
+      id: 1619242211
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z2_Music_4
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z2_Music_4
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Z2_Music_5
+      guid: be679733dd8f104fbcc893b4c8aff785
+      id: 1619242210
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z2_Music_5
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z2_Music_5
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Z2_Music_6
+      guid: c09b47b73709d144bad9f4ae9c14ef1d
+      id: 1619242209
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z2_Music_6
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z2_Music_6
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Z2_Music_7
+      guid: 65818f85cf6ab049ab07e974ed76f297
+      id: 1619242208
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z2_Music_7
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z2_Music_7
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Z2_Music_8
+      guid: ba04761220f4bb489c9d6aaea7b5dc08
+      id: 1619242223
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z2_Music_8
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z2_Music_8
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Z3_Music_1
+      guid: 73a08d5b37d35d478ffe06db84a4aa70
+      id: 388669847
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z3_Music_1
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z3_Music_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Z3_Music_2
+      guid: 49fc917ec9176742b428a886dffd0b27
+      id: 388669844
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z3_Music_2
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z3_Music_2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Z3_Music_3
+      guid: 800d0202fcc66a41832bcc5ad912cd2c
+      id: 388669845
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z3_Music_3
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z3_Music_3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Z3_Music_4
+      guid: b272091a54b12541ab9736b900f57f9d
+      id: 388669842
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z3_Music_4
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z3_Music_4
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Z3_Music_5
+      guid: b86ca20ce832724dba8db4ca278c392c
+      id: 388669843
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z3_Music_5
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z3_Music_5
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Z3_Music_6
+      guid: 6f787161165ed847afc861be5d25fd01
+      id: 388669840
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z3_Music_6
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z3_Music_6
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Z3_Music_7
+      guid: 55f40d9a9c9b03459850e7f71f24cb2b
+      id: 388669841
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z3_Music_7
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z3_Music_7
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Z3_Music_8
+      guid: 370299ae98bf1343922225379f8967af
+      id: 388669854
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z3_Music_8
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z3_Music_8
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Z4_Music_1
+      guid: 50704bde1c7f1f40b4fdd8e08fb0c94a
+      id: 1653563808
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z4_Music_1
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z4_Music_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Z4_Music_2
+      guid: cc3d3add7ec210478e8840d5adcd196e
+      id: 1653563811
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z4_Music_2
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z4_Music_2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Z4_Music_3
+      guid: 058c5ad511b4044390306d948321d78f
+      id: 1653563810
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z4_Music_3
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z4_Music_3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Z4_Music_4
+      guid: ac8545f1a694b748a9f1d24055bde42c
+      id: 1653563813
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z4_Music_4
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z4_Music_4
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Set_Z4_Music_5
+      guid: 4c3ed7e5c2e6e74d9f839a1d0b86a4c8
+      id: 1653563812
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z4_Music_5
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z4_Music_5
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Z4_Music_6
+      guid: 8907ad776c746341aafe886cb826d4cb
+      id: 1653563815
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z4_Music_6
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z4_Music_6
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Z4_Music_7
+      guid: 509a8182bd5b8e43b4b85ca956f8aeec
+      id: 1653563814
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z4_Music_7
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z4_Music_7
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_Z4_Music_8
+      guid: 30635e877827fe4f98dcc62bf3798766
+      id: 1653563817
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Set_Z4_Music_8
+        ObjectType: 3
+      Path: Default Work Unit/Music/Set_Z4_Music_8
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events/SFX.wwu
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 70427e337ecab74391244b5ed6520621
     GuidInternal: 
-    m_lastTime: -8586291754984775808
+    m_lastTime: -8586290019754775808
     List:
-    - name: Play_Electricity1_01
-      guid: 396416283de14f4e86ed7d1c23a85311
-      id: 1977566868
+    - name: Play_Electricity
+      guid: fb4fb80769df474ba5dd4b13b64279a6
+      id: 1560622413
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
-      - ElementName: Play_Electricity1_01
+      - ElementName: Play_Electricity
         ObjectType: 3
-      Path: Default Work Unit/SFX/Play_Electricity1_01
+      Path: Default Work Unit/SFX/Play_Electricity
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play_Footstep_loop_PH
-      guid: 5207c228cbccc942b9ae89d4f08560a6
-      id: 39250664
+    - name: Play_Electricity1
+      guid: 32c95865a16811409865061b6483b8de
+      id: 3157452806
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
-      - ElementName: Play_Footstep_loop_PH
+      - ElementName: Play_Electricity1
         ObjectType: 3
-      Path: Default Work Unit/SFX/Play_Footstep_loop_PH
+      Path: Default Work Unit/SFX/Play_Electricity1
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play_Jumps_PH
-      guid: 4e2921447be8f64b8154ba72753e4ff9
-      id: 1761266224
+    - name: Play_Lazer
+      guid: b4477b35f6c9344ca63f60bbb9b3045e
+      id: 1933691314
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
-      - ElementName: Play_Jumps_PH
+      - ElementName: Play_Lazer
         ObjectType: 3
-      Path: Default Work Unit/SFX/Play_Jumps_PH
-      maxAttenuation: 0
-      maxDuration: 0.638821
-      minDuration: 0.480045
-    - name: Play_Z1Ambience
-      guid: 87ed2319d261d5429f12ae9e69a8f24f
-      id: 3967394185
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: SFX
-        ObjectType: 12
-      - ElementName: Play_Z1Ambience
-        ObjectType: 3
-      Path: Default Work Unit/SFX/Play_Z1Ambience
+      Path: Default Work Unit/SFX/Play_Lazer
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Stop_Footstep_loop_PH
-      guid: 1d9f5e1d2cade64ea9ac70f019085eb8
-      id: 1201902998
+    - name: Play_Pylon_Parkour
+      guid: 14dce96099c4bf439e58791dd30ef25b
+      id: 1832262049
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
-      - ElementName: Stop_Footstep_loop_PH
+      - ElementName: Play_Pylon_Parkour
         ObjectType: 3
-      Path: Default Work Unit/SFX/Stop_Footstep_loop_PH
+      Path: Default Work Unit/SFX/Play_Pylon_Parkour
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Robot_Appearence
+      guid: 5785f3f613544849abfb578e08336a56
+      id: 3030735331
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: Play_Robot_Appearence
+        ObjectType: 3
+      Path: Default Work Unit/SFX/Play_Robot_Appearence
+      maxAttenuation: 0
+      maxDuration: 4.863542
+      minDuration: 4.863542
+    - name: Play_Saw
+      guid: 0aaee0350f247a4c9d84acbf0f85c5ca
+      id: 3225017965
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: Play_Saw
+        ObjectType: 3
+      Path: Default Work Unit/SFX/Play_Saw
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -538,8 +1154,39 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: d9f2b2f3ea9ede449bd3c7d0237f0a69
     GuidInternal: 
-    m_lastTime: -8586298690304775808
-    List: []
+    m_lastTime: -8586290766344775808
+    List:
+    - name: Footstep_Type
+      guid: d2154ccc67360843877e3b99d4515829
+      id: 2615620554
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Footstep_Type
+        ObjectType: 11
+      Path: Default Work Unit/Footstep_Type
+      values:
+      - name: Glass
+        guid: 8b1c0889494e4a42a40827559bfbe7e8
+        id: 2449969375
+        PathAndIcons:
+        - ElementName: Glass
+          ObjectType: 10
+      - name: Metal
+        guid: 31c918eb3bd40845bb2f9f74cc82bb9e
+        id: 2473969246
+        PathAndIcons:
+        - ElementName: Metal
+          ObjectType: 10
+      - name: Normal
+        guid: 89db62d5d20c084097fb5b4325d90f16
+        id: 1160234136
+        PathAndIcons:
+        - ElementName: Normal
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers/Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -551,7 +1198,6 @@ MonoBehaviour:
   - /Wwise_Graduation_game
   - /Wwise_Graduation_game/Events
   - /Wwise_Graduation_game/Events/Default Work Unit
-  - /Wwise_Graduation_game/Events/Default Work Unit/Music
-  - /Wwise_Graduation_game/Events/Default Work Unit/SFX
+  - /Wwise_Graduation_game/Events/Default Work Unit/Movement
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
