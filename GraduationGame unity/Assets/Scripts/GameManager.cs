@@ -22,16 +22,16 @@ public class GameManager : MonoBehaviour
 
     [Header("Check If Active")]// bad i know
     public GameObject optionsMenu;
-    //private VoidEvent test;
-    //private VoidTypeListener testListen;
 
-
+    private void Awake()
+    {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 120;
+    }
     private void Start()
     {
         callOnce = true;
         isSceneLoadTransition = false;
-        //testListen.GameEvent = test;
-        //testListen.OnEventRaised(ChangeGameState(GameStateScriptableObject.GameState.optionsMenuOpened));
     }
 
     // Update is called once per frame
@@ -128,7 +128,7 @@ public class GameManager : MonoBehaviour
             case true:
                 transitionTime = sceneLoadFadeTime.getValue();
 
-                if(fadeIn)
+                if (fadeIn)
                     transitionFader.fadeIn(transitionTime, true);
                 else
                     transitionFader.fadeOut(transitionTime, true);
@@ -137,7 +137,7 @@ public class GameManager : MonoBehaviour
             case false:
                 transitionTime = blackFadeTime.getValue();
 
-                if(fadeIn)
+                if (fadeIn)
                     transitionFader.fadeIn(transitionTime, false);
                 else
                     transitionFader.fadeOut(transitionTime, false);
