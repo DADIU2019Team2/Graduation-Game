@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: jump06_LeftLeg_v002_AD.ma
-//Last modified: Fri, Nov 08, 2019 12:37:28 PM
+//Last modified: Fri, Nov 08, 2019 01:34:38 PM
 //Codeset: 1252
 file -rdi 1 -ns "zoeRigAnim" -rfn "zoeRigAnimRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/Dadiu student/Documents/Graduation-Game/GraduationGame unity/3DAssets/050_rig/zoeRig/live/zoeRig.ma";
@@ -23,13 +23,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "57097639-41EE-1206-8580-ED89590DF12B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -354.89270708564038 451.98109274548062 384.46030349994328 ;
-	setAttr ".r" -type "double3" -51.338352729556156 -64.999999999994444 7.5258335225804977e-15 ;
+	setAttr ".t" -type "double3" -209.21767659332889 101.14845024070311 128.67220239665158 ;
+	setAttr ".r" -type "double3" -35.138352729546881 255.79999999999345 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "2E233015-44BE-0834-B6F9-C4B52B5AAA05";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 627.42615134078392;
+	setAttr ".coi" 269.58063849479402;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -39,14 +39,14 @@ createNode camera -s -n "perspShape" -p "persp";
 createNode transform -s -n "top";
 	rename -uid "154AD2C7-4CDD-B7C6-7C34-63AD70404243";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.86774259738067328 1000.1 148.56252084938868 ;
+	setAttr ".t" -type "double3" -0.86774259738067328 1000.1 187.72537970321065 ;
 	setAttr ".r" -type "double3" -90 0 0 ;
 createNode camera -s -n "topShape" -p "top";
 	rename -uid "F05223A1-47CF-5F5B-EFAE-1282DF86DE87";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 380.04580697445158;
+	setAttr ".ow" 381.8378738247643;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
@@ -2470,7 +2470,7 @@ createNode reference -n "zoeRigAnimRN";
 		1 |zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:RightShoulder|zoeRigAnim:RightArm|zoeRigAnim:RightForeArm|zoeRigAnim:RightHand 
 		"Character" "ch" " -s 0 -ci 1 -at \"message\""
 		2 "|zoeRigAnim:zoe_grp" "visibility" " 1"
-		2 "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root" "translate" " -type \"double3\" 0 0 0.067806696875887695"
+		2 "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root" "translate" " -type \"double3\" 0 0 102.24491927622156595"
 		
 		2 "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root" "translateX" " -av"
 		
@@ -2480,7 +2480,7 @@ createNode reference -n "zoeRigAnimRN";
 		
 		2 "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root" "side" " 2"
 		2 "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips" 
-		"translate" " -type \"double3\" 0 61.467041015625 0"
+		"translate" " -type \"double3\" 0 65.13611602783203125 0"
 		2 "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips" 
 		"translateX" " -av"
 		2 "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips" 
@@ -2685,7 +2685,7 @@ createNode reference -n "zoeRigAnimRN";
 		2 "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck" 
 		"type" " 7"
 		2 "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head" 
-		"rotate" " -type \"double3\" 13.21045170263755075 1.4283202101948822 3.74537888281890163"
+		"rotate" " -type \"double3\" 5.20999579782527356 -10.48336920056814492 -2.29218500870067299"
 		
 		2 "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head" 
 		"rotateX" " -av"
@@ -3769,141 +3769,144 @@ createNode HIKSolverNode -n "HIKSolverNode1";
 createNode HIKState2SK -n "HIKState2SK1";
 	rename -uid "651D9426-49C5-8666-6EB8-D5B0EE9415B9";
 	setAttr ".ihi" 0;
-	setAttr ".HipsTx" -1.9726230675587431e-06;
-	setAttr ".HipsTy" 77.731651306152344;
-	setAttr ".HipsTz" 1.5498713654693574e-05;
-	setAttr ".LeftUpLegTx" 9.7383346377425273;
-	setAttr ".LeftUpLegTy" 17.046884134371254;
-	setAttr ".LeftUpLegTz" -1.4126330690511146;
-	setAttr ".LeftUpLegRx" 6.4787892469173851;
-	setAttr ".LeftUpLegRy" -14.646644376672523;
-	setAttr ".LeftUpLegRz" 12.44391910987745;
-	setAttr ".LeftLegTx" 0.4777569707218241;
-	setAttr ".LeftLegTy" -14.113074292238814;
-	setAttr ".LeftLegTz" 0.87845189588661654;
-	setAttr ".LeftLegRx" -0.42750994429222272;
-	setAttr ".LeftLegRy" -23.314134590705681;
-	setAttr ".LeftLegRz" -1.0426724353713543;
-	setAttr ".LeftFootTx" 14.47191725888816;
-	setAttr ".LeftFootTy" -11.734365308572011;
-	setAttr ".LeftFootTz" -1.8354825242711872;
-	setAttr ".LeftFootRx" 43.513562881570707;
-	setAttr ".LeftFootRy" -18.467846638415821;
-	setAttr ".LeftFootRz" -5.1621041472491793;
-	setAttr ".RightUpLegTx" -11.575367868690035;
-	setAttr ".RightUpLegTy" 14.350896128855666;
-	setAttr ".RightUpLegTz" -6.8912753518089218;
-	setAttr ".RightUpLegRx" -6.4959409250071403;
-	setAttr ".RightUpLegRy" -14.63772945004353;
-	setAttr ".RightUpLegRz" -12.450681117965312;
-	setAttr ".RightLegTx" 12.30517893943022;
-	setAttr ".RightLegTy" -8.3489429212486819;
-	setAttr ".RightLegTz" 3.0417677723789431;
-	setAttr ".RightLegRx" -6.2911823218762573;
-	setAttr ".RightLegRy" -12.201844039283113;
-	setAttr ".RightLegRz" 36.596003420880251;
-	setAttr ".RightFootTx" -8.5202799657758117;
-	setAttr ".RightFootTy" -35.847163511818941;
-	setAttr ".RightFootTz" 11.037399305741056;
-	setAttr ".RightFootRx" 37.968218452353177;
-	setAttr ".RightFootRy" -13.42713303684191;
-	setAttr ".RightFootRz" 4.7103446859390719;
-	setAttr ".SpineTx" -0.15811009767666784;
-	setAttr ".SpineTy" 20.36968085628547;
-	setAttr ".SpineTz" -9.4085065428986248;
-	setAttr ".SpineRx" 13.382420812171313;
-	setAttr ".SpineRy" 16.08583813244579;
-	setAttr ".SpineRz" 7.1803731443588772;
-	setAttr ".LeftArmTx" 4.468438228872941;
-	setAttr ".LeftArmTy" -17.075990732327867;
-	setAttr ".LeftArmTz" -29.688887810802157;
-	setAttr ".LeftArmRx" -15.388171957154062;
-	setAttr ".LeftArmRy" 43.663954485582657;
-	setAttr ".LeftArmRz" 16.294795133757017;
-	setAttr ".LeftForeArmTx" -28.131817692020192;
-	setAttr ".LeftForeArmTy" 14.961550659041251;
-	setAttr ".LeftForeArmTz" -22.922036994963822;
-	setAttr ".LeftForeArmRx" 74.235727237062989;
-	setAttr ".LeftForeArmRy" 96.089662891848292;
-	setAttr ".LeftForeArmRz" 99.286373834419464;
-	setAttr ".LeftHandTx" 13.26459536350907;
-	setAttr ".LeftHandTy" 61.146607887810447;
-	setAttr ".LeftHandTz" -28.919928049125289;
-	setAttr ".LeftHandRx" 111.20515581139044;
-	setAttr ".LeftHandRy" 1.7995864039329956;
-	setAttr ".LeftHandRz" 10.230874244902171;
-	setAttr ".RightArmTx" 2.0161926852439223;
-	setAttr ".RightArmTy" -16.760531853419572;
-	setAttr ".RightArmTz" -31.928855775094384;
-	setAttr ".RightArmRx" -10.566328445115523;
-	setAttr ".RightArmRy" -41.600120257755464;
-	setAttr ".RightArmRz" 9.2833780829726056;
-	setAttr ".RightForeArmTx" 33.576671349965878;
-	setAttr ".RightForeArmTy" -27.137531408413366;
-	setAttr ".RightForeArmTz" -18.879934410385047;
-	setAttr ".RightForeArmRx" 36.949886450750967;
-	setAttr ".RightForeArmRy" -46.886199700642734;
-	setAttr ".RightForeArmRz" -17.467099211560051;
-	setAttr ".RightHandTx" 43.140134425103781;
-	setAttr ".RightHandTy" 3.6661690802587898;
-	setAttr ".RightHandTz" -33.631793070945783;
-	setAttr ".RightHandRx" 57.46022045065898;
-	setAttr ".RightHandRy" -59.836022817097856;
-	setAttr ".RightHandRz" -13.696115552077949;
-	setAttr ".HeadTx" 10.310959181022508;
-	setAttr ".HeadTy" -12.117906308157572;
-	setAttr ".HeadTz" -43.391700325037277;
-	setAttr ".HeadRx" 42.974895371845072;
-	setAttr ".HeadRy" 9.015908249867735;
-	setAttr ".HeadRz" 12.798394725759984;
-	setAttr ".LeftToeBaseTx" 6.6462720924231551;
-	setAttr ".LeftToeBaseTy" -36.373134333581355;
-	setAttr ".LeftToeBaseTz" -20.691251292733138;
-	setAttr ".LeftToeBaseRx" 24.589800653260411;
-	setAttr ".LeftToeBaseRy" 3.1573501025435471;
-	setAttr ".LeftToeBaseRz" 20.037084287609499;
-	setAttr ".RightToeBaseTx" -13.346714615191891;
-	setAttr ".RightToeBaseTy" -20.878038762699756;
-	setAttr ".RightToeBaseTz" -10.959931307995333;
-	setAttr ".RightToeBaseRx" 54.482108739196875;
-	setAttr ".RightToeBaseRy" -13.723332112169588;
-	setAttr ".RightToeBaseRz" -11.431088575157359;
-	setAttr ".LeftShoulderTx" -0.24838285050125464;
-	setAttr ".LeftShoulderTy" -13.922444318759084;
-	setAttr ".LeftShoulderTz" -31.764760708003323;
-	setAttr ".LeftShoulderRx" -8.1794361987556936;
-	setAttr ".LeftShoulderRy" 46.331123792512436;
-	setAttr ".LeftShoulderRz" 15.034349982824876;
-	setAttr ".RightShoulderTx" 15.53210578085983;
-	setAttr ".RightShoulderTy" -10.333875683001914;
-	setAttr ".RightShoulderTz" -31.290417823255709;
-	setAttr ".RightShoulderRx" 8.1794024732181665;
-	setAttr ".RightShoulderRy" -46.331110683894671;
-	setAttr ".RightShoulderRz" 5.0344895860626533;
-	setAttr ".NeckTx" 9.1707598629460776;
-	setAttr ".NeckTy" -18.011437697590019;
-	setAttr ".NeckTz" -37.882014413256698;
-	setAttr ".NeckRx" 50.439805634610806;
-	setAttr ".NeckRy" 14.249189683388233;
-	setAttr ".NeckRz" 20.366099367880235;
-	setAttr ".Spine1Tx" 1.1248602938726515;
-	setAttr ".Spine1Ty" -17.632209153857197;
-	setAttr ".Spine1Tz" -10.193868354403349;
-	setAttr ".Spine1Rx" 24.023499815279326;
-	setAttr ".Spine1Ry" 13.999468640001741;
-	setAttr ".Spine1Rz" 10.897138051171178;
-	setAttr ".Spine2Tx" 2.5296008106603587;
-	setAttr ".Spine2Ty" -14.367477039193616;
-	setAttr ".Spine2Tz" -15.317900173691498;
-	setAttr ".Spine2Rx" 34.88369305577168;
-	setAttr ".Spine2Ry" 12.508224947920505;
-	setAttr ".Spine2Rz" 14.596127606323403;
-	setAttr ".Spine3Tx" 5.3057291739296826;
-	setAttr ".Spine3Ty" -13.071517846969293;
-	setAttr ".Spine3Tz" -24.16379359127852;
-	setAttr ".Spine3Rx" 45.723903742501122;
-	setAttr ".Spine3Ry" 11.75904144712662;
-	setAttr ".Spine3Rz" 18.511478941796845;
+	setAttr ".HipsTx" 11.401664733886719;
+	setAttr ".HipsTy" 72.502769470214844;
+	setAttr ".HipsTz" -142.36206099985438;
+	setAttr ".HipsRx" 2.7194961804445987;
+	setAttr ".HipsRy" 11.987883307398782;
+	setAttr ".HipsRz" 0.41889232465476822;
+	setAttr ".LeftUpLegTx" 68.80968309863411;
+	setAttr ".LeftUpLegTy" 5.874541385469044;
+	setAttr ".LeftUpLegTz" -129.25867614788896;
+	setAttr ".LeftUpLegRx" 1.5934992574109001;
+	setAttr ".LeftUpLegRy" -7.4264100203498238;
+	setAttr ".LeftUpLegRz" 2.6842780748396198;
+	setAttr ".LeftLegTx" -126.15544872142441;
+	setAttr ".LeftLegTy" -16.409072983262227;
+	setAttr ".LeftLegTz" -62.258800996675348;
+	setAttr ".LeftLegRx" -0.2463686173727366;
+	setAttr ".LeftLegRy" -18.236203767641832;
+	setAttr ".LeftLegRz" -1.7973897147868174;
+	setAttr ".LeftFootTx" 11.240074234357143;
+	setAttr ".LeftFootTy" -141.19938870342975;
+	setAttr ".LeftFootTz" -47.3648847564221;
+	setAttr ".LeftFootRx" 64.25214608747784;
+	setAttr ".LeftFootRy" 15.942492136987743;
+	setAttr ".LeftFootRz" 21.874601192000249;
+	setAttr ".RightUpLegTx" 46.900077205197348;
+	setAttr ".RightUpLegTy" 4.0435148774569285;
+	setAttr ".RightUpLegTz" -132.11802466936155;
+	setAttr ".RightUpLegRx" -3.6449098416210757;
+	setAttr ".RightUpLegRy" -11.123099126498303;
+	setAttr ".RightUpLegRz" -4.4324314103313007;
+	setAttr ".RightLegTx" 117.10801820889559;
+	setAttr ".RightLegTy" 82.703112294242644;
+	setAttr ".RightLegTz" 12.050613445777861;
+	setAttr ".RightLegRx" -17.999678300377557;
+	setAttr ".RightLegRy" -0.69679422748833875;
+	setAttr ".RightLegRz" 39.328321081756705;
+	setAttr ".RightFootTx" 135.58718991748793;
+	setAttr ".RightFootTy" -82.001525902440648;
+	setAttr ".RightFootTz" 67.339098874598164;
+	setAttr ".RightFootRx" -1.0557243550276565;
+	setAttr ".RightFootRy" 2.7033075176851171;
+	setAttr ".RightFootRz" 21.104486460065434;
+	setAttr ".SpineTx" 57.893665839457995;
+	setAttr ".SpineTy" 10.776671109718677;
+	setAttr ".SpineTz" -134.71070508567021;
+	setAttr ".SpineRx" -3.8690730177487564;
+	setAttr ".SpineRy" 8.9120847148398674;
+	setAttr ".SpineRz" 5.258002893979036;
+	setAttr ".LeftArmTx" -38.089405422262729;
+	setAttr ".LeftArmTy" -34.709172241032803;
+	setAttr ".LeftArmTz" -147.13876310264612;
+	setAttr ".LeftArmRx" -76.877603752404724;
+	setAttr ".LeftArmRy" 178.41614296140239;
+	setAttr ".LeftArmRz" -176.07287064217161;
+	setAttr ".LeftForeArmTx" -139.21533495883102;
+	setAttr ".LeftForeArmTy" -54.733749445565905;
+	setAttr ".LeftForeArmTz" 57.179786224597109;
+	setAttr ".LeftForeArmRx" -0.91719964586598113;
+	setAttr ".LeftForeArmRy" 43.72400555692149;
+	setAttr ".LeftForeArmRz" -5.1231942168858566;
+	setAttr ".LeftHandTx" -157.72589459401013;
+	setAttr ".LeftHandTy" 0.018793055052370278;
+	setAttr ".LeftHandTz" 6.6913325099270082;
+	setAttr ".LeftHandRx" 6.3890255525804633;
+	setAttr ".LeftHandRy" 16.150017237580251;
+	setAttr ".LeftHandRz" -21.953492084599787;
+	setAttr ".RightArmTx" 82.122699251600238;
+	setAttr ".RightArmTy" -38.439156792360848;
+	setAttr ".RightArmTz" -113.61312099939056;
+	setAttr ".RightArmRx" -61.445907819827525;
+	setAttr ".RightArmRy" 10.804357966564369;
+	setAttr ".RightArmRz" -47.723103958837015;
+	setAttr ".RightForeArmTx" 101.08237366660163;
+	setAttr ".RightForeArmTy" -104.04538052127828;
+	setAttr ".RightForeArmTz" 14.11518023101987;
+	setAttr ".RightForeArmRx" -5.9116232723528732;
+	setAttr ".RightForeArmRy" 2.2773553223505862;
+	setAttr ".RightForeArmRz" -30.267137211105695;
+	setAttr ".RightHandTx" 112.05582783625775;
+	setAttr ".RightHandTy" -59.951575829445304;
+	setAttr ".RightHandTz" -31.392351776065979;
+	setAttr ".RightHandRx" 7.4029112623313527;
+	setAttr ".RightHandRy" 26.778267980634006;
+	setAttr ".RightHandRz" -3.0863964310579637;
+	setAttr ".HeadTx" 2.1658236498523884;
+	setAttr ".HeadTy" 37.063837303385768;
+	setAttr ".HeadTz" -145.71093756284827;
+	setAttr ".HeadRx" 15.161337473697287;
+	setAttr ".HeadRy" -9.930787055183643;
+	setAttr ".HeadRz" -11.096945635681426;
+	setAttr ".LeftToeBaseTx" -5.6325219696559827;
+	setAttr ".LeftToeBaseTy" -56.785689052685058;
+	setAttr ".LeftToeBaseTz" 91.876122988301148;
+	setAttr ".LeftToeBaseRx" 51.550001560687214;
+	setAttr ".LeftToeBaseRy" 67.167481535867907;
+	setAttr ".LeftToeBaseRz" 62.744535677325921;
+	setAttr ".RightToeBaseTx" -31.602256851997872;
+	setAttr ".RightToeBaseTy" 118.18941101446629;
+	setAttr ".RightToeBaseTz" 78.620453716153207;
+	setAttr ".RightToeBaseRx" 5.2117966374359064;
+	setAttr ".RightToeBaseRy" 0.43051878434877333;
+	setAttr ".RightToeBaseRz" 5.0871794293846744;
+	setAttr ".LeftShoulderTx" 24.357117354081925;
+	setAttr ".LeftShoulderTy" 45.43595649061082;
+	setAttr ".LeftShoulderTz" -135.37980541334164;
+	setAttr ".LeftShoulderRx" 48.326565145780052;
+	setAttr ".LeftShoulderRy" 14.761612584069487;
+	setAttr ".LeftShoulderRz" 0.15374736406014466;
+	setAttr ".RightShoulderTx" 38.949928362334234;
+	setAttr ".RightShoulderTy" 41.742672926683099;
+	setAttr ".RightShoulderTz" -129.4185844589976;
+	setAttr ".RightShoulderRx" -10.990415830891804;
+	setAttr ".RightShoulderRy" -16.392401280104242;
+	setAttr ".RightShoulderRz" -12.874249623596224;
+	setAttr ".NeckTx" 30.414179675200039;
+	setAttr ".NeckTy" 35.162467038217258;
+	setAttr ".NeckTz" -134.58616629834404;
+	setAttr ".NeckRx" 15.05284525511709;
+	setAttr ".NeckRy" -22.960826176487096;
+	setAttr ".NeckRz" -14.305997997085415;
+	setAttr ".Spine1Tx" -29.147095787767409;
+	setAttr ".Spine1Ty" 12.947889828690975;
+	setAttr ".Spine1Tz" -139.22270481586173;
+	setAttr ".Spine1Rx" 0.88170074095105333;
+	setAttr ".Spine1Ry" -1.2057105475690826;
+	setAttr ".Spine1Rz" 0.58676553478230375;
+	setAttr ".Spine2Tx" 2.8247113951978484;
+	setAttr ".Spine2Ty" 33.648230220557238;
+	setAttr ".Spine2Tz" -138.84406385204494;
+	setAttr ".Spine2Rx" 4.8617260363544341;
+	setAttr ".Spine2Ry" -11.702173790808773;
+	setAttr ".Spine2Rz" -5.4423676417564595;
+	setAttr ".Spine3Tx" 34.091215335557486;
+	setAttr ".Spine3Ty" 45.11374582691316;
+	setAttr ".Spine3Tz" -131.07586829023916;
+	setAttr ".Spine3Rx" 10.470239516750897;
+	setAttr ".Spine3Ry" -24.701831651000877;
+	setAttr ".Spine3Rz" -13.413626390591434;
 createNode animCurveTL -n "Root_translateX";
 	rename -uid "49CAAD64-45C3-C934-68C3-3AB75A0C4D3C";
 	setAttr ".tan" 18;
@@ -22883,90 +22886,138 @@ createNode HIKState2SK -n "HIKState2SK2";
 	setAttr ".ihi" 0;
 	setAttr ".HipsTy" 95.593215942383651;
 	setAttr ".HipsTz" 1.534861698322806e-13;
-	setAttr ".LeftUpLegTx" 8.2372827529907227;
-	setAttr ".LeftUpLegTy" 9.2370555648813024e-13;
-	setAttr ".LeftUpLegTz" -1.8942303653576143e-07;
-	setAttr ".LeftUpLegRy" -89.999931698108298;
-	setAttr ".LeftLegTx" 1.7942011517422885e-05;
-	setAttr ".LeftLegTy" -43.932189941414194;
-	setAttr ".LeftLegTz" 1.3351459543287092e-05;
-	setAttr ".LeftLegRx" -0.00013660381203392587;
-	setAttr ".LeftFootTx" 1.5517400583687756e-05;
-	setAttr ".LeftFootTy" -44.033847657296512;
-	setAttr ".LeftFootTz" -0.063626596327431173;
-	setAttr ".LeftFootRx" 90;
-	setAttr ".LeftFootRz" 89.999938964823784;
-	setAttr ".RightUpLegTx" -8.2372827529907227;
-	setAttr ".RightUpLegTy" 1.0516032489249483e-12;
-	setAttr ".RightUpLegTz" -5.6826759759104372e-07;
-	setAttr ".RightUpLegRy" 90;
-	setAttr ".RightLegTx" -1.7457083971375283e-05;
-	setAttr ".RightLegTy" -43.93219757080859;
-	setAttr ".RightLegTz" 4.7683878534598989e-06;
-	setAttr ".RightFootTx" -1.0425754908480436e-05;
-	setAttr ".RightFootTy" -44.03385925294365;
-	setAttr ".RightFootTz" -0.063614926067614874;
-	setAttr ".RightFootRx" 90;
-	setAttr ".RightFootRz" -90;
-	setAttr ".SpineTx" 3.1651688914280385e-05;
-	setAttr ".SpineTy" 8.6276869268217808;
-	setAttr ".SpineTz" -4.0152146703147604;
-	setAttr ".SpineRz" 180;
-	setAttr ".LeftArmTx" -6.0153740548685164e-06;
-	setAttr ".LeftArmTy" -13.68805666096852;
-	setAttr ".LeftArmTz" -9.9955387966588205e-08;
-	setAttr ".LeftArmRy" -90;
-	setAttr ".LeftArmRz" -0.00010928302672005942;
-	setAttr ".LeftForeArmTx" 7.6670762825692407e-05;
-	setAttr ".LeftForeArmTy" -26.542364789325458;
-	setAttr ".LeftForeArmTz" 3.6533089485146775e-05;
-	setAttr ".LeftForeArmRy" -0.00010259267400174412;
-	setAttr ".LeftForeArmRz" -0.00020490567509950892;
-	setAttr ".LeftHandTx" -5.1023422988016875e-05;
-	setAttr ".LeftHandTy" -29.227122021955481;
-	setAttr ".LeftHandTz" 7.9679639952701109e-06;
-	setAttr ".LeftHandRy" -0.00018455494224467212;
-	setAttr ".LeftHandRz" -0.00028686803591797657;
-	setAttr ".RightArmTx" -6.7433354047352623e-06;
-	setAttr ".RightArmTy" -13.688038633978692;
-	setAttr ".RightArmTz" 1.1518910665753168e-05;
-	setAttr ".RightArmRy" 89.999915417241937;
-	setAttr ".RightForeArmTx" -1.131721329894475e-05;
-	setAttr ".RightForeArmTy" -26.542362974816591;
-	setAttr ".RightForeArmTz" 4.8536111336261456e-05;
-	setAttr ".RightForeArmRz" 5.965043611130559e-05;
-	setAttr ".RightHandTx" 4.7599668241637971e-05;
-	setAttr ".RightHandTy" -29.227093504737326;
-	setAttr ".RightHandTz" 4.0341797614473762e-05;
-	setAttr ".HeadTx" 1.1010249530083057e-05;
-	setAttr ".HeadTy" -10.629166075663534;
-	setAttr ".HeadTz" 3.3151793488173098e-06;
-	setAttr ".LeftToeBaseTx" 1.6344017177871706e-05;
-	setAttr ".LeftToeBaseTy" -13.375006947805099;
-	setAttr ".LeftToeBaseTz" 6.336850163981957;
-	setAttr ".RightToeBaseTx" -2.0894403647275794e-06;
-	setAttr ".RightToeBaseTy" -13.375012482793057;
-	setAttr ".RightToeBaseTz" 6.336855835931126;
-	setAttr ".LeftShoulderTx" -7.1594078076665202;
-	setAttr ".LeftShoulderTy" -12.649722759650302;
-	setAttr ".LeftShoulderTz" 1.9471478654806536;
-	setAttr ".LeftShoulderRz" -90;
-	setAttr ".RightShoulderTx" 7.1594107615168294;
-	setAttr ".RightShoulderTy" -12.649722759641861;
-	setAttr ".RightShoulderTz" 1.9471340372030657;
-	setAttr ".RightShoulderRz" 90;
-	setAttr ".NeckTx" 4.2509449318552736e-06;
-	setAttr ".NeckTy" -20.609224745703358;
-	setAttr ".NeckTz" -4.2029298124468539e-05;
-	setAttr ".Spine1Tx" 1.2188720584524795e-06;
-	setAttr ".Spine1Ty" -7.7219328374649194;
-	setAttr ".Spine1Tz" -4.4606133959845806e-06;
-	setAttr ".Spine2Tx" 1.1129235436597221e-06;
-	setAttr ".Spine2Ty" -7.7219342679747029;
-	setAttr ".Spine2Tz" -5.2585271879124207e-06;
-	setAttr ".Spine3Tx" 3.3803433215175817e-05;
-	setAttr ".Spine3Ty" -13.039059111569955;
-	setAttr ".Spine3Tz" -7.6692019712609749e-06;
+	setAttr ".LeftUpLegTx" -40.503278438118606;
+	setAttr ".LeftUpLegTy" 14.492789694504538;
+	setAttr ".LeftUpLegTz" 164.59267842891805;
+	setAttr ".LeftUpLegRx" 0.15486903128588261;
+	setAttr ".LeftUpLegRy" -101.97415893667065;
+	setAttr ".LeftUpLegRz" 2.7471666729183837;
+	setAttr ".LeftLegTx" 162.89900343940647;
+	setAttr ".LeftLegTy" -47.134669715465847;
+	setAttr ".LeftLegTz" 47.89799860917045;
+	setAttr ".LeftLegRx" 1.3132459860630632;
+	setAttr ".LeftLegRy" -12.191899239037157;
+	setAttr ".LeftLegRz" -3.0967065248910699;
+	setAttr ".LeftFootTx" 172.37931641366933;
+	setAttr ".LeftFootTy" -7.7985191434516778;
+	setAttr ".LeftFootTz" 21.293205389002029;
+	setAttr ".LeftFootRx" 79.023973555088233;
+	setAttr ".LeftFootRy" 107.24735093058042;
+	setAttr ".LeftFootRz" -159.30013957963192;
+	setAttr ".RightUpLegTx" -56.619315328109749;
+	setAttr ".RightUpLegTy" 14.448258458742785;
+	setAttr ".RightUpLegTz" 161.17468478639032;
+	setAttr ".RightUpLegRx" -0.15487263227126902;
+	setAttr ".RightUpLegRy" 78.02576601732008;
+	setAttr ".RightUpLegRz" -2.7471664700688225;
+	setAttr ".RightLegTx" -160.73599743262525;
+	setAttr ".RightLegTy" -50.977126157202605;
+	setAttr ".RightLegTz" -38.171987331699071;
+	setAttr ".RightLegRx" 0.16255706506975331;
+	setAttr ".RightLegRy" -8.4995630689575066;
+	setAttr ".RightLegRz" 4.6509424264153001;
+	setAttr ".RightFootTx" -164.72679234411657;
+	setAttr ".RightFootTy" -16.183965196348488;
+	setAttr ".RightFootTz" -36.511605713934145;
+	setAttr ".RightFootRx" 82.60601186769054;
+	setAttr ".RightFootRy" -100.34666323037904;
+	setAttr ".RightFootRz" 177.32239511512429;
+	setAttr ".SpineTx" -47.665665335291926;
+	setAttr ".SpineTy" 22.895819361937399;
+	setAttr ".SpineTz" 158.55111066184477;
+	setAttr ".SpineRx" -2.7471564448971404;
+	setAttr ".SpineRy" -11.981658524761171;
+	setAttr ".SpineRz" -179.84494950541568;
+	setAttr ".LeftArmTx" 30.233676104663772;
+	setAttr ".LeftArmTy" 77.829324892735485;
+	setAttr ".LeftArmTz" 139.58985029256263;
+	setAttr ".LeftArmRx" -6.96996529670621;
+	setAttr ".LeftArmRy" -84.53278317171133;
+	setAttr ".LeftArmRz" 29.412469835695177;
+	setAttr ".LeftForeArmTx" 166.22647897840147;
+	setAttr ".LeftForeArmTy" 33.613549128346619;
+	setAttr ".LeftForeArmTz" 10.994360383943686;
+	setAttr ".LeftForeArmRx" 80.34771287411445;
+	setAttr ".LeftForeArmRy" 76.994293218132839;
+	setAttr ".LeftForeArmRz" 86.121368090101555;
+	setAttr ".LeftHandTx" 178.34202194850101;
+	setAttr ".LeftHandTy" 35.299374768597531;
+	setAttr ".LeftHandTz" 7.0180256625724837;
+	setAttr ".LeftHandRx" 82.334908888867318;
+	setAttr ".LeftHandRy" 5.5941950696735239;
+	setAttr ".LeftHandRz" 23.559136304848565;
+	setAttr ".RightArmTx" -35.244414045143614;
+	setAttr ".RightArmTy" -7.2890941999237455;
+	setAttr ".RightArmTz" 159.29795486511151;
+	setAttr ".RightArmRx" -2.0262907691223049;
+	setAttr ".RightArmRy" 80.098252115233819;
+	setAttr ".RightArmRz" -7.0178372347570805;
+	setAttr ".RightForeArmTx" -159.73559725490097;
+	setAttr ".RightForeArmTy" 19.41868178487853;
+	setAttr ".RightForeArmTz" -46.662722398091681;
+	setAttr ".RightForeArmRx" 78.89674698262499;
+	setAttr ".RightForeArmRy" -38.196408988417808;
+	setAttr ".RightForeArmRz" -36.503231799850425;
+	setAttr ".RightHandTx" -165.98166260264162;
+	setAttr ".RightHandTy" 26.410811450027765;
+	setAttr ".RightHandTz" -67.092127204284836;
+	setAttr ".RightHandRx" 81.908700006007948;
+	setAttr ".RightHandRy" -5.8963371598051424;
+	setAttr ".RightHandRz" -6.6096845062804288;
+	setAttr ".HeadTx" 23.905902628069278;
+	setAttr ".HeadTy" -54.693344176213373;
+	setAttr ".HeadTz" 149.94108234160481;
+	setAttr ".HeadRx" 13.633051762589576;
+	setAttr ".HeadRy" 4.0192498850474117;
+	setAttr ".HeadRz" 1.3054882288703376;
+	setAttr ".LeftToeBaseTx" 54.321314463448196;
+	setAttr ".LeftToeBaseTy" -182.80899990610629;
+	setAttr ".LeftToeBaseTz" 1.1628799578715947;
+	setAttr ".LeftToeBaseRx" -0.7294944183014731;
+	setAttr ".LeftToeBaseRy" 2.1831503030849269;
+	setAttr ".LeftToeBaseRz" 13.660873822447806;
+	setAttr ".RightToeBaseTx" 20.161774216677916;
+	setAttr ".RightToeBaseTy" -183.10590088350415;
+	setAttr ".RightToeBaseTz" 2.041613634111934;
+	setAttr ".RightToeBaseRx" -0.44835404081212377;
+	setAttr ".RightToeBaseRy" -0.54966818317836164;
+	setAttr ".RightToeBaseRz" 1.8554475040928473;
+	setAttr ".LeftShoulderTx" 23.699285101433709;
+	setAttr ".LeftShoulderTy" -55.652402863453773;
+	setAttr ".LeftShoulderTz" 156.30624581674408;
+	setAttr ".LeftShoulderRx" 12.785987531367663;
+	setAttr ".LeftShoulderRy" 6.5279932390985751;
+	setAttr ".LeftShoulderRz" -89.966334573356477;
+	setAttr ".RightShoulderTx" 37.925474329204306;
+	setAttr ".RightShoulderTy" -55.64419341583033;
+	setAttr ".RightShoulderTz" 154.68019603951876;
+	setAttr ".RightShoulderRx" 12.785902948672883;
+	setAttr ".RightShoulderRy" 6.5279931881260964;
+	setAttr ".RightShoulderRz" 90.033679075768205;
+	setAttr ".NeckTx" 30.400882601211674;
+	setAttr ".NeckTy" -62.979502213220741;
+	setAttr ".NeckTz" 151.85600903125538;
+	setAttr ".NeckRx" 12.785987531367663;
+	setAttr ".NeckRy" 6.5279932390985751;
+	setAttr ".NeckRz" 0.033672256831878238;
+	setAttr ".Spine1Tx" 42.228052993715735;
+	setAttr ".Spine1Ty" -31.755745864635074;
+	setAttr ".Spine1Tz" 162.07098987595;
+	setAttr ".Spine1Rx" 6.0895479924522071;
+	setAttr ".Spine1Ry" 10.180993666516333;
+	setAttr ".Spine1Rz" 0.22171250036933504;
+	setAttr ".Spine2Tx" 36.669126866394421;
+	setAttr ".Spine2Ty" -41.366563625048514;
+	setAttr ".Spine2Tz" 160.39928036163082;
+	setAttr ".Spine2Rx" 9.436066526492203;
+	setAttr ".Spine2Ry" 8.3678844404436994;
+	setAttr ".Spine2Rz" 0.18235840091528821;
+	setAttr ".Spine3Tx" 30.907418969395856;
+	setAttr ".Spine3Ty" -55.920383016492977;
+	setAttr ".Spine3Tz" 156.3888619503723;
+	setAttr ".Spine3Rx" 12.785987531367661;
+	setAttr ".Spine3Ry" 6.5279932390985733;
+	setAttr ".Spine3Rz" 0.033672256831808516;
 createNode animCurveTU -n "LeftToeTip_visibility";
 	rename -uid "A06F1384-4AB6-E916-65FE-B7B7E8DFFABE";
 	setAttr ".tan" 18;
@@ -23765,7 +23816,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 229\n            -height 312\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 468\n            -height 672\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 441\n            -height 672\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
 		+ "            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n"
 		+ "            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
@@ -23793,8 +23844,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
 		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
 		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 468\\n    -height 672\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 468\\n    -height 672\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 441\\n    -height 672\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 441\\n    -height 672\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -27677,13 +27728,12 @@ createNode animCurveTL -n "zoeRigAnim:Hips_translateY_Baked";
 		 3 63.810604095458984 4 65.72125244140625 5 66.943885803222656 6 67.535057067871094
 		 7 67.509536743164063 8 66.809013366699219 9 65.9866943359375 10 65.136116027832031
 		 11 65.283615112304688 12 66.420822143554688 13 67.903434753417969 14 71.608932495117188
-		 15 75.540061950683594 16 80.050910949707031 17 85.404243469238281 18 90.803070068359375
-		 19 96.527748107910156 20 99.00506591796875 21 100.98702239990234 22 102.97573089599609
-		 23 104.69338989257813 24 104.89613342285156 25 103.76168060302734 26 102.15184783935547
-		 27 99.786888122558594 28 96.433319091796875 29 91.4193115234375 30 86.8829345703125
-		 31 80.799057006835938 32 76.099594116210938 33 73.289443969726563 34 72.304634094238281
-		 35 72.448562622070313 36 73.07635498046875 37 74.229515075683594 38 77.266563415527344
-		 39 79.259735107421875 40 80.576210021972656;
+		 15 75.540061950683594 16 80.050910949707031 17 85.404243469238281 18 90.80307 19 96.527748
+		 20 99.005066 21 100.987022 22 102.975731 23 104.69339 24 104.896133 25 103.761681
+		 26 102.151848 27 99.786888 28 96.433319 29 91.4193115234375 30 86.8829345703125 31 80.799057006835938
+		 32 76.099594116210938 33 73.289443969726563 34 72.304634094238281 35 72.448562622070313
+		 36 73.07635498046875 37 74.229515075683594 38 77.266563415527344 39 79.259735107421875
+		 40 80.576210021972656;
 	setAttr -s 41 ".kit[40]"  1;
 	setAttr -s 41 ".kot[0:40]"  1 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
@@ -27697,19 +27747,19 @@ createNode animCurveTL -n "zoeRigAnim:Hips_translateY_Baked";
 		0.0329677336894134 0.021780635461984499 0.021272131816853133 0.03673035115991842 
 		1 0.39918889036685967 0.0437358947195753 0.039819414671894413 1 0.075117205353646591 
 		0.025438809233015454 0.012848832973611673 0.0087295247944935463 0.0078967967457186164 
-		0.0067583046839189368 0.0062001858890401553 0.0059932073152271286 0.0081278344681233218 
-		0.014948445274234197 0.016787432947233821 0.017984154278553908 0.054721661074170362 
-		1 0.024285739160517111 0.016770005452842244 0.011657218100040629 0.0079670081378327012 
-		0.0069803516622744784 0.0062771897897985146 0.0061822579865477428 0.0088771604457161171 
+		0.0067583046839189368 0.0062001859284577746 0.0059932073733657025 0.0081278343191023648 
+		0.014948446252836093 0.016787432854362603 0.017984151817695714 0.05472180376985275 
+		1 0.024285744321160412 0.016770003261510145 0.011657217585508887 0.0079670082545168202 
+		0.0069803517293653122 0.0062771897897985146 0.0061822579865477428 0.0088771604457161171 
 		0.017564449118047745 1 0.08606647081776575 0.037406954648526919 0.015908094211529614 
 		0.013252066923469792 0.020139052243505831 1;
 	setAttr -s 41 ".koy[0:40]"  0 0.99844517466032789 0.99945641652619555 
 		0.99976277382130607 0.99977372260325303 0.99932521298307553 0 -0.91686870914415841 
 		-0.99904312795448347 -0.99920689259791828 0 0.99717471160266502 0.99967638112781598 
-		0.99991745033838475 0.99996189697251081 0.9999688198144765 0.99997716239812162 0.99998077866274071 
-		0.99998204057176787 0.99996696860789291 0.99988826574967016 0.99985908111845545 0.99983827201947262 
-		0.99850164737434632 0 -0.99970505794130471 -0.99985937357065946 -0.99993205232464077 
-		-0.99996826288704366 -0.99997563704855885 -0.99998029825009194 -0.99998088966049137 
+		0.99991745033838475 0.99996189697251081 0.9999688198144765 0.99997716239812162 0.99998077866249635 
+		0.99998204057141948 0.99996696860910428 0.99988826573503997 0.99985908112001476 0.99983827206373632 
+		0.99850163955407401 0 -0.99970505781593755 -0.99985937360741339 -0.9999320523306392 
+		-0.99996826288611396 -0.99997563704809034 -0.99998029825009194 -0.99998088966049137 
 		-0.99996059723492159 -0.99984573316446146 0 0.99628939701322461 0.99930011495242166 
 		0.99987345826287288 0.99991218750561084 0.9997971887211593 0;
 createNode animCurveTL -n "zoeRigAnim:Hips_translateZ_Baked";
@@ -30191,7 +30241,8 @@ createNode motionTrail -n "motionTrail1";
 	setAttr ".e" 40;
 	setAttr ".b" 1;
 select -ne :time1;
-	setAttr ".o" 0;
+	setAttr ".o" 10;
+	setAttr ".unw" 10;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
