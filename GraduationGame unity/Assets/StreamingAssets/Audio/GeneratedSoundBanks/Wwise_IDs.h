@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID IMPACT_SPIKYPLATFORM = 1295587045U;
         static const AkUniqueID MACHINE_SOUND = 431421808U;
         static const AkUniqueID MOVINGPLATFORM_SOUND = 2635440718U;
         static const AkUniqueID PLAY_AMBIENCE_Z0 = 1001479279U;
@@ -21,7 +22,6 @@ namespace AK
         static const AkUniqueID PLAY_AMBIENCE_Z3 = 1001479276U;
         static const AkUniqueID PLAY_AMBIENCE_Z4 = 1001479275U;
         static const AkUniqueID PLAY_ELECTRICITY = 1560622413U;
-        static const AkUniqueID PLAY_IMPACT_SPIKYPLATFORM = 1314600606U;
         static const AkUniqueID PLAY_JUMPS_TAKEOFF = 1828118792U;
         static const AkUniqueID PLAY_LAND_HARD = 404466471U;
         static const AkUniqueID PLAY_LAND_MED = 639478362U;
@@ -72,12 +72,14 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID FOOTSTEP_VELOCITY = 3740773599U;
+        static const AkUniqueID MACHINE_MOVEMENT = 3811964820U;
         static const AkUniqueID MOVE_ACCEL = 1050950791U;
         static const AkUniqueID MUSIC_LAYER_Z1 = 1022520460U;
         static const AkUniqueID MUSIC_LAYER_Z2 = 1022520463U;
         static const AkUniqueID MUSIC_LAYER_Z3 = 1022520462U;
         static const AkUniqueID MUSIC_LAYER_Z4 = 1022520457U;
         static const AkUniqueID MUSIC_VOLUME = 1006694123U;
+        static const AkUniqueID PLATFORM_MOVEMENT = 3744734464U;
         static const AkUniqueID SFX_VOLUME = 1564184899U;
     } // namespace GAME_PARAMETERS
 
