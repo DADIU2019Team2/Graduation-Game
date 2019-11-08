@@ -32,7 +32,7 @@ public class InputManager : MonoBehaviour
     private void Start()
     {
         intoTextString = "Most recent input: ";
-        GameObject go = GameObject.Find("Input text");
+        GameObject go = GameObject.Find("Input Text");
         if (go != null)
         {
             inputText = go.GetComponent<TextMeshProUGUI>();
