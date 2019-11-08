@@ -10,12 +10,13 @@ public class PlatformSound : MonoBehaviour
     {
         
         AkSoundEngine.PostEvent("MovingPlatform_Sound", gameObject);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        PhysicsMover physicsMover = gameObject.GetComponentInChild(typeof(PhysicsMover)) as PhysicsMover;
-        AkSoundEngine.SetRTPCValue("Platform_Movement", physicsMover.GetState().Velocity);
+        PhysicsMover physicsMover = gameObject.GetComponentInChildren(typeof(PhysicsMover)) as PhysicsMover;
+        AkSoundEngine.SetRTPCValue("Platform_Movement", physicsMover.GetState().Velocity.magnitude);
     }
 }
