@@ -4,6 +4,7 @@ using UnityEngine;
 using KinematicCharacterController;
 using System;
 using KinematicCharacterController.Examples;
+using MiniGame2.Events;
 
 namespace KinematicTest.controller
 {
@@ -131,6 +132,9 @@ namespace KinematicTest.controller
         private float ledgeGrabGravityMultiplier = 0f;
         [HideInInspector]
         public static GameObject ledgeGrabbed = null;
+
+        //This will be here until we find a better place for it
+        public IntEvent SpikeDamageEvent;
 
         //This will later be scriptable object
         [Header("Sound settings")] public AK.Wwise.Event jumpSound;
@@ -887,6 +891,12 @@ namespace KinematicTest.controller
                 {
                     movingPlatform.activatePlatform();
                 }
+            }
+            else if (hitCollider.CompareTag("Spike"))
+            {
+                int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
+                //This is where we damage the player when they hit a spike
+                SpikeDamageEvent.Raise(damage);
             }
         }
 
