@@ -18,6 +18,11 @@ public class GameManager : MonoBehaviour
     private float transitionTime;
     private bool isSceneLoadTransition;
 
+    private void Awake()
+    {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 120;
+    }
     private void Start()
     {
         callOnce = true;
@@ -97,7 +102,7 @@ public class GameManager : MonoBehaviour
             case true:
                 transitionTime = sceneLoadFadeTime.getValue();
 
-                if(fadeIn)
+                if (fadeIn)
                     transitionFader.fadeIn(transitionTime, true);
                 else
                     transitionFader.fadeOut(transitionTime, true);
@@ -106,7 +111,7 @@ public class GameManager : MonoBehaviour
             case false:
                 transitionTime = blackFadeTime.getValue();
 
-                if(fadeIn)
+                if (fadeIn)
                     transitionFader.fadeIn(transitionTime, false);
                 else
                     transitionFader.fadeOut(transitionTime, false);
