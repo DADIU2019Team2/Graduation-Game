@@ -43,6 +43,8 @@ public class MovingPlatform : MonoBehaviour, IMoverController
     private bool movingForward;
     private bool activated;
 
+    private bool triggerDefaultState;
+
     //public bool ActivatePlatform = false;
 
     public void resetPlatform()
@@ -57,8 +59,14 @@ public class MovingPlatform : MonoBehaviour, IMoverController
         movingForward = true;
         activated = false;
         isInWaypointWaitTime = false;
-        trigger.gameObject.SetActive(true);
+        trigger.gameObject.SetActive(triggerDefaultState);
     }
+    void Awake()
+    {
+        triggerDefaultState = trigger.gameObject.activeSelf;
+       // Debug.Log("Trigger default = " + triggerDefaultState);
+    }
+
     private void Start()
     {
         _originalPosition = Mover.Rigidbody.position;
@@ -73,6 +81,8 @@ public class MovingPlatform : MonoBehaviour, IMoverController
             activatePlatform();
         //activation type trigger is handeled by sendmessageupwards from the trigger
         //activation type player is handled by the kinematic controller in OnMovementHit()
+
+       
     }
 
     public void UpdateMovement(out Vector3 goalPosition, out Quaternion goalRotation, float deltatime)

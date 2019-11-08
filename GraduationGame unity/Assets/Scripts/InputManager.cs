@@ -75,7 +75,11 @@ public class InputManager : MonoBehaviour
                     swipeDirection = (endPosition - initPosition);
                     if (swipeDirection.magnitude > 50f)
                     {
-                        swipeAngle = Vector2.Angle(Vector2.right, swipeDirection);
+                        swipeAngle = Vector2.SignedAngle(Vector2.right, swipeDirection);
+                        if (swipeAngle < 0)
+                        {
+                            swipeAngle = swipeAngle + 360;
+                        }
                         isFacingRight = CharacterMovement.GetIsFacingRight();
                         mostRecentSwipeType = SwipeTypeOfAngle(swipeAngle, isFacingRight);
 
