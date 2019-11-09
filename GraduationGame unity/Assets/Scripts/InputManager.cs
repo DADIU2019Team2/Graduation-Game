@@ -22,7 +22,8 @@ public class InputManager : MonoBehaviour
     float swipeAngle;
     private bool isFacingRight;
     public SwipeAngleThresholds swipeAngleThresholds;
-    public VoidEvent OnSwipeEvent;
+    public VoidEvent onSwipeEvent;
+    public VoidEvent onClickEvent;
     private static SwipeType mostRecentSwipeType;
     private float timeDragged;
     public FloatVariable maxDragTime;
@@ -93,13 +94,18 @@ public class InputManager : MonoBehaviour
                         {
                             inputText.text = (intoTextString + mostRecentInput + " " + swipeAngle);
                         }
-                        OnSwipeEvent.Raise();
+                        onSwipeEvent.Raise();
                     }
+                    else if (timeDragged < 0.125f)
+                    {
+                        onClickEvent.Raise();
+                    }
+
                     isDragging = false;
                     break;
             }
 
-            timeDragged = isDragging ? timeDragged+=Time.deltaTime : 0;
+            timeDragged = isDragging ? timeDragged += Time.deltaTime : 0;
         }
     }
 
