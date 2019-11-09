@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     {
         callOnce = true;
         isSceneLoadTransition = false;
+        gameState = GameStateScriptableObject.GameState.levelStart;
     }
 
     // Update is called once per frame
