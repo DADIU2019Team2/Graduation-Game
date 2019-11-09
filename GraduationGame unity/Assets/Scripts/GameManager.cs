@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     //public BoolVariable isSceneLaod;
     public FloatVariable sceneLoadFadeTime;
     public FloatVariable blackFadeTime;
+    public BoolVariable isSwipeAllowed;
     public static bool callOnce;
     private float transitionTime;
     private bool isSceneLoadTransition;
@@ -44,8 +45,9 @@ public class GameManager : MonoBehaviour
                 {
                     DoFade(true);
                     callOnce = false;
+                    isSwipeAllowed.setBool(false);
                 }
-                if(transitionFader.getAlpha() == 0)//have finished fading in
+                if (transitionFader.getAlpha() == 0)//have finished fading in
                 {
                     ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
                 }
@@ -56,6 +58,7 @@ public class GameManager : MonoBehaviour
 
             #region maingameplay
             case GameStateScriptableObject.GameState.mainGameplayLoop:
+                isSwipeAllowed.setBool(true);
                 if (optionsMenu.activeSelf) // if options menu gets entered
                 {
                     originalTimescale = Time.timeScale;
@@ -73,7 +76,7 @@ public class GameManager : MonoBehaviour
                     DoFade(false);
                     callOnce = false;
                 }
-                if(transitionFader.getAlpha() == 1) //faded to black
+                if (transitionFader.getAlpha() == 1) //faded to black
                 {
                     DoResetObjects();
                     ChangeGameState(GameStateScriptableObject.GameState.levelStart);
@@ -145,7 +148,7 @@ public class GameManager : MonoBehaviour
 
     private void DoResetObjects()
     {
-        var objectsToBeReset =  FindObjectsOfType<MonoBehaviour>().OfType<IOnSceneReset>();
+        var objectsToBeReset = FindObjectsOfType<MonoBehaviour>().OfType<IOnSceneReset>();
         foreach (IOnSceneReset obj in objectsToBeReset)
         {
             obj.OnResetLevel();
