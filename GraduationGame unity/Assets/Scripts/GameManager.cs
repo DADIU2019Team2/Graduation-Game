@@ -32,7 +32,6 @@ public class GameManager : MonoBehaviour
     {
         callOnce = true;
         isSceneLoadTransition = false;
-        gameState = GameStateScriptableObject.GameState.levelStart;
     }
 
     // Update is called once per frame
@@ -98,14 +97,12 @@ public class GameManager : MonoBehaviour
                 (Possibly set state to be level-start before calling the load-next-scene function) */
                 break;
             case GameStateScriptableObject.GameState.optionsMenuOpened:
+                Debug.Log("OptionsMenuOpened");
                 if (!optionsMenu.activeSelf) // if options menu is closed
                 {
                     Time.timeScale = originalTimescale;
                     ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
                 }
-                //Should pause all game-logic and behaviours. 
-                //Time.timeScale = 0;
-
                 break;
 
         }

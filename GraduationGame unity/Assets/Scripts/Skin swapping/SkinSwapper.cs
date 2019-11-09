@@ -8,23 +8,33 @@ public class SkinSwapper : MonoBehaviour
 
     public PlayerStats playerStats;
 
-
+    
     public void SwapSkins(int skinIndex)
     {
-        foreach (MeshRenderer mRend in headMaterialRenderers)
+
+        if (skinIndex >= playerStats.allZoeRecolors.Length || skinIndex < 0)
         {
-            ChangeMaterialInRenderer(mRend, playerStats.allZoeRecolors[skinIndex].zoeHeadMaterial);
+            Debug.Log("Tried selecting a skin that was out of bounds in the 'allZoeRecolors'-array, skinIndex was: " + skinIndex);
+            return;
         }
-        foreach (MeshRenderer mRend in bodyMaterialRenderers)
+        else
         {
-            ChangeMaterialInRenderer(mRend, playerStats.allZoeRecolors[skinIndex].zoeBodyMaterial);
-        }
-        foreach (MeshRenderer mRend in outfitMaterialRenderers)
-        {
-            ChangeMaterialInRenderer(mRend, playerStats.allZoeRecolors[skinIndex].zoeOutfitMaterial);
+            foreach (MeshRenderer mRend in headMaterialRenderers)
+            {
+                ChangeMaterialInRenderer(mRend, playerStats.allZoeRecolors[skinIndex].zoeHeadMaterial);
+            }
+            foreach (MeshRenderer mRend in bodyMaterialRenderers)
+            {
+                ChangeMaterialInRenderer(mRend, playerStats.allZoeRecolors[skinIndex].zoeBodyMaterial);
+            }
+            foreach (MeshRenderer mRend in outfitMaterialRenderers)
+            {
+                ChangeMaterialInRenderer(mRend, playerStats.allZoeRecolors[skinIndex].zoeOutfitMaterial);
+            }
+
+            Debug.Log("Changed skin to skin #" + skinIndex);
         }
 
-        Debug.Log("Changed skin to skin #" + skinIndex);
     }
 
     public void SetSkinFromMainMenu(int skinIndex)
