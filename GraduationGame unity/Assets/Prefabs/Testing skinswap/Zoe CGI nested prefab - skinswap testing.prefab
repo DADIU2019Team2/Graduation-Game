@@ -90,6 +90,8 @@ MonoBehaviour:
   - {fileID: 857335062513754393}
   - {fileID: 5913094451497902579}
   - {fileID: 3895817193932479889}
+  scarfMat: {fileID: 5722233488452713696}
+  scarfParticleMat: {fileID: 5888292765027713039}
   playerStats: {fileID: 11400000, guid: a7167718b1ce8d24ab9bc7321af76cc3, type: 2}
 --- !u!1001 &4687656949748057309
 PrefabInstance:
@@ -161,18 +163,30 @@ PrefabInstance:
     - target: {fileID: 7320608344265412144, guid: 40a36a1a2894efb4dae18bbe851c1cbc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00000008940697
+      value: 0.00000011920929
       objectReference: {fileID: 0}
     - target: {fileID: 7320608344265412144, guid: 40a36a1a2894efb4dae18bbe851c1cbc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.3494148
+      value: -1.3494147
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40a36a1a2894efb4dae18bbe851c1cbc, type: 3}
 --- !u!4 &5230195422797948959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 691447877769178306, guid: 40a36a1a2894efb4dae18bbe851c1cbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 4687656949748057309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &5722233488452713696 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1037114491471312957, guid: 40a36a1a2894efb4dae18bbe851c1cbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 4687656949748057309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5888292765027713039 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1205430032460481746, guid: 40a36a1a2894efb4dae18bbe851c1cbc,
     type: 3}
   m_PrefabInstance: {fileID: 4687656949748057309}
   m_PrefabAsset: {fileID: 0}

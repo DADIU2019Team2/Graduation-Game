@@ -16,6 +16,8 @@ public class InputManager : MonoBehaviour
 
     public TextMeshProUGUI inputText;
 
+    public BoolVariable isSwipeAllowed;
+
     private bool isDragging;
     Vector2 initPosition, endPosition;
     Vector2 swipeDirection;
@@ -94,7 +96,10 @@ public class InputManager : MonoBehaviour
                         {
                             inputText.text = (intoTextString + mostRecentInput + " " + swipeAngle);
                         }
-                        onSwipeEvent.Raise();
+                        if (isSwipeAllowed.myBool == true)
+                        {
+                            onSwipeEvent.Raise();
+                        }
                     }
                     else if (timeDragged < 0.125f)
                     {

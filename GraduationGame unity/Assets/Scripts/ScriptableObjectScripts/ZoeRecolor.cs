@@ -9,7 +9,10 @@ public class ZoeRecolor : ScriptableObject
     public Material zoeOutfitMaterial;
     public Material zoeBodyMaterial;
     
-    public Material[] smth; //Get shader-node color attribute for Zoe-Scarf.
+    [ColorUsage(true,true)]
+    public Color scarfColor, scarfParticleColor;
+    //R: 0.053, G: 0.503, B: 1.000.
+
 
     
 }
