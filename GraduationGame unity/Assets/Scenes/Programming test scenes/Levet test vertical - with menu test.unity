@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7758,6 +7758,11 @@ PrefabInstance:
       propertyPath: MeshRoot
       value: 
       objectReference: {fileID: 175815820}
+    - target: {fileID: 1660540989419242355, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: CurrentCharacterState
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8517985692842851338, guid: 1d5fcecccea39994bbe5cab7844bad81,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -8111,6 +8116,26 @@ PrefabInstance:
     - target: {fileID: 7401503261455968982, guid: 1d5fcecccea39994bbe5cab7844bad81,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227469122622108253, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441393872045363399, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765642145931828582, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795549342179951030, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9329,7 +9354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousWaypoint: {fileID: 0}
-  nextWaypoint: {fileID: 1737268243}
+  nextWaypoint: {fileID: 0}
   width: 0.3
 --- !u!1001 &1959848964
 PrefabInstance:

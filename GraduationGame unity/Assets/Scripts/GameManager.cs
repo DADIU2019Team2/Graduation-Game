@@ -128,16 +128,13 @@ public class GameManager : MonoBehaviour
         {
             case true:
                 transitionTime = sceneLoadFadeTime.getValue();
-
                 if (fadeIn)
                     transitionFader.fadeIn(transitionTime, true);
                 else
                     transitionFader.fadeOut(transitionTime, true);
                 break;
-
             case false:
                 transitionTime = blackFadeTime.getValue();
-
                 if (fadeIn)
                     transitionFader.fadeIn(transitionTime, false);
                 else
@@ -153,5 +150,10 @@ public class GameManager : MonoBehaviour
         {
             obj.OnResetLevel();
         }
+    }
+
+    public void CinematicStart()
+    {
+        
     }
 }
