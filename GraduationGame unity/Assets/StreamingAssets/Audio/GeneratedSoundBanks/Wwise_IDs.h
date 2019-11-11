@@ -13,12 +13,30 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID ALIEN_DEATH_TRAP = 3641971009U;
+        static const AkUniqueID ALIEN_PLATFORM_1 = 1021077760U;
+        static const AkUniqueID ALIEN_PLATFORM_2 = 1021077763U;
+        static const AkUniqueID ALIEN_PLATFORM_3 = 1021077762U;
+        static const AkUniqueID ALIEN_PLATFORM_4 = 1021077765U;
+        static const AkUniqueID ALIEN_PLATFORM_PILLAR = 41605727U;
+        static const AkUniqueID BALL_PLATFORM = 1848730664U;
+        static const AkUniqueID BALL_PLATFORM_DAMAGED = 2557453060U;
+        static const AkUniqueID CRUSHER_IDLE = 3878901180U;
+        static const AkUniqueID CRYSTAL_DOOR_HUM = 3540377255U;
+        static const AkUniqueID CRYSTAL_DOOR_OPEN = 576072719U;
+        static const AkUniqueID DAMAGED_PLATFORM_1 = 4094004888U;
+        static const AkUniqueID DAMAGED_PLATFORM_2 = 4094004891U;
+        static const AkUniqueID DAMAGED_PLATFORM_3 = 4094004890U;
+        static const AkUniqueID DAMAGED_PLATFORM_4 = 4094004893U;
+        static const AkUniqueID DAMAGED_PLATFORM_5 = 4094004892U;
+        static const AkUniqueID DAMAGED_PLATFORM_6 = 4094004895U;
+        static const AkUniqueID DEATH_RAY = 977466704U;
+        static const AkUniqueID LAZER_WALL = 2967932086U;
+        static const AkUniqueID LAZER_WALL_POWER_DOWN = 3352547351U;
         static const AkUniqueID MACHINE_1 = 311050744U;
         static const AkUniqueID MACHINE_2 = 311050747U;
         static const AkUniqueID MACHINE_3 = 311050746U;
-        static const AkUniqueID PLATFORM_1 = 3072846332U;
-        static const AkUniqueID PLATFORM_2 = 3072846335U;
-        static const AkUniqueID PLATFORM_3 = 3072846334U;
+        static const AkUniqueID PLATFORM_PILLAR_DAMAGED = 1611566155U;
         static const AkUniqueID PLAY_AMBIENCE_Z0 = 1001479279U;
         static const AkUniqueID PLAY_AMBIENCE_Z1 = 1001479278U;
         static const AkUniqueID PLAY_AMBIENCE_Z2 = 1001479277U;
@@ -28,7 +46,6 @@ namespace AK
         static const AkUniqueID PLAY_JUMPS_TAKEOFF = 1828118792U;
         static const AkUniqueID PLAY_LAND_HARD = 404466471U;
         static const AkUniqueID PLAY_LAND_MED = 639478362U;
-        static const AkUniqueID PLAY_LAZER = 1933691314U;
         static const AkUniqueID PLAY_NEW_METAL_FTSTP_LOOP = 1462703573U;
         static const AkUniqueID PLAY_NEW_NORM_FTSTP_LOOP = 1215491506U;
         static const AkUniqueID PLAY_ROBOT_APPEARENCE = 3030735331U;
