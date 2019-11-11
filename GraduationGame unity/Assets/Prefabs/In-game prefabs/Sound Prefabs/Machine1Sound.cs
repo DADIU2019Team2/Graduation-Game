@@ -11,15 +11,13 @@ public class Machine1Sound : MonoBehaviour
     void Start()
     {
         
-        AkSoundEngine.PostEvent("Machine_1", gameObject);
+
         
     }
 
     void Update()
     {
-        // This makes the soundly audible only when the RTPC value is above 0 - which is tied to movement of the platform
-        PhysicsMover physicsMover = gameObject.GetComponentInChildren(typeof(PhysicsMover)) as PhysicsMover;
-        AkSoundEngine.SetRTPCValue("Machine_Movement_1", physicsMover.GetState().Velocity.magnitude);
+      
     }
 
         private void OnTriggerEnter(Collider other)
