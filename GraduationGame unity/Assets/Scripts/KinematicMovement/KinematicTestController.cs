@@ -233,7 +233,6 @@ namespace KinematicTest.controller
                     curveStep = 0f;
                     JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.slideJumpHeight * settings.baseGravity *
                                            Motor.Capsule.height);
-
                     _shouldBeCrouching = true;
 
                     if (!_isCrouching)
