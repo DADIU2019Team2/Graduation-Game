@@ -7,6 +7,8 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
     public PlayerStats playerStats;
     private bool isDead;
 
+    public float currentHealth;
+    public float currentStamina;
 
     public void TakeDamage(int damage)
     {
@@ -31,6 +33,8 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
 
     public void OnResetLevel()
     {
+        currentHealth = playerStats.MaxHealth;
+        currentStamina = playerStats.MaxStamina;
         playerStats.resetHealth();
         playerStats.resetStamina();
         isDead = false;
