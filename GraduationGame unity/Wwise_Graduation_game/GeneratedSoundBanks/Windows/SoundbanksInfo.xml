@@ -21,7 +21,6 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1295587045" Name="Impact_SpikyPlatform" ObjectPath="\Events\Default Work Unit\SFX\Impact_SpikyPlatform" MaxAttenuation="70.000000" DurationType="OneShot" DurationMin="2.448107" DurationMax="2.448107"/>
 				<Event Id="311050744" Name="Machine_1" ObjectPath="\Events\Default Work Unit\SFX\Machine_1" MaxAttenuation="70.000000" DurationType="Infinite"/>
 				<Event Id="311050747" Name="Machine_2" ObjectPath="\Events\Default Work Unit\SFX\Machine_2" MaxAttenuation="70.000000" DurationType="Infinite"/>
 				<Event Id="311050746" Name="Machine_3" ObjectPath="\Events\Default Work Unit\SFX\Machine_3" MaxAttenuation="70.000000" DurationType="Infinite"/>
@@ -35,7 +34,7 @@
 				<Event Id="1001479275" Name="Play_Ambience_Z4" ObjectPath="\Events\Default Work Unit\Ambience\Play_Ambience_Z4" DurationType="Infinite"/>
 				<Event Id="1560622413" Name="Play_Electricity" ObjectPath="\Events\Default Work Unit\SFX\Play_Electricity" MaxAttenuation="70.000000" DurationType="Infinite"/>
 				<Event Id="1828118792" Name="Play_Jumps_Takeoff" ObjectPath="\Events\Default Work Unit\Movement\Play_Jumps_Takeoff" DurationType="OneShot" DurationMin="0.507052" DurationMax="1.204218"/>
-				<Event Id="404466471" Name="Play_Land_Hard" ObjectPath="\Events\Default Work Unit\Movement\Play_Land_Hard" DurationType="OneShot" DurationMin="0.911787" DurationMax="0.911787"/>
+				<Event Id="404466471" Name="Play_Land_Hard" ObjectPath="\Events\Default Work Unit\Movement\Play_Land_Hard" DurationType="OneShot" DurationMin="0.896123" DurationMax="0.896123"/>
 				<Event Id="639478362" Name="Play_Land_Med" ObjectPath="\Events\Default Work Unit\Movement\Play_Land_Med" DurationType="OneShot" DurationMin="0.392559" DurationMax="0.392559"/>
 				<Event Id="1933691314" Name="Play_Lazer" ObjectPath="\Events\Default Work Unit\SFX\Play_Lazer" MaxAttenuation="70.000000" DurationType="Infinite"/>
 				<Event Id="1462703573" Name="Play_New_Metal_Ftstp_Loop" ObjectPath="\Events\Default Work Unit\Movement\Play_New_Metal_Ftstp_Loop" DurationType="Infinite"/>
@@ -46,6 +45,7 @@
 				<Event Id="3584129722" Name="Play_Zone2_Music" ObjectPath="\Events\Default Work Unit\Music\Play_Zone2_Music" DurationType="Infinite"/>
 				<Event Id="556439219" Name="Play_Zone3_Music" ObjectPath="\Events\Default Work Unit\Music\Play_Zone3_Music" DurationType="Infinite"/>
 				<Event Id="3303975224" Name="Play_Zone4_Music" ObjectPath="\Events\Default Work Unit\Music\Play_Zone4_Music" DurationType="Infinite"/>
+				<Event Id="2939559692" Name="Spiky_Machine_Impact" ObjectPath="\Events\Default Work Unit\SFX\Spiky_Machine_Impact" MaxAttenuation="70.000000" DurationType="OneShot" DurationMin="2.000000" DurationMax="2.000000"/>
 				<Event Id="3086540886" Name="StopAll" ObjectPath="\Events\Default Work Unit\StopAll" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -221,6 +221,10 @@
 					<ShortName>Ambience_Z2.wav</ShortName>
 					<Path>SFX/Ambience_Z2_9B96ECC7.wem</Path>
 				</File>
+				<File Id="537809517" Language="SFX">
+					<ShortName>Spiky_Machine_Impact.wav</ShortName>
+					<Path>SFX/Spiky_Machine_Impact_6296B0F9.wem</Path>
+				</File>
 				<File Id="561551880" Language="SFX">
 					<ShortName>Jump_Takeoff_3.wav</ShortName>
 					<Path>SFX/Jump_Takeoff_3_6296B0F9.wem</Path>
@@ -236,10 +240,6 @@
 				<File Id="578611982" Language="SFX">
 					<ShortName>Electricity.wav</ShortName>
 					<Path>SFX/Electricity_9B96ECC7.wem</Path>
-				</File>
-				<File Id="587714514" Language="SFX">
-					<ShortName>Impact_SpikyPlatform.wav</ShortName>
-					<Path>SFX/Impact_SpikyPlatform_6296B0F9.wem</Path>
 				</File>
 				<File Id="593156668" Language="SFX">
 					<ShortName>Z2_Dist_Synth.wav</ShortName>

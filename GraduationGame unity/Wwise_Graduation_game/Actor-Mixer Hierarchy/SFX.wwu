@@ -1143,7 +1143,7 @@
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
-												<Value>200</Value>
+												<Value>230</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1625,10 +1625,24 @@
 						<Sound Name="Saw" ID="{C253C8AC-E7AA-4A6D-8DE0-D9D55A35D53E}" ShortID="841581059">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise_Parametric_EQ_(Custom)" ID="{59433C98-ACC1-4309-AEC1-7D0BD144F38C}" ShortID="34896524" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<PropertyList>
+												<Property Name="FilterTypeBand1" Type="int32" Value="5"/>
+												<Property Name="FrequencyBand1" Type="Real32" Value="10351"/>
+												<Property Name="GainBand1" Type="Real32" Value="-24"/>
+												<Property Name="OnOffBand2" Type="bool" Value="False"/>
+												<Property Name="OnOffBand3" Type="bool" Value="False"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
@@ -1691,32 +1705,6 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Lazer" ID="{69AA6E9F-76E8-4CB2-B529-B35EEB2CCC64}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Impact_SpikyPlatform" ID="{2DC157D5-0391-4961-9CDA-6A2566AEB9CA}" ShortID="333767325">
-							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-510</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Impact_SpikyPlatform" ID="{2D891653-AEFC-4E45-AE19-4AFA0EE3F748}" ShortID="587714514">
-									<Language>SFX</Language>
-									<AudioFile>Impact_SpikyPlatform.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Impact_SpikyPlatform" ID="{2D891653-AEFC-4E45-AE19-4AFA0EE3F748}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Machine_1" ID="{C438D3BC-D874-49DE-814E-977819CCE93B}" ShortID="409002362">
@@ -2314,6 +2302,25 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Platform_6" ID="{9FBA41BE-FA1B-4722-990D-A5647581455E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Spiky_Machine_Impact" ID="{362DD740-EC91-4B96-8D86-983B0F7EDE20}" ShortID="558943969">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Spiky_Machine_Impact" ID="{91B23938-5DE5-490F-9315-DC5161AD0FE6}" ShortID="537809517">
+									<Language>SFX</Language>
+									<AudioFile>Spiky_Machine_Impact.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Spiky_Machine_Impact" ID="{91B23938-5DE5-490F-9315-DC5161AD0FE6}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

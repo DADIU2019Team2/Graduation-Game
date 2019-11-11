@@ -13,7 +13,6 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID IMPACT_SPIKYPLATFORM = 1295587045U;
         static const AkUniqueID MACHINE_1 = 311050744U;
         static const AkUniqueID MACHINE_2 = 311050747U;
         static const AkUniqueID MACHINE_3 = 311050746U;
@@ -38,6 +37,7 @@ namespace AK
         static const AkUniqueID PLAY_ZONE2_MUSIC = 3584129722U;
         static const AkUniqueID PLAY_ZONE3_MUSIC = 556439219U;
         static const AkUniqueID PLAY_ZONE4_MUSIC = 3303975224U;
+        static const AkUniqueID SPIKY_MACHINE_IMPACT = 2939559692U;
         static const AkUniqueID STOPALL = 3086540886U;
     } // namespace EVENTS
 
@@ -90,6 +90,8 @@ namespace AK
         static const AkUniqueID PLATFORM_MOVEMENT_2 = 4214389439U;
         static const AkUniqueID PLATFORM_MOVEMENT_3 = 4214389438U;
         static const AkUniqueID PLATFORM_MOVEMENT_4 = 4214389433U;
+        static const AkUniqueID PLATFORM_MOVEMENT_5 = 4214389432U;
+        static const AkUniqueID PLATFORM_MOVEMENT_6 = 4214389435U;
         static const AkUniqueID SFX_VOLUME = 1564184899U;
     } // namespace GAME_PARAMETERS
 
