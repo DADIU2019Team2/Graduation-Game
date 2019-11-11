@@ -18,10 +18,10 @@ MonoBehaviour:
   fallGravityMultiplier: 3
   dropGravityMultiplier: 3
   maxMoveSpeed: 10
-  StableMovementSharpness: 7
+  StableMovementSharpness: 20
   OrientationSharpness: 10
-  rampUpTime: 1
-  rampDownTime: 0.5
+  rampUpTime: 2
+  rampDownTime: 0.05
   rampUpCurve:
     serializedVersion: 2
     m_Curve:
@@ -86,8 +86,8 @@ MonoBehaviour:
   JumpPostGroundingGraceTime: 0.2
   idleJumpHeight: 1.5
   idleAirMoveSpeed: 5
-  slideMoveSpeed: 10
-  slideJumpHeight: 1.5
+  slideMoveSpeed: 13
+  slideJumpHeight: 1
   slideDuration: 1.5
   decelerateWhileSliding: 1
   slideCurve:
@@ -114,6 +114,11 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  graceTimeBeforeHangAgain: 0
+  ledgeGrabForwardJumpHeight: 0
+  ledgeGrabForwardAirMoveSpeed: 0
+  ledgeGrabBackwardsJumpHeight: 0
+  ledgeGrabBackwardsAirMoveSpeed: 0
   canChangeDirectionsMidair: 1
   AllowDoubleJump: 0
   AllowJumpingWhenSliding: 1
