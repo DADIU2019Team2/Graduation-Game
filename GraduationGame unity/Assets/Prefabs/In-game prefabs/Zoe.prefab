@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 245178980573530777}
   - component: {fileID: 6576553047221927676}
   - component: {fileID: 561386183475680734}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Zoe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,11 +99,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d3484dac67fc84e93a2742a966cbad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateSettingsLive: 1
+  updateSettingsLive: 0
   Motor: {fileID: 6576553047221927676}
   forward: 0
   settings: {fileID: 11400000, guid: 686e5c67799350747905d61df33818f9, type: 2}
   CurrentCharacterState: 0
+  CurrentWorldForward: 0
   Gravity: {x: 0, y: -10, z: 0}
   MeshRoot: {fileID: 4113814045122738841}
   jumpSound:
@@ -114,7 +115,7 @@ MonoBehaviour:
   landSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 3790f554cb28649b7942cb4d33943dc1,
+    WwiseObjectReference: {fileID: 11400000, guid: 20037e2a203f74010a1ba9b189670e83,
       type: 2}
 --- !u!1001 &3325513009486544416
 PrefabInstance:
@@ -127,6 +128,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Zoe CGI nested prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672874207153889315, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1671306488769873081, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
@@ -243,6 +249,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zoe Sound nested prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3309740579766003708, guid: dc7098dac8030bb4ab3b94b3ea9d43f5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 2679468932659912598, guid: dc7098dac8030bb4ab3b94b3ea9d43f5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -317,6 +328,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Zoe Game design nested prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7746247469021926102, guid: ae09ec3123e58c24dbe9726cb94a1fb9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2284723858886033605, guid: ae09ec3123e58c24dbe9726cb94a1fb9,
         type: 3}

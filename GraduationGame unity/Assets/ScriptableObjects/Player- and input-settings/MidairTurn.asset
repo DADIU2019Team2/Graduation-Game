@@ -44,7 +44,7 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1.046875
+      time: 1
       value: 0.67352676
       inSlope: -0.051808048
       outSlope: -0.051808048
@@ -80,7 +80,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   jumpHeight: 3
-  maxAirMoveSpeed: 3
+  maxAirMoveSpeed: 6
   hangTimeVelocityThreshold: 2
   JumpPreGroundingGraceTime: 0.2
   JumpPostGroundingGraceTime: 0.2
@@ -123,6 +123,11 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  graceTimeBeforeHangAgain: 0
+  ledgeGrabForwardJumpHeight: 0
+  ledgeGrabForwardAirMoveSpeed: 0
+  ledgeGrabBackwardsJumpHeight: 0
+  ledgeGrabBackwardsAirMoveSpeed: 0
   canChangeDirectionsMidair: 1
   AllowDoubleJump: 0
   AllowJumpingWhenSliding: 1
