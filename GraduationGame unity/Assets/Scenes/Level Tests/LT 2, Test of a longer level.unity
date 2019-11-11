@@ -3108,6 +3108,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 470012436}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &137362333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5516877930872743062, guid: 1d5fcecccea39994bbe5cab7844bad81,
+    type: 3}
+  m_PrefabInstance: {fileID: 423268648}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &137587901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6176,11 +6182,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8553, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
       propertyPath: activationLayers.m_Bits
-      value: 0
+      value: 4096
       objectReference: {fileID: 0}
     - target: {fileID: 8553, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
       propertyPath: activationType
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8553, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
       propertyPath: waypointWaitTime
@@ -6198,6 +6204,10 @@ PrefabInstance:
       propertyPath: trigger
       value: 
       objectReference: {fileID: 392620294}
+    - target: {fileID: 8553, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
+      propertyPath: platformType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1446800946, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
       propertyPath: m_LocalPosition.y
       value: 4.79
@@ -10380,6 +10390,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1079509850635856232, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: m_Name
+      value: SceneEssentials
+      objectReference: {fileID: 0}
     - target: {fileID: 1905696810943390304, guid: 1d5fcecccea39994bbe5cab7844bad81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10404,11 +10419,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079509850635856232, guid: 1d5fcecccea39994bbe5cab7844bad81,
-        type: 3}
-      propertyPath: m_Name
-      value: SceneEssentials
       objectReference: {fileID: 0}
     - target: {fileID: 2610356912311023036, guid: 1d5fcecccea39994bbe5cab7844bad81,
         type: 3}
@@ -10685,6 +10695,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3795549340719850676, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: optionsMenu
+      value: 
+      objectReference: {fileID: 137362333}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d5fcecccea39994bbe5cab7844bad81, type: 3}
 --- !u!1001 &425046003
@@ -36249,7 +36264,7 @@ PrefabInstance:
     - target: {fileID: 5644571841849019769, guid: cc40002d39b334d9abf5b8703653ad9b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 89.98
+      value: 90.07
       objectReference: {fileID: 0}
     - target: {fileID: 5644571841849019769, guid: cc40002d39b334d9abf5b8703653ad9b,
         type: 3}
@@ -36304,7 +36319,7 @@ PrefabInstance:
     - target: {fileID: 5644571841849019769, guid: cc40002d39b334d9abf5b8703653ad9b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.8368
+      value: 4.5581183
       objectReference: {fileID: 0}
     - target: {fileID: 5644571841849019769, guid: cc40002d39b334d9abf5b8703653ad9b,
         type: 3}
@@ -45547,14 +45562,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FallZone
       objectReference: {fileID: 0}
-    - target: {fileID: 1446800944, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7359764624509356330, guid: 7c3f78b2963230e4bb6841673fd1cca7,
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446800944, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
