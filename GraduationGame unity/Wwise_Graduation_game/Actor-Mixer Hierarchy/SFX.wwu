@@ -1911,74 +1911,6 @@
 								<ActiveSource Name="Machine_3" ID="{AA5489C6-FF77-4829-ABA0-3CD73F83B0A5}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Damaged_Platform_1" ID="{B941C1EA-0243-40B9-9407-2ECD63E04B58}" ShortID="304727226">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>560</Value>
-									</ValueList>
-								</Property>
-								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>3</Value>
-									</ValueList>
-									<RTPCList>
-										<RTPC Name="" ID="{D9427651-2125-40A3-BDA9-2F873029115B}" ShortID="628733632">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="Platform_Movement_1" ID="{49A1584F-22F9-4A68-81AB-4DE1B446AC86}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{57F70558-D874-4E67-8DCE-862083E00C50}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>-200</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>1</XPos>
-														<YPos>0</YPos>
-														<Flags>0</Flags>
-													</Point>
-													<Point>
-														<XPos>100</XPos>
-														<YPos>0</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{9782ED15-10B1-4637-9818-5B49A6880915}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Platform_1" ID="{27A7BF24-2F63-4CF2-913E-1F04C04EF539}" ShortID="444289685">
-									<Language>SFX</Language>
-									<AudioFile>Platform_1.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Platform_1" ID="{27A7BF24-2F63-4CF2-913E-1F04C04EF539}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="Damaged_Platform_2" ID="{31021567-8229-488A-9772-F593108CA720}" ShortID="898640952">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
@@ -3178,6 +3110,11 @@
 						<Sound Name="Alien_Platform_5" ID="{A1FA262E-2F3B-41E9-863D-80251733DAD4}" ShortID="265454505">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3203,6 +3140,11 @@
 						<Sound Name="Alien_Platform_6" ID="{9DE63C67-135D-43B0-ABD1-0BC863A33878}" ShortID="757926551">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3223,6 +3165,110 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Alien_Platform_4" ID="{04B77591-4378-49D6-8E19-ABF63D663A71}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Alien_Door" ID="{2167FE49-7625-4C3A-9658-7A9A9A9B2ACF}" ShortID="947984496">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Stone_Door_Hum" ID="{13B3E8F4-F669-4858-AC63-09307E4EB10D}" ShortID="515939369">
+									<Language>SFX</Language>
+									<AudioFile>Stone_Door_Hum.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Stone_Door_Hum" ID="{13B3E8F4-F669-4858-AC63-09307E4EB10D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Alien_Door_Open" ID="{7ED771EB-30FB-4B3A-B6BE-2C261BDD2576}" ShortID="185166962">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Stone_Door_Open" ID="{F774E045-0E2E-47DD-9670-79CF8A027E52}" ShortID="368246845">
+									<Language>SFX</Language>
+									<AudioFile>Stone_Door_Open.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Stone_Door_Open" ID="{F774E045-0E2E-47DD-9670-79CF8A027E52}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Damaged_Platform_1" ID="{FF06D9CE-C2B0-4EE4-8B7B-6431EB5A1254}" ShortID="924060554">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>710</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{BE998F15-6F32-444A-961A-3BDB3913C0DA}" ShortID="712426730">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Platform_Movement_1" ID="{49A1584F-22F9-4A68-81AB-4DE1B446AC86}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{A4692C9E-BF61-4A26-9CC2-8BD66CC1CE84}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>11</XPos>
+														<YPos>0</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Damaged_Platform_1" ID="{429451C5-C1D4-45C3-ABBD-69C599AC92A5}" ShortID="184652951">
+									<Language>SFX</Language>
+									<AudioFile>Damaged_Platform_1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Damaged_Platform_1" ID="{429451C5-C1D4-45C3-ABBD-69C599AC92A5}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

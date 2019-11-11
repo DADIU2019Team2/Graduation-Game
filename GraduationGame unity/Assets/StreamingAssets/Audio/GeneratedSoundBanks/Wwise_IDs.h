@@ -14,6 +14,8 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID ALIEN_DEATH_TRAP = 3641971009U;
+        static const AkUniqueID ALIEN_DOOR = 2127960809U;
+        static const AkUniqueID ALIEN_DOOR_OPEN = 1050974708U;
         static const AkUniqueID ALIEN_PLATFORM_1 = 1021077760U;
         static const AkUniqueID ALIEN_PLATFORM_2 = 1021077763U;
         static const AkUniqueID ALIEN_PLATFORM_3 = 1021077762U;
