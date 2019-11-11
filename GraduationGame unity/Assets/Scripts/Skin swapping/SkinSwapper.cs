@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class SkinSwapper : MonoBehaviour
 {
-    public MeshRenderer[] headMaterialRenderers, outfitMaterialRenderers, bodyMaterialRenderers;
+    public SkinnedMeshRenderer[] headMaterialRenderers, outfitMaterialRenderers, bodyMaterialRenderers;
+
 
     public SkinnedMeshRenderer scarfMat;
     public ParticleSystem scarfParticleMat;
+
 
     public PlayerStats playerStats;
 
@@ -22,15 +24,15 @@ public class SkinSwapper : MonoBehaviour
         else
         {
             ZoeRecolor recolor = playerStats.allZoeRecolors[skinIndex];
-            foreach (MeshRenderer mRend in headMaterialRenderers)
+            foreach (SkinnedMeshRenderer mRend in headMaterialRenderers)
             {
                 ChangeMaterialInRenderer(mRend, recolor.zoeHeadMaterial);
             }
-            foreach (MeshRenderer mRend in bodyMaterialRenderers)
+            foreach (SkinnedMeshRenderer mRend in bodyMaterialRenderers)
             {
                 ChangeMaterialInRenderer(mRend, recolor.zoeBodyMaterial);
             }
-            foreach (MeshRenderer mRend in outfitMaterialRenderers)
+            foreach (SkinnedMeshRenderer mRend in outfitMaterialRenderers)
             {
                 ChangeMaterialInRenderer(mRend, recolor.zoeOutfitMaterial);
             }
@@ -45,7 +47,7 @@ public class SkinSwapper : MonoBehaviour
         playerStats.selectedSkin = skinIndex;
     }
 
-    private void ChangeMaterialInRenderer(MeshRenderer meshRenderer, Material material)
+    private void ChangeMaterialInRenderer(SkinnedMeshRenderer meshRenderer, Material material)
     {
         meshRenderer.material = material;
     }
