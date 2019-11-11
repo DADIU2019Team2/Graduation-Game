@@ -1137,6 +1137,7 @@
           <e p="CharacterMovement.cs" t="Include" />
           <e p="CheckWallBetweenAudioAndListener.cs" t="Include" />
           <e p="CurvePreditctorFromKeyboard.cs" t="Include" />
+          <e p="DamageOnImpact.cs" t="Include" />
           <e p="DemoStuff" t="Include">
             <e p="MoveAroundOBJ.cs" t="Include" />
             <e p="SmoothPlayerCamFollow.cs" t="Include" />
@@ -1157,17 +1158,20 @@
           <e p="ExtensionMethods.cs" t="Include" />
           <e p="GameEvents" t="Include">
             <e p="CustomEvents" t="Include">
+              <e p="UnityIntEvent.cs" t="Include" />
               <e p="UnityVoidEvent.cs" t="Include" />
             </e>
             <e p="Events" t="Include">
               <e p="Hidden" t="Include">
                 <e p="BaseGameEvent.cs" t="Include" />
+                <e p="IntEvent.cs" t="Include" />
                 <e p="VoidEvent.cs" t="Include" />
               </e>
             </e>
             <e p="Listeners" t="Include">
               <e p="BaseGameEventListener.cs" t="Include" />
               <e p="IGameEventListener.cs" t="Include" />
+              <e p="IntTypeListener.cs" t="Include" />
               <e p="VoidTypeListener.cs" t="Include" />
             </e>
             <e p="VoidType.cs" t="Include" />
@@ -1175,16 +1179,19 @@
           <e p="GameManager.cs" t="Include" />
           <e p="IMotionMatchable.cs" t="Include" />
           <e p="InputManager.cs" t="Include" />
+          <e p="IOnSceneReset.cs" t="Include" />
           <e p="KinematicMovement" t="Include">
             <e p="KinematicTestController.cs" t="Include" />
             <e p="KinematicTestPlayer.cs" t="Include" />
           </e>
           <e p="LiveDebugger.cs" t="Include" />
+          <e p="LivePlayerStats.cs" t="Include" />
           <e p="LoadScene.cs" t="Include" />
           <e p="Localization" t="Include">
             <e p="AutoTranslator.cs" t="Include" />
             <e p="LocalizationManager.cs" t="Include" />
           </e>
+          <e p="MidLevelTransition.cs" t="Include" />
           <e p="MMAnimationController.cs" t="Include" />
           <e p="MMDataContainers" t="Include">
             <e p="AnimLookup.cs" t="Include" />
@@ -1194,11 +1201,13 @@
             <e p="TrajectoryInfo.cs" t="Include" />
           </e>
           <e p="MovingPlatform.cs" t="Include" />
+          <e p="OnTriggerEnterMovingPlatform.cs" t="Include" />
           <e p="PermissionTest.cs" t="Include" />
           <e p="RaiseOnSpace.cs" t="Include" />
           <e p="ScriptableObjectScripts" t="Include">
             <e p="BoolVariable.cs" t="Include" />
             <e p="DamagebleObject.cs" t="Include" />
+            <e p="FloatVariable.cs" t="Include" />
             <e p="GameStateScriptableObject.cs" t="Include" />
             <e p="GravityGlobalValues.cs" t="Include" />
             <e p="IntVariable.cs" t="Include" />
@@ -1234,6 +1243,7 @@
           <e p="UI Relevant" t="Include">
             <e p="FpsCounter.cs" t="Include" />
             <e p="ReadBuildNumber.cs" t="Include" />
+            <e p="TransitionFader.cs" t="Include" />
           </e>
           <e p="Waypoint.cs" t="Include" />
         </e>

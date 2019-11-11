@@ -15,6 +15,15 @@ namespace KinematicTest.controller
         LedgeGrabbing,
         Tired,
         Falling,
+        NoInput,
+    }
+
+    public enum WorldForward
+    {
+        Right,
+        Forward,
+        Left,
+        Back,
     }
 
     public struct PlayerCharacterInputs
@@ -26,6 +35,8 @@ namespace KinematicTest.controller
         public bool changeDirection;
         public bool crouchDown;
         public bool crouchUp;
+        public bool stopDown;
+        public bool worldMoveDown;
     }
 
     public class KinematicTestController : MonoBehaviour, ICharacterController
@@ -55,6 +66,7 @@ namespace KinematicTest.controller
         private AnimationCurve rampDownCurve;
 
         // Running
+        private Vector3 worldMoveDirection = Vector3.right;
         private float MaxStableMoveSpeed;
         private float StableMovementSharpness;
         private float OrientationSharpness = 10;
@@ -104,15 +116,21 @@ namespace KinematicTest.controller
         [SerializeField]
         private bool forward;
 
-
+        //World changes
+        private float _timeSinceTransitioning;
+        private float transitionTime = 2f;
+        
         // Settings
         public PlayerControllerSettings settings;
 
         // Debug stuff
         public PlayerStates CurrentCharacterState;
+        public WorldForward CurrentWorldForward;
         public Vector3 Gravity = new Vector3(0, -10f, 0);
         public Transform MeshRoot;
         private float ledgeGrabGravityMultiplier = 0f;
+        [HideInInspector]
+        public static GameObject ledgeGrabbed = null;
 
         //This will later be scriptable object
         [Header("Sound settings")] public AK.Wwise.Event jumpSound;
@@ -287,6 +305,14 @@ namespace KinematicTest.controller
                 case PlayerStates.LedgeGrabbing:
                 {
                     timeAtLastLedgeGrab = Time.time;
+                    Motor.ZoeAttachedRigidbody = null;
+                    break;
+                }
+                case PlayerStates.NoInput:
+                {
+                    //runningRight = 1;
+                    curveStep = 0; //for now
+                    _timeSinceTransitioning = 0f;
                     break;
                 }
             }
@@ -297,6 +323,10 @@ namespace KinematicTest.controller
         /// </summary>
         public void SetInputs(ref PlayerCharacterInputs inputs)
         {
+            if (CurrentCharacterState == PlayerStates.NoInput)
+                return;
+
+            
             if (inputs.slideDown && CurrentCharacterState == PlayerStates.Running &&
                 Motor.GroundingStatus.FoundAnyGround)
             {
@@ -357,7 +387,31 @@ namespace KinematicTest.controller
             //Vector3 moveInputVector = Vector3.ClampMagnitude(new Vector3(inputs.MoveAxisRight, 0f, inputs.MoveAxisForward), 1f);
 
 
-            Vector3 moveInputVector = Vector3.right * runningRight;
+            switch (CurrentWorldForward)
+            {
+                case WorldForward.Right:
+                {
+                    worldMoveDirection = Vector3.right;
+                    break;
+                }
+                case WorldForward.Forward:
+                {
+                    worldMoveDirection = Vector3.forward;
+                    break;
+                }
+                case WorldForward.Left:
+                {
+                    worldMoveDirection = Vector3.left;
+                    break;
+                }
+                case WorldForward.Back:
+                {
+                    worldMoveDirection = Vector3.back;
+                    break;
+                }
+            }
+
+            Vector3 moveInputVector = worldMoveDirection * runningRight;
             // Move and look inputs
             _moveInputVector = moveInputVector;
 
@@ -372,6 +426,10 @@ namespace KinematicTest.controller
                     jumpFromWallRequested = true;
                 }
             }
+            if (inputs.stopDown)
+            {
+                TransitionToState(PlayerStates.Idling);
+            }
         }
 
         /// <summary>
@@ -382,6 +440,11 @@ namespace KinematicTest.controller
         {
             switch (CurrentCharacterState)
             {
+                case PlayerStates.NoInput:
+                {
+                    _timeSinceTransitioning += deltaTime;
+                    break;
+                }
                 case PlayerStates.Sliding:
                 {
                     _timeSinceStartedSliding += deltaTime;
@@ -643,6 +706,10 @@ namespace KinematicTest.controller
                                 ? !Motor.GroundingStatus.FoundAnyGround
                                 : !Motor.GroundingStatus.IsStableOnGround))
                         {
+                            if (CurrentCharacterState == PlayerStates.Idling)
+                            {
+                                TransitionToState(PlayerStates.Running);
+                            }
                             Motor.ForceUnground(0.1f);
 
                             // Add to the return velocity and reset jump state
@@ -730,6 +797,15 @@ namespace KinematicTest.controller
 
                 switch (CurrentCharacterState)
                 {
+                    case PlayerStates.NoInput:
+                    {
+                        if (_timeSinceTransitioning > transitionTime)
+                        {
+                            TransitionToState(PlayerStates.Running);
+                        }
+
+                        break;
+                    }
                     case PlayerStates.Sliding:
                     {
                         if (!_isStoppedSliding && _timeSinceStartedSliding > settings.slideDuration)
@@ -783,11 +859,10 @@ namespace KinematicTest.controller
         public void OnMovementHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
             ref HitStabilityReport hitStabilityReport)
         {
-            Debug.Log("normal : " + hitNormal + " point : " + hitPoint);
             if (hitCollider.CompareTag("Ledge") && Time.time > (timeAtLastLedgeGrab + graceTimeBeforeHangAgain) && hitNormal.y == 0 && Mathf.Sign(hitNormal.x) == -Mathf.Sign(runningRight))
             {
-                Debug.Log("normal : " + hitNormal + " point : " +hitPoint);
-                Debug.Log("Ledge Grab?");
+                ledgeGrabbed = hitCollider.gameObject;
+                Motor.ZoeAttachedRigidbody = hitCollider.gameObject.GetComponentInParent<Rigidbody>();
                 timeAtLastLedgeGrab = Time.time;
                 TransitionToState(PlayerStates.LedgeGrabbing);
             }
@@ -803,12 +878,15 @@ namespace KinematicTest.controller
                     //scarf.transform.Rotate(Vector3.up, 180);
                 }
 
-                Debug.Log("Tranisitioning");
                 TransitionToState(PlayerStates.Idling);
             }
             else if (hitCollider.CompareTag("MovingPlatform"))
             {
-                hitCollider.GetComponent<MovingPlatform>().activatePlatform();
+                MovingPlatform movingPlatform = hitCollider.gameObject.GetComponent<MovingPlatform>();
+                if (movingPlatform.activationType == MovingPlatform.ActivationType.player)
+                {
+                    movingPlatform.activatePlatform();
+                }
             }
         }
 
@@ -891,6 +969,13 @@ namespace KinematicTest.controller
             {
                 return false;
             }
+        }
+
+        public void MidLevelTransition(int dir)
+        {
+            Debug.Log(dir);
+            TransitionToState(PlayerStates.NoInput);
+            CurrentWorldForward = (WorldForward) (((int) CurrentWorldForward + dir) % 4);
         }
     }
 }
