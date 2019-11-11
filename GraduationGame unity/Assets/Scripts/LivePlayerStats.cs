@@ -10,6 +10,8 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
     public float currentHealth;
     public float currentStamina;
 
+    
+    
     public void TakeDamage(int damage)
     {
         Debug.Log(damage + " damage taken");
@@ -29,6 +31,7 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
     public void Die()
     {
         Debug.Log("git gud");
+        GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelLoss);
     }
 
     public void OnResetLevel()
