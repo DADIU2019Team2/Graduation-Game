@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class FloatVariable : ScriptableObject
 {
-    public float myfloat;
+    [SerializeField] private float myfloat;
 
     public void setValue(float value)
     {

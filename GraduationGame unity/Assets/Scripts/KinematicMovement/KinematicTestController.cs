@@ -4,6 +4,7 @@ using UnityEngine;
 using KinematicCharacterController;
 using System;
 using KinematicCharacterController.Examples;
+using MiniGame2.Events;
 
 namespace KinematicTest.controller
 {
@@ -137,7 +138,14 @@ namespace KinematicTest.controller
 
         public AK.Wwise.Event landSound;
         bool canChangeMidAir = true;
-
+        
+        //Collision event because KCC doesn't like unity's collisions
+        public IntEvent SpikeDamageEvent;
+        public bool _justTookDamage;
+        public float _timeSinceDamageTaken;
+        public bool canTakeDamage;
+        public float damageResetTimer;
+        
         void Init()
         {
             canChangeMidAir = settings.canChangeDirectionsMidair;
@@ -455,6 +463,16 @@ namespace KinematicTest.controller
 
                     break;
                 }
+            }
+            if (_justTookDamage)
+            {
+                canTakeDamage = false;
+            }
+
+            if (!canTakeDamage)
+            {
+                _justTookDamage = false;
+                _timeSinceDamageTaken += deltaTime;
             }
         }
 
@@ -839,6 +857,12 @@ namespace KinematicTest.controller
                         break;
                     }
                 }
+
+                if (!canTakeDamage && _timeSinceDamageTaken > damageResetTimer)
+                {
+                    canTakeDamage = true;
+                    _timeSinceDamageTaken = 0f;
+                }
             }
         }
 
@@ -887,6 +911,13 @@ namespace KinematicTest.controller
                 {
                     movingPlatform.activatePlatform();
                 }
+            }
+            else if (hitCollider.CompareTag("Spike") && canTakeDamage)
+            {
+                Debug.Log("spike hit");
+                int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
+                SpikeDamageEvent.Raise(damage);
+                _justTookDamage = true;
             }
         }
 
