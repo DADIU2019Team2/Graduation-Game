@@ -1,10 +1,8 @@
 //Maya ASCII 2019 scene
 //Name: stranger_v006_EL.ma
-//Last modified: Mon, Nov 11, 2019 10:28:55 AM
+//Last modified: Mon, Nov 11, 2019 10:37:45 AM
 //Codeset: 1252
 requires maya "2019";
-requires "mtoa" "3.1.2";
-requires "stereoCamera" "10.0";
 requires "mtoa" "3.1.2";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
@@ -22794,19 +22792,19 @@ createNode mesh -n "polySurfaceShape2" -p "Helmet_geo";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "3CFA2D7E-43D3-DCE6-8ACD-9AB127D06A88";
-	setAttr -s 13 ".lnk";
-	setAttr -s 13 ".slnk";
+	rename -uid "8946449F-4025-4B64-4C20-FAB1AFDFE80F";
+	setAttr -s 6 ".lnk";
+	setAttr -s 6 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "20B5D9F5-4ACE-5EAA-6AE5-0E8E67FEFE3A";
+	rename -uid "B266E694-4AD2-1A11-808E-47A0C0B1B343";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "DE9D2503-4367-1435-5B61-FF879CF19934";
+	rename -uid "F0D1228C-4C8F-B57D-3A9C-BF9B51F165C4";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "BACD7C2A-4825-C576-F802-EC85B9582AE7";
+	rename -uid "06CDB0F6-462E-D983-E26F-72A0A7236FF9";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "F88E3D96-4A2A-F90E-F680-FAA77D44496D";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "1B544D23-4DAC-3FCD-44FD-A1BDCA9D2D07";
+	rename -uid "9AF1DCFC-4156-A105-EBF5-039B5EF0BADD";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "F0A0FE2D-4159-9CA0-1334-6E8D58CFCD9E";
 	setAttr ".g" yes;
@@ -23212,8 +23210,6 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :defaultHideFaceDataSet;
 	setAttr -s 12 ".dnsm";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "groupId7.id" "Belt_geoShape.iog.og[7].gid";
 connectAttr "polySoftEdge1.out" "Helmet_geoShapeD.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
