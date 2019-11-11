@@ -18,6 +18,8 @@ namespace AK
         static const AkUniqueID ALIEN_PLATFORM_2 = 1021077763U;
         static const AkUniqueID ALIEN_PLATFORM_3 = 1021077762U;
         static const AkUniqueID ALIEN_PLATFORM_4 = 1021077765U;
+        static const AkUniqueID ALIEN_PLATFORM_5 = 1021077764U;
+        static const AkUniqueID ALIEN_PLATFORM_6 = 1021077767U;
         static const AkUniqueID ALIEN_PLATFORM_PILLAR = 41605727U;
         static const AkUniqueID BALL_PLATFORM = 1848730664U;
         static const AkUniqueID BALL_PLATFORM_DAMAGED = 2557453060U;
@@ -36,6 +38,12 @@ namespace AK
         static const AkUniqueID MACHINE_1 = 311050744U;
         static const AkUniqueID MACHINE_2 = 311050747U;
         static const AkUniqueID MACHINE_3 = 311050746U;
+        static const AkUniqueID NORMAL_PLATFORM_1 = 367597590U;
+        static const AkUniqueID NORMAL_PLATFORM_2 = 367597589U;
+        static const AkUniqueID NORMAL_PLATFORM_3 = 367597588U;
+        static const AkUniqueID NORMAL_PLATFORM_4 = 367597587U;
+        static const AkUniqueID NORMAL_PLATFORM_5 = 367597586U;
+        static const AkUniqueID NORMAL_PLATFORM_6 = 367597585U;
         static const AkUniqueID PLATFORM_PILLAR_DAMAGED = 1611566155U;
         static const AkUniqueID PLAY_AMBIENCE_Z0 = 1001479279U;
         static const AkUniqueID PLAY_AMBIENCE_Z1 = 1001479278U;
