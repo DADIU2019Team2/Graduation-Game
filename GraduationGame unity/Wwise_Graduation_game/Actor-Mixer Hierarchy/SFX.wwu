@@ -3271,6 +3271,33 @@
 								<ActiveSource Name="Damaged_Platform_1" ID="{429451C5-C1D4-45C3-ABBD-69C599AC92A5}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Death_Saw" ID="{55DA53C5-AC1D-45CE-B89F-7504A9367F93}" ShortID="469569893">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-200</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Death_Saw" ID="{2CD9AEFC-FB6E-41B7-B3E4-6003965543FD}" ShortID="11716284">
+									<Language>SFX</Language>
+									<AudioFile>Death_Saw.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Death_Saw" ID="{2CD9AEFC-FB6E-41B7-B3E4-6003965543FD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Ambience" ID="{B0EBBF6A-2C52-43EB-850E-8E23A346CFEC}" ShortID="255903565">

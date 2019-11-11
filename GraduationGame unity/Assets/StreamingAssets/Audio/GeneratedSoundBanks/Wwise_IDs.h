@@ -35,6 +35,7 @@ namespace AK
         static const AkUniqueID DAMAGED_PLATFORM_5 = 4094004892U;
         static const AkUniqueID DAMAGED_PLATFORM_6 = 4094004895U;
         static const AkUniqueID DEATH_RAY = 977466704U;
+        static const AkUniqueID DEATH_SAW = 507840475U;
         static const AkUniqueID LAZER_WALL = 2967932086U;
         static const AkUniqueID LAZER_WALL_POWER_DOWN = 3352547351U;
         static const AkUniqueID MACHINE_1 = 311050744U;
