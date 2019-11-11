@@ -77,7 +77,6 @@ public class InputManager : MonoBehaviour
                     isDragging = false;
                     break;
                 case TouchPhase.Ended:
-
                     endPosition = touch.position;
                     swipeDirection = (endPosition - initPosition);
                     if (swipeDirection.magnitude > 50f)
