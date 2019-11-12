@@ -20,8 +20,8 @@ MonoBehaviour:
   maxMoveSpeed: 10
   StableMovementSharpness: 30
   OrientationSharpness: 10
-  rampUpTime: 2
-  rampDownTime: 0.5
+  rampUpTime: 0.1
+  rampDownTime: 0.1
   rampUpCurve:
     serializedVersion: 2
     m_Curve:
@@ -70,8 +70,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  jumpHeight: 2
-  maxAirMoveSpeed: 15
+  jumpHeight: 4
+  maxAirMoveSpeed: 10
   hangTimeVelocityThreshold: 2
   JumpPreGroundingGraceTime: 0.2
   JumpPostGroundingGraceTime: 0.2
@@ -105,11 +105,11 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  graceTimeBeforeHangAgain: 0
-  ledgeGrabForwardJumpHeight: 0
-  ledgeGrabForwardAirMoveSpeed: 0
-  ledgeGrabBackwardsJumpHeight: 0
-  ledgeGrabBackwardsAirMoveSpeed: 0
+  graceTimeBeforeHangAgain: 0.2
+  ledgeGrabForwardJumpHeight: 1
+  ledgeGrabForwardAirMoveSpeed: 5
+  ledgeGrabBackwardsJumpHeight: 1
+  ledgeGrabBackwardsAirMoveSpeed: 5
   canChangeDirectionsMidair: 1
   AllowDoubleJump: 1
   AllowJumpingWhenSliding: 0

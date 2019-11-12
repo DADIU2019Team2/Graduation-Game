@@ -16,39 +16,42 @@ public class InputManager : MonoBehaviour
 
     public TextMeshProUGUI inputText;
 
+    public BoolVariable isSwipeAllowed;
+
     private bool isDragging;
     Vector2 initPosition, endPosition;
     Vector2 swipeDirection;
     float swipeAngle;
     private bool isFacingRight;
     public SwipeAngleThresholds swipeAngleThresholds;
-    public VoidEvent OnSwipeEvent;
+    public VoidEvent onSwipeEvent;
+    public VoidEvent onClickEvent;
     private static SwipeType mostRecentSwipeType;
+    private float timeDragged;
+    public FloatVariable maxDragTime;
 
     private string intoTextString;
 
     private void Start()
     {
         intoTextString = "Most recent input: ";
-        GameObject go = GameObject.Find("Input text");
+        GameObject go = GameObject.Find("Input Text");
         if (go != null)
         {
             inputText = go.GetComponent<TextMeshProUGUI>();
         }
+        /*
         Debug.Assert(mirroredAngle(10) == 170, "10 mirrored = 170");
         Debug.Assert(mirroredAngle(190) == -10, "190 mirrored = -10");
         Debug.Assert(mirroredAngle(200) == -20, "200 mirrored = -20");
         Debug.Assert((-20 + 360) % 360 == 340, "-20%360 == 340");
         Debug.Assert(340 % 360 == 340);
-
-
         Debug.Assert(!(30 > (mirroredAngle(swipeAngleThresholds.swipeUpRightAngles0) + 360) % 360 && (mirroredAngle(swipeAngleThresholds.swipeUpRightAngles1) + 360) % 360 > 30),
          "Testing with 30 deg swipe backwards");
         Debug.Log((mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles0) + 360) % 360);
         Debug.Log((mirroredAngle(swipeAngleThresholds.swipeBackwardsAngles1) + 360) % 360);
-
         Debug.Assert(Is_P3_between_P1_and_P2(swipeAngleThresholds.swipeUpRightAngles1, swipeAngleThresholds.swipeUpRightAngles0, 30), "swipeangletest with new function");
-
+        */
 
 
     }
@@ -68,8 +71,11 @@ public class InputManager : MonoBehaviour
             {
                 case TouchPhase.Began:
                     initPosition = touch.position;
+                    isDragging = true;
                     break;
-
+                case TouchPhase.Canceled:
+                    isDragging = false;
+                    break;
                 case TouchPhase.Ended:
                     endPosition = touch.position;
                     swipeDirection = (endPosition - initPosition);
@@ -89,13 +95,21 @@ public class InputManager : MonoBehaviour
                         {
                             inputText.text = (intoTextString + mostRecentInput + " " + swipeAngle);
                         }
-                        OnSwipeEvent.Raise();
+                        if (isSwipeAllowed.myBool == true)
+                        {
+                            onSwipeEvent.Raise();
+                        }
+                    }
+                    else if (timeDragged < 0.125f)
+                    {
+                        onClickEvent.Raise();
                     }
 
-
-
+                    isDragging = false;
                     break;
             }
+
+            timeDragged = isDragging ? timeDragged += Time.deltaTime : 0;
         }
     }
 

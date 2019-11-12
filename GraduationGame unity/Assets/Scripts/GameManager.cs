@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using MiniGame2.Events;
+using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
 
-    public static GameStateScriptableObject.GameState gameState;
+    private static GameStateScriptableObject.GameState gameState;
+    private float originalTimescale;
 
     // transition related
     [Header("Transition Related")]
@@ -14,10 +16,19 @@ public class GameManager : MonoBehaviour
     //public BoolVariable isSceneLaod;
     public FloatVariable sceneLoadFadeTime;
     public FloatVariable blackFadeTime;
+    public BoolVariable isSwipeAllowed;
     public static bool callOnce;
     private float transitionTime;
     private bool isSceneLoadTransition;
 
+    [Header("Check If Active")]// bad i know
+    public GameObject optionsMenu;
+
+    private void Awake()
+    {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 120;
+    }
     private void Start()
     {
         callOnce = true;
@@ -34,6 +45,11 @@ public class GameManager : MonoBehaviour
                 {
                     DoFade(true);
                     callOnce = false;
+                    isSwipeAllowed.setBool(false);
+                }
+                if (transitionFader.getAlpha() == 0)//have finished fading in
+                {
+                    ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
                 }
                 /*Fade from black. 
                 Nothing happens until player gives some sort of input to start the level. 
@@ -42,6 +58,13 @@ public class GameManager : MonoBehaviour
 
             #region maingameplay
             case GameStateScriptableObject.GameState.mainGameplayLoop:
+                isSwipeAllowed.setBool(true);
+                if (optionsMenu.activeSelf) // if options menu gets entered
+                {
+                    originalTimescale = Time.timeScale;
+                    Time.timeScale = 0f;
+                    ChangeGameState(GameStateScriptableObject.GameState.optionsMenuOpened);
+                }
                 //Main logic of the game goes on here. The player has control over Zoe. 
                 break;
             #endregion maingameplay
@@ -52,6 +75,11 @@ public class GameManager : MonoBehaviour
                     isSceneLoadTransition = false;
                     DoFade(false);
                     callOnce = false;
+                }
+                if (transitionFader.getAlpha() == 1) //faded to black
+                {
+                    DoResetObjects();
+                    ChangeGameState(GameStateScriptableObject.GameState.levelStart);
                 }
                 /*Fade to black, return all objects in scene to their initial states. 
                 “Reload” scene and fade back into level-start state. 
@@ -72,12 +100,16 @@ public class GameManager : MonoBehaviour
                 (Possibly set state to be level-start before calling the load-next-scene function) */
                 break;
             case GameStateScriptableObject.GameState.optionsMenuOpened:
-                //Should pause all game-logic and behaviours. 
-                Time.timeScale = 0;
-
+                Debug.Log("OptionsMenuOpened");
+                if (!optionsMenu.activeSelf) // if options menu is closed
+                {
+                    Time.timeScale = originalTimescale;
+                    ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
+                }
                 break;
 
         }
+        Debug.Log("Time scale = " + Time.timeScale);
     }
 
     public static GameStateScriptableObject.GameState GetGameState()
@@ -96,21 +128,32 @@ public class GameManager : MonoBehaviour
         {
             case true:
                 transitionTime = sceneLoadFadeTime.getValue();
-
-                if(fadeIn)
+                if (fadeIn)
                     transitionFader.fadeIn(transitionTime, true);
                 else
                     transitionFader.fadeOut(transitionTime, true);
                 break;
-
             case false:
                 transitionTime = blackFadeTime.getValue();
-
-                if(fadeIn)
+                if (fadeIn)
                     transitionFader.fadeIn(transitionTime, false);
                 else
                     transitionFader.fadeOut(transitionTime, false);
                 break;
         }
+    }
+
+    private void DoResetObjects()
+    {
+        var objectsToBeReset = FindObjectsOfType<MonoBehaviour>().OfType<IOnSceneReset>();
+        foreach (IOnSceneReset obj in objectsToBeReset)
+        {
+            obj.OnResetLevel();
+        }
+    }
+
+    public void CinematicStart()
+    {
+        
     }
 }

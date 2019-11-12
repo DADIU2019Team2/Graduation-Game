@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using KinematicCharacterController;
 
-
-public class MovingPlatform : MonoBehaviour, IMoverController
+public class MovingPlatform : MonoBehaviour, IMoverController, IOnSceneReset
 {
     public PhysicsMover Mover;
 
@@ -12,19 +11,22 @@ public class MovingPlatform : MonoBehaviour, IMoverController
     private Vector3 _destination;
 
     public LayerMask activationLayers;
-    public enum ActivationType { none, player, trigger};
+    public enum ActivationType { none, player, trigger };
     public ActivationType activationType;
     public Collider trigger;
 
-    public enum PlatformType { oneTimeMove, PingPong, oneTimePlayer, oneTimePlayerWithReturn, 
-        EndAndBackPlayer};
+    public enum PlatformType
+    {
+        oneTimeMove, PingPong, oneTimePlayer, oneTimePlayerWithReturn,
+        EndAndBackPlayer
+    };
     public PlatformType platformType;
 
     public float startDelay;
     public float waypointWaitTime;
     private bool canMove = false;
 
-    [Range(0,4.5f)]
+    [Range(0, 4.5f)]
     public float TranslationSpeed = 1;
     private float minDist2DestReached = .05f;
     //public float rotationSpeed = 30f;
@@ -46,12 +48,13 @@ public class MovingPlatform : MonoBehaviour, IMoverController
     private bool triggerDefaultState;
 
     //public bool ActivatePlatform = false;
+    public string akEventToPostOnReachingPosition;
 
     public void resetPlatform()
     {
         resetNow = true;
         //reset of position and rotation is happening in the move function (otherwise it wont work)
-            
+
         currentWaypoint = _originalWaypoint;
         setDestination(currentWaypoint.getPosition());
         resetNow = false;
@@ -64,11 +67,12 @@ public class MovingPlatform : MonoBehaviour, IMoverController
     void Awake()
     {
         triggerDefaultState = trigger.gameObject.activeSelf;
-       // Debug.Log("Trigger default = " + triggerDefaultState);
+        // Debug.Log("Trigger default = " + triggerDefaultState);
     }
 
     private void Start()
     {
+        //AddObj2ResetList(GameManager.ObjsToReset, this);
         _originalPosition = Mover.Rigidbody.position;
         _originalRotation = Mover.Rigidbody.rotation;
         _originalWaypoint = currentWaypoint;
@@ -77,12 +81,12 @@ public class MovingPlatform : MonoBehaviour, IMoverController
         setDestination(currentWaypoint.transform.position);
 
         Mover.MoverController = this;
-        if(activationType == ActivationType.none)
+        if (activationType == ActivationType.none)
             activatePlatform();
         //activation type trigger is handeled by sendmessageupwards from the trigger
         //activation type player is handled by the kinematic controller in OnMovementHit()
 
-       
+
     }
 
     public void UpdateMovement(out Vector3 goalPosition, out Quaternion goalRotation, float deltatime)
@@ -90,9 +94,9 @@ public class MovingPlatform : MonoBehaviour, IMoverController
         goalPosition = Mover.Rigidbody.position;
         goalRotation = Mover.Rigidbody.rotation;
 
-        if(activated)
+        if (activated)
             updateOneTimeMove(out goalPosition, out goalRotation, deltatime);
-        
+
 
         //Resetting the position and rotation cause it's necessarry to do here.
         if (resetNow)
@@ -119,14 +123,14 @@ public class MovingPlatform : MonoBehaviour, IMoverController
 
             //do some rotation if necessarry
             goalRotation = Mover.Rigidbody.rotation;
-            goalPosition = destinationDirection.normalized * TranslationSpeed * Time.deltaTime + Mover.Rigidbody.position;  
+            goalPosition = destinationDirection.normalized * TranslationSpeed * Time.deltaTime + Mover.Rigidbody.position;
         }
         else
         {
             destinationReached = true;
             goalPosition = Mover.Rigidbody.position;
             goalRotation = Mover.Rigidbody.rotation;
-            if(destinationReached)
+            if (destinationReached)
                 updateDestination();
         }
     }
@@ -139,10 +143,10 @@ public class MovingPlatform : MonoBehaviour, IMoverController
             case PlatformType.oneTimeMove:
                 if (currentWaypoint.nextWaypoint != null)
                 {
-                    if(!isInWaypointWaitTime) //update destination
+                    if (!isInWaypointWaitTime) //update destination
                     {
                         currentWaypoint = currentWaypoint.nextWaypoint;
-                        
+
                         StartCoroutine(waitAtWaypoint(waypointWaitTime));
                     }
 
@@ -156,7 +160,7 @@ public class MovingPlatform : MonoBehaviour, IMoverController
             case PlatformType.PingPong:
                 if (hasReachedEnd)
                 {
-                    if(currentWaypoint.previousWaypoint != null)
+                    if (currentWaypoint.previousWaypoint != null)
                     {
                         if (!isInWaypointWaitTime) //update destination
                         {
@@ -199,11 +203,15 @@ public class MovingPlatform : MonoBehaviour, IMoverController
                     }
                     else
                     {
+                        if (!(akEventToPostOnReachingPosition == ""))
+                        {
+                            AkSoundEngine.PostEvent(akEventToPostOnReachingPosition, gameObject);
+                        }
                         hasReachedEnd = false;
                         deactivatePlatform();
                     }
                 }
-                else if(!hasReachedEnd && activated)
+                else if (!hasReachedEnd && activated)
                 {
                     if (currentWaypoint.nextWaypoint != null)
                     {
@@ -215,6 +223,10 @@ public class MovingPlatform : MonoBehaviour, IMoverController
                     }
                     else
                     {
+                        if (!(akEventToPostOnReachingPosition == ""))
+                        {
+                            AkSoundEngine.PostEvent(akEventToPostOnReachingPosition, gameObject);
+                        }
                         hasReachedEnd = true;
                         deactivatePlatform();
                     }
@@ -223,9 +235,9 @@ public class MovingPlatform : MonoBehaviour, IMoverController
             case PlatformType.EndAndBackPlayer:
                 if (activated)
                 {
-                    if(movingForward) 
+                    if (movingForward)
                     {
-                        if(currentWaypoint.nextWaypoint != null)
+                        if (currentWaypoint.nextWaypoint != null)
                         {
                             if (!isInWaypointWaitTime) //update destination
                             {
@@ -240,7 +252,7 @@ public class MovingPlatform : MonoBehaviour, IMoverController
                     }
                     else
                     {
-                        if(currentWaypoint.previousWaypoint != null)
+                        if (currentWaypoint.previousWaypoint != null)
                         {
                             if (!isInWaypointWaitTime) //update destination
                             {
@@ -250,6 +262,10 @@ public class MovingPlatform : MonoBehaviour, IMoverController
                         }
                         else
                         {
+                            if (!(akEventToPostOnReachingPosition == ""))
+                            {
+                                AkSoundEngine.PostEvent(akEventToPostOnReachingPosition, gameObject);
+                            }
                             deactivatePlatform();
                             movingForward = true;
                         }
@@ -269,6 +285,10 @@ public class MovingPlatform : MonoBehaviour, IMoverController
                     }
                     else
                     {
+                        if (!(akEventToPostOnReachingPosition == ""))
+                        {
+                            AkSoundEngine.PostEvent(akEventToPostOnReachingPosition, gameObject);
+                        }
                         hasReachedEnd = true;
                         deactivatePlatform();
                         //nothing happens
@@ -277,7 +297,7 @@ public class MovingPlatform : MonoBehaviour, IMoverController
                 break;
 
         }
-            
+
     }
     void setDestination(Vector3 destination)
     {
@@ -321,5 +341,16 @@ public class MovingPlatform : MonoBehaviour, IMoverController
         yield return new WaitForSeconds(.2f);
         //shouldUpdateDestination = false;
     }
+
+    public void OnResetLevel()
+    {
+        resetPlatform();
+        //Debug.Log("Resetting " + gameObject.name);
+    }
+
+    /*public void AddObj2ResetList(List<IOnSceneReset> objResetList, IOnSceneReset thisObj)
+    {
+        objResetList.Add(thisObj);
+    }*/
 }
 
