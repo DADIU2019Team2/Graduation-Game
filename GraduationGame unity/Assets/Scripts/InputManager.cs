@@ -16,13 +16,16 @@ public class InputManager : MonoBehaviour
 
     public TextMeshProUGUI inputText;
 
+    public BoolVariable isSwipeAllowed;
+
     private bool isDragging;
     Vector2 initPosition, endPosition;
     Vector2 swipeDirection;
     float swipeAngle;
     private bool isFacingRight;
     public SwipeAngleThresholds swipeAngleThresholds;
-    public VoidEvent OnSwipeEvent;
+    public VoidEvent onSwipeEvent;
+    public VoidEvent onClickEvent;
     private static SwipeType mostRecentSwipeType;
     private float timeDragged;
     public FloatVariable maxDragTime;
@@ -74,7 +77,6 @@ public class InputManager : MonoBehaviour
                     isDragging = false;
                     break;
                 case TouchPhase.Ended:
-
                     endPosition = touch.position;
                     swipeDirection = (endPosition - initPosition);
                     if (swipeDirection.magnitude > 50f)
@@ -93,13 +95,21 @@ public class InputManager : MonoBehaviour
                         {
                             inputText.text = (intoTextString + mostRecentInput + " " + swipeAngle);
                         }
-                        OnSwipeEvent.Raise();
+                        if (isSwipeAllowed.myBool == true)
+                        {
+                            onSwipeEvent.Raise();
+                        }
                     }
+                    else if (timeDragged < 0.125f)
+                    {
+                        onClickEvent.Raise();
+                    }
+
                     isDragging = false;
                     break;
             }
 
-            timeDragged = isDragging ? timeDragged+=Time.deltaTime : 0;
+            timeDragged = isDragging ? timeDragged += Time.deltaTime : 0;
         }
     }
 
