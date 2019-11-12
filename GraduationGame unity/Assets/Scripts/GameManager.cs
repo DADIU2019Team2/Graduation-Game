@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
                     callOnce = false;
                     isSwipeAllowed.setBool(false);
                 }
-                
+
                 playerMovementController.TransitionToState(PlayerStates.Idling);
 
 
@@ -93,6 +93,10 @@ public class GameManager : MonoBehaviour
                 Zoe and camerashould be returned to most recent checkpoint met, rather than at the initial position at start of the level */
                 break;
             case GameStateScriptableObject.GameState.cinematic:
+                
+                playerMovementController.TransitionToState(PlayerStates.Idling);
+                //Need to implement input blocking here.
+
                 /*(No player control at all until they end)
                  – except skipping dialogue by tapping and swiping to skip to next player-controllable state. */
                 break;
@@ -159,7 +163,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void CinematicStart()
+    public void DialogueEnd()
+    {
+
+    }
+
+    public void DialogueStart()
     {
 
     }
