@@ -931,15 +931,12 @@ namespace KinematicCharacterController
                 else
                 {
                     string nullzoe = (_zoeAttachedRigidbody == null).ToString();
-                    Debug.Log("is zoe null ? " + nullzoe);
                     // Detect interactive rigidbodies from grounding
                     if ((GroundingStatus.IsStableOnGround && GroundingStatus.GroundCollider.attachedRigidbody) || _zoeAttachedRigidbody != null)
                     {
-                        Debug.Log("_zoeAttachedRigidbody???");
                         Rigidbody interactiveRigidbody = null;
                         if (_zoeAttachedRigidbody != null)
                         {
-                            Debug.Log("_zoeAttachedRigidbody!!!");
                             interactiveRigidbody = _zoeAttachedRigidbody;
                         }
                         else

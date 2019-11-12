@@ -30,7 +30,8 @@ public class MovingPlatform : MonoBehaviour, IMoverController, IOnSceneReset
     public float TranslationSpeed = 1;
     private float minDist2DestReached = .05f;
     //public float rotationSpeed = 30f;
-
+    public AK.Wwise.Event stopSound;
+    public AK.Wwise.Event startSound;
 
 
     private Vector3 _originalPosition;
@@ -310,12 +311,15 @@ public class MovingPlatform : MonoBehaviour, IMoverController, IOnSceneReset
             return; //don't start the delayed activate if the platform is already activated
                     //call this function in character controller in OnMovementHit() if it is indeed a moving platform
         Invoke("delayedActivatePlatform", startDelay);
+
         Debug.Log("Platform was activated!");
+        startSound.Post(gameObject);
     }
     private void deactivatePlatform()
     {
         activated = false;
         canMove = false;
+        stopSound.Post(gameObject);
     }
     private void delayedActivatePlatform()
     {
