@@ -179,6 +179,7 @@ MonoBehaviour:
   startDelay: 0
   waypointWaitTime: 1
   TranslationSpeed: 1
+  akEventToPostOnReachingPosition: 
 --- !u!1 &392940778589647488
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +253,7 @@ GameObject:
   - component: {fileID: 392940778663327180}
   - component: {fileID: 392940778663327177}
   - component: {fileID: 392940778663327182}
-  - component: {fileID: 3043632789668487447}
+  - component: {fileID: 923068901468201717}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
@@ -268,7 +269,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392940778663327181}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 1.5}
+  m_LocalPosition: {x: 0, y: 0, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7359764624509356330}
@@ -320,7 +321,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3043632789668487447
+--- !u!65 &923068901468201717
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -331,8 +332,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.7500005, y: 0.37499553, z: 3.3829749}
-  m_Center: {x: 0, y: 0, z: 1.6914874}
+  m_Size: {x: 3.7500005, y: 0.37500006, z: 3}
+  m_Center: {x: -0.00000017881393, y: 0.18750003, z: -1.5}
 --- !u!1 &5740168497656482400
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,7 +361,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5740168497656482400}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 1.34, y: 0.56, z: 1.65}
+  m_LocalPosition: {x: 1.34, y: 0.56, z: -1.5}
   m_LocalScale: {x: 0.24277, y: 0.95846, z: 2.365665}
   m_Children: []
   m_Father: {fileID: 392940778663327180}

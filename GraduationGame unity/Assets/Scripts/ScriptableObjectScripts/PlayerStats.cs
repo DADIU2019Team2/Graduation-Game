@@ -3,17 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using MiniGame2.Events;
 
-[CreateAssetMenu(fileName ="New playerStats", menuName ="ScriptableObject/Player/Player stats")]
+[CreateAssetMenu(fileName = "New playerStats", menuName = "ScriptableObject/Player/Player stats")]
 public class PlayerStats : ScriptableObject
 {
-    public Material[] defaultZoeMaterials;
-    private Material[] currentZoeMaterials;
+    //public Material[] defaultZoeMaterials;
+    //private Material[] currentZoeMaterials;
+
+    public ZoeRecolor defaultZoeRecolor; //The one to select if no other skin has been selected.
+    public int selectedSkin;
+    [SerializeField]
+    private IntEvent changeZoeRecolor;
+    public ZoeRecolor[] allZoeRecolors;
+    private ZoeRecolor currentZoeRecolor;
+
 
     public float MaxHealth;
     private float currentHealth;
 
     public float MaxStamina;
     private float currentStamina;
+
+    public void SetCurrentZoeRecolor(int zoeRecolorIndex)
+    {
+        //Call "ChangeZoeRecolor" event that is listened for by skinswapper.cs on the zoe-CGI nested prefab. (Only if there is a recolor with the corresponding index though)
+        if (allZoeRecolors[zoeRecolorIndex] != null)
+        {
+            currentZoeRecolor = allZoeRecolors[zoeRecolorIndex];
+            changeZoeRecolor.Raise(zoeRecolorIndex);    
+        }
+    }
+
+    public ZoeRecolor GetCurrentRecolor()
+    {
+        return currentZoeRecolor;
+    }
 
     public void addHealth(float value)
     {
@@ -25,7 +48,7 @@ public class PlayerStats : ScriptableObject
         currentHealth -= value;
         if (currentHealth <= 0)
             GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelLoss);
-            //GameManager.gameState = GameStateScriptableObject.GameState.levelLoss;
+        //GameManager.gameState = GameStateScriptableObject.GameState.levelLoss;
     }
     public void resetHealth()
     {
@@ -56,7 +79,7 @@ public class PlayerStats : ScriptableObject
         return currentStamina;
     }
 
-
+    /*
     public Material[] getCurrentZoeColorScheme()
     {
         return currentZoeMaterials;
@@ -65,4 +88,5 @@ public class PlayerStats : ScriptableObject
     {
         currentZoeMaterials = colorScheme;
     }
+    */
 }
