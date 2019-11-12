@@ -106,7 +106,7 @@ MonoBehaviour:
   CurrentCharacterState: 0
   CurrentWorldForward: 0
   Gravity: {x: 0, y: -10, z: 0}
-  MeshRoot: {fileID: 2767489457440635250}
+  MeshRoot: {fileID: 0}
   jumpSound:
     idInternal: 0
     valueGuidInternal: 
@@ -134,11 +134,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zoe CGI nested prefab
       objectReference: {fileID: 0}
-    - target: {fileID: 1672874207153889315, guid: c56af13980f30264faf082e0a0414ff6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1671306488769873081, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -162,7 +157,7 @@ PrefabInstance:
     - target: {fileID: 1671306488769873081, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1671306488769873081, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
@@ -172,7 +167,7 @@ PrefabInstance:
     - target: {fileID: 1671306488769873081, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1671306488769873081, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
@@ -187,29 +182,103 @@ PrefabInstance:
     - target: {fileID: 1671306488769873081, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1671306488769873081, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3008875288686530430, guid: c56af13980f30264faf082e0a0414ff6,
+    - target: {fileID: 5230195422797948959, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
-      propertyPath: m_TranslationOffsets.Array.data[0].y
-      value: 0.3578558
+      propertyPath: m_LocalRotation.x
+      value: 0.13772258
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230195422797948959, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.13772264
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230195422797948959, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.000000023681462
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230195422797948959, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7219846
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230195422797948959, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.28550497
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230195422797948959, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.69356525
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230195422797948959, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.69356495
+      objectReference: {fileID: 0}
+    - target: {fileID: 2636261270397684461, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.000000066204116
+      objectReference: {fileID: 0}
+    - target: {fileID: 2636261270397684461, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00000008940697
+      objectReference: {fileID: 0}
+    - target: {fileID: 2636261270397684461, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.000000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 2636261270397684461, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.349415
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048670983425853831, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.00000012514637
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048670983425853831, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.00000035762787
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048670983425853831, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -1.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048670983425853831, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.040000197
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048670983425853831, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.70618033
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048670983425853831, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 1.0000004
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c56af13980f30264faf082e0a0414ff6, type: 3}
 --- !u!4 &869071871409216329 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1671306488769873081, guid: c56af13980f30264faf082e0a0414ff6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1963072624545128432}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2767489457440635250 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4419760599142852226, guid: c56af13980f30264faf082e0a0414ff6,
     type: 3}
   m_PrefabInstance: {fileID: 1963072624545128432}
   m_PrefabAsset: {fileID: 0}
