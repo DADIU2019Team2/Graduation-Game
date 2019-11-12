@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MiniGame2.Events;
 using System.Linq;
+using KinematicTest.controller;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     [Header("Check If Active")]// bad i know
     public GameObject optionsMenu;
+
+    public KinematicTestController playerMovementController;
 
     private void Awake()
     {
@@ -47,6 +50,10 @@ public class GameManager : MonoBehaviour
                     callOnce = false;
                     isSwipeAllowed.setBool(false);
                 }
+                
+                playerMovementController.TransitionToState(PlayerStates.Idling);
+
+
                 if (transitionFader.getAlpha() == 0)//have finished fading in
                 {
                     ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
@@ -154,6 +161,6 @@ public class GameManager : MonoBehaviour
 
     public void CinematicStart()
     {
-        
+
     }
 }
