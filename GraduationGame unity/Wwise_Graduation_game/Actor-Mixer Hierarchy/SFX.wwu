@@ -1604,6 +1604,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Robot_Appearence" ID="{FEBE4464-6EEF-4C26-B2FF-DBE7D82390D1}" ShortID="726233542">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
@@ -2228,238 +2235,6 @@
 								<ActiveSource Name="Spiky_Machine_Impact" ID="{91B23938-5DE5-490F-9315-DC5161AD0FE6}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Alien_Platform_1" ID="{B69E25FF-42EA-468F-A6EE-716FC4C09B18}" ShortID="84289984">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>9</Value>
-									</ValueList>
-									<RTPCList>
-										<RTPC Name="" ID="{D9A3E2EC-E06B-4A92-BAE6-C361B3D7A293}" ShortID="795274102">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="Platform_Movement_1" ID="{49A1584F-22F9-4A68-81AB-4DE1B446AC86}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{15FA804B-5EBD-48BB-B740-27C651C2DA73}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>-200</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>1</XPos>
-														<YPos>0</YPos>
-														<Flags>0</Flags>
-													</Point>
-													<Point>
-														<XPos>100</XPos>
-														<YPos>0</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Alien_Platform_1" ID="{94E8BE3D-D98D-4A6A-9574-58F374DA2B1A}" ShortID="364808119">
-									<Language>SFX</Language>
-									<AudioFile>Alien_Platform_1.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Alien_Platform_1" ID="{94E8BE3D-D98D-4A6A-9574-58F374DA2B1A}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Alien_Platform_2" ID="{5245C242-B4B1-42DB-B06C-D771D7A85312}" ShortID="154082041">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>9</Value>
-									</ValueList>
-									<RTPCList>
-										<RTPC Name="" ID="{90F10C1A-F535-474A-A5BF-67ECE568AE54}" ShortID="434873878">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="Platform_Movement_2" ID="{535B1A5C-7E18-4A47-9A1F-789E6F3B474A}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{570E599D-866D-4A7F-AA45-86E0889CF4A0}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>-200</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>1</XPos>
-														<YPos>0</YPos>
-														<Flags>0</Flags>
-													</Point>
-													<Point>
-														<XPos>100</XPos>
-														<YPos>0</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Alien_Platform_2" ID="{1DA448FC-33F6-489D-A335-DB7683DC56B2}" ShortID="196371876">
-									<Language>SFX</Language>
-									<AudioFile>Alien_Platform_2.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Alien_Platform_2" ID="{1DA448FC-33F6-489D-A335-DB7683DC56B2}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Alien_Platform_3" ID="{1FA6111B-B872-42BA-B3D0-96A81625B3D2}" ShortID="171551042">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>9</Value>
-									</ValueList>
-									<RTPCList>
-										<RTPC Name="" ID="{E43A4E56-814D-466C-B48E-AED33E9258E7}" ShortID="618759606">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="Machine_Movement_3" ID="{5782CC90-6F85-4365-B20A-964639E91F72}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{98A977ED-0A9C-4EBE-8D89-4E8E26FA5119}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>-200</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>1</XPos>
-														<YPos>0</YPos>
-														<Flags>0</Flags>
-													</Point>
-													<Point>
-														<XPos>100</XPos>
-														<YPos>0</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Alien_Platform_3" ID="{AD18013C-BDB3-4685-8DD9-8DED6D4A532D}" ShortID="220725716">
-									<Language>SFX</Language>
-									<AudioFile>Alien_Platform_3.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Alien_Platform_3" ID="{AD18013C-BDB3-4685-8DD9-8DED6D4A532D}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Alien_Platform_4" ID="{58B897B3-46D9-4F0E-B96C-361E04C62186}" ShortID="624507058">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>9</Value>
-									</ValueList>
-									<RTPCList>
-										<RTPC Name="" ID="{344C7710-F1B5-425E-80C7-B45F46F8879E}" ShortID="852408042">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="Platform_Movement_4" ID="{47B4B0AB-6A8B-47A0-AF0C-06BA6305DB1C}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{2CBCB6F2-6B56-45B1-886D-FA9533259460}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>-200</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>1</XPos>
-														<YPos>0</YPos>
-														<Flags>0</Flags>
-													</Point>
-													<Point>
-														<XPos>100</XPos>
-														<YPos>0</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Alien_Platform_4" ID="{B259F8BA-1FE4-43D8-9975-9E8B8052928A}" ShortID="659298647">
-									<Language>SFX</Language>
-									<AudioFile>Alien_Platform_4.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Alien_Platform_4" ID="{B259F8BA-1FE4-43D8-9975-9E8B8052928A}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="Alien_Platform_Pillar" ID="{D5B6907D-D7C0-402C-B34B-F7062DEA2FBE}" ShortID="777948206">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
@@ -2679,7 +2454,7 @@
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>6</Value>
+										<Value>7</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2754,6 +2529,9 @@
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{FAE3AAA8-CA51-4A16-A5CD-EA9D14951F1E}" ShortID="948131341">
 											<ReferenceList>
@@ -2809,6 +2587,9 @@
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{A601CD11-949A-4D2D-8C23-89F0C4468A63}" ShortID="714076788">
 											<ReferenceList>
@@ -2864,6 +2645,9 @@
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{97DACE31-ADB1-4405-ACE4-82C448345778}" ShortID="261794809">
 											<ReferenceList>
@@ -2919,6 +2703,9 @@
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{D39B3A75-E49C-4116-9EF0-137C7B2B76FC}" ShortID="1060349659">
 											<ReferenceList>
@@ -2974,6 +2761,9 @@
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{568DCDBA-7C73-41D5-93DB-7953EB7850BF}" ShortID="830367985">
 											<ReferenceList>
@@ -3029,6 +2819,9 @@
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{C3A8BC4A-D776-4901-B363-303F13F337A4}" ShortID="529238">
 											<ReferenceList>
@@ -3080,69 +2873,14 @@
 								<ActiveSource Name="Normal_Platform6" ID="{65CCD7B1-DE00-4373-9386-29B2211FCF05}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Alien_Platform_5" ID="{A1FA262E-2F3B-41E9-863D-80251733DAD4}" ShortID="265454505">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>9</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Alien_Platform_2" ID="{EF629DF9-C66E-43CF-852A-2B5A97716EBF}" ShortID="370407487">
-									<Language>SFX</Language>
-									<AudioFile>Alien_Platform_2.wav</AudioFile>
-									<ConvertedFileIDList>
-										<File ID="196371876"/>
-									</ConvertedFileIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Alien_Platform_2" ID="{EF629DF9-C66E-43CF-852A-2B5A97716EBF}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Alien_Platform_6" ID="{9DE63C67-135D-43B0-ABD1-0BC863A33878}" ShortID="757926551">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>9</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Alien_Platform_4" ID="{04B77591-4378-49D6-8E19-ABF63D663A71}" ShortID="831328637">
-									<Language>SFX</Language>
-									<AudioFile>Alien_Platform_4.wav</AudioFile>
-									<ConvertedFileIDList>
-										<File ID="659298647"/>
-									</ConvertedFileIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Alien_Platform_4" ID="{04B77591-4378-49D6-8E19-ABF63D663A71}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="Alien_Door" ID="{2167FE49-7625-4C3A-9658-7A9A9A9B2ACF}" ShortID="947984496">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3269,6 +3007,11 @@
 						<Sound Name="Sentinel_Lazer" ID="{C0AD2A14-D04B-4E1D-A581-518B49901588}" ShortID="56452876">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3291,6 +3034,11 @@
 						<Sound Name="Alien_Crystal_Hum" ID="{EFBB7324-676A-4E2D-B494-E47C0645D834}" ShortID="195861621">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3313,6 +3061,11 @@
 						<Sound Name="Spike_Lazer_Pyramid_Cone" ID="{4C839FBA-4118-44FD-AF99-B967637B0BA6}" ShortID="886901416">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3332,6 +3085,345 @@
 								<ActiveSource Name="Spike_Lazer_Pyramid_Cone" ID="{F3837059-02B3-44FA-AE71-C6A5AC0F0408}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="Alien_Platforms" ID="{32728F1B-6D63-47A8-B616-16065792CD81}" ShortID="1040631287">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Alien_Platform_1" ID="{B69E25FF-42EA-468F-A6EE-716FC4C09B18}" ShortID="84289984">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>9</Value>
+											</ValueList>
+											<RTPCList>
+												<RTPC Name="" ID="{D9A3E2EC-E06B-4A92-BAE6-C361B3D7A293}" ShortID="795274102">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Platform_Movement_1" ID="{49A1584F-22F9-4A68-81AB-4DE1B446AC86}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{15FA804B-5EBD-48BB-B740-27C651C2DA73}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{9782ED15-10B1-4637-9818-5B49A6880915}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Alien_Platform_1" ID="{94E8BE3D-D98D-4A6A-9574-58F374DA2B1A}" ShortID="364808119">
+											<Language>SFX</Language>
+											<AudioFile>Alien_Platform_1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Alien_Platform_1" ID="{94E8BE3D-D98D-4A6A-9574-58F374DA2B1A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Alien_Platform_2" ID="{5245C242-B4B1-42DB-B06C-D771D7A85312}" ShortID="154082041">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>9</Value>
+											</ValueList>
+											<RTPCList>
+												<RTPC Name="" ID="{90F10C1A-F535-474A-A5BF-67ECE568AE54}" ShortID="434873878">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Platform_Movement_2" ID="{535B1A5C-7E18-4A47-9A1F-789E6F3B474A}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{570E599D-866D-4A7F-AA45-86E0889CF4A0}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{9782ED15-10B1-4637-9818-5B49A6880915}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Alien_Platform_2" ID="{1DA448FC-33F6-489D-A335-DB7683DC56B2}" ShortID="196371876">
+											<Language>SFX</Language>
+											<AudioFile>Alien_Platform_2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Alien_Platform_2" ID="{1DA448FC-33F6-489D-A335-DB7683DC56B2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Alien_Platform_3" ID="{1FA6111B-B872-42BA-B3D0-96A81625B3D2}" ShortID="171551042">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>9</Value>
+											</ValueList>
+											<RTPCList>
+												<RTPC Name="" ID="{E43A4E56-814D-466C-B48E-AED33E9258E7}" ShortID="618759606">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Machine_Movement_3" ID="{5782CC90-6F85-4365-B20A-964639E91F72}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{98A977ED-0A9C-4EBE-8D89-4E8E26FA5119}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{9782ED15-10B1-4637-9818-5B49A6880915}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Alien_Platform_3" ID="{AD18013C-BDB3-4685-8DD9-8DED6D4A532D}" ShortID="220725716">
+											<Language>SFX</Language>
+											<AudioFile>Alien_Platform_3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Alien_Platform_3" ID="{AD18013C-BDB3-4685-8DD9-8DED6D4A532D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Alien_Platform_4" ID="{58B897B3-46D9-4F0E-B96C-361E04C62186}" ShortID="624507058">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>9</Value>
+											</ValueList>
+											<RTPCList>
+												<RTPC Name="" ID="{344C7710-F1B5-425E-80C7-B45F46F8879E}" ShortID="852408042">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Platform_Movement_4" ID="{47B4B0AB-6A8B-47A0-AF0C-06BA6305DB1C}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{2CBCB6F2-6B56-45B1-886D-FA9533259460}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{9782ED15-10B1-4637-9818-5B49A6880915}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Alien_Platform_4" ID="{B259F8BA-1FE4-43D8-9975-9E8B8052928A}" ShortID="659298647">
+											<Language>SFX</Language>
+											<AudioFile>Alien_Platform_4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Alien_Platform_4" ID="{B259F8BA-1FE4-43D8-9975-9E8B8052928A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Alien_Platform_5" ID="{A1FA262E-2F3B-41E9-863D-80251733DAD4}" ShortID="265454505">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{9782ED15-10B1-4637-9818-5B49A6880915}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Alien_Platform_2" ID="{EF629DF9-C66E-43CF-852A-2B5A97716EBF}" ShortID="370407487">
+											<Language>SFX</Language>
+											<AudioFile>Alien_Platform_2.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="196371876"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Alien_Platform_2" ID="{EF629DF9-C66E-43CF-852A-2B5A97716EBF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Alien_Platform_6" ID="{9DE63C67-135D-43B0-ABD1-0BC863A33878}" ShortID="757926551">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-80</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{9782ED15-10B1-4637-9818-5B49A6880915}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Alien_Platform_4" ID="{04B77591-4378-49D6-8E19-ABF63D663A71}" ShortID="831328637">
+											<Language>SFX</Language>
+											<AudioFile>Alien_Platform_4.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="659298647"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Alien_Platform_4" ID="{04B77591-4378-49D6-8E19-ABF63D663A71}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Ambience" ID="{B0EBBF6A-2C52-43EB-850E-8E23A346CFEC}" ShortID="255903565">
