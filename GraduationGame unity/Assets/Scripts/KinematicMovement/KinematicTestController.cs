@@ -1021,5 +1021,10 @@ namespace KinematicTest.controller
             TransitionToState(PlayerStates.NoInput);
             CurrentWorldForward = (WorldForward) (((int) CurrentWorldForward + dir) % 4);
         }
+
+        public bool JumpingThisFrame()
+        {
+            return _jumpedThisFrame;
+        }
     }
 }
