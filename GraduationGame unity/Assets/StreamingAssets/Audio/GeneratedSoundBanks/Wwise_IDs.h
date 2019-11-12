@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID ALIEN_CRYSTAL_HUM = 1839766762U;
         static const AkUniqueID ALIEN_DEATH_TRAP = 3641971009U;
         static const AkUniqueID ALIEN_DOOR = 2127960809U;
         static const AkUniqueID ALIEN_DOOR_OPEN = 1050974708U;
@@ -65,7 +66,54 @@ namespace AK
         static const AkUniqueID PLAY_ZONE2_MUSIC = 3584129722U;
         static const AkUniqueID PLAY_ZONE3_MUSIC = 556439219U;
         static const AkUniqueID PLAY_ZONE4_MUSIC = 3303975224U;
+        static const AkUniqueID SPIKE_LAZER_PYRAMID_CONE = 1683987449U;
         static const AkUniqueID SPIKY_MACHINE_IMPACT = 2939559692U;
+        static const AkUniqueID STOP_ALIEN_CRYSTAL_HUM = 3004230381U;
+        static const AkUniqueID STOP_ALIEN_DEATH_TRAP = 213072360U;
+        static const AkUniqueID STOP_ALIEN_DOOR = 3384205992U;
+        static const AkUniqueID STOP_ALIEN_DOOR_OPEN = 3051948435U;
+        static const AkUniqueID STOP_ALIEN_PLATFORM_1 = 295648517U;
+        static const AkUniqueID STOP_ALIEN_PLATFORM_2 = 295648518U;
+        static const AkUniqueID STOP_ALIEN_PLATFORM_3 = 295648519U;
+        static const AkUniqueID STOP_ALIEN_PLATFORM_4 = 295648512U;
+        static const AkUniqueID STOP_ALIEN_PLATFORM_5 = 295648513U;
+        static const AkUniqueID STOP_ALIEN_PLATFORM_6 = 295648514U;
+        static const AkUniqueID STOP_ALIEN_PLATFORM_PILLAR = 2176568168U;
+        static const AkUniqueID STOP_BALL_PLATFORM = 2364261975U;
+        static const AkUniqueID STOP_BALL_PLATFORM_DAMAGED = 2828692239U;
+        static const AkUniqueID STOP_CRUSHER_IDLE = 2805448725U;
+        static const AkUniqueID STOP_CRYSTAL_DOOR_HUM = 1456018130U;
+        static const AkUniqueID STOP_CRYSTAL_DOOR_OPEN = 1925918784U;
+        static const AkUniqueID STOP_DAMAGED_PLATFORM_1 = 3936679733U;
+        static const AkUniqueID STOP_DAMAGED_PLATFORM_2 = 3936679734U;
+        static const AkUniqueID STOP_DAMAGED_PLATFORM_3 = 3936679735U;
+        static const AkUniqueID STOP_DAMAGED_PLATFORM_4 = 3936679728U;
+        static const AkUniqueID STOP_DAMAGED_PLATFORM_5 = 3936679729U;
+        static const AkUniqueID STOP_DAMAGED_PLATFORM_6 = 3936679730U;
+        static const AkUniqueID STOP_DEATH_RAY = 2589440491U;
+        static const AkUniqueID STOP_DEATH_SAW = 3058963576U;
+        static const AkUniqueID STOP_ELECTRICITY = 366102539U;
+        static const AkUniqueID STOP_ELECTRICITY1 = 1694984544U;
+        static const AkUniqueID STOP_LAZER_WALL = 2988481851U;
+        static const AkUniqueID STOP_LAZER_WALL_POWER_DOWN = 3364288568U;
+        static const AkUniqueID STOP_MACHINE_1 = 3006425175U;
+        static const AkUniqueID STOP_MACHINE_2 = 3006425172U;
+        static const AkUniqueID STOP_MACHINE_3 = 3006425173U;
+        static const AkUniqueID STOP_NORMAL_PLATFORM1 = 2590299662U;
+        static const AkUniqueID STOP_NORMAL_PLATFORM2 = 2590299661U;
+        static const AkUniqueID STOP_NORMAL_PLATFORM3 = 2590299660U;
+        static const AkUniqueID STOP_NORMAL_PLATFORM4 = 2590299659U;
+        static const AkUniqueID STOP_NORMAL_PLATFORM5 = 2590299658U;
+        static const AkUniqueID STOP_NORMAL_PLATFORM6 = 2590299657U;
+        static const AkUniqueID STOP_PLATFORM_PILLAR_DAMAGED = 2388799556U;
+        static const AkUniqueID STOP_ROBOT_APPEARENCE = 2148574529U;
+        static const AkUniqueID STOP_RUBBLE1 = 1446701095U;
+        static const AkUniqueID STOP_RUBBLE2 = 1446701092U;
+        static const AkUniqueID STOP_RUBBLE3 = 1446701093U;
+        static const AkUniqueID STOP_SAW = 170285335U;
+        static const AkUniqueID STOP_SENTINEL_LAZER = 1979601577U;
+        static const AkUniqueID STOP_SPIKE_LAZER_PYRAMID_CONE = 3983756896U;
+        static const AkUniqueID STOP_SPIKY_MACHINE_IMPACT = 2894832945U;
         static const AkUniqueID STOPALL = 3086540886U;
     } // namespace EVENTS
 

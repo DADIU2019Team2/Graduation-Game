@@ -1680,33 +1680,6 @@
 								<ActiveSource Name="Electricity" ID="{731980C1-C0B5-492C-AC15-89B77F857B4F}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Lazer" ID="{8A6D128D-8073-491E-ACA7-94C6926C8B50}" ShortID="715016714">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>710</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Lazer" ID="{69AA6E9F-76E8-4CB2-B529-B35EEB2CCC64}" ShortID="1042472735">
-									<Language>SFX</Language>
-									<AudioFile>Lazer.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Lazer" ID="{69AA6E9F-76E8-4CB2-B529-B35EEB2CCC64}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="Machine_1" ID="{C438D3BC-D874-49DE-814E-977819CCE93B}" ShortID="409002362">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
@@ -3274,11 +3247,6 @@
 						<Sound Name="Death_Saw" ID="{55DA53C5-AC1D-45CE-B89F-7504A9367F93}" ShortID="469569893">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-200</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3296,6 +3264,72 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Death_Saw" ID="{2CD9AEFC-FB6E-41B7-B3E4-6003965543FD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Sentinel_Lazer" ID="{C0AD2A14-D04B-4E1D-A581-518B49901588}" ShortID="56452876">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Robot_Lazer" ID="{20C64AD7-0BFA-457A-9FF6-50936AA4A564}" ShortID="1061942958">
+									<Language>SFX</Language>
+									<AudioFile>Robot_Lazer.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Robot_Lazer" ID="{20C64AD7-0BFA-457A-9FF6-50936AA4A564}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Alien_Crystal_Hum" ID="{EFBB7324-676A-4E2D-B494-E47C0645D834}" ShortID="195861621">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Alien_Crystal_Hum" ID="{19EA8EFD-0710-4AA3-9B06-198E1C717C9C}" ShortID="202632354">
+									<Language>SFX</Language>
+									<AudioFile>Alien_Crystal_Hum.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Alien_Crystal_Hum" ID="{19EA8EFD-0710-4AA3-9B06-198E1C717C9C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Spike_Lazer_Pyramid_Cone" ID="{4C839FBA-4118-44FD-AF99-B967637B0BA6}" ShortID="886901416">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Spike_Lazer_Pyramid_Cone" ID="{F3837059-02B3-44FA-AE71-C6A5AC0F0408}" ShortID="406262173">
+									<Language>SFX</Language>
+									<AudioFile>Spike_Lazer_Pyramid_Cone.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Spike_Lazer_Pyramid_Cone" ID="{F3837059-02B3-44FA-AE71-C6A5AC0F0408}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
