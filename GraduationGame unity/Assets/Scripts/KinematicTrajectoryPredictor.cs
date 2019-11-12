@@ -7,26 +7,42 @@ using UnityEngine;
 
 public class KinematicTrajectoryPredictor : MotionMatchable
 {
+    private int MaxDiscreteCollisionIterations = 3;
     private Collider[] _probedColliders = new Collider[8];
-    
     public KinematicCharacterMotor motor;
     public KinematicTestController controller;
     public Animator animator;
     public MMConfig config;
     public bool showGizmos;
+    public Vector3[] trajectoryPoints;
+
+    private void Awake()
+    {
+        trajectoryPoints = new Vector3[config.trajectoryTimePoints.Count];
+    }
+
+    private void FixedUpdate()
+    {
+        PredictTrajectory();
+    }
 
     public override TrajectoryInfo PredictTrajectory()
     {
+        for (int i = 0; i < config.trajectoryTimePoints.Count; i++)
+        {
+            trajectoryPoints[i] = ExplicitEuler(config.trajectoryTimePoints[i]);
+        }
         return new TrajectoryInfo(new Vector3[0], new Vector3[0]);
     }
 
     private Vector3 ExplicitEuler(float deltaTime)
     {
         Vector3 grav = controller.Gravity;
-        Vector3 velocity = motor.Velocity;
-        if(!motor.GroundingStatus.IsStableOnGround && !motor.GroundingStatus.FoundAnyGround || controller.JumpingThisFrame())
+        Vector3 velocity = motor.BaseVelocity;
+        if (!motor.GroundingStatus.IsStableOnGround && !motor.GroundingStatus.FoundAnyGround ||
+            controller.JumpingThisFrame())
             velocity = velocity + grav * deltaTime;
-        
+
 
         Vector3 position = transform.position;
         Vector3 predictedPosition = position + velocity * deltaTime;
@@ -47,23 +63,18 @@ public class KinematicTrajectoryPredictor : MotionMatchable
         {
             Gizmos.color = Color.white;
         }
-        
+
         return Vector3.zero;
     }
 
     private void OnDrawGizmos()
     {
-        if (showGizmos)
+        if (showGizmos && trajectoryPoints != null)
         {
-            //jank shit
-            var v = ExplicitEuler(0.2f);
-            Gizmos.DrawWireSphere(v, 0.2f);
-            var va = ExplicitEuler(0.4f);
-            Gizmos.DrawWireSphere(va, 0.2f);
-            var vb = ExplicitEuler(0.6f);
-            Gizmos.DrawWireSphere(vb, 0.2f);
-            var vc = ExplicitEuler(0.8f);
-            Gizmos.DrawWireSphere(vc, 0.2f);
+            foreach (var v in trajectoryPoints)
+            {
+                Gizmos.DrawWireSphere(v, 0.2f);
+            }
         }
     }
 }
