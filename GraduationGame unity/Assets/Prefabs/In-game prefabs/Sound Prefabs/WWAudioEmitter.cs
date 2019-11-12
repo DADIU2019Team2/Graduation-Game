@@ -30,14 +30,14 @@ private bool IsInCollider = false;
         AkSoundEngine.PostEvent(EventName, gameObject);
     }
     
-private void OnTriggerExit(Collider other)
+        private void OnTriggerExit(Collider other)
     {
         if (other.tag != "Player" || IsInCollider) { return; }
         AkSoundEngine.PostEvent(StopEvent, gameObject);
         IsInCollider = false;
     }
 
-private void OnTriggerStay(Collider other)
+        private void OnTriggerStay(Collider other)
     {
         if (other.tag != "Player" || IsInCollider) { return; }
         IsInCollider = true;

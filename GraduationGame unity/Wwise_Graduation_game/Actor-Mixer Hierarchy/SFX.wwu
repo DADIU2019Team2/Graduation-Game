@@ -2708,6 +2708,87 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<Sound Name="Lazer_Big" ID="{FEBED9D5-ACF5-4E31-9B77-369203BB9819}" ShortID="918821492">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Lazer_Big" ID="{CBD65199-244D-4FA6-B6A6-5237D7BFD21D}" ShortID="962384121">
+									<Language>SFX</Language>
+									<AudioFile>Lazer_Big.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Lazer_Big" ID="{CBD65199-244D-4FA6-B6A6-5237D7BFD21D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Lazer_Med" ID="{D908A11B-D5B6-4A73-B74E-AAEDD188EB9B}" ShortID="461262950">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Lazer_Med" ID="{AC97DC08-373D-43F4-BC04-CF115B3BD511}" ShortID="457553409">
+									<Language>SFX</Language>
+									<AudioFile>Lazer_Med.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Lazer_Med" ID="{AC97DC08-373D-43F4-BC04-CF115B3BD511}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Lazer_Small" ID="{337BA794-2D56-4058-947D-37E2907BDB61}" ShortID="592864281">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Lazer_Small" ID="{F21D473C-ED5C-41B8-8510-5E181D4C3CD4}" ShortID="45666109">
+									<Language>SFX</Language>
+									<AudioFile>Lazer_Small.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Lazer_Small" ID="{F21D473C-ED5C-41B8-8510-5E181D4C3CD4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Ambience" ID="{B0EBBF6A-2C52-43EB-850E-8E23A346CFEC}" ShortID="255903565">

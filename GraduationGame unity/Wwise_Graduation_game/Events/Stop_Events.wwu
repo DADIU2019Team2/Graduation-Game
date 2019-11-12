@@ -59,20 +59,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Stop_Alien_Door_Open" ID="{F704926D-CDC4-4006-B614-A24448337AC5}">
-					<ChildrenList>
-						<Action Name="" ID="{11B4E4CC-60F3-402D-BE3B-872129EE1BD6}" ShortID="1002613655">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Alien_Door_Open" ID="{7ED771EB-30FB-4B3A-B6BE-2C261BDD2576}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Stop_Crusher_Idle" ID="{EE80F03A-86F5-4DCD-93B3-35AE7F32B400}">
 					<ChildrenList>
 						<Action Name="" ID="{F104D7E7-EAD0-4C4E-9DA5-E3B06CB04E4F}" ShortID="371742260">
@@ -124,20 +110,6 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Crystal_Door_Hum" ID="{C671D9AC-FE91-4AFC-9582-BD5F2021AFA7}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Stop_Crystal_Door_Open" ID="{259169B2-D5AC-416A-B699-F1BC2D3FC3B2}">
-					<ChildrenList>
-						<Action Name="" ID="{36D176C6-CDC9-4531-974C-947FCF773C94}" ShortID="690797612">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Crystal_Door_Open" ID="{01A43730-700A-469E-B430-8A519D3D6B27}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -213,20 +185,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Stop_Lazer_Wall_Power_Down" ID="{DA19B80B-8F31-46D7-A6D5-93ACFF0AB911}">
-					<ChildrenList>
-						<Action Name="" ID="{1479CEF8-9421-414C-84BD-9B6A1C99F7E7}" ShortID="176772174">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Lazer_Wall_Power_Down" ID="{2E9B4FFE-D5EA-4070-BEBF-41CEA21A14F5}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Stop_Machine_1" ID="{4E4E157C-82FA-48A6-8069-2B0B48DC7951}">
 					<ChildrenList>
 						<Action Name="" ID="{003AFC5F-E326-4558-9E70-EFDC55FE1A6C}" ShortID="486247386">
@@ -283,62 +241,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Stop_Robot_Appearence" ID="{46761249-5A3C-4058-8F80-71A02C937E58}">
-					<ChildrenList>
-						<Action Name="" ID="{9AAA8D8A-6429-4F14-BF1F-2B7DE3988335}" ShortID="551127011">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Robot_Appearence" ID="{FEBE4464-6EEF-4C26-B2FF-DBE7D82390D1}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Stop_Rubble1" ID="{E4E60204-0869-4191-97FF-BAAFD12DDD50}">
-					<ChildrenList>
-						<Action Name="" ID="{D0B24933-7539-4D84-89E7-DDF55AB36608}" ShortID="497809796">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Rubble1" ID="{EF77BF80-5E06-48ED-A731-58B6C9356FE5}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Stop_Rubble2" ID="{C4FF0CCE-F059-45F4-A1C8-0D81839E117A}">
-					<ChildrenList>
-						<Action Name="" ID="{E9E3FFCC-79F3-493B-A142-6C3782D09403}" ShortID="405910702">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Rubble2" ID="{3D16BC39-DD8A-4464-B5AE-0F9DF20027ED}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Stop_Rubble3" ID="{71E9232C-4B3B-4AE6-84CE-0FE8E0FA7C60}">
-					<ChildrenList>
-						<Action Name="" ID="{B3E343FF-784D-43DD-8D6B-0C432F146DAE}" ShortID="343084761">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Rubble3" ID="{83B46F89-5835-4C5F-A53B-6BC4D0DF95CA}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Stop_Saw" ID="{240EA0BE-8280-455A-BAD7-17244F184B82}">
 					<ChildrenList>
 						<Action Name="" ID="{E853F0A3-CEB7-4C26-BF3E-95600C45245E}" ShortID="319531756">
@@ -376,20 +278,6 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Spike_Lazer_Pyramid_Cone" ID="{4C839FBA-4118-44FD-AF99-B967637B0BA6}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Stop_Spiky_Machine_Impact" ID="{715DEE59-3648-40AB-9DB5-4515B1A0ECFB}">
-					<ChildrenList>
-						<Action Name="" ID="{2B3DA170-50BD-4CE0-8C64-1DA217F88EAC}" ShortID="117288284">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Spiky_Machine_Impact" ID="{362DD740-EC91-4B96-8D86-983B0F7EDE20}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -446,6 +334,48 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Normal_Platforms" ID="{BB6BA9E7-9924-4150-B203-70DB06177922}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Lazer_Med" ID="{E3D392FD-D34C-45D8-BAB0-CF30C41F3DDB}">
+					<ChildrenList>
+						<Action Name="" ID="{1A932961-68D6-4841-8FC9-A6E2624CB5FA}" ShortID="819104736">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lazer_Med" ID="{D908A11B-D5B6-4A73-B74E-AAEDD188EB9B}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Lazer_Big" ID="{E5DEBD36-723A-4CFF-AA7D-7CACB27D8C38}">
+					<ChildrenList>
+						<Action Name="" ID="{C31BACC8-FDC3-4C52-A90E-98DD1F5F6DD1}" ShortID="1041963494">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lazer_Big" ID="{FEBED9D5-ACF5-4E31-9B77-369203BB9819}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Lazer_Small" ID="{9F03DA9C-A4B5-4402-AFAF-09858A1EE6D5}">
+					<ChildrenList>
+						<Action Name="" ID="{764F272A-19A5-497C-A3B3-E08A56B47DA8}" ShortID="986667740">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lazer_Small" ID="{337BA794-2D56-4058-947D-37E2907BDB61}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
