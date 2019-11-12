@@ -347,6 +347,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 869071871409216329, guid: f1d47304afcd5914a9b89fc0f6d4f675,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 440232911908398512, guid: f1d47304afcd5914a9b89fc0f6d4f675,
         type: 3}
       propertyPath: m_IsActive
@@ -670,6 +675,11 @@ PrefabInstance:
       propertyPath: optionsMenu
       value: 
       objectReference: {fileID: 4515045004539777731}
+    - target: {fileID: 3448088430250430731, guid: 1ce83b2925e8d5b49b8ed12d972cc0b1,
+        type: 3}
+      propertyPath: playerMovementController
+      value: 
+      objectReference: {fileID: 1660540989419242355}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ce83b2925e8d5b49b8ed12d972cc0b1, type: 3}
 --- !u!1 &3795549340719850677 stripped
@@ -880,6 +890,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5431979037652984428, guid: f059d66bfefc16e4bb939de7180e4be8,
         type: 3}
+      propertyPath: 
+      value: 4.463423
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431979037652984428, guid: f059d66bfefc16e4bb939de7180e4be8,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerInputs
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431979037652984428, guid: f059d66bfefc16e4bb939de7180e4be8,
+        type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
@@ -923,11 +943,21 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6467307166575745442, guid: 5b9fa490291da254aaf2d2dbed02b8df,
+    - target: {fileID: 5431979037652984425, guid: f059d66bfefc16e4bb939de7180e4be8,
         type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: inputText
+      value: 
+      objectReference: {fileID: 8517985692842851338}
+    - target: {fileID: 5431979037652984431, guid: f059d66bfefc16e4bb939de7180e4be8,
+        type: 3}
+      propertyPath: Character
+      value: 
+      objectReference: {fileID: 1660540989419242355}
+    - target: {fileID: 5431979037652984431, guid: f059d66bfefc16e4bb939de7180e4be8,
+        type: 3}
+      propertyPath: CameraFollowPoint
+      value: 
+      objectReference: {fileID: 4997028193035330819}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f059d66bfefc16e4bb939de7180e4be8, type: 3}
 --- !u!4 &1401035567507658934 stripped
@@ -943,7 +973,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2610356912311023036}
     m_Modifications:
-    - target: {fileID: 5431979037652984428, guid: f059d66bfefc16e4bb939de7180e4be8,
+    - target: {fileID: 6589043525647016465, guid: 5b9fa490291da254aaf2d2dbed02b8df,
+        type: 3}
+      propertyPath: m_Name
+      value: Options Menu Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467307166575745442, guid: 5b9fa490291da254aaf2d2dbed02b8df,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0

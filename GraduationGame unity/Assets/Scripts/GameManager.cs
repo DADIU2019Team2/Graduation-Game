@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MiniGame2.Events;
 using System.Linq;
+using KinematicTest.controller;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,6 +25,11 @@ public class GameManager : MonoBehaviour
     [Header("Check If Active")]// bad i know
     public GameObject optionsMenu;
 
+    public KinematicTestController playerMovementController;
+    private float waitInLevelStart = 0.5f;
+    private float waitTimer;
+    bool startIncrementingLevelStart = false;
+
     private void Awake()
     {
         QualitySettings.vSyncCount = 0;
@@ -43,10 +49,25 @@ public class GameManager : MonoBehaviour
             case GameStateScriptableObject.GameState.levelStart:
                 if (callOnce)
                 {
-                    DoFade(true);
                     callOnce = false;
                     isSwipeAllowed.setBool(false);
+                    startIncrementingLevelStart = true;
                 }
+                if (startIncrementingLevelStart)
+                {
+                    waitTimer += Time.deltaTime;
+                    Debug.Log("Time:" + waitTimer);
+                    if (waitTimer > waitInLevelStart)
+                    {
+                        waitTimer = 0f;
+                        DoFade(true);
+                        startIncrementingLevelStart = false;
+                    }
+                }
+
+                playerMovementController.TransitionToState(PlayerStates.Idling);
+
+
                 if (transitionFader.getAlpha() == 0)//have finished fading in
                 {
                     ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
@@ -86,6 +107,10 @@ public class GameManager : MonoBehaviour
                 Zoe and camerashould be returned to most recent checkpoint met, rather than at the initial position at start of the level */
                 break;
             case GameStateScriptableObject.GameState.cinematic:
+
+                playerMovementController.TransitionToState(PlayerStates.Idling);
+                //Need to implement input blocking here.
+
                 /*(No player control at all until they end)
                  – except skipping dialogue by tapping and swiping to skip to next player-controllable state. */
                 break;
@@ -152,8 +177,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void CinematicStart()
+    public void DialogueEnd()
     {
-        
+
+    }
+
+    public void DialogueStart()
+    {
+
     }
 }

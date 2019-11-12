@@ -9,7 +9,7 @@ public class ToggleGameObject : MonoBehaviour
     //public VoidEvent gameObjectDisabled;
     public void toggleGameObject()
     {
-        //Debug.Log("Here");
+        Debug.Log("Here");
         gameObject.SetActive(!gameObject.activeSelf);
         /*if(gameObject.activeSelf == true && gameObjectEnabled != null)
         {
