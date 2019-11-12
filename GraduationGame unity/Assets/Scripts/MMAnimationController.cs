@@ -11,15 +11,14 @@ public class MMAnimationController : MonoBehaviour
 {
     public MMMotionData poseData;
     public MotionMatchable predictor;
-    public LiveDebugger debugger;
     public Animator animator;
     [Range(1, 60)] public int poseRefreshRate;
     [Range(0f, 1f)] public float crossFadeTime;
     public bool isMotionMatchingRunning;
-    private NativeArray<float3> bigAssNativeArray;
-    private NativeArray<float> weightArray;
-    private NativeArray<int> tagArray;
-    private NativeArray<float3> test;
+    private NativeArray<float3> motionDataNativeArray;
+    private NativeArray<float> weightNativeArray;
+    private NativeArray<int> tagNativeArray;
+    private NativeArray<float3> costCompareNativeArray;
     public bool applyRootMotion;
     public int bestIndex;
     public IgnoreTags ignoreTag;
@@ -29,41 +28,39 @@ public class MMAnimationController : MonoBehaviour
     private int trajPoints;
     private int boneCount;
     private int chunkLength;
-    public float switchThreshold;
     private string current;
     void Awake()
     {
-        banQueue = new Queue<int[]>();
         trajPoints = poseData.config.trajectoryTimePoints.Count;
         boneCount = poseData.config.trackedBones.Count;
         chunkLength = 2 * (boneCount + trajPoints);
 
-        float3[] otherTempArr = new float3[poseData.Length * chunkLength];
+        float3[] flatMotionDataArray = new float3[poseData.Length * chunkLength];
         int[] tempTags = new int[poseData.Length];
         for (int i = 0; i < poseData.Length; i++)
         {
             for (int j = 0; j < trajPoints; j++)
             {
-                otherTempArr[(i * chunkLength) + j] = poseData.frameInfo[i].trajectoryInfo.trajectoryPoints[j];
-                otherTempArr[(i * chunkLength) + trajPoints + j] =
+                flatMotionDataArray[(i * chunkLength) + j] = poseData.frameInfo[i].trajectoryInfo.trajectoryPoints[j];
+                flatMotionDataArray[(i * chunkLength) + trajPoints + j] =
                     poseData.frameInfo[i].trajectoryInfo.trajectoryForwards[j];
             }
 
             for (int j = 0; j < boneCount; j++)
             {
-                otherTempArr[(i * chunkLength) + 2 * trajPoints + j] = poseData.frameInfo[i].pose.jointPositions[j];
-                otherTempArr[(i * chunkLength) + 2 * trajPoints + boneCount + j] =
+                flatMotionDataArray[(i * chunkLength) + 2 * trajPoints + j] = poseData.frameInfo[i].pose.jointPositions[j];
+                flatMotionDataArray[(i * chunkLength) + 2 * trajPoints + boneCount + j] =
                     poseData.frameInfo[i].pose.jointVelocities[j];
             }
 
             tempTags[i] = poseData.frameInfo[i].tag;
         }
 
-        bigAssNativeArray = new NativeArray<float3>(poseData.Length * chunkLength,
+        motionDataNativeArray = new NativeArray<float3>(poseData.Length * chunkLength,
             Allocator.Persistent);
-        test = new NativeArray<float3>(chunkLength, Allocator.Persistent);
-        bigAssNativeArray.CopyFrom(otherTempArr);
-        tagArray = new NativeArray<int>(tempTags, Allocator.Persistent);
+        costCompareNativeArray = new NativeArray<float3>(chunkLength, Allocator.Persistent);
+        motionDataNativeArray.CopyFrom(flatMotionDataArray);
+        tagNativeArray = new NativeArray<int>(tempTags, Allocator.Persistent);
         for (int i = 0; i < weights.Length; i++)
         {
             if (i < 2 * trajPoints)
@@ -72,7 +69,7 @@ public class MMAnimationController : MonoBehaviour
                 weights[i] *= (1 - trajectoryToPoseRatio);
         }
 
-        weightArray = new NativeArray<float>(weights, Allocator.Persistent);
+        weightNativeArray = new NativeArray<float>(weights, Allocator.Persistent);
 
 
         StartMotionMatching();
@@ -81,30 +78,26 @@ public class MMAnimationController : MonoBehaviour
 
     private void OnDisable()
     {
-        bigAssNativeArray.Dispose();
-        weightArray.Dispose();
-        tagArray.Dispose();
-        test.Dispose();
+        motionDataNativeArray.Dispose();
+        weightNativeArray.Dispose();
+        tagNativeArray.Dispose();
+        costCompareNativeArray.Dispose();
     }
 
     private IEnumerator QueryForPose()
     {
         while (true)
         {
-            if (banQueue.Count > poseRefreshRate)
-            {
-                banQueue.Dequeue();
-            }
 
-            test.CopyFrom(CreateDesiredChunk(chunkLength));
+            costCompareNativeArray.CopyFrom(CreateDesiredChunk(chunkLength));
 
             NativeArray<float> result = new NativeArray<float>(poseData.Length, Allocator.TempJob);
             CostJob cJob = new CostJob
             {
-                positions = bigAssNativeArray,
-                compare = test,
-                weights = weightArray,
-                tags = tagArray,
+                positions = motionDataNativeArray,
+                compare = costCompareNativeArray,
+                weights = weightNativeArray,
+                tags = tagNativeArray,
                 desiredTag = (int) ignoreTag,
                 result = result
             };
@@ -155,7 +148,7 @@ public class MMAnimationController : MonoBehaviour
         }
     }
 
-    private bool IsFrameBanned(int frame)
+/*    private bool IsFrameBanned(int frame)
     {
         foreach (var pair in banQueue)
         {
@@ -164,7 +157,7 @@ public class MMAnimationController : MonoBehaviour
         }
 
         return false;
-    }
+    }*/
 
     private bool IsFrameTooClose(int frame, float threshold)
     {
@@ -247,7 +240,7 @@ public class MMAnimationController : MonoBehaviour
     {
         float3[] chunkArr = new float3[size];
         var desiredTraj = predictor.PredictTrajectory();
-        var currentPose = debugger.GetPose();
+        var currentPose = predictor.GetPose();
         for (int j = 0; j < desiredTraj.trajectoryPoints.Length; j++)
         {
             chunkArr[j] = desiredTraj.trajectoryPoints[j];
