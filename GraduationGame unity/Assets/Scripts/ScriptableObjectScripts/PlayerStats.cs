@@ -9,7 +9,7 @@ public class PlayerStats : ScriptableObject
     //public Material[] defaultZoeMaterials;
     //private Material[] currentZoeMaterials;
 
-    public ZoeRecolor defaultZoeRecolor; //The one to select if no other skin has been selected.
+    
     public int selectedSkin;
     [SerializeField]
     private IntEvent changeZoeRecolor;
@@ -22,6 +22,8 @@ public class PlayerStats : ScriptableObject
 
     public float MaxStamina;
     private float currentStamina;
+
+    public ZoeRecolor defaultZoeRecolor; //The one to select if no other skin has been selected.
 
     public void SetCurrentZoeRecolor(int zoeRecolorIndex)
     {
@@ -46,9 +48,6 @@ public class PlayerStats : ScriptableObject
     public void subtractHealth(float value)
     {
         currentHealth -= value;
-        if (currentHealth <= 0)
-            GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelLoss);
-        //GameManager.gameState = GameStateScriptableObject.GameState.levelLoss;
     }
     public void resetHealth()
     {
