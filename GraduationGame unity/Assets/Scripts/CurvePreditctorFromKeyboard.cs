@@ -19,9 +19,15 @@ public class CurvePreditctorFromKeyboard : MotionMatchable
     private Vector3 prevN = Vector3.zero;
     private Animator a;
 
+    
     public override TrajectoryInfo PredictTrajectory()
     {
         return new TrajectoryInfo(trajectoryPoints, trajectoryForwards);
+    }
+
+    public override Pose GetPose()
+    {
+        return new Pose(jointPositions,jointVelocities);
     }
 
     private void Awake()
