@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
                     callOnce = false;
                     isSwipeAllowed.setBool(false);
                 }
-                
+
                 playerMovementController.TransitionToState(PlayerStates.Idling);
 
 
@@ -159,7 +159,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void CinematicStart()
+    public void DialogueEnd()
+    {
+
+    }
+
+    public void DialogueStart()
     {
 
     }
