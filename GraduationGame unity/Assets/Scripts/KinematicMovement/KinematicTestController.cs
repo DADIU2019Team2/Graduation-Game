@@ -128,7 +128,6 @@ namespace KinematicTest.controller
         public PlayerStates CurrentCharacterState;
         public WorldForward CurrentWorldForward;
         public Vector3 Gravity = new Vector3(0, -10f, 0);
-        public Transform MeshRoot;
         private float ledgeGrabGravityMultiplier = 0f;
         [HideInInspector]
         public static GameObject ledgeGrabbed = null;
@@ -239,7 +238,6 @@ namespace KinematicTest.controller
                     {
                         _isCrouching = true;
                         Motor.SetCapsuleDimensions(0.5f, 1f, 0.5f);
-                        MeshRoot.localScale = new Vector3(1.2f, 0.5f, 1.2f);
                     }
 
                     break;
@@ -302,7 +300,6 @@ namespace KinematicTest.controller
                 case PlayerStates.Sliding:
                 {
                     Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
-                    MeshRoot.localScale = new Vector3(1f, 1f, 1f);
                     _isCrouching = false;
                     _isStoppedSliding = true;
                     _timeSinceStartedSliding = 0f;
@@ -342,16 +339,6 @@ namespace KinematicTest.controller
             if (inputs.slideDown && CurrentCharacterState == PlayerStates.LedgeGrabbing)
             {
                 TransitionToState(PlayerStates.Falling);
-            }
-
-            if (inputs.crouchDown)
-            {
-                MeshRoot.localScale = new Vector3(1.2f, 0.5f, 1.2f);
-            }
-
-            if (inputs.crouchUp)
-            {
-                MeshRoot.localScale = new Vector3(1f, 1f, 1f);
             }
 
             
