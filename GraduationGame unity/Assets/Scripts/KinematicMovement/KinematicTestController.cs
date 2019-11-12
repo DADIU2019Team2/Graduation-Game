@@ -120,6 +120,7 @@ namespace KinematicTest.controller
         public static GameObject ledgeGrabbed = null;
         private bool canFallFromLedgeAfterDelay;
         private float timeAtLastGrab;
+        private bool teleporting;
 
         //World changes
         private float _timeSinceTransitioning;
@@ -510,7 +511,7 @@ namespace KinematicTest.controller
         /// </summary>
         public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)
         {
-           
+            
             Vector3 targetMovementVelocity = Vector3.zero;
             if (Motor.GroundingStatus.IsStableOnGround)
             {
@@ -877,6 +878,22 @@ namespace KinematicTest.controller
                     _timeSinceDamageTaken = 0f;
                 }
             }
+            if (teleporting)
+            {
+
+                teleporting = false;
+                if (runningRight != (int)ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().zoeShouldBeFacing)
+                {
+                    Debug.Log("Facing wrong direction");
+                    runningRight *= -1;
+                    curveStep = 0;
+                    forward = false;
+                }
+                Motor.SetPosition(ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().offset + ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position);
+
+                
+
+            }
         }
 
         public bool IsColliderValidForCollisions(Collider coll)
@@ -896,12 +913,34 @@ namespace KinematicTest.controller
         public void OnMovementHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
             ref HitStabilityReport hitStabilityReport)
         {
-            if (hitCollider.CompareTag("Ledge") && Time.time > (timeAtLastLedgeGrab + graceTimeBeforeHangAgain) && hitNormal.y == 0 && Mathf.Sign(hitNormal.x) == -Mathf.Sign(runningRight))
+            if (hitCollider.CompareTag("Ledge") && Time.time > (timeAtLastLedgeGrab + graceTimeBeforeHangAgain))// && hitNormal.y == 0 && Mathf.Sign(hitNormal.x) == -Mathf.Sign(runningRight))
             {
-                ledgeGrabbed = hitCollider.gameObject;
-                Motor.ZoeAttachedRigidbody = hitCollider.gameObject.GetComponentInParent<Rigidbody>();
-                timeAtLastLedgeGrab = Time.time;
-                TransitionToState(PlayerStates.LedgeGrabbing);
+                
+                if (CurrentCharacterState == PlayerStates.Sliding)
+                {
+                    ledgeGrabbed = hitCollider.gameObject;
+                    Motor.ZoeAttachedRigidbody = hitCollider.gameObject.GetComponentInParent<Rigidbody>();
+                    timeAtLastLedgeGrab = Time.time;
+                    TransitionToState(PlayerStates.LedgeGrabbing);
+                    teleporting = true;
+                }
+                else if (hitNormal.y <= 0 || Mathf.Approximately(hitNormal.y, 1))
+                {
+                    ledgeGrabbed = hitCollider.gameObject;
+                    Motor.ZoeAttachedRigidbody = hitCollider.gameObject.GetComponentInParent<Rigidbody>();
+                    timeAtLastLedgeGrab = Time.time;
+                    TransitionToState(PlayerStates.LedgeGrabbing);
+                    teleporting = true;
+                }
+                else if (_jumpConsumed)
+                {
+                    ledgeGrabbed = hitCollider.gameObject;
+                    Motor.ZoeAttachedRigidbody = hitCollider.gameObject.GetComponentInParent<Rigidbody>();
+                    timeAtLastLedgeGrab = Time.time;
+                    TransitionToState(PlayerStates.LedgeGrabbing);
+                    teleporting = true;
+                }
+                
             }
 
             if (hitCollider.CompareTag("Wall") && CurrentCharacterState != PlayerStates.Idling &&
