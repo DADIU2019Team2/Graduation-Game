@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     public GameObject optionsMenu;
 
     public KinematicTestController playerMovementController;
+    private float waitInLevelStart = 0.5f;
+    private float waitTimer;
+    bool startIncrementingLevelStart = false;
 
     private void Awake()
     {
@@ -46,9 +49,20 @@ public class GameManager : MonoBehaviour
             case GameStateScriptableObject.GameState.levelStart:
                 if (callOnce)
                 {
-                    DoFade(true);
                     callOnce = false;
                     isSwipeAllowed.setBool(false);
+                    startIncrementingLevelStart = true;
+                }
+                if (startIncrementingLevelStart)
+                {
+                    waitTimer += Time.deltaTime;
+                    Debug.Log("Time:" + waitTimer);
+                    if (waitTimer > waitInLevelStart)
+                    {
+                        waitTimer = 0f;
+                        DoFade(true);
+                        startIncrementingLevelStart = false;
+                    }
                 }
 
                 playerMovementController.TransitionToState(PlayerStates.Idling);
@@ -93,7 +107,7 @@ public class GameManager : MonoBehaviour
                 Zoe and camerashould be returned to most recent checkpoint met, rather than at the initial position at start of the level */
                 break;
             case GameStateScriptableObject.GameState.cinematic:
-                
+
                 playerMovementController.TransitionToState(PlayerStates.Idling);
                 //Need to implement input blocking here.
 
