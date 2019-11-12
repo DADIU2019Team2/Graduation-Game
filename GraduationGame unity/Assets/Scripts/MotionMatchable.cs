@@ -5,4 +5,5 @@ using UnityEngine;
 public abstract class MotionMatchable : MonoBehaviour
 {
     public abstract TrajectoryInfo PredictTrajectory();
+    public abstract Pose GetPose();
 }
