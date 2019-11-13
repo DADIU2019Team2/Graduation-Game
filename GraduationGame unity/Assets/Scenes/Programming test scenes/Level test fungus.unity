@@ -193,15 +193,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7632264935069430970, guid: d2a9ad841f80e064f9ede65f5502f560,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6499854673366436995, guid: d2a9ad841f80e064f9ede65f5502f560,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632264935069430970, guid: d2a9ad841f80e064f9ede65f5502f560,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2a9ad841f80e064f9ede65f5502f560, type: 3}
@@ -527,7 +527,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1698084715}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 430909850}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
@@ -727,6 +727,66 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &430909850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1450415639746299580, guid: 1d5fcecccea39994bbe5cab7844bad81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1698084715}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &430909851
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430909850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 16
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1698084716}
+  targetComponentAssemblyName: DialogueManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: DialogueManager
+  targetMethod: EndSceneFromDialogue
+  targetMethodText: 'EndSceneFromDialogue (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &430909852
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430909850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 408.0971
+    y: 476.28036
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 17
+  blockName: EndScene
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 430909851}
 --- !u!1 &432713702
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,15 +2246,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7632264935069430970, guid: d2a9ad841f80e064f9ede65f5502f560,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6499854673366436995, guid: d2a9ad841f80e064f9ede65f5502f560,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632264935069430970, guid: d2a9ad841f80e064f9ede65f5502f560,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2a9ad841f80e064f9ede65f5502f560, type: 3}
@@ -2271,15 +2331,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7632264935069430970, guid: d2a9ad841f80e064f9ede65f5502f560,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6499854673366436995, guid: d2a9ad841f80e064f9ede65f5502f560,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632264935069430970, guid: d2a9ad841f80e064f9ede65f5502f560,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2a9ad841f80e064f9ede65f5502f560, type: 3}
@@ -2356,15 +2416,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7632264935069430970, guid: d2a9ad841f80e064f9ede65f5502f560,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6499854673366436995, guid: d2a9ad841f80e064f9ede65f5502f560,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632264935069430970, guid: d2a9ad841f80e064f9ede65f5502f560,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2a9ad841f80e064f9ede65f5502f560, type: 3}
@@ -2531,6 +2591,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1450415639746299579, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: selectedCommands.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450415639746299579, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: selectedBlocks.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1079509850635856232, guid: 1d5fcecccea39994bbe5cab7844bad81,
         type: 3}
       propertyPath: m_Name
@@ -3184,12 +3254,12 @@ PrefabInstance:
     - target: {fileID: 2427491622339199194, guid: 1d5fcecccea39994bbe5cab7844bad81,
         type: 3}
       propertyPath: m_AABB.m_Center.x
-      value: 0.00000045448542
+      value: 0.00000043492764
       objectReference: {fileID: 0}
     - target: {fileID: 2427491622339199194, guid: 1d5fcecccea39994bbe5cab7844bad81,
         type: 3}
       propertyPath: m_AABB.m_Center.y
-      value: 0.000000059604645
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2427491622339199194, guid: 1d5fcecccea39994bbe5cab7844bad81,
         type: 3}
@@ -3211,8 +3281,44 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 1.000001
       objectReference: {fileID: 0}
+    - target: {fileID: 1450415639746299582, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 109.35507
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450415639746299582, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 478.39975
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450415639746299559, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: targetComponentAssemblyName
+      value: DialogueManager, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450415639746299559, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: targetObject
+      value: 
+      objectReference: {fileID: 1698084716}
+    - target: {fileID: 1450415639746299559, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: targetMethod
+      value: SkipAllDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450415639746299559, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: targetMethodText
+      value: 'SkipAllDialogue (): Void'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d5fcecccea39994bbe5cab7844bad81, type: 3}
+--- !u!1 &1698084716 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1450415637892610815, guid: 1d5fcecccea39994bbe5cab7844bad81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1698084715}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1710740297
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class TriggerBroadcastToFungus : MonoBehaviour, IOnSceneReset
         if (other.CompareTag("Player") || other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             Flowchart.BroadcastFungusMessage(fungusMessageName);
+            GameManager.DialogueStart();
             wasMessageSent = true;
         }
     }
