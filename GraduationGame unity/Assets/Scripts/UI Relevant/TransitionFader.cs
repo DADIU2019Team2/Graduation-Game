@@ -79,7 +79,7 @@ public class TransitionFader : MonoBehaviour
         float step = canvasGroup.alpha;
         while (canvasGroup.alpha > 0)
         {
-            step -= 1 / fadetim * Time.unscaledDeltaTime;
+            step -= 1 / fadetim * Time.deltaTime;
             //t += Time.deltaTime;
             //canvasGroup.alpha = 1-(t / fadetim);
 
@@ -120,7 +120,7 @@ public class TransitionFader : MonoBehaviour
         float step = canvasGroup.alpha;
         while (canvasGroup.alpha < 1)
         {
-            step += 1 / fadetim * Time.unscaledDeltaTime;
+            step += 1 / fadetim * Time.deltaTime;
             //t += Time.deltaTime;
             //canvasGroup.alpha = 1-(t / fadetim);
 

@@ -72,6 +72,11 @@ public class PlayerControllerSettings : ScriptableObject
     [Header("Ledge Grabbing Settings")]
     //[Tooltip("How long zoe can ledge grab for")]
     //public float hangTime;
+    
+    [Tooltip("Can zoe automatically fall from a ledge after a time in seconds")]
+    public bool canFallFromLedgeAfterDelay;
+    [Tooltip("How long before zoe falls from ledge")]
+    public float timeBeforeFallFromLedge;
     [Tooltip("How much time needs to pass before zoe can hang from a ledge again")]
     public float graceTimeBeforeHangAgain;
     [Tooltip("Forward Jump height while ledge grabbing in Zoés")]
