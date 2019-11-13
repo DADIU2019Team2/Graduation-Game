@@ -6,6 +6,7 @@
 				<ActorMixer Name="Motion" ID="{8D1A1814-CF49-458A-8615-FE96B09C3363}" ShortID="85416185">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -1474,12 +1475,10 @@
 				<ActorMixer Name="Objects" ID="{642349AE-A41A-4B8E-AD25-21B38AFD2F65}" ShortID="953604102">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
-						<Reference Name="Attenuation">
-							<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 						</Reference>
@@ -2148,9 +2147,6 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 										</Reference>
@@ -2180,9 +2176,6 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 										</Reference>
@@ -2212,9 +2205,6 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 										</Reference>
@@ -2244,9 +2234,6 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 										</Reference>
@@ -2293,9 +2280,6 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 										</Reference>
@@ -2330,9 +2314,6 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 										</Reference>
@@ -2367,9 +2348,6 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 										</Reference>
@@ -2404,9 +2382,6 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 										</Reference>
@@ -2448,9 +2423,6 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 										</Reference>
@@ -2480,9 +2452,6 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 										</Reference>
@@ -2512,9 +2481,6 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 										</Reference>
@@ -2544,9 +2510,6 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 										</Reference>
@@ -2593,9 +2556,6 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 										</Reference>
@@ -2630,9 +2590,6 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 										</Reference>
@@ -2667,9 +2624,6 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 										</Reference>
@@ -2812,9 +2766,6 @@
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 										</Reference>
