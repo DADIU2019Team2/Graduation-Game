@@ -5,6 +5,7 @@ using UnityEngine;
 public class CheckpointManager : MonoBehaviour
 {
     private static Transform myCurrentCheckpoint;
+    private static Vector3 currentCheckpointPos;
     [SerializeField] private SaveTransform ourCurrentCheckpoint;
 
     void SetCurrentCheckpoint(Transform checkpoint)
@@ -14,9 +15,12 @@ public class CheckpointManager : MonoBehaviour
         //Transform checkpointToSave = checkpoint;
         //ourCurrentCheckpoint.SetTransformToSave(checkpointToSave);
         ourCurrentCheckpoint.SetPosToSave(checkpoint);
+        currentCheckpointPos = myCurrentCheckpoint.position;
     }
+
     public static Vector3 GetCurerntCheckpoint()
     {
+        if (myCurrentCheckpoint == null) return Vector3.zero;
         return myCurrentCheckpoint.position;
     }
 }
