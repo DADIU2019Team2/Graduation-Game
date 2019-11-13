@@ -20,13 +20,17 @@ public class FallingPlatforms : MonoBehaviour, IOnSceneReset
         initialIsActive = gameObject.activeSelf;
         initialUseGravity = rb.useGravity;
     }
-    private void OnCollisionEnter(Collision collision)
+    /*private void OnCollisionEnter(Collision collision)
     {
         //FallingPlatforms
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
-        {
-            StartCoroutine(startFalling(fallDelayTime));
-        }
+        //if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        //{
+        //}
+    }*/
+
+    public void startFallingPlatform()
+    {
+         StartCoroutine(startFalling(fallDelayTime));
     }
 
     IEnumerator startFalling(float delay)
