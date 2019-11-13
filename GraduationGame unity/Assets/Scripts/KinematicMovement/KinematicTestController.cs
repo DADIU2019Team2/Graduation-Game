@@ -143,10 +143,10 @@ namespace KinematicTest.controller
 
         //Collision event because KCC doesn't like unity's collisions
         public IntEvent SpikeDamageEvent;
-        public bool _justTookDamage;
-        public float _timeSinceDamageTaken;
-        public bool canTakeDamage;
-        public float damageResetTimer;
+        private bool _justTookDamage;
+        private float _timeSinceDamageTaken;
+        private bool canTakeDamage;
+        private float damageResetTimer;
 
         void Init()
         {
@@ -183,6 +183,8 @@ namespace KinematicTest.controller
             timeBeforeFallFromLedge = settings.timeBeforeFallFromLedge;
             AllowDoubleJump = settings.AllowDoubleJump;
             AllowJumpingWhenSliding = settings.AllowJumpingWhenSliding;
+
+            damageResetTimer = settings.invincibilityTime;
         }
 
         private void Start()
