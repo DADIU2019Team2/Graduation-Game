@@ -5,7 +5,7 @@ using UnityEngine;
 public class MusicZone3 : MonoBehaviour
 {
     // Start is called before the first frame update
-      void awake 
+    void Awake() 
     {
         AkSoundEngine.PostEvent("StopAll", gameObject);
     }
@@ -20,11 +20,5 @@ public class MusicZone3 : MonoBehaviour
         AkSoundEngine.SetRTPCValue("Music_Layer_Z3", 1);
 
         AkSoundEngine.PostEvent("Play_Ambience_Z3", gameObject);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
