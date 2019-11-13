@@ -88,7 +88,9 @@ public class PlayerControllerSettings : ScriptableObject
     [Tooltip("Backwards Jump move speed when initiated from ledge grab")]
     public float ledgeGrabBackwardsAirMoveSpeed;
 
-
+    [Header("Damage")] [Tooltip("Invincibility time in seconds")]
+    public float invincibilityTime;
+    
     [Header("Misc")]
     [Tooltip("Toggle to allow midair direction changes")]
     public bool canChangeDirectionsMidair;
