@@ -68,9 +68,6 @@ namespace AK
         static const AkUniqueID STOP_LAZER_MED = 1196263023U;
         static const AkUniqueID STOP_LAZER_SMALL = 133929472U;
         static const AkUniqueID STOP_LAZER_WALL = 2988481851U;
-        static const AkUniqueID STOP_MACHINE_1 = 3006425175U;
-        static const AkUniqueID STOP_MACHINE_2 = 3006425172U;
-        static const AkUniqueID STOP_MACHINE_3 = 3006425173U;
         static const AkUniqueID STOP_MACHINES = 2674413038U;
         static const AkUniqueID STOP_NORMAL_PLATFORMS = 2590299724U;
         static const AkUniqueID STOP_PLATFORM_PILLAR_DAMAGED = 2388799556U;

@@ -28,6 +28,7 @@ private bool IsInCollider = false;
         if (other.tag != "Player" || IsInCollider) { return; }
         IsInCollider = true;
         AkSoundEngine.PostEvent(EventName, gameObject);
+Debug.Log("in sound collider");
     }
     
         private void OnTriggerExit(Collider other)
@@ -35,6 +36,7 @@ private bool IsInCollider = false;
         if (other.tag != "Player" || IsInCollider) { return; }
         AkSoundEngine.PostEvent(StopEvent, gameObject);
         IsInCollider = false;
+Debug.Log("in sound collider");
     }
 
         private void OnTriggerStay(Collider other)
@@ -42,6 +44,7 @@ private bool IsInCollider = false;
         if (other.tag != "Player" || IsInCollider) { return; }
         IsInCollider = true;
         AkSoundEngine.PostEvent(EventName, gameObject);
+        Debug.Log("in sound collider");
         
     }
 
