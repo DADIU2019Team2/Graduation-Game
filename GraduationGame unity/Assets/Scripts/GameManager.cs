@@ -179,11 +179,11 @@ public class GameManager : MonoBehaviour
 
     public void DialogueEnd()
     {
-
+        GameManager.ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
     }
 
     public void DialogueStart()
     {
-
+        GameManager.ChangeGameState(GameStateScriptableObject.GameState.cinematic);
     }
 }

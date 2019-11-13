@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1238674768556565797}
+  - component: {fileID: 6341866479196598616}
+  - component: {fileID: 8043341792856211678}
   m_Layer: 0
   m_Name: Dialogue prefab
   m_TagString: Untagged
@@ -34,6 +36,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6341866479196598616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238674768556565796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d3701e5a3200f4da6ea0c109d47039, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8043341792856211678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238674768556565796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8826a87feb8f4f74ead6bae77603a757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 6979c2a72ad2d16438213c3e69114b58, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6341866479196598616}
+        m_MethodName: SkipAllDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: MiniGame2.Events.UnityVoidEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1586477195268315322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41,11 +84,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1238674768556565797}
     m_Modifications:
-    - target: {fileID: 519291342343876680, guid: d61be112270c6464e88ba38b3e7b0b79,
-        type: 3}
-      propertyPath: m_Name
-      value: Zoe fungus character
-      objectReference: {fileID: 0}
     - target: {fileID: 519291342343876682, guid: d61be112270c6464e88ba38b3e7b0b79,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -100,6 +138,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 519291342343876680, guid: d61be112270c6464e88ba38b3e7b0b79,
+        type: 3}
+      propertyPath: m_Name
+      value: Zoe fungus character
       objectReference: {fileID: 0}
     - target: {fileID: 519291342343876681, guid: d61be112270c6464e88ba38b3e7b0b79,
         type: 3}
@@ -161,11 +204,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1238674768556565797}
     m_Modifications:
-    - target: {fileID: 3586667380429902721, guid: 86075afd9e397c04aa2b9fdbc74862b8,
-        type: 3}
-      propertyPath: m_Name
-      value: Localization fungus prefab
-      objectReference: {fileID: 0}
     - target: {fileID: 3586667380429902719, guid: 86075afd9e397c04aa2b9fdbc74862b8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -221,6 +259,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3586667380429902721, guid: 86075afd9e397c04aa2b9fdbc74862b8,
+        type: 3}
+      propertyPath: m_Name
+      value: Localization fungus prefab
+      objectReference: {fileID: 0}
     - target: {fileID: 3586667380429902720, guid: 86075afd9e397c04aa2b9fdbc74862b8,
         type: 3}
       propertyPath: activeLanguage
@@ -241,11 +284,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1238674768556565797}
     m_Modifications:
-    - target: {fileID: 4063440902131711623, guid: ce17fea001a064849843d8e6fbaf634b,
-        type: 3}
-      propertyPath: m_Name
-      value: Stranger fungus character
-      objectReference: {fileID: 0}
     - target: {fileID: 4063440902131711625, guid: ce17fea001a064849843d8e6fbaf634b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -301,6 +339,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4063440902131711623, guid: ce17fea001a064849843d8e6fbaf634b,
+        type: 3}
+      propertyPath: m_Name
+      value: Stranger fungus character
+      objectReference: {fileID: 0}
     - target: {fileID: 4063440902131711622, guid: ce17fea001a064849843d8e6fbaf634b,
         type: 3}
       propertyPath: nameColor.r
@@ -338,11 +381,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1238674768556565797}
     m_Modifications:
-    - target: {fileID: 4245839751685019742, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: m_Name
-      value: Flowchart fungus dialogue prefab
-      objectReference: {fileID: 0}
     - target: {fileID: 4245839751685019736, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -398,11 +436,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019742, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: m_Name
+      value: Flowchart fungus dialogue prefab
+      objectReference: {fileID: 0}
     - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: selectedBlocks.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019739, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: storyText
+      value: DKDKDKDKD
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019739, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1238674770089634035}
     - target: {fileID: 4245839751685019740, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: nodeRect.x
@@ -413,46 +466,6 @@ PrefabInstance:
       propertyPath: nodeRect.y
       value: 310.45062
       objectReference: {fileID: 0}
-    - target: {fileID: 4245839751685019719, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: storyText
-      value: DKDKDKDKD
-      objectReference: {fileID: 0}
-    - target: {fileID: 4245839751685019716, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: storyText
-      value: DKDKDKDKD
-      objectReference: {fileID: 0}
-    - target: {fileID: 4245839751685019714, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: nodeRect.x
-      value: 257.98166
-      objectReference: {fileID: 0}
-    - target: {fileID: 4245839751685019714, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: nodeRect.y
-      value: 145.28206
-      objectReference: {fileID: 0}
-    - target: {fileID: 4245839751685019739, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: storyText
-      value: DKDKDKDKD
-      objectReference: {fileID: 0}
-    - target: {fileID: 4245839751685019739, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 1238674770089634035}
-    - target: {fileID: 4245839751685019712, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: storyText
-      value: DKDKDKDKD
-      objectReference: {fileID: 0}
-    - target: {fileID: 4245839751685019712, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 1238674768429006905}
     - target: {fileID: 4245839751685019726, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: character
@@ -463,6 +476,36 @@ PrefabInstance:
       propertyPath: setSayDialog
       value: 
       objectReference: {fileID: 1238674769208141314}
+    - target: {fileID: 4245839751685019712, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: storyText
+      value: DKDKDKDKD
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019712, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1238674768429006905}
+    - target: {fileID: 4245839751685019714, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 257.98166
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019714, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 145.28206
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019716, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: storyText
+      value: DKDKDKDKD
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019719, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: storyText
+      value: DKDKDKDKD
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4245839751685019741, guid: 63747fb40dc88e34e949116d18aebef0, type: 3}
     - {fileID: 4245839751685019718, guid: 63747fb40dc88e34e949116d18aebef0, type: 3}
