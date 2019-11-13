@@ -35,7 +35,7 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
 
     private void Start()
     {
-        OnResetLevel(); //Initialize the player - makes sure the correct skin is loaded too.
+        playerStats.SetCurrentZoeRecolor(playerStats.selectedSkin); //Ensures that the player sets the selected skin on levelStart 
     }
 
     public void Die()
@@ -52,7 +52,15 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
         playerStats.resetStamina();
         isDead = false;
 
-        GetComponentInParent<KinematicTestController>().Motor.SetPosition(currentSpawnPosition);
+        if(CheckpointManager.GetCurerntCheckpoint() != Vector3.zero)
+        {
+            Debug.Log(CheckpointManager.GetCurerntCheckpoint());
+            GetComponentInParent<KinematicTestController>().Motor.SetPosition(CheckpointManager.GetCurerntCheckpoint());
+        }
+        else
+        {
+            GetComponentInParent<KinematicTestController>().Motor.SetPosition(currentSpawnPosition);
+        }
         playerStats.SetCurrentZoeRecolor(playerStats.selectedSkin); //Ensures that the player sets the selected skin on levelStart 
     }
 
