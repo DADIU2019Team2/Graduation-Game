@@ -5,14 +5,16 @@
 			<ChildrenList>
 				<WorkUnit Name="Music" ID="{D8F13136-53DF-481F-8AA6-7FBE67E566E8}" PersistMode="Reference"/>
 				<WorkUnit Name="SFX" ID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" PersistMode="Reference"/>
-				<Event Name="Play_Electricity1" ID="{6558C932-68A1-4011-9865-061B6483B8DE}">
+				<WorkUnit Name="Movement" ID="{34B92B84-4DD4-498D-8D44-61282ABE4319}" PersistMode="Reference"/>
+				<WorkUnit Name="Ambience" ID="{ECD93438-89ED-4F02-B5C0-88BAEB343066}" PersistMode="Reference"/>
+				<Event Name="StopAll" ID="{882E4C6E-3091-48C6-9327-163269101349}">
 					<ChildrenList>
-						<Action Name="" ID="{02AF673B-A42D-46DD-8CB4-0BBC61695BCB}" ShortID="496148465">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Electricity1" ID="{8E8DE9BD-E73E-40FA-B5C9-A4E59DB9C17D}"/>
-								</Reference>
-							</ReferenceList>
+						<Action Name="" ID="{61E08B79-3BEF-45C4-A6AD-8688EC5364C0}" ShortID="105384989">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
 						</Action>
 					</ChildrenList>
 				</Event>

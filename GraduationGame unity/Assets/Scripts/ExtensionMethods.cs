@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 public static class ExtensionMethods
 {
+    public static bool Contains(this LayerMask mask, int layer)
+    {
+        return mask == (mask | (1 << layer));
+    }
 
     #region Transform
 

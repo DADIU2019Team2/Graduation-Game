@@ -1,25 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MiniGame2.Events;
+using System.Linq;
+using KinematicTest.controller;
 
 public class GameManager : MonoBehaviour
 {
-    public enum GameState
+
+    private static GameStateScriptableObject.GameState gameState;
+    private float originalTimescale;
+
+    // transition related
+    [Header("Transition Related")]
+    public TransitionFader transitionFader;
+    //public BoolVariable isSceneLaod;
+    public FloatVariable sceneLoadFadeTime;
+    public FloatVariable blackFadeTime;
+    public BoolVariable isSwipeAllowed;
+    public static bool callOnce;
+    private float transitionTime;
+    private bool isSceneLoadTransition;
+
+    [Header("Check If Active")]// bad i know
+    public GameObject optionsMenu;
+
+    public KinematicTestController playerMovementController;
+    private float waitInLevelStart = 0.5f;
+    private float waitTimer;
+    bool startIncrementingLevelStart = false;
+
+    private void Awake()
     {
-        levelStart,
-        mainGameplayLoop,
-        levelLoss,
-        cinematic/*Dialogue and cinematic bullshit*/,
-        levelComplete, 
-        optionsMenuOpened
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 120;
     }
-
-    [SerializeField]
-    private GameState gameState;
-
-    void Start()
+    private void Start()
     {
-        
+        callOnce = true;
+        isSceneLoadTransition = false;
     }
 
     // Update is called once per frame
@@ -27,34 +46,144 @@ public class GameManager : MonoBehaviour
     {
         switch (gameState)
         {
-            case GameState.levelStart:
+            case GameStateScriptableObject.GameState.levelStart:
+                if (callOnce)
+                {
+                    callOnce = false;
+                    isSwipeAllowed.setBool(false);
+                    startIncrementingLevelStart = true;
+                }
+                if (startIncrementingLevelStart)
+                {
+                    waitTimer += Time.deltaTime;
+                    Debug.Log("Time:" + waitTimer);
+                    if (waitTimer > waitInLevelStart)
+                    {
+                        waitTimer = 0f;
+                        DoFade(true);
+                        startIncrementingLevelStart = false;
+                    }
+                }
+
+                playerMovementController.TransitionToState(PlayerStates.Idling);
+
+
+                if (transitionFader.getAlpha() == 0)//have finished fading in
+                {
+                    ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
+                }
                 /*Fade from black. 
                 Nothing happens until player gives some sort of input to start the level. 
                 Transitions into gameplay-state. */
                 break;
+
             #region maingameplay
-            case GameState.mainGameplayLoop:
-            //Main logic of the game goes on here. The player has control over Zoe. 
+            case GameStateScriptableObject.GameState.mainGameplayLoop:
+                isSwipeAllowed.setBool(true);
+                if (optionsMenu.activeSelf) // if options menu gets entered
+                {
+                    originalTimescale = Time.timeScale;
+                    Time.timeScale = 0f;
+                    ChangeGameState(GameStateScriptableObject.GameState.optionsMenuOpened);
+                }
+                //Main logic of the game goes on here. The player has control over Zoe. 
                 break;
             #endregion maingameplay
-            case GameState.levelLoss:
-            /*Fade to black, return all objects in scene to their initial states. 
-            “Reload” scene and fade back into level-start state. 
-            Zoe and camerashould be returned to most recent checkpoint met, rather than at the initial position at start of the level */
-                break;
-            case GameState.cinematic:
-            /*(No player control at all until they end)
-             – except skipping dialogue by tapping and swiping to skip to next player-controllable state. */
-                break;
-            case GameState.levelComplete:
-            /* Fade to black, load next scene, transition into level-start state.
-            (Possibly set state to be level-start before calling the load-next-scene function) */
-                break;
-            case GameState.optionsMenuOpened:
-                //Should pause all game-logic and behaviours. 
-                Time.timeScale = 0;
 
+            case GameStateScriptableObject.GameState.levelLoss:
+                if (callOnce)
+                {
+                    isSceneLoadTransition = false;
+                    DoFade(false);
+                    callOnce = false;
+                }
+                if (transitionFader.getAlpha() == 1) //faded to black
+                {
+                    DoResetObjects();
+                    ChangeGameState(GameStateScriptableObject.GameState.levelStart);
+                }
+                /*Fade to black, return all objects in scene to their initial states. 
+                “Reload” scene and fade back into level-start state. 
+                Zoe and camerashould be returned to most recent checkpoint met, rather than at the initial position at start of the level */
+                break;
+            case GameStateScriptableObject.GameState.cinematic:
+
+                playerMovementController.TransitionToState(PlayerStates.Idling);
+                //Need to implement input blocking here.
+
+                /*(No player control at all until they end)
+                 – except skipping dialogue by tapping and swiping to skip to next player-controllable state. */
+                break;
+            case GameStateScriptableObject.GameState.levelComplete:
+                if (callOnce)
+                {
+                    isSceneLoadTransition = true;
+                    DoFade(false);
+                    callOnce = false;
+                }
+                /* Fade to black, load next scene, transition into level-start state.
+                (Possibly set state to be level-start before calling the load-next-scene function) */
+                break;
+            case GameStateScriptableObject.GameState.optionsMenuOpened:
+                Debug.Log("OptionsMenuOpened");
+                if (!optionsMenu.activeSelf) // if options menu is closed
+                {
+                    Time.timeScale = originalTimescale;
+                    ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
+                }
+                break;
+
+        }
+        Debug.Log("Time scale = " + Time.timeScale);
+    }
+
+    public static GameStateScriptableObject.GameState GetGameState()
+    {
+        return gameState;
+    }
+
+    public static void ChangeGameState(GameStateScriptableObject.GameState desiredGameState)
+    {
+        gameState = desiredGameState;
+        callOnce = true;
+    }
+    private void DoFade(bool fadeIn)
+    {
+        switch (isSceneLoadTransition)
+        {
+            case true:
+                transitionTime = sceneLoadFadeTime.getValue();
+                if (fadeIn)
+                    transitionFader.fadeIn(transitionTime, true);
+                else
+                    transitionFader.fadeOut(transitionTime, true);
+                break;
+            case false:
+                transitionTime = blackFadeTime.getValue();
+                if (fadeIn)
+                    transitionFader.fadeIn(transitionTime, false);
+                else
+                    transitionFader.fadeOut(transitionTime, false);
                 break;
         }
+    }
+
+    private void DoResetObjects()
+    {
+        var objectsToBeReset = FindObjectsOfType<MonoBehaviour>().OfType<IOnSceneReset>();
+        foreach (IOnSceneReset obj in objectsToBeReset)
+        {
+            obj.OnResetLevel();
+        }
+    }
+
+    public void DialogueEnd()
+    {
+
+    }
+
+    public void DialogueStart()
+    {
+
     }
 }

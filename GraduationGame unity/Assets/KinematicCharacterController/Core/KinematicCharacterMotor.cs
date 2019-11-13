@@ -346,6 +346,20 @@ namespace KinematicCharacterController
         /// </summary>
         public Rigidbody AttachedRigidbody { get { return _attachedRigidbody; } }
         private Rigidbody _attachedRigidbody;
+
+        public Rigidbody ZoeAttachedRigidbody
+        {
+            get
+            {
+                return _zoeAttachedRigidbody;
+            }
+            set
+            {
+                _zoeAttachedRigidbody = value;
+            }
+        }
+        private Rigidbody _zoeAttachedRigidbody;
+
         /// <summary>
         /// Vector3 from the character transform position to the capsule center
         /// </summary>
@@ -916,10 +930,19 @@ namespace KinematicCharacterController
                 }
                 else
                 {
+                    string nullzoe = (_zoeAttachedRigidbody == null).ToString();
                     // Detect interactive rigidbodies from grounding
-                    if (GroundingStatus.IsStableOnGround && GroundingStatus.GroundCollider.attachedRigidbody)
+                    if ((GroundingStatus.IsStableOnGround && GroundingStatus.GroundCollider.attachedRigidbody) || _zoeAttachedRigidbody != null)
                     {
-                        Rigidbody interactiveRigidbody = GetInteractiveRigidbody(GroundingStatus.GroundCollider);
+                        Rigidbody interactiveRigidbody = null;
+                        if (_zoeAttachedRigidbody != null)
+                        {
+                            interactiveRigidbody = _zoeAttachedRigidbody;
+                        }
+                        else
+                        {
+                            interactiveRigidbody = GetInteractiveRigidbody(GroundingStatus.GroundCollider);
+                        }
                         if (interactiveRigidbody)
                         {
                             _attachedRigidbody = interactiveRigidbody;

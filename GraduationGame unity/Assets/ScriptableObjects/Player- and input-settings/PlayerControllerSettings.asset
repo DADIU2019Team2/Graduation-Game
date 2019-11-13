@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 128d5a01cfc2fa942b5cad73eb25b606, type: 3}
   m_Name: PlayerControllerSettings
   m_EditorClassIdentifier: 
-  rampUpTime: 2
-  rampDownTime: 0.5
-  maxSpeed: 25
   baseGravity: 10
-  hangTimeVelocityCutoff: 0.5
-  riseGravity: 3
-  hangGravity: 1
-  fallGravity: 10
+  riseGravityMultiplier: 3
+  hangGravityMultiplier: 3
+  fallGravityMultiplier: 3
+  dropGravityMultiplier: 3
+  maxMoveSpeed: 10
+  StableMovementSharpness: 30
+  OrientationSharpness: 10
+  rampUpTime: 0.1
+  rampDownTime: 0.1
   rampUpCurve:
     serializedVersion: 2
     m_Curve:
@@ -40,7 +42,7 @@ MonoBehaviour:
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.575
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -50,24 +52,64 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 1
-      inSlope: 0.018496001
-      outSlope: 0.018496001
+      inSlope: -0.03958525
+      outSlope: -0.03958525
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.11382114
+      outWeight: 0.15205298
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: -1.5116911
-      outSlope: -1.5116911
+      value: -0.5004977
+      inSlope: -1.0247587
+      outSlope: -1.0247587
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.050135493
-      outWeight: 0.33333334
+      inWeight: 0.08489758
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  jumpHeight: 58.57
-  groundedTransform: {fileID: 0}
-  groundedDistance: 0
+  jumpHeight: 4
+  maxAirMoveSpeed: 10
+  hangTimeVelocityThreshold: 2
+  JumpPreGroundingGraceTime: 0.2
+  JumpPostGroundingGraceTime: 0.2
+  idleJumpHeight: 2
+  idleAirMoveSpeed: 4
+  slideMoveSpeed: 15
+  slideJumpHeight: 1
+  slideDuration: 1
+  decelerateWhileSliding: 1
+  slideCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.2
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  graceTimeBeforeHangAgain: 0.2
+  ledgeGrabForwardJumpHeight: 1
+  ledgeGrabForwardAirMoveSpeed: 5
+  ledgeGrabBackwardsJumpHeight: 1
+  ledgeGrabBackwardsAirMoveSpeed: 5
+  canChangeDirectionsMidair: 1
+  AllowDoubleJump: 0
+  AllowJumpingWhenSliding: 0

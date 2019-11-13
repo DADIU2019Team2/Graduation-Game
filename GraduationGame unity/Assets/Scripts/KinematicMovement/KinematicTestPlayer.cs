@@ -69,6 +69,10 @@ namespace KinematicTest.player
             characterInputs.changeDirection = Input.GetKeyDown(KeyCode.B);
             characterInputs.slideDown = Input.GetKeyDown(KeyCode.N);
             characterInputs.jumpDown = Input.GetKeyDown(KeyCode.Space);
+            characterInputs.ledgeGrabHold = Input.GetKey(KeyCode.LeftShift);
+            characterInputs.crouchDown = Input.GetKeyDown(KeyCode.S);
+            characterInputs.crouchUp = Input.GetKeyUp(KeyCode.S);
+            characterInputs.worldMoveDown = Input.GetKeyDown(KeyCode.M);
             // Apply inputs to character
             Character.SetInputs(ref characterInputs);
         }
@@ -85,6 +89,7 @@ namespace KinematicTest.player
                     characterInputs.changeDirection = true;
                         break;
                     case InputManager.SwipeType.swipeDown:
+                    characterInputs.slideDown = true;
                         break;
                 }
             Character.SetInputs(ref characterInputs);
