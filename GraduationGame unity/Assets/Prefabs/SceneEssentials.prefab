@@ -160,11 +160,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2610356912311023036}
     m_Modifications:
-    - target: {fileID: 1238674768360779084, guid: acd7efc9f9290784f943677bc26823aa,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1238674768556565796, guid: acd7efc9f9290784f943677bc26823aa,
         type: 3}
       propertyPath: m_Name
@@ -225,10 +220,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1238674768360779084, guid: acd7efc9f9290784f943677bc26823aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1238674769208141315, guid: acd7efc9f9290784f943677bc26823aa,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238674769477425532, guid: acd7efc9f9290784f943677bc26823aa,
+        type: 3}
+      propertyPath: targetObject
+      value: 
+      objectReference: {fileID: 3795549340719850677}
+    - target: {fileID: 1238674769477425532, guid: acd7efc9f9290784f943677bc26823aa,
+        type: 3}
+      propertyPath: targetMethod
+      value: CinematicStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238674769477425532, guid: acd7efc9f9290784f943677bc26823aa,
+        type: 3}
+      propertyPath: targetMethodText
+      value: 'CinematicStart (): Void'
       objectReference: {fileID: 0}
     - target: {fileID: 1238674769477425504, guid: acd7efc9f9290784f943677bc26823aa,
         type: 3}
@@ -254,21 +269,6 @@ PrefabInstance:
         type: 3}
       propertyPath: nodeRect.x
       value: 133.14795
-      objectReference: {fileID: 0}
-    - target: {fileID: 1238674769477425532, guid: acd7efc9f9290784f943677bc26823aa,
-        type: 3}
-      propertyPath: targetObject
-      value: 
-      objectReference: {fileID: 3795549340719850677}
-    - target: {fileID: 1238674769477425532, guid: acd7efc9f9290784f943677bc26823aa,
-        type: 3}
-      propertyPath: targetMethod
-      value: CinematicStart
-      objectReference: {fileID: 0}
-    - target: {fileID: 1238674769477425532, guid: acd7efc9f9290784f943677bc26823aa,
-        type: 3}
-      propertyPath: targetMethodText
-      value: 'CinematicStart (): Void'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acd7efc9f9290784f943677bc26823aa, type: 3}
@@ -943,6 +943,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Options Menu Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6589043525647016465, guid: 5b9fa490291da254aaf2d2dbed02b8df,
+        type: 3}
+      propertyPath: m_Name
+      value: Options Menu Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431979037652984424, guid: f059d66bfefc16e4bb939de7180e4be8,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerInputs
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431979037652984424, guid: f059d66bfefc16e4bb939de7180e4be8,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerInputs
+      objectReference: {fileID: 0}
     - target: {fileID: 5431979037652984424, guid: f059d66bfefc16e4bb939de7180e4be8,
         type: 3}
       propertyPath: m_Name
@@ -982,21 +997,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589043525647016465, guid: 5b9fa490291da254aaf2d2dbed02b8df,
-        type: 3}
-      propertyPath: m_Name
-      value: Options Menu Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5431979037652984424, guid: f059d66bfefc16e4bb939de7180e4be8,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerInputs
-      objectReference: {fileID: 0}
-    - target: {fileID: 5431979037652984424, guid: f059d66bfefc16e4bb939de7180e4be8,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerInputs
       objectReference: {fileID: 0}
     - target: {fileID: 5431979037652984425, guid: f059d66bfefc16e4bb939de7180e4be8,
         type: 3}
@@ -1049,6 +1049,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2610356912311023036}
     m_Modifications:
+    - target: {fileID: 7147158886115683312, guid: fe17d14b041304c42b56769434ae2a53,
+        type: 3}
+      propertyPath: m_Name
+      value: CheckpointManager
+      objectReference: {fileID: 0}
     - target: {fileID: 7147158886115683314, guid: fe17d14b041304c42b56769434ae2a53,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1104,11 +1109,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7147158886115683312, guid: fe17d14b041304c42b56769434ae2a53,
-        type: 3}
-      propertyPath: m_Name
-      value: CheckpointManager
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe17d14b041304c42b56769434ae2a53, type: 3}
 --- !u!4 &4435987581755079779 stripped
@@ -1124,6 +1124,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2610356912311023036}
     m_Modifications:
+    - target: {fileID: 6589043525647016465, guid: 5b9fa490291da254aaf2d2dbed02b8df,
+        type: 3}
+      propertyPath: m_Name
+      value: Options Menu Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589043525647016465, guid: 5b9fa490291da254aaf2d2dbed02b8df,
+        type: 3}
+      propertyPath: m_Name
+      value: Options Menu Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589043525647016465, guid: 5b9fa490291da254aaf2d2dbed02b8df,
+        type: 3}
+      propertyPath: m_Name
+      value: Options Menu Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589043525647016465, guid: 5b9fa490291da254aaf2d2dbed02b8df,
+        type: 3}
+      propertyPath: m_Name
+      value: Options Menu Canvas
+      objectReference: {fileID: 0}
     - target: {fileID: 6589043525647016465, guid: 5b9fa490291da254aaf2d2dbed02b8df,
         type: 3}
       propertyPath: m_Name
@@ -1233,26 +1253,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589043525647016465, guid: 5b9fa490291da254aaf2d2dbed02b8df,
-        type: 3}
-      propertyPath: m_Name
-      value: Options Menu Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589043525647016465, guid: 5b9fa490291da254aaf2d2dbed02b8df,
-        type: 3}
-      propertyPath: m_Name
-      value: Options Menu Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589043525647016465, guid: 5b9fa490291da254aaf2d2dbed02b8df,
-        type: 3}
-      propertyPath: m_Name
-      value: Options Menu Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589043525647016465, guid: 5b9fa490291da254aaf2d2dbed02b8df,
-        type: 3}
-      propertyPath: m_Name
-      value: Options Menu Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 5431979037652984425, guid: f059d66bfefc16e4bb939de7180e4be8,
         type: 3}
