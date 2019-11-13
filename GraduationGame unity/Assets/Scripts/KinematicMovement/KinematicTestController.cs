@@ -114,10 +114,8 @@ namespace KinematicTest.controller
         private bool jumpFromWallRequested = false;
         private float ledgeGrabJumpHeight = 2;
         private float ledgeGrabAirMoveSpeed = 5;
-        [SerializeField]
-        private bool forward;
-        [HideInInspector]
-        public static GameObject ledgeGrabbed = null;
+        [SerializeField] private bool forward;
+        [HideInInspector] public static GameObject ledgeGrabbed = null;
         private bool canFallFromLedgeAfterDelay;
         private float timeAtLastGrab;
         private bool teleporting;
@@ -125,7 +123,7 @@ namespace KinematicTest.controller
         //World changes
         private float _timeSinceTransitioning;
         private float transitionTime = 2f;
-        
+
         // Settings
         public PlayerControllerSettings settings;
 
@@ -134,20 +132,22 @@ namespace KinematicTest.controller
         public WorldForward CurrentWorldForward;
         public Vector3 Gravity = new Vector3(0, -10f, 0);
         private float ledgeGrabGravityMultiplier = 0f;
+        public bool fixMMBreakCamera;
+
 
         //This will later be scriptable object
         [Header("Sound settings")] public AK.Wwise.Event jumpSound;
 
         public AK.Wwise.Event landSound;
         bool canChangeMidAir = true;
-        
+
         //Collision event because KCC doesn't like unity's collisions
         public IntEvent SpikeDamageEvent;
         public bool _justTookDamage;
         public float _timeSinceDamageTaken;
         public bool canTakeDamage;
         public float damageResetTimer;
-        
+
         void Init()
         {
             canChangeMidAir = settings.canChangeDirectionsMidair;
@@ -255,6 +255,12 @@ namespace KinematicTest.controller
                         break;
                 }
                 case PlayerStates.Tired:
+                {
+                    stopped = true;
+                    rampingDown = false;
+                    MaxStableMoveSpeed = 0f;
+                    curveStep = 0f;
+                    if (forward)
                     {
                         stopped = false;
                         rampingDown = false;
@@ -264,27 +270,29 @@ namespace KinematicTest.controller
                         {
                             MaxAirMoveSpeed = settings.ledgeGrabForwardAirMoveSpeed;
                             JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.ledgeGrabForwardJumpHeight * settings.baseGravity *
+
                                                Motor.Capsule.height);
-                        }
-                        else
-                        {
-                            MaxAirMoveSpeed = settings.ledgeGrabBackwardsAirMoveSpeed;
-                            JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.ledgeGrabBackwardsJumpHeight * settings.baseGravity *
-                                               Motor.Capsule.height);
-                        }
-                        
-                        
-                        break;
                     }
-                case PlayerStates.Falling:
+                    else
                     {
-                        stopped = true;
-                        rampingDown = false;
-                        MaxAirMoveSpeed = 0;
-                        MaxStableMoveSpeed = 0f;
-                        curveStep = 0f;
-                        break;
+                        MaxAirMoveSpeed = settings.ledgeGrabBackwardsAirMoveSpeed;
+                        JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.ledgeGrabBackwardsJumpHeight *
+                                               settings.baseGravity *
+                                               Motor.Capsule.height);
                     }
+
+
+                    break;
+                }
+                case PlayerStates.Falling:
+                {
+                    stopped = true;
+                    rampingDown = false;
+                    MaxAirMoveSpeed = 0;
+                    MaxStableMoveSpeed = 0f;
+                    curveStep = 0f;
+                    break;
+                }
             }
         }
 
@@ -337,18 +345,18 @@ namespace KinematicTest.controller
             if (CurrentCharacterState == PlayerStates.NoInput)
                 return;
 
-            
+
             if (inputs.slideDown && CurrentCharacterState == PlayerStates.Running &&
                 Motor.GroundingStatus.FoundAnyGround)
             {
                 TransitionToState(PlayerStates.Sliding);
             }
+
             if (inputs.slideDown && CurrentCharacterState == PlayerStates.LedgeGrabbing)
             {
                 TransitionToState(PlayerStates.Falling);
             }
 
-            
 
             if (canChangedirection && inputs.changeDirection)
             {
@@ -370,6 +378,7 @@ namespace KinematicTest.controller
 
                 //isRunningRight = !isRunningRight;
             }
+
             if (CurrentCharacterState == PlayerStates.LedgeGrabbing && inputs.changeDirection)
             {
                 forward = false;
@@ -380,7 +389,6 @@ namespace KinematicTest.controller
                 jumpFromWallRequested = true;
                 _timeSinceJumpRequested = 0f;
                 _jumpRequested = true;
-                
             }
 
             //runningRight = isRunningRight ? 1 : -1 ;
@@ -416,6 +424,9 @@ namespace KinematicTest.controller
             // Move and look inputs
             _moveInputVector = moveInputVector;
 
+            //Capsule rotation, delete this to unfuck old camerafollow
+            if (fixMMBreakCamera)
+                _lookInputVector = _moveInputVector.normalized;
             if (inputs.jumpDown)
             {
                 _timeSinceJumpRequested = 0f;
@@ -427,6 +438,7 @@ namespace KinematicTest.controller
                     jumpFromWallRequested = true;
                 }
             }
+
             if (inputs.stopDown)
             {
                 TransitionToState(PlayerStates.Idling);
@@ -457,6 +469,7 @@ namespace KinematicTest.controller
                     break;
                 }
             }
+
             if (_justTookDamage)
             {
                 canTakeDamage = false;
@@ -499,7 +512,6 @@ namespace KinematicTest.controller
         /// </summary>
         public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)
         {
-            
             Vector3 targetMovementVelocity = Vector3.zero;
             if (Motor.GroundingStatus.IsStableOnGround)
             {
@@ -692,6 +704,7 @@ namespace KinematicTest.controller
                     if (currentVelocity.y < -hangTimeVelocityThreshold)
                         Gravity = fallGravity * baseGravity;
                 }
+
                 if (CurrentCharacterState == PlayerStates.LedgeGrabbing)
                 {
                     Gravity = baseGravity * ledgeGrabGravityMultiplier;
@@ -721,6 +734,7 @@ namespace KinematicTest.controller
                             {
                                 TransitionToState(PlayerStates.Running);
                             }
+
                             Motor.ForceUnground(0.1f);
 
                             // Add to the return velocity and reset jump state
@@ -731,12 +745,13 @@ namespace KinematicTest.controller
                             _jumpedThisFrame = true;
                         }
                     }
+
                     if (jumpFromWallRequested)
                     {
                         jumpFromWallRequested = false;
                         Motor.ForceUnground(0.1f);
                         currentVelocity += (Motor.CharacterUp * JumpSpeed) -
-                                               Vector3.Project(currentVelocity, Motor.CharacterUp);
+                                           Vector3.Project(currentVelocity, Motor.CharacterUp);
                         _jumpRequested = false;
                         _jumpedThisFrame = false;
                     }
@@ -851,11 +866,12 @@ namespace KinematicTest.controller
                     }
                     case PlayerStates.LedgeGrabbing:
                     {
-                            if (canFallFromLedgeAfterDelay && timeAtLastGrab + timeBeforeFallFromLedge <= Time.time)
-                            {
-                                timeAtLastGrab = Time.time;
-                                TransitionToState(PlayerStates.Tired);
-                            }
+                        if (canFallFromLedgeAfterDelay && timeAtLastGrab + timeBeforeFallFromLedge <= Time.time)
+                        {
+                            timeAtLastGrab = Time.time;
+                            TransitionToState(PlayerStates.Tired);
+                        }
+
                         break;
                     }
                 }
@@ -868,19 +884,17 @@ namespace KinematicTest.controller
             }
             if (teleporting)
             {
-
                 teleporting = false;
-                if (runningRight != (int)ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().zoeShouldBeFacing)
+                if (runningRight != (int) ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().zoeShouldBeFacing)
                 {
                     Debug.Log("Facing wrong direction");
                     runningRight *= -1;
                     curveStep = 0;
                     forward = false;
                 }
-                Motor.SetPosition(ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().offset + ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position);
 
-                
-
+                Motor.SetPosition(ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().offset +
+                                  ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position);
             }
         }
 
@@ -901,9 +915,9 @@ namespace KinematicTest.controller
         public void OnMovementHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
             ref HitStabilityReport hitStabilityReport)
         {
-            if (hitCollider.CompareTag("Ledge") && Time.time > (timeAtLastLedgeGrab + graceTimeBeforeHangAgain))// && hitNormal.y == 0 && Mathf.Sign(hitNormal.x) == -Mathf.Sign(runningRight))
+            if (hitCollider.CompareTag("Ledge") && Time.time > (timeAtLastLedgeGrab + graceTimeBeforeHangAgain)
+            ) // && hitNormal.y == 0 && Mathf.Sign(hitNormal.x) == -Mathf.Sign(runningRight))
             {
-                
                 if (CurrentCharacterState == PlayerStates.Sliding)
                 {
                     ledgeGrabbed = hitCollider.gameObject;
@@ -928,7 +942,6 @@ namespace KinematicTest.controller
                     TransitionToState(PlayerStates.LedgeGrabbing);
                     teleporting = true;
                 }
-                
             }
 
             if (hitCollider.CompareTag("Wall") && CurrentCharacterState != PlayerStates.Idling &&
@@ -981,7 +994,8 @@ namespace KinematicTest.controller
             jumpInitiated = false;
             Debug.Log("Landed");
 
-            if (CurrentCharacterState == PlayerStates.Idling || CurrentCharacterState == PlayerStates.Falling || CurrentCharacterState == PlayerStates.Tired)
+            if (CurrentCharacterState == PlayerStates.Idling || CurrentCharacterState == PlayerStates.Falling ||
+                CurrentCharacterState == PlayerStates.Tired)
             {
                 stopped = false;
                 TransitionToState(PlayerStates.Running);
