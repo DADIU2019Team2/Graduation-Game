@@ -17,8 +17,10 @@ public class CheckpointManager : MonoBehaviour
         ourCurrentCheckpoint.SetPosToSave(checkpoint);
         currentCheckpointPos = myCurrentCheckpoint.position;
     }
+
     public static Vector3 GetCurerntCheckpoint()
     {
+        if (myCurrentCheckpoint == null) return Vector3.zero;
         return myCurrentCheckpoint.position;
     }
 }
