@@ -248,11 +248,10 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.LedgeGrabbing:
                 {
-                        timeAtLastGrab = Time.time;
-                        MaxAirMoveSpeed = 0;
-                        MaxStableMoveSpeed = 0;
-                        stopped = false;
-                        break;
+                    timeAtLastGrab = Time.time;
+                    MaxAirMoveSpeed = 0;
+                    MaxStableMoveSpeed = 0;
+                    break;
                 }
                 case PlayerStates.Tired:
                 {
@@ -262,15 +261,9 @@ namespace KinematicTest.controller
                     curveStep = 0f;
                     if (forward)
                     {
-                        stopped = false;
-                        rampingDown = false;
-                        MaxStableMoveSpeed = 0f;
-                        curveStep = 0f;
-                        if (forward)
-                        {
-                            MaxAirMoveSpeed = settings.ledgeGrabForwardAirMoveSpeed;
-                            JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.ledgeGrabForwardJumpHeight * settings.baseGravity *
-
+                        MaxAirMoveSpeed = settings.ledgeGrabForwardAirMoveSpeed;
+                        JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.ledgeGrabForwardJumpHeight *
+                                               settings.baseGravity *
                                                Motor.Capsule.height);
                     }
                     else
