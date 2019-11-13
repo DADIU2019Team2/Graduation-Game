@@ -251,11 +251,12 @@ namespace KinematicTest.controller
                         timeAtLastGrab = Time.time;
                         MaxAirMoveSpeed = 0;
                         MaxStableMoveSpeed = 0;
+                        stopped = false;
                         break;
                 }
                 case PlayerStates.Tired:
                     {
-                        stopped = true;
+                        stopped = false;
                         rampingDown = false;
                         MaxStableMoveSpeed = 0f;
                         curveStep = 0f;
