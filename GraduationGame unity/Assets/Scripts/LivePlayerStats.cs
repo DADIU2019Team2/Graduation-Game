@@ -52,8 +52,9 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
         playerStats.resetStamina();
         isDead = false;
 
-        if(CheckpointManager.GetCurerntCheckpoint() != null)
+        if(CheckpointManager.GetCurerntCheckpoint() != Vector3.zero)
         {
+            Debug.Log(CheckpointManager.GetCurerntCheckpoint());
             GetComponentInParent<KinematicTestController>().Motor.SetPosition(CheckpointManager.GetCurerntCheckpoint());
         }
         else
