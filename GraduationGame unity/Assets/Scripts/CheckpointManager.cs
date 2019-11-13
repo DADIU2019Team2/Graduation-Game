@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class CheckpointManager : MonoBehaviour
 {
-    [SerializeField] private Transform currentCheckpoint;
+    private static Transform myCurrentCheckpoint;
+    [SerializeField] private SaveTransform ourCurrentCheckpoint;
 
     void SetCurrentCheckpoint(Transform checkpoint)
     {
-        currentCheckpoint = checkpoint;
+        Debug.Log("Checkpoint type = " + checkpoint.GetType());
+        myCurrentCheckpoint = checkpoint;
+        //Transform checkpointToSave = checkpoint;
+        //ourCurrentCheckpoint.SetTransformToSave(checkpointToSave);
+        ourCurrentCheckpoint.SetPosToSave(checkpoint);
+    }
+    public static Vector3 GetCurerntCheckpoint()
+    {
+        return myCurrentCheckpoint.position;
     }
 }
