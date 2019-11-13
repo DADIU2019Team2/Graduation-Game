@@ -50,9 +50,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	2967932086	Lazer_Wall			\Default Work Unit\SFX\Lazer_Wall	
 	2988481851	Stop_Lazer_Wall			\Default Work Unit\Stop_Events\Stop_Lazer_Wall	
 	3004230381	Stop_Alien_Crystal_Hum			\Default Work Unit\Stop_Events\Stop_Alien_Crystal_Hum	
-	3006425172	Stop_Machine_2			\Default Work Unit\Stop_Events\Stop_Machine_2	
-	3006425173	Stop_Machine_3			\Default Work Unit\Stop_Events\Stop_Machine_3	
-	3006425175	Stop_Machine_1			\Default Work Unit\Stop_Events\Stop_Machine_1	
 	3058963576	Stop_Death_Saw			\Default Work Unit\Stop_Events\Stop_Death_Saw	
 	3086540886	StopAll			\Default Work Unit\StopAll	
 	3303975224	Play_Zone4_Music			\Default Work Unit\Music\Play_Zone4_Music	
@@ -87,6 +84,9 @@ Effect plug-ins	ID	Name	Type				Notes
 	34896524	Wwise_Parametric_EQ_(Custom)	Wwise Parametric EQ			
 	508227036	Wwise_Peak_Limiter_(Custom)	Wwise Peak Limiter			
 	603110791	Wwise_Parametric_EQ_(Custom)	Wwise Parametric EQ			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	705150058	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Objects\Spiky_Machine_Impact\Spiky_Machine_Silence\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	7699699	Z1_Ascending_Metal	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Ascending_Metal_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Ascending_Metal		251281
@@ -140,7 +140,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	503665789	Z4_Noisy_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Noisy_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Noisy_Arp		326437
 	515939369	Alien_Door	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Stone_Door_Hum_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Objects\Alien_Door		135716
 	523264904	Ambience_Z2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Ambience_Z2_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambience\Ambience_Z2		432543
-	537809517	Spiky_Machine_Impact	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Spiky_Machine_Impact_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Objects\Spiky_Machine_Impact		27293
+	537809517	Spiky_Machine_Impact_Sound	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Spiky_Machine_Impact_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Objects\Spiky_Machine_Impact\Spiky_Machine_Impact_Sound		27293
 	561551880	Jump_Takeoff_3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Takeoff_3_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Takeoff\Jump_Takeoff_3		8463
 	569405528	Z4_Kick	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Kick_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Kick		324954
 	577677076	Jump_Hu_7	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Hu_7_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jumps_Blend\Jumps_Voice_PH\Jump_Hu_7		3813

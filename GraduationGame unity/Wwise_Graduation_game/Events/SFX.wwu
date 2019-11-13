@@ -36,17 +36,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Spiky_Machine_Impact" ID="{FA1A9416-EA98-4B47-8E77-B507C2D3C9FF}">
-					<ChildrenList>
-						<Action Name="" ID="{A8A61B03-C05B-4F35-8FB0-BA3E22243571}" ShortID="133384345">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Spiky_Machine_Impact" ID="{362DD740-EC91-4B96-8D86-983B0F7EDE20}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Death_Ray" ID="{8E9C3026-81C6-4DE1-8048-C912CA7744E9}">
 					<ChildrenList>
 						<Action Name="" ID="{375617DB-3750-4649-8266-781735E910A6}" ShortID="609934770">
@@ -306,6 +295,27 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Lazer_Small" ID="{337BA794-2D56-4058-947D-37E2907BDB61}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Spiky_Machine_Impact" ID="{473E286A-2FF2-4CE7-AD70-B71E9F62F487}">
+					<ChildrenList>
+						<Action Name="" ID="{0DE801AC-8ABA-427A-BCE2-D8225B61BF8A}" ShortID="935894143">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Spiky_Machine_Impact" ID="{16711FF7-8780-4AA3-A430-CD343AB646A5}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B7208A47-3C94-4D94-8CA7-39A9400A31CC}" ShortID="161566648">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Machines" ID="{4643D5D3-2033-4C5E-ACEC-2737CDA4AF16}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
