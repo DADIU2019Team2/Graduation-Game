@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 46b9b48e03261564597982c118381109
+guid: 02efd3d1588a4d545a7f0bf923d77153
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
   - first:
-      74: 4021862496738799233
-    second: jump_mario_start
+      74: 6460488166018158885
+    second: ledgeLand
   - first:
-      74: 8869930210680540736
-    second: jump_mario_air
+      74: -4427912534113637176
+    second: ledgeLoop
   - first:
-      74: -8258543331152026098
-    second: jump_mario_land
+      74: -239349781343127737
+    second: ledgeJump
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -29,18 +29,18 @@ ModelImporter:
       copied configuration does not match position in animation file:\n\t'Head' :
       position error = 77.547409 mm\nCopied Avatar Rig Configuration mis-match. Inbetween
       bone rotation in copied configuration does not match rotation in animation file:\n\t'Spine2'
-      : rotation error = 13.199324 deg\n"
+      : rotation error = 16.361931 deg\n"
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'jump_mario_start' has import animation warnings
-      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'Spine2' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\nClip 'jump_mario_air'
+    animationImportWarnings: "\nClip 'ledgeLand' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Spine2' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\nClip 'ledgeLoop' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Spine2' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\nClip 'ledgeJump'
       has import animation warnings that might lower retargeting quality:\nNote: Activate
       translation DOF on avatar to improve retargeting quality.\n\t'Spine2' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\nClip
-      'jump_mario_land' has import animation warnings that might lower retargeting
-      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine2'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+      humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -54,39 +54,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: jump_mario_start
-      takeName: jump_mario_start
-      internalID: 4021862496738799233
+      name: ledgeLand
+      takeName: ledgeLand
+      internalID: 6460488166018158885
       firstFrame: 0
-      lastFrame: 7
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: jump_mario_air
-      takeName: jump_mario_air
-      internalID: 8869930210680540736
-      firstFrame: 7
       lastFrame: 22
       wrapMode: 0
       orientationOffsetY: 0
@@ -99,7 +70,7 @@ ModelImporter:
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 1
       heightFromFeet: 0
@@ -112,11 +83,40 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: jump_mario_land
-      takeName: jump_mario_land
-      internalID: -8258543331152026098
+      name: ledgeLoop
+      takeName: ledgeLoop
+      internalID: -4427912534113637176
       firstFrame: 22
-      lastFrame: 27
+      lastFrame: 82
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ledgeJump
+      takeName: ledgeJump
+      internalID: -239349781343127737
+      firstFrame: 82
+      lastFrame: 118
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -128,9 +128,9 @@ ModelImporter:
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
