@@ -11,7 +11,6 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
     public float currentHealth;
     public float currentStamina;
 
-    [SerializeField] private SaveTransform currentCheckpoint;
     public Vector3 currentSpawnPosition;
 
     private void Awake()
@@ -55,7 +54,7 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
 
         if(CheckpointManager.GetCurerntCheckpoint() != null)
         {
-            GetComponentInParent<KinematicTestController>().Motor.SetPosition(currentCheckpoint.GetPosToSave());
+            GetComponentInParent<KinematicTestController>().Motor.SetPosition(CheckpointManager.GetCurerntCheckpoint());
         }
         else
         {
