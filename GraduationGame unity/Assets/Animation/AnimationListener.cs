@@ -26,7 +26,7 @@ public class AnimationListener : MonoBehaviour
         bool directionLeft = testController.Motor.BaseVelocity.x < 0;
         //bool directionRight = testController.Motor.BaseVelocity.x > 0;
 
-        Debug.Log("Controller velocity is " + testController.Motor.BaseVelocity.x);
+        //Debug.Log("Controller velocity is " + testController.Motor.BaseVelocity.x);
         animator.SetBool("isSliding", false);
         animator.SetBool("isFalling", false);
         animator.SetBool("inAir", false);

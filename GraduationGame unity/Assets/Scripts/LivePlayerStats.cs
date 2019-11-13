@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using KinematicTest.controller;
 
 public class LivePlayerStats : MonoBehaviour, IOnSceneReset
 {
@@ -10,8 +11,17 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
     public float currentHealth;
     public float currentStamina;
 
-    
-    
+    public Vector3 currentSpawnPosition;
+
+    private void Awake()
+    {
+        currentSpawnPosition = transform.parent.position;
+    }
+    private void Update()
+    {
+
+    }
+
     public void TakeDamage(int damage)
     {
         Debug.Log(damage + " damage taken");
@@ -42,6 +52,7 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
         playerStats.resetStamina();
         isDead = false;
 
+        GetComponentInParent<KinematicTestController>().Motor.SetPosition(currentSpawnPosition);
         playerStats.SetCurrentZoeRecolor(playerStats.selectedSkin); //Ensures that the player sets the selected skin on levelStart 
     }
 
