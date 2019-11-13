@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
 public class Checkpoint : MonoBehaviour
 {
+    //private enum ZoeFacedirection { Right, Left};
+    //[SerializeField] private ZoeFacedirection forwardDirection;
     [SerializeField] private Transform spawnPoint;
 
     private BoxCollider trigger;
