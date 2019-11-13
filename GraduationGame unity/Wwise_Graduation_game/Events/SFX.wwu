@@ -3,7 +3,7 @@
 	<Events>
 		<WorkUnit Name="SFX" ID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" OwnerID="{4948A3B8-CE28-48A8-BAD5-AE38D8DAE02B}" PersistMode="Nested">
 			<ChildrenList>
-				<Event Name="Play_Saw" ID="{35E0AE0A-240F-4C7A-9D84-ACBF0F85C5CA}">
+				<Event Name="Saw" ID="{35E0AE0A-240F-4C7A-9D84-ACBF0F85C5CA}">
 					<ChildrenList>
 						<Action Name="" ID="{63DAE47A-7540-4DF9-ABE1-CBF3E3F1E924}" ShortID="388915968">
 							<ReferenceList>
@@ -14,7 +14,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Electricity" ID="{07B84FFB-DF69-4B47-A5DD-4B13B64279A6}">
+				<Event Name="Electricity" ID="{07B84FFB-DF69-4B47-A5DD-4B13B64279A6}">
 					<ChildrenList>
 						<Action Name="" ID="{69CDC6E5-B976-4B43-8B8F-327294BE6042}" ShortID="556501628">
 							<ReferenceList>
@@ -25,18 +25,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Lazer" ID="{357B47B4-C9F6-4C34-A63F-60BBB9B3045E}">
-					<ChildrenList>
-						<Action Name="" ID="{B9F6A9D6-7469-4CE1-87B0-168E206DBA84}" ShortID="15090544">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Lazer" ID="{8A6D128D-8073-491E-ACA7-94C6926C8B50}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Robot_Appearence" ID="{F6F38557-5413-4948-ABFB-578E08336A56}">
+				<Event Name="Robot_Appearence" ID="{F6F38557-5413-4948-ABFB-578E08336A56}">
 					<ChildrenList>
 						<Action Name="" ID="{3C40EC87-837A-4819-B774-C82DE501EF50}" ShortID="153223300">
 							<ReferenceList>
@@ -47,78 +36,286 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Impact_SpikyPlatform" ID="{FEC49892-FAEF-4BA9-8F79-44231065B453}">
+				<Event Name="Death_Ray" ID="{8E9C3026-81C6-4DE1-8048-C912CA7744E9}">
 					<ChildrenList>
-						<Action Name="" ID="{08E86EDE-B124-46B1-8CD9-43FC75389DF7}" ShortID="523200377">
+						<Action Name="" ID="{375617DB-3750-4649-8266-781735E910A6}" ShortID="609934770">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Impact_SpikyPlatform" ID="{2DC157D5-0391-4961-9CDA-6A2566AEB9CA}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+									<ObjectRef Name="Death_Ray" ID="{04FF552B-0E25-4E94-B51E-7D5DCABB88E2}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Machine_2" ID="{08B514CA-0076-45D7-92F8-270614F07686}">
+				<Event Name="Platform_Pillar_Damaged" ID="{0B6E0311-8366-4F3C-8456-51DE5E8409C6}">
 					<ChildrenList>
-						<Action Name="" ID="{38735F39-7199-4368-828A-4F43CFD4278D}" ShortID="464277336">
+						<Action Name="" ID="{A0DACCF4-C06E-40EA-90D8-5642D89DC961}" ShortID="1005306374">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Machine_2" ID="{6EDD6488-7081-4D9B-834D-32C4B90D591D}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+									<ObjectRef Name="Platform_Pillar_Damaged" ID="{CA8EBC55-EB65-45E3-98CD-31E2AA537A2A}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Machine_1" ID="{84A6146F-375B-4CE9-A9F3-AB4A354A5032}">
+				<Event Name="Ball_Platform_Damaged" ID="{67274C19-DB4D-463A-9423-2718D36DFA8C}">
 					<ChildrenList>
-						<Action Name="" ID="{DDB491A8-2452-4E60-BAA9-3140470B5668}" ShortID="457820459">
+						<Action Name="" ID="{E0CCF459-A19F-483C-A00A-5C542600456E}" ShortID="502473498">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Machine_1" ID="{C438D3BC-D874-49DE-814E-977819CCE93B}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+									<ObjectRef Name="Ball_Platform_Damaged" ID="{29341B66-1FA3-41F1-AE64-4AA22A372746}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Machine_3" ID="{7AFF3947-D288-46E8-8061-B6934E78E5B0}">
+				<Event Name="Ball_Platform" ID="{557EDDD9-6F9C-4979-8E12-70029808E553}">
 					<ChildrenList>
-						<Action Name="" ID="{D7A32D29-2BE4-4BAE-AEAB-B8DDF06D28C2}" ShortID="857766518">
+						<Action Name="" ID="{C2963658-99B3-494F-9331-F6E5F849D2F7}" ShortID="775484539">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Machine_3" ID="{40882591-CF8F-4FD8-8932-4D08C69CDB32}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+									<ObjectRef Name="Ball_Platform" ID="{EF296AEF-19BB-4D4B-95E4-48ABB6AB61C8}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Platform_1" ID="{AC3DB8A9-12C4-4160-BAE9-0E50984F920C}">
+				<Event Name="Lazer_Wall_Power_Down" ID="{C155A593-B010-4D90-8E54-AC00943D5339}">
 					<ChildrenList>
-						<Action Name="" ID="{2315B924-68EE-4465-9E21-21FADD9540DF}" ShortID="458707639">
+						<Action Name="" ID="{15FC4338-91F6-4813-943C-B0431A4277E4}" ShortID="266379914">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Platform_1" ID="{B941C1EA-0243-40B9-9407-2ECD63E04B58}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+									<ObjectRef Name="Lazer_Wall_Power_Down" ID="{2E9B4FFE-D5EA-4070-BEBF-41CEA21A14F5}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Platform_2" ID="{14DE8EFF-1C0E-4C1D-B643-819330D8F72E}">
+				<Event Name="Lazer_Wall" ID="{6C9F5CEB-56EF-4CF0-8D96-05AB8AF624D6}">
 					<ChildrenList>
-						<Action Name="" ID="{AA848189-0BF0-4597-ADCA-D0173774489B}" ShortID="194684463">
+						<Action Name="" ID="{A23D8710-912E-41B9-9ADE-B8D6FC47B7B4}" ShortID="669411605">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Platform_2" ID="{31021567-8229-488A-9772-F593108CA720}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+									<ObjectRef Name="Lazer_Wall" ID="{CB33FFBF-14A8-4D9F-B379-194AF4884304}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Platform_3" ID="{1B579D0B-724B-4452-BBE4-385250485466}">
+				<Event Name="Alien_Platform_Pillar" ID="{8C5BA525-80B8-4DFD-A610-FDB65B084385}">
 					<ChildrenList>
-						<Action Name="" ID="{5F34E10F-59CB-4E1B-96DB-AC8FBEC6342E}" ShortID="934756064">
+						<Action Name="" ID="{D7FC280B-299E-4310-BA6C-B3F1A8E68677}" ShortID="697932768">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Platform_3" ID="{781650EA-B683-43A0-BD9F-2D1DEE18373F}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+									<ObjectRef Name="Alien_Platform_Pillar" ID="{D5B6907D-D7C0-402C-B34B-F7062DEA2FBE}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Crusher_Idle" ID="{47C33E17-5F5D-42D1-91EF-6621ADC3A0C8}">
+					<ChildrenList>
+						<Action Name="" ID="{0C889C94-B487-42F8-8C12-A4E39A022EF5}" ShortID="250671467">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Crusher_Idle" ID="{1C639154-FB9E-489F-9658-76429EA128BE}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Crystal_Door_Hum" ID="{68F228A9-403C-472B-95F2-1EEAE208CAF0}">
+					<ChildrenList>
+						<Action Name="" ID="{D236A9BE-5565-4FFD-9E67-B59A9AEAC28D}" ShortID="333171559">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Crystal_Door_Hum" ID="{C671D9AC-FE91-4AFC-9582-BD5F2021AFA7}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Crystal_Door_Open" ID="{9A245332-B126-4CC0-B1D9-41A4B49358BA}">
+					<ChildrenList>
+						<Action Name="" ID="{0AC7E36A-EF6D-4DBB-9328-237D4DC1FB01}" ShortID="393824060">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Crystal_Door_Open" ID="{01A43730-700A-469E-B430-8A519D3D6B27}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Alien_Death_Trap" ID="{98E9CA5F-475E-4B81-B531-5DD3F8629354}">
+					<ChildrenList>
+						<Action Name="" ID="{B3D09BEF-88F8-49CB-ABD7-DC9C2C68355B}" ShortID="160387499">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Alien_Death_Trap" ID="{17CF7D43-923D-47A2-868A-25F057DD5B10}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Alien_Door_Open" ID="{13390F14-DF91-49D5-B050-7C1FF78A2403}">
+					<ChildrenList>
+						<Action Name="" ID="{BD4CBDEB-950B-4618-BCB6-38FC5C480DF4}" ShortID="813512106">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Alien_Door_Open" ID="{7ED771EB-30FB-4B3A-B6BE-2C261BDD2576}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Alien_Door" ID="{8A1BFBB9-EB30-4B40-B055-989F77C4C671}">
+					<ChildrenList>
+						<Action Name="" ID="{A2449693-36CA-44EC-ABEF-9BE9FAE1F75A}" ShortID="140426943">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Alien_Door" ID="{2167FE49-7625-4C3A-9658-7A9A9A9B2ACF}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Death_Saw" ID="{CBC7CF92-8B40-416D-86B9-25D5D033DE28}">
+					<ChildrenList>
+						<Action Name="" ID="{28DCC35E-B1F1-4FB4-8EC4-BA34D2868C42}" ShortID="894404163">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Death_Saw" ID="{55DA53C5-AC1D-45CE-B89F-7504A9367F93}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Sentinel_Lazer" ID="{E6808DF9-3AA5-45D6-AAFC-7FB7D10437BA}">
+					<ChildrenList>
+						<Action Name="" ID="{E7009477-8307-46E6-A3B4-336F91D5B244}" ShortID="184763627">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sentinel_Lazer" ID="{C0AD2A14-D04B-4E1D-A581-518B49901588}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Alien_Crystal_Hum" ID="{24B4C17E-41B5-4992-BE43-71ACB3F812F7}">
+					<ChildrenList>
+						<Action Name="" ID="{E29F0522-E3B6-40E6-9E73-D991FFA2D7BF}" ShortID="108946132">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Alien_Crystal_Hum" ID="{EFBB7324-676A-4E2D-B494-E47C0645D834}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Spike_Lazer_Pyramid_Cone" ID="{8F10ABBF-BAF2-4B5F-88DB-96A8EE08BDFA}">
+					<ChildrenList>
+						<Action Name="" ID="{342CD9A9-D571-47BC-B664-AC1D5E00C571}" ShortID="824519185">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Spike_Lazer_Pyramid_Cone" ID="{4C839FBA-4118-44FD-AF99-B967637B0BA6}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Alien_Platforms" ID="{ED52D294-2C80-4260-89AC-C876877496BF}">
+					<ChildrenList>
+						<Action Name="" ID="{58B65172-78B2-42C6-96DC-14E995C31204}" ShortID="1014841229">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Alien_Platforms" ID="{32728F1B-6D63-47A8-B616-16065792CD81}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Damaged_Platforms" ID="{ED1766F7-E1AC-40CB-A75E-31E8C79B95F7}">
+					<ChildrenList>
+						<Action Name="" ID="{16FA9E83-FA6E-416E-B034-581AC9B12F9E}" ShortID="585021533">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Damaged_Platforms" ID="{28478D72-D064-4D80-A17F-AA16B022C2DD}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Machines" ID="{CE4B0348-3522-4E8C-AA5B-478F25EB5AF2}">
+					<ChildrenList>
+						<Action Name="" ID="{78C01FB0-62FB-4F11-A95F-FD25E62A1F7B}" ShortID="181596758">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Machines" ID="{4643D5D3-2033-4C5E-ACEC-2737CDA4AF16}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Normal_Platforms" ID="{D5A44E0D-6B3E-45D8-AAD6-D77AD9A6ED1B}">
+					<ChildrenList>
+						<Action Name="" ID="{98263A3F-99DF-4790-8FCF-9E151C36513E}" ShortID="865712377">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Normal_Platforms" ID="{BB6BA9E7-9924-4150-B203-70DB06177922}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lazer_Big" ID="{50DE7AB8-C05C-4EE3-B2C8-C7C23D5269CA}">
+					<ChildrenList>
+						<Action Name="" ID="{91EEA5D3-5E5A-47BD-8AAC-23032DB99F8F}" ShortID="850671826">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lazer_Big" ID="{FEBED9D5-ACF5-4E31-9B77-369203BB9819}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lazer_Med" ID="{5CFBD5EF-9237-433F-9F56-E432D4E7975B}">
+					<ChildrenList>
+						<Action Name="" ID="{CF04EA1E-5A03-476F-B616-5D1900C63FD6}" ShortID="1009174394">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lazer_Med" ID="{D908A11B-D5B6-4A73-B74E-AAEDD188EB9B}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lazer_Small" ID="{DCE07BF8-1DC5-4EC3-B6DF-3EDFFCD6CD71}">
+					<ChildrenList>
+						<Action Name="" ID="{9B64292F-7307-469B-84AA-69F7C7DCF59D}" ShortID="729528390">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lazer_Small" ID="{337BA794-2D56-4058-947D-37E2907BDB61}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Spiky_Machine_Impact" ID="{473E286A-2FF2-4CE7-AD70-B71E9F62F487}">
+					<ChildrenList>
+						<Action Name="" ID="{0DE801AC-8ABA-427A-BCE2-D8225B61BF8A}" ShortID="935894143">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Spiky_Machine_Impact" ID="{16711FF7-8780-4AA3-A430-CD343AB646A5}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B7208A47-3C94-4D94-8CA7-39A9400A31CC}" ShortID="161566648">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Machines" ID="{4643D5D3-2033-4C5E-ACEC-2737CDA4AF16}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
