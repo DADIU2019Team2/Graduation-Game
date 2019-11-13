@@ -6,7 +6,7 @@ public class MusicZone2 : MonoBehaviour
 {
     // Start is called before the first frame update
     
-    void awake 
+    void Awake()
     {
         AkSoundEngine.PostEvent("StopAll", gameObject);
     }
