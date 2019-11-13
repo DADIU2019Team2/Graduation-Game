@@ -143,10 +143,10 @@ namespace KinematicTest.controller
 
         //Collision event because KCC doesn't like unity's collisions
         public IntEvent SpikeDamageEvent;
-        public bool _justTookDamage;
-        public float _timeSinceDamageTaken;
-        public bool canTakeDamage;
-        public float damageResetTimer;
+        private bool _justTookDamage;
+        private float _timeSinceDamageTaken;
+        private bool canTakeDamage;
+        private float damageResetTimer;
 
         void Init()
         {
@@ -183,6 +183,8 @@ namespace KinematicTest.controller
             timeBeforeFallFromLedge = settings.timeBeforeFallFromLedge;
             AllowDoubleJump = settings.AllowDoubleJump;
             AllowJumpingWhenSliding = settings.AllowJumpingWhenSliding;
+
+            damageResetTimer = settings.invincibilityTime;
         }
 
         private void Start()
@@ -674,7 +676,49 @@ namespace KinematicTest.controller
                         {
                             targetMovementVelocity = _moveInputVector * MaxAirMoveSpeed;
                             AirAccelerationSpeed = MaxAirMoveSpeed;
-                            break;
+                                if (canChangeMidAir)
+                                {
+                                    if (rampingDown)
+                                    {
+                                        if (curveStep < 1)
+                                        {
+                                            curveStep += (1 / rampDownTime * Time.deltaTime);
+                                        }
+
+                                        if (curveStep >= 1)
+                                        {
+                                            curveStep = 0;
+                                            rampingDown = false;
+                                            runningRight = runningRight * -1;
+                                            //scarf.transform.Rotate(Vector3.up, 180);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (curveStep < 1)
+                                        {
+                                            curveStep += (1 / rampUpTime * Time.deltaTime);
+                                        }
+
+                                        if (curveStep > 1)
+                                        {
+                                            curveStep = 1;
+                                        }
+                                    }
+
+                                    if (!stopped)
+                                    {
+                                        if (rampingDown)
+                                        {
+                                            AirAccelerationSpeed = MaxAirMoveSpeed * rampDownCurve.Evaluate(curveStep);
+                                        }
+                                        else
+                                        {
+                                            AirAccelerationSpeed = MaxAirMoveSpeed * rampUpCurve.Evaluate(curveStep);
+                                        }
+                                    }
+                                }
+                                break;
                         }
 
                         case PlayerStates.Sliding:
@@ -886,7 +930,8 @@ namespace KinematicTest.controller
                     curveStep = 0;
                     forward = false;
                 }
-
+                Debug.Log("POS : " + (ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().offset +
+                                  ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position).ToString());
                 Motor.SetPosition(ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().offset +
                                   ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position);
             }
