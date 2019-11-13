@@ -248,6 +248,7 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.LedgeGrabbing:
                 {
+                        stopped = false;
                     timeAtLastGrab = Time.time;
                     MaxAirMoveSpeed = 0;
                     MaxStableMoveSpeed = 0;
@@ -255,7 +256,7 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.Tired:
                 {
-                    stopped = true;
+                    stopped = false;
                     rampingDown = false;
                     MaxStableMoveSpeed = 0f;
                     curveStep = 0f;
