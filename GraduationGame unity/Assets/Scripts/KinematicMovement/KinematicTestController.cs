@@ -414,7 +414,9 @@ namespace KinematicTest.controller
             Vector3 moveInputVector = worldMoveDirection * runningRight;
             // Move and look inputs
             _moveInputVector = moveInputVector;
-
+            
+            //Capsule rotation, delete this to unfuck old camerafollow
+            _lookInputVector = _moveInputVector.normalized;
             if (inputs.jumpDown)
             {
                 _timeSinceJumpRequested = 0f;
