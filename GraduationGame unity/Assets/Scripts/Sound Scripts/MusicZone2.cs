@@ -8,7 +8,7 @@ public class MusicZone2 : MonoBehaviour
     
     void Awake() 
     {
-        AkSoundEngine.PostEvent("StopAll", gameObject);
+        AkSoundEngine.StopAll();
     }
     void Start()
     {
