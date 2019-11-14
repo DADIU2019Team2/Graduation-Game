@@ -8,7 +8,6 @@ public class GameSave
     public static GameSave currentSave = null;
 
     public int lastCompletedLevel;
-    public int checkPointToStartFrom;
     public bool isDoubleJumpUnlocked;
     public static Dictionary<string, bool> unlockables = new Dictionary<string, bool>()
     {
@@ -18,6 +17,7 @@ public class GameSave
         {"skin2", false},
     };
     
+    public static int skinIndexUsed = 0;
 
     public GameSave()
     {
@@ -30,10 +30,10 @@ public class GameSave
 
     public void CompletedLevel(int level)
     {
-        if (SceneManager.GetActiveScene().buildIndex > lastCompletedLevel)
+        if (SceneManager.GetActiveScene().buildIndex-LoadOnStartup.mainMenuIndex > lastCompletedLevel)
         {
-            GameSave.currentSave.lastCompletedLevel = SceneManager.GetActiveScene().buildIndex;
-            UpdateCheckPoint(0);
+            GameSave.currentSave.lastCompletedLevel = SceneManager.GetActiveScene().buildIndex-LoadOnStartup.mainMenuIndex;
+            
         }
     }
 
@@ -58,11 +58,6 @@ public class GameSave
             return unlockables[key];
         }
         return false;
-    }
-
-    public void UpdateCheckPoint(int checkPoint)
-    {
-        currentSave.checkPointToStartFrom = checkPoint;
     }
 
 }
