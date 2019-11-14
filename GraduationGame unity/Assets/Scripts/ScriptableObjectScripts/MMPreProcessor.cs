@@ -215,7 +215,7 @@ public class MMPreProcessor : ScriptableObject
     {
         var controller =
             UnityEditor.Animations.AnimatorController.CreateAnimatorControllerAtPath(
-                "Assets/AnimatorControllers/MMStates.controller");
+                "Assets/AnimatorController/MMStates.controller");
         // Add StateMachines
         var rootStateMachine = controller.layers[0].stateMachine;
         rootStateMachine.AddState("Empty State");
