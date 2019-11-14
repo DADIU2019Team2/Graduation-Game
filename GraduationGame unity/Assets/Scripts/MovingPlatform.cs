@@ -92,13 +92,13 @@ public class MovingPlatform : MonoBehaviour, IMoverController, IOnSceneReset
 
     }
 
-    void Update()
+    /*void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             resetPlatform();
         }
-    }
+    }*/
 
     public void UpdateMovement(out Vector3 goalPosition, out Quaternion goalRotation, float deltatime)
     {
