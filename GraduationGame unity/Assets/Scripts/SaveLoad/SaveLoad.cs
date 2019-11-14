@@ -8,10 +8,11 @@ using System.IO;
 public class SaveLoad
 {
     public static GameSave saveGame = new GameSave();
+    
 
     public static void Save()
     {
-        GameSave.currentSave.lastCompletedLevel = SceneManager.GetActiveScene().buildIndex;
+        GameSave.currentSave.lastCompletedLevel = SceneManager.GetActiveScene().buildIndex - LoadOnStartup.mainMenuIndex;
         Debug.Log("SAVING");
         saveGame = GameSave.currentSave;
         BinaryFormatter bf = new BinaryFormatter();
@@ -32,7 +33,7 @@ public class SaveLoad
         }
         else
         {
-            Debug.Log("Doest not exist");
+            Debug.Log("Does not exist");
         }
             GameSave.currentSave = saveGame;
     }
