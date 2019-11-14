@@ -29,6 +29,7 @@ public class SaveLoad
             FileStream file = File.Open(Application.persistentDataPath + "/savedGames.gd", FileMode.Open);
             SaveLoad.saveGame = (GameSave)bf.Deserialize(file);
             GameSave.currentSave = SaveLoad.saveGame;
+            Debug.Log(GameSave.currentSave + "current save?");
             file.Close();
         }
         else

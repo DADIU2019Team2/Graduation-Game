@@ -11,6 +11,9 @@ public class LoadOnStartup : MonoBehaviour
     {
         mainMenuIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
         SaveLoad.Load();
+        Debug.Log(GameSave.currentSave.lastCompletedLevel);
+        Debug.Log(GameSave.currentSave.GetUnlocks(Unlockables.skin1));
+        Debug.Log(GameSave.currentSave.GetUnlocks(Unlockables.skin2));
     }
 
     

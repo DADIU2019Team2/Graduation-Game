@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+[System.Serializable]
 public class GameSave
 {
     public static GameSave currentSave = null;
 
     public int lastCompletedLevel;
     public bool isDoubleJumpUnlocked;
-    public static Dictionary<string, bool> unlockables = new Dictionary<string, bool>()
+    public Dictionary<string, bool> unlockables = new Dictionary<string, bool>()
     {
         //The things the player can unlock
         {"DoubleJump", false},
@@ -28,12 +30,22 @@ public class GameSave
         }
     }
 
+    public static GameSave GetGameSave()
+    {
+        if (currentSave == null)
+        {
+        currentSave = new GameSave();
+
+        }
+        return currentSave;
+    }
+
     public void CompletedLevel(int level)
     {
         if (SceneManager.GetActiveScene().buildIndex-LoadOnStartup.mainMenuIndex > lastCompletedLevel)
         {
             GameSave.currentSave.lastCompletedLevel = SceneManager.GetActiveScene().buildIndex-LoadOnStartup.mainMenuIndex;
-            
+            SaveLoad.Save();
         }
     }
 
@@ -45,17 +57,19 @@ public class GameSave
     //update whether the player has unlocked something or not
     public void UpdateUnlocks(Unlockables key, bool value)
     {
-        if (unlockables.ContainsKey(key.ToString()))
+        Debug.Log(currentSave.unlockables.Keys + "current save");
+        if (GameSave.currentSave.unlockables.ContainsKey(key.ToString()))
         {
-            unlockables[key.ToString()] = value;
+            GameSave.currentSave.unlockables[key.ToString()] = value;
         }
     }
     //check whether the player has unlocked something or not
-    public bool GetUnlocks(string key)
+    public bool GetUnlocks(Unlockables key)
     {
-        if (unlockables.ContainsKey(key))
+        Debug.Log("null??" + currentSave.lastCompletedLevel);
+        if (currentSave.unlockables.ContainsKey(key.ToString()))
         {
-            return unlockables[key];
+            return currentSave.unlockables[key.ToString()];
         }
         return false;
     }
