@@ -56,7 +56,8 @@ public class AnimationSwitcher : MonoBehaviour
                 {
                     if (characterController.GetIsJumpingOnPurpose())
                     {
-                        // set jump anim
+                            // set jump anim
+                            animator.SetTrigger("jump");
                     }
                     else
                     {
@@ -67,8 +68,8 @@ public class AnimationSwitcher : MonoBehaviour
                 }
                 case PlayerStates.LedgeGrabbing:
                 {
-                    //set ledge grab
-
+                        //set ledge grab
+                        animator.SetBool("isSliding", true);
                     break;
                 }
                 case PlayerStates.Tired:
