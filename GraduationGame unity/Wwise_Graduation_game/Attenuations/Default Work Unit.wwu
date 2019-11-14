@@ -3,14 +3,14 @@
 	<Attenuations>
 		<WorkUnit Name="Default Work Unit" ID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}" PersistMode="Standalone">
 			<ChildrenList>
-				<Attenuation Name="Objects_Att" ID="{1D7B40D2-725B-429B-BE06-CD107C74D69B}" ShortID="727265636">
+				<Attenuation Name="Objects" ID="{D15F0187-7C97-468C-B661-AFF4655367AB}" ShortID="151507591">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="70"/>
+						<Property Name="RadiusMax" Type="Real64" Value="15"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-								<Curve Name="VolumeDry" ID="{3BFA3251-C7DD-4E01-8577-75D4F34811B9}">
+								<Curve Name="VolumeDry" ID="{4BB566D3-337D-4C71-A7C1-D62DC964649B}">
 									<PropertyList>
 										<Property Name="Flags" Type="int32" Value="3"/>
 									</PropertyList>
@@ -21,32 +21,22 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>13.333334</XPos>
-											<YPos>-0.29053</YPos>
+											<XPos>7.45239</XPos>
+											<YPos>0</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>27.111112</XPos>
-											<YPos>-1.20838</YPos>
+											<XPos>10.04762</XPos>
+											<YPos>-1.35801</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>40.444446</XPos>
-											<YPos>-2.73041</YPos>
+											<XPos>12.90476</XPos>
+											<YPos>-6.0206</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>53.555558</XPos>
-											<YPos>-5.68433</YPos>
-											<Flags>0</Flags>
-										</Point>
-										<Point>
-											<XPos>61.111113</XPos>
-											<YPos>-11.53718</YPos>
-											<Flags>0</Flags>
-										</Point>
-										<Point>
-											<XPos>70</XPos>
+											<XPos>15</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -62,7 +52,7 @@
 						</VolumeWetUserUsage>
 						<LowPassFilterUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-								<Curve Name="LowPassFilter" ID="{C5D0B6D9-B286-4396-BBDE-CCCFA2017154}">
+								<Curve Name="LowPassFilter" ID="{7519A3E6-DC20-4B34-8F4F-58D52B0871E9}">
 									<PropertyList>
 										<Property Name="Flags" Type="int32" Value="65537"/>
 									</PropertyList>
@@ -73,22 +63,27 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>12.88889</XPos>
-											<YPos>44</YPos>
+											<XPos>0.54762</XPos>
+											<YPos>34</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>28.222222</XPos>
-											<YPos>77</YPos>
+											<XPos>1.61905</XPos>
+											<YPos>58</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>44.777775</XPos>
-											<YPos>93</YPos>
+											<XPos>3.95238</XPos>
+											<YPos>87</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>70</XPos>
+											<XPos>7.5</XPos>
+											<YPos>100</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>15</XPos>
 											<YPos>100</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -101,7 +96,7 @@
 						</HighPassFilterUsage>
 						<SpreadUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-								<Curve Name="Spread" ID="{7CC2E400-E15F-4676-B950-76AEB16890C1}">
+								<Curve Name="Spread" ID="{AC755B8C-1925-484C-A2B4-678B3BCC4EDE}">
 									<PropertyList>
 										<Property Name="Flags" Type="int32" Value="1"/>
 									</PropertyList>
@@ -112,27 +107,22 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>21.555555</XPos>
+											<XPos>5.04762</XPos>
 											<YPos>100</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>32.666669</XPos>
-											<YPos>93.42105</YPos>
+											<XPos>9.38095</XPos>
+											<YPos>88.15789</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>43.555554</XPos>
-											<YPos>72.36842</YPos>
+											<XPos>13.16667</XPos>
+											<YPos>52.63158</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>60.333336</XPos>
-											<YPos>44.73684</YPos>
-											<Flags>0</Flags>
-										</Point>
-										<Point>
-											<XPos>70</XPos>
+											<XPos>15</XPos>
 											<YPos>0</YPos>
 											<Flags>37</Flags>
 										</Point>
