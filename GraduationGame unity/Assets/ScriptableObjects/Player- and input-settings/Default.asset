@@ -20,8 +20,8 @@ MonoBehaviour:
   maxMoveSpeed: 10
   StableMovementSharpness: 20
   OrientationSharpness: 10
-  rampUpTime: 1.5
-  rampDownTime: 0.04
+  rampUpTime: 0.5
+  rampDownTime: 0.5
   rampUpCurve:
     serializedVersion: 2
     m_Curve:
@@ -96,7 +96,7 @@ MonoBehaviour:
   idleJumpHeight: 1.5
   idleAirMoveSpeed: 5
   slideMoveSpeed: 9
-  slideJumpHeight: 0
+  slideJumpHeight: 1.5
   slideDuration: 1
   decelerateWhileSliding: 1
   slideCurve:
@@ -124,12 +124,13 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   canFallFromLedgeAfterDelay: 0
-  timeBeforeFallFromLedge: 0
+  timeBeforeFallFromLedge: 0.2
   graceTimeBeforeHangAgain: 0.2
   ledgeGrabForwardJumpHeight: 1
   ledgeGrabForwardAirMoveSpeed: 6
   ledgeGrabBackwardsJumpHeight: 3
-  ledgeGrabBackwardsAirMoveSpeed: 12
+  ledgeGrabBackwardsAirMoveSpeed: 10
+  invincibilityTime: 0
   canChangeDirectionsMidair: 1
   AllowDoubleJump: 0
   AllowJumpingWhenSliding: 0
