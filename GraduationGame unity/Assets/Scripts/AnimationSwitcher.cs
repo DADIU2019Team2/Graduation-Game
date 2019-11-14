@@ -2,13 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using KinematicTest.controller;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class AnimationSwitcher : MonoBehaviour
 {
-    public AnimatorController mmStates;
-    public AnimatorController interactionStates;
+    public RuntimeAnimatorController mmStates;
+    public RuntimeAnimatorController interactionStates;
     public MMAnimationController mmAnimatorController;
     public KinematicTestController characterController;
 
