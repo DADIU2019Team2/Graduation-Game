@@ -22,11 +22,4 @@ public class MusicZone2 : MonoBehaviour
 
         AkSoundEngine.PostEvent("Play_Ambience_Z2", gameObject);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 }

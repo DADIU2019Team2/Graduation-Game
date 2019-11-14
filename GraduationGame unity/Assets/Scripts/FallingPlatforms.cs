@@ -11,6 +11,7 @@ public class FallingPlatforms : MonoBehaviour, IOnSceneReset
     private Quaternion initalRotation;
     private bool initialUseGravity;
     private bool initialIsActive;
+    private bool isFalling;
 
     private void Awake()
     {
@@ -19,18 +20,25 @@ public class FallingPlatforms : MonoBehaviour, IOnSceneReset
         initialPosition = transform.position;
         initialIsActive = gameObject.activeSelf;
         initialUseGravity = rb.useGravity;
+        isFalling = initialUseGravity;
     }
-    private void OnCollisionEnter(Collision collision)
+    /*private void OnCollisionEnter(Collision collision)
     {
         //FallingPlatforms
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
-        {
+        //if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        //{
+        //}
+    }*/
+
+    public void startFallingPlatform()
+    {
+        if(!isFalling)
             StartCoroutine(startFalling(fallDelayTime));
-        }
     }
 
     IEnumerator startFalling(float delay)
     {
+        isFalling = true;
         //Do some animation here ?
         yield return new WaitForSeconds(delay);
         rb.useGravity = true;        
@@ -38,9 +46,11 @@ public class FallingPlatforms : MonoBehaviour, IOnSceneReset
 
     public void OnResetLevel()
     {
+        rb.useGravity = initialUseGravity;
+        isFalling = false;
+        rb.velocity = Vector3.zero;
         transform.position = initialPosition;
         transform.rotation = initalRotation;
-        rb.useGravity = initialUseGravity;
         gameObject.SetActive(initialIsActive);
     }
 }
