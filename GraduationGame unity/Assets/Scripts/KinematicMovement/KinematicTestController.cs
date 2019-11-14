@@ -1011,6 +1011,11 @@ namespace KinematicTest.controller
                 SpikeDamageEvent.Raise(damage);
                 _justTookDamage = true;
             }
+            else if (hitCollider.CompareTag("FallingPlatform"))
+            {
+                FallingPlatforms fallingPlatform = hitCollider.gameObject.GetComponent<FallingPlatforms>();
+                fallingPlatform.startFallingPlatform();
+            }
         }
 
         public void PostGroundingUpdate(float deltaTime)
