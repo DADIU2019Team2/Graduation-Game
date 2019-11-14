@@ -1690,158 +1690,10 @@
 							</ValueList>
 						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-						<Property Name="UseMaxSoundPerInstance" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<Custom CreatedFrom="{D15F0187-7C97-468C-B661-AFF4655367AB}">
-								<Attenuation Name="Objects (Custom)" ID="{0071E160-FF1C-4271-BF80-F62F7305E04C}" ShortID="34472373">
-									<PropertyList>
-										<Property Name="RadiusMax" Type="Real64" Value="50"/>
-									</PropertyList>
-									<CurveUsageInfoList>
-										<VolumeDryUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-												<Curve Name="VolumeDry" ID="{FD7B331E-8B30-4E9C-9845-A732936115E9}">
-													<PropertyList>
-														<Property Name="Flags" Type="int32" Value="3"/>
-													</PropertyList>
-													<PointList>
-														<Point>
-															<XPos>0</XPos>
-															<YPos>-5.15128</YPos>
-															<Flags>5</Flags>
-														</Point>
-														<Point>
-															<XPos>11.11009</XPos>
-															<YPos>-4.36111</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>21.66665</XPos>
-															<YPos>-3.55044</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>26.90478</XPos>
-															<YPos>-3.78449</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>32.14285</XPos>
-															<YPos>-1.15985</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>36.58733</XPos>
-															<YPos>0</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>50</XPos>
-															<YPos>0</YPos>
-															<Flags>37</Flags>
-														</Point>
-													</PointList>
-												</Curve>
-											</CurveUsageInfo>
-										</VolumeDryUsage>
-										<VolumeWetGameUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-										</VolumeWetGameUsage>
-										<VolumeWetUserUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-										</VolumeWetUserUsage>
-										<LowPassFilterUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-												<Curve Name="LowPassFilter" ID="{E8868289-0049-47B9-903D-3882DFEAF3B0}">
-													<PropertyList>
-														<Property Name="Flags" Type="int32" Value="65537"/>
-													</PropertyList>
-													<PointList>
-														<Point>
-															<XPos>0</XPos>
-															<YPos>39</YPos>
-															<Flags>5</Flags>
-														</Point>
-														<Point>
-															<XPos>13.09472</XPos>
-															<YPos>43</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>20.47618</XPos>
-															<YPos>43</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>29.12698</XPos>
-															<YPos>28</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>40.47622</XPos>
-															<YPos>0</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>50</XPos>
-															<YPos>0</YPos>
-															<Flags>37</Flags>
-														</Point>
-													</PointList>
-												</Curve>
-											</CurveUsageInfo>
-										</LowPassFilterUsage>
-										<HighPassFilterUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-										</HighPassFilterUsage>
-										<SpreadUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-												<Curve Name="Spread" ID="{A039B898-FE4F-4D9E-BEF1-DC7D5E43A445}">
-													<PropertyList>
-														<Property Name="Flags" Type="int32" Value="1"/>
-													</PropertyList>
-													<PointList>
-														<Point>
-															<XPos>0</XPos>
-															<YPos>100</YPos>
-															<Flags>5</Flags>
-														</Point>
-														<Point>
-															<XPos>16.8254</XPos>
-															<YPos>100</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>31.2698333333333</XPos>
-															<YPos>88.15789</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>43.8889</XPos>
-															<YPos>52.63158</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>50</XPos>
-															<YPos>0</YPos>
-															<Flags>37</Flags>
-														</Point>
-													</PointList>
-												</Curve>
-											</CurveUsageInfo>
-										</SpreadUsage>
-										<FocusUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-										</FocusUsage>
-									</CurveUsageInfoList>
-								</Attenuation>
-							</Custom>
+							<ObjectRef Name="Objects" ID="{D15F0187-7C97-468C-B661-AFF4655367AB}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
@@ -2766,7 +2618,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>3</Value>
+										<Value>8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -3013,7 +2865,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>11</Value>
+										<Value>12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -3056,7 +2908,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>10</Value>
+										<Value>12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
