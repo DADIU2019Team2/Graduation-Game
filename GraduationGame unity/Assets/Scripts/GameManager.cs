@@ -136,7 +136,7 @@ public class GameManager : MonoBehaviour
                 break;
 
         }
-        Debug.Log("Time scale = " + Time.timeScale);
+        //Debug.Log("Time scale = " + Time.timeScale);
     }
 
     public static GameStateScriptableObject.GameState GetGameState()
