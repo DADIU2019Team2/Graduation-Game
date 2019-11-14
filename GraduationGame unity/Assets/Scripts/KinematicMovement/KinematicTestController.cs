@@ -1095,6 +1095,11 @@ namespace KinematicTest.controller
             }
         }
 
+        public bool GetIsJumpingOnPurpose()
+        {
+            return jumpInitiated;
+        }
+
         public void MidLevelTransition(int dir)
         {
             Debug.Log(dir);
