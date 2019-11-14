@@ -39,6 +39,11 @@ public class GameManager : MonoBehaviour
     {
         callOnce = true;
         isSceneLoadTransition = false;
+
+        if (playerMovementController == null)
+        {
+            playerMovementController = FindObjectOfType<KinematicTestController>();
+        }
     }
 
     // Update is called once per frame
