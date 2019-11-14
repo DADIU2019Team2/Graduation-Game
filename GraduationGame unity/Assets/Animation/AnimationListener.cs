@@ -25,6 +25,7 @@ public class AnimationListener : MonoBehaviour
         //bool isFalling = testController.Motor.BaseVelocity.y < -0.2f ? true : false;
         bool directionLeft = testController.Motor.BaseVelocity.x < 0;
         //bool directionRight = testController.Motor.BaseVelocity.x > 0;
+        float airVelocity = testController.Motor.BaseVelocity.y;
 
         //Debug.Log("Controller velocity is " + testController.Motor.BaseVelocity.x);
         animator.SetBool("isSliding", false);
@@ -39,14 +40,14 @@ public class AnimationListener : MonoBehaviour
         {
             animator.SetBool("directionLeft", true);
             animator.SetBool("directionRight", false);
-            transform.rotation = Quaternion.Euler(0, -90, 0);
+            //transform.rotation = Quaternion.Euler(0, -90, 0);
             
         }
         else
         {
             animator.SetBool("directionRight", true);
             animator.SetBool("directionLeft", false);
-            transform.rotation = Quaternion.Euler(0, 90, 0);
+            //transform.rotation = Quaternion.Euler(0, 90, 0);
         }
         if (isJumping)
         {
