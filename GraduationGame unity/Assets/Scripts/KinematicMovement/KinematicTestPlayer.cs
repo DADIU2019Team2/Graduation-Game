@@ -21,11 +21,15 @@ namespace KinematicTest.player
         private const string HorizontalInput = "Horizontal";
         private const string VerticalInput = "Vertical";
 
-       
+
 
         private void Start()
         {
             //Cursor.lockState = CursorLockMode.Locked;
+            if (Character == null)
+            {
+                Character = FindObjectOfType<KinematicTestController>();
+            }
         }
 
         private void Update()
@@ -54,7 +58,7 @@ namespace KinematicTest.player
 
             // Input for zooming the camera (disabled in WebGL because it can cause problems)
             float scrollInput = -Input.GetAxis(MouseScrollInput);
-            
+
 
         }
 
@@ -81,21 +85,21 @@ namespace KinematicTest.player
             swipeType = InputManager.GetMostRecentInputType();
             PlayerCharacterInputs characterInputs = new PlayerCharacterInputs();
             switch (swipeType)
-                {
-                    case InputManager.SwipeType.swipeForwardUp:
+            {
+                case InputManager.SwipeType.swipeForwardUp:
                     characterInputs.jumpDown = true;
-                        break;
-                    case InputManager.SwipeType.swipeBackwards:
+                    break;
+                case InputManager.SwipeType.swipeBackwards:
                     characterInputs.changeDirection = true;
-                        break;
-                    case InputManager.SwipeType.swipeDown:
+                    break;
+                case InputManager.SwipeType.swipeDown:
                     characterInputs.slideDown = true;
-                        break;
-                }
+                    break;
+            }
             Character.SetInputs(ref characterInputs);
 
         }
 
     }
-    
+
 }

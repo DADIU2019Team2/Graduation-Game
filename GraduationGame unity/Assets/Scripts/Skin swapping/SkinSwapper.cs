@@ -45,6 +45,7 @@ public class SkinSwapper : MonoBehaviour
     public void SetSkinFromMainMenu(int skinIndex)
     {
         playerStats.selectedSkin = skinIndex;
+        GameSave.skinIndexUsed = skinIndex;
     }
 
     private void ChangeMaterialInRenderer(SkinnedMeshRenderer meshRenderer, Material material)
