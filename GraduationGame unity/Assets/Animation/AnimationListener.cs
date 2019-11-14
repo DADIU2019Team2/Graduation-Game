@@ -39,14 +39,14 @@ public class AnimationListener : MonoBehaviour
         {
             animator.SetBool("directionLeft", true);
             animator.SetBool("directionRight", false);
-            transform.rotation = Quaternion.Euler(0, -90, 0);
+            //transform.rotation = Quaternion.Euler(0, -90, 0);
             
         }
         else
         {
             animator.SetBool("directionRight", true);
             animator.SetBool("directionLeft", false);
-            transform.rotation = Quaternion.Euler(0, 90, 0);
+            //transform.rotation = Quaternion.Euler(0, 90, 0);
         }
         if (isJumping)
         {

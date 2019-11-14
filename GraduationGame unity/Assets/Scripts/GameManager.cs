@@ -99,6 +99,8 @@ public class GameManager : MonoBehaviour
                 }
                 if (transitionFader.getAlpha() == 1) //faded to black
                 {
+
+                    playerMovementController.TransitionToState(PlayerStates.Idling);
                     DoResetObjects();
                     ChangeGameState(GameStateScriptableObject.GameState.levelStart);
                 }
