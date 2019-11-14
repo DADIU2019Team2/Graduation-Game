@@ -72,9 +72,13 @@ public class MMAnimationController : MonoBehaviour
         weightNativeArray = new NativeArray<float>(weights, Allocator.Persistent);
 
 
-        StartMotionMatching();
+        
     }
 
+    private void Start()
+    {
+        StartMotionMatching();
+    }
 
     private void OnDisable()
     {
@@ -166,11 +170,19 @@ public class MMAnimationController : MonoBehaviour
         return (aLookup.Value == current && Mathf.Abs((aLookup.Key / 30f) - currentAnimTime) < threshold);
     }
 
-    private void StartMotionMatching()
+    public void StartMotionMatching()
     {
         if (isMotionMatchingRunning) return;
         StartCoroutine(nameof(QueryForPose));
         isMotionMatchingRunning = true;
+    }
+
+    public void StopMotionMatching()
+    {
+        if (!isMotionMatchingRunning) return;
+        StopCoroutine(nameof(QueryForPose));
+        isMotionMatchingRunning = false;
+        bestIndex = 0;
     }
 
     private void PlayAtUniqueFrame(int frame)
