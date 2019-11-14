@@ -72,9 +72,13 @@ public class MMAnimationController : MonoBehaviour
         weightNativeArray = new NativeArray<float>(weights, Allocator.Persistent);
 
 
-        StartMotionMatching();
+        
     }
 
+    private void Start()
+    {
+        StartMotionMatching();
+    }
 
     private void OnDisable()
     {
