@@ -88,7 +88,6 @@ public class InputManager : MonoBehaviour
                         }
                         isFacingRight = CharacterMovement.GetIsFacingRight();
                         mostRecentSwipeType = SwipeTypeOfAngle(swipeAngle, isFacingRight);
-
                         string mostRecentInput = mostRecentSwipeType == SwipeType.swipeDown ? "Down" : mostRecentSwipeType == SwipeType.swipeBackwards ? "Backwards" :
                          mostRecentSwipeType == SwipeType.swipeForwardUp ? "Forward" : "Unknown input";
                         if (inputText != null)
@@ -108,6 +107,9 @@ public class InputManager : MonoBehaviour
                     isDragging = false;
                     break;
             }
+
+
+
 
             timeDragged = isDragging ? timeDragged += Time.deltaTime : 0;
         }
