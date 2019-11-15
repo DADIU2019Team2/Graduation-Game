@@ -17,6 +17,7 @@ namespace KinematicTest.controller
         Tired,
         Falling,
         NoInput,
+        CinematicIdle,
     }
 
     public enum WorldForward
@@ -230,6 +231,14 @@ namespace KinematicTest.controller
                                            Motor.Capsule.height);
                     break;
                 }
+                case PlayerStates.CinematicIdle:
+                {
+                    stopped = true;
+                    rampingDown = false;
+                    MaxStableMoveSpeed = 0f;
+                    curveStep = 0f;
+                    break;
+                }
                 case PlayerStates.Sliding:
                 {
                     canChangedirection = false;
@@ -341,7 +350,14 @@ namespace KinematicTest.controller
         {
             if (CurrentCharacterState == PlayerStates.NoInput)
                 return;
-
+            if (CurrentCharacterState == PlayerStates.CinematicIdle)
+            {
+                if (inputs.changeDirection || inputs.slideDown || inputs.jumpDown)
+                {
+                    TransitionToState(PlayerStates.Running);
+                    return;
+                }
+            }
 
             if (inputs.slideDown && CurrentCharacterState == PlayerStates.Running &&
                 Motor.GroundingStatus.FoundAnyGround)
