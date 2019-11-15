@@ -13,7 +13,7 @@ public class UnlockedLevels : MonoBehaviour
 
     public void IsSceneUnlocked(int level)
     {
-        SaveLoad.saveGame.lastCompletedLevel = 5;
+        
         if (SaveLoad.saveGame.lastCompletedLevel >= level-1)
         {
             gameObject.GetComponent<Button>().interactable = true;

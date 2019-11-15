@@ -9,7 +9,7 @@ public class SaveGameEditor
     public static void Go()
     {
         string enumName = "Unlockables";
-        string[] enumEntries = GameSave.unlockables.Keys.ToArray();
+        string[] enumEntries = GameSave.currentSave.unlockables.Keys.ToArray();
         string filePathAndName = "Assets/Scripts/Enums/" + enumName + ".cs"; //The folder Scripts/Enums/ is expected to exist
 
         using (StreamWriter streamWriter = new StreamWriter(filePathAndName))
