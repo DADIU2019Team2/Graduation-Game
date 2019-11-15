@@ -49,7 +49,14 @@ public class AnimationSwitcher : MonoBehaviour
                 case PlayerStates.Sliding:
                 {
                     //set roll animation
-
+                    if (characterController.Motor.GroundingStatus.IsStableOnGround)
+                    {
+                        // roll jump
+                    }
+                    else
+                    {
+                        // regular roll
+                    }
                     break;
                 }
                 case PlayerStates.Running:
