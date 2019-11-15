@@ -2,20 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using KinematicTest.controller;
+using UnityEngine.Events;
 
 public class LivePlayerStats : MonoBehaviour, IOnSceneReset
 {
     public PlayerStats playerStats;
     private bool isDead;
 
-    public float currentHealth;
-    public float currentStamina;
+    //public float currentHealth;
+    //public float currentStamina;
 
     public Vector3 currentSpawnPosition;
+
+    public delegate void OnZoeTakeDamageDelegate();
+    public event OnZoeTakeDamageDelegate zoeTakeDamageEvent;
 
     private void Awake()
     {
         currentSpawnPosition = transform.parent.position;
+
     }
     private void Update()
     {
@@ -26,6 +31,8 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
     {
         Debug.Log(damage + " damage taken");
         playerStats.subtractHealth(damage);
+        if(zoeTakeDamageEvent != null)
+            zoeTakeDamageEvent();
         if (playerStats.getCurrentHealth() <= 0)
         {
             isDead = true;
@@ -46,8 +53,8 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
 
     public void OnResetLevel()
     {
-        currentHealth = playerStats.MaxHealth;
-        currentStamina = playerStats.MaxStamina;
+        //currentHealth = playerStats.MaxHealth;
+        //currentStamina = playerStats.MaxStamina;
         playerStats.resetHealth();
         playerStats.resetStamina();
         isDead = false;
