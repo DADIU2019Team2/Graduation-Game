@@ -96,7 +96,8 @@ namespace KinematicTest.controller
         private float MaxAirMoveSpeed;
         private float AirAccelerationSpeed;
         private float Drag = 0.1f;
-
+        private bool _JustLanded;
+        
         // Sliding
         private float _timeSinceStartedSliding;
         private float _slideCurveStep;
@@ -935,6 +936,8 @@ namespace KinematicTest.controller
                 Motor.SetPosition(ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().offset +
                                   ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position);
             }
+
+            _JustLanded = false;
         }
 
         public bool IsColliderValidForCollisions(Collider coll)
@@ -1033,6 +1036,7 @@ namespace KinematicTest.controller
 
         protected void OnLanded()
         {
+            _JustLanded = true;
             landSound.Post(gameObject);
             canChangedirection = true;
             jumpInitiated = false;
@@ -1120,6 +1124,11 @@ namespace KinematicTest.controller
         public bool GetCanTakeDamage()
         {
             return canTakeDamage;
+        }
+
+        public bool GetJustLanded()
+        {
+            return _JustLanded;
         }
     }
 }
