@@ -39,6 +39,11 @@ public class GameManager : MonoBehaviour
     {
         callOnce = true;
         isSceneLoadTransition = false;
+
+        if (playerMovementController == null)
+        {
+            playerMovementController = FindObjectOfType<KinematicTestController>();
+        }
     }
 
     // Update is called once per frame
@@ -179,13 +184,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void DialogueEnd()
+    public static void DialogueEnd()
     {
-
+        GameManager.ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
     }
 
-    public void DialogueStart()
+    public static void DialogueStart()
     {
-
+        GameManager.ChangeGameState(GameStateScriptableObject.GameState.cinematic);
     }
 }

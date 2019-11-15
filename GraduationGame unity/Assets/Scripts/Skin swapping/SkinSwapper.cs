@@ -36,8 +36,8 @@ public class SkinSwapper : MonoBehaviour
             {
                 ChangeMaterialInRenderer(mRend, recolor.zoeOutfitMaterial);
             }
-            scarfMat.material.SetColor("_colourAttr", recolor.scarfColor);
-            scarfParticleMat.GetComponent<ParticleSystemRenderer>().material.SetColor("_colourAttr", recolor.scarfParticleColor);
+            //scarfMat.material.SetColor("_colourAttr", recolor.scarfColor);
+            //scarfParticleMat.GetComponent<ParticleSystemRenderer>().material.SetColor("_colourAttr", recolor.scarfParticleColor);
             Debug.Log("Changed skin to skin #" + skinIndex);
         }
     }
@@ -45,6 +45,7 @@ public class SkinSwapper : MonoBehaviour
     public void SetSkinFromMainMenu(int skinIndex)
     {
         playerStats.selectedSkin = skinIndex;
+        GameSave.skinIndexUsed = skinIndex;
     }
 
     private void ChangeMaterialInRenderer(SkinnedMeshRenderer meshRenderer, Material material)

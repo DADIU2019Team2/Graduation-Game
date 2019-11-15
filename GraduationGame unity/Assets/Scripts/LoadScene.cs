@@ -39,4 +39,9 @@ public class LoadScene : MonoBehaviour
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         return currentScene;
     }
+
+    public void LoadSceneFromMainMenu(int level)
+    {
+        SceneManager.LoadScene(level+LoadOnStartup.mainMenuIndex);
+    }
 }
