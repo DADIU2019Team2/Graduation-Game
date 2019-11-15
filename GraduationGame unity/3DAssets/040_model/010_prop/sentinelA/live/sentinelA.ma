@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
-//Name: sentinelA_v001_AD.ma
-//Last modified: Fri, Nov 15, 2019 03:00:52 PM
+//Name: sentinelA.ma
+//Last modified: Fri, Nov 15, 2019 02:59:00 PM
 //Codeset: 1252
 requires maya "2019";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "3.1.2";
@@ -15,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "BDB0C3E7-4C4A-26CA-4CBE-128F2E72694B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2423.2001636607874 2738.8413761786451 -3878.3302133865623 ;
-	setAttr ".r" -type "double3" -26.738352729542569 -143.79999999999995 0 ;
+	setAttr ".t" -type "double3" -2112.8473074570434 937.05515952800192 1686.9695195546567 ;
+	setAttr ".r" -type "double3" -9.3383527295426116 -51.800000000000388 -1.2857824640400447e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4824D292-4D1B-EBA6-E3CF-FC8FDCD0D856";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 5115.2033493412146;
+	setAttr ".coi" 3079.1124704782947;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1591,19 +1591,19 @@ createNode mesh -n "sentinelA_geoShape" -p "sentinelA_geo";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "986AAAFA-487B-11ED-FE72-6881A947D3CC";
+	rename -uid "E9E80673-41B5-944C-69C5-9C80B6F2C01D";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "5C9708DF-4C18-EDB8-6F7D-5BA727740768";
+	rename -uid "C18C0FBB-48B4-D4E0-DC16-478DE40FD397";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "86828FE9-4F08-90EF-5A87-C9B89CE3556B";
+	rename -uid "65F192F1-445A-25CB-4850-6E85EE907EBC";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "0B9A0F10-4838-4846-9E28-3D91E4547EDD";
+	rename -uid "D287901B-46F0-C440-6599-B38FCDFD5CA9";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "9D09D220-4B6C-195B-8F4F-2BB6858A861F";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "6714C31F-4729-4C1F-9195-75AB3014034C";
+	rename -uid "E61AE049-4C76-1FB9-FCAA-7ABA2E25BCF5";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "CFE962A5-4C38-19F7-D387-9A9DE50AA72D";
 	setAttr ".g" yes;
@@ -1714,4 +1714,4 @@ connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "sentinelA_geoShape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
-// End of sentinelA_v001_AD.ma
+// End of sentinelA.ma
