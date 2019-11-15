@@ -33,7 +33,7 @@ Debug.Log("in sound collider");
     
         private void OnTriggerExit(Collider other)
     {
-        if (other.tag != "Player" || IsInCollider) { return; }
+        if (other.tag != "Player" || !IsInCollider) { return; }
         AkSoundEngine.PostEvent(StopEvent, gameObject);
         IsInCollider = false;
 Debug.Log("in sound collider");
