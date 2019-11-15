@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using KinematicCharacterController;
+using KinematicTest.controller;
 
 public class SmoothPlayerCamFollow : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
 
     void moveCam()
     {
-        worldOffset = playerToFollow.TransformDirection(localOffSet);
+        worldOffset = localOffSet;
         transform.position = Vector3.SmoothDamp(transform.position, playerToFollow.position + worldOffset, ref camVelocity, smoothTime);
     }
 
@@ -51,10 +52,12 @@ public class SmoothPlayerCamFollow : MonoBehaviour
 
     Vector3 updateDesiredLookAtPointWorld()
     {
-        //do some dynamic localPos infront of player
-        Vector3 charToFollowVelocity = charMotor.Velocity;
+        Vector3 charToFollowVelocity = Quaternion.Inverse(playerToFollow.rotation) *
+                                       Quaternion.Euler(0, 90 * KinematicTestController.runningRight, 0) *
+                                       charMotor.Velocity;
 
-        Vector3 dynamicLookAtPoint = new Vector3(charToFollowVelocity.x / 2, 0 + worldOffset.y, 0);
+        Vector3 dynamicLookAtPoint = new Vector3(0, 0 + worldOffset.y,
+            charToFollowVelocity.x / 2 * KinematicTestController.runningRight);
         //Debug.Log("Dynamic lookat point = " + dynamicLookAtPoint);
         float distToLookatPoint = Mathf.Clamp(dynamicLookAtPoint.magnitude, 0f, maxDistToLookAtPoint);
 

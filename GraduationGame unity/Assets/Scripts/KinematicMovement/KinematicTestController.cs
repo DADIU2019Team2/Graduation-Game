@@ -119,7 +119,8 @@ namespace KinematicTest.controller
         private bool canFallFromLedgeAfterDelay;
         private float timeAtLastGrab;
         private bool teleporting;
-
+        [SerializeField]
+        private bool _justJumped;
         //World changes
         private float _timeSinceTransitioning;
         private float transitionTime = 2f;
@@ -737,6 +738,8 @@ namespace KinematicTest.controller
                 Gravity = dropGravity * baseGravity;
                 if (jumpInitiated)
                 {
+                
+                    _justJumped = false;
                     if (currentVelocity.y < 0f)
                         Gravity = hangGravity * baseGravity;
                     if (currentVelocity.y < -hangTimeVelocityThreshold)
@@ -1037,6 +1040,7 @@ namespace KinematicTest.controller
             canChangedirection = true;
             jumpInitiated = false;
             Debug.Log("Landed");
+            
 
             if (CurrentCharacterState == PlayerStates.Idling || CurrentCharacterState == PlayerStates.Falling ||
                 CurrentCharacterState == PlayerStates.Tired)
@@ -1068,6 +1072,7 @@ namespace KinematicTest.controller
             }
 
             Debug.Log("Left ground");
+            _justJumped = true;
         }
 
         public void AddVelocity(Vector3 velocity)
@@ -1120,6 +1125,16 @@ namespace KinematicTest.controller
         public bool GetCanTakeDamage()
         {
             return canTakeDamage;
+        }
+
+        public bool GetJustLanded()
+        {
+            return _justJumped;
+        }
+
+        public bool GetLedgeForward()
+        {
+            return forward;
         }
     }
 }
