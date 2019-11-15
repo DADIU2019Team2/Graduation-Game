@@ -16,7 +16,7 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
 
     private void Awake()
     {
-        currentSpawnPosition = transform.parent.position;
+        //currentSpawnPosition = transform.parent.position;
     }
     private void Update()
     {
@@ -25,7 +25,7 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
 
     public void TakeDamage(int damage)
     {
-        Debug.Log(damage + " damage taken");
+        //Debug.Log(damage + " damage taken");
         playerStats.subtractHealth(damage);
         if (playerStats.getCurrentHealth() <= 0)
         {
@@ -41,7 +41,7 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
 
     public void Die()
     {
-        Debug.Log("git gud");
+        //Debug.Log("git gud");
         GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelLoss);
     }
 

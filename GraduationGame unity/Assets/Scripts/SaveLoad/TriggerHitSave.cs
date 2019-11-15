@@ -11,10 +11,9 @@ public class TriggerHitSave : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Game Done");
-            GameSave.currentSave.UpdateUnlocks(Unlockables.DoubleJump, true);
-            GameSave.currentSave.UpdateUnlocks(Unlockables.skin1, true);
-            GameSave.GetGameSave().CompletedLevel(0);
+            //Debug.Log("Game Done");
+            GameSave.GetGameSave().CompletedLevel();
+            LoadScene.LoadNextScene();
 
         }
     }

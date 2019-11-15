@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 public class GameSave
 {
-    public static GameSave currentSave = null;
+    public static GameSave currentSave = new GameSave();
 
     public int lastCompletedLevel;
     public bool isDoubleJumpUnlocked;
+    [SerializeField]
     public Dictionary<string, bool> unlockables = new Dictionary<string, bool>()
     {
         //The things the player can unlock
@@ -25,8 +26,16 @@ public class GameSave
     {
         if (currentSave == null)
         {
+            Debug.Log("is null");
             currentSave = this;
-           
+            unlockables = new Dictionary<string, bool>()
+        {
+            //The things the player can unlock
+            {"DoubleJump", false},
+            {"skin1", false },
+            {"skin2", false},
+        };
+
         }
     }
 
@@ -34,18 +43,30 @@ public class GameSave
     {
         if (currentSave == null)
         {
+            Debug.Log("didn't exits");
         currentSave = new GameSave();
 
+        }
+        else
+        {
+            Debug.Log("Did exist");
         }
         return currentSave;
     }
 
-    public void CompletedLevel(int level)
+    public void CompletedLevel()
     {
+        Debug.Log(SceneManager.GetActiveScene().buildIndex + " index");
+        Debug.Log(LoadOnStartup.mainMenuIndex + " main index");
         if (SceneManager.GetActiveScene().buildIndex-LoadOnStartup.mainMenuIndex > lastCompletedLevel)
         {
+            Debug.Log("completed level, will now save");
             GameSave.currentSave.lastCompletedLevel = SceneManager.GetActiveScene().buildIndex-LoadOnStartup.mainMenuIndex;
             SaveLoad.Save();
+        }
+        else
+        {
+        SaveLoad.Save();
         }
     }
 
@@ -57,16 +78,20 @@ public class GameSave
     //update whether the player has unlocked something or not
     public void UpdateUnlocks(Unlockables key, bool value)
     {
-        Debug.Log(currentSave.unlockables.Keys + "current save");
-        if (GameSave.currentSave.unlockables.ContainsKey(key.ToString()))
+        //Debug.Log(unlockables.Count + "count");
+        //Debug.Log(key.ToString() + "String");
+        if (currentSave.unlockables.ContainsKey(key.ToString()))
         {
-            GameSave.currentSave.unlockables[key.ToString()] = value;
+            currentSave.unlockables[key.ToString()] = value;
         }
     }
     //check whether the player has unlocked something or not
     public bool GetUnlocks(Unlockables key)
     {
-        Debug.Log("null??" + currentSave.lastCompletedLevel);
+        
+        //Debug.Log(key.ToString() + "String");
+        //Debug.Log(currentSave.lastCompletedLevel + "last completede");
+        bool temp = currentSave.unlockables.ContainsKey("skin1");
         if (currentSave.unlockables.ContainsKey(key.ToString()))
         {
             return currentSave.unlockables[key.ToString()];
