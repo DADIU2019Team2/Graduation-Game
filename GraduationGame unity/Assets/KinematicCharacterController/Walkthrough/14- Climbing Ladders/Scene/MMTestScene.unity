@@ -6637,6 +6637,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.17146313
       objectReference: {fileID: 0}
+    - target: {fileID: 1401035567507658930, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d5fcecccea39994bbe5cab7844bad81, type: 3}
 --- !u!1 &1969779640
@@ -7155,6 +7160,29 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2036361686}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2040775535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2485403387253820497, guid: 1d5fcecccea39994bbe5cab7844bad81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1940581296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2040775536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040775535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e663e97cf70bdf04e8aefd88d1a829b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mmStates: {fileID: 9100000, guid: fcbfa83832f2e274f86d1b1e88b5b662, type: 2}
+  interactionStates: {fileID: 9100000, guid: 65d4aa9dc9d823446896f9bc3937d7db, type: 2}
+  mmAnimatorController: {fileID: 1276314339}
+  characterController: {fileID: 1276314336}
+  animator: {fileID: 384408908}
 --- !u!1 &2042223240
 GameObject:
   m_ObjectHideFlags: 0

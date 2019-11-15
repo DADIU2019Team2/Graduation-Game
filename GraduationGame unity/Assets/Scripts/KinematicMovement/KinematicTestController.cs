@@ -1147,5 +1147,10 @@ namespace KinematicTest.controller
         {
             return _JustLanded;
         }
+
+        public bool GetLedgeForward()
+        {
+            return forward;
+        }
     }
 }
