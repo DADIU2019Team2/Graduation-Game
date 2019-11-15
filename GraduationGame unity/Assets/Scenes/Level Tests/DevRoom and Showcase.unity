@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -56,8 +56,8 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 10
-    m_BakeResolution: 30
-    m_AtlasSize: 512
+    m_BakeResolution: 20
+    m_AtlasSize: 1024
     m_AO: 1
     m_AOMaxDistance: 3
     m_CompAOExponent: 1
@@ -468,7 +468,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 1, g: 0.9887317, b: 0.958, a: 1}
+  m_Color: {r: 0.692, g: 0.6838588, b: 0.662149, a: 1}
   m_Intensity: 0.85
   m_Range: 10
   m_SpotAngle: 30
@@ -2711,16 +2711,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4084457269296486552, guid: fcde7562c549eff47af04addedafb455,
-        type: 3}
-      propertyPath: m_Name
-      value: DeathTrap
-      objectReference: {fileID: 0}
-    - target: {fileID: 4084457269296486552, guid: fcde7562c549eff47af04addedafb455,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 7289679079416705009, guid: fcde7562c549eff47af04addedafb455,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2775,6 +2765,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084457269296486552, guid: fcde7562c549eff47af04addedafb455,
+        type: 3}
+      propertyPath: m_Name
+      value: DeathTrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084457269296486552, guid: fcde7562c549eff47af04addedafb455,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcde7562c549eff47af04addedafb455, type: 3}
@@ -5813,6 +5813,126 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935087976242749445, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935087976242749445, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163776678425077577, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163776678425077577, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213361741329056018, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213361741329056018, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 969439134013458932, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 969439134013458932, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70201577382378344, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 70201577382378344, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867607036466064136, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867607036466064136, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400680608855229053, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400680608855229053, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636183299470038002, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636183299470038002, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031674900880646295, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031674900880646295, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867691555612335852, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867691555612335852, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289190616493239186, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289190616493239186, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416866664273516651, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416866664273516651, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f39a6dfcac2fc14aa3e62bc70a3e157, type: 3}
@@ -9880,6 +10000,126 @@ PrefabInstance:
     - target: {fileID: 2817570839883368542, guid: d6e6a99e540deb54b86d49e0428aae1b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250875307842429867, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250875307842429867, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 652017649345980778, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 905081776587840015, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 905081776587840015, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 444560414585916288, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3021949502882882159, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3021949502882882159, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3041750395761562006, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3041750395761562006, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447654694024976145, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447654694024976145, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633464847533590767, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633464847533590767, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971544810907840180, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971544810907840180, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197700145914849784, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197700145914849784, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485684269579530901, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485684269579530901, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732250700955516937, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732250700955516937, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ImportantGI
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7715719876736213749, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7715719876736213749, guid: d6e6a99e540deb54b86d49e0428aae1b,
+        type: 3}
+      propertyPath: m_ImportantGI
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
