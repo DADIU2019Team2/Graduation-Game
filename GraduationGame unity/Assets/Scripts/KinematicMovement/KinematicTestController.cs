@@ -145,7 +145,7 @@ namespace KinematicTest.controller
         public IntEvent SpikeDamageEvent;
         private bool _justTookDamage;
         private float _timeSinceDamageTaken;
-        private bool canTakeDamage;
+        private bool canTakeDamage = true;
         private float damageResetTimer;
 
         void Init()
@@ -1120,6 +1120,11 @@ namespace KinematicTest.controller
         public bool GetCanTakeDamage()
         {
             return canTakeDamage;
+        }
+
+        public float GetIFrameMaxDuration()
+        {
+            return settings.invincibilityTime;
         }
     }
 }
