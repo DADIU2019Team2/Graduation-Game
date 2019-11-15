@@ -17,6 +17,19 @@ public class LoadScene : MonoBehaviour
         }
     }
 
+    public static void LoadNextScene()
+    {
+        if (GetCurrentScene() + 1 < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(GetCurrentScene() + 1);
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
+
+
     public void loadPreviousScene()
     {
         if(getCurrentScene() - 1 > 0)
@@ -35,6 +48,12 @@ public class LoadScene : MonoBehaviour
     }
 
     private int getCurrentScene()
+    {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        return currentScene;
+    }
+
+    private static int GetCurrentScene()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         return currentScene;
