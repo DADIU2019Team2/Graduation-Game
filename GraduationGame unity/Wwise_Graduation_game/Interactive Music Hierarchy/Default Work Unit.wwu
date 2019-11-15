@@ -8,7 +8,7 @@
 						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>4</Value>
+								<Value>-1</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -85,20 +85,6 @@
 									<PropertyList>
 										<Property Name="OutputGain" Type="Real32" Value="-2"/>
 										<Property Name="Threshold" Type="Real32" Value="-15.7"/>
-									</PropertyList>
-								</Effect>
-							</Custom>
-						</Reference>
-						<Reference Name="Effect1">
-							<Custom>
-								<Effect Name="Wwise_Parametric_EQ_(Custom)" ID="{A642D534-DB92-489C-8685-213F136178DE}" ShortID="603110791" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
-									<PropertyList>
-										<Property Name="FilterTypeBand1" Type="int32" Value="3"/>
-										<Property Name="FilterTypeBand2" Type="int32" Value="3"/>
-										<Property Name="FrequencyBand1" Type="Real32" Value="505"/>
-										<Property Name="GainBand1" Type="Real32" Value="-4"/>
-										<Property Name="OnOffBand2" Type="bool" Value="False"/>
-										<Property Name="OnOffBand3" Type="bool" Value="False"/>
 									</PropertyList>
 								</Effect>
 							</Custom>
@@ -3750,14 +3736,6 @@
 							<CustomState>
 								<StateRef Name="Zone1" ID="{A79084B5-12A5-4A33-83C6-5BBF6B4D2972}"/>
 								<CustomState Name="" ID="{02867EB1-678A-4CA7-9799-498A06D98736}" ShortID="216114411"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="BossFight" ID="{F6FD7BB7-B09B-4B82-98E9-E8CFA23E5E94}"/>
-								<CustomState Name="" ID="{8BD8C054-4398-4661-86F4-16841E47B9CA}" ShortID="385572171"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="CrystalsFalling" ID="{39324D19-416A-4E47-A888-33B9922BE508}"/>
-								<CustomState Name="" ID="{91FBA6F9-010F-4928-9FF5-32E13DAB424C}" ShortID="257155024"/>
 							</CustomState>
 						</CustomStateList>
 					</StateInfo>
