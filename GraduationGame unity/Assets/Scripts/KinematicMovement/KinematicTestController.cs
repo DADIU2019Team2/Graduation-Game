@@ -1116,5 +1116,10 @@ namespace KinematicTest.controller
         {
             return _jumpedThisFrame;
         }
+
+        public bool GetCanTakeDamage()
+        {
+            return canTakeDamage;
+        }
     }
 }
