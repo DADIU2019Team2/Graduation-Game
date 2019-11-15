@@ -11,11 +11,12 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
     public float currentHealth;
     public float currentStamina;
 
+    [SerializeField] private SaveTransform currentCheckpoint;
     public Vector3 currentSpawnPosition;
 
     private void Awake()
     {
-        currentSpawnPosition = transform.parent.position;
+        //currentSpawnPosition = transform.parent.position;
     }
     private void Update()
     {
@@ -24,7 +25,7 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
 
     public void TakeDamage(int damage)
     {
-        Debug.Log(damage + " damage taken");
+        //Debug.Log(damage + " damage taken");
         playerStats.subtractHealth(damage);
         if (playerStats.getCurrentHealth() <= 0)
         {
@@ -40,7 +41,7 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
 
     public void Die()
     {
-        Debug.Log("git gud");
+        //Debug.Log("git gud");
         GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelLoss);
     }
 
@@ -52,10 +53,9 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
         playerStats.resetStamina();
         isDead = false;
 
-        if(CheckpointManager.GetCurerntCheckpoint() != Vector3.zero)
+        if(CheckpointManager.GetCurerntCheckpoint() != null)
         {
-            Debug.Log(CheckpointManager.GetCurerntCheckpoint());
-            GetComponentInParent<KinematicTestController>().Motor.SetPosition(CheckpointManager.GetCurerntCheckpoint());
+            GetComponentInParent<KinematicTestController>().Motor.SetPosition(currentCheckpoint.GetPosToSave());
         }
         else
         {

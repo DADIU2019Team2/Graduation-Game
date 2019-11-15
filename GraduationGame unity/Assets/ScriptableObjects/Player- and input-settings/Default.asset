@@ -20,37 +20,37 @@ MonoBehaviour:
   maxMoveSpeed: 10
   StableMovementSharpness: 20
   OrientationSharpness: 10
-  rampUpTime: 0.5
-  rampDownTime: 0.5
+  rampUpTime: 1.5
+  rampDownTime: 0.04
   rampUpCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0.45
-      inSlope: 2
-      outSlope: 2
+      inSlope: -0.023588961
+      outSlope: -0.023588961
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.516867
     - serializedVersion: 3
-      time: 0.3923851
-      value: 0.8835302
-      inSlope: 0.5341059
-      outSlope: 0.5341059
+      time: 0.49256212
+      value: 0.69896555
+      inSlope: 1.5721041
+      outSlope: 1.5721041
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0.08947371
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0.11581214
-      outSlope: 0.11581214
+      inSlope: -0.051808048
+      outSlope: -0.051808048
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.1114701
+      inWeight: 0.4187997
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -96,7 +96,7 @@ MonoBehaviour:
   idleJumpHeight: 1.5
   idleAirMoveSpeed: 5
   slideMoveSpeed: 9
-  slideJumpHeight: 1.5
+  slideJumpHeight: 0
   slideDuration: 1
   decelerateWhileSliding: 1
   slideCurve:
@@ -112,8 +112,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 0.7
+      time: 0.9919472
+      value: 0.49671632
       inSlope: 0.053304125
       outSlope: 0.053304125
       tangentMode: 0
@@ -123,14 +123,11 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  canFallFromLedgeAfterDelay: 0
-  timeBeforeFallFromLedge: 0.2
   graceTimeBeforeHangAgain: 0.2
   ledgeGrabForwardJumpHeight: 1
   ledgeGrabForwardAirMoveSpeed: 6
-  ledgeGrabBackwardsJumpHeight: 1
-  ledgeGrabBackwardsAirMoveSpeed: 10
-  invincibilityTime: 0
-  canChangeDirectionsMidair: 0
+  ledgeGrabBackwardsJumpHeight: 3
+  ledgeGrabBackwardsAirMoveSpeed: 12
+  canChangeDirectionsMidair: 1
   AllowDoubleJump: 0
   AllowJumpingWhenSliding: 0
