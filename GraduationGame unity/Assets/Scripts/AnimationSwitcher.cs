@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using KinematicTest.controller;
@@ -20,10 +20,16 @@ public class AnimationSwitcher : MonoBehaviour
             characterController.Motor.GroundingStatus.IsStableOnGround)
         {
             //reset states
-
-            //start motion matching
-            animator.runtimeAnimatorController = mmStates;
-            mmAnimatorController.StartMotionMatching();
+            if (characterController.GetJustLanded())
+            {
+                //set just landed animation
+            }
+            else
+            {
+                //start motion matching
+                animator.runtimeAnimatorController = mmStates;
+                mmAnimatorController.StartMotionMatching();
+            }
         }
         else
         {
@@ -49,13 +55,23 @@ public class AnimationSwitcher : MonoBehaviour
                 case PlayerStates.Sliding:
                 {
                     //set roll animation
-                    if (characterController.Motor.GroundingStatus.IsStableOnGround)
+                    if (!characterController.Motor.GroundingStatus.IsStableOnGround)
                     {
                         // roll jump
                     }
                     else
                     {
-                        // regular roll
+                        if (characterController.GetJustLanded())
+                        {
+                            // landed in slide
+                        }
+                        else
+                        {
+                            // regular roll
+                            
+                        }
+
+                        
                     }
                     break;
                 }
@@ -94,4 +110,3 @@ public class AnimationSwitcher : MonoBehaviour
         }
     }
 }
-*/
