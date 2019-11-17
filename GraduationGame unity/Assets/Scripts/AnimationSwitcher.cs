@@ -12,6 +12,9 @@ public class AnimationSwitcher : MonoBehaviour
     public KinematicTestController characterController;
 
     public Animator animator;
+    public Vector2 airLerp;
+    public float airTime;
+    public float t;
 
     private void Update()
     {
@@ -27,6 +30,9 @@ public class AnimationSwitcher : MonoBehaviour
                 mmAnimatorController.StopMotionMatching();
                 // set jump anim
                 animator.SetTrigger("jump");
+
+                
+               
 
             }
             //start motion matching
@@ -45,7 +51,7 @@ public class AnimationSwitcher : MonoBehaviour
                 case PlayerStates.Idling:
                 {
                         //set idle loop
-                        animator.SetBool("isIdling", true);
+                        animator.SetBool("isStanding", true);
                     break;
                 }
                 case PlayerStates.NoInput:
@@ -58,6 +64,15 @@ public class AnimationSwitcher : MonoBehaviour
                 {
                         //set roll animation
                         animator.SetBool("isSliding", true);
+                        if (characterController.JumpingThisFrame())
+                        {
+                            // set jump anim
+                            animator.SetTrigger("jump");
+
+
+
+
+                        }
                         break;
                 }
                 case PlayerStates.Running:
@@ -65,8 +80,9 @@ public class AnimationSwitcher : MonoBehaviour
                         animator.SetBool("isIdling", false);
                         animator.SetBool("onLedge?", false);
                         animator.ResetTrigger("ledgeDetected");
-                    
-                    
+                        animator.SetBool("isFalling", false);
+
+
                         animator.SetBool("inAir",true);
                         // set fall anim
                     
@@ -104,7 +120,7 @@ public class AnimationSwitcher : MonoBehaviour
                 case PlayerStates.Falling:
                 {
                         //set falling again
-                        animator.SetBool("inAir", true);
+                        animator.SetBool("isFalling", true);
                     break;
                 }
             }
