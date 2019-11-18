@@ -98,7 +98,6 @@ public class AnimationSwitcher : MonoBehaviour
                 }
                 case PlayerStates.Tired:
                 {
-                    
                         //set wallkick
                         if (characterController.GetLedgeForward())
                         {
@@ -114,7 +113,6 @@ public class AnimationSwitcher : MonoBehaviour
                         }
                         break;
 
-                        break;
                 }
                 case PlayerStates.Falling:
                 {
