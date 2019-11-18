@@ -38,19 +38,17 @@ public class GameSave
     public void NewGameSave()
     {
        
-            Debug.Log("is null");
-            currentSave = this;
-            currentSave.lastCompletedLevel = 0;
+        currentSave = this;
+        currentSave.lastCompletedLevel = 0;
         currentSave.isDoubleJumpUnlocked = false;
         GameSave.skinIndexUsed = 0;
-            currentSave.unlockables = new Dictionary<string, bool>()
-
+        currentSave.unlockables = new Dictionary<string, bool>()
         {
             //The things the player can unlock
             {"DoubleJump", false},
             {"skin1", false },
             {"skin2", false},
-        };
+        };  
 
         
     }
@@ -107,7 +105,7 @@ public class GameSave
         
         //Debug.Log(key.ToString() + "String");
         //Debug.Log(currentSave.lastCompletedLevel + "last completede");
-        bool temp = currentSave.unlockables.ContainsKey("skin1");
+        
         if (currentSave.unlockables.ContainsKey(key.ToString()))
         {
             return currentSave.unlockables[key.ToString()];
