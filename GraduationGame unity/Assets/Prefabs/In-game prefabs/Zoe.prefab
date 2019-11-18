@@ -105,6 +105,8 @@ MonoBehaviour:
   updateSettingsLive: 0
   Motor: {fileID: 6576553047221927676}
   forward: 0
+  ledgeGrabAnimationOffset: {fileID: 11400000, guid: 9a1a0995d5eec0440ab86da190600490,
+    type: 2}
   settings: {fileID: 11400000, guid: 686e5c67799350747905d61df33818f9, type: 2}
   CurrentCharacterState: 0
   CurrentWorldForward: 0
@@ -506,7 +508,7 @@ PrefabInstance:
     - target: {fileID: 3048670983425853831, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_AABB.m_Center.x
-      value: 0.00000032324306
+      value: -0.0000000015042474
       objectReference: {fileID: 0}
     - target: {fileID: 3048670983425853831, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
@@ -516,22 +518,22 @@ PrefabInstance:
     - target: {fileID: 3048670983425853831, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_AABB.m_Center.z
-      value: -1.0000005
+      value: -1.0000002
       objectReference: {fileID: 0}
     - target: {fileID: 3048670983425853831, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_AABB.m_Extent.x
-      value: 0.040000647
+      value: 0.040000442
       objectReference: {fileID: 0}
     - target: {fileID: 3048670983425853831, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_AABB.m_Extent.y
-      value: 0.7164899
+      value: 0.70618033
       objectReference: {fileID: 0}
     - target: {fileID: 3048670983425853831, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_AABB.m_Extent.z
-      value: 1.0249352
+      value: 1.0000002
       objectReference: {fileID: 0}
     - target: {fileID: 3008875288686530430, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
@@ -688,6 +690,31 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 4819872841676876479, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819872841676876479, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.03225401
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819872841676876479, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.17146312
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819872841676876479, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.03225401
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819872841676876479, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.17146312
+      objectReference: {fileID: 0}
     - target: {fileID: 1820268875814793018, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -762,31 +789,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.03225401
-      objectReference: {fileID: 0}
-    - target: {fileID: 4819872841676876479, guid: c56af13980f30264faf082e0a0414ff6,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4819872841676876479, guid: c56af13980f30264faf082e0a0414ff6,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.03225401
-      objectReference: {fileID: 0}
-    - target: {fileID: 4819872841676876479, guid: c56af13980f30264faf082e0a0414ff6,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.17146312
-      objectReference: {fileID: 0}
-    - target: {fileID: 4819872841676876479, guid: c56af13980f30264faf082e0a0414ff6,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.03225401
-      objectReference: {fileID: 0}
-    - target: {fileID: 4819872841676876479, guid: c56af13980f30264faf082e0a0414ff6,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.17146312
       objectReference: {fileID: 0}
     - target: {fileID: 6351631590349032856, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
@@ -1060,31 +1062,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6183691656151045117}
     m_Modifications:
-    - target: {fileID: 124115622615170960, guid: f328cefe458e2dc4e885e3fbb2b06c73,
-        type: 3}
-      propertyPath: m_Name
-      value: Zoe Programming nested prefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 124115622615170960, guid: f328cefe458e2dc4e885e3fbb2b06c73,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 124115622615170960, guid: f328cefe458e2dc4e885e3fbb2b06c73,
-        type: 3}
-      propertyPath: m_Name
-      value: Zoe Programming nested prefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 124115622615170960, guid: f328cefe458e2dc4e885e3fbb2b06c73,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 124115622615170960, guid: f328cefe458e2dc4e885e3fbb2b06c73,
-        type: 3}
-      propertyPath: m_Name
-      value: Zoe Programming nested prefab
-      objectReference: {fileID: 0}
     - target: {fileID: 8095815650604976855, guid: f328cefe458e2dc4e885e3fbb2b06c73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1139,6 +1116,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 124115622615170960, guid: f328cefe458e2dc4e885e3fbb2b06c73,
+        type: 3}
+      propertyPath: m_Name
+      value: Zoe Programming nested prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 124115622615170960, guid: f328cefe458e2dc4e885e3fbb2b06c73,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 124115622615170960, guid: f328cefe458e2dc4e885e3fbb2b06c73,
+        type: 3}
+      propertyPath: m_Name
+      value: Zoe Programming nested prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 124115622615170960, guid: f328cefe458e2dc4e885e3fbb2b06c73,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 124115622615170960, guid: f328cefe458e2dc4e885e3fbb2b06c73,
+        type: 3}
+      propertyPath: m_Name
+      value: Zoe Programming nested prefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f328cefe458e2dc4e885e3fbb2b06c73, type: 3}
