@@ -121,6 +121,7 @@ namespace KinematicTest.controller
         private bool canFallFromLedgeAfterDelay;
         private float timeAtLastGrab;
         private bool teleporting;
+        public Vec3Variable ledgeGrabAnimationOffset;
 
         //World changes
         private float _timeSinceTransitioning;
@@ -950,7 +951,7 @@ namespace KinematicTest.controller
                 Debug.Log("POS : " + (ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().offset +
                                   ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position).ToString());
                 Motor.SetPosition(ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().offset +
-                                  ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position);
+                                  ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position+ledgeGrabAnimationOffset.GetVector3());
             }
 
             _JustLanded = false;
