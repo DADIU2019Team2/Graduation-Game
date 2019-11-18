@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 128d5a01cfc2fa942b5cad73eb25b606, type: 3}
   m_Name: Default
   m_EditorClassIdentifier: 
-  baseGravity: 8.5
+  baseGravity: 10
   riseGravityMultiplier: 3
   hangGravityMultiplier: 1.5
   fallGravityMultiplier: 3
@@ -20,8 +20,8 @@ MonoBehaviour:
   maxMoveSpeed: 10
   StableMovementSharpness: 20
   OrientationSharpness: 10
-  rampUpTime: 0.5
-  rampDownTime: 0.5
+  rampUpTime: 1
+  rampDownTime: 0.02
   rampUpCurve:
     serializedVersion: 2
     m_Curve:
@@ -89,13 +89,13 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   jumpHeight: 2.7
-  maxAirMoveSpeed: 5.5
-  hangTimeVelocityThreshold: 2
+  maxAirMoveSpeed: 6
+  hangTimeVelocityThreshold: 1.5
   JumpPreGroundingGraceTime: 0.2
   JumpPostGroundingGraceTime: 0.2
   idleJumpHeight: 1.5
   idleAirMoveSpeed: 5
-  slideMoveSpeed: 9
+  slideMoveSpeed: 10
   slideJumpHeight: 1.5
   slideDuration: 1
   decelerateWhileSliding: 1
@@ -126,11 +126,11 @@ MonoBehaviour:
   canFallFromLedgeAfterDelay: 0
   timeBeforeFallFromLedge: 0.2
   graceTimeBeforeHangAgain: 0.2
-  ledgeGrabForwardJumpHeight: 1
+  ledgeGrabForwardJumpHeight: 1.5
   ledgeGrabForwardAirMoveSpeed: 6
-  ledgeGrabBackwardsJumpHeight: 1
+  ledgeGrabBackwardsJumpHeight: 2
   ledgeGrabBackwardsAirMoveSpeed: 10
   invincibilityTime: 0
-  canChangeDirectionsMidair: 0
+  canChangeDirectionsMidair: 1
   AllowDoubleJump: 0
   AllowJumpingWhenSliding: 0
