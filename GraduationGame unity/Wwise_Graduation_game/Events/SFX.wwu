@@ -826,6 +826,38 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Gate_Impact" ID="{C53ED551-3B9F-4336-AE80-CB0AEC91329B}">
+					<ChildrenList>
+						<Action Name="" ID="{343DD8E9-0CEF-4914-A688-B36D629607C9}" ShortID="945071945">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gate_Impact" ID="{2FF38C54-E8E4-4BEB-903E-983299A4A3AA}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8E88D6AC-62D8-4D09-8FF4-3CEA0D4104CF}" ShortID="906428721">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gate_Closing" ID="{D07FF989-FCC7-496E-9408-29FDC37FC700}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Gate_Closing" ID="{7444B9FB-EBD3-4135-8AD9-807F91590CCD}">
+					<ChildrenList>
+						<Action Name="" ID="{5DFC2DF3-F3BD-4B3D-AAD5-9554503BF276}" ShortID="415551621">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gate_Closing" ID="{D07FF989-FCC7-496E-9408-29FDC37FC700}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

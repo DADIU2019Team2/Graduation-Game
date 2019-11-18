@@ -71,6 +71,17 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
+							<DuckingList>
+								<DuckItem>
+									<BusRef Name="Music" ID="{29E19E7A-9FB0-4372-9D66-8A6584CF0F58}"/>
+									<DuckingParam>
+										<Volume>-9</Volume>
+										<FadeInTime>1</FadeInTime>
+										<FadeOutTime>1</FadeOutTime>
+										<FadeCurve>FadeLinear</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+							</DuckingList>
 						</Bus>
 						<Bus Name="Music" ID="{29E19E7A-9FB0-4372-9D66-8A6584CF0F58}">
 							<PropertyList>
@@ -103,17 +114,6 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
-							<DuckingList>
-								<DuckItem>
-									<BusRef Name="SFX" ID="{9782ED15-10B1-4637-9818-5B49A6880915}"/>
-									<DuckingParam>
-										<Volume>-6</Volume>
-										<FadeInTime>1</FadeInTime>
-										<FadeOutTime>1</FadeOutTime>
-										<FadeCurve>FadeLinear</FadeCurve>
-									</DuckingParam>
-								</DuckItem>
-							</DuckingList>
 						</Bus>
 						<AuxBus Name="Reverb" ID="{69665930-FDBD-432F-BDEF-BE4EBF8B790A}"/>
 					</ChildrenList>
