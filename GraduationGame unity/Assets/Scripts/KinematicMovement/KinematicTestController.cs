@@ -136,7 +136,6 @@ namespace KinematicTest.controller
         private float ledgeGrabGravityMultiplier = 0f;
         public bool fixMMBreakCamera;
 
-
         //This will later be scriptable object
         [Header("Sound settings")] public AK.Wwise.Event jumpSound;
 
