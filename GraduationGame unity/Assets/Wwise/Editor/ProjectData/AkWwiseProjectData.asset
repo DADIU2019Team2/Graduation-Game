@@ -294,25 +294,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: b8a3484928cea848bad5ae38d8dae02b
     GuidInternal: 
-    m_lastTime: -8586279739784775808
-    List:
-    - name: StopAll
-      guid: 6e4c2e889130c6489327163269101349
-      id: 3086540886
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: StopAll
-        ObjectType: 3
-      Path: Default Work Unit/StopAll
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+    m_lastTime: -8586283979884775808
+    List: []
   - PhysicalPath: Events/Movement.wwu
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 842bb934d44d8d498d4461282abe4319
     GuidInternal: 
-    m_lastTime: -8586279739784775808
+    m_lastTime: -8586286399884775808
     List:
     - name: Play_Jumps_Takeoff
       guid: 4e2921447be8f64b8154ba72753e4ff9
@@ -340,8 +328,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/Movement/Play_Land_Hard
       maxAttenuation: 0
-      maxDuration: 0.896123
-      minDuration: 0.896123
+      maxDuration: 0.911787
+      minDuration: 0.911787
     - name: Play_Land_Med
       guid: dab820a14d298c44b6dcedddc1dd4981
       id: 639478362
@@ -368,8 +356,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/Movement/Play_New_Metal_Ftstp_Loop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4.886213
+      minDuration: 4.886213
     - name: Play_New_Norm_Ftstp_Loop
       guid: 4135c6c289c64146bf6588ad9158f3d1
       id: 1215491506
@@ -382,8 +370,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/Movement/Play_New_Norm_Ftstp_Loop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4.816803
+      minDuration: 4.816803
     - name: Play_Slides
       guid: c8e39910cd80d040a706dd2570415675
       id: 1306435192
@@ -396,8 +384,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/Movement/Play_Slides
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events/Music.wwu
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 3631f1d8df531f488aa67fbe67e566e8
@@ -614,7 +602,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
-      - ElementName: Crystal_Door_Open
+      - ElementName: Impact_SpikyPlatform
         ObjectType: 3
       Path: Default Work Unit/SFX/Crystal_Door_Open
       maxAttenuation: 70
@@ -642,27 +630,27 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
-      - ElementName: Death_Ray
+      - ElementName: Machine_Sound
         ObjectType: 3
       Path: Default Work Unit/SFX/Death_Ray
       maxAttenuation: 70
       maxDuration: -1
       minDuration: -1
-    - name: Death_Saw
-      guid: 92cfc7cb408b6d4186b925d5d033de28
-      id: 507840475
+    - name: MovingPlatform_Sound
+      guid: a70ffd457b7839419312dce9cadfac89
+      id: 2635440718
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
-      - ElementName: Death_Saw
+      - ElementName: MovingPlatform_Sound
         ObjectType: 3
       Path: Default Work Unit/SFX/Death_Saw
       maxAttenuation: 70
       maxDuration: -1
       minDuration: -1
-    - name: Electricity
+    - name: Play_Electricity
       guid: fb4fb80769df474ba5dd4b13b64279a6
       id: 2917121896
       PathAndIcons:
@@ -740,7 +728,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
-      - ElementName: Lazer_Wall_Power_Down
+      - ElementName: Play_Electricity
         ObjectType: 3
       Path: Default Work Unit/SFX/Lazer_Wall_Power_Down
       maxAttenuation: 70
@@ -760,57 +748,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Normal_Platforms
-      guid: 0d4ea4d53e6bd845aad6d77ad9a6ed1b
-      id: 4182768561
+    - name: Play_Electricity1
+      guid: 32c95865a16811409865061b6483b8de
+      id: 3157452806
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
-      - ElementName: Normal_Platforms
+      - ElementName: Play_Electricity1
         ObjectType: 3
-      Path: Default Work Unit/SFX/Normal_Platforms
+      Path: Default Work Unit/SFX/Play_Electricity1
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Platform_Pillar_Damaged
-      guid: 11036e0b66833c4f845651de5e8409c6
-      id: 1611566155
+    - name: Play_Lazer
+      guid: b4477b35f6c9344ca63f60bbb9b3045e
+      id: 1933691314
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
-      - ElementName: Platform_Pillar_Damaged
+      - ElementName: Play_Lazer
         ObjectType: 3
       Path: Default Work Unit/SFX/Platform_Pillar_Damaged
       maxAttenuation: 70
       maxDuration: -1
       minDuration: -1
-    - name: Robot_Appearence
+    - name: Play_Robot_Appearence
       guid: 5785f3f613544849abfb578e08336a56
-      id: 2187783824
+      id: 3030735331
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
-      - ElementName: Robot_Appearence
+      - ElementName: Play_Robot_Appearence
         ObjectType: 3
       Path: Default Work Unit/SFX/Robot_Appearence
       maxAttenuation: 70
       maxDuration: 4.863542
       minDuration: 4.863542
-    - name: Saw
+    - name: Play_Saw
       guid: 0aaee0350f247a4c9d84acbf0f85c5ca
-      id: 443572616
+      id: 3225017965
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
-      - ElementName: Saw
+      - ElementName: Play_Saw
         ObjectType: 3
       Path: Default Work Unit/SFX/Saw
       maxAttenuation: 70
@@ -1205,13 +1193,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: f43175f75549614ca91d5b00e2d5af72
     GuidInternal: 
-    m_lastTime: -8586283883814775808
+    m_lastTime: -8586293294914775808
     List: []
   - PhysicalPath: Game Parameters/Movement.wwu
     ParentPhysicalPath: Game Parameters/Default Work Unit.wwu
     guid: f4629d8f0572f948a1294cfcbc801f49
     GuidInternal: 
-    m_lastTime: -8586280458334775808
+    m_lastTime: -8586283917064775808
     List:
     - name: Footstep_velocity
       guid: c9125f62082d61498554bfad87b7d7a6
@@ -1224,6 +1212,17 @@ MonoBehaviour:
       - ElementName: Footstep_velocity
         ObjectType: 13
       Path: Default Work Unit/Movement/Footstep_velocity
+    - name: Machine_Movement
+      guid: 32583ea1db2ffa42a098315d27c9a0f4
+      id: 3811964820
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Movement
+        ObjectType: 12
+      - ElementName: Machine_Movement
+        ObjectType: 13
+      Path: Default Work Unit/Movement/Machine_Movement
     - name: Move_Accel
       guid: e5e5cfcd30c9694baa3f31ed05d5e942
       id: 1050950791
@@ -1235,6 +1234,17 @@ MonoBehaviour:
       - ElementName: Move_Accel
         ObjectType: 13
       Path: Default Work Unit/Movement/Move_Accel
+    - name: Platform_Movement
+      guid: 4f58a149f922684a81ab4de1b446ac86
+      id: 3744734464
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Movement
+        ObjectType: 12
+      - ElementName: Platform_Movement
+        ObjectType: 13
+      Path: Default Work Unit/Movement/Platform_Movement
   - PhysicalPath: Game Parameters/Musical_Layers.wwu
     ParentPhysicalPath: Game Parameters/Default Work Unit.wwu
     guid: 6c11d9cd8155bb4ab9311b942d719fd8
@@ -1504,8 +1514,5 @@ MonoBehaviour:
   - /Wwise_Graduation_game
   - /Wwise_Graduation_game/Events
   - /Wwise_Graduation_game/Events/Default Work Unit
-  - /Wwise_Graduation_game/Events/Default Work Unit/Ambience
-  - /Wwise_Graduation_game/Events/Default Work Unit/SFX
-  - /Wwise_Graduation_game/Events/Default Work Unit/Stop_Events
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

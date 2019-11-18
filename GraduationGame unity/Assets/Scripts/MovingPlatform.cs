@@ -54,18 +54,16 @@ public class MovingPlatform : MonoBehaviour, IMoverController, IOnSceneReset
     public void resetPlatform()
     {
         resetNow = true;
-        //Debug.Log("Do reset is called = "+ resetNow);
         //reset of position and rotation is happening in the move function (otherwise it wont work)
 
         currentWaypoint = _originalWaypoint;
         setDestination(currentWaypoint.getPosition());
+        resetNow = false;
         hasReachedEnd = false;
         movingForward = true;
         activated = false;
         isInWaypointWaitTime = false;
         trigger.gameObject.SetActive(triggerDefaultState);
-        if (activationType == ActivationType.none)
-            activatePlatform();
     }
     void Awake()
     {
@@ -92,14 +90,6 @@ public class MovingPlatform : MonoBehaviour, IMoverController, IOnSceneReset
 
     }
 
-    /*void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            resetPlatform();
-        }
-    }*/
-
     public void UpdateMovement(out Vector3 goalPosition, out Quaternion goalRotation, float deltatime)
     {
         goalPosition = Mover.Rigidbody.position;
@@ -112,7 +102,6 @@ public class MovingPlatform : MonoBehaviour, IMoverController, IOnSceneReset
         //Resetting the position and rotation cause it's necessarry to do here.
         if (resetNow)
         {
-            //Debug.Log("We are resetting");
             //reset position and rotation
             goalPosition = _originalPosition;
             goalRotation = _originalRotation;
@@ -149,7 +138,7 @@ public class MovingPlatform : MonoBehaviour, IMoverController, IOnSceneReset
 
     void updateDestination()
     {
-        //Debug.Log("Updating destination");
+        Debug.Log("Updating destination");
         switch (platformType)
         {
             case PlatformType.oneTimeMove:
@@ -176,7 +165,7 @@ public class MovingPlatform : MonoBehaviour, IMoverController, IOnSceneReset
                     {
                         if (!isInWaypointWaitTime) //update destination
                         {
-                            //Debug.Log("tHIS IS ONLY CALLED ONCE PLZ");
+                            Debug.Log("tHIS IS ONLY CALLED ONCE PLZ");
                             currentWaypoint = currentWaypoint.previousWaypoint;
                             StartCoroutine(waitAtWaypoint(waypointWaitTime));
                         }
@@ -323,7 +312,7 @@ public class MovingPlatform : MonoBehaviour, IMoverController, IOnSceneReset
                     //call this function in character controller in OnMovementHit() if it is indeed a moving platform
         Invoke("delayedActivatePlatform", startDelay);
 
-        //Debug.Log("Platform was activated!");
+        Debug.Log("Platform was activated!");
         startSound.Post(gameObject);
     }
     private void deactivatePlatform()

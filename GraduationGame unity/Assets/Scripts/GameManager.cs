@@ -39,11 +39,6 @@ public class GameManager : MonoBehaviour
     {
         callOnce = true;
         isSceneLoadTransition = false;
-
-        if (playerMovementController == null)
-        {
-            playerMovementController = FindObjectOfType<KinematicTestController>();
-        }
     }
 
     // Update is called once per frame
@@ -141,7 +136,7 @@ public class GameManager : MonoBehaviour
                 break;
 
         }
-        //Debug.Log("Time scale = " + Time.timeScale);
+        Debug.Log("Time scale = " + Time.timeScale);
     }
 
     public static GameStateScriptableObject.GameState GetGameState()
@@ -184,13 +179,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public static void DialogueEnd()
+    public void DialogueEnd()
     {
-        GameManager.ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
+
     }
 
-    public static void DialogueStart()
+    public void DialogueStart()
     {
-        GameManager.ChangeGameState(GameStateScriptableObject.GameState.cinematic);
+
     }
 }
