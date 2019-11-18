@@ -1,17 +1,11 @@
 fileFormatVersion: 2
-guid: 02efd3d1588a4d545a7f0bf923d77153
+guid: bc0bc45726390904f9786ded287bac3f
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
   - first:
-      74: -8641899511955043496
-    second: ledgeLand1
-  - first:
-      74: -8957376724977657933
-    second: ledgeLoop1
-  - first:
-      74: -239349781343127737
-    second: ledgeJump
+      74: 8322514099707796179
+    second: fallLoop
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -25,22 +19,9 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
-      copied configuration does not match position in animation file:\n\t'Head' :
-      position error = 77.547409 mm\nCopied Avatar Rig Configuration mis-match. Inbetween
-      bone rotation in copied configuration does not match rotation in animation file:\n\t'Spine2'
-      : rotation error = 16.361931 deg\n"
+    rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'ledgeLand1' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'Spine2' is inbetween humanoid transforms and
-      has rotation animation that will be discarded.\n\nClip 'ledgeLoop1' has import
-      animation warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'Spine2' is inbetween humanoid
-      transforms and has rotation animation that will be discarded.\n\nClip 'ledgeJump'
-      has import animation warnings that might lower retargeting quality:\nNote: Activate
-      translation DOF on avatar to improve retargeting quality.\n\t'Spine2' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -54,69 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: ledgeLand1
-      takeName: ledgeLand1
-      internalID: -8641899511955043496
+      name: fallLoop
+      takeName: fallLoop
+      internalID: 8322514099707796179
       firstFrame: 0
-      lastFrame: 22
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: ledgeLoop1
-      takeName: ledgeLoop1
-      internalID: -8957376724977657933
-      firstFrame: 22
-      lastFrame: 82
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: ledgeJump
-      takeName: ledgeJump
-      internalID: -239349781343127737
-      firstFrame: 96
-      lastFrame: 118
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
