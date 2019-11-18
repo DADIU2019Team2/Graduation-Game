@@ -63,4 +63,20 @@ public class LoadScene : MonoBehaviour
     {
         SceneManager.LoadScene(level+LoadOnStartup.mainMenuIndex);
     }
+
+
+    public void ContinueGame()
+    {
+
+        if (GameSave.currentSave.lastCompletedLevel + 1 < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(GameSave.currentSave.lastCompletedLevel + 1);
+        }
+        else
+        {
+            Debug.Log("Game completed sending to last level");
+            SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
+        }
+
+    }
 }

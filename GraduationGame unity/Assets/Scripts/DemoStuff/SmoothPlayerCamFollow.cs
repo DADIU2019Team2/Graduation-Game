@@ -22,14 +22,31 @@ public class SmoothPlayerCamFollow : MonoBehaviour
     [SerializeField] private float maxDistToLookAtPoint = 5f;
     private Vector3 camVelocity;
     private Vector3 localPosInfrontOfPlayer;
+    private float zoomOutTimer;
+    private float zoomOutLerp;
+    [SerializeField] private float stopZoomOutDistance;
+    public float zoomOutAfterSeconds;
+    public float zoomOutDuration;
 
     private void Start()
     {
+        if (Mathf.Approximately(zoomOutDuration,0f))
+            zoomOutDuration = 0.1f;
         localPosInfrontOfPlayer = new Vector3(2, 0, 0); //update this dynamicly
     }
 
     private void LateUpdate()
     {
+        if (Mathf.Approximately(charMotor.BaseVelocity.magnitude, 0f))
+        {
+            zoomOutTimer += Time.deltaTime;
+        }
+        else
+        {
+            zoomOutTimer = 0f;
+            zoomOutLerp = 0f;
+        }
+
         moveCam();
         updateLookAt();
     }
@@ -37,6 +54,15 @@ public class SmoothPlayerCamFollow : MonoBehaviour
     void moveCam()
     {
         worldOffset = localOffSet;
+        if (zoomOutTimer >= zoomOutAfterSeconds)
+        {
+            zoomOutLerp += Time.deltaTime;
+            var alma = zoomOutLerp / zoomOutDuration;
+            var korte = Mathf.Clamp(alma, 0f, 1f);
+            var actualZoomOut = Mathf.Lerp(0f, stopZoomOutDistance, korte);
+            worldOffset.z = localOffSet.z - actualZoomOut;
+        }
+
         transform.position = Vector3.SmoothDamp(transform.position, playerToFollow.position + worldOffset,
             ref camVelocity, smoothTime);
     }

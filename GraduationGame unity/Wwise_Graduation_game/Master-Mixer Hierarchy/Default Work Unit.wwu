@@ -4,6 +4,36 @@
 		<WorkUnit Name="Default Work Unit" ID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{D9C33B19-0FFB-4576-A4FC-07C1528343BC}" ShortID="403337730">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Master_Volume" ID="{DD160F09-C715-4840-9486-D98DD322EFCC}" WorkUnitID="{8DA839B8-2EB2-4C09-A598-E279F0C2360E}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{E67536AB-2808-4F7A-9C86-A9FD880F9C09}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{D7122FA9-DB6F-4D04-B443-2112A08AFBF5}" WorkUnitID="{ABDAAD15-0693-4D18-A6DB-86FDAECDBD06}"/>
@@ -73,7 +103,6 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
-							<ReferenceList/>
 							<DuckingList>
 								<DuckItem>
 									<BusRef Name="SFX" ID="{9782ED15-10B1-4637-9818-5B49A6880915}"/>

@@ -17,7 +17,7 @@ public class MusicZone3 : MonoBehaviour
         
         AkSoundEngine.PostEvent("Play_Zone3_Music", gameObject);
         
-        AkSoundEngine.SetRTPCValue("Music_Layer_Z3", 1);
+        AkSoundEngine.SetRTPCValue("Happy_Drumz", 1);
 
         AkSoundEngine.PostEvent("Play_Ambience_Z3", gameObject);
     }

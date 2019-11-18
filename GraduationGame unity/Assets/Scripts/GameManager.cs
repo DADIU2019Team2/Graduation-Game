@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
                     }
                 }
 
-                playerMovementController.TransitionToState(PlayerStates.Idling);
+                playerMovementController.TransitionToState(PlayerStates.CinematicIdle);
 
 
                 if (transitionFader.getAlpha() == 0)//have finished fading in
@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
                 if (transitionFader.getAlpha() == 1) //faded to black
                 {
 
-                    playerMovementController.TransitionToState(PlayerStates.Idling);
+                    playerMovementController.TransitionToState(PlayerStates.CinematicIdle);
                     DoResetObjects();
                     ChangeGameState(GameStateScriptableObject.GameState.levelStart);
                 }
