@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using KinematicTest.controller;
@@ -20,10 +20,20 @@ public class AnimationSwitcher : MonoBehaviour
             characterController.Motor.GroundingStatus.IsStableOnGround)
         {
             //reset states
-
-            //start motion matching
-            animator.runtimeAnimatorController = mmStates;
-            mmAnimatorController.StartMotionMatching();
+            if (characterController.JumpingThisFrame())
+            {
+                animator.runtimeAnimatorController = interactionStates;
+                mmAnimatorController.StopMotionMatching();
+                // set jump anim
+                Debug.Log("alma");
+                animator.SetTrigger("jump");
+            }
+            else
+            {
+                //start motion matching
+                animator.runtimeAnimatorController = mmStates;
+                mmAnimatorController.StartMotionMatching();
+            }
         }
         else
         {
@@ -54,9 +64,10 @@ public class AnimationSwitcher : MonoBehaviour
                 }
                 case PlayerStates.Running:
                 {
-                    if (characterController.GetIsJumpingOnPurpose())
+                    if (characterController.JumpingThisFrame())
                     {
                         // set jump anim
+                        Debug.Log("alma");
                     }
                     else
                     {
@@ -74,7 +85,14 @@ public class AnimationSwitcher : MonoBehaviour
                 case PlayerStates.Tired:
                 {
                     //set wallkick
-
+                    if (characterController.GetLedgeForward())
+                    {
+                        // up
+                    }
+                    else
+                    {
+                        // away
+                    }
                     break;
                 }
                 case PlayerStates.Falling:
@@ -87,4 +105,3 @@ public class AnimationSwitcher : MonoBehaviour
         }
     }
 }
-*/
