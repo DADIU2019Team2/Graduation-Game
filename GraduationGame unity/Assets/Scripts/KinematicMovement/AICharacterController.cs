@@ -6,6 +6,7 @@ using UnityEngine;
 public struct AICharacterInputs
 {
     public Vector3 MoveVector;
+    public float lookAheadDistance;
 }
 
 public class AICharacterController : MonoBehaviour, ICharacterController
@@ -24,6 +25,7 @@ public class AICharacterController : MonoBehaviour, ICharacterController
     [Header("Misc")] public Vector3 Gravity = new Vector3(0, -30f, 0);
     private Vector3 _moveInputVector;
     private Vector3 _lookInputVector;
+    private float _lookAheadDistance;
 
     void Start()
     {
@@ -35,6 +37,7 @@ public class AICharacterController : MonoBehaviour, ICharacterController
     {
         _moveInputVector = inputs.MoveVector;
         _lookInputVector = _moveInputVector.normalized;
+        _lookAheadDistance = inputs.lookAheadDistance;
     }
 
     public void UpdateRotation(ref Quaternion currentRotation, float deltaTime)
@@ -52,6 +55,13 @@ public class AICharacterController : MonoBehaviour, ICharacterController
 
     public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)
     {
+        if (AvoidObstacles())
+            MaxStableMoveSpeed = 0f;
+        else
+        {
+            MaxStableMoveSpeed = 5f;
+        }
+
         // Ground movement
         if (Motor.GroundingStatus.IsStableOnGround)
         {
@@ -165,5 +175,30 @@ public class AICharacterController : MonoBehaviour, ICharacterController
 
     public void OnDiscreteCollisionDetected(Collider hitCollider)
     {
+    }
+
+    private bool AvoidObstacles()
+    {
+        Vector3 castStart = transform.position + transform.up * Motor.Capsule.height +
+                            transform.forward * Motor.Capsule.radius;
+        //float castAngle = Mathf.Atan(_lookAheadDistance / Motor.Capsule.height);
+        Vector3 castEnd = transform.position + transform.forward * Motor.Capsule.radius +
+                          transform.forward * _lookAheadDistance;
+        Vector3 dir = (castEnd - castStart);
+        RaycastHit groundHit;
+        RaycastHit spikeHit;
+        Physics.Raycast(castStart, dir.normalized, out groundHit, dir.magnitude + 0.2f);
+        Physics.Raycast(castStart - transform.up * Motor.Capsule.height / 2f, transform.forward * _lookAheadDistance,
+            out spikeHit, _lookAheadDistance);
+        Color c = Color.green;
+
+        if (groundHit.collider == null || (spikeHit.collider != null && spikeHit.collider.CompareTag("Spike")))
+        {
+            c = Color.red;
+        }
+
+        Debug.DrawRay(castStart, dir, c);
+        Debug.DrawRay(castStart - transform.up * Motor.Capsule.height / 2f, transform.forward * _lookAheadDistance, c);
+        return groundHit.collider == null || (spikeHit.collider != null && spikeHit.collider.CompareTag("Spike"));
     }
 }

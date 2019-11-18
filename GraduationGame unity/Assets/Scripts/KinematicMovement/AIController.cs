@@ -7,6 +7,7 @@ public class AIController : MonoBehaviour
 {
     public List<AICharacterController> aiList;
     public Transform playerToFollow;
+    public float lookAheadDistance;
     private void Update()
     {
         foreach (var controller in aiList)
@@ -24,6 +25,7 @@ public class AIController : MonoBehaviour
 
             var chaseInput = new Vector3(chaseDirection,0f,0f);
             input.MoveVector = chaseInput;
+            input.lookAheadDistance = lookAheadDistance;
             controller.SetInputs(ref input);
         }
     }
