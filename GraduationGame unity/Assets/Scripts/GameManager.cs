@@ -189,11 +189,6 @@ public class GameManager : MonoBehaviour
         GameManager.ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
     }
 
-    public void DialogueEndFromFungus()
-    {
-        GameManager.ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
-    }
-
     public static void DialogueStart()
     {
         GameManager.ChangeGameState(GameStateScriptableObject.GameState.cinematic);
