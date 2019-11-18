@@ -97,6 +97,8 @@ namespace AK
             namespace STATE
             {
                 static const AkUniqueID BOSSFIGHT = 580146960U;
+                static const AkUniqueID DIALOGUE_ANGRY = 2801479097U;
+                static const AkUniqueID DIALOGUE_HAPPY = 2714452976U;
                 static const AkUniqueID ZONE1 = 831766780U;
                 static const AkUniqueID ZONE2 = 831766783U;
                 static const AkUniqueID ZONE3 = 831766782U;
@@ -147,6 +149,8 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AMBIENCE = 85412153U;
+        static const AkUniqueID ENVIRONMENT = 1229948536U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;
@@ -154,7 +158,9 @@ namespace AK
 
     namespace AUX_BUSSES
     {
-        static const AkUniqueID REVERB = 348963605U;
+        static const AkUniqueID REVERB_BIG = 3387002570U;
+        static const AkUniqueID REVERB_MEDIUM = 4066469909U;
+        static const AkUniqueID REVERB_TUNNEL = 2261546958U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
