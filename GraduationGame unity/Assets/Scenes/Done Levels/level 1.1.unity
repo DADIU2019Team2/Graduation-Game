@@ -1477,6 +1477,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3297551153850835323, guid: 0481e6c883e977d41aa46d107fac60df,
+        type: 3}
+      propertyPath: unityEventResponse.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1085056736}
+    - target: {fileID: 3297551153850835323, guid: 0481e6c883e977d41aa46d107fac60df,
+        type: 3}
+      propertyPath: unityEventResponse.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0481e6c883e977d41aa46d107fac60df, type: 3}
 --- !u!1001 &88794109
@@ -4498,6 +4508,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 617476771042450706, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 1018169870220704821, guid: 1d5fcecccea39994bbe5cab7844bad81,
         type: 3}
@@ -13512,6 +13527,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1083368516}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1085056736 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 180412614385285147, guid: 0481e6c883e977d41aa46d107fac60df,
+    type: 3}
+  m_PrefabInstance: {fileID: 84751932}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1095716191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16755,7 +16776,7 @@ PrefabInstance:
     - target: {fileID: 4919405933579881445, guid: 8d0ea8b440bb5a047aa5ef2ebaf31053,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 37.37
+      value: 37.32
       objectReference: {fileID: 0}
     - target: {fileID: 4919405933579881445, guid: 8d0ea8b440bb5a047aa5ef2ebaf31053,
         type: 3}
@@ -28336,7 +28357,7 @@ PrefabInstance:
     - target: {fileID: 2240658846378419551, guid: c11eaf30eca48af4891137c46e70ae68,
         type: 3}
       propertyPath: isOneTimeEvent
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c11eaf30eca48af4891137c46e70ae68, type: 3}
