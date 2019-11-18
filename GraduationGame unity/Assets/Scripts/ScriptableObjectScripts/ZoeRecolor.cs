@@ -9,8 +9,8 @@ public class ZoeRecolor : ScriptableObject
     public Material zoeOutfitMaterial;
     public Material zoeBodyMaterial;
     
-    //[ColorUsage(true,true)]
-    //public Color scarfColor, scarfParticleColor;
+    [ColorUsage(true,true)]
+    public Color scarfColor, scarfParticleColor;
     //R: 0.053, G: 0.503, B: 1.000.
 
 

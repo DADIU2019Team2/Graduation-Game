@@ -185,48 +185,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Stop_Machine_1" ID="{4E4E157C-82FA-48A6-8069-2B0B48DC7951}">
-					<ChildrenList>
-						<Action Name="" ID="{003AFC5F-E326-4558-9E70-EFDC55FE1A6C}" ShortID="486247386">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Machine_1" ID="{C438D3BC-D874-49DE-814E-977819CCE93B}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Stop_Machine_2" ID="{67113401-2630-4ED7-84B5-454EAEBBC9D7}">
-					<ChildrenList>
-						<Action Name="" ID="{65C648D4-A84C-4D61-A103-7FD7B351AF89}" ShortID="15723096">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Machine_2" ID="{6EDD6488-7081-4D9B-834D-32C4B90D591D}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Stop_Machine_3" ID="{10979176-424D-451A-9A6A-C835657A269E}">
-					<ChildrenList>
-						<Action Name="" ID="{8D1CC9A9-F32D-4C4D-81C6-BFC03AB65E63}" ShortID="648396424">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Machine_3" ID="{40882591-CF8F-4FD8-8932-4D08C69CDB32}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Stop_Platform_Pillar_Damaged" ID="{E8BA3E3E-2D6C-495A-B8F0-3384DB8AE559}">
 					<ChildrenList>
 						<Action Name="" ID="{BBBCA570-CB4B-406B-A894-B001D5772721}" ShortID="336748084">
@@ -306,6 +264,13 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Machines" ID="{4643D5D3-2033-4C5E-ACEC-2737CDA4AF16}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7C077A61-B071-456E-9CE7-A333C9288524}" ShortID="224037069">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Spiky_Machine_Impact" ID="{16711FF7-8780-4AA3-A430-CD343AB646A5}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
