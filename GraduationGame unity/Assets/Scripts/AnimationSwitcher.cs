@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using KinematicTest.controller;
@@ -18,7 +18,6 @@ public class AnimationSwitcher : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(characterController.CurrentCharacterState);
         //basic locomotion
         if (characterController.CurrentCharacterState == PlayerStates.Running &&
             characterController.Motor.GroundingStatus.IsStableOnGround)
@@ -77,7 +76,7 @@ public class AnimationSwitcher : MonoBehaviour
                 }
                 case PlayerStates.Running:
                 {
-                        animator.SetBool("isIdling", false);
+                        animator.SetBool("isStanding", false);
                         animator.SetBool("onLedge?", false);
                         animator.ResetTrigger("ledgeDetected");
                         animator.SetBool("isFalling", false);
@@ -127,4 +126,3 @@ public class AnimationSwitcher : MonoBehaviour
         }
     }
 }
-*/
