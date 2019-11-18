@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     private float waitInLevelStart = 0.5f;
     private float waitTimer;
     bool startIncrementingLevelStart = false;
+    private LivePlayerStats playerStats;
 
     private void Awake()
     {
@@ -44,6 +45,10 @@ public class GameManager : MonoBehaviour
         {
             playerMovementController = FindObjectOfType<KinematicTestController>();
         }
+        if (playerStats == null)
+        {
+            playerStats = FindObjectOfType<LivePlayerStats>();
+        }
     }
 
     // Update is called once per frame
@@ -57,6 +62,7 @@ public class GameManager : MonoBehaviour
                     callOnce = false;
                     isSwipeAllowed.setBool(false);
                     startIncrementingLevelStart = true;
+                    playerStats.OnResetLevel();
                 }
                 if (startIncrementingLevelStart)
                 {
@@ -115,7 +121,7 @@ public class GameManager : MonoBehaviour
                 break;
             case GameStateScriptableObject.GameState.cinematic:
 
-                playerMovementController.TransitionToState(PlayerStates.Idling);
+                playerMovementController.TransitionToState(PlayerStates.CinematicIdle);
                 //Need to implement input blocking here.
 
                 /*(No player control at all until they end)
