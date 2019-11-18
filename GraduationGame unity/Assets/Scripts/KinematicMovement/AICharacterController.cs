@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using KinematicCharacterController;
 using UnityEngine;
@@ -9,32 +10,96 @@ public struct AICharacterInputs
     public float lookAheadDistance;
 }
 
+public enum AIStates
+{
+    Idling,
+    Chasing,
+}
+
 public class AICharacterController : MonoBehaviour, ICharacterController
 {
     [Space(10)] public KinematicCharacterMotor Motor;
-    // Start is called before the first frame update
 
-    [Header("Stable Movement")] public float MaxStableMoveSpeed = 10f;
-    public float StableMovementSharpness = 15f;
-    public float OrientationSharpness = 10f;
+    public AISettings settings;
 
-    [Header("Air Movement")] public float MaxAirMoveSpeed = 100f;
-    public float AirAccelerationSpeed = 15f;
-    public float Drag = 0.1f;
+    public float MaxStableMoveSpeed;
+    private float StableMovementSharpness;
+    private float OrientationSharpness;
+
+    [Header("Air Movement")] private float MaxAirMoveSpeed;
+    private float AirAccelerationSpeed;
+    private float Drag = 0.1f;
 
     [Header("Misc")] public Vector3 Gravity = new Vector3(0, -30f, 0);
     private Vector3 _moveInputVector;
     private Vector3 _lookInputVector;
     private float _lookAheadDistance;
+    private bool _avoidObstacles;
+    public bool isActive;
+    public AIStates CurrentAIState;
 
     void Start()
     {
+        Init();
         Motor.CharacterController = this;
     }
 
+    void Init()
+    {
+        MaxStableMoveSpeed = settings.MaxStableMoveSpeed;
+        StableMovementSharpness = settings.StableMovementSharpness;
+        OrientationSharpness = settings.OrientationSharpness;
+        MaxAirMoveSpeed = settings.MaxAirMoveSpeed;
+        AirAccelerationSpeed = settings.AirAccelerationSpeed;
+    }
+
+    public void TransitionToState(AIStates newState)
+    {
+        AIStates tmpInitialState = CurrentAIState;
+        OnStateExit(tmpInitialState, newState);
+        CurrentAIState = newState;
+        OnStateEnter(newState, tmpInitialState);
+    }
+
+    private void OnStateEnter(AIStates state, AIStates fromState)
+    {
+        switch (state)
+        {
+            case AIStates.Idling:
+            {
+                MaxStableMoveSpeed = 0f;
+                break;
+            }
+            case AIStates.Chasing:
+            {
+                MaxStableMoveSpeed = settings.MaxStableMoveSpeed;
+                break;
+            }
+        }
+    }
+
+    private void OnStateExit(AIStates state, AIStates toState)
+    {
+        switch (state)
+        {
+            case AIStates.Idling:
+            {
+                break;
+            }
+            case AIStates.Chasing:
+            {
+                break;
+            }
+        }
+    }
 
     public void SetInputs(ref AICharacterInputs inputs)
     {
+        if (!isActive)
+        {
+            return;
+        }
+
         _moveInputVector = inputs.MoveVector;
         _lookInputVector = _moveInputVector.normalized;
         _lookAheadDistance = inputs.lookAheadDistance;
@@ -55,13 +120,6 @@ public class AICharacterController : MonoBehaviour, ICharacterController
 
     public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)
     {
-        if (AvoidObstacles())
-            MaxStableMoveSpeed = 0f;
-        else
-        {
-            MaxStableMoveSpeed = 5f;
-        }
-
         // Ground movement
         if (Motor.GroundingStatus.IsStableOnGround)
         {
@@ -142,6 +200,20 @@ public class AICharacterController : MonoBehaviour, ICharacterController
 
     public void BeforeCharacterUpdate(float deltaTime)
     {
+        if (isActive)
+        {
+            _avoidObstacles = AvoidObstacles();
+            TransitionToState(_avoidObstacles ? AIStates.Idling : AIStates.Chasing);
+        }
+        else
+        {
+            if (CurrentAIState != AIStates.Idling)
+                TransitionToState(AIStates.Idling);
+            if (LookForPlayer())
+            {
+                isActive = true;
+            }
+        }
     }
 
     public void PostGroundingUpdate(float deltaTime)
@@ -185,20 +257,18 @@ public class AICharacterController : MonoBehaviour, ICharacterController
         Vector3 castEnd = transform.position + transform.forward * Motor.Capsule.radius +
                           transform.forward * _lookAheadDistance;
         Vector3 dir = (castEnd - castStart);
-        RaycastHit groundHit;
-        RaycastHit spikeHit;
-        Physics.Raycast(castStart, dir.normalized, out groundHit, dir.magnitude + 0.2f);
+        Physics.Raycast(castStart, dir.normalized, out var groundHit, dir.magnitude + 0.2f);
         Physics.Raycast(castStart - transform.up * Motor.Capsule.height / 2f, transform.forward * _lookAheadDistance,
-            out spikeHit, _lookAheadDistance);
-        Color c = Color.green;
-
-        if (groundHit.collider == null || (spikeHit.collider != null && spikeHit.collider.CompareTag("Spike")))
-        {
-            c = Color.red;
-        }
-
-        Debug.DrawRay(castStart, dir, c);
-        Debug.DrawRay(castStart - transform.up * Motor.Capsule.height / 2f, transform.forward * _lookAheadDistance, c);
+            out var spikeHit, _lookAheadDistance);
         return groundHit.collider == null || (spikeHit.collider != null && spikeHit.collider.CompareTag("Spike"));
+    }
+
+    private bool LookForPlayer()
+    {
+        Vector3 castStart = transform.position + transform.up * Motor.Capsule.height / 2f;
+        Physics.Raycast(castStart, transform.forward * settings.searchRange, out var forwardHit, settings.searchRange);
+        Physics.Raycast(castStart, -transform.forward * settings.searchRange, out var backHit, settings.searchRange);
+        return ((forwardHit.collider != null && forwardHit.collider.CompareTag("Player")) ||
+                (backHit.collider != null && backHit.collider.CompareTag("Player")));
     }
 }
