@@ -79,6 +79,17 @@ namespace AK
 
     namespace STATES
     {
+        namespace DEAD_OR_ALIVE
+        {
+            static const AkUniqueID GROUP = 3575957003U;
+
+            namespace STATE
+            {
+                static const AkUniqueID ALIVE = 655265632U;
+                static const AkUniqueID DEAD = 2044049779U;
+            } // namespace STATE
+        } // namespace DEAD_OR_ALIVE
+
         namespace ZONES
         {
             static const AkUniqueID GROUP = 831766718U;
@@ -86,7 +97,6 @@ namespace AK
             namespace STATE
             {
                 static const AkUniqueID BOSSFIGHT = 580146960U;
-                static const AkUniqueID CRYSTALSFALLING = 4176737957U;
                 static const AkUniqueID ZONE1 = 831766780U;
                 static const AkUniqueID ZONE2 = 831766783U;
                 static const AkUniqueID ZONE3 = 831766782U;
@@ -114,7 +124,12 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID ANGRY_MUSIC_LAYER = 3197644566U;
         static const AkUniqueID FOOTSTEP_VELOCITY = 3740773599U;
+        static const AkUniqueID HAPPY_BASS = 3940323633U;
+        static const AkUniqueID HAPPY_DRUMZ = 1600538058U;
+        static const AkUniqueID HAPPY_SYNTH = 1527223714U;
+        static const AkUniqueID MASTER_VOLUME = 4179668880U;
         static const AkUniqueID MOVE_ACCEL = 1050950791U;
         static const AkUniqueID MUSIC_LAYER_Z1 = 1022520460U;
         static const AkUniqueID MUSIC_LAYER_Z2 = 1022520463U;
