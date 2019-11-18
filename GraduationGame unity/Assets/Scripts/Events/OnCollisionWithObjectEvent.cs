@@ -4,7 +4,7 @@ using MiniGame2.Events;
 namespace GraduationProject.Events
 {
 
-public class OnCollisionWithObjectEvent : MonoBehaviour
+public class OnCollisionWithObjectEvent : MonoBehaviour, IOnSceneReset
 {
     public enum Filter { Tag, Object };
     public enum FilterEvent { Enter, Exit, Both};
@@ -19,6 +19,7 @@ public class OnCollisionWithObjectEvent : MonoBehaviour
     [SerializeField] private string tagToLookFor;
     [SerializeField] private bool isOneTimeEvent = true;
     private bool wasRaisedThisFrame = false;
+    private bool wasUsedThisPlaythrough = false;
 
     private void Start()
     {
@@ -77,7 +78,7 @@ public class OnCollisionWithObjectEvent : MonoBehaviour
                 if (isOneTimeEvent)
                 {
                     gameObject.SetActive(false);
-                    Destroy(gameObject);
+                    wasUsedThisPlaythrough = true;
                 }
                 wasRaisedThisFrame = true;
             }
@@ -95,7 +96,7 @@ public class OnCollisionWithObjectEvent : MonoBehaviour
                 if (isOneTimeEvent)
                 {
                     gameObject.SetActive(false);
-                    Destroy(gameObject);
+                    wasUsedThisPlaythrough = true;
                 }
                 wasRaisedThisFrame = true;
             }
@@ -114,7 +115,7 @@ public class OnCollisionWithObjectEvent : MonoBehaviour
                 if (isOneTimeEvent)
                 {
                     gameObject.SetActive(false);
-                    Destroy(gameObject);
+                    wasUsedThisPlaythrough = true;
                 }
                 wasRaisedThisFrame = true;
             }
@@ -132,12 +133,17 @@ public class OnCollisionWithObjectEvent : MonoBehaviour
                 if (isOneTimeEvent)
                 {
                     gameObject.SetActive(false);
-                    Destroy(gameObject);
+                    wasUsedThisPlaythrough = true;
                 }
                 wasRaisedThisFrame = true;
             }
         }
     }
 
-}
+        public void OnResetLevel()
+        {
+            gameObject.SetActive(true);
+            wasUsedThisPlaythrough = false;
+        }
+    }
 }
