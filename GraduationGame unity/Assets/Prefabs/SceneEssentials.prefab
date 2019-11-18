@@ -399,7 +399,7 @@ PrefabInstance:
         type: 3}
       propertyPath: playerToFollow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7698090373304149803}
     - target: {fileID: 6402319604846063414, guid: fb1149de87af04e4ebe287f8bdf6c145,
         type: 3}
       propertyPath: charMotor
@@ -593,6 +593,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2610356912311023036}
     m_Modifications:
+    - target: {fileID: 561386183475680734, guid: f1d47304afcd5914a9b89fc0f6d4f675,
+        type: 3}
+      propertyPath: settings
+      value: 
+      objectReference: {fileID: 11400000, guid: 1bb96507f27e7ed4d8c0ac7d91048925,
+        type: 2}
     - target: {fileID: 7061101915596454357, guid: f1d47304afcd5914a9b89fc0f6d4f675,
         type: 3}
       propertyPath: m_Name
@@ -661,7 +667,37 @@ PrefabInstance:
     - target: {fileID: 7400535074440762943, guid: f1d47304afcd5914a9b89fc0f6d4f675,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.003618762
+      value: 0.30274564
+      objectReference: {fileID: 0}
+    - target: {fileID: 317950644243740583, guid: f1d47304afcd5914a9b89fc0f6d4f675,
+        type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0000000015042474
+      objectReference: {fileID: 0}
+    - target: {fileID: 317950644243740583, guid: f1d47304afcd5914a9b89fc0f6d4f675,
+        type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 317950644243740583, guid: f1d47304afcd5914a9b89fc0f6d4f675,
+        type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 317950644243740583, guid: f1d47304afcd5914a9b89fc0f6d4f675,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.040000442
+      objectReference: {fileID: 0}
+    - target: {fileID: 317950644243740583, guid: f1d47304afcd5914a9b89fc0f6d4f675,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.70618045
+      objectReference: {fileID: 0}
+    - target: {fileID: 317950644243740583, guid: f1d47304afcd5914a9b89fc0f6d4f675,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 1.0000002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d47304afcd5914a9b89fc0f6d4f675, type: 3}
@@ -671,6 +707,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4541315783641003222}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4093648257222877448 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 561386183475680734, guid: f1d47304afcd5914a9b89fc0f6d4f675,
+    type: 3}
+  m_PrefabInstance: {fileID: 4541315783641003222}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9d3484dac67fc84e93a2742a966cbad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6346484793086573274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -782,7 +830,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Character
       value: 
-      objectReference: {fileID: 1660540989419242355}
+      objectReference: {fileID: 4093648257222877448}
     - target: {fileID: 5431979037652984431, guid: f059d66bfefc16e4bb939de7180e4be8,
         type: 3}
       propertyPath: CameraFollowPoint
@@ -837,6 +885,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147158886115683312, guid: fe17d14b041304c42b56769434ae2a53,
+        type: 3}
+      propertyPath: m_Name
+      value: CheckpointManager
       objectReference: {fileID: 0}
     - target: {fileID: 7147158886115683312, guid: fe17d14b041304c42b56769434ae2a53,
         type: 3}
@@ -944,15 +997,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b9fa490291da254aaf2d2dbed02b8df, type: 3}
---- !u!224 &4187336762447258149 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6467307166575745442, guid: 5b9fa490291da254aaf2d2dbed02b8df,
-    type: 3}
-  m_PrefabInstance: {fileID: 7195649410843261831}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4515045004539777731 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6734214606638639428, guid: 5b9fa490291da254aaf2d2dbed02b8df,
+    type: 3}
+  m_PrefabInstance: {fileID: 7195649410843261831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &4187336762447258149 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6467307166575745442, guid: 5b9fa490291da254aaf2d2dbed02b8df,
     type: 3}
   m_PrefabInstance: {fileID: 7195649410843261831}
   m_PrefabAsset: {fileID: 0}
@@ -1260,7 +1313,7 @@ MonoBehaviour:
   Motor: {fileID: 0}
   forward: 0
   settings: {fileID: 0}
-  CurrentCharacterState: 0
+  CurrentCharacterState: 7
   CurrentWorldForward: 0
   Gravity: {x: 0, y: -10, z: 0}
   fixMMBreakCamera: 0
