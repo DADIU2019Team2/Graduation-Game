@@ -8,7 +8,7 @@ public class ResetObjectFunc : MonoBehaviour, IOnSceneReset
     private Quaternion initialRot;
     private Vector3 initialScale;
 
-    private Animator animator;
+    public Animator animator;
 
     private void Awake()
     {
@@ -26,6 +26,9 @@ public class ResetObjectFunc : MonoBehaviour, IOnSceneReset
         transform.position = initialPos;
         transform.rotation = initialRot;
         transform.localScale = initialScale;
-        animator.Play("Entry");
+        if (animator != null)
+        {
+            animator.Play("Entry");
+        }
     }
 }
