@@ -7,19 +7,11 @@ public class AddLayer6Music : MonoBehaviour {
 private bool IsInCollider = false;
 
 
-
-    // Start is called before the first frame update
     void Start()
     {
         AkSoundEngine.RegisterGameObj(gameObject);
     }
     
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
