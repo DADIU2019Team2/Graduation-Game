@@ -5,11 +5,11 @@ using System.IO;
 
 public class LocalizationManager : MonoBehaviour
 {
-
+    [SerializeField] private Language languageSystem;
     public static Dictionary<string, string> dictionary;
-    public enum GameLanguage { Key = 0, English = 2, Danish = 1 };
+    //public enum GameLanguage { Key = 0, English = 2, Danish = 1 };
     private int languageID;
-    public GameLanguage gameLanguage;
+    public Language.LocalazationLanguage gameLanguage;
     public TextAsset csvTranslation;
     //private string languageFolder = "Assets/Resources/Localization/"; // if we want to use the resource folder instead
     //public TextAsset[] translationFiles;
@@ -17,21 +17,31 @@ public class LocalizationManager : MonoBehaviour
 
     void Awake()
     {
-        languageID = (int)gameLanguage;
+        languageID = (int)languageSystem.GetCurrentLanguage();
+        //languageID = (int)gameLanguage;
         dictionary = new Dictionary<string, string>();
         csvLanguage = csvTranslation.text.Split('\n');
         LoadLangageCSVFile(gameLanguage);
+
+        ChangeLanguage(languageSystem.GetCurrentLanguage()); //making sure language in each scene is up to date
     }
 
-    private void Update()
+    private void Start()
+    {
+        if(languageSystem != null)
+        {
+            languageSystem.languageChangeEvent += ChangeLanguage;
+        }
+    }
+    /*private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ChangeLanguage(gameLanguage);
         }
-    }
+    }*/
 
-    void LoadLangageCSVFile(GameLanguage language)
+    void LoadLangageCSVFile(Language.LocalazationLanguage language)
     {
         dictionary.Clear();
         foreach (string s in csvLanguage)
@@ -61,7 +71,7 @@ public class LocalizationManager : MonoBehaviour
             //Debug.Log(k + " is " + dictionary[k]);
     }
 
-    void ChangeLanguage(GameLanguage language)
+    void ChangeLanguage(Language.LocalazationLanguage language)
     {
         gameLanguage = language;
         languageID = (int)gameLanguage;
@@ -73,7 +83,7 @@ public class LocalizationManager : MonoBehaviour
     }
     public void ButtonChangeLanguage(string language)
     {
-        ChangeLanguage((GameLanguage)System.Enum.Parse(typeof(GameLanguage), language));
+        ChangeLanguage((Language.LocalazationLanguage)System.Enum.Parse(typeof(Language.LocalazationLanguage), language));
     }
 
     public static string TranslateKey(string key)
