@@ -53,8 +53,11 @@ public class OnCollisionWithObjectEvent : MonoBehaviour, IOnSceneReset
     private void OnTriggerEnter(Collider other)
     {
         if (onEnterEvent == null)
-            return;
-        interactionRaisEvent(other, onEnterEvent);
+            {
+                return;
+            }
+            interactionRaisEvent(other, onEnterEvent);
+            Debug.Log("OnTriggerEnterEvent raised");
     }
 
     private void OnTriggerExit(Collider other)
