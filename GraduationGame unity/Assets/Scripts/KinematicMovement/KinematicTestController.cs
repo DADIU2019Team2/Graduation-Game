@@ -17,6 +17,7 @@ namespace KinematicTest.controller
         Tired,
         Falling,
         NoInput,
+        CinematicIdle,
     }
 
     public enum WorldForward
@@ -96,7 +97,8 @@ namespace KinematicTest.controller
         private float MaxAirMoveSpeed;
         private float AirAccelerationSpeed;
         private float Drag = 0.1f;
-
+        private bool _JustLanded;
+        
         // Sliding
         private float _timeSinceStartedSliding;
         private float _slideCurveStep;
@@ -146,7 +148,7 @@ namespace KinematicTest.controller
         public IntEvent SpikeDamageEvent;
         private bool _justTookDamage;
         private float _timeSinceDamageTaken;
-        private bool canTakeDamage;
+        private bool canTakeDamage = true;
         private float damageResetTimer;
 
         void Init()
@@ -228,6 +230,14 @@ namespace KinematicTest.controller
                     curveStep = 0f;
                     JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.idleJumpHeight * settings.baseGravity *
                                            Motor.Capsule.height);
+                    break;
+                }
+                case PlayerStates.CinematicIdle:
+                {
+                    stopped = true;
+                    rampingDown = false;
+                    MaxStableMoveSpeed = 0f;
+                    curveStep = 0f;
                     break;
                 }
                 case PlayerStates.Sliding:
@@ -341,7 +351,15 @@ namespace KinematicTest.controller
         {
             if (CurrentCharacterState == PlayerStates.NoInput)
                 return;
-
+            
+            if (CurrentCharacterState == PlayerStates.CinematicIdle)
+            {
+                if (inputs.changeDirection || inputs.slideDown || inputs.jumpDown)
+                {
+                    TransitionToState(PlayerStates.Running);
+                    return;
+                }
+            }
 
             if (inputs.slideDown && CurrentCharacterState == PlayerStates.Running &&
                 Motor.GroundingStatus.FoundAnyGround)
@@ -938,6 +956,8 @@ namespace KinematicTest.controller
                 Motor.SetPosition(ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().offset +
                                   ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position);
             }
+
+            _JustLanded = false;
         }
 
         public bool IsColliderValidForCollisions(Collider coll)
@@ -1036,6 +1056,7 @@ namespace KinematicTest.controller
 
         protected void OnLanded()
         {
+            _JustLanded = true;
             landSound.Post(gameObject);
             canChangedirection = true;
             jumpInitiated = false;
@@ -1127,14 +1148,14 @@ namespace KinematicTest.controller
             return canTakeDamage;
         }
 
+        public float GetIFrameMaxDuration()
+        {
+            return settings.invincibilityTime;
+        }
+        
         public bool GetJustLanded()
         {
-            return _justJumped;
-        }
-
-        public bool GetLedgeForward()
-        {
-            return forward;
+            return _JustLanded;
         }
     }
 }
