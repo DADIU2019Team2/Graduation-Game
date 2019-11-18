@@ -172,18 +172,6 @@ Transform:
   m_Father: {fileID: 3302468766424958349}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!114 &1239693278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3302468767410337554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb189bd9f753442dbbb04c54491ba069, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2927542439469939236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1315,31 +1303,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 392940778663327180, guid: 7c3f78b2963230e4bb6841673fd1cca7,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.841
-      objectReference: {fileID: 0}
-    - target: {fileID: 392940778589647490, guid: 7c3f78b2963230e4bb6841673fd1cca7,
-        type: 3}
-      propertyPath: platformType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 392940778589647490, guid: 7c3f78b2963230e4bb6841673fd1cca7,
-        type: 3}
-      propertyPath: waypointWaitTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 392940778589647490, guid: 7c3f78b2963230e4bb6841673fd1cca7,
-        type: 3}
-      propertyPath: TranslationSpeed
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 392940778589647490, guid: 7c3f78b2963230e4bb6841673fd1cca7,
-        type: 3}
-      propertyPath: currentWaypoint
-      value: 
-      objectReference: {fileID: 1780063723}
     - target: {fileID: 8553, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1368,6 +1331,16 @@ PrefabInstance:
       propertyPath: waypointWaitTime
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8553, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
+      propertyPath: startSound.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: a6191a34a15474b2ebaa8529e8457288,
+        type: 2}
+    - target: {fileID: 8553, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
+      propertyPath: stopSound.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 273d2d085e8eeff42b92dcfc55c5618e,
+        type: 2}
     - target: {fileID: 1446800946, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.63
@@ -1392,6 +1365,19 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.53166
       objectReference: {fileID: 0}
+    - target: {fileID: 1446800941, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446800941, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
+      propertyPath: m_Name
+      value: FallZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 392940778663327180, guid: 7c3f78b2963230e4bb6841673fd1cca7,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.841
+      objectReference: {fileID: 0}
     - target: {fileID: 1446800944, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1400,14 +1386,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1446800941, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1446800941, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
-      propertyPath: m_Name
-      value: FallZone
       objectReference: {fileID: 0}
     - target: {fileID: 8404459086738203323, guid: 7c3f78b2963230e4bb6841673fd1cca7,
         type: 3}
@@ -1419,23 +1397,47 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6354579684407158506, guid: 7c3f78b2963230e4bb6841673fd1cca7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6434444952548566480, guid: 7c3f78b2963230e4bb6841673fd1cca7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 392940778589647490, guid: 7c3f78b2963230e4bb6841673fd1cca7,
+        type: 3}
+      propertyPath: platformType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 392940778589647490, guid: 7c3f78b2963230e4bb6841673fd1cca7,
+        type: 3}
+      propertyPath: waypointWaitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 392940778589647490, guid: 7c3f78b2963230e4bb6841673fd1cca7,
+        type: 3}
+      propertyPath: TranslationSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 392940778589647490, guid: 7c3f78b2963230e4bb6841673fd1cca7,
+        type: 3}
+      propertyPath: currentWaypoint
+      value: 
+      objectReference: {fileID: 1780063723}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c3f78b2963230e4bb6841673fd1cca7, type: 3}
---- !u!4 &278621469508534275 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3133771515249668162, guid: 7c3f78b2963230e4bb6841673fd1cca7,
-    type: 3}
-  m_PrefabInstance: {fileID: 2927542441079418945}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3302468766424958349 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 392940778663327180, guid: 7c3f78b2963230e4bb6841673fd1cca7,
     type: 3}
   m_PrefabInstance: {fileID: 2927542441079418945}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3302468767410337554 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 392940777459386195, guid: 7c3f78b2963230e4bb6841673fd1cca7,
+--- !u!4 &278621469508534275 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3133771515249668162, guid: 7c3f78b2963230e4bb6841673fd1cca7,
     type: 3}
   m_PrefabInstance: {fileID: 2927542441079418945}
   m_PrefabAsset: {fileID: 0}
