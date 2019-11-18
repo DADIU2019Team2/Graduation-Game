@@ -6,11 +6,16 @@ using UnityEngine;
 public class Language : ScriptableObject
 {
     //public string ShowCurrentLanguage; //only for show not actually used
-    public enum LocalazationLanguage { English, Dansk };
+    public enum LocalazationLanguage { Key = 0, English = 2, Dansk = 1 };
     [SerializeField] private static LocalazationLanguage currentLanguage;
+
+    public delegate void OnLangugeChangeDelegate(LocalazationLanguage lang);
+    public event OnLangugeChangeDelegate languageChangeEvent;
 
     public void SetLanguage(LocalazationLanguage language)
     {
+        if (languageChangeEvent != null)
+            languageChangeEvent(language);
         currentLanguage = language;
         //ShowCurrentLanguage = currentLanguage.ToString();
     }

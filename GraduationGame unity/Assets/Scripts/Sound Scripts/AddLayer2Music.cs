@@ -7,27 +7,16 @@ public class AddLayer2Music : MonoBehaviour {
 private bool IsInCollider = false;
 
 
-
-    // Start is called before the first frame update
     void Start()
     {
         AkSoundEngine.RegisterGameObj(gameObject);
     }
     
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag != "Player" || IsInCollider) { return; }
-        AkSoundEngine.SetRTPCValue("Music_Layer_Z1", 3);
-        AkSoundEngine.SetRTPCValue("Music_Layer_Z2", 3);
-        AkSoundEngine.SetRTPCValue("Music_Layer_Z3", 3);
-        AkSoundEngine.SetRTPCValue("Music_Layer_Z4", 3);
+        AkSoundEngine.SetRTPCValue("Happy_Synth", 1);
     }
 }
     

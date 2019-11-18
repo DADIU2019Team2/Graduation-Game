@@ -6,6 +6,7 @@ public class LedgeGrabPoint : MonoBehaviour
 {
     [Tooltip("The point relative to the collider where zoe should be placed on grab")]
     public Vector3 offset;
+    public static Vector3 offsetToMatchAnimation;
     public enum ZoeShouldBeFacing
     {
         Right = 1,
