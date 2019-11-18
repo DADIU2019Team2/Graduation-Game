@@ -5,9 +5,13 @@ using UnityEngine;
 public class MusicZone1 : MonoBehaviour
 {
     // Start is called before the first frame update
+    void Awake()
+    {
+        AkSoundEngine.StopAll();
+    }
     void Start()
     {
-        AkSoundEngine.PostEvent("StopAll", gameObject);
+        
         
         AkSoundEngine.SetState("Zones", "Zone1");
         

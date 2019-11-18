@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LoadOnStartup : MonoBehaviour
 {
-    public static int mainMenuIndex = 0;
+    public static int mainMenuIndex;
 
     // Start is called before the first frame update
     void Start()

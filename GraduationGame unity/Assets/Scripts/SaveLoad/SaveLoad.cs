@@ -12,10 +12,9 @@ public class SaveLoad
 
     public static void Save()
     {
-        //GameSave.currentSave.lastCompletedLevel = SceneManager.GetActiveScene().buildIndex - LoadOnStartup.mainMenuIndex;
+        GameSave.currentSave.lastCompletedLevel = SceneManager.GetActiveScene().buildIndex - LoadOnStartup.mainMenuIndex;
         Debug.Log("SAVING");
         saveGame = GameSave.currentSave;
-        Debug.Log(saveGame.lastCompletedLevel);
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/savedGames.gd");
         Debug.Log(Application.persistentDataPath.ToString());
@@ -30,14 +29,13 @@ public class SaveLoad
             FileStream file = File.Open(Application.persistentDataPath + "/savedGames.gd", FileMode.Open);
             SaveLoad.saveGame = (GameSave)bf.Deserialize(file);
             GameSave.currentSave = SaveLoad.saveGame;
-            Debug.Log(GameSave.currentSave + "current save?");
             file.Close();
         }
         else
         {
             Debug.Log("Does not exist");
-            GameSave.currentSave = saveGame;
         }
+            GameSave.currentSave = saveGame;
     }
 
 }

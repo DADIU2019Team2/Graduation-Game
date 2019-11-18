@@ -8,7 +8,7 @@
 						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-1</Value>
+								<Value>4</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -85,6 +85,20 @@
 									<PropertyList>
 										<Property Name="OutputGain" Type="Real32" Value="-2"/>
 										<Property Name="Threshold" Type="Real32" Value="-15.7"/>
+									</PropertyList>
+								</Effect>
+							</Custom>
+						</Reference>
+						<Reference Name="Effect1">
+							<Custom>
+								<Effect Name="Wwise_Parametric_EQ_(Custom)" ID="{A642D534-DB92-489C-8685-213F136178DE}" ShortID="603110791" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<PropertyList>
+										<Property Name="FilterTypeBand1" Type="int32" Value="3"/>
+										<Property Name="FilterTypeBand2" Type="int32" Value="3"/>
+										<Property Name="FrequencyBand1" Type="Real32" Value="505"/>
+										<Property Name="GainBand1" Type="Real32" Value="-4"/>
+										<Property Name="OnOffBand2" Type="bool" Value="False"/>
+										<Property Name="OnOffBand3" Type="bool" Value="False"/>
 									</PropertyList>
 								</Effect>
 							</Custom>

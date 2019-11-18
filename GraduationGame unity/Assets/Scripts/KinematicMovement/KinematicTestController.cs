@@ -143,10 +143,10 @@ namespace KinematicTest.controller
 
         //Collision event because KCC doesn't like unity's collisions
         public IntEvent SpikeDamageEvent;
-        public bool _justTookDamage;
-        public float _timeSinceDamageTaken;
-        public bool canTakeDamage;
-        public float damageResetTimer;
+        private bool _justTookDamage;
+        private float _timeSinceDamageTaken;
+        private bool canTakeDamage;
+        private float damageResetTimer;
 
         void Init()
         {
@@ -183,6 +183,8 @@ namespace KinematicTest.controller
             timeBeforeFallFromLedge = settings.timeBeforeFallFromLedge;
             AllowDoubleJump = settings.AllowDoubleJump;
             AllowJumpingWhenSliding = settings.AllowJumpingWhenSliding;
+
+            damageResetTimer = settings.invincibilityTime;
         }
 
         private void Start()
@@ -1009,6 +1011,11 @@ namespace KinematicTest.controller
                 SpikeDamageEvent.Raise(damage);
                 _justTookDamage = true;
             }
+            else if (hitCollider.CompareTag("FallingPlatform"))
+            {
+                FallingPlatforms fallingPlatform = hitCollider.gameObject.GetComponent<FallingPlatforms>();
+                fallingPlatform.startFallingPlatform();
+            }
         }
 
         public void PostGroundingUpdate(float deltaTime)
@@ -1093,6 +1100,11 @@ namespace KinematicTest.controller
             }
         }
 
+        public bool GetIsJumpingOnPurpose()
+        {
+            return jumpInitiated;
+        }
+
         public void MidLevelTransition(int dir)
         {
             Debug.Log(dir);
@@ -1103,11 +1115,6 @@ namespace KinematicTest.controller
         public bool JumpingThisFrame()
         {
             return _jumpedThisFrame;
-        }
-
-        public bool GetCanTakeDamage()
-        {
-            return canTakeDamage;
         }
     }
 }

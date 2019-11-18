@@ -5,9 +5,14 @@ using UnityEngine;
 public class MusicZone2 : MonoBehaviour
 {
     // Start is called before the first frame update
+    
+    void Awake() 
+    {
+        AkSoundEngine.StopAll();
+    }
     void Start()
     {
-        AkSoundEngine.PostEvent("StopAll", gameObject);
+        
         
         AkSoundEngine.SetState("Zones", "Zone2");
         
@@ -16,11 +21,5 @@ public class MusicZone2 : MonoBehaviour
         AkSoundEngine.SetRTPCValue("Happy_Drumz", 1);
 
         AkSoundEngine.PostEvent("Play_Ambience_Z2", gameObject);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
