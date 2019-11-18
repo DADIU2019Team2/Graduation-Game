@@ -8,6 +8,8 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
 {
     public PlayerStats playerStats;
     private bool isDead;
+    public ParticleSystem deathParticles;
+
 
     //public float currentHealth;
     //public float currentStamina;
@@ -36,7 +38,11 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
             zoeTakeDamageEvent();
         if (playerStats.getCurrentHealth() <= 0)
         {
+
+            //Play Death Particle
+            deathParticles.Play();
             isDead = true;
+            AkSoundEngine.SetState("Dead_or_Alive", "Dead");
             Die();
         }
     }
@@ -56,6 +62,9 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
     {
         //currentHealth = playerStats.MaxHealth;
         //currentStamina = playerStats.MaxStamina;
+        AkSoundEngine.SetState("Dead_or_Alive", "Alive");
+        deathParticles.Stop();
+        deathParticles.Clear();
         playerStats.resetHealth();
         playerStats.resetStamina();
         isDead = false;
