@@ -20,6 +20,8 @@ public class SliderDataConverter : MonoBehaviour
     private bool isIntSLider;
 
     [SerializeField] private FloatVariable floatDataContainer;
+    public enum SpecificVolumeType { Master, Music, SFX}
+    public SpecificVolumeType specificVolumeToChange;
 
     private void Awake()
     {
@@ -44,6 +46,7 @@ public class SliderDataConverter : MonoBehaviour
     private void updateData()
     {
         floatDataContainer.setValue(slider.value);
+        SetSpecificVolumeType(specificVolumeToChange);
     }
 
     private void displayData()
@@ -58,4 +61,25 @@ public class SliderDataConverter : MonoBehaviour
         }
     }
 
+    void SetSpecificVolumeType(SpecificVolumeType Vtype)
+    {
+
+        switch (specificVolumeToChange)
+        {
+            case SpecificVolumeType.Master:
+                float masterVolume = slider.value;
+                AkSoundEngine.SetRTPCValue("Master_Volume", masterVolume);
+                break;
+            case SpecificVolumeType.Music:
+                float musicVolume = slider.value;
+                AkSoundEngine.SetRTPCValue("Music_Volume", musicVolume);
+                break;
+            case SpecificVolumeType.SFX:
+                float SFXVolume = slider.value;
+                AkSoundEngine.SetRTPCValue("SFX_Volume", SFXVolume);
+                break;
+            default:
+                break;
+        }
+    }
 }
