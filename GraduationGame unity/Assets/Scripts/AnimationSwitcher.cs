@@ -1,17 +1,21 @@
-﻿/*using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using KinematicTest.controller;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class AnimationSwitcher : MonoBehaviour
 {
-    public RuntimeAnimatorController mmStates;
-    public RuntimeAnimatorController interactionStates;
+    public AnimatorController mmStates;
+    public AnimatorController interactionStates;
     public MMAnimationController mmAnimatorController;
     public KinematicTestController characterController;
 
     public Animator animator;
+    public Vector2 airLerp;
+    public float airTime;
+    public float t;
 
     private void Update()
     {
@@ -20,7 +24,17 @@ public class AnimationSwitcher : MonoBehaviour
             characterController.Motor.GroundingStatus.IsStableOnGround)
         {
             //reset states
+            if (characterController.JumpingThisFrame())
+            {
+                animator.runtimeAnimatorController = interactionStates;
+                mmAnimatorController.StopMotionMatching();
+                // set jump anim
+                animator.SetTrigger("jump");
 
+                
+               
+
+            }
             //start motion matching
             animator.runtimeAnimatorController = mmStates;
             mmAnimatorController.StartMotionMatching();
@@ -36,55 +50,78 @@ public class AnimationSwitcher : MonoBehaviour
             {
                 case PlayerStates.Idling:
                 {
-                    //set idle loop
-
+                        //set idle loop
+                        animator.SetBool("isStanding", true);
                     break;
                 }
                 case PlayerStates.NoInput:
                 {
-                    //set idle loop
-
-                    break;
+                        //set idle loop
+                        animator.SetBool("isIdling", true);
+                        break;
                 }
                 case PlayerStates.Sliding:
                 {
-                    //set roll animation
+                        //set roll animation
+                        animator.SetBool("isSliding", true);
+                        if (characterController.JumpingThisFrame())
+                        {
+                            // set jump anim
+                            animator.SetTrigger("jump");
 
-                    break;
+
+
+
+                        }
+                        break;
                 }
                 case PlayerStates.Running:
                 {
-                    if (characterController.GetIsJumpingOnPurpose())
-                    {
-                        // set jump anim
-                    }
-                    else
-                    {
+                        animator.SetBool("isStanding", false);
+                        animator.SetBool("onLedge?", false);
+                        animator.ResetTrigger("ledgeDetected");
+                        animator.SetBool("isFalling", false);
+
+
+                        animator.SetBool("inAir",true);
                         // set fall anim
-                    }
+                    
 
                     break;
                 }
                 case PlayerStates.LedgeGrabbing:
                 {
-                    //set ledge grab
-
+                        //set ledge grab
+                        animator.SetBool("inAir", false);
+                        animator.SetBool("onLedge?", true);
+                        animator.SetTrigger("ledgeDetected");
                     break;
                 }
                 case PlayerStates.Tired:
                 {
-                    //set wallkick
+                        //set wallkick
+                        if (characterController.GetLedgeForward())
+                        {
+                            animator.SetBool("inAir", true);
+                            animator.SetBool("onLedge?", false);
+                            animator.ResetTrigger("ledgeDetected");
+                        }
+                        else
+                        {
+                            animator.SetBool("inAir", true);
+                            animator.SetBool("onLedge?", false);
+                            animator.ResetTrigger("ledgeDetected");
+                        }
+                        break;
 
-                    break;
                 }
                 case PlayerStates.Falling:
                 {
-                    //set falling again
-
+                        //set falling again
+                        animator.SetBool("isFalling", true);
                     break;
                 }
             }
         }
     }
 }
-*/
