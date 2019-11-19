@@ -29,6 +29,7 @@
 				<Event Id="3996256281" Name="Ambience_Outside" ObjectPath="\Events\Default Work Unit\Ambience\Ambience_Outside" DurationType="Infinite"/>
 				<Event Id="1848730664" Name="Ball_Platform" ObjectPath="\Events\Default Work Unit\SFX\Ball_Platform" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="2557453060" Name="Ball_Platform_Damaged" ObjectPath="\Events\Default Work Unit\SFX\Ball_Platform_Damaged" MaxAttenuation="30.000000" DurationType="Infinite"/>
+				<Event Id="4062243661" Name="Checkpoint_With_Melody" ObjectPath="\Events\Default Work Unit\CelebrationSound\Checkpoint_With_Melody" DurationType="OneShot" DurationMin="4.000000" DurationMax="4.000000"/>
 				<Event Id="3878901180" Name="Crusher_Idle" ObjectPath="\Events\Default Work Unit\SFX\Crusher_Idle" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="3540377255" Name="Crystal_Door_Hum" ObjectPath="\Events\Default Work Unit\SFX\Crystal_Door_Hum" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="576072719" Name="Crystal_Door_Open" ObjectPath="\Events\Default Work Unit\SFX\Crystal_Door_Open" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="1.451410" DurationMax="1.451410"/>
@@ -36,11 +37,16 @@
 				<Event Id="977466704" Name="Death_Ray" ObjectPath="\Events\Default Work Unit\SFX\Death_Ray" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="507840475" Name="Death_Saw" ObjectPath="\Events\Default Work Unit\SFX\Death_Saw" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="2917121896" Name="Electricity" ObjectPath="\Events\Default Work Unit\SFX\Electricity" MaxAttenuation="30.000000" DurationType="Infinite"/>
+				<Event Id="1450217292" Name="Gate_Closing" ObjectPath="\Events\Default Work Unit\SFX\Gate_Closing" MaxAttenuation="30.000000" DurationType="Infinite"/>
+				<Event Id="3873573389" Name="Gate_Impact" ObjectPath="\Events\Default Work Unit\SFX\Gate_Impact" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="1.943064" DurationMax="1.943064"/>
+				<Event Id="238897438" Name="Grabs" ObjectPath="\Events\Default Work Unit\Movement\Grabs" DurationType="OneShot" DurationMin="4.000000" DurationMax="4.896214"/>
 				<Event Id="2381409572" Name="Lazer_Big" ObjectPath="\Events\Default Work Unit\SFX\Lazer_Big" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="1777268324" Name="Lazer_Med" ObjectPath="\Events\Default Work Unit\SFX\Lazer_Med" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="1472838051" Name="Lazer_Small" ObjectPath="\Events\Default Work Unit\SFX\Lazer_Small" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="2967932086" Name="Lazer_Wall" ObjectPath="\Events\Default Work Unit\SFX\Lazer_Wall" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="3352547351" Name="Lazer_Wall_Power_Down" ObjectPath="\Events\Default Work Unit\SFX\Lazer_Wall_Power_Down" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="2.135228" DurationMax="2.135228"/>
+				<Event Id="3736098925" Name="Level_Complete" ObjectPath="\Events\Default Work Unit\CelebrationSound\Level_Complete" DurationType="OneShot" DurationMin="6.750000" DurationMax="6.750000"/>
+				<Event Id="352576276" Name="Level_Start" ObjectPath="\Events\Default Work Unit\CelebrationSound\Level_Start" DurationType="OneShot" DurationMin="6.000000" DurationMax="6.000000"/>
 				<Event Id="4182768561" Name="Normal_Platforms" ObjectPath="\Events\Default Work Unit\SFX\Normal_Platforms" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="1611566155" Name="Platform_Pillar_Damaged" ObjectPath="\Events\Default Work Unit\SFX\Platform_Pillar_Damaged" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="1001479278" Name="Play_Ambience_Z1" ObjectPath="\Events\Default Work Unit\Ambience\Play_Ambience_Z1" DurationType="Infinite"/>
@@ -58,6 +64,7 @@
 				<Event Id="3303975224" Name="Play_Zone4_Music" ObjectPath="\Events\Default Work Unit\Music\Play_Zone4_Music" DurationType="Infinite"/>
 				<Event Id="2187783824" Name="Robot_Appearence" ObjectPath="\Events\Default Work Unit\SFX\Robot_Appearence" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="4.863542" DurationMax="4.863542"/>
 				<Event Id="443572616" Name="Saw" ObjectPath="\Events\Default Work Unit\SFX\Saw" MaxAttenuation="30.000000" DurationType="Infinite"/>
+				<Event Id="697318835" Name="Slides" ObjectPath="\Events\Default Work Unit\Movement\Slides" DurationType="OneShot" DurationMin="4.719371" DurationMax="5.612310"/>
 				<Event Id="1683987449" Name="Spike_Lazer_Pyramid_Cone" ObjectPath="\Events\Default Work Unit\SFX\Spike_Lazer_Pyramid_Cone" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="2939559692" Name="Spiky_Machine_Impact" ObjectPath="\Events\Default Work Unit\SFX\Spiky_Machine_Impact" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="1.000000" DurationMax="2.000000"/>
 				<Event Id="3004230381" Name="Stop_Alien_Crystal_Hum" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Alien_Crystal_Hum" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
@@ -87,6 +94,10 @@
 				<Event Id="3086540886" Name="StopAll" ObjectPath="\Events\Default Work Unit\StopAll" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="5587684" Language="SFX">
+					<ShortName>Gate_Impact.wav</ShortName>
+					<Path>SFX/Gate_Impact_6296B0F9.wem</Path>
+				</File>
 				<File Id="7699699" Language="SFX">
 					<ShortName>Z1_Ascending_Metal.wav</ShortName>
 					<Path>SFX/Z1_Ascending_Metal_3EBA1927.wem</Path>
@@ -110,6 +121,14 @@
 				<File Id="32006921" Language="SFX">
 					<ShortName>Z2_Nasal_Bass.wav</ShortName>
 					<Path>SFX/Z2_Nasal_Bass_3EBA1927.wem</Path>
+				</File>
+				<File Id="39273287" Language="SFX">
+					<ShortName>Slide_3.wav</ShortName>
+					<Path>SFX/Slide_3_6296B0F9.wem</Path>
+				</File>
+				<File Id="40096853" Language="SFX">
+					<ShortName>Grab4.wav</ShortName>
+					<Path>SFX/Grab4_6296B0F9.wem</Path>
 				</File>
 				<File Id="40232207" Language="SFX">
 					<ShortName>Z2_Hope_Rising_Synth.wav</ShortName>
@@ -218,6 +237,14 @@
 				<File Id="278798423" Language="SFX">
 					<ShortName>Z1_Nasal_Bass.wav</ShortName>
 					<Path>SFX/Z1_Nasal_Bass_3EBA1927.wem</Path>
+				</File>
+				<File Id="283163331" Language="SFX">
+					<ShortName>Grab3.wav</ShortName>
+					<Path>SFX/Grab3_6296B0F9.wem</Path>
+				</File>
+				<File Id="283942315" Language="SFX">
+					<ShortName>Slide_1.wav</ShortName>
+					<Path>SFX/Slide_1_6296B0F9.wem</Path>
 				</File>
 				<File Id="286271245" Language="SFX">
 					<ShortName>Normal_Platform1.wav</ShortName>
@@ -335,9 +362,17 @@
 					<ShortName>Ambience_Z2.wav</ShortName>
 					<Path>SFX/Ambience_Z2_9B96ECC7.wem</Path>
 				</File>
+				<File Id="531903195" Language="SFX">
+					<ShortName>Level_Start.wav</ShortName>
+					<Path>SFX/Level_Start_10C4C929.wem</Path>
+				</File>
 				<File Id="537809517" Language="SFX">
 					<ShortName>Spiky_Machine_Impact.wav</ShortName>
 					<Path>SFX/Spiky_Machine_Impact_6296B0F9.wem</Path>
+				</File>
+				<File Id="541793192" Language="SFX">
+					<ShortName>Grab1.wav</ShortName>
+					<Path>SFX/Grab1_6296B0F9.wem</Path>
 				</File>
 				<File Id="561551880" Language="SFX">
 					<ShortName>Jump_Takeoff_3.wav</ShortName>
@@ -371,6 +406,14 @@
 					<ShortName>Z3_Metal_Pad.wav</ShortName>
 					<Path>SFX/Z3_Metal_Pad_3EBA1927.wem</Path>
 				</File>
+				<File Id="614726966" Language="SFX">
+					<ShortName>Grab2.wav</ShortName>
+					<Path>SFX/Grab2_6296B0F9.wem</Path>
+				</File>
+				<File Id="629405468" Language="SFX">
+					<ShortName>Ledge_Grab_SFX.wav</ShortName>
+					<Path>SFX/Ledge_Grab_SFX_6296B0F9.wem</Path>
+				</File>
 				<File Id="635677682" Language="SFX">
 					<ShortName>Jump_Hu_10.wav</ShortName>
 					<Path>SFX/Jump_Hu_10_6296B0F9.wem</Path>
@@ -394,6 +437,10 @@
 				<File Id="787556428" Language="SFX">
 					<ShortName>Ambience_Z3.wav</ShortName>
 					<Path>SFX/Ambience_Z3_9B96ECC7.wem</Path>
+				</File>
+				<File Id="791104068" Language="SFX">
+					<ShortName>Gate_Closing.wav</ShortName>
+					<Path>SFX/Gate_Closing_9B96ECC7.wem</Path>
 				</File>
 				<File Id="795860753" Language="SFX">
 					<ShortName>Lazer_Wall_Power_Down.wav</ShortName>
@@ -443,6 +490,10 @@
 					<ShortName>New_Metal_Ftstp_Loop.wav</ShortName>
 					<Path>SFX/New_Metal_Ftstp_Loop_9B96ECC7.wem</Path>
 				</File>
+				<File Id="931153672" Language="SFX">
+					<ShortName>Slide_2.wav</ShortName>
+					<Path>SFX/Slide_2_6296B0F9.wem</Path>
+				</File>
 				<File Id="932720973" Language="SFX">
 					<ShortName>Normal_Platform2.wav</ShortName>
 					<Path>SFX/Normal_Platform2_9B96ECC7.wem</Path>
@@ -475,6 +526,10 @@
 					<ShortName>Platform_2.wav</ShortName>
 					<Path>SFX/Platform_2_9B96ECC7.wem</Path>
 				</File>
+				<File Id="973220875" Language="SFX">
+					<ShortName>Checkpoint_With_Melody.wav</ShortName>
+					<Path>SFX/Checkpoint_With_Melody_10C4C929.wem</Path>
+				</File>
 				<File Id="979311821" Language="SFX">
 					<ShortName>Ball_Platform_Damaged.wav</ShortName>
 					<Path>SFX/Ball_Platform_Damaged_9B96ECC7.wem</Path>
@@ -483,6 +538,10 @@
 					<ShortName>Z4_Dist_Klaver.wav</ShortName>
 					<Path>SFX/Z4_Dist_Klaver_3EBA1927.wem</Path>
 				</File>
+				<File Id="992312086" Language="SFX">
+					<ShortName>Level_Complete.wav</ShortName>
+					<Path>SFX/Level_Complete_10C4C929.wem</Path>
+				</File>
 				<File Id="1010279705" Language="SFX">
 					<ShortName>Z3_Dist_Bassline.wav</ShortName>
 					<Path>SFX/Z3_Dist_Bassline_3EBA1927.wem</Path>
@@ -490,6 +549,10 @@
 				<File Id="1021751483" Language="SFX">
 					<ShortName>Platform_4.wav</ShortName>
 					<Path>SFX/Platform_4_9B96ECC7.wem</Path>
+				</File>
+				<File Id="1023093752" Language="SFX">
+					<ShortName>Slide_SFX.wav</ShortName>
+					<Path>SFX/Slide_SFX_6296B0F9.wem</Path>
 				</File>
 				<File Id="1038287459" Language="SFX">
 					<ShortName>Jump_Hu_9.wav</ShortName>
