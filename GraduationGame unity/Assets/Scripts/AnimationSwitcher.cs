@@ -159,4 +159,33 @@ public class AnimationSwitcher : MonoBehaviour
             }
         }
     }
+
+    private Vector3 PredictAboutToLand(float deltaTime, out bool hit)
+    {
+        Vector3 grav = characterController.Gravity;
+        Vector3 velocity = characterController.Motor.BaseVelocity;
+        velocity = velocity + grav * deltaTime;
+
+
+        Vector3 position = transform.parent.position;
+        Vector3 predictedPosition = position + velocity * deltaTime;
+        Vector3 dir = velocity * deltaTime;
+        hit = Physics.SphereCast(position, characterController.Motor.Capsule.radius, dir.normalized,
+            out var sphereCastHitInfo, dir.magnitude);
+        return predictedPosition;
+    }
+
+    private void OnDrawGizmos()
+    {
+        var v = PredictAboutToLand(0.1f, out var hit);
+        if (hit)
+        {
+            Gizmos.color = Color.red;
+        }
+        else
+        {
+            Gizmos.color = Color.green;
+        }
+        Gizmos.DrawWireSphere(v,characterController.Motor.Capsule.radius);
+    }
 }
