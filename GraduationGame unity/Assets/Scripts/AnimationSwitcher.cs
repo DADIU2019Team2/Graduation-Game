@@ -128,7 +128,6 @@ public class AnimationSwitcher : MonoBehaviour
                     {
                         animator.SetBool("inAir", true);
                         animator.SetBool("onLedge?", false);
-                        animator.ResetTrigger("ledgeDetected");
                     }
                     else
                     {
