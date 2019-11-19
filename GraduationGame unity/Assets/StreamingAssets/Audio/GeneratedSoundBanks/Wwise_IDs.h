@@ -21,6 +21,7 @@ namespace AK
         static const AkUniqueID AMBIENCE_OUTSIDE = 3996256281U;
         static const AkUniqueID BALL_PLATFORM = 1848730664U;
         static const AkUniqueID BALL_PLATFORM_DAMAGED = 2557453060U;
+        static const AkUniqueID CHECKPOINT_WITH_MELODY = 4062243661U;
         static const AkUniqueID CRUSHER_IDLE = 3878901180U;
         static const AkUniqueID CRYSTAL_DOOR_HUM = 3540377255U;
         static const AkUniqueID CRYSTAL_DOOR_OPEN = 576072719U;
@@ -28,11 +29,16 @@ namespace AK
         static const AkUniqueID DEATH_RAY = 977466704U;
         static const AkUniqueID DEATH_SAW = 507840475U;
         static const AkUniqueID ELECTRICITY = 2917121896U;
+        static const AkUniqueID GATE_CLOSING = 1450217292U;
+        static const AkUniqueID GATE_IMPACT = 3873573389U;
+        static const AkUniqueID GRABS = 238897438U;
         static const AkUniqueID LAZER_BIG = 2381409572U;
         static const AkUniqueID LAZER_MED = 1777268324U;
         static const AkUniqueID LAZER_SMALL = 1472838051U;
         static const AkUniqueID LAZER_WALL = 2967932086U;
         static const AkUniqueID LAZER_WALL_POWER_DOWN = 3352547351U;
+        static const AkUniqueID LEVEL_COMPLETE = 3736098925U;
+        static const AkUniqueID LEVEL_START = 352576276U;
         static const AkUniqueID NORMAL_PLATFORMS = 4182768561U;
         static const AkUniqueID PLATFORM_PILLAR_DAMAGED = 1611566155U;
         static const AkUniqueID PLAY_AMBIENCE_Z1 = 1001479278U;
@@ -50,6 +56,7 @@ namespace AK
         static const AkUniqueID PLAY_ZONE4_MUSIC = 3303975224U;
         static const AkUniqueID ROBOT_APPEARENCE = 2187783824U;
         static const AkUniqueID SAW = 443572616U;
+        static const AkUniqueID SLIDES = 697318835U;
         static const AkUniqueID SPIKE_LAZER_PYRAMID_CONE = 1683987449U;
         static const AkUniqueID SPIKY_MACHINE_IMPACT = 2939559692U;
         static const AkUniqueID STOP_ALIEN_CRYSTAL_HUM = 3004230381U;
