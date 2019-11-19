@@ -2,13 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using KinematicTest.controller;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class AnimationSwitcher : MonoBehaviour
 {
-    public AnimatorController mmStates;
-    public AnimatorController interactionStates;
+    public RuntimeAnimatorController mmStates;
+    public RuntimeAnimatorController interactionStates;
     public MMAnimationController mmAnimatorController;
     public KinematicTestController characterController;
 
@@ -19,7 +18,7 @@ public class AnimationSwitcher : MonoBehaviour
 
     private void Update()
     {
-        //basic locomotion
+        /*//basic locomotion
         if (characterController.CurrentCharacterState == PlayerStates.Running &&
             characterController.Motor.GroundingStatus.IsStableOnGround)
         {
@@ -38,6 +37,20 @@ public class AnimationSwitcher : MonoBehaviour
             //start motion matching
             animator.runtimeAnimatorController = mmStates;
             mmAnimatorController.StartMotionMatching();
+        }*/
+
+        if ((characterController.Motor.GroundingStatus.IsStableOnGround &&
+             !characterController.Motor.LastGroundingStatus.IsStableOnGround) ||
+            (characterController.Motor.GroundingStatus.IsStableOnGround &&
+             characterController.CurrentCharacterState == PlayerStates.Running))
+        {
+            animator.runtimeAnimatorController = mmStates;
+            if(!mmAnimatorController.isMotionMatchingRunning)
+            {
+                animator.CrossFadeInFixedTime("run01", 0.3f); //Now THIS is what I call Jank!
+            }
+            
+            mmAnimatorController.StartMotionMatching();
         }
         else
         {
@@ -50,75 +63,78 @@ public class AnimationSwitcher : MonoBehaviour
             {
                 case PlayerStates.Idling:
                 {
-                        //set idle loop
-                        animator.SetBool("isStanding", true);
+                    //set idle loop
+                    animator.SetBool("isStanding", true);
                     break;
                 }
                 case PlayerStates.NoInput:
                 {
-                        //set idle loop
-                        animator.SetBool("isIdling", true);
-                        break;
+                    //set idle loop
+                    animator.SetBool("isIdling", true);
+                    break;
+                }
+                case PlayerStates.CinematicIdle:
+                {
+                    //set idle loop
+                    animator.SetBool("isStanding", true);
+                    break;
                 }
                 case PlayerStates.Sliding:
                 {
-                        //set roll animation
-                        animator.SetBool("isSliding", true);
-                        if (characterController.JumpingThisFrame())
-                        {
-                            // set jump anim
-                            animator.SetTrigger("jump");
+                    //set roll animation
+                    animator.SetBool("isSliding", true);
+                    if (characterController.JumpingThisFrame())
+                    {
+                        // set jump anim
+                        animator.SetTrigger("jump");
+                    }
 
-
-
-
-                        }
-                        break;
+                    break;
                 }
                 case PlayerStates.Running:
                 {
-                        animator.SetBool("isStanding", false);
-                        animator.SetBool("onLedge?", false);
-                        animator.ResetTrigger("ledgeDetected");
-                        animator.SetBool("isFalling", false);
+                    animator.SetBool("isStanding", false);
+                    animator.SetBool("onLedge?", false);
+                    animator.ResetTrigger("ledgeDetected");
+                    animator.SetBool("isFalling", false);
 
 
-                        animator.SetBool("inAir",true);
-                        // set fall anim
-                    
+                    animator.SetBool("inAir", true);
+                    // set fall anim
+
 
                     break;
                 }
                 case PlayerStates.LedgeGrabbing:
                 {
-                        //set ledge grab
-                        animator.SetBool("inAir", false);
-                        animator.SetBool("onLedge?", true);
-                        animator.SetTrigger("ledgeDetected");
+                    //set ledge grab
+                    animator.SetBool("inAir", false);
+                    animator.SetBool("onLedge?", true);
+                    animator.SetTrigger("ledgeDetected");
                     break;
                 }
                 case PlayerStates.Tired:
                 {
-                        //set wallkick
-                        if (characterController.GetLedgeForward())
-                        {
-                            animator.SetBool("inAir", true);
-                            animator.SetBool("onLedge?", false);
-                            animator.ResetTrigger("ledgeDetected");
-                        }
-                        else
-                        {
-                            animator.SetBool("inAir", true);
-                            animator.SetBool("onLedge?", false);
-                            animator.ResetTrigger("ledgeDetected");
-                        }
-                        break;
+                    //set wallkick
+                    if (characterController.GetLedgeForward())
+                    {
+                        animator.SetBool("inAir", true);
+                        animator.SetBool("onLedge?", false);
+                        animator.ResetTrigger("ledgeDetected");
+                    }
+                    else
+                    {
+                        animator.SetBool("inAir", true);
+                        animator.SetBool("onLedge?", false);
+                        animator.ResetTrigger("ledgeDetected");
+                    }
 
+                    break;
                 }
                 case PlayerStates.Falling:
                 {
-                        //set falling again
-                        animator.SetBool("isFalling", true);
+                    //set falling again
+                    animator.SetBool("isFalling", true);
                     break;
                 }
             }

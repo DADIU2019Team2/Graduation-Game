@@ -213,92 +213,92 @@ namespace KinematicTest.controller
             switch (state)
             {
                 case PlayerStates.Running:
-                    {
-                        MaxAirMoveSpeed = settings.maxAirMoveSpeed;
-                        MaxStableMoveSpeed = settings.maxMoveSpeed;
-                        JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.jumpHeight * settings.baseGravity *
-                                               Motor.Capsule.height);
-                        break;
-                    }
+                {
+                    MaxAirMoveSpeed = settings.maxAirMoveSpeed;
+                    MaxStableMoveSpeed = settings.maxMoveSpeed;
+                    JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.jumpHeight * settings.baseGravity *
+                                           Motor.Capsule.height);
+                    break;
+                }
                 case PlayerStates.Idling:
-                    {
-                        stopped = true;
-                        rampingDown = false;
-                        MaxAirMoveSpeed = settings.idleAirMoveSpeed;
-                        MaxStableMoveSpeed = 0f;
-                        curveStep = 0f;
-                        JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.idleJumpHeight * settings.baseGravity *
-                                               Motor.Capsule.height);
-                        break;
-                    }
+                {
+                    stopped = true;
+                    rampingDown = false;
+                    MaxAirMoveSpeed = settings.idleAirMoveSpeed;
+                    MaxStableMoveSpeed = 0f;
+                    curveStep = 0f;
+                    JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.idleJumpHeight * settings.baseGravity *
+                                           Motor.Capsule.height);
+                    break;
+                }
                 case PlayerStates.CinematicIdle:
-                    {
-                        stopped = true;
-                        rampingDown = false;
-                        MaxStableMoveSpeed = 0f;
-                        curveStep = 0f;
-                        break;
-                    }
+                {
+                    stopped = true;
+                    rampingDown = false;
+                    MaxStableMoveSpeed = 0f;
+                    curveStep = 0f;
+                    break;
+                }
                 case PlayerStates.Sliding:
+                {
+                    canChangedirection = false;
+                    _isStoppedSliding = false;
+                    MaxAirMoveSpeed = settings.slideMoveSpeed;
+                    MaxStableMoveSpeed = settings.slideMoveSpeed;
+                    curveStep = 0f;
+                    JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.slideJumpHeight * settings.baseGravity *
+                                           Motor.Capsule.height);
+                    _shouldBeCrouching = true;
+
+                    if (!_isCrouching)
                     {
-                        canChangedirection = false;
-                        _isStoppedSliding = false;
-                        MaxAirMoveSpeed = settings.slideMoveSpeed;
-                        MaxStableMoveSpeed = settings.slideMoveSpeed;
-                        curveStep = 0f;
-                        JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.slideJumpHeight * settings.baseGravity *
-                                               Motor.Capsule.height);
-                        _shouldBeCrouching = true;
-
-                        if (!_isCrouching)
-                        {
-                            _isCrouching = true;
-                            Motor.SetCapsuleDimensions(0.5f, 1f, 0.5f);
-                        }
-
-                        break;
+                        _isCrouching = true;
+                        Motor.SetCapsuleDimensions(0.5f, 1f, 0.5f);
                     }
+
+                    break;
+                }
                 case PlayerStates.LedgeGrabbing:
-                    {
-                        stopped = false;
-                        timeAtLastGrab = Time.time;
-                        MaxAirMoveSpeed = 0;
-                        MaxStableMoveSpeed = 0;
-                        break;
-                    }
+                {
+                    stopped = false;
+                    timeAtLastGrab = Time.time;
+                    MaxAirMoveSpeed = 0;
+                    MaxStableMoveSpeed = 0;
+                    break;
+                }
                 case PlayerStates.Tired:
+                {
+                    stopped = false;
+                    rampingDown = false;
+                    MaxStableMoveSpeed = 0f;
+                    curveStep = 0f;
+                    if (forward)
                     {
-                        stopped = false;
-                        rampingDown = false;
-                        MaxStableMoveSpeed = 0f;
-                        curveStep = 0f;
-                        if (forward)
-                        {
-                            MaxAirMoveSpeed = settings.ledgeGrabForwardAirMoveSpeed;
-                            JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.ledgeGrabForwardJumpHeight *
-                                                   settings.baseGravity *
-                                                   Motor.Capsule.height);
-                        }
-                        else
-                        {
-                            MaxAirMoveSpeed = settings.ledgeGrabBackwardsAirMoveSpeed;
-                            JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.ledgeGrabBackwardsJumpHeight *
-                                                   settings.baseGravity *
-                                                   Motor.Capsule.height);
-                        }
-
-
-                        break;
+                        MaxAirMoveSpeed = settings.ledgeGrabForwardAirMoveSpeed;
+                        JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.ledgeGrabForwardJumpHeight *
+                                               settings.baseGravity *
+                                               Motor.Capsule.height);
                     }
+                    else
+                    {
+                        MaxAirMoveSpeed = settings.ledgeGrabBackwardsAirMoveSpeed;
+                        JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.ledgeGrabBackwardsJumpHeight *
+                                               settings.baseGravity *
+                                               Motor.Capsule.height);
+                    }
+
+
+                    break;
+                }
                 case PlayerStates.Falling:
-                    {
-                        stopped = true;
-                        rampingDown = false;
-                        MaxAirMoveSpeed = 0;
-                        MaxStableMoveSpeed = 0f;
-                        curveStep = 0f;
-                        break;
-                    }
+                {
+                    stopped = true;
+                    rampingDown = false;
+                    MaxAirMoveSpeed = 0;
+                    MaxStableMoveSpeed = 0f;
+                    curveStep = 0f;
+                    break;
+                }
             }
         }
 
@@ -310,36 +310,36 @@ namespace KinematicTest.controller
             switch (state)
             {
                 case PlayerStates.Running:
-                    {
-                        break;
-                    }
+                {
+                    break;
+                }
                 case PlayerStates.Idling:
-                    {
-                        break;
-                    }
+                {
+                    break;
+                }
                 case PlayerStates.Sliding:
-                    {
-                        Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
-                        _isCrouching = false;
-                        _isStoppedSliding = true;
-                        _timeSinceStartedSliding = 0f;
-                        canChangedirection = true;
-                        break;
-                    }
+                {
+                    Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
+                    _isCrouching = false;
+                    _isStoppedSliding = true;
+                    _timeSinceStartedSliding = 0f;
+                    canChangedirection = true;
+                    break;
+                }
                 case PlayerStates.LedgeGrabbing:
-                    {
-                        timeAtLastLedgeGrab = Time.time;
-                        Motor.ZoeAttachedRigidbody = null;
-                        _doubleJumpConsumed = false;
-                        break;
-                    }
+                {
+                    timeAtLastLedgeGrab = Time.time;
+                    Motor.ZoeAttachedRigidbody = null;
+                    _doubleJumpConsumed = false;
+                    break;
+                }
                 case PlayerStates.NoInput:
-                    {
-                        //runningRight = 1;
-                        curveStep = 0; //for now
-                        _timeSinceTransitioning = 0f;
-                        break;
-                    }
+                {
+                    //runningRight = 1;
+                    curveStep = 0; //for now
+                    _timeSinceTransitioning = 0f;
+                    break;
+                }
             }
         }
 
@@ -356,7 +356,14 @@ namespace KinematicTest.controller
                 if (inputs.changeDirection || inputs.slideDown || inputs.jumpDown)
                 {
                     TransitionToState(PlayerStates.Running);
-                    return;
+                    if (stopped)
+                    {
+                        stopped = false;
+                        rampingDown = false;
+                        curveStep = 0;
+                        if (inputs.changeDirection)
+                            runningRight *= -1;
+                    }
                 }
             }
 
@@ -413,25 +420,25 @@ namespace KinematicTest.controller
             switch (CurrentWorldForward)
             {
                 case WorldForward.Right:
-                    {
-                        worldMoveDirection = Vector3.right;
-                        break;
-                    }
+                {
+                    worldMoveDirection = Vector3.right;
+                    break;
+                }
                 case WorldForward.Forward:
-                    {
-                        worldMoveDirection = Vector3.forward;
-                        break;
-                    }
+                {
+                    worldMoveDirection = Vector3.forward;
+                    break;
+                }
                 case WorldForward.Left:
-                    {
-                        worldMoveDirection = Vector3.left;
-                        break;
-                    }
+                {
+                    worldMoveDirection = Vector3.left;
+                    break;
+                }
                 case WorldForward.Back:
-                    {
-                        worldMoveDirection = Vector3.back;
-                        break;
-                    }
+                {
+                    worldMoveDirection = Vector3.back;
+                    break;
+                }
             }
 
             Vector3 moveInputVector = worldMoveDirection * runningRight;
@@ -468,20 +475,20 @@ namespace KinematicTest.controller
             switch (CurrentCharacterState)
             {
                 case PlayerStates.NoInput:
-                    {
-                        _timeSinceTransitioning += deltaTime;
-                        break;
-                    }
+                {
+                    _timeSinceTransitioning += deltaTime;
+                    break;
+                }
                 case PlayerStates.Sliding:
+                {
+                    _timeSinceStartedSliding += deltaTime;
+                    if (settings.decelerateWhileSliding)
                     {
-                        _timeSinceStartedSliding += deltaTime;
-                        if (settings.decelerateWhileSliding)
-                        {
-                            _slideCurveStep = _timeSinceStartedSliding / settings.slideDuration;
-                        }
-
-                        break;
+                        _slideCurveStep = _timeSinceStartedSliding / settings.slideDuration;
                     }
+
+                    break;
+                }
             }
 
             if (_justTookDamage)
@@ -544,62 +551,62 @@ namespace KinematicTest.controller
                 switch (CurrentCharacterState)
                 {
                     case PlayerStates.Running:
+                    {
+                        if (rampingDown)
+                        {
+                            if (curveStep < 1)
+                            {
+                                curveStep += (1 / rampDownTime * Time.deltaTime);
+                            }
+
+                            if (curveStep >= 1)
+                            {
+                                curveStep = 0;
+                                rampingDown = false;
+                                runningRight = runningRight * -1;
+                                //scarf.transform.Rotate(Vector3.up, 180);
+                            }
+                        }
+                        else
+                        {
+                            if (curveStep < 1)
+                            {
+                                curveStep += (1 / rampUpTime * Time.deltaTime);
+                            }
+
+                            if (curveStep > 1)
+                            {
+                                curveStep = 1;
+                            }
+                        }
+
+                        if (!stopped)
                         {
                             if (rampingDown)
                             {
-                                if (curveStep < 1)
-                                {
-                                    curveStep += (1 / rampDownTime * Time.deltaTime);
-                                }
-
-                                if (curveStep >= 1)
-                                {
-                                    curveStep = 0;
-                                    rampingDown = false;
-                                    runningRight = runningRight * -1;
-                                    //scarf.transform.Rotate(Vector3.up, 180);
-                                }
+                                velocity = MaxStableMoveSpeed * rampDownCurve.Evaluate(curveStep);
                             }
                             else
                             {
-                                if (curveStep < 1)
-                                {
-                                    curveStep += (1 / rampUpTime * Time.deltaTime);
-                                }
-
-                                if (curveStep > 1)
-                                {
-                                    curveStep = 1;
-                                }
+                                velocity = MaxStableMoveSpeed * rampUpCurve.Evaluate(curveStep);
                             }
-
-                            if (!stopped)
-                            {
-                                if (rampingDown)
-                                {
-                                    velocity = MaxStableMoveSpeed * rampDownCurve.Evaluate(curveStep);
-                                }
-                                else
-                                {
-                                    velocity = MaxStableMoveSpeed * rampUpCurve.Evaluate(curveStep);
-                                }
-                            }
-
-                            break;
                         }
+
+                        break;
+                    }
                     case PlayerStates.Sliding:
+                    {
+                        if (settings.decelerateWhileSliding)
                         {
-                            if (settings.decelerateWhileSliding)
-                            {
-                                velocity = settings.slideMoveSpeed * settings.slideCurve.Evaluate(_slideCurveStep);
-                            }
-                            else
-                            {
-                                velocity = Mathf.Min(settings.slideMoveSpeed, currentVelocity.magnitude);
-                            }
-
-                            break;
+                            velocity = settings.slideMoveSpeed * settings.slideCurve.Evaluate(_slideCurveStep);
                         }
+                        else
+                        {
+                            velocity = Mathf.Min(settings.slideMoveSpeed, currentVelocity.magnitude);
+                        }
+
+                        break;
+                    }
                 }
 
 
@@ -629,121 +636,122 @@ namespace KinematicTest.controller
                     switch (CurrentCharacterState)
                     {
                         case PlayerStates.Running:
+                        {
+                            if (canChangeMidAir)
                             {
-                                if (canChangeMidAir)
+                                if (rampingDown)
                                 {
-                                    if (rampingDown)
+                                    if (curveStep < 1)
                                     {
-                                        if (curveStep < 1)
-                                        {
-                                            curveStep += (1 / rampDownTime * Time.deltaTime);
-                                        }
-
-                                        if (curveStep >= 1)
-                                        {
-                                            curveStep = 0;
-                                            rampingDown = false;
-                                            runningRight = runningRight * -1;
-                                            //scarf.transform.Rotate(Vector3.up, 180);
-                                        }
-                                    }
-                                    else
-                                    {
-                                        if (curveStep < 1)
-                                        {
-                                            curveStep += (1 / rampUpTime * Time.deltaTime);
-                                        }
-
-                                        if (curveStep > 1)
-                                        {
-                                            curveStep = 1;
-                                        }
+                                        curveStep += (1 / rampDownTime * Time.deltaTime);
                                     }
 
-                                    if (!stopped)
+                                    if (curveStep >= 1)
                                     {
-                                        if (rampingDown)
-                                        {
-                                            AirAccelerationSpeed = MaxAirMoveSpeed * rampDownCurve.Evaluate(curveStep);
-                                        }
-                                        else
-                                        {
-                                            AirAccelerationSpeed = MaxAirMoveSpeed * rampUpCurve.Evaluate(curveStep);
-                                        }
+                                        curveStep = 0;
+                                        rampingDown = false;
+                                        runningRight = runningRight * -1;
+                                        //scarf.transform.Rotate(Vector3.up, 180);
                                     }
                                 }
                                 else
                                 {
-                                    targetMovementVelocity = lastVelocityBeforeJump;
+                                    if (curveStep < 1)
+                                    {
+                                        curveStep += (1 / rampUpTime * Time.deltaTime);
+                                    }
+
+                                    if (curveStep > 1)
+                                    {
+                                        curveStep = 1;
+                                    }
                                 }
 
-                                break;
-                            }
-                        case PlayerStates.Idling:
-                            {
-                                targetMovementVelocity = _moveInputVector * MaxAirMoveSpeed;
-                                AirAccelerationSpeed = MaxAirMoveSpeed;
-                                break;
-                            }
-                        case PlayerStates.LedgeGrabbing:
-                            {
-                                AirAccelerationSpeed = 0;
-                                break;
-                            }
-                        case PlayerStates.Tired:
-                            {
-                                targetMovementVelocity = _moveInputVector * MaxAirMoveSpeed;
-                                AirAccelerationSpeed = MaxAirMoveSpeed;
-                                if (canChangeMidAir)
+                                if (!stopped)
                                 {
                                     if (rampingDown)
                                     {
-                                        if (curveStep < 1)
-                                        {
-                                            curveStep += (1 / rampDownTime * Time.deltaTime);
-                                        }
-
-                                        if (curveStep >= 1)
-                                        {
-                                            curveStep = 0;
-                                            rampingDown = false;
-                                            runningRight = runningRight * -1;
-                                            //scarf.transform.Rotate(Vector3.up, 180);
-                                        }
+                                        AirAccelerationSpeed = MaxAirMoveSpeed * rampDownCurve.Evaluate(curveStep);
                                     }
                                     else
                                     {
-                                        if (curveStep < 1)
-                                        {
-                                            curveStep += (1 / rampUpTime * Time.deltaTime);
-                                        }
-
-                                        if (curveStep > 1)
-                                        {
-                                            curveStep = 1;
-                                        }
-                                    }
-
-                                    if (!stopped)
-                                    {
-                                        if (rampingDown)
-                                        {
-                                            AirAccelerationSpeed = MaxAirMoveSpeed * rampDownCurve.Evaluate(curveStep);
-                                        }
-                                        else
-                                        {
-                                            AirAccelerationSpeed = MaxAirMoveSpeed * rampUpCurve.Evaluate(curveStep);
-                                        }
+                                        AirAccelerationSpeed = MaxAirMoveSpeed * rampUpCurve.Evaluate(curveStep);
                                     }
                                 }
-                                break;
                             }
-
-                        case PlayerStates.Sliding:
+                            else
                             {
                                 targetMovementVelocity = lastVelocityBeforeJump;
-                                break;
                             }
+
+                            break;
+                        }
+                        case PlayerStates.Idling:
+                        {
+                            targetMovementVelocity = _moveInputVector * MaxAirMoveSpeed;
+                            AirAccelerationSpeed = MaxAirMoveSpeed;
+                            break;
+                        }
+                        case PlayerStates.LedgeGrabbing:
+                        {
+                            AirAccelerationSpeed = 0;
+                            break;
+                        }
+                        case PlayerStates.Tired:
+                        {
+                            targetMovementVelocity = _moveInputVector * MaxAirMoveSpeed;
+                            AirAccelerationSpeed = MaxAirMoveSpeed;
+                            if (canChangeMidAir)
+                            {
+                                if (rampingDown)
+                                {
+                                    if (curveStep < 1)
+                                    {
+                                        curveStep += (1 / rampDownTime * Time.deltaTime);
+                                    }
+
+                                    if (curveStep >= 1)
+                                    {
+                                        curveStep = 0;
+                                        rampingDown = false;
+                                        runningRight = runningRight * -1;
+                                        //scarf.transform.Rotate(Vector3.up, 180);
+                                    }
+                                }
+                                else
+                                {
+                                    if (curveStep < 1)
+                                    {
+                                        curveStep += (1 / rampUpTime * Time.deltaTime);
+                                    }
+
+                                    if (curveStep > 1)
+                                    {
+                                        curveStep = 1;
+                                    }
+                                }
+
+                                if (!stopped)
+                                {
+                                    if (rampingDown)
+                                    {
+                                        AirAccelerationSpeed = MaxAirMoveSpeed * rampDownCurve.Evaluate(curveStep);
+                                    }
+                                    else
+                                    {
+                                        AirAccelerationSpeed = MaxAirMoveSpeed * rampUpCurve.Evaluate(curveStep);
+                                    }
+                                }
+                            }
+
+                            break;
+                        }
+
+                        case PlayerStates.Sliding:
+                        {
+                            targetMovementVelocity = lastVelocityBeforeJump;
+                            break;
+                        }
                     }
 
 
@@ -880,56 +888,56 @@ namespace KinematicTest.controller
                 switch (CurrentCharacterState)
                 {
                     case PlayerStates.NoInput:
+                    {
+                        if (_timeSinceTransitioning > transitionTime)
                         {
-                            if (_timeSinceTransitioning > transitionTime)
-                            {
-                                TransitionToState(PlayerStates.Running);
-                            }
-
-                            break;
+                            TransitionToState(PlayerStates.Running);
                         }
+
+                        break;
+                    }
                     case PlayerStates.Sliding:
+                    {
+                        if (!_isStoppedSliding && _timeSinceStartedSliding > settings.slideDuration)
                         {
-                            if (!_isStoppedSliding && _timeSinceStartedSliding > settings.slideDuration)
-                            {
-                                _shouldBeCrouching = false;
-                            }
-
-                            if (_isCrouching && !_shouldBeCrouching && Motor.GroundingStatus.IsStableOnGround)
-                            {
-                                // Do an overlap test with the character's standing height to see if there are any obstructions
-                                Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
-                                if (Motor.CharacterOverlap(
-                                        Motor.TransientPosition,
-                                        Motor.TransientRotation,
-                                        _probedColliders,
-                                        Motor.CollidableLayers,
-                                        QueryTriggerInteraction.Ignore) > 0)
-                                {
-                                    // If obstructions, just stick to crouching dimensions
-                                    Motor.SetCapsuleDimensions(0.5f, 1f, 0.5f);
-                                }
-                                else
-                                {
-                                    // If no obstructions, uncrouch
-                                    TransitionToState(PlayerStates.Running);
-                                    _isStoppedSliding = true;
-                                }
-                            }
-
-
-                            break;
+                            _shouldBeCrouching = false;
                         }
+
+                        if (_isCrouching && !_shouldBeCrouching && Motor.GroundingStatus.IsStableOnGround)
+                        {
+                            // Do an overlap test with the character's standing height to see if there are any obstructions
+                            Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
+                            if (Motor.CharacterOverlap(
+                                    Motor.TransientPosition,
+                                    Motor.TransientRotation,
+                                    _probedColliders,
+                                    Motor.CollidableLayers,
+                                    QueryTriggerInteraction.Ignore) > 0)
+                            {
+                                // If obstructions, just stick to crouching dimensions
+                                Motor.SetCapsuleDimensions(0.5f, 1f, 0.5f);
+                            }
+                            else
+                            {
+                                // If no obstructions, uncrouch
+                                TransitionToState(PlayerStates.Running);
+                                _isStoppedSliding = true;
+                            }
+                        }
+
+
+                        break;
+                    }
                     case PlayerStates.LedgeGrabbing:
+                    {
+                        if (canFallFromLedgeAfterDelay && timeAtLastGrab + timeBeforeFallFromLedge <= Time.time)
                         {
-                            if (canFallFromLedgeAfterDelay && timeAtLastGrab + timeBeforeFallFromLedge <= Time.time)
-                            {
-                                timeAtLastGrab = Time.time;
-                                TransitionToState(PlayerStates.Tired);
-                            }
-
-                            break;
+                            timeAtLastGrab = Time.time;
+                            TransitionToState(PlayerStates.Tired);
                         }
+
+                        break;
+                    }
                 }
 
                 if (!canTakeDamage && _timeSinceDamageTaken > damageResetTimer)
@@ -941,17 +949,20 @@ namespace KinematicTest.controller
             if (teleporting)
             {
                 teleporting = false;
-                if (runningRight != (int)ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().zoeShouldBeFacing)
+                if (runningRight != (int) ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().zoeShouldBeFacing)
                 {
                     Debug.Log("Facing wrong direction");
                     runningRight *= -1;
                     curveStep = 0;
                     forward = false;
                 }
+
                 Debug.Log("POS : " + (ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().offset +
-                                  ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position).ToString());
+                                      ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position)
+                          .ToString());
                 Motor.SetPosition(ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().offset +
-                                  ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position+ledgeGrabAnimationOffset.GetVector3());
+                                  ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position +
+                                  ledgeGrabAnimationOffset.GetVector3());
             }
 
             _JustLanded = false;
@@ -1130,7 +1141,7 @@ namespace KinematicTest.controller
         {
             Debug.Log(dir);
             TransitionToState(PlayerStates.NoInput);
-            CurrentWorldForward = (WorldForward)(((int)CurrentWorldForward + dir) % 4);
+            CurrentWorldForward = (WorldForward) (((int) CurrentWorldForward + dir) % 4);
         }
 
         public bool JumpingThisFrame()
