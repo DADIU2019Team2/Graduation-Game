@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = 120;
 
         transitionFader.SetAlpha(1);
+        gameState = GameStateScriptableObject.GameState.levelStart;
     }
     private void Start()
     {
@@ -65,7 +66,7 @@ public class GameManager : MonoBehaviour
                     isSwipeAllowed.setBool(false);
                     startIncrementingLevelStart = true;
                     playerStats.OnResetLevel();
-
+                    playerMovementController.TransitionToState(PlayerStates.Idling);
                 }
                 if (startIncrementingLevelStart)
                 {
@@ -79,13 +80,10 @@ public class GameManager : MonoBehaviour
                     }
                 }
 
-                playerMovementController.TransitionToState(PlayerStates.CinematicIdle);
-
-
                 if (transitionFader.getAlpha() == 0)//have finished fading in
                 {
                     ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
-                    playerMovementController.TransitionToState(PlayerStates.Running);
+
                 }
                 /*Fade from black. 
                 Nothing happens until player gives some sort of input to start the level. 
