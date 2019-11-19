@@ -80,6 +80,7 @@ public class MMAnimationController : MonoBehaviour
         StartMotionMatching();
     }
 
+
     private void OnDisable()
     {
         motionDataNativeArray.Dispose();
@@ -181,9 +182,9 @@ public class MMAnimationController : MonoBehaviour
     {
         if (!isMotionMatchingRunning) return;
         StopCoroutine(nameof(QueryForPose));
+        animator.Play("Exit Proxy");
         isMotionMatchingRunning = false;
         bestIndex = 0;
-        animator.Play("Exit");
     }
 
     private void PlayAtUniqueFrame(int frame)
