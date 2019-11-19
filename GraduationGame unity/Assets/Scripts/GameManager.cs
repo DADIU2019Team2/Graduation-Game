@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
     {
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 120;
+
+        transitionFader.SetAlpha(1);
     }
     private void Start()
     {
@@ -63,6 +65,7 @@ public class GameManager : MonoBehaviour
                     isSwipeAllowed.setBool(false);
                     startIncrementingLevelStart = true;
                     playerStats.OnResetLevel();
+
                 }
                 if (startIncrementingLevelStart)
                 {
@@ -82,13 +85,13 @@ public class GameManager : MonoBehaviour
                 if (transitionFader.getAlpha() == 0)//have finished fading in
                 {
                     ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
+                    playerMovementController.TransitionToState(PlayerStates.Running);
                 }
                 /*Fade from black. 
                 Nothing happens until player gives some sort of input to start the level. 
                 Transitions into gameplay-state. */
                 break;
 
-            #region maingameplay
             case GameStateScriptableObject.GameState.mainGameplayLoop:
                 isSwipeAllowed.setBool(true);
                 if (optionsMenu.activeSelf) // if options menu gets entered
@@ -99,7 +102,6 @@ public class GameManager : MonoBehaviour
                 }
                 //Main logic of the game goes on here. The player has control over Zoe. 
                 break;
-            #endregion maingameplay
 
             case GameStateScriptableObject.GameState.levelLoss:
                 if (callOnce)
@@ -130,8 +132,8 @@ public class GameManager : MonoBehaviour
             case GameStateScriptableObject.GameState.levelComplete:
                 if (callOnce)
                 {
-                    isSceneLoadTransition = true;
-                    DoFade(false);
+                    isSceneLoadTransition = false;
+                    DoFade(false); //Fades to black
                     callOnce = false;
                 }
                 /* Fade to black, load next scene, transition into level-start state.
