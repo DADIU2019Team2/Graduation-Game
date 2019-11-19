@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
-//Name: leverA.ma
-//Last modified: Tue, Nov 19, 2019 10:17:00 AM
+//Name: leverA_v002_AD.ma
+//Last modified: Tue, Nov 19, 2019 10:16:59 AM
 //Codeset: 1252
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -1679,4 +1679,4 @@ connectAttr "lever_geoShape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId2.msg" ":defaultLastHiddenSet.gn" -na;
 connectAttr "lever_geoShape.iog.og[8]" ":defaultLastHiddenSet.dsm" -na;
-// End of leverA.ma
+// End of leverA_v002_AD.ma
