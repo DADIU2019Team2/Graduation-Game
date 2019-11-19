@@ -23,6 +23,7 @@ namespace AK
         static const AkUniqueID CRUSHER_IDLE = 3878901180U;
         static const AkUniqueID CRYSTAL_DOOR_HUM = 3540377255U;
         static const AkUniqueID CRYSTAL_DOOR_OPEN = 576072719U;
+        static const AkUniqueID DAMAGED_PLATFORMS = 624837759U;
         static const AkUniqueID DEATH_RAY = 977466704U;
         static const AkUniqueID DEATH_SAW = 507840475U;
         static const AkUniqueID ELECTRICITY = 2917121896U;
@@ -31,6 +32,7 @@ namespace AK
         static const AkUniqueID LAZER_SMALL = 1472838051U;
         static const AkUniqueID LAZER_WALL = 2967932086U;
         static const AkUniqueID LAZER_WALL_POWER_DOWN = 3352547351U;
+        static const AkUniqueID NORMAL_PLATFORMS = 4182768561U;
         static const AkUniqueID PLATFORM_PILLAR_DAMAGED = 1611566155U;
         static const AkUniqueID PLAY_AMBIENCE_Z0 = 1001479279U;
         static const AkUniqueID PLAY_AMBIENCE_Z1 = 1001479278U;
