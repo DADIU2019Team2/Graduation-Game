@@ -14,11 +14,24 @@ public class AnimationSwitcher : MonoBehaviour
 
     public Animator animator;
     public Vector2 airLerp;
-    public float airTime;
-    public float t;
+    public float jumpTime;
+    public float fallTime;
 
     private void Update()
     {
+        if (characterController.Motor.BaseVelocity.y > 0)
+        {
+            var startVelo = characterController.GetJumpPower();
+            jumpTime = Mathf.InverseLerp(1, 0, characterController.Motor.BaseVelocity.y / startVelo);
+            fallTime = 0f;
+//            jumpTime += Time.deltaTime;
+        }
+
+        if (characterController.Motor.BaseVelocity.y < 0)
+        {
+            jumpTime = 0f;
+            fallTime += Time.deltaTime;
+        }
         /*//basic locomotion
         if (characterController.CurrentCharacterState == PlayerStates.Running &&
             characterController.Motor.GroundingStatus.IsStableOnGround)
@@ -128,7 +141,6 @@ public class AnimationSwitcher : MonoBehaviour
                     {
                         animator.SetBool("inAir", true);
                         animator.SetBool("onLedge?", false);
-                        animator.ResetTrigger("ledgeDetected");
                     }
                     else
                     {
