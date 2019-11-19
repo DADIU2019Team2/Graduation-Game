@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID ALIEN_DOOR = 2127960809U;
         static const AkUniqueID ALIEN_DOOR_OPEN = 1050974708U;
         static const AkUniqueID ALIEN_PLATFORM_PILLAR = 41605727U;
+        static const AkUniqueID AMBIENCE_OUTSIDE = 3996256281U;
         static const AkUniqueID BALL_PLATFORM = 1848730664U;
         static const AkUniqueID BALL_PLATFORM_DAMAGED = 2557453060U;
         static const AkUniqueID CRUSHER_IDLE = 3878901180U;
@@ -34,7 +35,6 @@ namespace AK
         static const AkUniqueID LAZER_WALL_POWER_DOWN = 3352547351U;
         static const AkUniqueID NORMAL_PLATFORMS = 4182768561U;
         static const AkUniqueID PLATFORM_PILLAR_DAMAGED = 1611566155U;
-        static const AkUniqueID PLAY_AMBIENCE_Z0 = 1001479279U;
         static const AkUniqueID PLAY_AMBIENCE_Z1 = 1001479278U;
         static const AkUniqueID PLAY_AMBIENCE_Z2 = 1001479277U;
         static const AkUniqueID PLAY_AMBIENCE_Z3 = 1001479276U;
@@ -162,6 +162,7 @@ namespace AK
     {
         static const AkUniqueID REVERB_BIG = 3387002570U;
         static const AkUniqueID REVERB_MEDIUM = 4066469909U;
+        static const AkUniqueID REVERB_OUTSIDE = 2098287461U;
         static const AkUniqueID REVERB_TUNNEL = 2261546958U;
     } // namespace AUX_BUSSES
 

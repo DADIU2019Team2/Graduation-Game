@@ -130,7 +130,7 @@
 						<AuxBus Name="Reverb_Medium" ID="{2658626A-8953-4CD7-9D6C-9FE45EAA3001}">
 							<ReferenceList>
 								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
-									<ObjectRef Name="Big_Garage1" ID="{172402A8-22F4-40FC-BE1D-5269594CB633}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+									<ObjectRef Name="Plate_Medium" ID="{33384D0C-6ACB-4E3D-AC82-73AAB3AE1CA5}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 							</ReferenceList>
 						</AuxBus>
@@ -138,16 +138,22 @@
 							<ReferenceList>
 								<Reference Name="Effect0">
 									<Custom CreatedFrom="{0BFA2291-5716-4759-AC24-F59D29E8F2E4}">
-										<Effect Name="Large_Bright_Chamber1 (Custom)" ID="{6686B9A2-EBC7-483E-8327-BD5AE28D4995}" ShortID="100135272" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+										<Effect Name="Large_Bright_Chamber1_(Custom)" ID="{6686B9A2-EBC7-483E-8327-BD5AE28D4995}" ShortID="100135272" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
 											<PropertyList>
 												<Property Name="HFRatio" Type="Real32" Value="1"/>
 												<Property Name="NumberOfDelays" Type="int32" Value="12"/>
 												<Property Name="PreDelay" Type="Real32" Value="0.05"/>
 												<Property Name="ReverbTime" Type="Real32" Value="2"/>
-												<Property Name="WetLevel" Type="Real32" Value="-30"/>
 											</PropertyList>
 										</Effect>
 									</Custom>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
+						<AuxBus Name="Reverb_Outside" ID="{6773BE93-8AF1-447E-B50D-FF23CF5D84D4}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+									<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 							</ReferenceList>
 						</AuxBus>
