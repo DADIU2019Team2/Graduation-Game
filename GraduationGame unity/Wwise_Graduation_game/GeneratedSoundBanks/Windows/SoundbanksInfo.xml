@@ -29,13 +29,16 @@
 				<Event Id="3996256281" Name="Ambience_Outside" ObjectPath="\Events\Default Work Unit\Ambience\Ambience_Outside" DurationType="Infinite"/>
 				<Event Id="1848730664" Name="Ball_Platform" ObjectPath="\Events\Default Work Unit\SFX\Ball_Platform" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="2557453060" Name="Ball_Platform_Damaged" ObjectPath="\Events\Default Work Unit\SFX\Ball_Platform_Damaged" MaxAttenuation="30.000000" DurationType="Infinite"/>
-				<Event Id="4062243661" Name="Checkpoint_With_Melody" ObjectPath="\Events\Default Work Unit\CelebrationSound\Checkpoint_With_Melody" DurationType="OneShot" DurationMin="4.000000" DurationMax="4.000000"/>
+				<Event Id="1427760111" Name="BossMusic" ObjectPath="\Events\Default Work Unit\Music\BossMusic" DurationType="Infinite"/>
+				<Event Id="4062243661" Name="Checkpoint_With_Melody" ObjectPath="\Events\Default Work Unit\CelebrationSound\Checkpoint_With_Melody" DurationType="OneShot" DurationMin="5.828163" DurationMax="5.828163"/>
 				<Event Id="3878901180" Name="Crusher_Idle" ObjectPath="\Events\Default Work Unit\SFX\Crusher_Idle" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="3540377255" Name="Crystal_Door_Hum" ObjectPath="\Events\Default Work Unit\SFX\Crystal_Door_Hum" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="576072719" Name="Crystal_Door_Open" ObjectPath="\Events\Default Work Unit\SFX\Crystal_Door_Open" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="1.451410" DurationMax="1.451410"/>
 				<Event Id="624837759" Name="Damaged_Platforms" ObjectPath="\Events\Default Work Unit\SFX\Damaged_Platforms" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="977466704" Name="Death_Ray" ObjectPath="\Events\Default Work Unit\SFX\Death_Ray" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="507840475" Name="Death_Saw" ObjectPath="\Events\Default Work Unit\SFX\Death_Saw" MaxAttenuation="30.000000" DurationType="Infinite"/>
+				<Event Id="2801479097" Name="Dialogue_Angry" ObjectPath="\Events\Default Work Unit\Music\Dialogue_Angry" DurationType="Infinite"/>
+				<Event Id="2714452976" Name="Dialogue_Happy" ObjectPath="\Events\Default Work Unit\Music\Dialogue_Happy" DurationType="Infinite"/>
 				<Event Id="2917121896" Name="Electricity" ObjectPath="\Events\Default Work Unit\SFX\Electricity" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="1450217292" Name="Gate_Closing" ObjectPath="\Events\Default Work Unit\SFX\Gate_Closing" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="3873573389" Name="Gate_Impact" ObjectPath="\Events\Default Work Unit\SFX\Gate_Impact" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="1.943064" DurationMax="1.943064"/>
@@ -45,8 +48,8 @@
 				<Event Id="1472838051" Name="Lazer_Small" ObjectPath="\Events\Default Work Unit\SFX\Lazer_Small" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="2967932086" Name="Lazer_Wall" ObjectPath="\Events\Default Work Unit\SFX\Lazer_Wall" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="3352547351" Name="Lazer_Wall_Power_Down" ObjectPath="\Events\Default Work Unit\SFX\Lazer_Wall_Power_Down" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="2.135228" DurationMax="2.135228"/>
-				<Event Id="3736098925" Name="Level_Complete" ObjectPath="\Events\Default Work Unit\CelebrationSound\Level_Complete" DurationType="OneShot" DurationMin="6.750000" DurationMax="6.750000"/>
-				<Event Id="352576276" Name="Level_Start" ObjectPath="\Events\Default Work Unit\CelebrationSound\Level_Start" DurationType="OneShot" DurationMin="6.000000" DurationMax="6.000000"/>
+				<Event Id="3736098925" Name="Level_Complete" ObjectPath="\Events\Default Work Unit\Music\Level_Complete" DurationType="OneShot" DurationMin="4.714286" DurationMax="4.714286"/>
+				<Event Id="352576276" Name="Level_Start" ObjectPath="\Events\Default Work Unit\CelebrationSound\Level_Start" DurationType="OneShot" DurationMin="5.792494" DurationMax="5.792494"/>
 				<Event Id="4182768561" Name="Normal_Platforms" ObjectPath="\Events\Default Work Unit\SFX\Normal_Platforms" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="1611566155" Name="Platform_Pillar_Damaged" ObjectPath="\Events\Default Work Unit\SFX\Platform_Pillar_Damaged" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="1001479278" Name="Play_Ambience_Z1" ObjectPath="\Events\Default Work Unit\Ambience\Play_Ambience_Z1" DurationType="Infinite"/>
@@ -166,6 +169,10 @@
 					<ShortName>New_Norm_Ftstp_Loop.wav</ShortName>
 					<Path>SFX/New_Norm_Ftstp_Loop_9B96ECC7.wem</Path>
 				</File>
+				<File Id="142217505" Language="SFX">
+					<ShortName>Level_Complete.wav</ShortName>
+					<Path>SFX/Level_Complete_3EBA1927.wem</Path>
+				</File>
 				<File Id="145167596" Language="SFX">
 					<ShortName>Z2_Hero_Arp.wav</ShortName>
 					<Path>SFX/Z2_Hero_Arp_3EBA1927.wem</Path>
@@ -185,6 +192,10 @@
 				<File Id="154960993" Language="SFX">
 					<ShortName>Z3_Dist_Synth_Harm2.wav</ShortName>
 					<Path>SFX/Z3_Dist_Synth_Harm2_3EBA1927.wem</Path>
+				</File>
+				<File Id="163272763" Language="SFX">
+					<ShortName>DialogMusicAngry.wav</ShortName>
+					<Path>SFX/DialogMusicAngry_3EBA1927.wem</Path>
 				</File>
 				<File Id="178363245" Language="SFX">
 					<ShortName>Z3_Hatter_Arp.wav</ShortName>
@@ -482,6 +493,10 @@
 					<ShortName>Ambience_Z4.wav</ShortName>
 					<Path>SFX/Ambience_Z4_9B96ECC7.wem</Path>
 				</File>
+				<File Id="916545742" Language="SFX">
+					<ShortName>BossMusic.wav</ShortName>
+					<Path>SFX/BossMusic_3EBA1927.wem</Path>
+				</File>
 				<File Id="924700304" Language="SFX">
 					<ShortName>Jump_Hu_3.wav</ShortName>
 					<Path>SFX/Jump_Hu_3_6296B0F9.wem</Path>
@@ -538,13 +553,13 @@
 					<ShortName>Z4_Dist_Klaver.wav</ShortName>
 					<Path>SFX/Z4_Dist_Klaver_3EBA1927.wem</Path>
 				</File>
-				<File Id="992312086" Language="SFX">
-					<ShortName>Level_Complete.wav</ShortName>
-					<Path>SFX/Level_Complete_10C4C929.wem</Path>
-				</File>
 				<File Id="1010279705" Language="SFX">
 					<ShortName>Z3_Dist_Bassline.wav</ShortName>
 					<Path>SFX/Z3_Dist_Bassline_3EBA1927.wem</Path>
+				</File>
+				<File Id="1011899773" Language="SFX">
+					<ShortName>DialogMusicHappy.wav</ShortName>
+					<Path>SFX/DialogMusicHappy_3EBA1927.wem</Path>
 				</File>
 				<File Id="1021751483" Language="SFX">
 					<ShortName>Platform_4.wav</ShortName>
