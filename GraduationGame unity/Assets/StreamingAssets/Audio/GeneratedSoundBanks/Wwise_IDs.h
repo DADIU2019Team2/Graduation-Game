@@ -140,6 +140,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID ANGRY_MUSIC_LAYER = 3197644566U;
+        static const AkUniqueID BOSS_FORESHADOWING = 3093178105U;
         static const AkUniqueID FOOTSTEP_VELOCITY = 3740773599U;
         static const AkUniqueID HAPPY_BASS = 3940323633U;
         static const AkUniqueID HAPPY_DRUMZ = 1600538058U;

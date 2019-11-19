@@ -1229,7 +1229,7 @@
 							<ChildrenList>
 								<MusicSegment Name="Z2_Music_Layers" ID="{6B561AFD-486F-4326-9356-536BE38D9D14}" ShortID="218576316">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="18024.0700218818"/>
+										<Property Name="EndPosition" Type="Real64" Value="20000"/>
 										<Property Name="Volume" Type="Real64">
 											<RTPCList>
 												<RTPC Name="" ID="{7A9440DC-11E2-4C2D-AC9E-CB5956617B9B}" ShortID="430494780">
@@ -2248,6 +2248,76 @@
 																<Property Name="FadeOutMode" Type="int16" Value="0"/>
 															</PropertyList>
 															<AudioSourceRef Name="Z2HappyDrumz" ID="{502DAA6E-86F4-4769-957B-F87E881BE82D}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="Robo_Foreshadowing" ID="{10C49D52-B516-4E6A-BC55-9134C410D746}" ShortID="309695675">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{14ED0600-2157-4E5B-983F-CE43E01CE9EB}" ShortID="768686884">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Boss_Foreshadowing" ID="{F57AB755-8AC1-4F5E-AA1D-4C15CFBDEB4B}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{215729F6-11A4-4992-A6AE-F33C33C7EA70}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.98955</XPos>
+																		<YPos>3.75347</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10</XPos>
+																		<YPos>3.5</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Robo_Foreshadowing" ID="{6CB12ADB-BDA8-426D-9B59-9B1303AE176C}" ShortID="794154597">
+													<Language>SFX</Language>
+													<AudioFile>Robo_Foreshadowing.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{F20B2E90-BDC7-4E27-9726-B6C108993B19}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{EFF3D470-B44E-4D31-9EA3-1CCA6D232D55}">
+													<ClipList>
+														<MusicClip Name="Robo_Foreshadowing" ID="{EB448F70-CCDE-43E8-8ADA-612E20E00245}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Robo_Foreshadowing" ID="{6CB12ADB-BDA8-426D-9B59-9B1303AE176C}"/>
 														</MusicClip>
 													</ClipList>
 												</MusicTrackSequence>
