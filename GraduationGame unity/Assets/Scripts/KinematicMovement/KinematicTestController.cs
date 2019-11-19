@@ -340,6 +340,17 @@ namespace KinematicTest.controller
                     _timeSinceTransitioning = 0f;
                     break;
                 }
+                case PlayerStates.CinematicIdle:
+                {
+                    if (stopped)
+                    {
+                        stopped = false;
+                        rampingDown = false;
+                        curveStep = 0;
+                    }
+
+                    break;
+                }
             }
         }
 
@@ -356,14 +367,7 @@ namespace KinematicTest.controller
                 if (inputs.changeDirection || inputs.slideDown || inputs.jumpDown)
                 {
                     TransitionToState(PlayerStates.Running);
-                    if (stopped)
-                    {
-                        stopped = false;
-                        rampingDown = false;
-                        curveStep = 0;
-                        if (inputs.changeDirection)
-                            runningRight *= -1;
-                    }
+                   
                 }
             }
 

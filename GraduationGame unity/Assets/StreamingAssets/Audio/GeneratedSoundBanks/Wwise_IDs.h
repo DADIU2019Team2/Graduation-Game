@@ -21,6 +21,7 @@ namespace AK
         static const AkUniqueID AMBIENCE_OUTSIDE = 3996256281U;
         static const AkUniqueID BALL_PLATFORM = 1848730664U;
         static const AkUniqueID BALL_PLATFORM_DAMAGED = 2557453060U;
+        static const AkUniqueID BOSSMUSIC = 1427760111U;
         static const AkUniqueID CHECKPOINT_WITH_MELODY = 4062243661U;
         static const AkUniqueID CRUSHER_IDLE = 3878901180U;
         static const AkUniqueID CRYSTAL_DOOR_HUM = 3540377255U;
@@ -28,6 +29,8 @@ namespace AK
         static const AkUniqueID DAMAGED_PLATFORMS = 624837759U;
         static const AkUniqueID DEATH_RAY = 977466704U;
         static const AkUniqueID DEATH_SAW = 507840475U;
+        static const AkUniqueID DIALOGUE_ANGRY = 2801479097U;
+        static const AkUniqueID DIALOGUE_HAPPY = 2714452976U;
         static const AkUniqueID ELECTRICITY = 2917121896U;
         static const AkUniqueID GATE_CLOSING = 1450217292U;
         static const AkUniqueID GATE_IMPACT = 3873573389U;
@@ -108,6 +111,7 @@ namespace AK
                 static const AkUniqueID BOSSFIGHT = 580146960U;
                 static const AkUniqueID DIALOGUE_ANGRY = 2801479097U;
                 static const AkUniqueID DIALOGUE_HAPPY = 2714452976U;
+                static const AkUniqueID LEVEL_COMPLETE = 3736098925U;
                 static const AkUniqueID ZONE1 = 831766780U;
                 static const AkUniqueID ZONE2 = 831766783U;
                 static const AkUniqueID ZONE3 = 831766782U;
