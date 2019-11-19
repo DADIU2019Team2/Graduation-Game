@@ -2,13 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using KinematicTest.controller;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class AnimationSwitcher : MonoBehaviour
 {
-    public AnimatorController mmStates;
-    public AnimatorController interactionStates;
+    public RuntimeAnimatorController mmStates;
+    public RuntimeAnimatorController interactionStates;
     public MMAnimationController mmAnimatorController;
     public KinematicTestController characterController;
 
@@ -48,7 +47,7 @@ public class AnimationSwitcher : MonoBehaviour
             animator.runtimeAnimatorController = mmStates;
             if(!mmAnimatorController.isMotionMatchingRunning)
             {
-                animator.CrossFadeInFixedTime("run01", 0.3f);
+                animator.CrossFadeInFixedTime("run01", 0.3f); //Now THIS is what I call Jank!
             }
             
             mmAnimatorController.StartMotionMatching();
