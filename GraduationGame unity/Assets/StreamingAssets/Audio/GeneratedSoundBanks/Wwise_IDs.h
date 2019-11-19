@@ -18,11 +18,13 @@ namespace AK
         static const AkUniqueID ALIEN_DOOR = 2127960809U;
         static const AkUniqueID ALIEN_DOOR_OPEN = 1050974708U;
         static const AkUniqueID ALIEN_PLATFORM_PILLAR = 41605727U;
+        static const AkUniqueID AMBIENCE_OUTSIDE = 3996256281U;
         static const AkUniqueID BALL_PLATFORM = 1848730664U;
         static const AkUniqueID BALL_PLATFORM_DAMAGED = 2557453060U;
         static const AkUniqueID CRUSHER_IDLE = 3878901180U;
         static const AkUniqueID CRYSTAL_DOOR_HUM = 3540377255U;
         static const AkUniqueID CRYSTAL_DOOR_OPEN = 576072719U;
+        static const AkUniqueID DAMAGED_PLATFORMS = 624837759U;
         static const AkUniqueID DEATH_RAY = 977466704U;
         static const AkUniqueID DEATH_SAW = 507840475U;
         static const AkUniqueID ELECTRICITY = 2917121896U;
@@ -31,8 +33,8 @@ namespace AK
         static const AkUniqueID LAZER_SMALL = 1472838051U;
         static const AkUniqueID LAZER_WALL = 2967932086U;
         static const AkUniqueID LAZER_WALL_POWER_DOWN = 3352547351U;
+        static const AkUniqueID NORMAL_PLATFORMS = 4182768561U;
         static const AkUniqueID PLATFORM_PILLAR_DAMAGED = 1611566155U;
-        static const AkUniqueID PLAY_AMBIENCE_Z0 = 1001479279U;
         static const AkUniqueID PLAY_AMBIENCE_Z1 = 1001479278U;
         static const AkUniqueID PLAY_AMBIENCE_Z2 = 1001479277U;
         static const AkUniqueID PLAY_AMBIENCE_Z3 = 1001479276U;
@@ -97,6 +99,8 @@ namespace AK
             namespace STATE
             {
                 static const AkUniqueID BOSSFIGHT = 580146960U;
+                static const AkUniqueID DIALOGUE_ANGRY = 2801479097U;
+                static const AkUniqueID DIALOGUE_HAPPY = 2714452976U;
                 static const AkUniqueID ZONE1 = 831766780U;
                 static const AkUniqueID ZONE2 = 831766783U;
                 static const AkUniqueID ZONE3 = 831766782U;
@@ -147,6 +151,8 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AMBIENCE = 85412153U;
+        static const AkUniqueID ENVIRONMENT = 1229948536U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;
@@ -154,7 +160,10 @@ namespace AK
 
     namespace AUX_BUSSES
     {
-        static const AkUniqueID REVERB = 348963605U;
+        static const AkUniqueID REVERB_BIG = 3387002570U;
+        static const AkUniqueID REVERB_MEDIUM = 4066469909U;
+        static const AkUniqueID REVERB_OUTSIDE = 2098287461U;
+        static const AkUniqueID REVERB_TUNNEL = 2261546958U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
