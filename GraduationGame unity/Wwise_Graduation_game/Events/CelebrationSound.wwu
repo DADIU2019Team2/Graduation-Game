@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{52D068B1-1C5B-4B11-9F00-6E5315226880}" SchemaVersion="94" RootDocumentID="{4948A3B8-CE28-48A8-BAD5-AE38D8DAE02B}">
+	<Events>
+		<WorkUnit Name="CelebrationSound" ID="{52D068B1-1C5B-4B11-9F00-6E5315226880}" OwnerID="{4948A3B8-CE28-48A8-BAD5-AE38D8DAE02B}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Level_Start" ID="{464289E4-7F99-422F-9040-030B263336BE}">
+					<ChildrenList>
+						<Action Name="" ID="{3239BD7F-8875-4E02-B5E2-7BAE76D35493}" ShortID="744622871">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Level_Start" ID="{4B8854F1-5BBE-4861-9F31-B329B2226EC4}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Checkpoint_With_Melody" ID="{58C9DE6B-9C9F-4BC6-BE45-8DA8A8CBB7D1}">
+					<ChildrenList>
+						<Action Name="" ID="{A694DDFF-1BD7-48F5-9892-417D67400653}" ShortID="1052428767">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Checkpoint_With_Melody" ID="{FF00B317-BF8F-4176-9B17-067BA884D126}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Level_Complete" ID="{F01D31BA-23A0-408A-AA7D-7C7F02B9AA52}">
+					<ChildrenList>
+						<Action Name="" ID="{29C61A58-D5DD-4DA5-B18F-6F8A899F42DB}" ShortID="1024355522">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Level_Complete" ID="{AB66196A-0432-47F5-9D8C-C11E336CD2D0}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
