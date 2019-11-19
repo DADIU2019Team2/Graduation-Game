@@ -1172,5 +1172,10 @@ namespace KinematicTest.controller
         {
             return forward;
         }
+
+        public float GetJumpPower()
+        {
+            return JumpSpeed;
+        }
     }
 }
