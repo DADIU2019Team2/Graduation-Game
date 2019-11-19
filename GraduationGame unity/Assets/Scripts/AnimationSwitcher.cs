@@ -6,8 +6,9 @@ using UnityEngine;
 
 public class AnimationSwitcher : MonoBehaviour
 {
-    public RuntimeAnimatorController mmStates;
+    /*public RuntimeAnimatorController mmStates;
     public RuntimeAnimatorController interactionStates;
+    public RuntimeAnimatorController completeController;*/
     public MMAnimationController mmAnimatorController;
     public KinematicTestController characterController;
 
@@ -44,18 +45,26 @@ public class AnimationSwitcher : MonoBehaviour
             (characterController.Motor.GroundingStatus.IsStableOnGround &&
              characterController.CurrentCharacterState == PlayerStates.Running))
         {
-            animator.runtimeAnimatorController = mmStates;
+            //animator.runtimeAnimatorController = mmStates;
             if(!mmAnimatorController.isMotionMatchingRunning)
             {
                 animator.CrossFadeInFixedTime("run01", 0.3f); //Now THIS is what I call Jank!
             }
             
+            /*animator.SetBool("isStanding", false);
+            animator.SetBool("inAir", false);*/
+            foreach (var param in animator.parameters)
+            {
+                animator.SetBool(param.name,false);
+            }
+            animator.SetBool("MotionMatching",true);
             mmAnimatorController.StartMotionMatching();
         }
         else
         {
             //stop motion matching
-            animator.runtimeAnimatorController = interactionStates;
+            //animator.runtimeAnimatorController = interactionStates;
+            animator.SetBool("MotionMatching",false);
             mmAnimatorController.StopMotionMatching();
 
             //handle interaction states
@@ -108,9 +117,8 @@ public class AnimationSwitcher : MonoBehaviour
                 case PlayerStates.LedgeGrabbing:
                 {
                     //set ledge grab
-                    animator.SetBool("inAir", false);
                     animator.SetBool("onLedge?", true);
-                    animator.SetTrigger("ledgeDetected");
+                    //animator.SetBool("inAir", true);
                     break;
                 }
                 case PlayerStates.Tired:
@@ -126,7 +134,6 @@ public class AnimationSwitcher : MonoBehaviour
                     {
                         animator.SetBool("inAir", true);
                         animator.SetBool("onLedge?", false);
-                        animator.ResetTrigger("ledgeDetected");
                     }
 
                     break;
