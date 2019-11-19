@@ -18,8 +18,8 @@ public class TransitionFader : MonoBehaviour
     {
         //canvasGroup = GetComponentInChildren<CanvasGroup>();
         //canvas = canvasGroup.gameObject;
-        loadScreenImage.SetActive(false);
-        blackScreenImage.SetActive(false);
+        //loadScreenImage.SetActive(false);
+        //blackScreenImage.SetActive(false);
     }
 
     private void Start()
