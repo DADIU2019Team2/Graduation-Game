@@ -183,6 +183,7 @@ public class MMAnimationController : MonoBehaviour
         StopCoroutine(nameof(QueryForPose));
         isMotionMatchingRunning = false;
         bestIndex = 0;
+        animator.Play("Exit");
     }
 
     private void PlayAtUniqueFrame(int frame)

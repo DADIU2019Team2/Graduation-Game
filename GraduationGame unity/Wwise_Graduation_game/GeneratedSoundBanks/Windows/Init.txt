@@ -9,6 +9,8 @@ State	ID	Name	State Group			Notes
 	831766780	Zone1	Zones			
 	831766782	Zone3	Zones			
 	831766783	Zone2	Zones			
+	2714452976	Dialogue_Happy	Zones			
+	2801479097	Dialogue_Angry	Zones			
 	0	None	Dead_or_Alive			
 	655265632	Alive	Dead_or_Alive			
 	2044049779	Dead	Dead_or_Alive			
@@ -33,12 +35,23 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	4262522749	Wood_Bright			\Factory Reflect Acoustic Textures\Textures\Wood_Bright	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	85412153	Ambience			\Default Work Unit\Master Audio Bus\Environment\Ambience	
+	393239870	SFX			\Default Work Unit\Master Audio Bus\Environment\SFX	
+	1229948536	Environment			\Default Work Unit\Master Audio Bus\Environment	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
+	2098287461	Reverb_Outside			\Default Work Unit\Master Audio Bus\Reverb_Outside	
+	2261546958	Reverb_Tunnel			\Default Work Unit\Master Audio Bus\Reverb_Tunnel	
+	3387002570	Reverb_Big			\Default Work Unit\Master Audio Bus\Reverb_Big	
+	4066469909	Reverb_Medium			\Default Work Unit\Master Audio Bus\Reverb_Medium	
+
+Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	100135272	Large_Bright_Chamber1_(Custom)	Wwise Matrix Reverb			
+	702543456	Tunnel1	Wwise Matrix Reverb			
+	1706684651	Plate_Medium	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

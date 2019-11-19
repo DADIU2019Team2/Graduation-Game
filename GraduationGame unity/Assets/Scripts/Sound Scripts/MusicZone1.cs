@@ -16,6 +16,8 @@ public class MusicZone1 : MonoBehaviour
         AkSoundEngine.SetState("Zones", "Zone1");
         
         AkSoundEngine.PostEvent("Play_Zone1_Music", gameObject);
+
+        AkSoundEngine.PostEvent("Level_Start", gameObject);
         
         AkSoundEngine.SetRTPCValue("Happy_Drumz", 1);
 
@@ -23,9 +25,5 @@ public class MusicZone1 : MonoBehaviour
     
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 }
