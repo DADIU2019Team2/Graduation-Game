@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class TransitionFader : MonoBehaviour
 {
-    [SerializeField]private CanvasGroup canvasGroup;
-    [SerializeField]private GameObject canvas;
-    [SerializeField]private GameObject loadScreenImage;
-    [SerializeField]private GameObject blackScreenImage;
+    [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] private GameObject canvas;
+    [SerializeField] private GameObject loadScreenImage;
+    [SerializeField] private GameObject blackScreenImage;
 
     private bool isEnabled; //not used atm
     private bool isSceneLoad; //not used atm
@@ -68,9 +68,9 @@ public class TransitionFader : MonoBehaviour
             blackScreenImage.SetActive(true);
         }
         enableCanvas();
-        if(lastRoutine != null)
+        if (lastRoutine != null)
             StopCoroutine(lastRoutine);
-        lastRoutine = StartCoroutine(_fadeIn(fadeTime)); 
+        lastRoutine = StartCoroutine(_fadeIn(fadeTime));
     }
 
     IEnumerator _fadeIn(float fadetim)
@@ -102,7 +102,7 @@ public class TransitionFader : MonoBehaviour
             blackScreenImage.SetActive(true);
         }
         enableCanvas();
-        if(lastRoutine != null)
+        if (lastRoutine != null)
             StopCoroutine(lastRoutine);
         lastRoutine = StartCoroutine(_fadeOut(fadeTime, _isSceneLoad));
     }
@@ -133,5 +133,10 @@ public class TransitionFader : MonoBehaviour
     public float getAlpha()
     {
         return canvasGroup.alpha;
+    }
+
+    public void SetAlpha(float _alpha)
+    {
+        canvasGroup.alpha = _alpha;
     }
 }
