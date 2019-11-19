@@ -93,6 +93,11 @@ public class GameManager : MonoBehaviour
                 break;
 
             case GameStateScriptableObject.GameState.mainGameplayLoop:
+                if (callOnce)
+                {
+                    callOnce = false;
+                    playerMovementController.TransitionToState(PlayerStates.Running);
+                }
                 isSwipeAllowed.setBool(true);
                 if (optionsMenu.activeSelf) // if options menu gets entered
                 {
