@@ -14,7 +14,7 @@ private bool IsInCollider = false;
 private void OnTriggerEnter (Collider other)
 {
     if (other.tag != "Player" || IsInCollider) { return; }
-    AkSoundEngine.SetRTPCValue("Boss_Foreshadowing", 1); 
+    AkSoundEngine.SetRTPCValue("Boss_Foreshadowing", 2); 
 }
 
 }
