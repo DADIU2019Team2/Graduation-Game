@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿susing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +16,7 @@ private void OnTriggerEnter(Collider other)
     {
         if (other.tag != "Player" || IsInCollider) { return; }
         AkSoundEngine.SetRTPCValue("Angry_Music_Layer", 2);
-        AkSoundEngine.SetRTPCValue("Happy_Drumz", 1);
+        AkSoundEngine.SetRTPCValue("Happy_Drumz", 0);
     }
 
 }
