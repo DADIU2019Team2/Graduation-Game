@@ -135,7 +135,6 @@ namespace KinematicTest.controller
         public WorldForward CurrentWorldForward;
         public Vector3 Gravity = new Vector3(0, -10f, 0);
         private float ledgeGrabGravityMultiplier = 0f;
-        public bool fixMMBreakCamera;
 
         //This will later be scriptable object
         [Header("Sound settings")] public AK.Wwise.Event jumpSound;
@@ -250,6 +249,11 @@ namespace KinematicTest.controller
                                            Motor.Capsule.height);
                     _shouldBeCrouching = true;
 
+                    riseGravity = settings.slideRiseGravityMultiplier;
+                    hangGravity = settings.slideHangGravityMultiplier;
+                    dropGravity = settings.slideDropGravityMultiplier;
+                    fallGravity = settings.slideFallGravityMultiplier;
+                    
                     if (!_isCrouching)
                     {
                         _isCrouching = true;
@@ -319,6 +323,12 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.Sliding:
                 {
+                    
+                    riseGravity = settings.riseGravityMultiplier;
+                    hangGravity = settings.hangGravityMultiplier;
+                    dropGravity = settings.dropGravityMultiplier;
+                    fallGravity = settings.fallGravityMultiplier;
+                    
                     Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
                     _isCrouching = false;
                     _isStoppedSliding = true;
@@ -367,7 +377,6 @@ namespace KinematicTest.controller
                 if (inputs.changeDirection || inputs.slideDown || inputs.jumpDown)
                 {
                     TransitionToState(PlayerStates.Running);
-                   
                 }
             }
 
@@ -450,8 +459,8 @@ namespace KinematicTest.controller
             _moveInputVector = moveInputVector;
 
             //Capsule rotation, delete this to unfuck old camerafollow
-            if (fixMMBreakCamera)
-                _lookInputVector = _moveInputVector.normalized;
+
+            _lookInputVector = _moveInputVector.normalized;
             if (inputs.jumpDown)
             {
                 _timeSinceJumpRequested = 0f;
