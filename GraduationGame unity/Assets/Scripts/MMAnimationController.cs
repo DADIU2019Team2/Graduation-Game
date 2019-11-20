@@ -29,6 +29,7 @@ public class MMAnimationController : MonoBehaviour
     private int boneCount;
     private int chunkLength;
     private string current;
+    public bool isDefault;
     void Awake()
     {
         trajPoints = poseData.config.trajectoryTimePoints.Count;
@@ -189,8 +190,9 @@ public class MMAnimationController : MonoBehaviour
 
     private void PlayAtUniqueFrame(int frame)
     {
+        int layer = isDefault ? 0 : animator.GetLayerIndex("Motion Matching");
         AnimLookup toPlay = poseData.GetAnimationAtFrame(frame);
-        animator.CrossFadeInFixedTime(toPlay.Value, crossFadeTime, 0, toPlay.Key / 30f);
+        animator.CrossFadeInFixedTime(toPlay.Value, crossFadeTime, layer, toPlay.Key / 30f);
         //Debug.Log("playing " + toPlay.Value + " at frame " + toPlay.Key);
         current = toPlay.Value;
     }
