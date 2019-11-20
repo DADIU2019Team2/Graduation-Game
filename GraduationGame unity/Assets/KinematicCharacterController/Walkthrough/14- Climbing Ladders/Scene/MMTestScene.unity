@@ -98,7 +98,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 112000002, guid: bd0fdcc34d728ac4db527844b498d09b,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1085,6 +1085,18 @@ Transform:
   m_Father: {fileID: 1524307416}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &280488637 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9209041694124391884, guid: 60111f8922550a64fb81d40a0aade252,
+    type: 3}
+  m_PrefabInstance: {fileID: 9209041693867530097}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 949a2f5f94d106f48b5d57073b91904f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &293556263
 GameObject:
   m_ObjectHideFlags: 0
@@ -5832,6 +5844,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852816166}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1855544625 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4795215879750782067, guid: 1d5fcecccea39994bbe5cab7844bad81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1940581296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1855544628 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7221849756194237198, guid: 1d5fcecccea39994bbe5cab7844bad81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1940581296}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855544625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144492df3c50b7848a45160c227bff15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1855544629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855544625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038e3e53692c2f0449efc6b3ac1d2413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 025e81402ca1c554aae845b4b236ee50, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1855544628}
+        m_MethodName: TakeDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: MiniGame2.Events.UnityIntEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1883815733
 GameObject:
   m_ObjectHideFlags: 0
@@ -6491,6 +6550,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844323969089080579, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6976759746070113100, guid: 1d5fcecccea39994bbe5cab7844bad81,
         type: 3}
@@ -7578,6 +7642,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AIHandler
       objectReference: {fileID: 0}
+    - target: {fileID: 1962684093510542132, guid: 5c46407147fb39f4ca2b8419dc976a5c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1962684093510542138, guid: 5c46407147fb39f4ca2b8419dc976a5c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7635,9 +7704,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1962684093510542133, guid: 5c46407147fb39f4ca2b8419dc976a5c,
         type: 3}
+      propertyPath: aiList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1962684093510542133, guid: 5c46407147fb39f4ca2b8419dc976a5c,
+        type: 3}
       propertyPath: playerToFollow
       value: 
       objectReference: {fileID: 788109839}
+    - target: {fileID: 1962684093510542133, guid: 5c46407147fb39f4ca2b8419dc976a5c,
+        type: 3}
+      propertyPath: aiList.Array.data[0]
+      value: 
+      objectReference: {fileID: 280488637}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c46407147fb39f4ca2b8419dc976a5c, type: 3}
 --- !u!4 &2569467988163846656
@@ -8135,6 +8214,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AIChaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209041694124391885, guid: 60111f8922550a64fb81d40a0aade252,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9209041694124391857, guid: 60111f8922550a64fb81d40a0aade252,
         type: 3}
