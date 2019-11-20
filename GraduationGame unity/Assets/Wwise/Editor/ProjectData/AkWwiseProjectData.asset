@@ -184,7 +184,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: a9fbbffd6d82f84e923dba695a2fda43
     GuidInternal: 
-    m_lastTime: -8586275166974775808
+    m_lastTime: -8586274531344775808
     List:
     - name: Reverb_Big
       guid: 9827058fce81034a82e52348a486752c
@@ -208,6 +208,17 @@ MonoBehaviour:
       - ElementName: Reverb_Medium
         ObjectType: 1
       Path: Default Work Unit/Master Audio Bus/Reverb_Medium
+    - name: Reverb_Outside
+      guid: 93be7367f18a7e44b50dff23cf5d84d4
+      id: 2098287461
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Reverb_Outside
+        ObjectType: 1
+      Path: Default Work Unit/Master Audio Bus/Reverb_Outside
     - name: Reverb_Tunnel
       guid: 30596669bdfd2f43bdefbe4ebf8b790a
       id: 2261546958
@@ -224,7 +235,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 4219221ac0890d4bbef9f0f6d1c95982
     GuidInternal: 
-    m_lastTime: -8586275274604775808
+    m_lastTime: -8586273514644775808
     List:
     - name: Main
       guid: 8d0f58feffbb4a40aa7ae59b199a4834
@@ -240,19 +251,19 @@ MonoBehaviour:
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 3834d9eced89024fb5c088baeb343066
     GuidInternal: 
-    m_lastTime: -8586286594894775808
+    m_lastTime: -8586274544604775808
     List:
-    - name: Play_Ambience_Z0
+    - name: Ambience_Outside
       guid: e83a3bf23f22f84e82a0950c98ba5abb
-      id: 1001479279
+      id: 3996256281
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Ambience
         ObjectType: 12
-      - ElementName: Play_Ambience_Z0
+      - ElementName: Ambience_Outside
         ObjectType: 3
-      Path: Default Work Unit/Ambience/Play_Ambience_Z0
+      Path: Default Work Unit/Ambience/Ambience_Outside
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -312,11 +323,59 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+  - PhysicalPath: Events/CelebrationSound.wwu
+    ParentPhysicalPath: Events/Default Work Unit.wwu
+    guid: b168d0525b1c114b9f006e5315226880
+    GuidInternal: 
+    m_lastTime: -8586273586814775808
+    List:
+    - name: Checkpoint_Crystal
+      guid: b5775b93aa073349a5409522bf447840
+      id: 1739986920
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CelebrationSound
+        ObjectType: 12
+      - ElementName: Checkpoint_Crystal
+        ObjectType: 3
+      Path: Default Work Unit/CelebrationSound/Checkpoint_Crystal
+      maxAttenuation: 0
+      maxDuration: 1.25
+      minDuration: 1.25
+    - name: Checkpoint_With_Melody
+      guid: 6bdec9589f9cc64bbe458da8a8cbb7d1
+      id: 4062243661
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CelebrationSound
+        ObjectType: 12
+      - ElementName: Checkpoint_With_Melody
+        ObjectType: 3
+      Path: Default Work Unit/CelebrationSound/Checkpoint_With_Melody
+      maxAttenuation: 0
+      maxDuration: 5.828163
+      minDuration: 5.828163
+    - name: Level_Start
+      guid: 5d8474e85097694bb6abeeebe03707c2
+      id: 352576276
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CelebrationSound
+        ObjectType: 12
+      - ElementName: Level_Start
+        ObjectType: 3
+      Path: Default Work Unit/CelebrationSound/Level_Start
+      maxAttenuation: 0
+      maxDuration: 6.037347
+      minDuration: 6.037347
   - PhysicalPath: Events/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b8a3484928cea848bad5ae38d8dae02b
     GuidInternal: 
-    m_lastTime: -8586275236684775808
+    m_lastTime: -8586273586814775808
     List:
     - name: StopAll
       guid: 6e4c2e889130c6489327163269101349
@@ -334,8 +393,22 @@ MonoBehaviour:
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 842bb934d44d8d498d4461282abe4319
     GuidInternal: 
-    m_lastTime: -8586279739784775808
+    m_lastTime: -8586274484954775808
     List:
+    - name: Grabs
+      guid: bc1fc8f6b4df3d4ca3ded15a4a5e4aae
+      id: 238897438
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Movement
+        ObjectType: 12
+      - ElementName: Grabs
+        ObjectType: 3
+      Path: Default Work Unit/Movement/Grabs
+      maxAttenuation: 0
+      maxDuration: 4.896214
+      minDuration: 4
     - name: Play_Jumps_Takeoff
       guid: 4e2921447be8f64b8154ba72753e4ff9
       id: 1828118792
@@ -406,26 +479,82 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play_Slides
-      guid: c8e39910cd80d040a706dd2570415675
-      id: 1306435192
+    - name: Slides
+      guid: 55eb27f1629197489505bfff851db0d5
+      id: 697318835
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Movement
         ObjectType: 12
-      - ElementName: Play_Slides
+      - ElementName: Slides
         ObjectType: 3
-      Path: Default Work Unit/Movement/Play_Slides
+      Path: Default Work Unit/Movement/Slides
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 5.61231
+      minDuration: 4.719371
   - PhysicalPath: Events/Music.wwu
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 3631f1d8df531f488aa67fbe67e566e8
     GuidInternal: 
-    m_lastTime: -8586283979884775808
+    m_lastTime: -8586274384994775808
     List:
+    - name: BossMusic
+      guid: 3e2f12219ad59749970d91be5fe8b5b4
+      id: 1427760111
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: BossMusic
+        ObjectType: 3
+      Path: Default Work Unit/Music/BossMusic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Dialogue_Angry
+      guid: 188b95bcb71d0f4593661cb7ea96009f
+      id: 2801479097
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Dialogue_Angry
+        ObjectType: 3
+      Path: Default Work Unit/Music/Dialogue_Angry
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Dialogue_Happy
+      guid: 061e6c5e83079046b4ed0025ea02da00
+      id: 2714452976
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Dialogue_Happy
+        ObjectType: 3
+      Path: Default Work Unit/Music/Dialogue_Happy
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Level_Complete
+      guid: af8e5d7d924423459b7bb77fb940a3ec
+      id: 3736098925
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Level_Complete
+        ObjectType: 3
+      Path: Default Work Unit/Music/Level_Complete
+      maxAttenuation: 0
+      maxDuration: 4.714286
+      minDuration: 4.714286
     - name: Play_Zone1_Music
       guid: 69c85576a4b4ab49ae92be06f10cd93e
       id: 4098982749
@@ -653,7 +782,7 @@ MonoBehaviour:
       - ElementName: Damaged_Platforms
         ObjectType: 3
       Path: Default Work Unit/SFX/Damaged_Platforms
-      maxAttenuation: 0
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Death_Ray
@@ -709,7 +838,7 @@ MonoBehaviour:
       - ElementName: Gate_Closing
         ObjectType: 3
       Path: Default Work Unit/SFX/Gate_Closing
-      maxAttenuation: 0
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Gate_Impact
@@ -723,9 +852,9 @@ MonoBehaviour:
       - ElementName: Gate_Impact
         ObjectType: 3
       Path: Default Work Unit/SFX/Gate_Impact
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 30
+      maxDuration: 1.943064
+      minDuration: 1.943064
     - name: Lazer_Big
       guid: b87ade505cc0e34eb2c8c7c23d5269ca
       id: 2381409572
@@ -821,7 +950,7 @@ MonoBehaviour:
       - ElementName: Normal_Platforms
         ObjectType: 3
       Path: Default Work Unit/SFX/Normal_Platforms
-      maxAttenuation: 0
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Platform_Pillar_Damaged
@@ -1289,7 +1418,7 @@ MonoBehaviour:
     ParentPhysicalPath: Game Parameters/Default Work Unit.wwu
     guid: 6c11d9cd8155bb4ab9311b942d719fd8
     GuidInternal: 
-    m_lastTime: -8586275363704775808
+    m_lastTime: -8586273614534775808
     List:
     - name: Angry_Music_Layer
       guid: e2ed46a941e4e04191813bf56ebac714
@@ -1302,6 +1431,17 @@ MonoBehaviour:
       - ElementName: Angry_Music_Layer
         ObjectType: 13
       Path: Default Work Unit/Musical_Layers/Angry_Music_Layer
+    - name: Boss_Foreshadowing
+      guid: 55b77af5c18a5e4faa1d4c15cfbdeb4b
+      id: 3093178105
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Musical_Layers
+        ObjectType: 12
+      - ElementName: Boss_Foreshadowing
+        ObjectType: 13
+      Path: Default Work Unit/Musical_Layers/Boss_Foreshadowing
     - name: Happy_Bass
       guid: 97a61a5a07feb34aaa71d2b5fb728f1b
       id: 3940323633
@@ -1314,7 +1454,7 @@ MonoBehaviour:
         ObjectType: 13
       Path: Default Work Unit/Musical_Layers/Happy_Bass
     - name: Happy_Drumz
-      guid: 1482a5d0303b3943950e980f6041b7b3
+      guid: d9751489a45d2f41819e4b4c57b205e3
       id: 1600538058
       PathAndIcons:
       - ElementName: Default Work Unit
@@ -1423,7 +1563,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 6dd5ac529c349441bea23ed61995e31b
     GuidInternal: 
-    m_lastTime: -8586275183594775808
+    m_lastTime: -8586274384984775808
     List:
     - name: Dead_or_Alive
       guid: 0b5c99a6f92db04d8a37ef970ed19de4
@@ -1483,6 +1623,12 @@ MonoBehaviour:
         id: 2714452976
         PathAndIcons:
         - ElementName: Dialogue_Happy
+          ObjectType: 8
+      - name: Level_Complete
+        guid: 51570bbecc5cb44d8b7e9b4ad4dd7adc
+        id: 3736098925
+        PathAndIcons:
+        - ElementName: Level_Complete
           ObjectType: 8
       - name: None
         guid: a979949c4b076a42953379178cee8914
