@@ -3427,16 +3427,30 @@
 								<ActiveSource Name="Gate_Closing" ID="{E7D55992-7353-427D-B65E-9F4735C80661}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Gate_Impact" ID="{2FF38C54-E8E4-4BEB-903E-983299A4A3AA}" ShortID="348281699">
+						<Sound Name="Lever_Sound" ID="{6BD42CAF-2433-44D4-ABB6-FD0BC27488F5}" ShortID="641249600">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Lever_Sound" ID="{1539BF8E-074A-42B3-847D-C78EB6A988FC}" ShortID="444060050">
+									<Language>SFX</Language>
+									<AudioFile>Lever_Sound.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Lever_Sound" ID="{1539BF8E-074A-42B3-847D-C78EB6A988FC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Door_opening" ID="{34339217-0F1A-4D95-A8D9-3262BD0E8C5A}" ShortID="402168835">
 							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>50</Value>
-									</ValueList>
-								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>3</Value>
+										<Value>12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -3449,13 +3463,39 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Gate_Impact" ID="{112B3E51-EEAF-4D1F-BF70-BD4B816A7D3E}" ShortID="5587684">
+								<AudioFileSource Name="Door_opening" ID="{436C1153-81E7-4827-93E1-A4495EF276EA}" ShortID="502746704">
+									<Language>SFX</Language>
+									<AudioFile>Door_opening.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Door_opening" ID="{436C1153-81E7-4827-93E1-A4495EF276EA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Gate_Impact" ID="{463A4396-2920-441B-AE6E-71F407957081}" ShortID="209486593">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>150</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Gate_Impact" ID="{9684C583-ADC6-4460-AAE2-114379368AF1}" ShortID="177260311">
 									<Language>SFX</Language>
 									<AudioFile>Gate_Impact.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="Gate_Impact" ID="{112B3E51-EEAF-4D1F-BF70-BD4B816A7D3E}" Platform="Linked"/>
+								<ActiveSource Name="Gate_Impact" ID="{9684C583-ADC6-4460-AAE2-114379368AF1}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
