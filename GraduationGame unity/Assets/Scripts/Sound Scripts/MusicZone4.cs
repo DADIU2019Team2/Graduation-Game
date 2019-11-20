@@ -14,6 +14,8 @@ public class MusicZone4 : MonoBehaviour
     {
         
         AkSoundEngine.SetState("Zones", "Zone4");
+
+        AkSoundEngine.PostEvent("Level_Start", gameObject);
         
         AkSoundEngine.PostEvent("Play_Zone4_Music", gameObject);
         

@@ -184,25 +184,47 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: a9fbbffd6d82f84e923dba695a2fda43
     GuidInternal: 
-    m_lastTime: -8586275299084775808
+    m_lastTime: -8586275166974775808
     List:
-    - name: Reverb
-      guid: 30596669bdfd2f43bdefbe4ebf8b790a
-      id: 348963605
+    - name: Reverb_Big
+      guid: 9827058fce81034a82e52348a486752c
+      id: 3387002570
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Master Audio Bus
         ObjectType: 2
-      - ElementName: Reverb
+      - ElementName: Reverb_Big
         ObjectType: 1
-      Path: Default Work Unit/Master Audio Bus/Reverb
+      Path: Default Work Unit/Master Audio Bus/Reverb_Big
+    - name: Reverb_Medium
+      guid: 6a6258265389d74c9d6c9fe45eaa3001
+      id: 4066469909
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Reverb_Medium
+        ObjectType: 1
+      Path: Default Work Unit/Master Audio Bus/Reverb_Medium
+    - name: Reverb_Tunnel
+      guid: 30596669bdfd2f43bdefbe4ebf8b790a
+      id: 2261546958
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Reverb_Tunnel
+        ObjectType: 1
+      Path: Default Work Unit/Master Audio Bus/Reverb_Tunnel
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4219221ac0890d4bbef9f0f6d1c95982
     GuidInternal: 
-    m_lastTime: -8586278708464775808
+    m_lastTime: -8586275274604775808
     List:
     - name: Main
       guid: 8d0f58feffbb4a40aa7ae59b199a4834
@@ -294,7 +316,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: b8a3484928cea848bad5ae38d8dae02b
     GuidInternal: 
-    m_lastTime: -8586279739784775808
+    m_lastTime: -8586275236684775808
     List:
     - name: StopAll
       guid: 6e4c2e889130c6489327163269101349
@@ -464,7 +486,7 @@ MonoBehaviour:
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 70427e337ecab74391244b5ed6520621
     GuidInternal: 
-    m_lastTime: -8586278693384775808
+    m_lastTime: -8586275236684775808
     List:
     - name: Alien_Crystal_Hum
       guid: 7ec1b424b5419249be4371acb3f812f7
@@ -477,7 +499,7 @@ MonoBehaviour:
       - ElementName: Alien_Crystal_Hum
         ObjectType: 3
       Path: Default Work Unit/SFX/Alien_Crystal_Hum
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Alien_Death_Trap
@@ -491,7 +513,7 @@ MonoBehaviour:
       - ElementName: Alien_Death_Trap
         ObjectType: 3
       Path: Default Work Unit/SFX/Alien_Death_Trap
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Alien_Door
@@ -505,7 +527,7 @@ MonoBehaviour:
       - ElementName: Alien_Door
         ObjectType: 3
       Path: Default Work Unit/SFX/Alien_Door
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Alien_Door_Open
@@ -519,9 +541,9 @@ MonoBehaviour:
       - ElementName: Alien_Door_Open
         ObjectType: 3
       Path: Default Work Unit/SFX/Alien_Door_Open
-      maxAttenuation: 70
-      maxDuration: 2.124989
-      minDuration: 2.124989
+      maxAttenuation: 30
+      maxDuration: 3.057718
+      minDuration: 3.057718
     - name: Alien_Platform_Pillar
       guid: 25a55b8cb880fd4da610fdb65b084385
       id: 41605727
@@ -533,7 +555,7 @@ MonoBehaviour:
       - ElementName: Alien_Platform_Pillar
         ObjectType: 3
       Path: Default Work Unit/SFX/Alien_Platform_Pillar
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Alien_Platforms
@@ -561,7 +583,7 @@ MonoBehaviour:
       - ElementName: Ball_Platform
         ObjectType: 3
       Path: Default Work Unit/SFX/Ball_Platform
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Ball_Platform_Damaged
@@ -575,7 +597,7 @@ MonoBehaviour:
       - ElementName: Ball_Platform_Damaged
         ObjectType: 3
       Path: Default Work Unit/SFX/Ball_Platform_Damaged
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Crusher_Idle
@@ -589,7 +611,7 @@ MonoBehaviour:
       - ElementName: Crusher_Idle
         ObjectType: 3
       Path: Default Work Unit/SFX/Crusher_Idle
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Crystal_Door_Hum
@@ -603,7 +625,7 @@ MonoBehaviour:
       - ElementName: Crystal_Door_Hum
         ObjectType: 3
       Path: Default Work Unit/SFX/Crystal_Door_Hum
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Crystal_Door_Open
@@ -617,9 +639,9 @@ MonoBehaviour:
       - ElementName: Crystal_Door_Open
         ObjectType: 3
       Path: Default Work Unit/SFX/Crystal_Door_Open
-      maxAttenuation: 70
-      maxDuration: 2.124989
-      minDuration: 2.124989
+      maxAttenuation: 30
+      maxDuration: 1.45141
+      minDuration: 1.45141
     - name: Damaged_Platforms
       guid: f76617edace1cb40a75e31e8c79b95f7
       id: 624837759
@@ -645,7 +667,7 @@ MonoBehaviour:
       - ElementName: Death_Ray
         ObjectType: 3
       Path: Default Work Unit/SFX/Death_Ray
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Death_Saw
@@ -659,7 +681,7 @@ MonoBehaviour:
       - ElementName: Death_Saw
         ObjectType: 3
       Path: Default Work Unit/SFX/Death_Saw
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Electricity
@@ -673,7 +695,35 @@ MonoBehaviour:
       - ElementName: Electricity
         ObjectType: 3
       Path: Default Work Unit/SFX/Electricity
-      maxAttenuation: 70
+      maxAttenuation: 30
+      maxDuration: -1
+      minDuration: -1
+    - name: Gate_Closing
+      guid: fbb94474d3eb35418ad9807f91590ccd
+      id: 1450217292
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: Gate_Closing
+        ObjectType: 3
+      Path: Default Work Unit/SFX/Gate_Closing
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Gate_Impact
+      guid: 51d53ec59f3b3643ae80cb0aec91329b
+      id: 3873573389
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: Gate_Impact
+        ObjectType: 3
+      Path: Default Work Unit/SFX/Gate_Impact
+      maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: Lazer_Big
@@ -687,7 +737,7 @@ MonoBehaviour:
       - ElementName: Lazer_Big
         ObjectType: 3
       Path: Default Work Unit/SFX/Lazer_Big
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Lazer_Med
@@ -701,7 +751,7 @@ MonoBehaviour:
       - ElementName: Lazer_Med
         ObjectType: 3
       Path: Default Work Unit/SFX/Lazer_Med
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Lazer_Small
@@ -715,7 +765,7 @@ MonoBehaviour:
       - ElementName: Lazer_Small
         ObjectType: 3
       Path: Default Work Unit/SFX/Lazer_Small
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Lazer_Wall
@@ -729,7 +779,7 @@ MonoBehaviour:
       - ElementName: Lazer_Wall
         ObjectType: 3
       Path: Default Work Unit/SFX/Lazer_Wall
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Lazer_Wall_Power_Down
@@ -743,9 +793,9 @@ MonoBehaviour:
       - ElementName: Lazer_Wall_Power_Down
         ObjectType: 3
       Path: Default Work Unit/SFX/Lazer_Wall_Power_Down
-      maxAttenuation: 70
-      maxDuration: 4.124989
-      minDuration: 4.124989
+      maxAttenuation: 30
+      maxDuration: 2.135228
+      minDuration: 2.135228
     - name: Machines
       guid: 48034bce22358c4eaa5b478f25eb5af2
       id: 2796239007
@@ -785,7 +835,7 @@ MonoBehaviour:
       - ElementName: Platform_Pillar_Damaged
         ObjectType: 3
       Path: Default Work Unit/SFX/Platform_Pillar_Damaged
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Robot_Appearence
@@ -799,7 +849,7 @@ MonoBehaviour:
       - ElementName: Robot_Appearence
         ObjectType: 3
       Path: Default Work Unit/SFX/Robot_Appearence
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: 4.863542
       minDuration: 4.863542
     - name: Saw
@@ -813,7 +863,7 @@ MonoBehaviour:
       - ElementName: Saw
         ObjectType: 3
       Path: Default Work Unit/SFX/Saw
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Sentinel_Lazer
@@ -841,7 +891,7 @@ MonoBehaviour:
       - ElementName: Spike_Lazer_Pyramid_Cone
         ObjectType: 3
       Path: Default Work Unit/SFX/Spike_Lazer_Pyramid_Cone
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Spiky_Machine_Impact
@@ -855,14 +905,14 @@ MonoBehaviour:
       - ElementName: Spiky_Machine_Impact
         ObjectType: 3
       Path: Default Work Unit/SFX/Spiky_Machine_Impact
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: 2
       minDuration: 1
   - PhysicalPath: Events/Stop_Events.wwu
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 7972bedaa5f4f94ea19772905b161148
     GuidInternal: 
-    m_lastTime: -8586277771914775808
+    m_lastTime: -8586275284324775808
     List:
     - name: Stop_Alien_Crystal_Hum
       guid: a500cec2bcc16d4ab1bbe1320b9e2925
@@ -1127,7 +1177,7 @@ MonoBehaviour:
       - ElementName: Stop_Machines
         ObjectType: 3
       Path: Default Work Unit/Stop_Events/Stop_Machines
-      maxAttenuation: 70
+      maxAttenuation: 30
       maxDuration: 2
       minDuration: 1
     - name: Stop_Normal_Platforms
@@ -1211,7 +1261,7 @@ MonoBehaviour:
     ParentPhysicalPath: Game Parameters/Default Work Unit.wwu
     guid: f4629d8f0572f948a1294cfcbc801f49
     GuidInternal: 
-    m_lastTime: -8586280458334775808
+    m_lastTime: -8586275274604775808
     List:
     - name: Footstep_velocity
       guid: c9125f62082d61498554bfad87b7d7a6
@@ -1373,7 +1423,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 6dd5ac529c349441bea23ed61995e31b
     GuidInternal: 
-    m_lastTime: -8586275407624775808
+    m_lastTime: -8586275183594775808
     List:
     - name: Dead_or_Alive
       guid: 0b5c99a6f92db04d8a37ef970ed19de4
@@ -1421,6 +1471,18 @@ MonoBehaviour:
         id: 580146960
         PathAndIcons:
         - ElementName: BossFight
+          ObjectType: 8
+      - name: Dialogue_Angry
+        guid: 09be03782a5d3c4db8468d9feb9d2354
+        id: 2801479097
+        PathAndIcons:
+        - ElementName: Dialogue_Angry
+          ObjectType: 8
+      - name: Dialogue_Happy
+        guid: 99b3feb40a07af45a589cf01d74c56d7
+        id: 2714452976
+        PathAndIcons:
+        - ElementName: Dialogue_Happy
           ObjectType: 8
       - name: None
         guid: a979949c4b076a42953379178cee8914
@@ -1502,10 +1564,8 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Wwise_Graduation_game
-  - /Wwise_Graduation_game/Events
-  - /Wwise_Graduation_game/Events/Default Work Unit
-  - /Wwise_Graduation_game/Events/Default Work Unit/Ambience
-  - /Wwise_Graduation_game/Events/Default Work Unit/SFX
-  - /Wwise_Graduation_game/Events/Default Work Unit/Stop_Events
+  - /Wwise_Graduation_game/Auxiliary Busses
+  - /Wwise_Graduation_game/Auxiliary Busses/Default Work Unit
+  - /Wwise_Graduation_game/Auxiliary Busses/Default Work Unit/Master Audio Bus
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

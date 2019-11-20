@@ -47,23 +47,34 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Slides" ID="{1099E3C8-80CD-40D0-A706-DD2570415675}">
-					<ChildrenList>
-						<Action Name="" ID="{8853FC22-94A6-4869-AAE3-E3A6AEFE74B4}" ShortID="833294920">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Slides" ID="{F8A43990-53C9-4293-9235-7B59A50105F9}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_Land_Med" ID="{A120B8DA-294D-448C-B6DC-EDDDC1DD4981}">
 					<ChildrenList>
 						<Action Name="" ID="{1D750FB0-5FD4-4898-93F6-D2AF284F97AF}" ShortID="957713421">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Land_Med" ID="{92C7E70F-66AD-4129-8C3F-F5B889A59C85}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Slides" ID="{F127EB55-9162-4897-9505-BFFF851DB0D5}">
+					<ChildrenList>
+						<Action Name="" ID="{895FF002-A024-4D6A-86AA-7428938729B2}" ShortID="519168056">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Slide_With_Effect" ID="{4E8D2C2F-E604-4FD9-90F2-545033FE6133}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Grabs" ID="{F6C81FBC-DFB4-4C3D-A3DE-D15A4A5E4AAE}">
+					<ChildrenList>
+						<Action Name="" ID="{7E50FF35-C5B5-42AE-9E37-7BBBFD9830FE}" ShortID="928053606">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Grabs_With_SFXs" ID="{B854CA6A-C5B8-4B6F-8FF9-B80FE8106ECF}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

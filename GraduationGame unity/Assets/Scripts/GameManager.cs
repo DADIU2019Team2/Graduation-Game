@@ -4,6 +4,7 @@ using UnityEngine;
 using MiniGame2.Events;
 using System.Linq;
 using KinematicTest.controller;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -35,11 +36,15 @@ public class GameManager : MonoBehaviour
     {
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 120;
+
+        transitionFader.SetAlpha(1);
+        gameState = GameStateScriptableObject.GameState.levelStart;
     }
     private void Start()
     {
         callOnce = true;
         isSceneLoadTransition = false;
+        transitionFader.SetAlpha(1);
 
         if (playerMovementController == null)
         {
@@ -59,10 +64,12 @@ public class GameManager : MonoBehaviour
             case GameStateScriptableObject.GameState.levelStart:
                 if (callOnce)
                 {
+                    transitionFader.SetAlpha(1);
                     callOnce = false;
                     isSwipeAllowed.setBool(false);
                     startIncrementingLevelStart = true;
                     playerStats.OnResetLevel();
+                    playerMovementController.TransitionToState(PlayerStates.CinematicIdle);
                 }
                 if (startIncrementingLevelStart)
                 {
@@ -74,22 +81,28 @@ public class GameManager : MonoBehaviour
                         DoFade(true);
                         startIncrementingLevelStart = false;
                     }
+                    else
+                    {
+                        transitionFader.SetAlpha(1);
+                    }
                 }
-
-                playerMovementController.TransitionToState(PlayerStates.CinematicIdle);
-
 
                 if (transitionFader.getAlpha() == 0)//have finished fading in
                 {
                     ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
+
                 }
                 /*Fade from black. 
                 Nothing happens until player gives some sort of input to start the level. 
                 Transitions into gameplay-state. */
                 break;
 
-            #region maingameplay
             case GameStateScriptableObject.GameState.mainGameplayLoop:
+                if (callOnce)
+                {
+                    callOnce = false;
+                    playerMovementController.TransitionToState(PlayerStates.Running);
+                }
                 isSwipeAllowed.setBool(true);
                 if (optionsMenu.activeSelf) // if options menu gets entered
                 {
@@ -99,7 +112,6 @@ public class GameManager : MonoBehaviour
                 }
                 //Main logic of the game goes on here. The player has control over Zoe. 
                 break;
-            #endregion maingameplay
 
             case GameStateScriptableObject.GameState.levelLoss:
                 if (callOnce)
@@ -130,9 +142,22 @@ public class GameManager : MonoBehaviour
             case GameStateScriptableObject.GameState.levelComplete:
                 if (callOnce)
                 {
-                    isSceneLoadTransition = true;
-                    DoFade(false);
+                    isSceneLoadTransition = false;
+                    DoFade(false); //Fades to black
                     callOnce = false;
+                }
+
+                if (transitionFader.getAlpha() == 0)
+                {
+                    //Last frame of the level - this is where we should load next level and stop wwise sound.
+                    AkSoundEngine.StopAll();
+                    int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+                    if (SceneManager.sceneCountInBuildSettings - 1 > nextScene)
+                    {
+                        nextScene = 0;
+                        //Should have this be the credits scene instead.
+                    }
+                    SceneManager.LoadScene(nextScene);
                 }
                 /* Fade to black, load next scene, transition into level-start state.
                 (Possibly set state to be level-start before calling the load-next-scene function) */

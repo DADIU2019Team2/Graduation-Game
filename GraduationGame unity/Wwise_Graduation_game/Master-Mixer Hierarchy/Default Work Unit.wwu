@@ -40,7 +40,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Bus Name="SFX" ID="{9782ED15-10B1-4637-9818-5B49A6880915}">
+						<Bus Name="Environment" ID="{9782ED15-10B1-4637-9818-5B49A6880915}">
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
@@ -71,6 +71,22 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
+							<ChildrenList>
+								<Bus Name="SFX" ID="{70EDB4B7-B2B1-4975-956E-40105CE5B1CA}">
+									<DuckingList>
+										<DuckItem>
+											<BusRef Name="Music" ID="{29E19E7A-9FB0-4372-9D66-8A6584CF0F58}"/>
+											<DuckingParam>
+												<Volume>-6</Volume>
+												<FadeInTime>1</FadeInTime>
+												<FadeOutTime>1</FadeOutTime>
+												<FadeCurve>FadeLinear</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+									</DuckingList>
+								</Bus>
+								<Bus Name="Ambience" ID="{A65F1364-30FE-4925-B6DC-397231C59F6B}"/>
+							</ChildrenList>
 						</Bus>
 						<Bus Name="Music" ID="{29E19E7A-9FB0-4372-9D66-8A6584CF0F58}">
 							<PropertyList>
@@ -103,19 +119,44 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
-							<DuckingList>
-								<DuckItem>
-									<BusRef Name="SFX" ID="{9782ED15-10B1-4637-9818-5B49A6880915}"/>
-									<DuckingParam>
-										<Volume>-6</Volume>
-										<FadeInTime>1</FadeInTime>
-										<FadeOutTime>1</FadeOutTime>
-										<FadeCurve>FadeLinear</FadeCurve>
-									</DuckingParam>
-								</DuckItem>
-							</DuckingList>
 						</Bus>
-						<AuxBus Name="Reverb" ID="{69665930-FDBD-432F-BDEF-BE4EBF8B790A}"/>
+						<AuxBus Name="Reverb_Tunnel" ID="{69665930-FDBD-432F-BDEF-BE4EBF8B790A}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+									<ObjectRef Name="Tunnel1" ID="{CC44B890-9865-4157-965F-86FED27BC4C6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
+						<AuxBus Name="Reverb_Medium" ID="{2658626A-8953-4CD7-9D6C-9FE45EAA3001}">
+							<ReferenceList>
+								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Plate_Medium" ID="{33384D0C-6ACB-4E3D-AC82-73AAB3AE1CA5}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
+						<AuxBus Name="Reverb_Big" ID="{8F052798-81CE-4A03-82E5-2348A486752C}">
+							<ReferenceList>
+								<Reference Name="Effect0">
+									<Custom CreatedFrom="{0BFA2291-5716-4759-AC24-F59D29E8F2E4}">
+										<Effect Name="Large_Bright_Chamber1_(Custom)" ID="{6686B9A2-EBC7-483E-8327-BD5AE28D4995}" ShortID="100135272" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+											<PropertyList>
+												<Property Name="HFRatio" Type="Real32" Value="1"/>
+												<Property Name="NumberOfDelays" Type="int32" Value="12"/>
+												<Property Name="PreDelay" Type="Real32" Value="0.05"/>
+												<Property Name="ReverbTime" Type="Real32" Value="2"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
+						<AuxBus Name="Reverb_Outside" ID="{6773BE93-8AF1-447E-B50D-FF23CF5D84D4}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+									<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>
