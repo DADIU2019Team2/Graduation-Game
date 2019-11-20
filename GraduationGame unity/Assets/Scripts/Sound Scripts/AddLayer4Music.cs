@@ -7,6 +7,8 @@ public class AddLayer4Music : MonoBehaviour {
 private bool IsInCollider = false;
 
 
+
+   
     void Start()
     {
         AkSoundEngine.RegisterGameObj(gameObject);
@@ -15,11 +17,11 @@ private bool IsInCollider = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag != "Player" || IsInCollider) { return; }
-        AkSoundEngine.SetRTPCValue("Music_Layer_Z1", 5);
-        AkSoundEngine.SetRTPCValue("Music_Layer_Z2", 5);
-        AkSoundEngine.SetRTPCValue("Music_Layer_Z3", 5);
-        AkSoundEngine.SetRTPCValue("Music_Layer_Z4", 5);
+        if (other.tag != "Player" || IsInCollider) { return; }
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z1", 4);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z2", 4);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z3", 4);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z4", 4);
     }
 }
     

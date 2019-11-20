@@ -12,15 +12,15 @@ private bool IsInCollider = false;
     {
         AkSoundEngine.RegisterGameObj(gameObject);
     }
-    
+
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag != "Player" || IsInCollider) { return; }
-        AkSoundEngine.SetRTPCValue("Music_Layer_Z1", 9);
-        AkSoundEngine.SetRTPCValue("Music_Layer_Z2", 9);
-        AkSoundEngine.SetRTPCValue("Music_Layer_Z3", 9);
-        AkSoundEngine.SetRTPCValue("Music_Layer_Z4", 9);
+        if (other.tag != "Player" || IsInCollider) { return; }
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z1", 8);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z2", 8);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z3", 8);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z4", 8);
     }
 }
     
