@@ -3499,32 +3499,6 @@
 								<ActiveSource Name="Level_Complete" ID="{8CC43400-6CE3-4F84-9B16-164ABE77F386}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Level_Start" ID="{4B8854F1-5BBE-4861-9F31-B329B2226EC4}" ShortID="653242589">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>3</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Level_Start" ID="{F94B5CF5-CB14-4674-AA64-68FFEA3CDAAC}" ShortID="531903195">
-									<Language>SFX</Language>
-									<AudioFile>Level_Start.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Level_Start" ID="{F94B5CF5-CB14-4674-AA64-68FFEA3CDAAC}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="Checkpoint_With_Melody" ID="{FF00B317-BF8F-4176-9B17-067BA884D126}" ShortID="352690113">
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
@@ -3549,6 +3523,51 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Checkpoint_With_Melody" ID="{EE2A5497-F101-44FD-8E87-0A211F030E40}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Checkpoint_Crystal" ID="{5705FA3C-A4EE-4412-BD00-B7FBEADCB04D}" ShortID="130457354">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>45</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Checkpoint_Crystal" ID="{99686935-5DA0-4F08-A35A-5CC1EC95E6D8}" ShortID="429598844">
+									<Language>SFX</Language>
+									<AudioFile>Checkpoint_Crystal.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Checkpoint_Crystal" ID="{99686935-5DA0-4F08-A35A-5CC1EC95E6D8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Level_Start" ID="{052B63B4-3861-4809-86F9-C2E8FE42AD5A}" ShortID="263213905">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Level_Start_Ny" ID="{10EA08D2-F3C4-46B1-8DBF-5D16B12FD950}" ShortID="915143470">
+									<Language>SFX</Language>
+									<AudioFile>Level_Start_Ny.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Level_Start_Ny" ID="{10EA08D2-F3C4-46B1-8DBF-5D16B12FD950}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

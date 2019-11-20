@@ -22,6 +22,7 @@ namespace AK
         static const AkUniqueID BALL_PLATFORM = 1848730664U;
         static const AkUniqueID BALL_PLATFORM_DAMAGED = 2557453060U;
         static const AkUniqueID BOSSMUSIC = 1427760111U;
+        static const AkUniqueID CHECKPOINT_CRYSTAL = 1739986920U;
         static const AkUniqueID CHECKPOINT_WITH_MELODY = 4062243661U;
         static const AkUniqueID CRUSHER_IDLE = 3878901180U;
         static const AkUniqueID CRYSTAL_DOOR_HUM = 3540377255U;
