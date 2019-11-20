@@ -500,6 +500,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flowchart fungus dialogue prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: selectedCommands.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: selectedBlocks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1238674769477425509}
+    - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: selectedCommands.Array.data[0]
+      value: 
+      objectReference: {fileID: 1238674769477425532}
     - target: {fileID: 4245839751685019739, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: character
@@ -520,6 +535,41 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 1238674768429006905}
+    - target: {fileID: 4245839751685019717, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: methodParameters.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019717, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: targetObject
+      value: 
+      objectReference: {fileID: 1238674768556565796}
+    - target: {fileID: 4245839751685019717, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: targetComponentAssemblyName
+      value: DialogueManager, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019717, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: targetComponentText
+      value: DialogueManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019717, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: targetMethod
+      value: SkipAllDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019717, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: targetMethodText
+      value: 'SkipAllDialogue (): Void'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019717, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: returnValueType
+      value: System.Void
+      objectReference: {fileID: 0}
     - target: {fileID: 9194088984072562898, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: character
@@ -538,6 +588,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3160657095441498425}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1238674769477425509 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4245839751685019740, guid: 63747fb40dc88e34e949116d18aebef0,
+    type: 3}
+  m_PrefabInstance: {fileID: 3160657095441498425}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1238674769477425532 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4245839751685019717, guid: 63747fb40dc88e34e949116d18aebef0,
+    type: 3}
+  m_PrefabInstance: {fileID: 3160657095441498425}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3472571609263672576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -545,11 +619,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1238674768556565797}
     m_Modifications:
-    - target: {fileID: 8979147991500786408, guid: f0e1ab2ee3392ce4eac4a4758c8ee5b4,
-        type: 3}
-      propertyPath: m_Name
-      value: Anxious officer
-      objectReference: {fileID: 0}
     - target: {fileID: 8979147991500786410, guid: f0e1ab2ee3392ce4eac4a4758c8ee5b4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -604,6 +673,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979147991500786408, guid: f0e1ab2ee3392ce4eac4a4758c8ee5b4,
+        type: 3}
+      propertyPath: m_Name
+      value: Anxious officer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0e1ab2ee3392ce4eac4a4758c8ee5b4, type: 3}
