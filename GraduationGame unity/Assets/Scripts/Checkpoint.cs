@@ -34,8 +34,8 @@ public class Checkpoint : MonoBehaviour, IOnSceneReset
 
 
             //Maybe need to optimize this:
-            other.GetComponentInChildren<LivePlayerStats>().playerStats.resetHealth();
-            other.GetComponentInChildren<ZoeScarfColor>().OnResetLevel();
+            //other.GetComponentInChildren<LivePlayerStats>().playerStats.resetHealth();
+            //other.GetComponentInChildren<ZoeScarfColor>().OnResetLevel();
         }
             
     }
