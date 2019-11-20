@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using KinematicCharacterController;
+using MiniGame2.Events;
 using UnityEngine;
 
 public struct AICharacterInputs
@@ -16,7 +17,7 @@ public enum AIStates
     Chasing,
 }
 
-public class AICharacterController : MonoBehaviour, ICharacterController
+public class AICharacterController : MonoBehaviour, ICharacterController, IOnSceneReset
 {
     [Space(10)] public KinematicCharacterMotor Motor;
 
@@ -35,8 +36,18 @@ public class AICharacterController : MonoBehaviour, ICharacterController
     private Vector3 _lookInputVector;
     private float _lookAheadDistance;
     private bool _avoidObstacles;
-    public bool isActive;
+    private Vector3 _spawnPoint;
+    private bool isActive;
     public AIStates CurrentAIState;
+
+    //Player Damage
+    public IntVariable damage;
+    public IntEvent copDamageEvent;
+    
+    private void Awake()
+    {
+        _spawnPoint = transform.position;
+    }
 
     void Start()
     {
@@ -237,6 +248,10 @@ public class AICharacterController : MonoBehaviour, ICharacterController
     public void OnMovementHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
         ref HitStabilityReport hitStabilityReport)
     {
+        if (hitCollider != null && hitCollider.CompareTag("Player"))
+        {
+            copDamageEvent.Raise(damage.myInt);
+        }
     }
 
     public void ProcessHitStabilityReport(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
@@ -270,5 +285,12 @@ public class AICharacterController : MonoBehaviour, ICharacterController
         Physics.Raycast(castStart, -transform.forward * settings.searchRange, out var backHit, settings.searchRange);
         return ((forwardHit.collider != null && forwardHit.collider.CompareTag("Player")) ||
                 (backHit.collider != null && backHit.collider.CompareTag("Player")));
+    }
+
+    public void OnResetLevel()
+    {
+        Motor.SetPosition(_spawnPoint);
+        Motor.SetRotation(Quaternion.Euler(0f,90f,0f));
+        isActive = false;
     }
 }

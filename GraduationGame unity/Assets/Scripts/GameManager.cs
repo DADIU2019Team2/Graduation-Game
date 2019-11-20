@@ -160,7 +160,8 @@ public class GameManager : MonoBehaviour
                     AkSoundEngine.StopAll();
                     timerForLoadNextScene = 0;
                     int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-                    if (SceneManager.sceneCountInBuildSettings - 1 > nextScene)
+                    Debug.Log("Amount of scenes vs the index we want to load:" + SceneManager.sceneCountInBuildSettings + " vs " + nextScene);
+                    if (SceneManager.sceneCountInBuildSettings - 1 < nextScene)
                     {
                         nextScene = 0;
                         //Should have this be the credits scene instead.
