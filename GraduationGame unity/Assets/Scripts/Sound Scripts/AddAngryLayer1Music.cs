@@ -15,7 +15,7 @@ private bool IsInCollider = false;
 private void OnTriggerEnter(Collider other)
     {
         if (other.tag != "Player" || IsInCollider) { return; }
-        AkSoundEngine.SetRTPCValue("Angry_Music_Layer", 1);
+        AkSoundEngine.SetRTPCValue("Angry_Music_Layer", 2);
         AkSoundEngine.SetRTPCValue("Happy_Drumz", 0);
     }
 
