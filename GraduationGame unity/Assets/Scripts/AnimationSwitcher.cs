@@ -14,11 +14,24 @@ public class AnimationSwitcher : MonoBehaviour
 
     public Animator animator;
     public Vector2 airLerp;
-    public float airTime;
-    public float t;
+    public float jumpTime;
+    public float fallTime;
 
     private void Update()
     {
+        if (characterController.Motor.BaseVelocity.y > 0)
+        {
+            var startVelo = characterController.GetJumpPower();
+            jumpTime = Mathf.InverseLerp(1, 0, characterController.Motor.BaseVelocity.y / startVelo);
+            fallTime = 0f;
+//            jumpTime += Time.deltaTime;
+        }
+
+        if (characterController.Motor.BaseVelocity.y < 0)
+        {
+            jumpTime = 0f;
+            fallTime += Time.deltaTime;
+        }
         /*//basic locomotion
         if (characterController.CurrentCharacterState == PlayerStates.Running &&
             characterController.Motor.GroundingStatus.IsStableOnGround)
@@ -128,7 +141,6 @@ public class AnimationSwitcher : MonoBehaviour
                     {
                         animator.SetBool("inAir", true);
                         animator.SetBool("onLedge?", false);
-                        animator.ResetTrigger("ledgeDetected");
                     }
                     else
                     {
@@ -146,5 +158,34 @@ public class AnimationSwitcher : MonoBehaviour
                 }
             }
         }
+    }
+
+    private Vector3 PredictAboutToLand(float deltaTime, out bool hit)
+    {
+        Vector3 grav = characterController.Gravity;
+        Vector3 velocity = characterController.Motor.BaseVelocity;
+        velocity = velocity + grav * deltaTime;
+
+
+        Vector3 position = transform.parent.position;
+        Vector3 predictedPosition = position + velocity * deltaTime;
+        Vector3 dir = velocity * deltaTime;
+        hit = Physics.SphereCast(position, characterController.Motor.Capsule.radius, dir.normalized,
+            out var sphereCastHitInfo, dir.magnitude);
+        return predictedPosition;
+    }
+
+    private void OnDrawGizmos()
+    {
+        var v = PredictAboutToLand(0.1f, out var hit);
+        if (hit)
+        {
+            Gizmos.color = Color.red;
+        }
+        else
+        {
+            Gizmos.color = Color.green;
+        }
+        Gizmos.DrawWireSphere(v,characterController.Motor.Capsule.radius);
     }
 }

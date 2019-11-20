@@ -4,6 +4,7 @@ using UnityEngine;
 using MiniGame2.Events;
 using System.Linq;
 using KinematicTest.controller;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -43,6 +44,7 @@ public class GameManager : MonoBehaviour
     {
         callOnce = true;
         isSceneLoadTransition = false;
+        transitionFader.SetAlpha(1);
 
         if (playerMovementController == null)
         {
@@ -62,11 +64,12 @@ public class GameManager : MonoBehaviour
             case GameStateScriptableObject.GameState.levelStart:
                 if (callOnce)
                 {
+                    transitionFader.SetAlpha(1);
                     callOnce = false;
                     isSwipeAllowed.setBool(false);
                     startIncrementingLevelStart = true;
                     playerStats.OnResetLevel();
-                    playerMovementController.TransitionToState(PlayerStates.Idling);
+                    playerMovementController.TransitionToState(PlayerStates.CinematicIdle);
                 }
                 if (startIncrementingLevelStart)
                 {
@@ -77,6 +80,10 @@ public class GameManager : MonoBehaviour
                         waitTimer = 0f;
                         DoFade(true);
                         startIncrementingLevelStart = false;
+                    }
+                    else
+                    {
+                        transitionFader.SetAlpha(1);
                     }
                 }
 
@@ -138,6 +145,19 @@ public class GameManager : MonoBehaviour
                     isSceneLoadTransition = false;
                     DoFade(false); //Fades to black
                     callOnce = false;
+                }
+
+                if (transitionFader.getAlpha() == 0)
+                {
+                    //Last frame of the level - this is where we should load next level and stop wwise sound.
+                    AkSoundEngine.StopAll();
+                    int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+                    if (SceneManager.sceneCountInBuildSettings - 1 > nextScene)
+                    {
+                        nextScene = 0;
+                        //Should have this be the credits scene instead.
+                    }
+                    SceneManager.LoadScene(nextScene);
                 }
                 /* Fade to black, load next scene, transition into level-start state.
                 (Possibly set state to be level-start before calling the load-next-scene function) */
