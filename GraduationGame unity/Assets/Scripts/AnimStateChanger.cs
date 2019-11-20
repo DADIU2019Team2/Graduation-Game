@@ -1,18 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using MiniGame2.Events;
 using UnityEngine;
 
 public class AnimStateChanger : StateMachineBehaviour
 {
-    public AnimationSwitcher switcher;
+    public IntEvent lerpEvent;
     
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        base.OnStateEnter(animator, stateInfo, layerIndex);
+        if (stateInfo.IsName("Motion Matching"))
+        {
+            lerpEvent.Raise(0);
+        }
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        base.OnStateExit(animator, stateInfo, layerIndex);
+        if (stateInfo.IsName("Motion Matching"))
+        {
+            lerpEvent.Raise(1);
+        }
     }
 }
