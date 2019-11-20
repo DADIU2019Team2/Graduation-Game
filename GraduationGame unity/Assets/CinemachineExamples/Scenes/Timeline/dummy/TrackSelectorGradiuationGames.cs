@@ -9,6 +9,7 @@ public class TrackSelectorGradiuationGames : MonoBehaviour
 {
     public void TransitionToCam(GameObject cam)
     {
+        ChangeBrainCam(cam);
         cam.GetComponent<CinemachineDollyCart>().enabled = true;
         cam.GetComponent<PlayableDirector>().enabled = true;
         cam.GetComponent<CinemachineDollyCart>().m_Speed = Mathf.Abs(cam.GetComponent<CinemachineDollyCart>().m_Speed);
@@ -24,8 +25,20 @@ public class TrackSelectorGradiuationGames : MonoBehaviour
 
     public void ReverseCam(GameObject cam)
     {
+        
         cam.GetComponent<CinemachineDollyCart>().enabled = true;
         cam.GetComponent<CinemachineDollyCart>().m_Speed = Mathf.Abs(cam.GetComponent<CinemachineDollyCart>().m_Speed) * -1;
         cam.GetComponent<PlayableDirector>().enabled = true;
     }
+
+    public void ChangeBrainCam(GameObject cam)
+    {
+        CinemachineVirtualCamera[] cams = FindObjectOfType<CameraReferences>().cameras;
+        foreach (CinemachineVirtualCamera item in cams)
+        {
+            item.enabled = false;
+        }
+        cam.GetComponent<CinemachineVirtualCamera>().enabled = true;
+    }
+
 }
