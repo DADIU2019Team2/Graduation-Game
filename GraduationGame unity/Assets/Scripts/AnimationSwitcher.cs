@@ -16,7 +16,8 @@ public class AnimationSwitcher : MonoBehaviour
     public Vector2 airLerp;
     public float jumpTime;
     public float fallTime;
-
+    public int fadeTimeInFrames;
+    private bool _isChangingWeight;
     private void Update()
     {
         if (characterController.Motor.BaseVelocity.y > 0)
@@ -26,59 +27,40 @@ public class AnimationSwitcher : MonoBehaviour
             fallTime = 0f;
 //            jumpTime += Time.deltaTime;
         }
-
-        if (characterController.Motor.BaseVelocity.y < 0)
+        else if(characterController.Motor.BaseVelocity.y < 0)
         {
             jumpTime = 0f;
             fallTime += Time.deltaTime;
         }
-        /*//basic locomotion
-        if (characterController.CurrentCharacterState == PlayerStates.Running &&
-            characterController.Motor.GroundingStatus.IsStableOnGround)
-        {
-            //reset states
-            if (characterController.JumpingThisFrame())
-            {
-                animator.runtimeAnimatorController = interactionStates;
-                mmAnimatorController.StopMotionMatching();
-                // set jump anim
-                animator.SetTrigger("jump");
-
-                
-               
-
-            }
-            //start motion matching
-            animator.runtimeAnimatorController = mmStates;
-            mmAnimatorController.StartMotionMatching();
-        }*/
+        animator.SetFloat("riseBlend",jumpTime);
+        animator.SetFloat("fallBlend",fallTime);
 
         if ((characterController.Motor.GroundingStatus.IsStableOnGround &&
              !characterController.Motor.LastGroundingStatus.IsStableOnGround) ||
             (characterController.Motor.GroundingStatus.IsStableOnGround &&
              characterController.CurrentCharacterState == PlayerStates.Running))
         {
-            //animator.runtimeAnimatorController = mmStates;
-            if(!mmAnimatorController.isMotionMatchingRunning)
+            animator.SetFloat("riseBlend",0f);
+            animator.SetFloat("fallBlend",0f);
+            /*if(!mmAnimatorController.isMotionMatchingRunning)
             {
                 animator.CrossFadeInFixedTime("run01", 0.3f); //Now THIS is what I call Jank!
-            }
+            }*/
             
-            /*animator.SetBool("isStanding", false);
-            animator.SetBool("inAir", false);*/
+            
             foreach (var param in animator.parameters)
             {
                 animator.SetBool(param.name,false);
             }
-            animator.SetBool("MotionMatching",true);
-            mmAnimatorController.StartMotionMatching();
+            /*animator.SetBool("MotionMatching",true);
+            mmAnimatorController.StartMotionMatching();*/
         }
         else
         {
             //stop motion matching
             //animator.runtimeAnimatorController = interactionStates;
-            animator.SetBool("MotionMatching",false);
-            mmAnimatorController.StopMotionMatching();
+            /*animator.SetBool("MotionMatching",false);
+            mmAnimatorController.StopMotionMatching();*/
 
             //handle interaction states
             switch (characterController.CurrentCharacterState)
@@ -187,5 +169,31 @@ public class AnimationSwitcher : MonoBehaviour
             Gizmos.color = Color.green;
         }
         Gizmos.DrawWireSphere(v,characterController.Motor.Capsule.radius);
+    }
+
+    public void StartWeightChange(int desiredWeight)
+    {
+        if (_isChangingWeight)
+        {
+            StopCoroutine(nameof(SetLayerWeights));
+        }
+        StartCoroutine(SetLayerWeights(desiredWeight));
+    }
+
+    private IEnumerator SetLayerWeights(int desiredWeight)
+    {
+        _isChangingWeight = true;
+        int interactionLayerIndex = animator.GetLayerIndex("Interactions");
+        float startWeight = animator.GetLayerWeight(interactionLayerIndex);
+        int step = 1;
+        do
+        {
+            float weight = Mathf.Lerp(startWeight, desiredWeight, step / (float) fadeTimeInFrames);
+            animator.SetLayerWeight(interactionLayerIndex, weight);
+            yield return new WaitForSeconds(0f);
+            step++;
+        } while (step < fadeTimeInFrames + 1);
+
+        _isChangingWeight = false;
     }
 }
