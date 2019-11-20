@@ -16,6 +16,11 @@ public class PlayerControllerSettings : ScriptableObject
     public float fallGravityMultiplier;
     [Tooltip("Gravity affecting the player while dropping from geometry (without jumping). Increase for a \"heavier\" drop.")]
     public float dropGravityMultiplier;
+    [Header("Slide Gravity Settings")]
+    public float slideRiseGravityMultiplier;
+    public float slideHangGravityMultiplier;
+    public float slideFallGravityMultiplier;
+    public float slideDropGravityMultiplier;
    
     
 

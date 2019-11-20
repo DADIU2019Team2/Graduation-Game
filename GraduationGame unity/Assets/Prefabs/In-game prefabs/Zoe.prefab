@@ -111,7 +111,6 @@ MonoBehaviour:
   CurrentCharacterState: 0
   CurrentWorldForward: 0
   Gravity: {x: 0, y: -10, z: 0}
-  fixMMBreakCamera: 1
   jumpSound:
     idInternal: 0
     valueGuidInternal: 
@@ -228,6 +227,7 @@ MonoBehaviour:
   - 1
   - 1
   - 1
+  isDefault: 0
 --- !u!1001 &3325513009486544416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -682,14 +682,9 @@ PrefabInstance:
       objectReference: {fileID: 561386183475680734}
     - target: {fileID: 7548246280274202872, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 9137305420583934476, guid: c56af13980f30264faf082e0a0414ff6,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 65d4aa9dc9d823446896f9bc3937d7db, type: 2}
     - target: {fileID: 3048670983425853831, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_AABB.m_Center.x
