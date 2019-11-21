@@ -778,6 +778,7 @@ namespace KinematicTest.controller
                 Gravity = dropGravity * baseGravity;
                 if (jumpInitiated)
                 {
+                    Gravity = riseGravity * baseGravity; // LUL
                     if (currentVelocity.y < 0f)
                         Gravity = hangGravity * baseGravity;
                     if (currentVelocity.y < -hangTimeVelocityThreshold)
@@ -1187,6 +1188,11 @@ namespace KinematicTest.controller
         public float GetJumpPower()
         {
             return JumpSpeed;
+        }
+
+        public void OnDeathStopMove()
+        {
+            TransitionToState(PlayerStates.NoInput);
         }
     }
 }
