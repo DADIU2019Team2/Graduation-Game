@@ -21,7 +21,7 @@ public class PlayerControllerSettings : ScriptableObject
     public float slideHangGravityMultiplier;
     public float slideFallGravityMultiplier;
     public float slideDropGravityMultiplier;
-   
+    public float slideHangTimeVelocityThreshold;
     
 
     [Header("Running Movement")]

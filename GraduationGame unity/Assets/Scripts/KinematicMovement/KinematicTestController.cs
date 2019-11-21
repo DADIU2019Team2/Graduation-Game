@@ -253,6 +253,7 @@ namespace KinematicTest.controller
                     hangGravity = settings.slideHangGravityMultiplier;
                     dropGravity = settings.slideDropGravityMultiplier;
                     fallGravity = settings.slideFallGravityMultiplier;
+                    hangTimeVelocityThreshold = settings.slideHangTimeVelocityThreshold;
                     
                     if (!_isCrouching)
                     {
@@ -328,6 +329,7 @@ namespace KinematicTest.controller
                     hangGravity = settings.hangGravityMultiplier;
                     dropGravity = settings.dropGravityMultiplier;
                     fallGravity = settings.fallGravityMultiplier;
+                    hangTimeVelocityThreshold = settings.hangTimeVelocityThreshold;
                     
                     Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
                     _isCrouching = false;
@@ -776,7 +778,7 @@ namespace KinematicTest.controller
                 Gravity = dropGravity * baseGravity;
                 if (jumpInitiated)
                 {
-                    Gravity = riseGravity * baseGravity;
+                    Gravity = riseGravity * baseGravity; // LUL
                     if (currentVelocity.y < 0f)
                         Gravity = hangGravity * baseGravity;
                     if (currentVelocity.y < -hangTimeVelocityThreshold)
@@ -1049,7 +1051,7 @@ namespace KinematicTest.controller
                     movingPlatform.activatePlatform();
                 }
             }
-            else if (hitCollider.CompareTag("Spike") && canTakeDamage)
+            else if ((hitCollider.CompareTag("Spike") || hitCollider.CompareTag("Cop") ) && canTakeDamage)
             {
                 Debug.Log("spike hit");
                 int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
@@ -1186,6 +1188,11 @@ namespace KinematicTest.controller
         public float GetJumpPower()
         {
             return JumpSpeed;
+        }
+
+        public void OnDeathStopMove()
+        {
+            TransitionToState(PlayerStates.NoInput);
         }
     }
 }
