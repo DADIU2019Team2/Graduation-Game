@@ -788,7 +788,6 @@ MonoBehaviour:
   CurrentCharacterState: 0
   CurrentWorldForward: 0
   Gravity: {x: 0, y: -30, z: 0}
-  fixMMBreakCamera: 0
   jumpSound:
     idInternal: 0
     valueGuidInternal: 
@@ -3495,6 +3494,18 @@ Transform:
   m_Father: {fileID: 1929591060}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1176520073 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4093648257222877448, guid: 1d5fcecccea39994bbe5cab7844bad81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1940581296}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9d3484dac67fc84e93a2742a966cbad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1193373549
 GameObject:
   m_ObjectHideFlags: 0
@@ -6045,7 +6056,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 7f797a49494c0ac448fc83c3600c59ed, type: 2}
+      objectReference: {fileID: 9100000, guid: fcdd696e50cdcab4aa29d0fd6ed9cb28, type: 2}
     - target: {fileID: 8839641581739004728, guid: 1d5fcecccea39994bbe5cab7844bad81,
         type: 3}
       propertyPath: m_ApplyRootMotion
@@ -6566,6 +6577,41 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6900335152949183505, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: isDefault
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900335152949183505, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: weights.Array.data[13]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900335152949183505, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: weights.Array.data[12]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900335152949183505, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: weights.Array.data[11]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900335152949183505, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: weights.Array.data[10]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900335152949183505, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: weights.Array.data[9]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900335152949183505, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: weights.Array.data[8]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8569070633491108968, guid: 1d5fcecccea39994bbe5cab7844bad81,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -6983,6 +7029,68 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1986308485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 988838548016000554, guid: 1d5fcecccea39994bbe5cab7844bad81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1940581296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1986308487 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6332183208010095522, guid: 1d5fcecccea39994bbe5cab7844bad81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1940581296}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986308485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e663e97cf70bdf04e8aefd88d1a829b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1986308488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986308485}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2acb41c5534a2840935ccc1ded9dcc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterController: {fileID: 1176520073}
+  animator: {fileID: 1551305059}
+  fadeTimeInFrames: 5
+--- !u!114 &1986308489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986308485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038e3e53692c2f0449efc6b3ac1d2413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: c4c9f3f9746244846bf0d8610d10a6a2, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1986308487}
+        m_MethodName: StartWeightChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: MiniGame2.Events.UnityIntEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2015800397
 GameObject:
   m_ObjectHideFlags: 0
