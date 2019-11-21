@@ -776,6 +776,7 @@ namespace KinematicTest.controller
                 Gravity = dropGravity * baseGravity;
                 if (jumpInitiated)
                 {
+                    Gravity = riseGravity * baseGravity;
                     if (currentVelocity.y < 0f)
                         Gravity = hangGravity * baseGravity;
                     if (currentVelocity.y < -hangTimeVelocityThreshold)
