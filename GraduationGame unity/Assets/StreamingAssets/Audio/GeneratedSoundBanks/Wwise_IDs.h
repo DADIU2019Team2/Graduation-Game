@@ -32,9 +32,9 @@ namespace AK
         static const AkUniqueID DEATH_SAW = 507840475U;
         static const AkUniqueID DIALOGUE_ANGRY = 2801479097U;
         static const AkUniqueID DIALOGUE_HAPPY = 2714452976U;
+        static const AkUniqueID DOOR_CLOSES = 900426207U;
+        static const AkUniqueID DOOR_OPENING = 2589897592U;
         static const AkUniqueID ELECTRICITY = 2917121896U;
-        static const AkUniqueID GATE_CLOSING = 1450217292U;
-        static const AkUniqueID GATE_IMPACT = 3873573389U;
         static const AkUniqueID GRABS = 238897438U;
         static const AkUniqueID LAZER_BIG = 2381409572U;
         static const AkUniqueID LAZER_MED = 1777268324U;
@@ -43,6 +43,7 @@ namespace AK
         static const AkUniqueID LAZER_WALL_POWER_DOWN = 3352547351U;
         static const AkUniqueID LEVEL_COMPLETE = 3736098925U;
         static const AkUniqueID LEVEL_START = 352576276U;
+        static const AkUniqueID LEVER_SOUND = 3308622827U;
         static const AkUniqueID NORMAL_PLATFORMS = 4182768561U;
         static const AkUniqueID PLATFORM_PILLAR_DAMAGED = 1611566155U;
         static const AkUniqueID PLAY_AMBIENCE_Z1 = 1001479278U;
