@@ -1051,7 +1051,7 @@ namespace KinematicTest.controller
                     movingPlatform.activatePlatform();
                 }
             }
-            else if (hitCollider.CompareTag("Spike") && canTakeDamage)
+            else if ((hitCollider.CompareTag("Spike") || hitCollider.CompareTag("Cop") ) && canTakeDamage)
             {
                 Debug.Log("spike hit");
                 int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
