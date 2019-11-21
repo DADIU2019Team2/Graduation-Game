@@ -19,6 +19,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<BlendContainer Name="Jumps_Blend" ID="{34F6B1A2-11EA-41EC-B7ED-60BFDAFF8351}" ShortID="858258564">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
@@ -34,6 +41,11 @@
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>30</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -348,6 +360,108 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="Jump_Takeoff_2" ID="{AEFA9582-2F5F-4E51-9521-24D816414E67}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Jump_Wind" ID="{31C36C8A-5F55-4DA4-9F21-718C6D6469B1}" ShortID="354519686">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Jump_Wind" ID="{0B960128-47AB-48FA-9EA9-DDB777B95506}" ShortID="665167438">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jump_Wind" ID="{75832A46-5B49-4B55-97AB-F801C4EE1337}" ShortID="54425170">
+													<Language>SFX</Language>
+													<AudioFile>Jump_Wind.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jump_Wind" ID="{75832A46-5B49-4B55-97AB-F801C4EE1337}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jump_Wind_01" ID="{22802091-948A-44F2-BF66-AC32594A076F}" ShortID="579077849">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-130</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Environment" ID="{9782ED15-10B1-4637-9818-5B49A6880915}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jump_Wind" ID="{76B138DD-5C31-4001-AF12-CE4493949F5C}" ShortID="590686584">
+													<Language>SFX</Language>
+													<AudioFile>Jump_Wind.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="54425170"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jump_Wind" ID="{76B138DD-5C31-4001-AF12-CE4493949F5C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jump_Wind_02" ID="{2873BF9E-AA47-444E-AB7B-65A7402D6E3C}" ShortID="851339820">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Environment" ID="{9782ED15-10B1-4637-9818-5B49A6880915}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jump_Wind" ID="{95E21208-D5DA-466D-99A5-ECFF7227B57E}" ShortID="944828760">
+													<Language>SFX</Language>
+													<AudioFile>Jump_Wind.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="54425170"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Jump_Wind" ID="{95E21208-D5DA-466D-99A5-ECFF7227B57E}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
