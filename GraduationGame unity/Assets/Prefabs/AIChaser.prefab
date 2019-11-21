@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9209041694124391886}
   - component: {fileID: 9209041694124391887}
   - component: {fileID: 9209041694124391884}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: AIChaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,8 +100,9 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: c86bbde24d25d5145bab4771ec26801d, type: 2}
   MaxStableMoveSpeed: 10
   Gravity: {x: 0, y: -30, z: 0}
-  isActive: 0
   CurrentAIState: 0
+  damage: {fileID: 11400000, guid: 2eb93b849211d9f4989ee7000e9ba5b9, type: 2}
+  copDamageEvent: {fileID: 11400000, guid: 025e81402ca1c554aae845b4b236ee50, type: 2}
 --- !u!1 &9209041694239065012
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,7 +112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9209041694239065015}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +145,7 @@ GameObject:
   - component: {fileID: 9209041694603341153}
   - component: {fileID: 9209041694603341155}
   - component: {fileID: 9209041694603341152}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
