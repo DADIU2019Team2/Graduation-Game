@@ -11,6 +11,8 @@ public class LoadOnStartup : MonoBehaviour
     {
         mainMenuIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
         SaveLoad.Load();
+        Time.timeScale = 1;
+        Debug.LogWarning("Manually setting timescale to 1");
     }
 
     public void StartNewGame()
