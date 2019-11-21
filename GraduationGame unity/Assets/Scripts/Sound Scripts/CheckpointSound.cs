@@ -15,7 +15,7 @@ private bool IsInCollider = false;
 private void OnTriggerEnter (Collider other)
 {
     if (other.tag != "Player" || IsInCollider) { return; }
-    AkSoundEngine.PostEvent("Checkpoint_With_Melody", gameObject);
+    AkSoundEngine.PostEvent("Checkpoint_Crystal", gameObject);
     
 }
 

@@ -22,6 +22,7 @@ namespace AK
         static const AkUniqueID BALL_PLATFORM = 1848730664U;
         static const AkUniqueID BALL_PLATFORM_DAMAGED = 2557453060U;
         static const AkUniqueID BOSSMUSIC = 1427760111U;
+        static const AkUniqueID CHECKPOINT_CRYSTAL = 1739986920U;
         static const AkUniqueID CHECKPOINT_WITH_MELODY = 4062243661U;
         static const AkUniqueID CRUSHER_IDLE = 3878901180U;
         static const AkUniqueID CRYSTAL_DOOR_HUM = 3540377255U;
@@ -140,6 +141,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID ANGRY_MUSIC_LAYER = 3197644566U;
+        static const AkUniqueID BOSS_FORESHADOWING = 3093178105U;
         static const AkUniqueID FOOTSTEP_VELOCITY = 3740773599U;
         static const AkUniqueID HAPPY_BASS = 3940323633U;
         static const AkUniqueID HAPPY_DRUMZ = 1600538058U;

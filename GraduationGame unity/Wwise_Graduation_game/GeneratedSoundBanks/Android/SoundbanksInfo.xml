@@ -30,6 +30,7 @@
 				<Event Id="1848730664" Name="Ball_Platform" ObjectPath="\Events\Default Work Unit\SFX\Ball_Platform" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="2557453060" Name="Ball_Platform_Damaged" ObjectPath="\Events\Default Work Unit\SFX\Ball_Platform_Damaged" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="1427760111" Name="BossMusic" ObjectPath="\Events\Default Work Unit\Music\BossMusic" DurationType="Infinite"/>
+				<Event Id="1739986920" Name="Checkpoint_Crystal" ObjectPath="\Events\Default Work Unit\CelebrationSound\Checkpoint_Crystal" DurationType="OneShot" DurationMin="1.250000" DurationMax="1.250000"/>
 				<Event Id="4062243661" Name="Checkpoint_With_Melody" ObjectPath="\Events\Default Work Unit\CelebrationSound\Checkpoint_With_Melody" DurationType="OneShot" DurationMin="5.828163" DurationMax="5.828163"/>
 				<Event Id="3878901180" Name="Crusher_Idle" ObjectPath="\Events\Default Work Unit\SFX\Crusher_Idle" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="3540377255" Name="Crystal_Door_Hum" ObjectPath="\Events\Default Work Unit\SFX\Crystal_Door_Hum" MaxAttenuation="30.000000" DurationType="Infinite"/>
@@ -49,7 +50,7 @@
 				<Event Id="2967932086" Name="Lazer_Wall" ObjectPath="\Events\Default Work Unit\SFX\Lazer_Wall" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="3352547351" Name="Lazer_Wall_Power_Down" ObjectPath="\Events\Default Work Unit\SFX\Lazer_Wall_Power_Down" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="2.135228" DurationMax="2.135228"/>
 				<Event Id="3736098925" Name="Level_Complete" ObjectPath="\Events\Default Work Unit\Music\Level_Complete" DurationType="OneShot" DurationMin="4.714286" DurationMax="4.714286"/>
-				<Event Id="352576276" Name="Level_Start" ObjectPath="\Events\Default Work Unit\CelebrationSound\Level_Start" DurationType="OneShot" DurationMin="5.792494" DurationMax="5.792494"/>
+				<Event Id="352576276" Name="Level_Start" ObjectPath="\Events\Default Work Unit\CelebrationSound\Level_Start" DurationType="OneShot" DurationMin="6.037347" DurationMax="6.037347"/>
 				<Event Id="4182768561" Name="Normal_Platforms" ObjectPath="\Events\Default Work Unit\SFX\Normal_Platforms" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="1611566155" Name="Platform_Pillar_Damaged" ObjectPath="\Events\Default Work Unit\SFX\Platform_Pillar_Damaged" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="1001479278" Name="Play_Ambience_Z1" ObjectPath="\Events\Default Work Unit\Ambience\Play_Ambience_Z1" DurationType="Infinite"/>
@@ -185,10 +186,6 @@
 					<ShortName>Robot_Appearence.wav</ShortName>
 					<Path>SFX/Robot_Appearence_6296B0F9.wem</Path>
 				</File>
-				<File Id="154586851" Language="SFX">
-					<ShortName>Z2AngryBass.wav</ShortName>
-					<Path>SFX/Z2AngryBass_3EBA1927.wem</Path>
-				</File>
 				<File Id="154960993" Language="SFX">
 					<ShortName>Z3_Dist_Synth_Harm2.wav</ShortName>
 					<Path>SFX/Z3_Dist_Synth_Harm2_3EBA1927.wem</Path>
@@ -196,10 +193,6 @@
 				<File Id="163272763" Language="SFX">
 					<ShortName>DialogMusicAngry.wav</ShortName>
 					<Path>SFX/DialogMusicAngry_3EBA1927.wem</Path>
-				</File>
-				<File Id="178363245" Language="SFX">
-					<ShortName>Z3_Hatter_Arp.wav</ShortName>
-					<Path>SFX/Z3_Hatter_Arp_3EBA1927.wem</Path>
 				</File>
 				<File Id="179692943" Language="SFX">
 					<ShortName>Z4_Flyde_Chords.wav</ShortName>
@@ -236,10 +229,6 @@
 				<File Id="246231320" Language="SFX">
 					<ShortName>Alien_Death_Trap.wav</ShortName>
 					<Path>SFX/Alien_Death_Trap_9B96ECC7.wem</Path>
-				</File>
-				<File Id="254717342" Language="SFX">
-					<ShortName>Z2AngryDrumz.wav</ShortName>
-					<Path>SFX/Z2AngryDrumz_3EBA1927.wem</Path>
 				</File>
 				<File Id="262328241" Language="SFX">
 					<ShortName>Z1_Noisy_Arp.wav</ShortName>
@@ -281,6 +270,10 @@
 					<ShortName>Transition_2.wav</ShortName>
 					<Path>SFX/Transition_2_3EBA1927.wem</Path>
 				</File>
+				<File Id="344618435" Language="SFX">
+					<ShortName>Z2AngryBass.wav</ShortName>
+					<Path>SFX/Z2AngryBass_3EBA1927.wem</Path>
+				</File>
 				<File Id="346023756" Language="SFX">
 					<ShortName>Jump_Takeoff_2.wav</ShortName>
 					<Path>SFX/Jump_Takeoff_2_6296B0F9.wem</Path>
@@ -320,6 +313,10 @@
 				<File Id="429283248" Language="SFX">
 					<ShortName>Zoe_Land_Med.wav</ShortName>
 					<Path>SFX/Zoe_Land_Med_6296B0F9.wem</Path>
+				</File>
+				<File Id="429598844" Language="SFX">
+					<ShortName>Checkpoint_Crystal.wav</ShortName>
+					<Path>SFX/Checkpoint_Crystal_10C4C929.wem</Path>
 				</File>
 				<File Id="440112324" Language="SFX">
 					<ShortName>Alien_Platform_Pillar.wav</ShortName>
@@ -372,10 +369,6 @@
 				<File Id="523264904" Language="SFX">
 					<ShortName>Ambience_Z2.wav</ShortName>
 					<Path>SFX/Ambience_Z2_9B96ECC7.wem</Path>
-				</File>
-				<File Id="531903195" Language="SFX">
-					<ShortName>Level_Start.wav</ShortName>
-					<Path>SFX/Level_Start_10C4C929.wem</Path>
 				</File>
 				<File Id="537809517" Language="SFX">
 					<ShortName>Spiky_Machine_Impact.wav</ShortName>
@@ -453,6 +446,10 @@
 					<ShortName>Gate_Closing.wav</ShortName>
 					<Path>SFX/Gate_Closing_9B96ECC7.wem</Path>
 				</File>
+				<File Id="794154597" Language="SFX">
+					<ShortName>Robo_Foreshadowing.wav</ShortName>
+					<Path>SFX/Robo_Foreshadowing_3EBA1927.wem</Path>
+				</File>
 				<File Id="795860753" Language="SFX">
 					<ShortName>Lazer_Wall_Power_Down.wav</ShortName>
 					<Path>SFX/Lazer_Wall_Power_Down_6296B0F9.wem</Path>
@@ -465,9 +462,13 @@
 					<ShortName>Z1_Hope_Synth.wav</ShortName>
 					<Path>SFX/Z1_Hope_Synth_3EBA1927.wem</Path>
 				</File>
-				<File Id="833026845" Language="SFX">
+				<File Id="823110564" Language="SFX">
 					<ShortName>Z2AngryHarm.wav</ShortName>
 					<Path>SFX/Z2AngryHarm_3EBA1927.wem</Path>
+				</File>
+				<File Id="843076094" Language="SFX">
+					<ShortName>Z2AngryDrumz.wav</ShortName>
+					<Path>SFX/Z2AngryDrumz_3EBA1927.wem</Path>
 				</File>
 				<File Id="849700586" Language="SFX">
 					<ShortName>Transition_3.wav</ShortName>
@@ -476,6 +477,10 @@
 				<File Id="849860119" Language="SFX">
 					<ShortName>Normal_Platform3.wav</ShortName>
 					<Path>SFX/Normal_Platform3_9B96ECC7.wem</Path>
+				</File>
+				<File Id="855185368" Language="SFX">
+					<ShortName>Z3_Happy_Arp.wav</ShortName>
+					<Path>SFX/Z3_Happy_Arp_3EBA1927.wem</Path>
 				</File>
 				<File Id="859322015" Language="SFX">
 					<ShortName>Z1_Hatter_Arp.wav</ShortName>
@@ -492,6 +497,10 @@
 				<File Id="900936792" Language="SFX">
 					<ShortName>Ambience_Z4.wav</ShortName>
 					<Path>SFX/Ambience_Z4_9B96ECC7.wem</Path>
+				</File>
+				<File Id="915143470" Language="SFX">
+					<ShortName>Level_Start_Ny.wav</ShortName>
+					<Path>SFX/Level_Start_Ny_10C4C929.wem</Path>
 				</File>
 				<File Id="916545742" Language="SFX">
 					<ShortName>BossMusic.wav</ShortName>

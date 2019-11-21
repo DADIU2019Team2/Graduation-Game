@@ -32,6 +32,9 @@ public class GameManager : MonoBehaviour
     bool startIncrementingLevelStart = false;
     private LivePlayerStats playerStats;
 
+    private float waitForloadNextScene;
+    private float timerForLoadNextScene;
+
     private void Awake()
     {
         QualitySettings.vSyncCount = 0;
@@ -45,6 +48,9 @@ public class GameManager : MonoBehaviour
         callOnce = true;
         isSceneLoadTransition = false;
         transitionFader.SetAlpha(1);
+
+        waitForloadNextScene = sceneLoadFadeTime.getValue();
+        timerForLoadNextScene = 0;
 
         if (playerMovementController == null)
         {
@@ -64,6 +70,7 @@ public class GameManager : MonoBehaviour
             case GameStateScriptableObject.GameState.levelStart:
                 if (callOnce)
                 {
+                    timerForLoadNextScene = 0;
                     transitionFader.SetAlpha(1);
                     callOnce = false;
                     isSwipeAllowed.setBool(false);
@@ -90,7 +97,6 @@ public class GameManager : MonoBehaviour
                 if (transitionFader.getAlpha() == 0)//have finished fading in
                 {
                     ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);
-
                 }
                 /*Fade from black. 
                 Nothing happens until player gives some sort of input to start the level. 
@@ -147,8 +153,24 @@ public class GameManager : MonoBehaviour
                     callOnce = false;
                 }
 
+                timerForLoadNextScene += Time.deltaTime;
+                if (timerForLoadNextScene >= waitForloadNextScene)
+                {
+                    //Last frame of the level - this is where we should load next level and stop wwise sound.
+                    AkSoundEngine.StopAll();
+                    timerForLoadNextScene = 0;
+                    int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+                    Debug.Log("Amount of scenes vs the index we want to load:" + SceneManager.sceneCountInBuildSettings + " vs " + nextScene);
+                    if (SceneManager.sceneCountInBuildSettings - 1 < nextScene)
+                    {
+                        nextScene = 0;
+                        //Should have this be the credits scene instead.
+                    }
+                    SceneManager.LoadScene(nextScene);
+                }
                 if (transitionFader.getAlpha() == 0)
                 {
+                    //For some reason this doesn't get called. Which is why the timerForLoadNextLevel code above exists.
                     //Last frame of the level - this is where we should load next level and stop wwise sound.
                     AkSoundEngine.StopAll();
                     int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
