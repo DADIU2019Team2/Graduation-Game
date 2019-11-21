@@ -253,6 +253,7 @@ namespace KinematicTest.controller
                     hangGravity = settings.slideHangGravityMultiplier;
                     dropGravity = settings.slideDropGravityMultiplier;
                     fallGravity = settings.slideFallGravityMultiplier;
+                    hangTimeVelocityThreshold = settings.slideHangTimeVelocityThreshold;
                     
                     if (!_isCrouching)
                     {
@@ -328,6 +329,7 @@ namespace KinematicTest.controller
                     hangGravity = settings.hangGravityMultiplier;
                     dropGravity = settings.dropGravityMultiplier;
                     fallGravity = settings.fallGravityMultiplier;
+                    hangTimeVelocityThreshold = settings.hangTimeVelocityThreshold;
                     
                     Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
                     _isCrouching = false;
