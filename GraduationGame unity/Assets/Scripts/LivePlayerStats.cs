@@ -81,6 +81,12 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
         playerStats.SetCurrentZoeRecolor(playerStats.selectedSkin); //Ensures that the player sets the selected skin on levelStart 
     }
 
+    public void OnCheckPointReached()
+    {
+        playerStats.resetHealth();
+        playerStats.resetStamina();
+    }
+    
     public void ChangeSkin(int skinIndex)
     {
         playerStats.SetCurrentZoeRecolor(skinIndex);
