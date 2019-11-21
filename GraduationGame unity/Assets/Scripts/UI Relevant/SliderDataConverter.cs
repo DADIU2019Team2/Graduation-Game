@@ -30,6 +30,10 @@ public class SliderDataConverter : MonoBehaviour
         {
             slider.onValueChanged.AddListener(delegate { displayData(); });
         }
+        if(floatDataContainer != null)
+        {
+            slider.value = floatDataContainer.getValue();
+        }
     }
 
     public void Start()
