@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8826a87feb8f4f74ead6bae77603a757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 6979c2a72ad2d16438213c3e69114b58, type: 2}
+  gameEvent: {fileID: 11400000, guid: 6d32c1d0b92eb46499e88dd66ffcaa4d, type: 2}
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
@@ -1433,7 +1433,7 @@ MonoBehaviour:
   storyText: Who are you?
   description: 
   character: {fileID: 1238674770089634035}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 01443f767703d5c4f98bde5bd150075f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1442,7 +1442,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1238674769208141314}
 --- !u!114 &5489917673783616486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1491,6 +1491,20 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &4699795329956803306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238674769477425511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 89
+  indentLevel: 0
 --- !u!1001 &941407218987671025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1663,6 +1677,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1238674769208141314 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 519291341597458104, guid: d61be112270c6464e88ba38b3e7b0b79,
+    type: 3}
+  m_PrefabInstance: {fileID: 1586477195268315322}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a0bbe22c246e4c78ad8e9816cbae9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2375313286499126033
@@ -1882,6 +1908,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019742, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: m_Name
+      value: Flowchart fungus dialogue prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: selectedBlocks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: selectedCommands.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: selectedBlocks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1238674769477425509}
+    - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: selectedCommands.Array.data[0]
+      value: 
+      objectReference: {fileID: 8249240580588421952}
+    - target: {fileID: 4245839751685019740, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: commandList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019740, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: commandList.Array.data[1]
+      value: 
+      objectReference: {fileID: 4699795329956803306}
     - target: {fileID: 4245839751685019717, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: methodParameters.Array.size
@@ -1917,41 +1978,6 @@ PrefabInstance:
       propertyPath: returnValueType
       value: System.Void
       objectReference: {fileID: 0}
-    - target: {fileID: 4245839751685019742, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: m_Name
-      value: Flowchart fungus dialogue prefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: selectedBlocks.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: selectedCommands.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9194088984072562898, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: storyText
-      value: "Zo\xE9. To change direction, swipe sideways."
-      objectReference: {fileID: 0}
-    - target: {fileID: 9194088984072562898, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 730823774356123064}
-    - target: {fileID: 5746272814732395194, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: storyText
-      value: If you want to jump, swipe upwards instead.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5746272814732395194, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 730823774356123064}
     - target: {fileID: 98791941351992518, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: commandList.Array.size
@@ -1982,6 +2008,41 @@ PrefabInstance:
       propertyPath: commandList.Array.data[6]
       value: 
       objectReference: {fileID: 5489917673783616486}
+    - target: {fileID: 9194088984072562898, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: storyText
+      value: "Zo\xE9. To change direction, swipe sideways."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194088984072562898, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 730823774356123064}
+    - target: {fileID: 5435600741015211883, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 99.997375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435600741015211883, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 280.7447
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746272814732395194, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: storyText
+      value: If you want to jump, swipe upwards instead.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746272814732395194, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 730823774356123064}
+    - target: {fileID: 6460370217274835577, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: callMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2716733939733047935, guid: 63747fb40dc88e34e949116d18aebef0, type: 3}
     - {fileID: 4245839751685019739, guid: 63747fb40dc88e34e949116d18aebef0, type: 3}
@@ -2007,6 +2068,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8249240580588421952 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6460370217274835577, guid: 63747fb40dc88e34e949116d18aebef0,
+    type: 3}
+  m_PrefabInstance: {fileID: 3160657095441498425}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238674769477425511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1238674769477425511 stripped
