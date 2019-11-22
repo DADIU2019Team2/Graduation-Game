@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using KinematicTest.controller;
+using MiniGame2.Events;
 using UnityEngine.Events;
 
 public class LivePlayerStats : MonoBehaviour, IOnSceneReset
@@ -18,7 +19,7 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
 
     public delegate void OnZoeTakeDamageDelegate();
     public event OnZoeTakeDamageDelegate zoeTakeDamageEvent;
-
+    public VoidEvent DeathVoidEvent;
     private void Awake()
     {
         currentSpawnPosition = transform.parent.position;
@@ -55,6 +56,8 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
     public void Die()
     {
         Debug.Log("git gud");
+        //despawn meshes
+        DeathVoidEvent.Raise();
         GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelLoss);
     }
 
@@ -81,6 +84,12 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
         playerStats.SetCurrentZoeRecolor(playerStats.selectedSkin); //Ensures that the player sets the selected skin on levelStart 
     }
 
+    public void OnCheckPointReached()
+    {
+        playerStats.resetHealth();
+        playerStats.resetStamina();
+    }
+    
     public void ChangeSkin(int skinIndex)
     {
         playerStats.SetCurrentZoeRecolor(skinIndex);

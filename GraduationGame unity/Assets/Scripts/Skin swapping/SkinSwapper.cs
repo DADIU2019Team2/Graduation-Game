@@ -46,6 +46,7 @@ public class SkinSwapper : MonoBehaviour
     {
         playerStats.selectedSkin = skinIndex;
         GameSave.skinIndexUsed = skinIndex;
+        playerStats.SetCurrentZoeRecolor(skinIndex);
     }
 
     private void ChangeMaterialInRenderer(SkinnedMeshRenderer meshRenderer, Material material)
