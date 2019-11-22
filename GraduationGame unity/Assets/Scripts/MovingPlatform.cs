@@ -22,13 +22,17 @@ public class MovingPlatform : MonoBehaviour, IMoverController, IOnSceneReset
     };
     public PlatformType platformType;
 
+    public enum LevelOfPrecision { precise, Imprecise}
+    public LevelOfPrecision platFormPrecision;
+
     public float startDelay;
     public float waypointWaitTime;
     private bool canMove = false;
 
-    [Range(0, 4.5f)]
+    [Range(0, 20f)] //should be max 4.5 on precise platforms
     public float TranslationSpeed = 1;
-    private float minDist2DestReached = .05f;
+    [Tooltip("The distance a platform has to be within from a waypoint inorder to have reached the waypoint")]
+    [SerializeField] private float minDist2DestReached = .2f; //.05f for precise platforms
     //public float rotationSpeed = 30f;
     public AK.Wwise.Event stopSound;
     public AK.Wwise.Event startSound;
@@ -130,20 +134,42 @@ public class MovingPlatform : MonoBehaviour, IMoverController, IOnSceneReset
         Vector3 destinationDirection = _destination - Mover.Rigidbody.position;
         float destinationDistance = destinationDirection.magnitude;
         //Debug.Log("dist to destination: " + destinationDistance);
-        if (destinationDistance >= minDist2DestReached)
-        {
+        if(platFormPrecision == LevelOfPrecision.Imprecise) 
+        {            
+            if (destinationDistance >= minDist2DestReached)
+            {
 
-            //do some rotation if necessarry
-            goalRotation = Mover.Rigidbody.rotation;
-            goalPosition = destinationDirection.normalized * TranslationSpeed * Time.deltaTime + Mover.Rigidbody.position;
+                //do some rotation if necessarry
+                goalRotation = Mover.Rigidbody.rotation;
+                goalPosition = destinationDirection.normalized * TranslationSpeed * Time.deltaTime + Mover.Rigidbody.position;
+            }
+            else
+            {
+                destinationReached = true;
+                goalPosition = Mover.Rigidbody.position;
+                goalRotation = Mover.Rigidbody.rotation;
+                if (destinationReached)
+                    updateDestination();
+            }
         }
-        else
+
+        if(platFormPrecision == LevelOfPrecision.precise)
         {
-            destinationReached = true;
-            goalPosition = Mover.Rigidbody.position;
-            goalRotation = Mover.Rigidbody.rotation;
-            if (destinationReached)
-                updateDestination();
+            if (destinationDistance >= 0.05f)
+            {
+
+                //do some rotation if necessarry
+                goalRotation = Mover.Rigidbody.rotation;
+                goalPosition = destinationDirection.normalized * TranslationSpeed * Time.deltaTime + Mover.Rigidbody.position;
+            }
+            else
+            {
+                destinationReached = true;
+                goalPosition = Mover.Rigidbody.position;
+                goalRotation = Mover.Rigidbody.rotation;
+                if (destinationReached)
+                    updateDestination();
+            }
         }
     }
 
