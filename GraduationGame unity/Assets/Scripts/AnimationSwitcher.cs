@@ -6,18 +6,27 @@ using UnityEngine;
 
 public class AnimationSwitcher : MonoBehaviour
 {
-    /*public RuntimeAnimatorController mmStates;
-    public RuntimeAnimatorController interactionStates;
-    public RuntimeAnimatorController completeController;*/
     public MMAnimationController mmAnimatorController;
     public KinematicTestController characterController;
 
     public Animator animator;
-    public Vector2 airLerp;
-    public float jumpTime;
-    public float fallTime;
+    private float jumpTime;
+    private float fallTime;
+
+    [Tooltip("Ground prediction time in seconds")]
+    public float predictionTime;
+
+    [Tooltip("Time it takes to fade into/out of MM in frames")]
     public int fadeTimeInFrames;
+
     private bool _isChangingWeight;
+
+    private void Awake()
+    {
+        if (fadeTimeInFrames <= 0) fadeTimeInFrames = 1;
+        if (predictionTime <= 0f) predictionTime = 0.1f;
+    }
+
     private void Update()
     {
         if (characterController.Motor.BaseVelocity.y > 0)
@@ -25,33 +34,39 @@ public class AnimationSwitcher : MonoBehaviour
             var startVelo = characterController.GetJumpPower();
             jumpTime = Mathf.InverseLerp(1, 0, characterController.Motor.BaseVelocity.y / startVelo);
             fallTime = 0f;
-//            jumpTime += Time.deltaTime;
+            animator.ResetTrigger("FallingGroundDetected");
         }
-        else if(characterController.Motor.BaseVelocity.y < 0)
+        else if (characterController.Motor.BaseVelocity.y < 0)
         {
             jumpTime = 0f;
             fallTime += Time.deltaTime;
+            if (!characterController.Motor.GroundingStatus.IsStableOnGround && PredictAboutToLand(predictionTime, out var v))
+            {
+                animator.SetTrigger("FallingGroundDetected");
+            }
         }
-        animator.SetFloat("riseBlend",jumpTime);
-        animator.SetFloat("fallBlend",fallTime);
+
+        animator.SetFloat("riseBlend", jumpTime);
+        animator.SetFloat("fallBlend", fallTime);
 
         if ((characterController.Motor.GroundingStatus.IsStableOnGround &&
              !characterController.Motor.LastGroundingStatus.IsStableOnGround) ||
             (characterController.Motor.GroundingStatus.IsStableOnGround &&
              characterController.CurrentCharacterState == PlayerStates.Running))
         {
-            animator.SetFloat("riseBlend",0f);
-            animator.SetFloat("fallBlend",0f);
+            animator.SetFloat("riseBlend", 0f);
+            animator.SetFloat("fallBlend", 0f);
             /*if(!mmAnimatorController.isMotionMatchingRunning)
             {
                 animator.CrossFadeInFixedTime("run01", 0.3f); //Now THIS is what I call Jank!
             }*/
-            
-            
+
+
             foreach (var param in animator.parameters)
             {
-                animator.SetBool(param.name,false);
+                animator.SetBool(param.name, false);
             }
+
             /*animator.SetBool("MotionMatching",true);
             mmAnimatorController.StartMotionMatching();*/
         }
@@ -142,7 +157,7 @@ public class AnimationSwitcher : MonoBehaviour
         }
     }
 
-    private Vector3 PredictAboutToLand(float deltaTime, out bool hit)
+    private bool PredictAboutToLand(float deltaTime, out Vector3 predictedPosition)
     {
         Vector3 grav = characterController.Gravity;
         Vector3 velocity = characterController.Motor.BaseVelocity;
@@ -150,17 +165,16 @@ public class AnimationSwitcher : MonoBehaviour
 
 
         Vector3 position = transform.parent.position;
-        Vector3 predictedPosition = position + velocity * deltaTime;
+        predictedPosition = position + velocity * deltaTime;
         Vector3 dir = velocity * deltaTime;
-        hit = Physics.SphereCast(position, characterController.Motor.Capsule.radius, dir.normalized,
+        return Physics.SphereCast(position, characterController.Motor.Capsule.radius, dir.normalized,
             out var sphereCastHitInfo, dir.magnitude);
-        return predictedPosition;
     }
 
     private void OnDrawGizmos()
     {
         var v = PredictAboutToLand(0.1f, out var hit);
-        if (hit)
+        if (v)
         {
             Gizmos.color = Color.red;
         }
@@ -168,7 +182,8 @@ public class AnimationSwitcher : MonoBehaviour
         {
             Gizmos.color = Color.green;
         }
-        Gizmos.DrawWireSphere(v,characterController.Motor.Capsule.radius);
+
+        Gizmos.DrawWireSphere(hit, characterController.Motor.Capsule.radius);
     }
 
     public void StartWeightChange(int desiredWeight)
@@ -177,6 +192,7 @@ public class AnimationSwitcher : MonoBehaviour
         {
             StopCoroutine(nameof(SetLayerWeights));
         }
+
         StartCoroutine(SetLayerWeights(desiredWeight));
     }
 

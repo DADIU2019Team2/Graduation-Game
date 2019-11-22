@@ -176,9 +176,11 @@ MonoBehaviour:
   activationType: 2
   trigger: {fileID: 1446800942}
   platformType: 1
+  platFormPrecision: 0
   startDelay: 0
   waypointWaitTime: 1
   TranslationSpeed: 1
+  minDist2DestReached: 0.2
   stopSound:
     idInternal: 0
     valueGuidInternal: 
@@ -313,7 +315,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 24e567acf7d0106489a727a35cd35824, type: 2}
+  - {fileID: 2100000, guid: 9484ae62c81acdc4eaa3ae8a41a8561e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -474,6 +476,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 392940778663327180}
     m_Modifications:
+    - target: {fileID: 6713721070873687785, guid: 6f280a624cdff1949b2c02c8320a525d,
+        type: 3}
+      propertyPath: m_Name
+      value: LeftLedge
+      objectReference: {fileID: 0}
     - target: {fileID: 8194666976152269496, guid: 6f280a624cdff1949b2c02c8320a525d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -539,11 +546,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.30893114
       objectReference: {fileID: 0}
-    - target: {fileID: 6713721070873687785, guid: 6f280a624cdff1949b2c02c8320a525d,
-        type: 3}
-      propertyPath: m_Name
-      value: LeftLedge
-      objectReference: {fileID: 0}
     - target: {fileID: 4089499593085323233, guid: 6f280a624cdff1949b2c02c8320a525d,
         type: 3}
       propertyPath: zoeShouldBeFacing
@@ -564,6 +566,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 392940778663327180}
     m_Modifications:
+    - target: {fileID: 6713721070873687785, guid: 6f280a624cdff1949b2c02c8320a525d,
+        type: 3}
+      propertyPath: m_Name
+      value: RightLedge
+      objectReference: {fileID: 0}
     - target: {fileID: 8194666976152269496, guid: 6f280a624cdff1949b2c02c8320a525d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -628,11 +635,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.3089311
-      objectReference: {fileID: 0}
-    - target: {fileID: 6713721070873687785, guid: 6f280a624cdff1949b2c02c8320a525d,
-        type: 3}
-      propertyPath: m_Name
-      value: RightLedge
       objectReference: {fileID: 0}
     - target: {fileID: 4089499593085323233, guid: 6f280a624cdff1949b2c02c8320a525d,
         type: 3}

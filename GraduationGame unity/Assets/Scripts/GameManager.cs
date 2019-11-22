@@ -26,7 +26,12 @@ public class GameManager : MonoBehaviour
     [Header("Check If Active")]// bad i know
     public GameObject optionsMenu;
 
+    [Header("Misc")]
     public KinematicTestController playerMovementController;
+
+    public delegate void OnGameStateChangeDelegate(GameStateScriptableObject.GameState gameState);
+    public static event OnGameStateChangeDelegate GameStateChangeEvent;
+
     private float waitInLevelStart = 0.5f;
     private float waitTimer;
     bool startIncrementingLevelStart = false;
@@ -139,7 +144,7 @@ public class GameManager : MonoBehaviour
                 break;
             case GameStateScriptableObject.GameState.cinematic:
 
-                playerMovementController.TransitionToState(PlayerStates.CinematicIdle);
+                playerMovementController.TransitionToState(PlayerStates.NoInput);
                 //Need to implement input blocking here.
 
                 /*(No player control at all until they end)
@@ -205,6 +210,8 @@ public class GameManager : MonoBehaviour
     public static void ChangeGameState(GameStateScriptableObject.GameState desiredGameState)
     {
         gameState = desiredGameState;
+        if (GameStateChangeEvent != null)
+            GameStateChangeEvent(desiredGameState);
         callOnce = true;
     }
     private void DoFade(bool fadeIn)
