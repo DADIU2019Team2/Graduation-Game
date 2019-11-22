@@ -17,6 +17,7 @@ public class TriggerBroadcastToFungus : MonoBehaviour, IOnSceneReset
     private void OnTriggerEnter(Collider other)
     {
         if (wasMessageSent) { return; }
+        if (GameManager.GetGameState() != GameStateScriptableObject.GameState.mainGameplayLoop) { return; }
         if (other.CompareTag("Player") || other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             Flowchart.BroadcastFungusMessage(fungusMessageName);
