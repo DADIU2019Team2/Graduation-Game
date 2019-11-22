@@ -1505,6 +1505,38 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &5212798125189320919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238674769477425511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae67a23cb4aa74793b41258ae40bf321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 90
+  indentLevel: 0
+  stopParentFlowchart: 0
+  targetFlowcharts: []
+--- !u!114 &2238772539216040585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238674769477425511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae67a23cb4aa74793b41258ae40bf321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 91
+  indentLevel: 0
+  stopParentFlowchart: 0
+  targetFlowcharts: []
 --- !u!1001 &941407218987671025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1921,26 +1953,31 @@ PrefabInstance:
     - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: selectedCommands.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: selectedBlocks.Array.data[0]
       value: 
-      objectReference: {fileID: 3063030894394551807}
+      objectReference: {fileID: 1238674769477425509}
     - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: selectedCommands.Array.data[0]
       value: 
-      objectReference: {fileID: 8782974127744228465}
+      objectReference: {fileID: 8249240580588421952}
     - target: {fileID: 4245839751685019740, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: commandList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4245839751685019740, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: commandList.Array.data[1]
+      value: 
+      objectReference: {fileID: 2238772539216040585}
+    - target: {fileID: 4245839751685019740, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: commandList.Array.data[2]
       value: 
       objectReference: {fileID: 4699795329956803306}
     - target: {fileID: 4245839751685019717, guid: 63747fb40dc88e34e949116d18aebef0,
@@ -2026,6 +2063,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 5435600741015211883, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
+      propertyPath: commandList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435600741015211883, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
       propertyPath: nodeRect.x
       value: 99.997375
       objectReference: {fileID: 0}
@@ -2034,6 +2076,11 @@ PrefabInstance:
       propertyPath: nodeRect.y
       value: 280.7447
       objectReference: {fileID: 0}
+    - target: {fileID: 5435600741015211883, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: commandList.Array.data[1]
+      value: 
+      objectReference: {fileID: 5212798125189320919}
     - target: {fileID: 5746272814732395194, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: storyText
@@ -2082,16 +2129,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3063030894394551807 stripped
+--- !u!114 &8249240580588421952 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 98791941351992518, guid: 63747fb40dc88e34e949116d18aebef0,
+  m_CorrespondingSourceObject: {fileID: 6460370217274835577, guid: 63747fb40dc88e34e949116d18aebef0,
     type: 3}
   m_PrefabInstance: {fileID: 3160657095441498425}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238674769477425511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1238674769477425511 stripped
