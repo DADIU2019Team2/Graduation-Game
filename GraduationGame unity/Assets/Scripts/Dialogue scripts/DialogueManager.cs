@@ -7,8 +7,11 @@ public class DialogueManager : MonoBehaviour
 {
     public void SkipAllDialogue()
     {
-        Flowchart.BroadcastFungusMessage("EndCinematicEarly");
-        GameManager.DialogueEnd();
+        if (GameManager.GetGameState() != GameStateScriptableObject.GameState.mainGameplayLoop)
+        {
+            Flowchart.BroadcastFungusMessage("EndCinematicEarly");
+            GameManager.DialogueEnd();
+        }
     }
 
     public void NextDialogueBox()
