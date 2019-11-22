@@ -23,7 +23,7 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
 
     public AISettings settings;
 
-    public float MaxStableMoveSpeed;
+    private float MaxStableMoveSpeed;
     private float StableMovementSharpness;
     private float OrientationSharpness;
 
@@ -37,13 +37,12 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
     private float _lookAheadDistance;
     private bool _avoidObstacles;
     private Vector3 _spawnPoint;
-    private bool isActive = false;
+    private bool isActive;
     public AIStates CurrentAIState;
 
     //Player Damage
     public IntVariable damage;
-    public IntEvent copDamageEvent;
-    
+
     private void Awake()
     {
         _spawnPoint = transform.position;
@@ -227,20 +226,20 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
 
     public void BeforeCharacterUpdate(float deltaTime)
     {
-        if (GameManager.GetGameState() == GameStateScriptableObject.GameState.mainGameplayLoop)
+        if (GameManager.GetGameState() != GameStateScriptableObject.GameState.mainGameplayLoop) return;
+        if (!isActive)
         {
-            if (LookForPlayer())
+            if (CurrentAIState != AIStates.Idling)
             {
-                _avoidObstacles = AvoidObstacles();
-                isActive = true;
-                TransitionToState(_avoidObstacles ? AIStates.Idling : AIStates.Chasing);
+                TransitionToState(AIStates.Idling);
             }
+
+            isActive = LookForPlayer();
         }
         else
         {
-            if (CurrentAIState != AIStates.Idling)
-                TransitionToState(AIStates.Idling);
-            
+            _avoidObstacles = AvoidObstacles();
+            TransitionToState(_avoidObstacles ? AIStates.Idling : AIStates.Chasing);
         }
     }
 
@@ -265,10 +264,7 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
     public void OnMovementHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
         ref HitStabilityReport hitStabilityReport)
     {
-        if (hitCollider != null && hitCollider.CompareTag("Player"))
-        {
-            copDamageEvent.Raise(damage.myInt);
-        }
+        
     }
 
     public void ProcessHitStabilityReport(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
@@ -283,23 +279,31 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
 
     private bool AvoidObstacles()
     {
-        Vector3 castStart = transform.position + transform.up * Motor.Capsule.height +
-                            transform.forward * Motor.Capsule.radius;
+        Transform copTransform = transform;
+        Vector3 position = copTransform.position;
+        Vector3 forward = copTransform.forward;
+        Vector3 up = copTransform.up;
+        float radius;
+        Vector3 castStart = position + up * Motor.Capsule.height +
+                            forward * (radius = Motor.Capsule.radius);
         //float castAngle = Mathf.Atan(_lookAheadDistance / Motor.Capsule.height);
-        Vector3 castEnd = transform.position + transform.forward * Motor.Capsule.radius +
-                          transform.forward * _lookAheadDistance;
+        Vector3 castEnd = position + forward * radius +
+                          forward * _lookAheadDistance;
         Vector3 dir = (castEnd - castStart);
         Physics.Raycast(castStart, dir.normalized, out var groundHit, dir.magnitude + 0.2f);
-        Physics.Raycast(castStart - transform.up * Motor.Capsule.height / 2f, transform.forward * _lookAheadDistance,
+        Physics.Raycast(castStart - up * (Motor.Capsule.height / 2f), transform.forward * _lookAheadDistance,
             out var spikeHit, _lookAheadDistance);
         return groundHit.collider == null || (spikeHit.collider != null && spikeHit.collider.CompareTag("Spike"));
     }
 
     private bool LookForPlayer()
     {
-        Vector3 castStart = transform.position + transform.up * Motor.Capsule.height / 2f;
-        Physics.Raycast(castStart, transform.forward * settings.searchRange, out var forwardHit, settings.searchRange);
-        Physics.Raycast(castStart, -transform.forward * settings.searchRange, out var backHit, settings.searchRange);
+        Transform copTransform = transform;
+        Vector3 castStart = copTransform.position + copTransform.up * (Motor.Capsule.height / 2f);
+        Vector3 forward = copTransform.forward;
+        
+        Physics.Raycast(castStart, forward * settings.searchRange, out var forwardHit, settings.searchRange);
+        Physics.Raycast(castStart, -forward * settings.searchRange, out var backHit, settings.searchRange);
         return ((forwardHit.collider != null && forwardHit.collider.CompareTag("Player")) ||
                 (backHit.collider != null && backHit.collider.CompareTag("Player")));
     }
@@ -307,12 +311,11 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
     public void OnResetLevel()
     {
         Motor.SetPosition(_spawnPoint);
-        Motor.SetRotation(Quaternion.Euler(0f,90f,0f));
+        Motor.SetRotation(Quaternion.Euler(0f, 90f, 0f));
         isActive = false;
     }
 
     void OnGameStateChange(GameStateScriptableObject.GameState currentGameState)
     {
-
     }
 }
