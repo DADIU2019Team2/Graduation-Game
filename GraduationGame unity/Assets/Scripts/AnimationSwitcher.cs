@@ -19,7 +19,9 @@ public class AnimationSwitcher : MonoBehaviour
     [Tooltip("Time it takes to fade into/out of MM in frames")]
     public int fadeTimeInFrames;
 
+    public Transform zoeRoot;
     private bool _isChangingWeight;
+    public bool alma;
 
     private void Awake()
     {
@@ -45,6 +47,8 @@ public class AnimationSwitcher : MonoBehaviour
                 animator.SetTrigger("FallingGroundDetected");
             }
         }
+
+        alma = IsRightFootInFront();
 
         animator.SetFloat("riseBlend", jumpTime);
         animator.SetFloat("fallBlend", fallTime);
@@ -117,7 +121,7 @@ public class AnimationSwitcher : MonoBehaviour
                     animator.ResetTrigger("ledgeDetected");
                     animator.SetBool("isFalling", false);
 
-
+                    animator.ResetTrigger("jump");
                     animator.SetBool("inAir", true);
                     // set fall anim
 
@@ -211,5 +215,13 @@ public class AnimationSwitcher : MonoBehaviour
         } while (step < fadeTimeInFrames + 1);
 
         _isChangingWeight = false;
+    }
+
+    private bool IsRightFootInFront()
+    {
+        Matrix4x4 rootMatrix = zoeRoot.worldToLocalMatrix;
+        Vector3 leftFootLocal = rootMatrix.MultiplyPoint3x4(animator.GetBoneTransform(HumanBodyBones.LeftFoot).position);
+        Vector3 rightFootLocal = rootMatrix.MultiplyPoint3x4(animator.GetBoneTransform(HumanBodyBones.RightFoot).position);
+        return (rightFootLocal.z > leftFootLocal.z);
     }
 }
