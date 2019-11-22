@@ -13,6 +13,11 @@ public class FallingPlatforms : MonoBehaviour, IOnSceneReset
     private bool initialIsActive;
     private bool isFalling;
 
+    private Coroutine lastRoutine;
+    private float globalGrav;
+
+    [SerializeField] private float gravityModifier = 1f;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -21,19 +26,14 @@ public class FallingPlatforms : MonoBehaviour, IOnSceneReset
         initialIsActive = gameObject.activeSelf;
         initialUseGravity = rb.useGravity;
         isFalling = initialUseGravity;
+        globalGrav = Physics.gravity.y;
+        
     }
-    /*private void OnCollisionEnter(Collision collision)
-    {
-        //FallingPlatforms
-        //if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
-        //{
-        //}
-    }*/
 
     public void startFallingPlatform()
     {
         if(!isFalling)
-            StartCoroutine(startFalling(fallDelayTime));
+            lastRoutine = StartCoroutine(startFalling(fallDelayTime));
     }
 
     IEnumerator startFalling(float delay)
@@ -41,11 +41,17 @@ public class FallingPlatforms : MonoBehaviour, IOnSceneReset
         isFalling = true;
         //Do some animation here ?
         yield return new WaitForSeconds(delay);
-        rb.useGravity = true;        
+        //rb.useGravity = true;   
+        while (isFalling)
+        {
+            rb.AddForce(new Vector3(0, globalGrav * gravityModifier, 0), ForceMode.Acceleration);
+        }
     }
 
     public void OnResetLevel()
     {
+        if (lastRoutine != null)
+            StopCoroutine(lastRoutine);
         rb.useGravity = initialUseGravity;
         isFalling = false;
         rb.velocity = Vector3.zero;
