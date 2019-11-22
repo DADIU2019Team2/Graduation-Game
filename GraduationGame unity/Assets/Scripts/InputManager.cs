@@ -26,6 +26,7 @@ public class InputManager : MonoBehaviour
     public SwipeAngleThresholds swipeAngleThresholds;
     public VoidEvent onSwipeEvent;
     public VoidEvent onClickEvent;
+    public VoidEvent onSwipeInCinematicEvent;
     private static SwipeType mostRecentSwipeType;
     private float timeDragged;
     public FloatVariable maxDragTime;
@@ -94,10 +95,16 @@ public class InputManager : MonoBehaviour
                         {
                             inputText.text = (intoTextString + mostRecentInput + " " + swipeAngle);
                         }
-                        if (isSwipeAllowed.myBool == true)
+                        //Might have to make this a switch-case:
+                        if (GameManager.GetGameState() == GameStateScriptableObject.GameState.mainGameplayLoop)
                         {
                             onSwipeEvent.Raise();
                         }
+                        if (GameManager.GetGameState() == GameStateScriptableObject.GameState.cinematic)
+                        {
+                            onSwipeInCinematicEvent.Raise();
+                        }
+
                     }
                     else if (timeDragged < 0.125f)
                     {
