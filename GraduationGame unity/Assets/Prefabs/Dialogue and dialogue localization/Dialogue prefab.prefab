@@ -1379,7 +1379,7 @@ MonoBehaviour:
   storyText: '...'
   description: 
   character: {fileID: 730823774356123064}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 333952a5730496d46a4456f8d9174ffc, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1406,7 +1406,7 @@ MonoBehaviour:
   storyText: It matters not.
   description: 
   character: {fileID: 730823774356123064}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 333952a5730496d46a4456f8d9174ffc, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1416,6 +1416,20 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &4699795329956803306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238674769477425511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 89
+  indentLevel: 0
 --- !u!114 &4983935763608698587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1433,7 +1447,7 @@ MonoBehaviour:
   storyText: Who are you?
   description: 
   character: {fileID: 1238674770089634035}
-  portrait: {fileID: 21300000, guid: 01443f767703d5c4f98bde5bd150075f, type: 3}
+  portrait: {fileID: 21300000, guid: e602849ff7b142a4e938d7ef9926323c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1481,7 +1495,7 @@ MonoBehaviour:
   storyText: I think it does.
   description: 
   character: {fileID: 1238674770089634035}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: c393fb1cc762cf14e8da516df5fd20e9, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1491,20 +1505,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &4699795329956803306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1238674769477425511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 89
-  indentLevel: 0
 --- !u!1001 &941407218987671025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1921,18 +1921,18 @@ PrefabInstance:
     - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: selectedCommands.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: selectedBlocks.Array.data[0]
       value: 
-      objectReference: {fileID: 1238674769477425509}
+      objectReference: {fileID: 3063030894394551807}
     - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: selectedCommands.Array.data[0]
       value: 
-      objectReference: {fileID: 8249240580588421952}
+      objectReference: {fileID: 8782974127744228465}
     - target: {fileID: 4245839751685019740, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: commandList.Array.size
@@ -2018,6 +2018,12 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 730823774356123064}
+    - target: {fileID: 9194088984072562898, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 333952a5730496d46a4456f8d9174ffc,
+        type: 3}
     - target: {fileID: 5435600741015211883, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: nodeRect.x
@@ -2038,6 +2044,12 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 730823774356123064}
+    - target: {fileID: 5746272814732395194, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 333952a5730496d46a4456f8d9174ffc,
+        type: 3}
     - target: {fileID: 6460370217274835577, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: callMode
@@ -2070,16 +2082,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8249240580588421952 stripped
+--- !u!114 &3063030894394551807 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6460370217274835577, guid: 63747fb40dc88e34e949116d18aebef0,
+  m_CorrespondingSourceObject: {fileID: 98791941351992518, guid: 63747fb40dc88e34e949116d18aebef0,
     type: 3}
   m_PrefabInstance: {fileID: 3160657095441498425}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238674769477425511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1238674769477425511 stripped
