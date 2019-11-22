@@ -9,6 +9,7 @@ public class FallingPlatforms : MonoBehaviour, IOnSceneReset
     private Rigidbody rb;
     private Vector3 initialPosition;
     private Quaternion initalRotation;
+    private Vector3 initialScale;
     private bool initialUseGravity;
     private bool initialIsActive;
     private bool isFalling;
@@ -21,8 +22,9 @@ public class FallingPlatforms : MonoBehaviour, IOnSceneReset
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        initalRotation = transform.rotation;
-        initialPosition = transform.position;
+        initalRotation = transform.localRotation;
+        initialPosition = transform.localPosition;
+        initialScale = transform.localScale;
         initialIsActive = gameObject.activeSelf;
         initialUseGravity = rb.useGravity;
         isFalling = initialUseGravity;
@@ -60,8 +62,11 @@ public class FallingPlatforms : MonoBehaviour, IOnSceneReset
         rb.useGravity = initialUseGravity;
         isFalling = false;
         rb.velocity = Vector3.zero;
-        transform.position = initialPosition;
-        transform.rotation = initalRotation;
+        rb.ResetInertiaTensor();
+        rb.angularVelocity = Vector3.zero;
+        transform.localPosition = initialPosition;
+        transform.localRotation = initalRotation;
+        transform.localScale = initialScale;
         gameObject.SetActive(initialIsActive);
     }
 }
