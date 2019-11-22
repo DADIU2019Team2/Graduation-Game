@@ -16,6 +16,16 @@ public class TrackSelectorGradiuationGames : MonoBehaviour
         cam.GetComponent<CinemachineDollyCart>().m_Speed = Mathf.Abs(cam.GetComponent<CinemachineDollyCart>().m_Speed);
         ChangeBrainCam(cam);
     }
+    public void TransitionToCamNoTrack(GameObject cam)
+    {
+        if (cam.GetComponent<CinemachineDollyCart>() != null)
+        {
+        cam.GetComponent<CinemachineDollyCart>().enabled = false;
+        }
+        cam.GetComponent<PlayableDirector>().enabled = true;
+        cam.GetComponent<CinemachineVirtualCamera>().Priority = 11;
+        ChangeBrainCamNoTrack(cam);
+    }
 
     public void ResetCam(GameObject cam)
     {
@@ -42,9 +52,12 @@ public class TrackSelectorGradiuationGames : MonoBehaviour
         {
             item.enabled = false;
             item.GetComponent<PlayableDirector>().time = 0;
-            item.GetComponent<CinemachineDollyCart>().m_Position = 0;
-            item.GetComponent<PlayableDirector>().enabled = false;
+            if (item.GetComponent<CinemachineDollyCart>() != null)
+            {
             item.GetComponent<CinemachineDollyCart>().enabled = false;
+            item.GetComponent<CinemachineDollyCart>().m_Position = 0;
+            }
+            item.GetComponent<PlayableDirector>().enabled = false;
             item.GetComponent<CinemachineVirtualCamera>().Priority = 0;
         }
         cam.GetComponent<CinemachineDollyCart>().m_Position = 0;
@@ -54,6 +67,27 @@ public class TrackSelectorGradiuationGames : MonoBehaviour
         cam.GetComponent<PlayableDirector>().enabled = true;
 
         
+    }
+    public void ChangeBrainCamNoTrack(GameObject cam)
+    {
+        CinemachineVirtualCamera[] cams = FindObjectOfType<CameraReferences>().cameras;
+        foreach (CinemachineVirtualCamera item in cams)
+        {
+            item.enabled = false;
+            item.GetComponent<PlayableDirector>().time = 0;
+            if (item.GetComponent<CinemachineDollyCart>() != null)
+            {
+            item.GetComponent<CinemachineDollyCart>().m_Position = 0;
+            item.GetComponent<CinemachineDollyCart>().enabled = false;
+            }
+            item.GetComponent<PlayableDirector>().enabled = false;
+            item.GetComponent<CinemachineVirtualCamera>().Priority = 0;
+        }
+        cam.GetComponent<CinemachineVirtualCamera>().Priority = 11;
+        cam.GetComponent<CinemachineVirtualCamera>().enabled = true;
+        cam.GetComponent<PlayableDirector>().enabled = true;
+
+
     }
 
 }
