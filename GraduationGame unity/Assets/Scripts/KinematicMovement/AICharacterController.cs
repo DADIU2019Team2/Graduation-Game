@@ -53,6 +53,7 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
     {
         Init();
         Motor.CharacterController = this;
+        GameManager.GameStateChangeEvent += DetermineAIState;
     }
 
     void Init()
@@ -66,10 +67,25 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
 
     public void TransitionToState(AIStates newState)
     {
+        if (CurrentAIState == newState)
+            return;
         AIStates tmpInitialState = CurrentAIState;
         OnStateExit(tmpInitialState, newState);
         CurrentAIState = newState;
         OnStateEnter(newState, tmpInitialState);
+    }
+
+    private void DetermineAIState(GameStateScriptableObject.GameState currentGameState)
+    {
+        switch (currentGameState)
+        {
+            case GameStateScriptableObject.GameState.mainGameplayLoop:
+                TransitionToState(AIStates.Chasing);
+                break;
+            default:
+                TransitionToState(AIStates.Idling);
+                break;
+        }
     }
 
     private void OnStateEnter(AIStates state, AIStates fromState)
@@ -292,5 +308,10 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
         Motor.SetPosition(_spawnPoint);
         Motor.SetRotation(Quaternion.Euler(0f,90f,0f));
         isActive = false;
+    }
+
+    void OnGameStateChange(GameStateScriptableObject.GameState currentGameState)
+    {
+
     }
 }
