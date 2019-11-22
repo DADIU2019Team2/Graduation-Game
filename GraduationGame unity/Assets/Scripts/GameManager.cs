@@ -144,7 +144,7 @@ public class GameManager : MonoBehaviour
                 break;
             case GameStateScriptableObject.GameState.cinematic:
 
-                playerMovementController.TransitionToState(PlayerStates.CinematicIdle);
+                playerMovementController.TransitionToState(PlayerStates.NoInput);
                 //Need to implement input blocking here.
 
                 /*(No player control at all until they end)

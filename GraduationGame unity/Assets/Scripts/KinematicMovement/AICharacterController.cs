@@ -37,7 +37,7 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
     private float _lookAheadDistance;
     private bool _avoidObstacles;
     private Vector3 _spawnPoint;
-    private bool isActive;
+    private bool isActive = false;
     public AIStates CurrentAIState;
 
     //Player Damage
@@ -227,19 +227,20 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
 
     public void BeforeCharacterUpdate(float deltaTime)
     {
-        if (isActive)
+        if (GameManager.GetGameState() == GameStateScriptableObject.GameState.mainGameplayLoop)
         {
-            _avoidObstacles = AvoidObstacles();
-            TransitionToState(_avoidObstacles ? AIStates.Idling : AIStates.Chasing);
+            if (LookForPlayer())
+            {
+                _avoidObstacles = AvoidObstacles();
+                isActive = true;
+                TransitionToState(_avoidObstacles ? AIStates.Idling : AIStates.Chasing);
+            }
         }
         else
         {
             if (CurrentAIState != AIStates.Idling)
                 TransitionToState(AIStates.Idling);
-            if (LookForPlayer())
-            {
-                isActive = true;
-            }
+            
         }
     }
 

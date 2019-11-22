@@ -12,8 +12,8 @@ public class ResetObjectFunc : MonoBehaviour, IOnSceneReset
 
     private void Awake()
     {
-        initialPos = transform.position;
-        initialRot = transform.rotation;
+        initialPos = transform.localPosition;
+        initialRot = transform.localRotation;
         initialScale = transform.localScale;
         if (animator == null)
         {
@@ -23,8 +23,8 @@ public class ResetObjectFunc : MonoBehaviour, IOnSceneReset
 
     public void OnResetLevel()
     {
-        transform.position = initialPos;
-        transform.rotation = initialRot;
+        transform.localPosition = initialPos;
+        transform.localRotation = initialRot;
         transform.localScale = initialScale;
         if (animator != null)
         {
