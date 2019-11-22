@@ -26,6 +26,7 @@ public class InputManager : MonoBehaviour
     public SwipeAngleThresholds swipeAngleThresholds;
     public VoidEvent onSwipeEvent;
     public VoidEvent onClickEvent;
+    public VoidEvent onSwipeInCinematicEvent;
     private static SwipeType mostRecentSwipeType;
     private float timeDragged;
     public FloatVariable maxDragTime;
