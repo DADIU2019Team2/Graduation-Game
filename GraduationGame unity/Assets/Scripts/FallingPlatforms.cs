@@ -27,13 +27,17 @@ public class FallingPlatforms : MonoBehaviour, IOnSceneReset
         initialUseGravity = rb.useGravity;
         isFalling = initialUseGravity;
         globalGrav = Physics.gravity.y;
-        
+        Debug.Log(globalGrav);
     }
 
     public void startFallingPlatform()
     {
-        if(!isFalling)
+        if (!isFalling)
+        {
+            if (lastRoutine != null)
+                StopCoroutine(lastRoutine);
             lastRoutine = StartCoroutine(startFalling(fallDelayTime));
+        }
     }
 
     IEnumerator startFalling(float delay)
@@ -44,6 +48,7 @@ public class FallingPlatforms : MonoBehaviour, IOnSceneReset
         //rb.useGravity = true;   
         while (isFalling)
         {
+            yield return new WaitForSeconds(0);
             rb.AddForce(new Vector3(0, globalGrav * gravityModifier, 0), ForceMode.Acceleration);
         }
     }
