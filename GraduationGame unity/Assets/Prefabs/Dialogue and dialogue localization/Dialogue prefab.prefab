@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8826a87feb8f4f74ead6bae77603a757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 6979c2a72ad2d16438213c3e69114b58, type: 2}
+  gameEvent: {fileID: 11400000, guid: 6d32c1d0b92eb46499e88dd66ffcaa4d, type: 2}
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
@@ -1882,6 +1882,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019742, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: m_Name
+      value: Flowchart fungus dialogue prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: selectedBlocks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: selectedCommands.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: selectedBlocks.Array.data[0]
+      value: 
+      objectReference: {fileID: 6968136192618663506}
+    - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: selectedCommands.Array.data[0]
+      value: 
+      objectReference: {fileID: 8249240580588421952}
     - target: {fileID: 4245839751685019717, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: methodParameters.Array.size
@@ -1917,41 +1942,6 @@ PrefabInstance:
       propertyPath: returnValueType
       value: System.Void
       objectReference: {fileID: 0}
-    - target: {fileID: 4245839751685019742, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: m_Name
-      value: Flowchart fungus dialogue prefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: selectedBlocks.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4245839751685019737, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: selectedCommands.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9194088984072562898, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: storyText
-      value: "Zo\xE9. To change direction, swipe sideways."
-      objectReference: {fileID: 0}
-    - target: {fileID: 9194088984072562898, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 730823774356123064}
-    - target: {fileID: 5746272814732395194, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: storyText
-      value: If you want to jump, swipe upwards instead.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5746272814732395194, guid: 63747fb40dc88e34e949116d18aebef0,
-        type: 3}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 730823774356123064}
     - target: {fileID: 98791941351992518, guid: 63747fb40dc88e34e949116d18aebef0,
         type: 3}
       propertyPath: commandList.Array.size
@@ -1982,6 +1972,41 @@ PrefabInstance:
       propertyPath: commandList.Array.data[6]
       value: 
       objectReference: {fileID: 5489917673783616486}
+    - target: {fileID: 9194088984072562898, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: storyText
+      value: "Zo\xE9. To change direction, swipe sideways."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194088984072562898, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 730823774356123064}
+    - target: {fileID: 5435600741015211883, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 99.99737
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435600741015211883, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: nodeRect.y
+      value: 280.74466
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746272814732395194, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: storyText
+      value: If you want to jump, swipe upwards instead.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746272814732395194, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 730823774356123064}
+    - target: {fileID: 6460370217274835577, guid: 63747fb40dc88e34e949116d18aebef0,
+        type: 3}
+      propertyPath: callMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2716733939733047935, guid: 63747fb40dc88e34e949116d18aebef0, type: 3}
     - {fileID: 4245839751685019739, guid: 63747fb40dc88e34e949116d18aebef0, type: 3}
@@ -2007,6 +2032,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6968136192618663506 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5435600741015211883, guid: 63747fb40dc88e34e949116d18aebef0,
+    type: 3}
+  m_PrefabInstance: {fileID: 3160657095441498425}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238674769477425511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8249240580588421952 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6460370217274835577, guid: 63747fb40dc88e34e949116d18aebef0,
+    type: 3}
+  m_PrefabInstance: {fileID: 3160657095441498425}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238674769477425511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1238674769477425511 stripped
