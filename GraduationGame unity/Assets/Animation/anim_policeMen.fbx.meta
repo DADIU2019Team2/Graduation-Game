@@ -1,27 +1,18 @@
 fileFormatVersion: 2
-guid: 703542c3c4dff054594fa39af217186f
+guid: e2a7f624477c7b448b7ca466fe2aa779
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
   - first:
-      74: 1827226128182048838
-    second: Take 001
-  externalObjects:
+      74: 5200991684956857034
+    second: police_180
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: body
-    second: {fileID: 2100000, guid: 6c50e87bea4eafb45ac5af0ba237ff02, type: 2}
+      74: -4136430896619159658
+    second: police_idle
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: helmet
-    second: {fileID: 2100000, guid: cc1616d8dfa57f34f9f33f5285fbacae, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: outfit
-    second: {fileID: 2100000, guid: a7958f96233fff848956dffcf506af5b, type: 2}
+      74: 6506682261464577979
+    second: police_run1
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -34,14 +25,56 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: 
+    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween bone
+      rotation in copied configuration does not match rotation in animation file:\n\t'Spine2'
+      : rotation error = 6.686114 deg\n"
     animationImportErrors: 
-    animationImportWarnings: 
-    animationRetargetingWarnings: 
-    animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
+    animationImportWarnings: "\nClip 'police_180' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Spine2' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\nClip 'police_idle' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Spine2' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\nClip 'police_run1'
+      has import animation warnings that might lower retargeting quality:\nNote: Activate
+      translation DOF on avatar to improve retargeting quality.\n\t'Spine2' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: "\nRetargeting quality report for clip 'police_180':\n\tLeftUpperArm
+      average position error 8.7 mm and maximum position error 14.4 mm at time 4:
+      2 (48.6%) Frame 122\n\tLeftLowerArm average position error 7.0 mm and maximum
+      position error 13.9 mm at time 4:11 (70.3%) Frame 131\n\tLeftHand average position
+      error 6.0 mm and maximum position error 11.5 mm at time 4: 1 (45.9%) Frame 121\n\tRightUpperArm
+      average position error 8.7 mm and maximum position error 14.4 mm at time 4:
+      2 (48.6%) Frame 122\n\tRightLowerArm average position error 6.8 mm and maximum
+      position error 14.1 mm at time 4: 2 (48.6%) Frame 122\n\tRightHand average position
+      error 4.4 mm and maximum position error 14.2 mm at time 4: 2 (48.6%) Frame 122\n\tHead
+      average position error 8.7 mm and maximum position error 14.4 mm at time 4:
+      2 (48.6%) Frame 122\n\tRightFoot average orientation error 0.1 deg and maximum
+      orientation error 0.7 deg at time 4: 7 (59.5%) Frame 127\n\nRetargeting quality
+      report for clip 'police_idle':\n\tLeftUpperArm average position error 8.3 mm
+      and maximum position error 8.5 mm at time 3: 8 (93.3%) Frame 98\n\tLeftLowerArm
+      average position error 7.6 mm and maximum position error 7.8 mm at time 3: 8
+      (93.3%) Frame 98\n\tLeftHand average position error 7.6 mm and maximum position
+      error 7.9 mm at time 3: 8 (93.3%) Frame 98\n\tRightUpperArm average position
+      error 8.3 mm and maximum position error 8.5 mm at time 3: 8 (93.3%) Frame 98\n\tRightLowerArm
+      average position error 4.6 mm and maximum position error 4.8 mm at time 3: 8
+      (93.3%) Frame 98\n\tRightHand average position error 1.1 mm and maximum position
+      error 1.9 mm at time 3:15 (100.0%) Frame 105\n\tHead average position error
+      8.3 mm and maximum position error 8.5 mm at time 3: 8 (93.3%) Frame 98\n\nRetargeting
+      quality report for clip 'police_run1':\n\tLeftUpperArm average position error
+      7.6 mm and maximum position error 10.7 mm at time 4:21 (0.0%) Frame 141\n\tLeftLowerArm
+      average position error 4.4 mm and maximum position error 5.9 mm at time 4:23
+      (10.5%) Frame 143\n\tLeftHand average position error 2.9 mm and maximum position
+      error 5.6 mm at time 5: 9 (94.7%) Frame 159\n\tRightUpperArm average position
+      error 7.6 mm and maximum position error 10.7 mm at time 4:21 (0.0%) Frame 141\n\tRightLowerArm
+      average position error 4.5 mm and maximum position error 8.5 mm at time 4:21
+      (0.0%) Frame 141\n\tRightHand average position error 2.6 mm and maximum position
+      error 6.4 mm at time 4:25 (21.1%) Frame 145\n\tHead average position error 7.6
+      mm and maximum position error 10.7 mm at time 4:21 (0.0%) Frame 141\n"
+    animationDoRetargetingWarnings: 1
+    importAnimatedCustomProperties: 1
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 0
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -50,11 +83,69 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
-      internalID: 1827226128182048838
-      firstFrame: 0
-      lastFrame: 817.1988
+      name: police_180
+      takeName: police_180
+      internalID: 5200991684956857034
+      firstFrame: 105
+      lastFrame: 142
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: police_idle
+      takeName: police_idle
+      internalID: -4136430896619159658
+      firstFrame: 1
+      lastFrame: 105
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: police_run1
+      takeName: police_run1
+      internalID: 6506682261464577979
+      firstFrame: 142
+      lastFrame: 161
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -115,7 +206,7 @@ ModelImporter:
     normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
     serializedVersion: 3
     human:
@@ -623,13 +714,13 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: LeftArm
       parentName: LeftShoulder
-      position: {x: -0, y: -0.060096234, z: -1.3322676e-16}
-      rotation: {x: 0, y: 0.70710623, z: 0, w: 0.70710737}
+      position: {x: -0.000000081956514, y: -0.06009908, z: -0.0000001508742}
+      rotation: {x: 0.00000005960465, y: 0.7071068, z: 0.7071068, w: -0.00000005960465}
       scale: {x: 1, y: 1, z: 1}
     - name: LeftForeArm
       parentName: LeftArm
       position: {x: -0.00000062948345, y: -0.2661622, z: 0.00000025365554}
-      rotation: {x: -0.00000025665986, y: 0.00000015291201, z: -0.10923899, w: 0.9940155}
+      rotation: {x: 0.0000000875443, y: 0.00000011920926, z: -0.038137108, w: 0.9992726}
       scale: {x: 1, y: 1, z: 1}
     - name: LeftHand
       parentName: LeftForeArm
@@ -641,25 +732,25 @@ ModelImporter:
       position: {x: -0.032196946, y: -0.042562373, z: 0.016235411}
       rotation: {x: 0.19674875, y: 0.6791838, z: -0.4871453, w: 0.51253176}
       scale: {x: 1, y: 1, z: 1}
+    - name: LeftFinger2Metacarpal
+      parentName: LeftHand
+      position: {x: -0.057560258, y: -0.15165867, z: 0.0036135383}
+      rotation: {x: -0.005974935, y: 0.0019420082, z: -0.18559894, w: 0.9826056}
+      scale: {x: 1, y: 1, z: 1}
     - name: LeftFinger1Proximal
-      parentName: LeftFinger1Metacarpal
-      position: {x: -8.5265126e-16, y: -0.032224815, z: 4.2632563e-16}
-      rotation: {x: -0.16906223, y: -0.060727965, z: 0.13063683, w: 0.97502005}
+      parentName: LeftFinger2Metacarpal
+      position: {x: -0.033958763, y: 0.08803093, z: 0.028491806}
+      rotation: {x: 0.03822741, y: 0.7068684, z: -0.1770194, w: 0.6837689}
       scale: {x: 1, y: 1, z: 1}
     - name: LeftFinger1Distal
       parentName: LeftFinger1Proximal
       position: {x: 2.842171e-16, y: -0.038424414, z: -2.842171e-16}
       rotation: {x: -0.1764389, y: -0.026237868, z: 0.0629648, w: 0.9819452}
       scale: {x: 1, y: 1, z: 1}
-    - name: LeftFinger2Metacarpal
-      parentName: LeftHand
-      position: {x: -0.057560258, y: -0.15165867, z: 0.0036135383}
-      rotation: {x: -0.001389096, y: 0.00041579423, z: -0.2862274, w: 0.95816064}
-      scale: {x: 1, y: 1, z: 1}
     - name: LeftFinger2Proximal
       parentName: LeftFinger2Metacarpal
       position: {x: 7.105427e-17, y: -0.025837531, z: 0}
-      rotation: {x: -0.048144553, y: -0.0049417545, z: 0.09626785, w: 0.9941782}
+      rotation: {x: -0.017094657, y: -0.004966912, z: 0.034181137, w: 0.9992571}
       scale: {x: 1, y: 1, z: 1}
     - name: LeftFinger2Medial
       parentName: LeftFinger2Proximal
@@ -679,12 +770,12 @@ ModelImporter:
     - name: LeftFinger3Proximal
       parentName: LeftFinger3Metacarpal
       position: {x: 3.5527135e-16, y: -0.029880136, z: -7.105427e-16}
-      rotation: {x: -0.09558572, y: -0.0008635513, z: 0.016066648, w: 0.9952912}
+      rotation: {x: -0.038227033, y: -0.0008669121, z: 0.0064251516, w: 0.9992481}
       scale: {x: 1, y: 1, z: 1}
     - name: LeftFinger3Medial
       parentName: LeftFinger3Proximal
       position: {x: -7.105427e-17, y: -0.018043352, z: 5.684342e-16}
-      rotation: {x: 0.046444826, y: 0.0004335571, z: -0.004195268, w: 0.998912}
+      rotation: {x: 0.041125376, y: 0.00043363808, z: -0.0037146069, w: 0.999147}
       scale: {x: 1, y: 1, z: 1}
     - name: LeftFinger3Distal
       parentName: LeftFinger3Medial
@@ -694,17 +785,17 @@ ModelImporter:
     - name: LeftFinger4Metacarpal
       parentName: LeftHand
       position: {x: -0.0045486614, y: -0.15495025, z: 0.0033205643}
-      rotation: {x: -0.010142773, y: 0.000023073899, z: -0.0022007108, w: 0.9999462}
+      rotation: {x: -0.010083839, y: -0.00022457648, z: -0.026616273, w: 0.99959487}
       scale: {x: 1, y: 1, z: 1}
     - name: LeftFinger4Proximal
       parentName: LeftFinger4Metacarpal
       position: {x: -8.8817837e-17, y: -0.028332127, z: 4.2632563e-16}
-      rotation: {x: -0.058613256, y: -0.0003586692, z: 0.0045344695, w: 0.99827045}
+      rotation: {x: -0.040562656, y: -0.0003589972, z: 0.0031379422, w: 0.9991721}
       scale: {x: 1, y: 1, z: 1}
     - name: LeftFinger4Medial
       parentName: LeftFinger4Proximal
       position: {x: 8.8817837e-17, y: -0.016074546, z: -2.842171e-16}
-      rotation: {x: 0.03905807, y: 0.0015635794, z: -0.01582115, w: 0.99911046}
+      rotation: {x: 0.039058097, y: 0.0015635794, z: -0.015821163, w: 0.99911046}
       scale: {x: 1, y: 1, z: 1}
     - name: LeftFinger4Distal
       parentName: LeftFinger4Medial
@@ -714,12 +805,12 @@ ModelImporter:
     - name: LeftFinger5Metacarpal
       parentName: LeftHand
       position: {x: 0.018443659, y: -0.14917009, z: 0.0037449568}
-      rotation: {x: -0.010913649, y: -0.0013204619, z: 0.1201675, w: 0.99269277}
+      rotation: {x: -0.010451934, y: -0.002956249, z: -0.032888103, w: 0.9994001}
       scale: {x: 1, y: 1, z: 1}
     - name: LeftFinger5Proximal
       parentName: LeftFinger5Metacarpal
       position: {x: -6.217249e-17, y: -0.029214732, z: 2.842171e-16}
-      rotation: {x: -0.045873504, y: 0.003971565, z: -0.058352973, w: 0.99723357}
+      rotation: {x: -0.024663731, y: 0.003979369, z: -0.03137458, w: 0.9991954}
       scale: {x: 1, y: 1, z: 1}
     - name: LeftFinger5Medial
       parentName: LeftFinger5Proximal
@@ -754,7 +845,7 @@ ModelImporter:
     - name: RightForeArm
       parentName: RightArm
       position: {x: 0.0000001990341, y: -0.2661622, z: 0.00000047897424}
-      rotation: {x: 0.000000048416943, y: 0.00000044058126, z: 0.10923572, w: 0.9940159}
+      rotation: {x: 0.0000007377371, y: 0.00000035762784, z: 0.03813752, w: 0.9992725}
       scale: {x: 1, y: 1, z: 1}
     - name: RightHand
       parentName: RightForeArm
@@ -779,12 +870,12 @@ ModelImporter:
     - name: RightFinger2Metacarpal
       parentName: RightHand
       position: {x: 0.05756424, y: -0.1516585, z: 0.0036127903}
-      rotation: {x: -0.0013892036, y: -0.00041525086, z: 0.28623098, w: 0.95815957}
+      rotation: {x: -0.005972093, y: -0.00194115, z: 0.1856128, w: 0.98260295}
       scale: {x: 1, y: 1, z: 1}
     - name: RightFinger2Proximal
       parentName: RightFinger2Metacarpal
       position: {x: -7.105427e-17, y: -0.025837531, z: 0}
-      rotation: {x: -0.048144553, y: 0.0049417545, z: -0.09626785, w: 0.9941782}
+      rotation: {x: -0.017095717, y: 0.0049670245, z: -0.03418173, w: 0.9992571}
       scale: {x: 1, y: 1, z: 1}
     - name: RightFinger2Medial
       parentName: RightFinger2Proximal
@@ -804,12 +895,12 @@ ModelImporter:
     - name: RightFinger3Proximal
       parentName: RightFinger3Metacarpal
       position: {x: -0, y: -0.029880136, z: -2.842171e-16}
-      rotation: {x: -0.09558572, y: 0.0008635513, z: -0.016066648, w: 0.9952912}
+      rotation: {x: -0.038226843, y: 0.00086705247, z: -0.0064253225, w: 0.99924815}
       scale: {x: 1, y: 1, z: 1}
     - name: RightFinger3Medial
       parentName: RightFinger3Proximal
       position: {x: 7.105427e-17, y: -0.018043352, z: -2.842171e-16}
-      rotation: {x: 0.046444826, y: -0.0004335571, z: 0.004195268, w: 0.998912}
+      rotation: {x: 0.041122675, y: -0.000433626, z: 0.003714479, w: 0.9991472}
       scale: {x: 1, y: 1, z: 1}
     - name: RightFinger3Distal
       parentName: RightFinger3Medial
@@ -819,17 +910,17 @@ ModelImporter:
     - name: RightFinger4Metacarpal
       parentName: RightHand
       position: {x: 0.0045526675, y: -0.15495047, z: 0.0033198704}
-      rotation: {x: -0.010143032, y: -0.000022616798, z: 0.0022044422, w: 0.9999461}
+      rotation: {x: -0.010082904, y: 0.00022527829, z: 0.026629021, w: 0.9995945}
       scale: {x: 1, y: 1, z: 1}
     - name: RightFinger4Proximal
       parentName: RightFinger4Metacarpal
       position: {x: 5.3290704e-17, y: -0.028332127, z: 0}
-      rotation: {x: -0.058613256, y: 0.0003586692, z: -0.0045344695, w: 0.99827045}
+      rotation: {x: -0.04056243, y: 0.00035903658, z: -0.0031380667, w: 0.9991721}
       scale: {x: 1, y: 1, z: 1}
     - name: RightFinger4Medial
       parentName: RightFinger4Proximal
       position: {x: -5.3290704e-17, y: -0.016074546, z: 5.684342e-16}
-      rotation: {x: 0.03905807, y: -0.0015635794, z: 0.01582115, w: 0.99911046}
+      rotation: {x: 0.039058097, y: -0.0015635794, z: 0.015821163, w: 0.99911046}
       scale: {x: 1, y: 1, z: 1}
     - name: RightFinger4Distal
       parentName: RightFinger4Medial
@@ -839,12 +930,12 @@ ModelImporter:
     - name: RightFinger5Metacarpal
       parentName: RightHand
       position: {x: -0.018439695, y: -0.14917049, z: 0.0037442825}
-      rotation: {x: -0.010913973, y: 0.0013208806, z: -0.1201638, w: 0.99269325}
+      rotation: {x: -0.010450334, y: 0.0029566614, z: 0.032901324, w: 0.9993996}
       scale: {x: 1, y: 1, z: 1}
     - name: RightFinger5Proximal
       parentName: RightFinger5Metacarpal
       position: {x: 5.3290704e-17, y: -0.029214732, z: -2.842171e-16}
-      rotation: {x: -0.045873504, y: -0.003971565, z: 0.058352973, w: 0.99723357}
+      rotation: {x: -0.024665002, y: -0.003979505, z: 0.031374846, w: 0.99919546}
       scale: {x: 1, y: 1, z: 1}
     - name: RightFinger5Medial
       parentName: RightFinger5Proximal
@@ -938,7 +1029,8 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 703542c3c4dff054594fa39af217186f,
+    type: 3}
   animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
