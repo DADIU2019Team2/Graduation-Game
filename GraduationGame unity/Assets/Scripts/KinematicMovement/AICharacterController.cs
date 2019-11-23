@@ -94,6 +94,7 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
             case AIStates.Idling:
             {
                 MaxStableMoveSpeed = 0f;
+                
                 break;
             }
             case AIStates.Chasing:
