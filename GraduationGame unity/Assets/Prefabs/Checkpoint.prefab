@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &-6772886796938903610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 786584921684975292}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3028297227275780761}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3028297227275780761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2372322338393087013, guid: aa79ce2c36c1f3b4c8156f4d63228417,
+    type: 3}
+  m_PrefabInstance: {fileID: 786584921684975292}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: -6772886796938903610}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 174263753118017733}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &-2991796299366526129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 786584921684975292}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 174263753118017733}
+  m_Layer: 0
+  m_Name: CheckPoint nested sound (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &174263753118017733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 786584921684975292}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: -2991796299366526129}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3028297227275780761}
+  m_Father: {fileID: 8041177672781838102}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2465404865968119772
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -69,7 +131,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9102036352345328731}
-  - {fileID: 3028297227275780761}
+  - {fileID: 174263753118017733}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -151,11 +213,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8041177672781838102}
     m_Modifications:
-    - target: {fileID: 260365367712428897, guid: aa79ce2c36c1f3b4c8156f4d63228417,
-        type: 3}
-      propertyPath: m_Name
-      value: CheckPoint nested sound
-      objectReference: {fileID: 0}
     - target: {fileID: 2372322338393087013, guid: aa79ce2c36c1f3b4c8156f4d63228417,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -211,14 +268,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 260365367712428897, guid: aa79ce2c36c1f3b4c8156f4d63228417,
+        type: 3}
+      propertyPath: m_Name
+      value: CheckPoint nested sound
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa79ce2c36c1f3b4c8156f4d63228417, type: 3}
---- !u!4 &3028297227275780761 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2372322338393087013, guid: aa79ce2c36c1f3b4c8156f4d63228417,
-    type: 3}
-  m_PrefabInstance: {fileID: 786584921684975292}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2365190811675682981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -285,11 +341,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8913108094514722810, guid: 729b31275b14fd944886fe1ccbc0a27f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.42
       objectReference: {fileID: 0}
     - target: {fileID: 5614547612568094185, guid: 729b31275b14fd944886fe1ccbc0a27f,
         type: 3}
