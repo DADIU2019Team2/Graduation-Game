@@ -978,8 +978,8 @@ namespace KinematicTest.controller
                                       ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position)
                           .ToString());
                 Motor.SetPosition(ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().offset +
-                                  ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position +
-                                  ledgeGrabAnimationOffset.GetVector3());
+                                  ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position /*+
+                                  ledgeGrabAnimationOffset.GetVector3()*/);
             }
 
             _JustLanded = false;
