@@ -12,6 +12,9 @@ public class Checkpoint : MonoBehaviour, IOnSceneReset
 
     private BoxCollider trigger;
 
+    [SerializeField]
+    private Animator[] crystalAnimators;
+
     public void OnResetLevel()
     {
         triggeredThisPlaythrough = false;
@@ -26,19 +29,22 @@ public class Checkpoint : MonoBehaviour, IOnSceneReset
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer == LayerMask.NameToLayer("Player") && triggeredThisPlaythrough == false)
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player") && triggeredThisPlaythrough == false)
         {
             SendMessageUpwards("SetCurrentCheckpoint", spawnPoint, SendMessageOptions.RequireReceiver);
             triggeredThisPlaythrough = true;
             AkSoundEngine.PostEvent("Checkpoint_Crystal", gameObject);
 
-
+            foreach (Animator anim in crystalAnimators)
+            {
+                anim.Play("crystalActivate");
+            }
             //Maybe need to optimize this:
             //other.GetComponentInChildren<LivePlayerStats>().playerStats.resetHealth();
             //other.GetComponentInChildren<ZoeScarfColor>().OnResetLevel();
         }
-            
+
     }
 
-    
+
 }
