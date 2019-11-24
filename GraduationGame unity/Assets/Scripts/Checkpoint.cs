@@ -37,7 +37,7 @@ public class Checkpoint : MonoBehaviour, IOnSceneReset
 
             foreach (Animator anim in crystalAnimators)
             {
-                anim.Play("crystalActivate");
+                anim.Play("checkPointEntry");
             }
             //Maybe need to optimize this:
             //other.GetComponentInChildren<LivePlayerStats>().playerStats.resetHealth();
