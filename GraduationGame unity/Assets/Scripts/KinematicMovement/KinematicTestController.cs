@@ -299,11 +299,11 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.Falling:
                 {
-                    stopped = true;
+                    //stopped = false;
                     rampingDown = false;
-                    MaxAirMoveSpeed = 0;
-                    MaxStableMoveSpeed = 0f;
-                    curveStep = 0f;
+                    MaxAirMoveSpeed = 0.01f;
+                    MaxStableMoveSpeed = 0.01f;
+                    curveStep = 1f;
                     break;
                 }
             }
@@ -970,15 +970,15 @@ namespace KinematicTest.controller
                 teleporting = false;
                 if (runningRight != (int) ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().zoeShouldBeFacing)
                 {
-                    Debug.Log("Facing wrong direction");
+                    
                     runningRight *= -1;
                     curveStep = 0;
                     forward = false;
                 }
 
-                Debug.Log("POS : " + (ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().offset +
-                                      ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position)
-                          .ToString());
+                //Debug.Log("POS : " + (ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().offset +
+                //                      ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position)
+                //          .ToString());
                 Motor.SetPosition(ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().offset +
                                   ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position /*+
                                   ledgeGrabAnimationOffset.GetVector3()*/);
@@ -995,15 +995,29 @@ namespace KinematicTest.controller
         public void OnGroundHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
             ref HitStabilityReport hitStabilityReport)
         {
-            if (hitCollider.CompareTag("MovingPlatform"))
+            if (CurrentCharacterState == PlayerStates.Idling)
             {
-                //code
+                bool foundWall = false;
+                Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position+Vector3.up*0.75f, new Vector3(1.2f, 0.5f, 0.5f));
+                
+                foreach (Collider item in hitColliders)
+                {
+                    if (item.CompareTag("Wall"))
+                    {
+                        foundWall = true;
+                    }
+                }
+                if (foundWall == false)
+                {
+                    TransitionToState(PlayerStates.Running);
+                    stopped = false;
+                }
             }
         }
-
         public void OnMovementHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
             ref HitStabilityReport hitStabilityReport)
         {
+            Debug.Log("HIT " + hitCollider.tag);
             if (hitCollider.CompareTag("Ledge") && Time.time > (timeAtLastLedgeGrab + graceTimeBeforeHangAgain)
             ) // && hitNormal.y == 0 && Mathf.Sign(hitNormal.x) == -Mathf.Sign(runningRight))
             {
@@ -1036,7 +1050,7 @@ namespace KinematicTest.controller
             if (hitCollider.CompareTag("Wall") && CurrentCharacterState != PlayerStates.Idling &&
                 Motor.GroundingStatus.IsStableOnGround && !rampingDown)
             {
-                Debug.Log("wall");
+                
                 if (rampingDown)
                 {
                     curveStep = 0;
@@ -1049,7 +1063,6 @@ namespace KinematicTest.controller
             }
             if (hitCollider.CompareTag("MovingPlatform"))
             {
-                Debug.Log("movingplatform ");
                 MovingPlatform movingPlatform = hitCollider.gameObject.GetComponent<MovingPlatform>();
                 if (movingPlatform.activationType == MovingPlatform.ActivationType.player)
                 {
@@ -1058,7 +1071,6 @@ namespace KinematicTest.controller
             }
             if (canTakeDamage)
             {
-                Debug.Log("can take damge");
                 if (hitCollider.CompareTag("Spike"))
                 {
                     int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
@@ -1074,7 +1086,6 @@ namespace KinematicTest.controller
             }
             if (hitCollider.CompareTag("FallingPlatform"))
             {
-                Debug.Log("falling platform");
                 FallingPlatforms fallingPlatform = hitCollider.gameObject.GetComponent<FallingPlatforms>();
                 fallingPlatform.startFallingPlatform();
             }
