@@ -244,6 +244,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //
+    public void ResetGame()
+    {
+        Time.timeScale = originalTimescale;
+        ChangeGameState(GameStateScriptableObject.GameState.levelLoss);
+    }
+
     public static void DialogueEnd()
     {
         GameManager.ChangeGameState(GameStateScriptableObject.GameState.mainGameplayLoop);

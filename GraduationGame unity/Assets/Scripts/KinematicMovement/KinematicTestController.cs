@@ -144,6 +144,7 @@ namespace KinematicTest.controller
 
         //Collision event because KCC doesn't like unity's collisions
         public IntEvent SpikeDamageEvent;
+        public IntEvent CopDamageEvent;
         private bool _justTookDamage;
         private float _timeSinceDamageTaken;
         private bool canTakeDamage = true;
@@ -977,8 +978,8 @@ namespace KinematicTest.controller
                                       ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position)
                           .ToString());
                 Motor.SetPosition(ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().offset +
-                                  ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position +
-                                  ledgeGrabAnimationOffset.GetVector3());
+                                  ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position /*+
+                                  ledgeGrabAnimationOffset.GetVector3()*/);
             }
 
             _JustLanded = false;
@@ -1051,12 +1052,20 @@ namespace KinematicTest.controller
                     movingPlatform.activatePlatform();
                 }
             }
-            else if ((hitCollider.CompareTag("Spike") || hitCollider.CompareTag("Cop") ) && canTakeDamage)
+            else if (canTakeDamage)
             {
-                Debug.Log("spike hit");
-                int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
-                SpikeDamageEvent.Raise(damage);
-                _justTookDamage = true;
+                if (hitCollider.CompareTag("Spike"))
+                {
+                    int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
+                    SpikeDamageEvent.Raise(damage);
+                    _justTookDamage = true;
+                }
+                if (hitCollider.CompareTag("Cop"))
+                {
+                    int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
+                    CopDamageEvent.Raise(damage);
+                    _justTookDamage = true;
+                }
             }
             else if (hitCollider.CompareTag("FallingPlatform"))
             {
