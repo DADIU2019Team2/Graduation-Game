@@ -73,7 +73,8 @@ namespace KinematicTest.controller
         private float StableMovementSharpness;
         private float OrientationSharpness = 10;
         private Vector3 lastVelocityBeforeJump;
-
+        private bool _hitWallThisFrame;
+        
         // Jumping
         private bool AllowDoubleJump;
         private bool AllowJumpingWhenSliding;
@@ -106,7 +107,7 @@ namespace KinematicTest.controller
         private bool _isStoppedSliding;
         private Collider[] _probedColliders = new Collider[8];
         private bool _shouldBeCrouching;
-
+        private bool _slidingThisFrame;
         private bool _isCrouching;
 
         // Hanging
@@ -121,6 +122,7 @@ namespace KinematicTest.controller
         private bool canFallFromLedgeAfterDelay;
         private float timeAtLastGrab;
         private bool teleporting;
+        private bool _ledgeGrabbedThisFrame;
         public Vec3Variable ledgeGrabAnimationOffset;
 
         //World changes
@@ -341,6 +343,7 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.LedgeGrabbing:
                 {
+                    _ledgeGrabbedThisFrame = true;
                     timeAtLastLedgeGrab = Time.time;
                     Motor.ZoeAttachedRigidbody = null;
                     _doubleJumpConsumed = false;
@@ -386,6 +389,7 @@ namespace KinematicTest.controller
             if (inputs.slideDown && CurrentCharacterState == PlayerStates.Running &&
                 Motor.GroundingStatus.FoundAnyGround)
             {
+                _slidingThisFrame = true;
                 TransitionToState(PlayerStates.Sliding);
             }
 
@@ -904,6 +908,11 @@ namespace KinematicTest.controller
 
                 switch (CurrentCharacterState)
                 {
+                    case PlayerStates.Idling:
+                    {
+                        _hitWallThisFrame = false;
+                        break;
+                    }
                     case PlayerStates.NoInput:
                     {
                         if (_timeSinceTransitioning > transitionTime)
@@ -915,6 +924,9 @@ namespace KinematicTest.controller
                     }
                     case PlayerStates.Sliding:
                     {
+                        if (_isCrouching && _shouldBeCrouching)
+                            _slidingThisFrame = false;
+                        
                         if (!_isStoppedSliding && _timeSinceStartedSliding > settings.slideDuration)
                         {
                             _shouldBeCrouching = false;
@@ -947,6 +959,7 @@ namespace KinematicTest.controller
                     }
                     case PlayerStates.LedgeGrabbing:
                     {
+                        _ledgeGrabbedThisFrame = false;
                         if (canFallFromLedgeAfterDelay && timeAtLastGrab + timeBeforeFallFromLedge <= Time.time)
                         {
                             timeAtLastGrab = Time.time;
@@ -1042,6 +1055,7 @@ namespace KinematicTest.controller
                     //scarf.transform.Rotate(Vector3.up, 180);
                 }
 
+                _hitWallThisFrame = true;
                 TransitionToState(PlayerStates.Idling);
             }
             else if (hitCollider.CompareTag("MovingPlatform"))
@@ -1202,6 +1216,26 @@ namespace KinematicTest.controller
         public void OnDeathStopMove()
         {
             TransitionToState(PlayerStates.NoInput);
+        }
+
+        public float GetSlideNormalizedTime()
+        {
+            return _slideCurveStep;
+        }
+
+        public bool GetSlidingThisFrame()
+        {
+            return _slidingThisFrame;
+        }
+
+        public bool GetHitWallThisFrame()
+        {
+            return _hitWallThisFrame;
+        }
+
+        public bool GetLedgingThisFrame()
+        {
+            return _ledgeGrabbedThisFrame;
         }
     }
 }

@@ -6,29 +6,186 @@ using UnityEngine;
 
 public class AnimationLayerSwitcher : MonoBehaviour
 {
+    public MMAnimationController mmAnimatorController;
     public KinematicTestController characterController;
-    public Animator animator;
-    public int fadeTimeInFrames;
-    private bool _isChangingWeight;
 
+    public Animator animator;
+    private float slideTime;
+    private float fallTime;
+
+    [Tooltip("Ground prediction time in seconds")]
+    public float predictionTime;
+
+    [Tooltip("Time it takes to fade into/out of MM in frames")]
+    public int fadeTimeInFrames;
+
+    public Transform zoeRoot;
+    private bool _isChangingWeight;
+    private bool _isRightFootInFront;
+
+    private void Awake()
+    {
+        if (fadeTimeInFrames <= 0) fadeTimeInFrames = 1;
+        if (predictionTime <= 0f) predictionTime = 0.1f;
+    }
 
     private void Update()
     {
-        if (characterController.Motor.GroundingStatus.IsStableOnGround &&
-            !characterController.Motor.LastGroundingStatus.IsStableOnGround)
+        //General in air stuff
+        if (!characterController.Motor.GroundingStatus.FoundAnyGround && characterController.Motor.BaseVelocity.y < 0)
         {
-            //StartWeightChange(0);
-            animator.SetBool("inAir", false);
+            fallTime += Time.deltaTime;
+            animator.SetFloat("fallBlend", fallTime);
+            //Brace for impact
+
+            if (!characterController.Motor.GroundingStatus.FoundAnyGround &&
+                PredictAboutToLand(predictionTime, out var v))
+            {
+                animator.SetTrigger("FallingGroundDetected");
+            }
+        }
+
+        //General running stuff
+        if (characterController.Motor.GroundingStatus.FoundAnyGround)
+        {
+            _isRightFootInFront = IsRightFootInFront();
+            animator.SetBool("rightFootInFront", _isRightFootInFront);
+            
+            if (characterController.GetSlidingThisFrame())
+                animator.SetTrigger("slideInitiated");
+            if (characterController.GetHitWallThisFrame())
+                animator.SetTrigger("hitWall");
+        }
+        
+        //ledge can be grabbed from slide or air so we have it here
+        if(characterController.GetLedgingThisFrame())
+            animator.SetTrigger("ledgingThisFrame");
+
+        //On Landing
+        if ((characterController.Motor.GroundingStatus.IsStableOnGround &&
+             !characterController.Motor.LastGroundingStatus.IsStableOnGround) ||
+            (characterController.Motor.GroundingStatus.IsStableOnGround &&
+             characterController.CurrentCharacterState == PlayerStates.Running))
+        {
+            animator.SetFloat("fallBlend", 0f);
+            animator.SetTrigger("justLanded");
+        }
+
+
+        //handle interaction states
+        switch (characterController.CurrentCharacterState)
+        {
+            case PlayerStates.Idling:
+            {
+                //set idle loop
+                animator.SetBool("isStanding", true);
+                break;
+            }
+            case PlayerStates.NoInput:
+            {
+                //set idle loop
+                animator.SetBool("isCinematicStanding", true);
+                break;
+            }
+            case PlayerStates.CinematicIdle:
+            {
+                //set idle loop
+                animator.SetBool("isCinematicStanding", true);
+                break;
+            }
+            case PlayerStates.Sliding:
+            {
+                //set roll animation
+                animator.SetBool("isSliding", true);
+                if (characterController.JumpingThisFrame())
+                {
+                    // set jump anim
+                    animator.SetTrigger("slideJump");
+                }
+
+                break;
+            }
+            case PlayerStates.Running:
+            {
+                if (characterController.JumpingThisFrame())
+                    animator.SetTrigger("jump");
+
+                animator.SetBool("isStanding", false);
+                animator.SetBool("onLedge?", false);
+                animator.ResetTrigger("ledgeDetected");
+                animator.SetBool("isFalling", false);
+
+                animator.ResetTrigger("jump");
+                animator.SetBool("inAir", true);
+
+
+                break;
+            }
+            case PlayerStates.LedgeGrabbing:
+            {
+                //set ledge grab
+                animator.SetBool("onLedge?", true);
+                if (characterController.JumpingThisFrame())
+                {
+                    animator.SetTrigger("ledgeJump");
+                }
+                break;
+            }
+            case PlayerStates.Tired:
+            {
+                //set wallkick
+                if (characterController.GetLedgeForward())
+                {
+                    animator.SetBool("inAir", true);
+                    animator.SetBool("onLedge?", false);
+                }
+                else
+                {
+                    animator.SetBool("inAir", true);
+                    animator.SetBool("onLedge?", false);
+                }
+
+                break;
+            }
+            case PlayerStates.Falling:
+            {
+                //set falling again
+                animator.SetBool("isFalling", true);
+                break;
+            }
+        }
+    }
+
+
+    //now only projects down and with a smaller radius than Zoe's capsule, meaning it should mostly only collide with floor. Some edge cases still exist
+    private bool PredictAboutToLand(float deltaTime, out Vector3 predictedPosition)
+    {
+        Vector3 grav = characterController.Gravity;
+        Vector3 velocity = characterController.Motor.BaseVelocity;
+        //velocity = veloctiy + grav * deltaTime;
+        velocity = grav * deltaTime;
+
+
+        Vector3 position = transform.parent.position;
+        predictedPosition = position + velocity * deltaTime;
+        Vector3 dir = velocity * deltaTime;
+        return Physics.SphereCast(position, characterController.Motor.Capsule.radius - 0.1f, dir.normalized,
+            out var sphereCastHitInfo, dir.magnitude);
+    }
+
+    private void OnDrawGizmos()
+    {
+        var v = PredictAboutToLand(0.1f, out var hit);
+        if (v)
+        {
+            Gizmos.color = Color.red;
         }
         else
         {
-            if (characterController.CurrentCharacterState == PlayerStates.Running &&
-                !characterController.Motor.GroundingStatus.IsStableOnGround)
-            {
-                // StartWeightChange(1);
-                animator.SetBool("inAir", true);
-            }
+            Gizmos.color = Color.green;
         }
+
+        Gizmos.DrawWireSphere(hit, characterController.Motor.Capsule.radius);
     }
 
     public void StartWeightChange(int desiredWeight)
@@ -56,5 +213,15 @@ public class AnimationLayerSwitcher : MonoBehaviour
         } while (step < fadeTimeInFrames + 1);
 
         _isChangingWeight = false;
+    }
+
+    private bool IsRightFootInFront()
+    {
+        Matrix4x4 rootMatrix = zoeRoot.worldToLocalMatrix;
+        Vector3 leftFootLocal =
+            rootMatrix.MultiplyPoint3x4(animator.GetBoneTransform(HumanBodyBones.LeftFoot).position);
+        Vector3 rightFootLocal =
+            rootMatrix.MultiplyPoint3x4(animator.GetBoneTransform(HumanBodyBones.RightFoot).position);
+        return (rightFootLocal.z > leftFootLocal.z);
     }
 }
