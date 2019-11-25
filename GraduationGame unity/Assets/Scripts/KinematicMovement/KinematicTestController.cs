@@ -1034,6 +1034,7 @@ namespace KinematicTest.controller
             if (hitCollider.CompareTag("Wall") && CurrentCharacterState != PlayerStates.Idling &&
                 Motor.GroundingStatus.IsStableOnGround && !rampingDown)
             {
+                Debug.Log("wall");
                 if (rampingDown)
                 {
                     curveStep = 0;
@@ -1044,16 +1045,18 @@ namespace KinematicTest.controller
 
                 TransitionToState(PlayerStates.Idling);
             }
-            else if (hitCollider.CompareTag("MovingPlatform"))
+            if (hitCollider.CompareTag("MovingPlatform"))
             {
+                Debug.Log("movingplatform ");
                 MovingPlatform movingPlatform = hitCollider.gameObject.GetComponent<MovingPlatform>();
                 if (movingPlatform.activationType == MovingPlatform.ActivationType.player)
                 {
                     movingPlatform.activatePlatform();
                 }
             }
-            else if (canTakeDamage)
+            if (canTakeDamage)
             {
+                Debug.Log("can take damge");
                 if (hitCollider.CompareTag("Spike"))
                 {
                     int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
@@ -1067,8 +1070,9 @@ namespace KinematicTest.controller
                     _justTookDamage = true;
                 }
             }
-            else if (hitCollider.CompareTag("FallingPlatform"))
+            if (hitCollider.CompareTag("FallingPlatform"))
             {
+                Debug.Log("falling platform");
                 FallingPlatforms fallingPlatform = hitCollider.gameObject.GetComponent<FallingPlatforms>();
                 fallingPlatform.startFallingPlatform();
             }
