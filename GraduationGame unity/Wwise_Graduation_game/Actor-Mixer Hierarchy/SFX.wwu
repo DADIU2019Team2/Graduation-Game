@@ -76,37 +76,18 @@
 						<Sound Name="New_Metal_Ftstp_Loop" ID="{3D96F2EB-4D53-4E4D-8AC0-5E4A5CB14184}" ShortID="811497790">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="New_Metal_Ftstp_Loop" ID="{43BFAD85-869C-44F7-B9C0-DCEB821A99C1}" ShortID="929568375">
-									<Language>SFX</Language>
-									<AudioFile>New_Metal_Ftstp_Loop.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="New_Metal_Ftstp_Loop" ID="{43BFAD85-869C-44F7-B9C0-DCEB821A99C1}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="New_Norm_Ftstp_Loop" ID="{10DA7C90-2B66-49F8-8647-BFBC880230DC}" ShortID="298384543">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
 									<RTPCList>
-										<RTPC Name="" ID="{55316929-5651-4C87-822D-C8DA18656CF9}" ShortID="563155315">
+										<RTPC Name="" ID="{EFA78B17-5988-4E24-928B-F8BDE126BFBE}" ShortID="476946979">
 											<ReferenceList>
 												<Reference Name="ControlInput">
 													<ObjectRef Name="Footstep_velocity" ID="{625F12C9-2D08-4961-8554-BFAD87B7D7A6}" WorkUnitID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}"/>
 												</Reference>
 											</ReferenceList>
-											<Curve Name="" ID="{50ECC0A7-A52F-44BE-94EE-23AFA2031566}">
+											<Curve Name="" ID="{5C2C646C-1334-4EF4-9D2B-CFF946FC5792}">
 												<PropertyList>
 													<Property Name="Flags" Type="int32" Value="3"/>
 												</PropertyList>
@@ -141,13 +122,13 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="New_Norm_Ftstp_Loop" ID="{D9E0016E-CD61-4DD1-B919-635FC9A8C204}" ShortID="116945008">
+								<AudioFileSource Name="New_Metal_Ftstp_Loop" ID="{43BFAD85-869C-44F7-B9C0-DCEB821A99C1}" ShortID="929568375">
 									<Language>SFX</Language>
-									<AudioFile>New_Norm_Ftstp_Loop.wav</AudioFile>
+									<AudioFile>New_Metal_Ftstp_Loop.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="New_Norm_Ftstp_Loop" ID="{D9E0016E-CD61-4DD1-B919-635FC9A8C204}" Platform="Linked"/>
+								<ActiveSource Name="New_Metal_Ftstp_Loop" ID="{43BFAD85-869C-44F7-B9C0-DCEB821A99C1}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<BlendContainer Name="Slide_With_Effect" ID="{4E8D2C2F-E604-4FD9-90F2-545033FE6133}" ShortID="373981981">
@@ -814,7 +795,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>1</Value>
+										<Value>-2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -925,11 +906,13 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Grab_SFXs" ID="{565EF1B8-5A56-4457-B04E-90B91E8F0555}" ShortID="644645088">
+								<Sound Name="UDidIt" ID="{342B9A56-340D-45AE-AC6C-5B3F62EB89AC}" ShortID="774352193">
 									<PropertyList>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -942,100 +925,22 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Ledge_Grab_SFX" ID="{0D278A65-2E0F-48D2-9B33-37B66C1B11B3}" ShortID="1047410157">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ValueList>
-														<Value>-350</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Ledge_Grab_SFX" ID="{24325E81-2B08-47E0-8277-D2D0824F24F7}" ShortID="629405468">
-													<Language>SFX</Language>
-													<AudioFile>Ledge_Grab_SFX.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Ledge_Grab_SFX" ID="{24325E81-2B08-47E0-8277-D2D0824F24F7}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Ledge_Grab_SFX_01" ID="{05935D18-ABEE-4CB6-8841-14C81E54930C}" ShortID="408175530">
-											<PropertyList>
-												<Property Name="3DSpatialization" Type="int16" Value="1"/>
-												<Property Name="EnableAttenuation" Type="bool" Value="False"/>
-												<Property Name="Pitch" Type="int32">
-													<ValueList>
-														<Value>-150</Value>
-													</ValueList>
-												</Property>
-												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Environment" ID="{9782ED15-10B1-4637-9818-5B49A6880915}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Ledge_Grab_SFX" ID="{D12BE1A6-12EB-4CB2-8646-FA1A91F229F6}" ShortID="599539308">
-													<Language>SFX</Language>
-													<AudioFile>Ledge_Grab_SFX.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="629405468"/>
-													</ConvertedFileIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Ledge_Grab_SFX" ID="{D12BE1A6-12EB-4CB2-8646-FA1A91F229F6}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Ledge_Grab_SFX_02" ID="{FCC58AE9-1FD9-4BDF-AE1F-6D61EB68EEAC}" ShortID="63335773">
-											<PropertyList>
-												<Property Name="3DSpatialization" Type="int16" Value="1"/>
-												<Property Name="EnableAttenuation" Type="bool" Value="False"/>
-												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="SFX" ID="{B803DDD7-E204-4C97-98E1-B36595E37A0F}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Environment" ID="{9782ED15-10B1-4637-9818-5B49A6880915}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Ledge_Grab_SFX" ID="{DB86837A-3F0D-471D-80E8-0F1D2AC93C4C}" ShortID="897655831">
-													<Language>SFX</Language>
-													<AudioFile>Ledge_Grab_SFX.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="629405468"/>
-													</ConvertedFileIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Ledge_Grab_SFX" ID="{DB86837A-3F0D-471D-80E8-0F1D2AC93C4C}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+										<AudioFileSource Name="UDidIt" ID="{56A75BA5-EED0-49F7-83BF-3FE18D688B52}" ShortID="967073618">
+											<Language>SFX</Language>
+											<AudioFile>UDidIt.wav</AudioFile>
+										</AudioFileSource>
 									</ChildrenList>
-								</RandomSequenceContainer>
+									<ActiveSourceList>
+										<ActiveSource Name="UDidIt" ID="{56A75BA5-EED0-49F7-83BF-3FE18D688B52}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</BlendContainer>
 						<Sound Name="Jump_Land_SFX" ID="{CA357908-68DF-42E6-86D9-700E15246A35}" ShortID="200381092">
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-4</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1061,7 +966,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-4</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1356,7 +1261,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-7</Value>
+										<Value>-13</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1494,15 +1399,10 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>200</Value>
-									</ValueList>
-								</Property>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-11</Value>
+										<Value>-13</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1660,10 +1560,15 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-30</Value>
+									</ValueList>
+								</Property>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-10</Value>
+										<Value>-13</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1795,7 +1700,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-9</Value>
+										<Value>-11</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1937,7 +1842,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-7</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2918,7 +2823,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>1</Value>
+										<Value>-11</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2941,6 +2846,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Level_Start" ID="{052B63B4-3861-4809-86F9-C2E8FE42AD5A}" ShortID="263213905">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
@@ -2960,6 +2872,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Checkpoint_Warmer" ID="{180EA519-2050-4ED9-902F-B7D7A571507A}" ShortID="563469096">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
