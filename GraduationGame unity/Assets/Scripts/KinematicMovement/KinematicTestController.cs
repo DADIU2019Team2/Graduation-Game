@@ -299,10 +299,10 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.Falling:
                 {
-                    //stopped = false;
+                    stopped = false;
                     rampingDown = false;
-                    MaxAirMoveSpeed = 0.01f;
-                    MaxStableMoveSpeed = 0.01f;
+                    MaxAirMoveSpeed = 1f;
+                    MaxStableMoveSpeed = 1f;
                     curveStep = 1f;
                     break;
                 }
@@ -707,6 +707,11 @@ namespace KinematicTest.controller
                         case PlayerStates.Idling:
                         {
                             targetMovementVelocity = _moveInputVector * MaxAirMoveSpeed;
+                            AirAccelerationSpeed = MaxAirMoveSpeed;
+                            break;
+                        }
+                        case PlayerStates.Falling:
+                        {
                             AirAccelerationSpeed = MaxAirMoveSpeed;
                             break;
                         }
