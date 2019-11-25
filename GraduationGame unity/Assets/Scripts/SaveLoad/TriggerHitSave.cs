@@ -23,7 +23,8 @@ public class TriggerHitSave : MonoBehaviour
             
             }
             GameSave.GetGameSave().CompletedLevel();
-            GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelComplete);
+            //GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelComplete);
+            GameManager.RequestGameStateChange(GameStateScriptableObject.GameState.levelComplete);
 
         }
     }
