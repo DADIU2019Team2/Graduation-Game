@@ -995,9 +995,21 @@ namespace KinematicTest.controller
         public void OnGroundHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
             ref HitStabilityReport hitStabilityReport)
         {
-            if (hitCollider.CompareTag("MovingPlatform"))
+            if (canTakeDamage)
             {
-                //code
+                Debug.Log("can take damge");
+                if (hitCollider.CompareTag("Spike"))
+                {
+                    int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
+                    SpikeDamageEvent.Raise(damage);
+                    _justTookDamage = true;
+                }
+                if (hitCollider.CompareTag("Cop"))
+                {
+                    int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
+                    CopDamageEvent.Raise(damage);
+                    _justTookDamage = true;
+                }
             }
         }
 
@@ -1054,22 +1066,6 @@ namespace KinematicTest.controller
                 if (movingPlatform.activationType == MovingPlatform.ActivationType.player)
                 {
                     movingPlatform.activatePlatform();
-                }
-            }
-            if (canTakeDamage)
-            {
-                Debug.Log("can take damge");
-                if (hitCollider.CompareTag("Spike"))
-                {
-                    int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
-                    SpikeDamageEvent.Raise(damage);
-                    _justTookDamage = true;
-                }
-                if (hitCollider.CompareTag("Cop"))
-                {
-                    int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
-                    CopDamageEvent.Raise(damage);
-                    _justTookDamage = true;
                 }
             }
             if (hitCollider.CompareTag("FallingPlatform"))
