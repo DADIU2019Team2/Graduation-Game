@@ -107,6 +107,7 @@ namespace KinematicTest.controller
         private bool _isStoppedSliding;
         private Collider[] _probedColliders = new Collider[8];
         private bool _shouldBeCrouching;
+        private bool _wasSlidingLastFrame;
         private bool _slidingThisFrame;
         private bool _isCrouching;
 
@@ -243,6 +244,7 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.Sliding:
                 {
+                    _slidingThisFrame = true;
                     canChangedirection = false;
                     _isStoppedSliding = false;
                     MaxAirMoveSpeed = settings.slideMoveSpeed;
@@ -268,6 +270,7 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.LedgeGrabbing:
                 {
+                    _ledgeGrabbedThisFrame = true;
                     stopped = false;
                     timeAtLastGrab = Time.time;
                     MaxAirMoveSpeed = 0;
@@ -343,7 +346,6 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.LedgeGrabbing:
                 {
-                    _ledgeGrabbedThisFrame = true;
                     timeAtLastLedgeGrab = Time.time;
                     Motor.ZoeAttachedRigidbody = null;
                     _doubleJumpConsumed = false;
@@ -389,7 +391,7 @@ namespace KinematicTest.controller
             if (inputs.slideDown && CurrentCharacterState == PlayerStates.Running &&
                 Motor.GroundingStatus.FoundAnyGround)
             {
-                _slidingThisFrame = true;
+                
                 TransitionToState(PlayerStates.Sliding);
             }
 
@@ -501,6 +503,19 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.Sliding:
                 {
+                    if (_wasSlidingLastFrame)
+                    {
+                        _slidingThisFrame = false;
+                        _wasSlidingLastFrame = false;
+                    }
+                    
+                    if (_slidingThisFrame && !_wasSlidingLastFrame)
+                    {
+                        _wasSlidingLastFrame = true;
+                    }
+
+                    
+                    
                     _timeSinceStartedSliding += deltaTime;
                     if (settings.decelerateWhileSliding)
                     {
@@ -509,8 +524,18 @@ namespace KinematicTest.controller
 
                     break;
                 }
+                case PlayerStates.LedgeGrabbing:
+                {
+                    _ledgeGrabbedThisFrame = false;
+                    break;
+                }
+                case PlayerStates.Idling:
+                {
+                    _hitWallThisFrame = false;
+                    break;
+                }
             }
-
+            
             if (_justTookDamage)
             {
                 canTakeDamage = false;
@@ -624,7 +649,7 @@ namespace KinematicTest.controller
                         {
                             velocity = Mathf.Min(settings.slideMoveSpeed, currentVelocity.magnitude);
                         }
-
+                        
                         break;
                     }
                 }
@@ -838,7 +863,8 @@ namespace KinematicTest.controller
                         currentVelocity += (Motor.CharacterUp * JumpSpeed) -
                                            Vector3.Project(currentVelocity, Motor.CharacterUp);
                         _jumpRequested = false;
-                        _jumpedThisFrame = false;
+                        _jumpConsumed = true;
+                        _jumpedThisFrame = true;
                     }
 
                     // See if we actually are allowed to jump
@@ -910,7 +936,7 @@ namespace KinematicTest.controller
                 {
                     case PlayerStates.Idling:
                     {
-                        _hitWallThisFrame = false;
+                        
                         break;
                     }
                     case PlayerStates.NoInput:
@@ -924,8 +950,6 @@ namespace KinematicTest.controller
                     }
                     case PlayerStates.Sliding:
                     {
-                        if (_isCrouching && _shouldBeCrouching)
-                            _slidingThisFrame = false;
                         
                         if (!_isStoppedSliding && _timeSinceStartedSliding > settings.slideDuration)
                         {
@@ -959,7 +983,7 @@ namespace KinematicTest.controller
                     }
                     case PlayerStates.LedgeGrabbing:
                     {
-                        _ledgeGrabbedThisFrame = false;
+                        
                         if (canFallFromLedgeAfterDelay && timeAtLastGrab + timeBeforeFallFromLedge <= Time.time)
                         {
                             timeAtLastGrab = Time.time;

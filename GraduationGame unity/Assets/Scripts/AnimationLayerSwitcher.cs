@@ -57,14 +57,23 @@ public class AnimationLayerSwitcher : MonoBehaviour
             animator.SetBool("rightFootInFront", _isRightFootInFront);
 
             if (characterController.GetSlidingThisFrame())
+            {
+                Debug.Log("sliding");
                 animator.SetTrigger("slideInitiated");
+            }
             if (characterController.GetHitWallThisFrame())
+            {
+                Debug.Log("hitwall");
                 animator.SetTrigger("hitWall");
+            }
         }
-
+        
         //ledge can be grabbed from slide or air so we have it here
         if (characterController.GetLedgingThisFrame())
+        {
+            Debug.Log("ledge");
             animator.SetTrigger("ledgingThisFrame");
+        }
 
         //On Landing
         if ((characterController.Motor.GroundingStatus.IsStableOnGround &&
@@ -82,6 +91,10 @@ public class AnimationLayerSwitcher : MonoBehaviour
         {
             case PlayerStates.Idling:
             {
+                if (characterController.JumpingThisFrame())
+                {
+                    Debug.Log("idleJump");
+                }
                 //set idle loop
                 animator.SetBool("isStanding", true);
                 break;
@@ -105,6 +118,7 @@ public class AnimationLayerSwitcher : MonoBehaviour
                 if (characterController.JumpingThisFrame())
                 {
                     // set jump anim
+                    Debug.Log("slideJump");
                     animator.SetTrigger("slideJump");
                 }
 
@@ -116,6 +130,7 @@ public class AnimationLayerSwitcher : MonoBehaviour
                 {
                     int jumpType = SelectJumpType(); // 0 = normal, 1 = backflip, 2 = C H E A T G A I N E R
                     animator.SetInteger("jumpType",jumpType);
+                    Debug.Log("jump");
                     animator.SetTrigger("jump");
                 }
 
@@ -123,8 +138,6 @@ public class AnimationLayerSwitcher : MonoBehaviour
                 animator.SetBool("onLedge?", false);
                 animator.ResetTrigger("ledgeDetected");
                 animator.SetBool("isFalling", false);
-
-                animator.ResetTrigger("jump");
                 animator.SetBool("inAir", true);
 
 
@@ -134,15 +147,17 @@ public class AnimationLayerSwitcher : MonoBehaviour
             {
                 //set ledge grab
                 animator.SetBool("onLedge?", true);
-                if (characterController.JumpingThisFrame())
-                {
-                    animator.SetTrigger("ledgeJump");
-                }
+                
 
                 break;
             }
             case PlayerStates.Tired:
             {
+                if (characterController.JumpingThisFrame())
+                {
+                    Debug.Log("ledgejump");
+                    animator.SetTrigger("ledgeJump");
+                }
                 //set wallkick
                 if (characterController.GetLedgeForward())
                 {
