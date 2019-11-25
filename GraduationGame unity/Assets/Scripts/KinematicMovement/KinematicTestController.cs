@@ -270,6 +270,7 @@ namespace KinematicTest.controller
                     timeAtLastGrab = Time.time;
                     MaxAirMoveSpeed = 0;
                     MaxStableMoveSpeed = 0;
+                    Motor.SetCapsuleDimensions(0.5f, 1f, 0.5f);
                     break;
                 }
                 case PlayerStates.Tired:
@@ -344,6 +345,7 @@ namespace KinematicTest.controller
                     timeAtLastLedgeGrab = Time.time;
                     Motor.ZoeAttachedRigidbody = null;
                     _doubleJumpConsumed = false;
+                    Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
                     break;
                 }
                 case PlayerStates.NoInput:
