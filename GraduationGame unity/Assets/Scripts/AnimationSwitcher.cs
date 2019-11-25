@@ -10,7 +10,7 @@ public class AnimationSwitcher : MonoBehaviour
     public KinematicTestController characterController;
 
     public Animator animator;
-    private float slideTime;
+    private float jumpTime;
     private float fallTime;
 
     [Tooltip("Ground prediction time in seconds")]
@@ -21,7 +21,7 @@ public class AnimationSwitcher : MonoBehaviour
 
     public Transform zoeRoot;
     private bool _isChangingWeight;
-    private bool _isRightFootInFront;
+    public bool alma;
 
     private void Awake()
     {
@@ -34,40 +34,60 @@ public class AnimationSwitcher : MonoBehaviour
         if (characterController.Motor.BaseVelocity.y > 0)
         {
             var startVelo = characterController.GetJumpPower();
+            jumpTime = Mathf.InverseLerp(1, 0, characterController.Motor.BaseVelocity.y / startVelo);
             fallTime = 0f;
             animator.ResetTrigger("FallingGroundDetected");
         }
         else if (characterController.Motor.BaseVelocity.y < 0)
         {
+            jumpTime = 0f;
             fallTime += Time.deltaTime;
-            if (!characterController.Motor.GroundingStatus.IsStableOnGround &&
-                PredictAboutToLand(predictionTime, out var v))
+            if (!characterController.Motor.GroundingStatus.IsStableOnGround && PredictAboutToLand(predictionTime, out var v))
             {
                 animator.SetTrigger("FallingGroundDetected");
             }
         }
-        _isRightFootInFront = IsRightFootInFront();
-        animator.SetBool("rightFootInFront", _isRightFootInFront);
+
+        alma = IsRightFootInFront();
+        if (alma == true)
+        {
+            animator.SetBool("Alma", true);
+           }
+
+        else {
+                animator.SetBool("Alma", false);
+            }
+        animator.SetFloat("riseBlend", jumpTime);
         animator.SetFloat("fallBlend", fallTime);
-        
-        //On Landing
+
         if ((characterController.Motor.GroundingStatus.IsStableOnGround &&
              !characterController.Motor.LastGroundingStatus.IsStableOnGround) ||
             (characterController.Motor.GroundingStatus.IsStableOnGround &&
              characterController.CurrentCharacterState == PlayerStates.Running))
         {
+            animator.SetFloat("riseBlend", 0f);
             animator.SetFloat("fallBlend", 0f);
+            /*if(!mmAnimatorController.isMotionMatchingRunning)
+            {
+                animator.CrossFadeInFixedTime("run01", 0.3f); //Now THIS is what I call Jank!
+            }*/
 
 
             foreach (var param in animator.parameters)
             {
                 animator.SetBool(param.name, false);
             }
+
+            /*animator.SetBool("MotionMatching",true);
+            mmAnimatorController.StartMotionMatching();*/
         }
-        
-        
         else
         {
+            //stop motion matching
+            //animator.runtimeAnimatorController = interactionStates;
+            /*animator.SetBool("MotionMatching",false);
+            mmAnimatorController.StopMotionMatching();*/
+
             //handle interaction states
             switch (characterController.CurrentCharacterState)
             {
@@ -92,13 +112,11 @@ public class AnimationSwitcher : MonoBehaviour
                 case PlayerStates.Sliding:
                 {
                     //set roll animation
-                    slideTime = characterController.GetSlideNormalizedTime();
-                    animator.SetFloat("slideBlend",slideTime);
                     animator.SetBool("isSliding", true);
                     if (characterController.JumpingThisFrame())
                     {
                         // set jump anim
-                        animator.SetTrigger("slideJump");
+                        animator.SetTrigger("jump");
                     }
 
                     break;
@@ -154,20 +172,17 @@ public class AnimationSwitcher : MonoBehaviour
         }
     }
 
-    
-    //now only projects down and with a smaller radius than Zoe's capsule, meaning it should mostly only collide with floor. Some edge cases still exist
     private bool PredictAboutToLand(float deltaTime, out Vector3 predictedPosition)
     {
         Vector3 grav = characterController.Gravity;
         Vector3 velocity = characterController.Motor.BaseVelocity;
-        //velocity = veloctiy + grav * deltaTime;
-        velocity = grav * deltaTime;
+        velocity = velocity + grav * deltaTime;
 
 
         Vector3 position = transform.parent.position;
         predictedPosition = position + velocity * deltaTime;
         Vector3 dir = velocity * deltaTime;
-        return Physics.SphereCast(position, characterController.Motor.Capsule.radius - 0.1f, dir.normalized,
+        return Physics.SphereCast(position, characterController.Motor.Capsule.radius, dir.normalized,
             out var sphereCastHitInfo, dir.magnitude);
     }
 
@@ -216,10 +231,8 @@ public class AnimationSwitcher : MonoBehaviour
     private bool IsRightFootInFront()
     {
         Matrix4x4 rootMatrix = zoeRoot.worldToLocalMatrix;
-        Vector3 leftFootLocal =
-            rootMatrix.MultiplyPoint3x4(animator.GetBoneTransform(HumanBodyBones.LeftFoot).position);
-        Vector3 rightFootLocal =
-            rootMatrix.MultiplyPoint3x4(animator.GetBoneTransform(HumanBodyBones.RightFoot).position);
+        Vector3 leftFootLocal = rootMatrix.MultiplyPoint3x4(animator.GetBoneTransform(HumanBodyBones.LeftFoot).position);
+        Vector3 rightFootLocal = rootMatrix.MultiplyPoint3x4(animator.GetBoneTransform(HumanBodyBones.RightFoot).position);
         return (rightFootLocal.z > leftFootLocal.z);
     }
 }

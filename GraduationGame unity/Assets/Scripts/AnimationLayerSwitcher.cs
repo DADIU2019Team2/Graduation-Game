@@ -57,23 +57,14 @@ public class AnimationLayerSwitcher : MonoBehaviour
             animator.SetBool("rightFootInFront", _isRightFootInFront);
 
             if (characterController.GetSlidingThisFrame())
-            {
-                Debug.Log("sliding");
                 animator.SetTrigger("slideInitiated");
-            }
             if (characterController.GetHitWallThisFrame())
-            {
-                Debug.Log("hitwall");
                 animator.SetTrigger("hitWall");
-            }
         }
-        
+
         //ledge can be grabbed from slide or air so we have it here
         if (characterController.GetLedgingThisFrame())
-        {
-            Debug.Log("ledge");
             animator.SetTrigger("ledgingThisFrame");
-        }
 
         //On Landing
         if ((characterController.Motor.GroundingStatus.IsStableOnGround &&
@@ -90,97 +81,90 @@ public class AnimationLayerSwitcher : MonoBehaviour
         switch (characterController.CurrentCharacterState)
         {
             case PlayerStates.Idling:
-            {
-                if (characterController.JumpingThisFrame())
                 {
-                    Debug.Log("idleJump");
+                    //set idle loop
+                    animator.SetBool("isStanding", true);
+                    break;
                 }
-                //set idle loop
-                animator.SetBool("isStanding", true);
-                break;
-            }
             case PlayerStates.NoInput:
-            {
-                //set idle loop
-                animator.SetBool("isCinematicStanding", true);
-                break;
-            }
+                {
+                    //set idle loop
+                    animator.SetBool("isCinematicStanding", true);
+                    break;
+                }
             case PlayerStates.CinematicIdle:
-            {
-                //set idle loop
-                animator.SetBool("isCinematicStanding", true);
-                break;
-            }
+                {
+                    //set idle loop
+                    animator.SetBool("isCinematicStanding", true);
+                    break;
+                }
             case PlayerStates.Sliding:
-            {
-                //set roll animation
-                animator.SetBool("isSliding", true);
-                if (characterController.JumpingThisFrame())
                 {
-                    // set jump anim
-                    Debug.Log("slideJump");
-                    animator.SetTrigger("slideJump");
-                }
+                    //set roll animation
+                    animator.SetBool("isSliding", true);
+                    if (characterController.JumpingThisFrame())
+                    {
+                        // set jump anim
+                        animator.SetTrigger("slideJump");
+                    }
 
-                break;
-            }
+                    break;
+                }
             case PlayerStates.Running:
-            {
-                if (characterController.JumpingThisFrame())
                 {
-                    int jumpType = SelectJumpType(); // 0 = normal, 1 = backflip, 2 = C H E A T G A I N E R
-                    animator.SetInteger("jumpType",jumpType);
-                    Debug.Log("jump");
-                    animator.SetTrigger("jump");
+                    if (characterController.JumpingThisFrame())
+                    {
+                        int jumpType = SelectJumpType(); // 0 = normal, 1 = backflip, 2 = C H E A T G A I N E R
+                        animator.SetInteger("jumpType", jumpType);
+                        animator.SetTrigger("jump");
+                        Debug.Log("jump");
+                    }
+
+                    animator.SetBool("isStanding", false);
+                    animator.SetBool("onLedge?", false);
+                    animator.ResetTrigger("ledgeDetected");
+                    animator.SetBool("isFalling", false);
+
+                    //animator.ResetTrigger("jump");
+                    animator.SetBool("inAir", true);
+
+
+                    break;
                 }
-
-                animator.SetBool("isStanding", false);
-                animator.SetBool("onLedge?", false);
-                animator.ResetTrigger("ledgeDetected");
-                animator.SetBool("isFalling", false);
-                animator.SetBool("inAir", true);
-
-
-                break;
-            }
             case PlayerStates.LedgeGrabbing:
-            {
-                //set ledge grab
-                animator.SetBool("onLedge?", true);
-                
+                {
+                    //set ledge grab
+                    animator.SetBool("onLedge?", true);
+                    if (characterController.JumpingThisFrame())
+                    {
+                        animator.SetTrigger("ledgeJump");
+                    }
 
-                break;
-            }
+                    break;
+                }
             case PlayerStates.Tired:
-            {
-                if (characterController.JumpingThisFrame())
                 {
-                    Debug.Log("ledgejump");
-                    animator.SetTrigger("ledgeJump");
-                }
-                //set wallkick
-                if (characterController.GetLedgeForward())
-                {
-                    animator.SetBool("inAir", true);
-                    animator.SetBool("onLedge?", false);
-                }
-                else
-                {
-                    animator.SetBool("inAir", true);
-                    animator.SetBool("onLedge?", false);
-                }
+                    //set wallkick
+                    if (characterController.GetLedgeForward())
+                    {
+                        animator.SetBool("inAir", true);
+                        animator.SetBool("onLedge?", false);
+                    }
+                    else
+                    {
+                        animator.SetBool("inAir", true);
+                        animator.SetBool("onLedge?", false);
+                    }
 
-                break;
-            }
+                    break;
+                }
             case PlayerStates.Falling:
-            {
-                //set falling again
-                animator.SetBool("isFalling", true);
-                break;
-            }
+                {
+                    //set falling again
+                    animator.SetBool("isFalling", true);
+                    break;
+                }
         }
-
-        Gizmos.DrawWireSphere(hit, characterController.Motor.Capsule.radius);
     }
 
 

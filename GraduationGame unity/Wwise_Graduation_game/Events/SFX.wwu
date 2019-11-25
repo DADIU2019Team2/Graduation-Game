@@ -826,6 +826,27 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Door_Closes" ID="{C53ED551-3B9F-4336-AE80-CB0AEC91329B}">
+					<ChildrenList>
+						<Action Name="" ID="{343DD8E9-0CEF-4914-A688-B36D629607C9}" ShortID="945071945">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gate_Impact" ID="{463A4396-2920-441B-AE6E-71F407957081}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8E88D6AC-62D8-4D09-8FF4-3CEA0D4104CF}" ShortID="906428721">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Door_opening" ID="{34339217-0F1A-4D95-A8D9-3262BD0E8C5A}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Lever_Sound" ID="{F253400D-5F87-4638-ABE9-95B17318D9FD}">
 					<ChildrenList>
 						<Action Name="" ID="{82636FB2-6E43-42B0-B0F0-AF9F92EB0CC4}" ShortID="143512664">
@@ -843,17 +864,6 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Door_opening" ID="{34339217-0F1A-4D95-A8D9-3262BD0E8C5A}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Door_Closes" ID="{CB2081D4-0B84-4E09-B6F6-27F2A1CCFA69}">
-					<ChildrenList>
-						<Action Name="" ID="{234E00F6-1C52-401A-9204-2DBF14A050DD}" ShortID="194888160">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Gate_Impact" ID="{463A4396-2920-441B-AE6E-71F407957081}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

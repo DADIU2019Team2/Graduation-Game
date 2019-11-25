@@ -24,16 +24,17 @@ namespace AK
         static const AkUniqueID BOSSMUSIC = 1427760111U;
         static const AkUniqueID CHECKPOINT_CRYSTAL = 1739986920U;
         static const AkUniqueID CRUSHER_IDLE = 3878901180U;
+        static const AkUniqueID CRYSTAL_DOOR_HUM = 3540377255U;
+        static const AkUniqueID CRYSTAL_DOOR_OPEN = 576072719U;
         static const AkUniqueID DAMAGED_PLATFORMS = 624837759U;
         static const AkUniqueID DEATH_RAY = 977466704U;
+        static const AkUniqueID DEATH_SAW = 507840475U;
         static const AkUniqueID DIALOGUE_ANGRY = 2801479097U;
         static const AkUniqueID DIALOGUE_HAPPY = 2714452976U;
         static const AkUniqueID DOOR_CLOSES = 900426207U;
         static const AkUniqueID DOOR_OPENING = 2589897592U;
         static const AkUniqueID ELECTRICITY = 2917121896U;
         static const AkUniqueID GRABS = 238897438U;
-        static const AkUniqueID JUMP_LAND = 3419686739U;
-        static const AkUniqueID JUMP_TAKEOFF = 4186947444U;
         static const AkUniqueID LAZER_BIG = 2381409572U;
         static const AkUniqueID LAZER_MED = 1777268324U;
         static const AkUniqueID LAZER_SMALL = 1472838051U;
@@ -43,18 +44,27 @@ namespace AK
         static const AkUniqueID LEVEL_START = 352576276U;
         static const AkUniqueID LEVER_SOUND = 3308622827U;
         static const AkUniqueID NORMAL_PLATFORMS = 4182768561U;
+        static const AkUniqueID PLATFORM_PILLAR_DAMAGED = 1611566155U;
         static const AkUniqueID PLAY_AMBIENCE_Z1 = 1001479278U;
         static const AkUniqueID PLAY_AMBIENCE_Z2 = 1001479277U;
         static const AkUniqueID PLAY_AMBIENCE_Z3 = 1001479276U;
         static const AkUniqueID PLAY_AMBIENCE_Z4 = 1001479275U;
+        static const AkUniqueID PLAY_JUMPS_TAKEOFF = 1828118792U;
+        static const AkUniqueID PLAY_LAND_HARD = 404466471U;
+        static const AkUniqueID PLAY_LAND_MED = 639478362U;
         static const AkUniqueID PLAY_NEW_METAL_FTSTP_LOOP = 1462703573U;
+        static const AkUniqueID PLAY_NEW_NORM_FTSTP_LOOP = 1215491506U;
         static const AkUniqueID PLAY_ZONE1_MUSIC = 4098982749U;
         static const AkUniqueID PLAY_ZONE2_MUSIC = 3584129722U;
         static const AkUniqueID PLAY_ZONE3_MUSIC = 556439219U;
         static const AkUniqueID PLAY_ZONE4_MUSIC = 3303975224U;
         static const AkUniqueID ROBOT_APPEARENCE = 2187783824U;
+        static const AkUniqueID SAW = 443572616U;
         static const AkUniqueID SLIDES = 697318835U;
+        static const AkUniqueID SPIKE_LAZER_PYRAMID_CONE = 1683987449U;
+        static const AkUniqueID SPIKY_MACHINE_IMPACT = 2939559692U;
         static const AkUniqueID STOP_ALIEN_CRYSTAL_HUM = 3004230381U;
+        static const AkUniqueID STOP_ALIEN_DEATH_TRAP = 213072360U;
         static const AkUniqueID STOP_ALIEN_DOOR = 3384205992U;
         static const AkUniqueID STOP_ALIEN_PLATFORM_PILLAR = 2176568168U;
         static const AkUniqueID STOP_ALIEN_PLATFORMS = 123461200U;
@@ -65,7 +75,8 @@ namespace AK
         static const AkUniqueID STOP_DAMAGED_PLATFORMS = 1039048512U;
         static const AkUniqueID STOP_DEATH_RAY = 2589440491U;
         static const AkUniqueID STOP_DEATH_SAW = 3058963576U;
-        static const AkUniqueID STOP_DOOR = 3364702632U;
+        static const AkUniqueID STOP_ELECTRICITY = 366102539U;
+        static const AkUniqueID STOP_ELECTRICITY1 = 1694984544U;
         static const AkUniqueID STOP_LAZER_BIG = 1532948175U;
         static const AkUniqueID STOP_LAZER_MED = 1196263023U;
         static const AkUniqueID STOP_LAZER_SMALL = 133929472U;
@@ -73,7 +84,9 @@ namespace AK
         static const AkUniqueID STOP_MACHINES = 2674413038U;
         static const AkUniqueID STOP_NORMAL_PLATFORMS = 2590299724U;
         static const AkUniqueID STOP_PLATFORM_PILLAR_DAMAGED = 2388799556U;
+        static const AkUniqueID STOP_SAW = 170285335U;
         static const AkUniqueID STOP_SENTINEL_LAZER = 1979601577U;
+        static const AkUniqueID STOP_SPIKE_LAZER_PYRAMID_CONE = 3983756896U;
         static const AkUniqueID STOPALL = 3086540886U;
     } // namespace EVENTS
 
@@ -157,6 +170,14 @@ namespace AK
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID REVERB_BIG = 3387002570U;
+        static const AkUniqueID REVERB_MEDIUM = 4066469909U;
+        static const AkUniqueID REVERB_OUTSIDE = 2098287461U;
+        static const AkUniqueID REVERB_TUNNEL = 2261546958U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

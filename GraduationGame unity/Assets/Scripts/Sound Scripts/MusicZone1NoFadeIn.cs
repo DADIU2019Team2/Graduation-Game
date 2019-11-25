@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicZone1NoFadeIn : MonoBehaviour
+public class MusicZone1 : MonoBehaviour
 {
  
     void Awake()

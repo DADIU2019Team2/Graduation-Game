@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 8449036984954752845}
   - component: {fileID: 1468336337217664937}
   - component: {fileID: 6911893906655043875}
-  - component: {fileID: 7218003714212973415}
-  - component: {fileID: 8302555852631495685}
   m_Layer: 12
   m_Name: Zoe Programming nested prefab
   m_TagString: Untagged
@@ -52,7 +50,6 @@ MonoBehaviour:
   deathParticles: {fileID: 0}
   currentSpawnPosition: {x: 0, y: 0, z: 0}
   DeathVoidEvent: {fileID: 11400000, guid: 5bdc2d1470232c84c8605f1608de6b45, type: 2}
-  hasDied: 0
 --- !u!114 &8449036984954752845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,64 +130,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: MiniGame2.Events.UnityVoidEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &7218003714212973415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 124115622615170960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8826a87feb8f4f74ead6bae77603a757, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 8c15b64395a33fc42860dc388d03a039, type: 2}
-  unityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2814151602378954989}
-        m_MethodName: SetRespawnDirectionToLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: MiniGame2.Events.UnityVoidEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &8302555852631495685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 124115622615170960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8826a87feb8f4f74ead6bae77603a757, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 46658df47d874f045b8d417d88b40710, type: 2}
-  unityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2814151602378954989}
-        m_MethodName: SetRespawnDirectionToRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

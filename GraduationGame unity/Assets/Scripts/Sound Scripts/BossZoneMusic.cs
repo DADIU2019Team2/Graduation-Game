@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossZoneMusic : MonoBehaviour
+public class MusicZone1NoFadeIn : MonoBehaviour
 {
     // Start is called before the first frame update
     void Awake()
     {
-
         AkSoundEngine.StopAll();
     }
     void Start()

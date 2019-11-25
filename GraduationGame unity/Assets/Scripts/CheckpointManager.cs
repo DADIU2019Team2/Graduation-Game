@@ -10,8 +10,6 @@ public class CheckpointManager : MonoBehaviour
     [SerializeField] private SaveTransform ourCurrentCheckpoint;
     public VoidEvent resetHealthEvent;
 
-    public VoidEvent respawnFacingLeftEvent, respawnFacingRightEvent;
-
     void SetCurrentCheckpoint(Transform checkpoint)
     {
         Debug.Log("Checkpoint type = " + checkpoint.GetType());
@@ -21,8 +19,6 @@ public class CheckpointManager : MonoBehaviour
         ourCurrentCheckpoint.SetPosToSave(checkpoint);
         currentCheckpointPos = myCurrentCheckpoint.position;
         resetHealthEvent.Raise();
-
-
     }
 
     public static Vector3 GetCurerntCheckpoint()
@@ -30,6 +26,4 @@ public class CheckpointManager : MonoBehaviour
         if (myCurrentCheckpoint == null) return Vector3.zero;
         return myCurrentCheckpoint.position;
     }
-
-
 }

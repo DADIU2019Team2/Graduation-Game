@@ -127,18 +127,6 @@ public class InputManager : MonoBehaviour
     {
         return mostRecentSwipeType;
     }
-    public void SetMostRecentSwipeType(SwipeType swipeType)
-    {
-        mostRecentSwipeType = swipeType;
-        if (GameManager.GetGameState() == GameStateScriptableObject.GameState.mainGameplayLoop)
-        {
-            onSwipeEvent.Raise();
-        }
-        if (GameManager.GetGameState() == GameStateScriptableObject.GameState.cinematic)
-        {
-            onSwipeInCinematicEvent.Raise();
-        }
-    }
     public SwipeType SwipeTypeOfAngle(float swipeAngle, bool isFacingRight)
     {
 
