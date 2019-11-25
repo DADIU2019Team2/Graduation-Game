@@ -14,7 +14,7 @@ namespace KinematicTest.player
         public InputManager.SwipeType swipeType;
         public Transform CameraFollowPoint;
         public KinematicTestController Character;
-
+        InputManager inputManager = null;
         private const string MouseXInput = "Mouse X";
         private const string MouseYInput = "Mouse Y";
         private const string MouseScrollInput = "Mouse ScrollWheel";
@@ -30,13 +30,29 @@ namespace KinematicTest.player
             {
                 Character = FindObjectOfType<KinematicTestController>();
             }
+            inputManager = GetComponent<InputManager>();
         }
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            bool isFacingRight = CharacterMovement.GetIsFacingRight();
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                //Cursor.lockState = CursorLockMode.Locked;
+                
+                inputManager.SetMostRecentSwipeType(InputManager.SwipeType.swipeForwardUp);
+                
+            }
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                 inputManager.SetMostRecentSwipeType(InputManager.SwipeType.swipeBackwards);
+                
+                
+            }
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                
+                    inputManager.SetMostRecentSwipeType(InputManager.SwipeType.swipeDown);
+                
             }
 
             HandleCameraInput();
@@ -70,13 +86,20 @@ namespace KinematicTest.player
             ////characterInputs.MoveAxisForward = Input.GetAxisRaw(VerticalInput);
             ////characterInputs.MoveAxisRight = Input.GetAxisRaw(HorizontalInput);
             //characterInputs.inputString = Input.inputString;
-            characterInputs.changeDirection = Input.GetKeyDown(KeyCode.B);
-            characterInputs.slideDown = Input.GetKeyDown(KeyCode.N);
-            characterInputs.jumpDown = Input.GetKeyDown(KeyCode.Space);
-            characterInputs.ledgeGrabHold = Input.GetKey(KeyCode.LeftShift);
-            characterInputs.crouchDown = Input.GetKeyDown(KeyCode.S);
-            characterInputs.crouchUp = Input.GetKeyUp(KeyCode.S);
-            characterInputs.worldMoveDown = Input.GetKeyDown(KeyCode.M);
+
+
+
+            //characterInputs.changeDirection = Input.GetKeyDown(KeyCode.B);
+            //characterInputs.slideDown = Input.GetKeyDown(KeyCode.N);
+            //characterInputs.jumpDown = Input.GetKeyDown(KeyCode.Space);
+            //characterInputs.ledgeGrabHold = Input.GetKey(KeyCode.LeftShift);
+            //characterInputs.crouchDown = Input.GetKeyDown(KeyCode.S);
+            //characterInputs.crouchUp = Input.GetKeyUp(KeyCode.S);
+            //characterInputs.worldMoveDown = Input.GetKeyDown(KeyCode.M);
+
+
+
+
             // Apply inputs to character
             Character.SetInputs(ref characterInputs);
         }
