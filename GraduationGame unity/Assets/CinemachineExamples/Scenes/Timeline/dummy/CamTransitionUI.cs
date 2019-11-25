@@ -29,6 +29,11 @@ public class CamTransitionUI : MonoBehaviour
 
         StartCoroutine(CheckForActiavtionDirector(cam));
     }
+    public void ActivateDelayedDirectorLight(GameObject light)
+    {
+
+        StartCoroutine(CheckForActiavtionDirectorLight(light));
+    }
 
     public void ActivateDelayedLight(GameObject light)
     {
@@ -92,6 +97,24 @@ public class CamTransitionUI : MonoBehaviour
 
                 Debug.Log("Activate");
                 uiToActivate.SetActive(true);
+                yield break;
+            }
+            yield return new WaitForEndOfFrame();
+        }
+    }
+    IEnumerator CheckForActiavtionDirectorLight(GameObject cam)
+    {
+        PlayableDirector camDirector = cam.GetComponent<PlayableDirector>();
+        double directorDuration = camDirector.duration;
+
+        while (true)
+        {
+            if (camDirector.time >= directorDuration)
+            {
+
+
+                Debug.Log("Activate");
+                lightToActivate.SetActive(!lightToActivate.activeSelf);
                 yield break;
             }
             yield return new WaitForEndOfFrame();
