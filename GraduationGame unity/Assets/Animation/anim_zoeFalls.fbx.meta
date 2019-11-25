@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 75f0374c3d5939e49bf7e3b3cb8a24f1
+guid: e2e47592c84a3154cad2d300ea87abd9
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
   - first:
-      74: 7546560262715370403
-    second: idleLoopStart
+      74: -1152554902767968274
+    second: zoeFalls
   - first:
-      74: 8140402890319882498
-    second: idleLOOP
+      74: 2039055534295518282
+    second: zoeFalls_softLand
   - first:
-      74: -6537324285617014599
-    second: idleLoopExit
+      74: -3941872546197208958
+    second: zoe_roughLand
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -26,21 +26,26 @@ ModelImporter:
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
-      copied configuration does not match position in animation file:\n\t'Head' :
-      position error = 77.547409 mm\nCopied Avatar Rig Configuration mis-match. Inbetween
-      bone rotation in copied configuration does not match rotation in animation file:\n\t'Spine2'
-      : rotation error = 7.086801 deg\n"
+      copied configuration does not match position in animation file:\n\t'LeftFinger2Proximal'
+      : position error = 7.811217 mm\n\t'LeftFinger2Medial' : position error = 23.052177
+      mm\n\t'LeftFinger3Proximal' : position error = 7.216428 mm\n\t'LeftFinger3Medial'
+      : position error = 14.349008 mm\n\t'LeftFinger4Proximal' : position error =
+      1.501434 mm\n\t'LeftFinger4Medial' : position error = 9.169979 mm\n\t'LeftFinger5Proximal'
+      : position error = 6.729458 mm\n\t'LeftFinger5Medial' : position error = 12.057654
+      mm\n\t'Head' : position error = 77.547409 mm\n\t'RightFinger2Proximal' : position
+      error = 11.672359 mm\n\t'RightFinger2Medial' : position error = 23.052446 mm\n\t'RightFinger3Proximal'
+      : position error = 7.216720 mm\n\t'RightFinger3Medial' : position error = 14.349245
+      mm\n\t'RightFinger4Proximal' : position error = 4.331306 mm\n\t'RightFinger4Medial'
+      : position error = 9.169956 mm\n\t'RightFinger5Proximal' : position error =
+      6.729661 mm\n\t'RightFinger5Medial' : position error = 9.875153 mm\nCopied Avatar
+      Rig Configuration mis-match. Inbetween bone rotation in copied configuration
+      does not match rotation in animation file:\n\t'Spine2' : rotation error = 5.328613
+      deg\n"
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'idleLoopStart' has import animation warnings
-      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'Spine2' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\nClip 'idleLOOP' has import
-      animation warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'Spine2' is inbetween humanoid
-      transforms and has rotation animation that will be discarded.\n\nClip 'idleLoopExit'
-      has import animation warnings that might lower retargeting quality:\nNote: Activate
-      translation DOF on avatar to improve retargeting quality.\n\t'Spine2' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n"
+    animationImportWarnings: "\nClip 'zoeFalls' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Spine2' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -54,25 +59,25 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: idleLoopStart
-      takeName: idleLoopStart
-      internalID: 7546560262715370403
-      firstFrame: 11
-      lastFrame: 37
+      name: zoeFalls
+      takeName: zoeFalls
+      internalID: -1152554902767968274
+      firstFrame: 20
+      lastFrame: 29
       wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
+      orientationOffsetY: 180
+      level: -1.1
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -83,25 +88,25 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: idleLOOP
-      takeName: idleLOOP
-      internalID: 8140402890319882498
-      firstFrame: 37
-      lastFrame: 112
+      name: zoeFalls_softLand
+      takeName: zoeFalls
+      internalID: 2039055534295518282
+      firstFrame: 29
+      lastFrame: 32
       wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
+      orientationOffsetY: 180
+      level: -0.66
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -112,13 +117,13 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: idleLoopExit
-      takeName: idleLoopExit
-      internalID: -6537324285617014599
-      firstFrame: 121
-      lastFrame: 137
+      name: zoe_roughLand
+      takeName: zoeFalls
+      internalID: -3941872546197208958
+      firstFrame: 32
+      lastFrame: 35
       wrapMode: 0
-      orientationOffsetY: 0
+      orientationOffsetY: 180
       level: 0
       cycleOffset: 0
       loop: 0
@@ -126,11 +131,11 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -139,7 +144,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 19.800001
     isReadable: 0
   meshes:
     lODScreenPercentages: []

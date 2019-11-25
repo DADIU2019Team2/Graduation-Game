@@ -49,7 +49,14 @@ public class AnimationSwitcher : MonoBehaviour
         }
 
         alma = IsRightFootInFront();
+        if (alma == true)
+        {
+            animator.SetBool("Alma", true);
+           }
 
+        else {
+                animator.SetBool("Alma", false);
+            }
         animator.SetFloat("riseBlend", jumpTime);
         animator.SetFloat("fallBlend", fallTime);
 
@@ -120,9 +127,13 @@ public class AnimationSwitcher : MonoBehaviour
                     animator.SetBool("onLedge?", false);
                     animator.ResetTrigger("ledgeDetected");
                     animator.SetBool("isFalling", false);
+                        if(Input.GetButton("Jump"))
+                        {
+                            animator.SetTrigger("jump");
+                        }
 
-                    animator.ResetTrigger("jump");
-                    animator.SetBool("inAir", true);
+                    
+                        animator.SetBool("inAir", true);
                     // set fall anim
 
 
