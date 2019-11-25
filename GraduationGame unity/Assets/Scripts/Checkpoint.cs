@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MiniGame2.Events;
 
 [RequireComponent(typeof(BoxCollider))]
 public class Checkpoint : MonoBehaviour, IOnSceneReset
@@ -14,6 +15,13 @@ public class Checkpoint : MonoBehaviour, IOnSceneReset
 
     [SerializeField]
     private Animator[] crystalAnimators;
+
+    public enum RespawnRunDirection
+    {
+        RunRight, RunRight
+    }
+    public RespawnRunDirection respawnRunDirection;
+    public VoidEvent respawnFacingLeftEvent, respawnFacingRightEvent;
 
     public void OnResetLevel()
     {
@@ -34,6 +42,16 @@ public class Checkpoint : MonoBehaviour, IOnSceneReset
             SendMessageUpwards("SetCurrentCheckpoint", spawnPoint, SendMessageOptions.RequireReceiver);
             triggeredThisPlaythrough = true;
             AkSoundEngine.PostEvent("Checkpoint_Crystal", gameObject);
+
+            //Liveplayerstats listens for this and uses it for setting the right direction in OnReset
+            if (respawnRunDirection == RespawnRunDirection.RunLeft)
+            {
+                respawnFacingLeftEvent.Raise();
+            }
+            else
+            {
+                respawnFacingRightEvent.Raise();
+            }
 
             foreach (Animator anim in crystalAnimators)
             {
