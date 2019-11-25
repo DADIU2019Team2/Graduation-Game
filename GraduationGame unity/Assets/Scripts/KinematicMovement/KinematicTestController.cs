@@ -270,6 +270,7 @@ namespace KinematicTest.controller
                     timeAtLastGrab = Time.time;
                     MaxAirMoveSpeed = 0;
                     MaxStableMoveSpeed = 0;
+                    Motor.SetCapsuleDimensions(0.5f, 1f, 0.5f);
                     break;
                 }
                 case PlayerStates.Tired:
@@ -344,6 +345,7 @@ namespace KinematicTest.controller
                     timeAtLastLedgeGrab = Time.time;
                     Motor.ZoeAttachedRigidbody = null;
                     _doubleJumpConsumed = false;
+                    Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
                     break;
                 }
                 case PlayerStates.NoInput:
@@ -993,9 +995,21 @@ namespace KinematicTest.controller
         public void OnGroundHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
             ref HitStabilityReport hitStabilityReport)
         {
-            if (hitCollider.CompareTag("MovingPlatform"))
+            if (canTakeDamage)
             {
-                //code
+                Debug.Log("can take damge");
+                if (hitCollider.CompareTag("Spike"))
+                {
+                    int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
+                    SpikeDamageEvent.Raise(damage);
+                    _justTookDamage = true;
+                }
+                if (hitCollider.CompareTag("Cop"))
+                {
+                    int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
+                    CopDamageEvent.Raise(damage);
+                    _justTookDamage = true;
+                }
             }
         }
 
@@ -1052,22 +1066,6 @@ namespace KinematicTest.controller
                 if (movingPlatform.activationType == MovingPlatform.ActivationType.player)
                 {
                     movingPlatform.activatePlatform();
-                }
-            }
-            if (canTakeDamage)
-            {
-                Debug.Log("can take damge");
-                if (hitCollider.CompareTag("Spike"))
-                {
-                    int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
-                    SpikeDamageEvent.Raise(damage);
-                    _justTookDamage = true;
-                }
-                if (hitCollider.CompareTag("Cop"))
-                {
-                    int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
-                    CopDamageEvent.Raise(damage);
-                    _justTookDamage = true;
                 }
             }
             if (hitCollider.CompareTag("FallingPlatform"))
