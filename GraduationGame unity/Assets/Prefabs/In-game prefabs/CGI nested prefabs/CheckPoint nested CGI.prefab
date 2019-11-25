@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7587947715119128512}
   - component: {fileID: 1313648562327049913}
+  - component: {fileID: 1843170584963345788}
   m_Layer: 0
   m_Name: crystalTrans
   m_TagString: Untagged
@@ -51,6 +52,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &1843170584963345788
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2364432312666417143}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f961d530bcf924b961a9912a65a597, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2644874828337618151
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,6 +80,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7935848261073294225}
+  - component: {fileID: 3041742438208063499}
   m_Layer: 0
   m_Name: crystalRot
   m_TagString: Untagged
@@ -81,6 +102,25 @@ Transform:
   m_Father: {fileID: 7587947715119128512}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3041742438208063499
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2644874828337618151}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2cff95711851ced4dbb5b3b5a0dadf97, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4897435937260822532
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,7 +153,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1773428102 &8879445107974940458
+--- !u!1773428102 &4833893292837468406
 ParentConstraint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,7 +189,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 49db73cefa21e9140a2f426ff84c8551,
         type: 3}
       propertyPath: m_Name
-      value: checkpointA
+      value: checkpointA_geo
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 49db73cefa21e9140a2f426ff84c8551,
         type: 3}
