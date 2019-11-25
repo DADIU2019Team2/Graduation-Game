@@ -35,6 +35,8 @@ namespace AK
         static const AkUniqueID DOOR_OPENING = 2589897592U;
         static const AkUniqueID ELECTRICITY = 2917121896U;
         static const AkUniqueID GRABS = 238897438U;
+        static const AkUniqueID JUMP_LAND = 3419686739U;
+        static const AkUniqueID JUMP_TAKEOFF = 4186947444U;
         static const AkUniqueID LAZER_BIG = 2381409572U;
         static const AkUniqueID LAZER_MED = 1777268324U;
         static const AkUniqueID LAZER_SMALL = 1472838051U;
@@ -49,9 +51,6 @@ namespace AK
         static const AkUniqueID PLAY_AMBIENCE_Z2 = 1001479277U;
         static const AkUniqueID PLAY_AMBIENCE_Z3 = 1001479276U;
         static const AkUniqueID PLAY_AMBIENCE_Z4 = 1001479275U;
-        static const AkUniqueID PLAY_JUMPS_TAKEOFF = 1828118792U;
-        static const AkUniqueID PLAY_LAND_HARD = 404466471U;
-        static const AkUniqueID PLAY_LAND_MED = 639478362U;
         static const AkUniqueID PLAY_NEW_METAL_FTSTP_LOOP = 1462703573U;
         static const AkUniqueID PLAY_NEW_NORM_FTSTP_LOOP = 1215491506U;
         static const AkUniqueID PLAY_ZONE1_MUSIC = 4098982749U;
