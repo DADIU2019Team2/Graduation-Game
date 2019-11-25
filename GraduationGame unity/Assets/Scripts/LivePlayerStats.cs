@@ -58,7 +58,8 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
         Debug.Log("git gud");
         //despawn meshes
         DeathVoidEvent.Raise();
-        GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelLoss);
+        //GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelLoss);
+        GameManager.RequestGameStateChange(GameStateScriptableObject.GameState.levelLoss);
     }
 
     public void OnResetLevel()
