@@ -144,6 +144,7 @@ namespace KinematicTest.controller
 
         //Collision event because KCC doesn't like unity's collisions
         public IntEvent SpikeDamageEvent;
+        public IntEvent CopDamageEvent;
         private bool _justTookDamage;
         private float _timeSinceDamageTaken;
         private bool canTakeDamage = true;
@@ -269,6 +270,7 @@ namespace KinematicTest.controller
                     timeAtLastGrab = Time.time;
                     MaxAirMoveSpeed = 0;
                     MaxStableMoveSpeed = 0;
+                    Motor.SetCapsuleDimensions(0.5f, 1f, 0.5f);
                     break;
                 }
                 case PlayerStates.Tired:
@@ -343,6 +345,7 @@ namespace KinematicTest.controller
                     timeAtLastLedgeGrab = Time.time;
                     Motor.ZoeAttachedRigidbody = null;
                     _doubleJumpConsumed = false;
+                    Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
                     break;
                 }
                 case PlayerStates.NoInput:
@@ -977,8 +980,8 @@ namespace KinematicTest.controller
                                       ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position)
                           .ToString());
                 Motor.SetPosition(ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().offset +
-                                  ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position +
-                                  ledgeGrabAnimationOffset.GetVector3());
+                                  ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().transform.position /*+
+                                  ledgeGrabAnimationOffset.GetVector3()*/);
             }
 
             _JustLanded = false;
@@ -1033,6 +1036,7 @@ namespace KinematicTest.controller
             if (hitCollider.CompareTag("Wall") && CurrentCharacterState != PlayerStates.Idling &&
                 Motor.GroundingStatus.IsStableOnGround && !rampingDown)
             {
+                Debug.Log("wall");
                 if (rampingDown)
                 {
                     curveStep = 0;
@@ -1043,23 +1047,34 @@ namespace KinematicTest.controller
 
                 TransitionToState(PlayerStates.Idling);
             }
-            else if (hitCollider.CompareTag("MovingPlatform"))
+            if (hitCollider.CompareTag("MovingPlatform"))
             {
+                Debug.Log("movingplatform ");
                 MovingPlatform movingPlatform = hitCollider.gameObject.GetComponent<MovingPlatform>();
                 if (movingPlatform.activationType == MovingPlatform.ActivationType.player)
                 {
                     movingPlatform.activatePlatform();
                 }
             }
-            else if ((hitCollider.CompareTag("Spike") || hitCollider.CompareTag("Cop") ) && canTakeDamage)
+            if (canTakeDamage)
             {
-                Debug.Log("spike hit");
-                int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
-                SpikeDamageEvent.Raise(damage);
-                _justTookDamage = true;
+                Debug.Log("can take damge");
+                if (hitCollider.CompareTag("Spike"))
+                {
+                    int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
+                    SpikeDamageEvent.Raise(damage);
+                    _justTookDamage = true;
+                }
+                if (hitCollider.CompareTag("Cop"))
+                {
+                    int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
+                    CopDamageEvent.Raise(damage);
+                    _justTookDamage = true;
+                }
             }
-            else if (hitCollider.CompareTag("FallingPlatform"))
+            if (hitCollider.CompareTag("FallingPlatform"))
             {
+                Debug.Log("falling platform");
                 FallingPlatforms fallingPlatform = hitCollider.gameObject.GetComponent<FallingPlatforms>();
                 fallingPlatform.startFallingPlatform();
             }

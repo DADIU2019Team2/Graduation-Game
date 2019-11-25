@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
                 if (startIncrementingLevelStart)
                 {
                     waitTimer += Time.deltaTime;
-                    Debug.Log("Time:" + waitTimer);
+                    //Debug.Log("Time:" + waitTimer);
                     if (waitTimer > waitInLevelStart)
                     {
                         waitTimer = 0f;
@@ -242,6 +242,13 @@ public class GameManager : MonoBehaviour
         {
             obj.OnResetLevel();
         }
+    }
+
+    //
+    public void ResetGame()
+    {
+        Time.timeScale = originalTimescale;
+        ChangeGameState(GameStateScriptableObject.GameState.levelLoss);
     }
 
     public static void DialogueEnd()
