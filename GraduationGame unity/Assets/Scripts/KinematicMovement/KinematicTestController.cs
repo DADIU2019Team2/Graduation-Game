@@ -995,6 +995,11 @@ namespace KinematicTest.controller
         public void OnGroundHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
             ref HitStabilityReport hitStabilityReport)
         {
+            CheckVariousDMGThings(hitCollider);
+        }
+
+        private void CheckVariousDMGThings(Collider hitCollider)
+        {
             if (canTakeDamage)
             {
                 Debug.Log("can take damge");
@@ -1074,6 +1079,7 @@ namespace KinematicTest.controller
                 FallingPlatforms fallingPlatform = hitCollider.gameObject.GetComponent<FallingPlatforms>();
                 fallingPlatform.startFallingPlatform();
             }
+            CheckVariousDMGThings(hitCollider);
         }
 
         public void PostGroundingUpdate(float deltaTime)
