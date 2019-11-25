@@ -18,7 +18,7 @@ public class Checkpoint : MonoBehaviour, IOnSceneReset
 
     public enum RespawnRunDirection
     {
-        RunRight, RunRight
+        RunRight, RunLeft
     }
     public RespawnRunDirection respawnRunDirection;
     public VoidEvent respawnFacingLeftEvent, respawnFacingRightEvent;
