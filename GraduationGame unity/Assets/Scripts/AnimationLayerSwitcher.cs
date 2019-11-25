@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using KinematicTest.controller;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AnimationLayerSwitcher : MonoBehaviour
 {
-    public MMAnimationController mmAnimatorController;
     public KinematicTestController characterController;
 
     public Animator animator;
@@ -16,12 +16,17 @@ public class AnimationLayerSwitcher : MonoBehaviour
     [Tooltip("Ground prediction time in seconds")]
     public float predictionTime;
 
+    public Transform zoeRoot;
+
+    private bool _isChangingWeight;
+    private bool _isRightFootInFront;
+
     [Tooltip("Time it takes to fade into/out of MM in frames")]
     public int fadeTimeInFrames;
 
-    public Transform zoeRoot;
-    private bool _isChangingWeight;
-    private bool _isRightFootInFront;
+    [Header("Jump type percentages")] public int normalJumpRatio;
+    public int backflipRatio;
+    public int cheatGainerRatio;
 
     private void Awake()
     {
@@ -50,15 +55,15 @@ public class AnimationLayerSwitcher : MonoBehaviour
         {
             _isRightFootInFront = IsRightFootInFront();
             animator.SetBool("rightFootInFront", _isRightFootInFront);
-            
+
             if (characterController.GetSlidingThisFrame())
                 animator.SetTrigger("slideInitiated");
             if (characterController.GetHitWallThisFrame())
                 animator.SetTrigger("hitWall");
         }
-        
+
         //ledge can be grabbed from slide or air so we have it here
-        if(characterController.GetLedgingThisFrame())
+        if (characterController.GetLedgingThisFrame())
             animator.SetTrigger("ledgingThisFrame");
 
         //On Landing
@@ -108,7 +113,11 @@ public class AnimationLayerSwitcher : MonoBehaviour
             case PlayerStates.Running:
             {
                 if (characterController.JumpingThisFrame())
+                {
+                    int jumpType = SelectJumpType(); // 0 = normal, 1 = backflip, 2 = C H E A T G A I N E R
+                    animator.SetInteger("jumpType",jumpType);
                     animator.SetTrigger("jump");
+                }
 
                 animator.SetBool("isStanding", false);
                 animator.SetBool("onLedge?", false);
@@ -129,6 +138,7 @@ public class AnimationLayerSwitcher : MonoBehaviour
                 {
                     animator.SetTrigger("ledgeJump");
                 }
+
                 break;
             }
             case PlayerStates.Tired:
@@ -223,5 +233,18 @@ public class AnimationLayerSwitcher : MonoBehaviour
         Vector3 rightFootLocal =
             rootMatrix.MultiplyPoint3x4(animator.GetBoneTransform(HumanBodyBones.RightFoot).position);
         return (rightFootLocal.z > leftFootLocal.z);
+    }
+
+    private int SelectJumpType()
+    {
+        int r = Random.Range(1, normalJumpRatio + cheatGainerRatio + backflipRatio + 1);
+        if (r > normalJumpRatio + backflipRatio)
+        {
+            return 2;
+        }
+
+        if (r > normalJumpRatio)
+            return 1;
+        return 0;
     }
 }
