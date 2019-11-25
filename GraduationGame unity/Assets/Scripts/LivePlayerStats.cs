@@ -68,8 +68,9 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
         isDead = true;
         AkSoundEngine.SetState("Dead_or_Alive", "Dead");
         DeathVoidEvent.Raise();
-        GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelLoss);
         isDead = true;
+        //GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelLoss);
+        GameManager.RequestGameStateChange(GameStateScriptableObject.GameState.levelLoss);
     }
 
     public void OnResetLevel()
