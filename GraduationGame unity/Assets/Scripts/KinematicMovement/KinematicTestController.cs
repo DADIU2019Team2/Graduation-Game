@@ -73,6 +73,8 @@ namespace KinematicTest.controller
         private float StableMovementSharpness;
         private float OrientationSharpness = 10;
         private Vector3 lastVelocityBeforeJump;
+        private float turningToIdleGrace = 0.05f;
+        private float lastTurn = 0f;
 
         // Jumping
         private bool AllowDoubleJump;
@@ -224,6 +226,7 @@ namespace KinematicTest.controller
                 {
                     stopped = true;
                     rampingDown = false;
+                    
                     MaxAirMoveSpeed = settings.idleAirMoveSpeed;
                     MaxStableMoveSpeed = 0f;
                     curveStep = 0f;
@@ -414,6 +417,7 @@ namespace KinematicTest.controller
                     curveStep = 1 - curveStep;
                     rampingDown = true;
                 }
+                lastTurn = Time.time;
 
                 //isRunningRight = !isRunningRight;
             }
@@ -581,6 +585,7 @@ namespace KinematicTest.controller
                             {
                                 curveStep = 0;
                                 rampingDown = false;
+                                lastTurn = Time.time;
                                 runningRight = runningRight * -1;
                                 //scarf.transform.Rotate(Vector3.up, 180);
                             }
@@ -1055,16 +1060,23 @@ namespace KinematicTest.controller
             if (hitCollider.CompareTag("Wall") && CurrentCharacterState != PlayerStates.Idling &&
                 Motor.GroundingStatus.IsStableOnGround && !rampingDown)
             {
-                
-                if (rampingDown)
-                {
-                    curveStep = 0;
-                    rampingDown = false;
-                    //runningRight = runningRight * -1;
-                    //scarf.transform.Rotate(Vector3.up, 180);
-                }
 
-                TransitionToState(PlayerStates.Idling);
+                //if (rampingDown)
+                //{
+                //    curveStep = 0;
+                //    rampingDown = false;
+                //    //runningRight = runningRight * -1;
+                //    //scarf.transform.Rotate(Vector3.up, 180);
+                //}
+                if (!rampingDown)
+                {
+                    if (Time.time > lastTurn + turningToIdleGrace)
+                    {
+
+                    TransitionToState(PlayerStates.Idling);
+                    Debug.Log("Going To Idle");
+                    }
+                }
             }
             if (hitCollider.CompareTag("MovingPlatform"))
             {
