@@ -14,6 +14,7 @@
 						<ObjectRef Name="Stop_Alien_Door" ID="{2EA1E18D-5116-417B-A510-86BB8D709865}" WorkUnitID="{DABE7279-F4A5-4EF9-A197-72905B161148}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Alien_Platforms" ID="{836C739E-E750-41EC-9A24-A0FF586C376A}" WorkUnitID="{DABE7279-F4A5-4EF9-A197-72905B161148}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Crusher_Idle" ID="{47C33E17-5F5D-42D1-91EF-6621ADC3A0C8}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Jump_Takeoff" ID="{8BA33C28-C9F3-42EC-A67A-DAAAC0C42D9B}" WorkUnitID="{34B92B84-4DD4-498D-8D44-61282ABE4319}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Door_Closes" ID="{C53ED551-3B9F-4336-AE80-CB0AEC91329B}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Lazer_Med" ID="{5CFBD5EF-9237-433F-9F56-E432D4E7975B}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Ambience_Z3" ID="{3D4EA5E2-F1F6-435E-8399-29F8A9AB5715}" WorkUnitID="{ECD93438-89ED-4F02-B5C0-88BAEB343066}" Filter="7" Origin="Manual"/>
@@ -21,7 +22,6 @@
 						<ObjectRef Name="Stop_Lazer_Small" ID="{9F03DA9C-A4B5-4402-AFAF-09858A1EE6D5}" WorkUnitID="{DABE7279-F4A5-4EF9-A197-72905B161148}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Zone3_Music" ID="{E7F04CD9-8EF2-4444-86BE-B2C9B0DCA3AB}" WorkUnitID="{D8F13136-53DF-481F-8AA6-7FBE67E566E8}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Alien_Platform_Pillar" ID="{A13717E4-1BF9-445B-881B-A477089619B5}" WorkUnitID="{DABE7279-F4A5-4EF9-A197-72905B161148}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Play_Land_Med" ID="{A120B8DA-294D-448C-B6DC-EDDDC1DD4981}" WorkUnitID="{34B92B84-4DD4-498D-8D44-61282ABE4319}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Electricity1" ID="{3834EDCF-D389-44EA-B5B7-AF22E32F7EDE}" WorkUnitID="{DABE7279-F4A5-4EF9-A197-72905B161148}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Dialogue_Angry" ID="{BC958B18-1DB7-450F-9366-1CB7EA96009F}" WorkUnitID="{D8F13136-53DF-481F-8AA6-7FBE67E566E8}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Normal_Platforms" ID="{6080A41E-55AC-451A-BAB0-649B9D0DEAAA}" WorkUnitID="{DABE7279-F4A5-4EF9-A197-72905B161148}" Filter="7" Origin="Manual"/>
@@ -32,6 +32,7 @@
 						<ObjectRef Name="Lever_Sound" ID="{F253400D-5F87-4638-ABE9-95B17318D9FD}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Ball_Platform_Damaged" ID="{67274C19-DB4D-463A-9423-2718D36DFA8C}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_New_Norm_Ftstp_Loop" ID="{C2C63541-C689-4641-BF65-88AD9158F3D1}" WorkUnitID="{34B92B84-4DD4-498D-8D44-61282ABE4319}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Jump_Land" ID="{BBA7DBB1-3C09-468C-9D30-1FC24E5AB361}" WorkUnitID="{34B92B84-4DD4-498D-8D44-61282ABE4319}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Dialogue_Happy" ID="{5E6C1E06-0783-4690-B4ED-0025EA02DA00}" WorkUnitID="{D8F13136-53DF-481F-8AA6-7FBE67E566E8}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Ambience_Z2" ID="{CC2CC8F6-D11A-46B0-B950-6B735CB34DD8}" WorkUnitID="{ECD93438-89ED-4F02-B5C0-88BAEB343066}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Ambience_Z1" ID="{D84AFAEA-9139-46C3-8BB5-2C6D5C298D46}" WorkUnitID="{ECD93438-89ED-4F02-B5C0-88BAEB343066}" Filter="7" Origin="Manual"/>
@@ -61,11 +62,9 @@
 						<ObjectRef Name="Spike_Lazer_Pyramid_Cone" ID="{8F10ABBF-BAF2-4B5F-88DB-96A8EE08BDFA}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Level_Start" ID="{E874845D-9750-4B69-B6AB-EEEBE03707C2}" WorkUnitID="{52D068B1-1C5B-4B11-9F00-6E5315226880}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Alien_Death_Trap" ID="{98E9CA5F-475E-4B81-B531-5DD3F8629354}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Play_Jumps_Takeoff" ID="{4421294E-E87B-4BF6-8154-BA72753E4FF9}" WorkUnitID="{34B92B84-4DD4-498D-8D44-61282ABE4319}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Grabs" ID="{F6C81FBC-DFB4-4C3D-A3DE-D15A4A5E4AAE}" WorkUnitID="{34B92B84-4DD4-498D-8D44-61282ABE4319}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Saw" ID="{35E0AE0A-240F-4C7A-9D84-ACBF0F85C5CA}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Crystal_Door_Open" ID="{9A245332-B126-4CC0-B1D9-41A4B49358BA}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Play_Land_Hard" ID="{1AAC9874-66F7-4CD2-9DE3-C2132E1C2D17}" WorkUnitID="{34B92B84-4DD4-498D-8D44-61282ABE4319}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Spiky_Machine_Impact" ID="{473E286A-2FF2-4CE7-AD70-B71E9F62F487}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Lazer_Wall" ID="{6C9F5CEB-56EF-4CF0-8D96-05AB8AF624D6}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Lazer_Big" ID="{E5DEBD36-723A-4CFF-AA7D-7CACB27D8C38}" WorkUnitID="{DABE7279-F4A5-4EF9-A197-72905B161148}" Filter="7" Origin="Manual"/>

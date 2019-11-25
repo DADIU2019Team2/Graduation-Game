@@ -184,7 +184,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: a9fbbffd6d82f84e923dba695a2fda43
     GuidInternal: 
-    m_lastTime: -8586274531344775808
+    m_lastTime: -8586269279734775808
     List:
     - name: Reverb_Big
       guid: 9827058fce81034a82e52348a486752c
@@ -235,7 +235,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 4219221ac0890d4bbef9f0f6d1c95982
     GuidInternal: 
-    m_lastTime: -8586273514644775808
+    m_lastTime: -8586269277734775808
     List:
     - name: Main
       guid: 8d0f58feffbb4a40aa7ae59b199a4834
@@ -327,7 +327,7 @@ MonoBehaviour:
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: b168d0525b1c114b9f006e5315226880
     GuidInternal: 
-    m_lastTime: -8586273586814775808
+    m_lastTime: -8586272587174775808
     List:
     - name: Checkpoint_Crystal
       guid: b5775b93aa073349a5409522bf447840
@@ -341,22 +341,22 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/CelebrationSound/Checkpoint_Crystal
       maxAttenuation: 0
-      maxDuration: 1.25
-      minDuration: 1.25
-    - name: Checkpoint_With_Melody
-      guid: 6bdec9589f9cc64bbe458da8a8cbb7d1
-      id: 4062243661
+      maxDuration: 3.5
+      minDuration: 3.5
+    - name: Level_Complete
+      guid: af8e5d7d924423459b7bb77fb940a3ec
+      id: 3736098925
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: CelebrationSound
         ObjectType: 12
-      - ElementName: Checkpoint_With_Melody
+      - ElementName: Level_Complete
         ObjectType: 3
-      Path: Default Work Unit/CelebrationSound/Checkpoint_With_Melody
+      Path: Default Work Unit/CelebrationSound/Level_Complete
       maxAttenuation: 0
-      maxDuration: 5.828163
-      minDuration: 5.828163
+      maxDuration: 4.714286
+      minDuration: 4.714286
     - name: Level_Start
       guid: 5d8474e85097694bb6abeeebe03707c2
       id: 352576276
@@ -375,7 +375,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: b8a3484928cea848bad5ae38d8dae02b
     GuidInternal: 
-    m_lastTime: -8586273586814775808
+    m_lastTime: -8586269277744775808
     List:
     - name: StopAll
       guid: 6e4c2e889130c6489327163269101349
@@ -393,7 +393,7 @@ MonoBehaviour:
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 842bb934d44d8d498d4461282abe4319
     GuidInternal: 
-    m_lastTime: -8586274484954775808
+    m_lastTime: -8586269277744775808
     List:
     - name: Grabs
       guid: bc1fc8f6b4df3d4ca3ded15a4a5e4aae
@@ -409,48 +409,34 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 4.896214
       minDuration: 4
-    - name: Play_Jumps_Takeoff
-      guid: 4e2921447be8f64b8154ba72753e4ff9
-      id: 1828118792
+    - name: Jump_Land
+      guid: b1dba7bb093c8c469d301fc24e5ab361
+      id: 3419686739
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Movement
         ObjectType: 12
-      - ElementName: Play_Jumps_Takeoff
+      - ElementName: Jump_Land
         ObjectType: 3
-      Path: Default Work Unit/Movement/Play_Jumps_Takeoff
+      Path: Default Work Unit/Movement/Jump_Land
       maxAttenuation: 0
-      maxDuration: 1.204218
-      minDuration: 0.507052
-    - name: Play_Land_Hard
-      guid: 7498ac1af766d24c9de3c2132e1c2d17
-      id: 404466471
+      maxDuration: 0.75
+      minDuration: 0.75
+    - name: Jump_Takeoff
+      guid: 283ca38bf3c9ec42a67adaaac0c42d9b
+      id: 4186947444
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Movement
         ObjectType: 12
-      - ElementName: Play_Land_Hard
+      - ElementName: Jump_Takeoff
         ObjectType: 3
-      Path: Default Work Unit/Movement/Play_Land_Hard
+      Path: Default Work Unit/Movement/Jump_Takeoff
       maxAttenuation: 0
-      maxDuration: 0.896123
-      minDuration: 0.896123
-    - name: Play_Land_Med
-      guid: dab820a14d298c44b6dcedddc1dd4981
-      id: 639478362
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Movement
-        ObjectType: 12
-      - ElementName: Play_Land_Med
-        ObjectType: 3
-      Path: Default Work Unit/Movement/Play_Land_Med
-      maxAttenuation: 0
-      maxDuration: 0.392559
-      minDuration: 0.392559
+      maxDuration: 0.75
+      minDuration: 0.75
     - name: Play_New_Metal_Ftstp_Loop
       guid: 2c63fe1b1f5f2b408c5fa939656413be
       id: 1462703573
@@ -497,7 +483,7 @@ MonoBehaviour:
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 3631f1d8df531f488aa67fbe67e566e8
     GuidInternal: 
-    m_lastTime: -8586274384994775808
+    m_lastTime: -8586272587174775808
     List:
     - name: BossMusic
       guid: 3e2f12219ad59749970d91be5fe8b5b4
@@ -541,20 +527,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Level_Complete
-      guid: af8e5d7d924423459b7bb77fb940a3ec
-      id: 3736098925
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Music
-        ObjectType: 12
-      - ElementName: Level_Complete
-        ObjectType: 3
-      Path: Default Work Unit/Music/Level_Complete
-      maxAttenuation: 0
-      maxDuration: 4.714286
-      minDuration: 4.714286
     - name: Play_Zone1_Music
       guid: 69c85576a4b4ab49ae92be06f10cd93e
       id: 4098982749
@@ -615,7 +587,7 @@ MonoBehaviour:
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 70427e337ecab74391244b5ed6520621
     GuidInternal: 
-    m_lastTime: -8586275236684775808
+    m_lastTime: -8586273475304775808
     List:
     - name: Alien_Crystal_Hum
       guid: 7ec1b424b5419249be4371acb3f812f7
@@ -813,6 +785,34 @@ MonoBehaviour:
       maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
+    - name: Door_Closes
+      guid: 51d53ec59f3b3643ae80cb0aec91329b
+      id: 900426207
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: Door_Closes
+        ObjectType: 3
+      Path: Default Work Unit/SFX/Door_Closes
+      maxAttenuation: 30
+      maxDuration: 1.834008
+      minDuration: 1.834008
+    - name: Door_Opening
+      guid: 963de1e452e59747af9d70c4de246e0c
+      id: 2589897592
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: Door_Opening
+        ObjectType: 3
+      Path: Default Work Unit/SFX/Door_Opening
+      maxAttenuation: 30
+      maxDuration: 4
+      minDuration: 4
     - name: Electricity
       guid: fb4fb80769df474ba5dd4b13b64279a6
       id: 2917121896
@@ -827,34 +827,6 @@ MonoBehaviour:
       maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
-    - name: Gate_Closing
-      guid: fbb94474d3eb35418ad9807f91590ccd
-      id: 1450217292
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: SFX
-        ObjectType: 12
-      - ElementName: Gate_Closing
-        ObjectType: 3
-      Path: Default Work Unit/SFX/Gate_Closing
-      maxAttenuation: 30
-      maxDuration: -1
-      minDuration: -1
-    - name: Gate_Impact
-      guid: 51d53ec59f3b3643ae80cb0aec91329b
-      id: 3873573389
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: SFX
-        ObjectType: 12
-      - ElementName: Gate_Impact
-        ObjectType: 3
-      Path: Default Work Unit/SFX/Gate_Impact
-      maxAttenuation: 30
-      maxDuration: 1.943064
-      minDuration: 1.943064
     - name: Lazer_Big
       guid: b87ade505cc0e34eb2c8c7c23d5269ca
       id: 2381409572
@@ -925,6 +897,20 @@ MonoBehaviour:
       maxAttenuation: 30
       maxDuration: 2.135228
       minDuration: 2.135228
+    - name: Lever_Sound
+      guid: 0d4053f2875f3846abe995b17318d9fd
+      id: 3308622827
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: Lever_Sound
+        ObjectType: 3
+      Path: Default Work Unit/SFX/Lever_Sound
+      maxAttenuation: 30
+      maxDuration: 2.124989
+      minDuration: 2.124989
     - name: Machines
       guid: 48034bce22358c4eaa5b478f25eb5af2
       id: 2796239007
@@ -1710,8 +1696,8 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Wwise_Graduation_game
-  - /Wwise_Graduation_game/Auxiliary Busses
-  - /Wwise_Graduation_game/Auxiliary Busses/Default Work Unit
-  - /Wwise_Graduation_game/Auxiliary Busses/Default Work Unit/Master Audio Bus
+  - /Wwise_Graduation_game/Events
+  - /Wwise_Graduation_game/Events/Default Work Unit
+  - /Wwise_Graduation_game/Events/Default Work Unit/Movement
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
