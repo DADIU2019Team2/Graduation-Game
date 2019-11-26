@@ -84,6 +84,8 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
         playerStats.resetStamina();
         isDead = false;
 
+        KinematicTestController.runningRight = respawnRunDirection == 0 ? -1 : 1; //-1 is running left, 1 is running right.
+
         if (CheckpointManager.GetCurerntCheckpoint() != Vector3.zero)
         {
             Debug.Log(CheckpointManager.GetCurerntCheckpoint());
