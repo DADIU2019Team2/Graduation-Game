@@ -42,12 +42,11 @@ public class AnimationLayerSwitcher : MonoBehaviour
             fallTime += Time.deltaTime;
             animator.SetFloat("fallBlend", fallTime);
             //Brace for impact
+        }
 
-            if (!characterController.Motor.GroundingStatus.FoundAnyGround &&
-                PredictAboutToLand(predictionTime, out var v))
-            {
-                animator.SetTrigger("FallingGroundDetected");
-            }
+        if (characterController.CurrentCharacterState != PlayerStates.Sliding)
+        {
+            animator.SetBool("isSliding", false);
         }
 
         //General running stuff
@@ -61,30 +60,58 @@ public class AnimationLayerSwitcher : MonoBehaviour
                 Debug.Log("sliding");
                 animator.SetTrigger("slideInitiated");
             }
+            else
+            {
+                animator.ResetTrigger("slideInitiated");
+            }
+
             if (characterController.GetHitWallThisFrame())
             {
                 Debug.Log("hitwall");
                 animator.SetTrigger("hitWall");
             }
+            else
+            {
+                animator.ResetTrigger("hitWall");
+            }
         }
-        
+
         //ledge can be grabbed from slide or air so we have it here
         if (characterController.GetLedgingThisFrame())
         {
             Debug.Log("ledge");
             animator.SetTrigger("ledgingThisFrame");
         }
-
-        //On Landing
-        if ((characterController.Motor.GroundingStatus.IsStableOnGround &&
-             !characterController.Motor.LastGroundingStatus.IsStableOnGround) ||
-            (characterController.Motor.GroundingStatus.IsStableOnGround &&
-             characterController.CurrentCharacterState == PlayerStates.Running))
+        else
         {
-            animator.SetFloat("fallBlend", 0f);
-            animator.SetTrigger("justLanded");
+            animator.ResetTrigger("ledgingThisFrame");
         }
 
+        //On Landing
+        if (characterController.Motor.GroundingStatus.IsStableOnGround &&
+             !characterController.Motor.LastGroundingStatus.IsStableOnGround)
+        {
+            fallTime = 0f;
+            animator.SetFloat("fallBlend", fallTime);
+            animator.SetBool("inAir", false);
+            animator.SetBool("isFalling", false);
+        }
+        if (characterController.CurrentCharacterState != PlayerStates.Idling)
+        {
+            animator.SetBool("isStanding", false);
+            animator.SetFloat("slideBlend", 0f);
+        }
+
+        if (characterController.CurrentCharacterState != PlayerStates.CinematicIdle)
+
+        {
+            animator.SetBool("isCinematicStanding", false);
+        }
+
+        if (characterController.CurrentCharacterState != PlayerStates.NoInput)
+        {
+            animator.SetBool("isNoInput", false);
+        }
 
         //handle interaction states
         switch (characterController.CurrentCharacterState)
@@ -94,7 +121,13 @@ public class AnimationLayerSwitcher : MonoBehaviour
                 if (characterController.JumpingThisFrame())
                 {
                     Debug.Log("idleJump");
+                    animator.SetTrigger("idleJump");
                 }
+                else
+                {
+                    animator.ResetTrigger("idleJump");
+                }
+
                 //set idle loop
                 animator.SetBool("isStanding", true);
                 break;
@@ -102,7 +135,7 @@ public class AnimationLayerSwitcher : MonoBehaviour
             case PlayerStates.NoInput:
             {
                 //set idle loop
-                animator.SetBool("isCinematicStanding", true);
+                animator.SetBool("isNoInput", true);
                 break;
             }
             case PlayerStates.CinematicIdle:
@@ -114,12 +147,18 @@ public class AnimationLayerSwitcher : MonoBehaviour
             case PlayerStates.Sliding:
             {
                 //set roll animation
+                slideTime = characterController.GetSlideNormalizedTime();
+                animator.SetFloat("slideBlend", slideTime);
                 animator.SetBool("isSliding", true);
                 if (characterController.JumpingThisFrame())
                 {
                     // set jump anim
                     Debug.Log("slideJump");
                     animator.SetTrigger("slideJump");
+                }
+                else
+                {
+                    animator.ResetTrigger("slideJump");
                 }
 
                 break;
@@ -129,16 +168,18 @@ public class AnimationLayerSwitcher : MonoBehaviour
                 if (characterController.JumpingThisFrame())
                 {
                     int jumpType = SelectJumpType(); // 0 = normal, 1 = backflip, 2 = C H E A T G A I N E R
-                    animator.SetInteger("jumpType",jumpType);
+                    animator.SetInteger("jumpType", jumpType);
                     Debug.Log("jump");
                     animator.SetTrigger("jump");
+                    animator.SetBool("inAir", true);
+                }
+                else
+                {
+                    animator.ResetTrigger("jump");
                 }
 
-                animator.SetBool("isStanding", false);
+                //animator.SetBool("isStanding", false);
                 animator.SetBool("onLedge?", false);
-                animator.ResetTrigger("ledgeDetected");
-                animator.SetBool("isFalling", false);
-                animator.SetBool("inAir", true);
 
 
                 break;
@@ -147,8 +188,10 @@ public class AnimationLayerSwitcher : MonoBehaviour
             {
                 //set ledge grab
                 animator.SetBool("onLedge?", true);
-                
-
+                animator.SetBool("inAir", false);
+                fallTime = 0f;
+                animator.SetFloat("fallBlend", fallTime);
+                animator.ResetTrigger("hitWall");
                 break;
             }
             case PlayerStates.Tired:
@@ -158,24 +201,22 @@ public class AnimationLayerSwitcher : MonoBehaviour
                     Debug.Log("ledgejump");
                     animator.SetTrigger("ledgeJump");
                 }
-                //set wallkick
-                if (characterController.GetLedgeForward())
-                {
-                    animator.SetBool("inAir", true);
-                    animator.SetBool("onLedge?", false);
-                }
                 else
                 {
-                    animator.SetBool("inAir", true);
-                    animator.SetBool("onLedge?", false);
+                    animator.ResetTrigger("ledgeJump");
                 }
+
+                animator.SetBool("inAir", true);
+                animator.SetBool("onLedge?", false);
+                animator.ResetTrigger("hitWall");
 
                 break;
             }
             case PlayerStates.Falling:
             {
-                //set falling again
-                animator.SetBool("isFalling", true);
+                animator.SetBool("inAir", true);
+                animator.SetBool("onLedge?", false);
+                animator.ResetTrigger("hitWall");
                 break;
             }
         }
@@ -198,20 +239,6 @@ public class AnimationLayerSwitcher : MonoBehaviour
             out var sphereCastHitInfo, dir.magnitude);
     }
 
-    private void OnDrawGizmos()
-    {
-        var v = PredictAboutToLand(0.1f, out var hit);
-        if (v)
-        {
-            Gizmos.color = Color.red;
-        }
-        else
-        {
-            Gizmos.color = Color.green;
-        }
-
-        Gizmos.DrawWireSphere(hit, characterController.Motor.Capsule.radius);
-    }
 
     public void StartWeightChange(int desiredWeight)
     {
