@@ -7,25 +7,22 @@ using KinematicTest;
 public class ZoeScarfColor : MonoBehaviour, IOnSceneReset
 {
     [SerializeField] [ColorUsageAttribute(true, true)] private Color baseScarfColor;
+
     [Tooltip("Left side is color on 0 HP, Right side is Color on Max HP")]
     [SerializeField] [GradientUsageAttribute(true)] private Gradient HPBasedScarfColor;
     [SerializeField] [ColorUsageAttribute(true, true)] private Color invulnerableColor;
     [SerializeField] float blinkFrequency = 0.5f;
-    [SerializeField] private KinematicTestController zoeController;
 
-    //use some listener for changing the color whenever Zoe takes dmg
+    [SerializeField] private KinematicTestController zoeController;
+    [SerializeField] private LivePlayerStats playerStats;
 
     [SerializeField] private Material ZoeScarfMat;
-    //[SerializeField] private Material ZoeScarfMatCopy;
+    [SerializeField] private Material ZoeScarfParticlesMat;
 
-    [SerializeField] private LivePlayerStats playerStats;
-    //public Color testColor;
-    //[ColorUsageAttribute(true, true)] public Color BaseTestColor
     private Coroutine lastBlinkRoutine;
     private Coroutine lastIframeDurationRoutine;
+
     private bool isInvulnerable;
-    //[ColorUsage(true,true)]public Color forshow;
-    //[ColorUsage(true, true)] public Color forshow2;
 
     private void Awake()
     {
@@ -33,14 +30,7 @@ public class ZoeScarfColor : MonoBehaviour, IOnSceneReset
         //Debug.Log("I started and can take dmg = " + zoeController.GetCanTakeDamage());
         if (ZoeScarfMat != null)
         {
-            //ZoeScarfMat.CopyPropertiesFromMaterial(ZoeScarfMatCopy); //make sure that if we overwrote scarfmat we change 
-            //it back to what it was last time we pressed play
-            //ZoeScarfMat.color = TestColor;
-            setColor(baseScarfColor, ZoeScarfMat);
-            //ZoeScarfMatCopy.CopyPropertiesFromMaterial(ZoeScarfMat);
-            //testColor = ZoeScarfMat.color;
-            //BaseTestColor = testColor;
-
+            SetZoeScarfColor(baseScarfColor, ZoeScarfMat, ZoeScarfParticlesMat);
         }
         else
         {
@@ -52,9 +42,10 @@ public class ZoeScarfColor : MonoBehaviour, IOnSceneReset
             zoeController = new KinematicTestController();
         }
     }
-    private void setColor(Color color, Material mat)
+    private void SetZoeScarfColor(Color color, Material mat, Material mat2)
     {
         mat.SetColor("_colourAttr", color);
+        mat2.SetColor("_colourAttr", color);
     }
     private void Start()
     {
@@ -76,13 +67,16 @@ public class ZoeScarfColor : MonoBehaviour, IOnSceneReset
         //Debug.Log("Update health scarf color!");
         if(lastBlinkRoutine != null)
             StopCoroutine(lastBlinkRoutine);
+
         if (lastIframeDurationRoutine != null)
             StopCoroutine(lastIframeDurationRoutine);
+
         float hp = playerStats.playerStats.getCurrentHealth();
         float maxHP = playerStats.playerStats.MaxHealth;
         Color desiredColor = HPBasedScarfColor.Evaluate(hp / maxHP);
-        //forshow = desiredColor;
-        setColor(desiredColor, ZoeScarfMat);
+
+        SetZoeScarfColor(desiredColor, ZoeScarfMat, ZoeScarfParticlesMat);
+
         lastIframeDurationRoutine = StartCoroutine(UpdateInvulrenableTime(zoeController));
         lastBlinkRoutine = StartCoroutine(BlinkingScarf(zoeController, blinkFrequency, desiredColor));
     }
@@ -103,18 +97,18 @@ public class ZoeScarfColor : MonoBehaviour, IOnSceneReset
             {
                 Debug.Log("Invul color");
                 //ZoeScarfMat.color = invulnerableColor;
-                setColor(invulnerableColor, ZoeScarfMat);
+                SetZoeScarfColor(invulnerableColor, ZoeScarfMat, ZoeScarfParticlesMat);
                 isInitialColor = !isInitialColor;
             }
             else
             {
                 Debug.Log("base color");
                 //ZoeScarfMat.color = initialColor;
-                setColor(initialColor, ZoeScarfMat);
+                SetZoeScarfColor(initialColor, ZoeScarfMat, ZoeScarfParticlesMat);
                 isInitialColor = !isInitialColor;
             }
         }
-        setColor(initialColor, ZoeScarfMat);
+        SetZoeScarfColor(initialColor, ZoeScarfMat, ZoeScarfParticlesMat);
     }
     IEnumerator UpdateInvulrenableTime(KinematicTestController controller)
     {
@@ -137,6 +131,6 @@ public class ZoeScarfColor : MonoBehaviour, IOnSceneReset
         if (lastIframeDurationRoutine != null)
             StopCoroutine(lastIframeDurationRoutine);
 
-        setColor(baseScarfColor, ZoeScarfMat);
+        SetZoeScarfColor(baseScarfColor, ZoeScarfMat, ZoeScarfParticlesMat);
     }
 }
