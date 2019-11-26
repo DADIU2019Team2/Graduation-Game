@@ -930,13 +930,6 @@
 							</ChildrenList>
 						</BlendContainer>
 						<Sound Name="Jump_Land_SFX" ID="{CA357908-68DF-42E6-86D9-700E15246A35}" ShortID="200381092">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-4</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
@@ -956,13 +949,6 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Jump_Takeoff_SFX" ID="{0CCCA45B-51B6-4286-8ED4-A565CACBD456}" ShortID="371610881">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-4</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
@@ -981,6 +967,82 @@
 								<ActiveSource Name="Jump_Takeoff_SFX" ID="{831A20AD-6EBD-4F31-8CA6-B8E7F59F103C}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="Ouch" ID="{1E5193A1-0E32-45C1-8263-E839011D7E94}" ShortID="677838551">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>180</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Zoe_Ouch1" ID="{E981005F-528B-4488-AEEE-C20850C2FA8A}" ShortID="308209794">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Zoe_Ouch1" ID="{DEB7B576-3E27-453C-B286-E6F0EBDA166F}" ShortID="338611492">
+											<Language>SFX</Language>
+											<AudioFile>Zoe_Ouch1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Zoe_Ouch1" ID="{DEB7B576-3E27-453C-B286-E6F0EBDA166F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Zoe_Ouch2" ID="{4FB55B50-329C-4A14-BB61-F4F0DEDBB918}" ShortID="603195128">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Zoe_Ouch2" ID="{0A756D1C-C8E3-457D-B1CE-377DF8B6233B}" ShortID="281444280">
+											<Language>SFX</Language>
+											<AudioFile>Zoe_Ouch2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Zoe_Ouch2" ID="{0A756D1C-C8E3-457D-B1CE-377DF8B6233B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Zoe_Ouch3" ID="{45B657FB-CFA8-46C8-97E3-897EF65C3AA6}" ShortID="161733005">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Zoe_Ouch3" ID="{FEF481D5-F9FA-45D1-94C4-284D72D6AD87}" ShortID="860562003">
+											<Language>SFX</Language>
+											<AudioFile>Zoe_Ouch3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Zoe_Ouch3" ID="{FEF481D5-F9FA-45D1-94C4-284D72D6AD87}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Other" ID="{642349AE-A41A-4B8E-AD25-21B38AFD2F65}" ShortID="953604102">
