@@ -76,9 +76,65 @@ public class MMSeparatedController : MonoBehaviour
     [BurstCompile]
     public struct SortTrajectoryJob : IJob
     {
+        [ReadOnly] public NativeArray<float> results;
+        public NativeArray<int> indices;
         public void Execute()
         {
-            
+            int k = 0;
+            for (int i = 0; i < results.Length; i++)
+            {
+                if(k < indices.Length-1) //indices not full
+                {
+                    if (results[i] > results[indices[k]])
+                    {
+                        //current is higher than highest in sorted array
+                        //fill up array by concatenating index at end
+                        k++;
+                        indices[k] = i;
+                    }
+                    else
+                    {
+                        //fill up array by sorting stuff
+                        for (int j = k; j >= 0; j--)
+                        {
+                            if (results[i] < results[indices[j]])
+                            {
+                                indices[j + 1] = indices[j];
+                            }
+                            else
+                            {
+                                indices[j + 1] = i;
+                                break;
+                            }
+                        }
+                        k++;
+                    }
+                }
+                else
+                {
+                    if (results[i] > results[indices[k]])
+                    {
+                        //result higher than last element in sorted array
+                        continue;
+                    }
+                    else
+                    {
+                        //sort stuff
+                        for (int j = k-1; j >= 0; j--)
+                        {
+                            if (results[i] < results[indices[j]])
+                            {
+                                indices[j + 1] = indices[j];
+                            }
+                            else
+                            {
+                                indices[j + 1] = i;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     
