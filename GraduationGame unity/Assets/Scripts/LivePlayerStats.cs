@@ -24,8 +24,9 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
 
     private enum PlayerRespawnDirection
     {
-        Left, Right
+        Right, Left
     }
+    [SerializeField]
     private PlayerRespawnDirection respawnRunDirection;
 
 
@@ -84,7 +85,7 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
         playerStats.resetStamina();
         isDead = false;
 
-        KinematicTestController.runningRight = respawnRunDirection == 0 ? -1 : 1; //-1 is running left, 1 is running right.
+        KinematicTestController.runningRight = respawnRunDirection == PlayerRespawnDirection.Right ? 1 : -1; //-1 is running left, 1 is running right.
 
         if (CheckpointManager.GetCurerntCheckpoint() != Vector3.zero)
         {
