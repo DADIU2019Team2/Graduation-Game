@@ -182,8 +182,10 @@ MonoBehaviour:
   invulnerableColor: {r: 0.695796, g: 8.094401, b: 0, a: 0}
   blinkFrequency: 5
   zoeController: {fileID: 561386183475680734}
-  ZoeScarfMat: {fileID: 2100000, guid: 075694e314641a54ca56807c1f751b95, type: 2}
   playerStats: {fileID: 6574363425277288408}
+  ZoeScarfMat: {fileID: 2100000, guid: 075694e314641a54ca56807c1f751b95, type: 2}
+  ZoeScarfParticlesMat: {fileID: 2100000, guid: 84991adfa0380ea478cc7f287814fb1b,
+    type: 2}
 --- !u!114 &6906147582193115034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,31 +252,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6183691656151045117}
     m_Modifications:
-    - target: {fileID: 4260692842304302493, guid: c56af13980f30264faf082e0a0414ff6,
-        type: 3}
-      propertyPath: moveWithTransform
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4260692842304302493, guid: c56af13980f30264faf082e0a0414ff6,
-        type: 3}
-      propertyPath: moveWithTransform
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4260692842304302493, guid: c56af13980f30264faf082e0a0414ff6,
-        type: 3}
-      propertyPath: moveWithTransform
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4260692842304302493, guid: c56af13980f30264faf082e0a0414ff6,
-        type: 3}
-      propertyPath: moveWithTransform
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1672874207153889315, guid: c56af13980f30264faf082e0a0414ff6,
-        type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 7668974676831192469}
     - target: {fileID: 1671306488769873081, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_RootOrder
@@ -350,16 +327,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4921083781489621941, guid: c56af13980f30264faf082e0a0414ff6,
-        type: 3}
-      propertyPath: mmAnimatorController
-      value: 
-      objectReference: {fileID: 6973565534241992903}
-    - target: {fileID: 4921083781489621941, guid: c56af13980f30264faf082e0a0414ff6,
-        type: 3}
-      propertyPath: mmAnimatorController
-      value: 
-      objectReference: {fileID: 6973565534241992903}
     - target: {fileID: 3080796817555412687, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -395,6 +362,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1672874207153889315, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 7668974676831192469}
     - target: {fileID: 5230195422797948959, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -445,6 +417,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.0015167417
       objectReference: {fileID: 0}
+    - target: {fileID: 4921083781489621941, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: mmAnimatorController
+      value: 
+      objectReference: {fileID: 6973565534241992903}
+    - target: {fileID: 4921083781489621941, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: mmAnimatorController
+      value: 
+      objectReference: {fileID: 6973565534241992903}
     - target: {fileID: 5799091737557074590, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: unityEventResponse.m_PersistentCalls.m_Calls.Array.size
@@ -570,10 +552,25 @@ PrefabInstance:
       propertyPath: m_TranslationOffsets.Array.data[0].z
       value: 0.009243216
       objectReference: {fileID: 0}
-    - target: {fileID: 7759193280942706382, guid: c56af13980f30264faf082e0a0414ff6,
+    - target: {fileID: 4260692842304302493, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
-      propertyPath: m_Layer
-      value: 12
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260692842304302493, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260692842304302493, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260692842304302493, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7759193280942706382, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
@@ -590,7 +587,7 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 8276087783556233242, guid: c56af13980f30264faf082e0a0414ff6,
+    - target: {fileID: 7759193280942706382, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_Layer
       value: 12
@@ -615,6 +612,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 8276087783556233242, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5098929951345463636, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: mmAnimatorController
+      value: 
+      objectReference: {fileID: 6973565534241992903}
+    - target: {fileID: 5098929951345463636, guid: c56af13980f30264faf082e0a0414ff6,
+        type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 561386183475680734}
     - target: {fileID: 4842498772255587275, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_Layer
@@ -965,16 +977,6 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.17146313
       objectReference: {fileID: 0}
-    - target: {fileID: 5098929951345463636, guid: c56af13980f30264faf082e0a0414ff6,
-        type: 3}
-      propertyPath: mmAnimatorController
-      value: 
-      objectReference: {fileID: 6973565534241992903}
-    - target: {fileID: 5098929951345463636, guid: c56af13980f30264faf082e0a0414ff6,
-        type: 3}
-      propertyPath: characterController
-      value: 
-      objectReference: {fileID: 561386183475680734}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c56af13980f30264faf082e0a0414ff6, type: 3}
 --- !u!1 &4112250780603424259 stripped
@@ -1014,16 +1016,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6183691656151045117}
     m_Modifications:
-    - target: {fileID: 3309740579766003708, guid: dc7098dac8030bb4ab3b94b3ea9d43f5,
-        type: 3}
-      propertyPath: m_Name
-      value: Zoe Sound nested prefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 3309740579766003708, guid: dc7098dac8030bb4ab3b94b3ea9d43f5,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 2679468932659912598, guid: dc7098dac8030bb4ab3b94b3ea9d43f5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1079,6 +1071,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3309740579766003708, guid: dc7098dac8030bb4ab3b94b3ea9d43f5,
+        type: 3}
+      propertyPath: m_Name
+      value: Zoe Sound nested prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309740579766003708, guid: dc7098dac8030bb4ab3b94b3ea9d43f5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc7098dac8030bb4ab3b94b3ea9d43f5, type: 3}
 --- !u!4 &8063174537470430233 stripped
@@ -1094,16 +1096,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6183691656151045117}
     m_Modifications:
-    - target: {fileID: 7746247469021926102, guid: ae09ec3123e58c24dbe9726cb94a1fb9,
-        type: 3}
-      propertyPath: m_Name
-      value: Zoe Game design nested prefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 7746247469021926102, guid: ae09ec3123e58c24dbe9726cb94a1fb9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 2284723858886033605, guid: ae09ec3123e58c24dbe9726cb94a1fb9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1158,6 +1150,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7746247469021926102, guid: ae09ec3123e58c24dbe9726cb94a1fb9,
+        type: 3}
+      propertyPath: m_Name
+      value: Zoe Game design nested prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7746247469021926102, guid: ae09ec3123e58c24dbe9726cb94a1fb9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae09ec3123e58c24dbe9726cb94a1fb9, type: 3}
@@ -1229,11 +1231,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2814151602378954989, guid: f328cefe458e2dc4e885e3fbb2b06c73,
-        type: 3}
-      propertyPath: deathParticles
-      value: 
-      objectReference: {fileID: 1515353413368042429}
     - target: {fileID: 6911893906655043875, guid: f328cefe458e2dc4e885e3fbb2b06c73,
         type: 3}
       propertyPath: unityEventResponse.m_PersistentCalls.m_Calls.Array.size
@@ -1279,6 +1276,11 @@ PrefabInstance:
       propertyPath: unityEventResponse.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2814151602378954989, guid: f328cefe458e2dc4e885e3fbb2b06c73,
+        type: 3}
+      propertyPath: deathParticles
+      value: 
+      objectReference: {fileID: 1515353413368042429}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f328cefe458e2dc4e885e3fbb2b06c73, type: 3}
 --- !u!4 &894833397200211426 stripped
