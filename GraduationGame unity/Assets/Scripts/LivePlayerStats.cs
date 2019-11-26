@@ -45,6 +45,7 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
     {
         Debug.Log(damage + " damage taken");
         playerStats.subtractHealth(damage);
+        AkSoundEngine.PostEvent("Ouch", gameObject);
         if (zoeTakeDamageEvent != null)
             zoeTakeDamageEvent();
         if (playerStats.getCurrentHealth() <= 0)
