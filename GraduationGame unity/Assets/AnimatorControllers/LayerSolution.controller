@@ -525,16 +525,16 @@ AnimatorStateMachine:
     m_Position: {x: 470, y: 600, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2905250185261547852}
-    m_Position: {x: -20, y: 580, z: 0}
+    m_Position: {x: 90, y: 470, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3530577937709738495}
     m_Position: {x: 230, y: 400, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4261886634592708004}
-    m_Position: {x: 230, y: 730, z: 0}
+    m_Position: {x: 270, y: 680, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1444876971886225949}
-    m_Position: {x: -20, y: 910, z: 0}
+    m_Position: {x: 20, y: 780, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2367539694251220017}
     m_Position: {x: 470, y: 930, z: 0}
@@ -1036,7 +1036,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: jump_mario_air
+  m_Name: jump_rightLeg
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1457,6 +1457,34 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &-5552771831118630504
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: jump
+    m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: jumpType
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 2905250185261547852}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 0
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &-5401941221278061005
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
@@ -1818,7 +1846,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: jump_mario_air 0 0
+  m_Name: backflip
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1831,7 +1859,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 1
+  m_TimeParameterActive: 0
   m_Motion: {fileID: 2572507764976589855, guid: cf3fd2a6c385e8748a2d16a904ad48ad,
     type: 3}
   m_Tag: 
@@ -2463,7 +2491,7 @@ AnimatorState:
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 0
-  m_Mirror: 1
+  m_Mirror: 0
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
@@ -2492,6 +2520,28 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.06439385
   m_TransitionOffset: 0.00000035762775
   m_ExitTime: 0.98863655
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &-2087953428609499949
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 0}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 1
+  serializedVersion: 3
+  m_TransitionDuration: 0.1672211
+  m_TransitionOffset: 0
+  m_ExitTime: 0.9538701
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -2637,13 +2687,16 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: jump
     m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: jumpType
+    m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 668451055635425694}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0
@@ -3106,6 +3159,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+  - m_Name: riseBlend
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -3257,7 +3316,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: jump_mario_start 0 0 0
+  m_Name: cheatgainer_anticipation
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -3278,6 +3337,34 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &693924708164254882
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: jump
+    m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: jumpType
+    m_EventTreshold: 1
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1444876971886225949}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1102 &700546091097631076
 AnimatorState:
   serializedVersion: 5
@@ -3453,7 +3540,7 @@ AnimatorState:
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 0
-  m_Mirror: 1
+  m_Mirror: 0
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
@@ -3553,7 +3640,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: jump_mario_start 0 0
+  m_Name: backflip_anticipation
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -4206,7 +4293,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: jump_mario_start 0
+  m_Name: jump_leftLeg_anticipation
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -4474,7 +4561,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: jump_mario_air 0
+  m_Name: jump_leftLeg
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -4717,7 +4804,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: jump_mario_air 0 0 0
+  m_Name: cheatgainer
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -4730,7 +4817,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 1
+  m_TimeParameterActive: 0
   m_Motion: {fileID: -3179607672113247281, guid: a264d5c8f57c7ea4ca8f6bd5e611a520,
     type: 3}
   m_Tag: 
@@ -4876,7 +4963,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: jump_mario_start
+  m_Name: jump_rightLeg_anticipation
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -5171,10 +5258,16 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: jump
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: rightFootInFront
+    m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: jumpType
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4648998315410417153}
   m_Solo: 0
-  m_Mute: 1
+  m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0
@@ -6288,11 +6381,13 @@ AnimatorStateMachine:
     m_Position: {x: -30, y: 130, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: -83429439549159045}
-    m_Position: {x: -111.119934, y: 310.29825, z: 0}
+    m_Position: {x: 70, y: 250, z: 0}
   m_AnyStateTransitions:
   - {fileID: 5491490319953903568}
   - {fileID: -1755006743683761011}
   - {fileID: 3214972911704882729}
+  - {fileID: -5552771831118630504}
+  - {fileID: 693924708164254882}
   m_EntryTransitions: []
   m_StateMachineTransitions:
   - first: {fileID: -5935543014480835525}
@@ -6348,7 +6443,8 @@ AnimatorState:
   m_Name: zoeFalls_softLand 0 0 0
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions: []
+  m_Transitions:
+  - {fileID: -2087953428609499949}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -6609,7 +6705,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: hitWall
+    m_ConditionEvent: isStanding
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: -5935543014480835525}
   m_DstState: {fileID: 0}
@@ -6617,10 +6713,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1

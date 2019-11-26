@@ -772,6 +772,11 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 351443878}
+    - target: {fileID: 6332183208010095522, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4281912561819632497, guid: 1d5fcecccea39994bbe5cab7844bad81,
         type: 3}
       propertyPath: m_AABB.m_Center.x
@@ -1049,6 +1054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2916968697219531084, guid: 1d5fcecccea39994bbe5cab7844bad81, type: 3}
+    - {fileID: 6332183208010095522, guid: 1d5fcecccea39994bbe5cab7844bad81, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1d5fcecccea39994bbe5cab7844bad81, type: 3}
 --- !u!95 &351443878 stripped
 Animator:
@@ -1432,6 +1438,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60111f8922550a64fb81d40a0aade252, type: 3}
+--- !u!4 &1641825409 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 437635001392451151, guid: 1d5fcecccea39994bbe5cab7844bad81,
+    type: 3}
+  m_PrefabInstance: {fileID: 350779599}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1734798214
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,6 +1644,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d3484dac67fc84e93a2742a966cbad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2040721615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 988838548016000554, guid: 1d5fcecccea39994bbe5cab7844bad81,
+    type: 3}
+  m_PrefabInstance: {fileID: 350779599}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2040721619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040721615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2acb41c5534a2840935ccc1ded9dcc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterController: {fileID: 1973127225}
+  animator: {fileID: 351443878}
+  predictionTime: 0.1
+  zoeRoot: {fileID: 1641825409}
+  fadeTimeInFrames: 1
+  normalJumpRatio: 1
+  backflipRatio: 1
+  cheatGainerRatio: 1
 --- !u!1001 &2094773192
 PrefabInstance:
   m_ObjectHideFlags: 0
