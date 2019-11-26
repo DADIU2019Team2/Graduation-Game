@@ -211,6 +211,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &174347297 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 437635001392451151, guid: 1d5fcecccea39994bbe5cab7844bad81,
+    type: 3}
+  m_PrefabInstance: {fileID: 350779599}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &219080250
 GameObject:
   m_ObjectHideFlags: 1
@@ -281,7 +287,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 7f797a49494c0ac448fc83c3600c59ed, type: 2}
+      objectReference: {fileID: 9100000, guid: fcdd696e50cdcab4aa29d0fd6ed9cb28, type: 2}
     - target: {fileID: 8839641581739004728, guid: 1d5fcecccea39994bbe5cab7844bad81,
         type: 3}
       propertyPath: m_Controller
@@ -772,6 +778,11 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 351443878}
+    - target: {fileID: 6332183208010095522, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4281912561819632497, guid: 1d5fcecccea39994bbe5cab7844bad81,
         type: 3}
       propertyPath: m_AABB.m_Center.x
@@ -1027,6 +1038,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 617476771042450706, guid: 1d5fcecccea39994bbe5cab7844bad81,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -100
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2916968697219531084, guid: 1d5fcecccea39994bbe5cab7844bad81, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1d5fcecccea39994bbe5cab7844bad81, type: 3}
@@ -1094,6 +1110,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &518036533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 988838548016000554, guid: 1d5fcecccea39994bbe5cab7844bad81,
+    type: 3}
+  m_PrefabInstance: {fileID: 350779599}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &518036534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518036533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2acb41c5534a2840935ccc1ded9dcc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterController: {fileID: 1973127225}
+  animator: {fileID: 351443878}
+  predictionTime: 0.1
+  zoeRoot: {fileID: 174347297}
+  fadeTimeInFrames: 1
+  normalJumpRatio: 1
+  backflipRatio: 1
+  cheatGainerRatio: 1
 --- !u!1001 &650697279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1354,6 +1396,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AIChaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209041694124391885, guid: 60111f8922550a64fb81d40a0aade252,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9209041694124391857, guid: 60111f8922550a64fb81d40a0aade252,
         type: 3}
