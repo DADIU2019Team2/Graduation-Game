@@ -20,7 +20,7 @@ public class LoadScreenText : MonoBehaviour
 
     private void Update()
     {
-        timer += Time.deltaTime;
+        timer += Time.unscaledDeltaTime;
         if (timer > timeLimit)
         {
             amountOfDots++;
