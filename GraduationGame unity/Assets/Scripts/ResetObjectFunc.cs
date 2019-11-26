@@ -10,6 +10,10 @@ public class ResetObjectFunc : MonoBehaviour, IOnSceneReset
 
     public Animator animator;
 
+    [SerializeField] private string triggerToReset;
+
+    [SerializeField] private OnCollisionWithObjectEvent collisionWithObjectToReset;
+
     private void Awake()
     {
         initialPos = transform.localPosition;
@@ -23,12 +27,18 @@ public class ResetObjectFunc : MonoBehaviour, IOnSceneReset
 
     public void OnResetLevel()
     {
+        if (animator != null)
+        {
+            //animator.StopPlayback();
+            animator.ResetTrigger(triggerToReset);
+            animator.SetTrigger("StopAnimation");
+            animator.Play("Entry");
+            //animator.ResetTrigger("StopAnimation");
+        }
         transform.localPosition = initialPos;
         transform.localRotation = initialRot;
         transform.localScale = initialScale;
-        if (animator != null)
-        {
-            animator.Play("Entry");
-        }
+        if(collisionWithObjectToReset != null)
+            collisionWithObjectToReset.OnResetLevel();
     }
 }
