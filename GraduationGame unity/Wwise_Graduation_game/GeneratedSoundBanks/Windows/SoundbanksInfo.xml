@@ -34,6 +34,7 @@
 				<Event Id="3878901180" Name="Crusher_Idle" ObjectPath="\Events\Default Work Unit\SFX\Crusher_Idle" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="624837759" Name="Damaged_Platforms" ObjectPath="\Events\Default Work Unit\SFX\Damaged_Platforms" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="977466704" Name="Death_Ray" ObjectPath="\Events\Default Work Unit\SFX\Death_Ray" MaxAttenuation="30.000000" DurationType="Infinite"/>
+				<Event Id="507840475" Name="Death_Saw" ObjectPath="\Events\Default Work Unit\SFX\Death_Saw" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="2801479097" Name="Dialogue_Angry" ObjectPath="\Events\Default Work Unit\Music\Dialogue_Angry" DurationType="Infinite"/>
 				<Event Id="2714452976" Name="Dialogue_Happy" ObjectPath="\Events\Default Work Unit\Music\Dialogue_Happy" DurationType="Infinite"/>
 				<Event Id="900426207" Name="Door_Closes" ObjectPath="\Events\Default Work Unit\SFX\Door_Closes" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="1.834008" DurationMax="1.834008"/>
@@ -47,10 +48,11 @@
 				<Event Id="1472838051" Name="Lazer_Small" ObjectPath="\Events\Default Work Unit\SFX\Lazer_Small" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="2967932086" Name="Lazer_Wall" ObjectPath="\Events\Default Work Unit\SFX\Lazer_Wall" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="3352547351" Name="Lazer_Wall_Power_Down" ObjectPath="\Events\Default Work Unit\SFX\Lazer_Wall_Power_Down" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="2.135228" DurationMax="2.135228"/>
-				<Event Id="3736098925" Name="Level_Complete" ObjectPath="\Events\Default Work Unit\CelebrationSound\Level_Complete" DurationType="OneShot" DurationMin="4.714286" DurationMax="4.714286"/>
+				<Event Id="3736098925" Name="Level_Complete" ObjectPath="\Events\Default Work Unit\CelebrationSound\Level_Complete" DurationType="OneShot" DurationMin="2.857143" DurationMax="2.857143"/>
 				<Event Id="352576276" Name="Level_Start" ObjectPath="\Events\Default Work Unit\CelebrationSound\Level_Start" DurationType="OneShot" DurationMin="6.037347" DurationMax="6.037347"/>
 				<Event Id="3308622827" Name="Lever_Sound" ObjectPath="\Events\Default Work Unit\SFX\Lever_Sound" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="2.124989" DurationMax="2.124989"/>
 				<Event Id="4182768561" Name="Normal_Platforms" ObjectPath="\Events\Default Work Unit\SFX\Normal_Platforms" MaxAttenuation="30.000000" DurationType="Infinite"/>
+				<Event Id="3978972604" Name="Ouch" ObjectPath="\Events\Default Work Unit\Movement\Ouch" DurationType="OneShot" DurationMin="0.150556" DurationMax="0.276016"/>
 				<Event Id="1001479278" Name="Play_Ambience_Z1" ObjectPath="\Events\Default Work Unit\Ambience\Play_Ambience_Z1" DurationType="Infinite"/>
 				<Event Id="1001479277" Name="Play_Ambience_Z2" ObjectPath="\Events\Default Work Unit\Ambience\Play_Ambience_Z2" DurationType="Infinite"/>
 				<Event Id="1001479276" Name="Play_Ambience_Z3" ObjectPath="\Events\Default Work Unit\Ambience\Play_Ambience_Z3" DurationType="Infinite"/>
@@ -88,6 +90,10 @@
 				<File Id="7699699" Language="SFX">
 					<ShortName>Z1_Ascending_Metal.wav</ShortName>
 					<Path>SFX/Z1_Ascending_Metal_3EBA1927.wem</Path>
+				</File>
+				<File Id="11716284" Language="SFX">
+					<ShortName>Death_Saw.wav</ShortName>
+					<Path>SFX/Death_Saw_9B96ECC7.wem</Path>
 				</File>
 				<File Id="22842696" Language="SFX">
 					<ShortName>Z4_Rising_Thingy.wav</ShortName>
@@ -136,10 +142,6 @@
 				<File Id="116201991" Language="SFX">
 					<ShortName>Z3AngryBass.wav</ShortName>
 					<Path>SFX/Z3AngryBass_3EBA1927.wem</Path>
-				</File>
-				<File Id="142217505" Language="SFX">
-					<ShortName>Level_Complete.wav</ShortName>
-					<Path>SFX/Level_Complete_3EBA1927.wem</Path>
 				</File>
 				<File Id="145167596" Language="SFX">
 					<ShortName>Z2_Hero_Arp.wav</ShortName>
@@ -209,6 +211,10 @@
 					<ShortName>Z1_Nasal_Bass.wav</ShortName>
 					<Path>SFX/Z1_Nasal_Bass_3EBA1927.wem</Path>
 				</File>
+				<File Id="281444280" Language="SFX">
+					<ShortName>Zoe_Ouch2.wav</ShortName>
+					<Path>SFX/Zoe_Ouch2_6296B0F9.wem</Path>
+				</File>
 				<File Id="283163331" Language="SFX">
 					<ShortName>Grab3.wav</ShortName>
 					<Path>SFX/Grab3_6296B0F9.wem</Path>
@@ -224,6 +230,10 @@
 				<File Id="310333641" Language="SFX">
 					<ShortName>Z3AngryDrumz.wav</ShortName>
 					<Path>SFX/Z3AngryDrumz_3EBA1927.wem</Path>
+				</File>
+				<File Id="338611492" Language="SFX">
+					<ShortName>Zoe_Ouch1.wav</ShortName>
+					<Path>SFX/Zoe_Ouch1_6296B0F9.wem</Path>
 				</File>
 				<File Id="340231492" Language="SFX">
 					<ShortName>Transition_2.wav</ShortName>
@@ -393,6 +403,10 @@
 					<ShortName>Z1_Hatter_Arp.wav</ShortName>
 					<Path>SFX/Z1_Hatter_Arp_3EBA1927.wem</Path>
 				</File>
+				<File Id="860562003" Language="SFX">
+					<ShortName>Zoe_Ouch3.wav</ShortName>
+					<Path>SFX/Zoe_Ouch3_6296B0F9.wem</Path>
+				</File>
 				<File Id="869369574" Language="SFX">
 					<ShortName>Z4AngryDrumz.wav</ShortName>
 					<Path>SFX/Z4AngryDrumz_3EBA1927.wem</Path>
@@ -468,6 +482,10 @@
 				<File Id="979909387" Language="SFX">
 					<ShortName>Z4_Dist_Klaver.wav</ShortName>
 					<Path>SFX/Z4_Dist_Klaver_3EBA1927.wem</Path>
+				</File>
+				<File Id="992312086" Language="SFX">
+					<ShortName>Level_Complete.wav</ShortName>
+					<Path>SFX/Level_Complete_10C4C929.wem</Path>
 				</File>
 				<File Id="1010279705" Language="SFX">
 					<ShortName>Z3_Dist_Bassline.wav</ShortName>
