@@ -500,6 +500,17 @@ namespace KinematicTest.controller
         /// </summary>
         public void BeforeCharacterUpdate(float deltaTime)
         {
+            Collider[] colliders = new Collider[8];
+            var alma = Motor.CharacterCollisionsOverlap(transform.position, transform.rotation, colliders);
+            if (alma > 0 &&
+                GameManager.GetGameState() == GameStateScriptableObject.GameState.mainGameplayLoop)
+            {
+                foreach (var results in colliders)
+                {
+                    CheckVariousDMGThings(results);
+                }
+            }
+            
             switch (CurrentCharacterState)
             {
                 case PlayerStates.NoInput:
@@ -916,15 +927,6 @@ namespace KinematicTest.controller
         /// </summary>
         public void AfterCharacterUpdate(float deltaTime)
         {
-            if (Motor.OverlapsCount > 0 &&
-                GameManager.GetGameState() == GameStateScriptableObject.GameState.mainGameplayLoop)
-            {
-                foreach (OverlapResult overlapResult in Motor.Overlaps)
-                {
-                    CheckVariousDMGThings(overlapResult.Collider);
-                }
-            }
-
             // Handle jump-related values
             {
                 // Handle jumping pre-ground grace period
@@ -1046,10 +1048,10 @@ namespace KinematicTest.controller
 
         private void CheckVariousDMGThings(Collider hitCollider)
         {
-            if (hitCollider == null || !canTakeDamage)
+            if (hitCollider == null || !canTakeDamage || hitCollider.CompareTag("Wall") || hitCollider.CompareTag("Ledge") || hitCollider.CompareTag("Player"))
                 return;
-
-            //Debug.Log("overlap tag: " + hitCollider.tag);
+            
+            Debug.Log("overlap tag: " + hitCollider.tag);
             if (hitCollider.CompareTag("Spike"))
             {
                 int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
