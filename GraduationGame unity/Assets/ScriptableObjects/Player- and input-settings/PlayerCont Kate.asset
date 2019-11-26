@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128d5a01cfc2fa942b5cad73eb25b606, type: 3}
+  m_Name: PlayerCont Kate
+  m_EditorClassIdentifier: 
+  baseGravity: 7
+  riseGravityMultiplier: 3
+  hangGravityMultiplier: 3
+  fallGravityMultiplier: 3
+  dropGravityMultiplier: 3
+  slideRiseGravityMultiplier: 2.5
+  slideHangGravityMultiplier: 1
+  slideFallGravityMultiplier: 2.5
+  slideDropGravityMultiplier: 2.5
+  slideHangTimeVelocityThreshold: 1.5
+  maxMoveSpeed: 12
+  StableMovementSharpness: 20
+  OrientationSharpness: 10
+  rampUpTime: 1.5
+  rampDownTime: 0.05
+  rampUpCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0050735474
+      value: 0.45013973
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5374535
+      value: 0.54126596
+      inSlope: 0.19562864
+      outSlope: 0.19562864
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.18237364
+    - serializedVersion: 3
+      time: 1.0946655
+      value: 0.61953735
+      inSlope: 0.011035675
+      outSlope: 0.011035675
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5960727
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  rampDownCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0079956055
+      value: 0.59274673
+      inSlope: 0.018496001
+      outSlope: 0.018496001
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.11382114
+    - serializedVersion: 3
+      time: 0.4125061
+      value: 0.0047302246
+      inSlope: -1.5116911
+      outSlope: -1.5116911
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.050135493
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  jumpHeight: 2.5
+  maxAirMoveSpeed: 5
+  hangTimeVelocityThreshold: 2
+  JumpPreGroundingGraceTime: 0.2
+  JumpPostGroundingGraceTime: 0.2
+  idleJumpHeight: 1.5
+  idleAirMoveSpeed: 5
+  slideMoveSpeed: 13
+  slideJumpHeight: 1
+  slideDuration: 1.5
+  decelerateWhileSliding: 1
+  slideCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0008022748
+      value: 0.60183144
+      inSlope: 0.047149412
+      outSlope: 0.047149412
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.9944458
+      value: 0.32657623
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  canFallFromLedgeAfterDelay: 0
+  timeBeforeFallFromLedge: 0
+  graceTimeBeforeHangAgain: 0
+  ledgeGrabForwardJumpHeight: 0
+  ledgeGrabForwardAirMoveSpeed: 0
+  ledgeGrabBackwardsJumpHeight: 0
+  ledgeGrabBackwardsAirMoveSpeed: 0
+  invincibilityTime: 1
+  canChangeDirectionsMidair: 1
+  AllowDoubleJump: 0
+  AllowJumpingWhenSliding: 1

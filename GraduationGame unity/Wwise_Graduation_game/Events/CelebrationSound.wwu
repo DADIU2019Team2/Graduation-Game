@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{52D068B1-1C5B-4B11-9F00-6E5315226880}" SchemaVersion="94" RootDocumentID="{4948A3B8-CE28-48A8-BAD5-AE38D8DAE02B}">
+	<Events>
+		<WorkUnit Name="CelebrationSound" ID="{52D068B1-1C5B-4B11-9F00-6E5315226880}" OwnerID="{4948A3B8-CE28-48A8-BAD5-AE38D8DAE02B}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Checkpoint_Crystal" ID="{935B77B5-07AA-4933-A540-9522BF447840}">
+					<ChildrenList>
+						<Action Name="" ID="{B82DEE33-CDA4-4033-82FD-4EB4C04693BB}" ShortID="509403920">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Checkpoint_Warmer" ID="{180EA519-2050-4ED9-902F-B7D7A571507A}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Level_Start" ID="{E874845D-9750-4B69-B6AB-EEEBE03707C2}">
+					<ChildrenList>
+						<Action Name="" ID="{FEDC1BB3-0718-47B0-9AD9-FADD094E27B6}" ShortID="687389172">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Level_Start" ID="{052B63B4-3861-4809-86F9-C2E8FE42AD5A}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Level_Complete" ID="{33F26545-6F2F-4E19-825D-CAF3854F80A1}">
+					<ChildrenList>
+						<Action Name="" ID="{3E38B676-387A-41D5-8D75-04E9292CD820}" ShortID="531559793">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Level_Complete" ID="{AB66196A-0432-47F5-9D8C-C11E336CD2D0}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

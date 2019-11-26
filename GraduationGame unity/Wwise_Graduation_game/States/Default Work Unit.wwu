@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{52ACD56D-349C-4194-BEA2-3ED61995E31B}" SchemaVersion="94">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{52ACD56D-349C-4194-BEA2-3ED61995E31B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{52ACD56D-349C-4194-BEA2-3ED61995E31B}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Zones" ID="{C03DD00A-A6D2-48D0-B31B-77C73D93E5C0}">
+					<ChildrenList>
+						<State Name="None" ID="{9C9479A9-074B-426A-9533-79178CEE8914}"/>
+						<State Name="Zone1" ID="{A79084B5-12A5-4A33-83C6-5BBF6B4D2972}"/>
+						<State Name="Zone2" ID="{C3EBFAA1-8F44-4706-AC5E-EC1E154E5CDB}"/>
+						<State Name="Zone3" ID="{7935FD58-D1CC-46D6-86CD-05C26B460E10}"/>
+						<State Name="Zone4" ID="{FF76E3B7-12EC-456B-88CD-184476F87DCD}"/>
+						<State Name="BossFight" ID="{F6FD7BB7-B09B-4B82-98E9-E8CFA23E5E94}"/>
+						<State Name="Dialogue_Happy" ID="{B4FEB399-070A-45AF-A589-CF01D74C56D7}"/>
+						<State Name="Dialogue_Angry" ID="{7803BE09-5D2A-4D3C-B846-8D9FEB9D2354}"/>
+						<State Name="Level_Complete" ID="{BE0B5751-5CCC-4DB4-8B7E-9B4AD4DD7ADC}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Dead_or_Alive" ID="{A6995C0B-2DF9-4DB0-8A37-EF970ED19DE4}">
+					<ChildrenList>
+						<State Name="None" ID="{EF4D50A0-09DA-4C3B-A26F-8CDF56D08665}"/>
+						<State Name="Dead" ID="{88A84DB9-3DBC-4474-982E-8141AD08D4AB}"/>
+						<State Name="Alive" ID="{82039F13-E292-4905-AFEC-6145032AE0A3}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

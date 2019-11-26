@@ -9,7 +9,7 @@ using UnityEditorInternal;
 [CanEditMultipleObjects]
 public class CustomAnimatorControllerInspector : Editor
 {
-    private AnimatorControllerInspetor animController;
+    /*private AnimatorControllerInspetor animController;
     private UnityEngine.AnimatorControllerParameter[] animControllerParams;
 
     private bool showDebugParams;
@@ -48,10 +48,10 @@ public class CustomAnimatorControllerInspector : Editor
         if(controller.objectReferenceValue != null)
         {
             //DrawDefaultInspector();
-            /*if(GUILayout.Button("Add parameter to change"))
+            if(GUILayout.Button("Add parameter to change"))
             {
                 //add a string field
-            }*/
+            }
 
             //parameterNamesToCheck.DoLayoutList();
 
@@ -124,5 +124,5 @@ public class CustomAnimatorControllerInspector : Editor
         serializedObject.ApplyModifiedProperties();
 
 
-    }
+    }*/
 }

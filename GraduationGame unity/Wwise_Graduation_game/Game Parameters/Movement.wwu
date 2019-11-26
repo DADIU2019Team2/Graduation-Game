@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}" SchemaVersion="94" RootDocumentID="{F77531F4-4955-4C61-A91D-5B00E2D5AF72}">
+	<GameParameters>
+		<WorkUnit Name="Movement" ID="{8F9D62F4-7205-48F9-A129-4CFCBC801F49}" OwnerID="{F77531F4-4955-4C61-A91D-5B00E2D5AF72}" PersistMode="Nested">
+			<ChildrenList>
+				<GameParameter Name="Move_Accel" ID="{CDCFE5E5-C930-4B69-AA3F-31ED05D5E942}">
+					<PropertyList>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="10"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Footstep_velocity" ID="{625F12C9-2D08-4961-8554-BFAD87B7D7A6}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

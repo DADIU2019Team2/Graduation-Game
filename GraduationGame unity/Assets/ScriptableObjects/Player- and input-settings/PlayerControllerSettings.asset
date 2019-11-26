@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128d5a01cfc2fa942b5cad73eb25b606, type: 3}
+  m_Name: PlayerControllerSettings
+  m_EditorClassIdentifier: 
+  baseGravity: 10
+  riseGravityMultiplier: 3
+  hangGravityMultiplier: 3
+  fallGravityMultiplier: 3
+  dropGravityMultiplier: 3
+  maxMoveSpeed: 10
+  StableMovementSharpness: 30
+  OrientationSharpness: 10
+  rampUpTime: 0.1
+  rampDownTime: 0.1
+  rampUpCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  rampDownCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.03958525
+      outSlope: -0.03958525
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.15205298
+    - serializedVersion: 3
+      time: 1
+      value: -0.5004977
+      inSlope: -1.0247587
+      outSlope: -1.0247587
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.08489758
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  jumpHeight: 4
+  maxAirMoveSpeed: 10
+  hangTimeVelocityThreshold: 2
+  JumpPreGroundingGraceTime: 0.2
+  JumpPostGroundingGraceTime: 0.2
+  idleJumpHeight: 2
+  idleAirMoveSpeed: 4
+  slideMoveSpeed: 15
+  slideJumpHeight: 1
+  slideDuration: 1
+  decelerateWhileSliding: 1
+  slideCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.2
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  canFallFromLedgeAfterDelay: 0
+  timeBeforeFallFromLedge: 0
+  graceTimeBeforeHangAgain: 0.2
+  ledgeGrabForwardJumpHeight: 1
+  ledgeGrabForwardAirMoveSpeed: 5
+  ledgeGrabBackwardsJumpHeight: 1
+  ledgeGrabBackwardsAirMoveSpeed: 5
+  invincibilityTime: 0
+  canChangeDirectionsMidair: 1
+  AllowDoubleJump: 0
+  AllowJumpingWhenSliding: 1

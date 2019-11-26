@@ -1,6 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}" SchemaVersion="94">
 	<Attenuations>
-		<WorkUnit Name="Default Work Unit" ID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}" PersistMode="Standalone">
+			<ChildrenList>
+				<Attenuation Name="Objects" ID="{D15F0187-7C97-468C-B661-AFF4655367AB}" ShortID="151507591">
+					<PropertyList>
+						<Property Name="RadiusMax" Type="Real64" Value="30"/>
+					</PropertyList>
+					<CurveUsageInfoList>
+						<VolumeDryUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+								<Curve Name="VolumeDry" ID="{4BB566D3-337D-4C71-A7C1-D62DC964649B}">
+									<PropertyList>
+										<Property Name="Flags" Type="int32" Value="3"/>
+									</PropertyList>
+									<PointList>
+										<Point>
+											<XPos>0</XPos>
+											<YPos>0</YPos>
+											<Flags>5</Flags>
+										</Point>
+										<Point>
+											<XPos>9.8081775</XPos>
+											<YPos>0</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>14.76131</XPos>
+											<YPos>-0.59111</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>19.61905</XPos>
+											<YPos>-2.05325</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>23.80893</XPos>
+											<YPos>-5.15129</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>26.52323</XPos>
+											<YPos>-8.67311</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>28.52382</XPos>
+											<YPos>-16.40231</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>30</XPos>
+											<YPos>-200</YPos>
+											<Flags>37</Flags>
+										</Point>
+									</PointList>
+								</Curve>
+							</CurveUsageInfo>
+						</VolumeDryUsage>
+						<VolumeWetGameUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+						</VolumeWetGameUsage>
+						<VolumeWetUserUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+						</VolumeWetUserUsage>
+						<LowPassFilterUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+								<Curve Name="LowPassFilter" ID="{7519A3E6-DC20-4B34-8F4F-58D52B0871E9}">
+									<PropertyList>
+										<Property Name="Flags" Type="int32" Value="65537"/>
+									</PropertyList>
+									<PointList>
+										<Point>
+											<XPos>0</XPos>
+											<YPos>0</YPos>
+											<Flags>5</Flags>
+										</Point>
+										<Point>
+											<XPos>1.712286</XPos>
+											<YPos>18</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>6.19017</XPos>
+											<YPos>42</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>11.904759</XPos>
+											<YPos>51</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>22.904775</XPos>
+											<YPos>53</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>30</XPos>
+											<YPos>54</YPos>
+											<Flags>37</Flags>
+										</Point>
+									</PointList>
+								</Curve>
+							</CurveUsageInfo>
+						</LowPassFilterUsage>
+						<HighPassFilterUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+						</HighPassFilterUsage>
+						<SpreadUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+								<Curve Name="Spread" ID="{AC755B8C-1925-484C-A2B4-678B3BCC4EDE}">
+									<PropertyList>
+										<Property Name="Flags" Type="int32" Value="1"/>
+									</PropertyList>
+									<PointList>
+										<Point>
+											<XPos>0</XPos>
+											<YPos>100</YPos>
+											<Flags>5</Flags>
+										</Point>
+										<Point>
+											<XPos>10.09524</XPos>
+											<YPos>100</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>18.7619</XPos>
+											<YPos>88.15789</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>26.33334</XPos>
+											<YPos>52.63158</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>30</XPos>
+											<YPos>0</YPos>
+											<Flags>37</Flags>
+										</Point>
+									</PointList>
+								</Curve>
+							</CurveUsageInfo>
+						</SpreadUsage>
+						<FocusUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+						</FocusUsage>
+					</CurveUsageInfoList>
+				</Attenuation>
+			</ChildrenList>
+		</WorkUnit>
 	</Attenuations>
 </WwiseDocument>
