@@ -918,6 +918,13 @@ namespace KinematicTest.controller
         /// </summary>
         public void AfterCharacterUpdate(float deltaTime)
         {
+            if (Motor.OverlapsCount > 0 && GameManager.GetGameState() == GameStateScriptableObject.GameState.mainGameplayLoop)
+            {
+                foreach (OverlapResult overlapResult in Motor.Overlaps)
+                {
+                    CheckVariousDMGThings(overlapResult.Collider);
+                }
+            }
             // Handle jump-related values
             {
                 // Handle jumping pre-ground grace period
@@ -1045,18 +1052,22 @@ namespace KinematicTest.controller
         {
             if (canTakeDamage)
             {
-                //Debug.Log("can take damge");
+                Debug.Log("overlap tag: " + hitCollider.tag);
                 if (hitCollider.CompareTag("Spike"))
                 {
                     int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
                     SpikeDamageEvent.Raise(damage);
                     _justTookDamage = true;
                 }
-                if (hitCollider.CompareTag("Cop"))
+                else if (hitCollider.CompareTag("Cop"))
                 {
                     int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
                     CopDamageEvent.Raise(damage);
                     _justTookDamage = true;
+                }
+                else
+                {
+                    return;
                 }
             }
         }
