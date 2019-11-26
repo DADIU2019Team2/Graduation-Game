@@ -1045,7 +1045,7 @@ namespace KinematicTest.controller
         {
             if (canTakeDamage)
             {
-                Debug.Log("can take damge");
+                //Debug.Log("can take damge");
                 if (hitCollider.CompareTag("Spike"))
                 {
                     int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
