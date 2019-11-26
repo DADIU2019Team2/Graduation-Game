@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: emma_anim08(exp.layer).ma
-//Last modified: Mon, Nov 25, 2019 02:28:58 PM
+//Last modified: Tue, Nov 26, 2019 02:26:50 PM
 //Codeset: 1252
 file -rdi 1 -ns "zoeRigAnim" -rfn "zoeRigAnimRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/Dadiu student/Documents/GitHub/Graduation-Game/GraduationGame unity/Assets/060_animation/mainMenu/scene/zoeRig_old.ma";
@@ -1077,19 +1077,19 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "8F897565-46BA-9430-265D-8987A3EF663A";
+	rename -uid "CA09297D-487B-39B5-B8BA-51885A8E7916";
 	setAttr -s 6 ".lnk";
 	setAttr -s 6 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "9CD83B1C-4638-8319-CC4F-818CE95CB7BF";
+	rename -uid "28061DC6-4032-B23B-F5A5-A1A5B9A6944D";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "25F021D8-4433-B9B7-E766-47AB802CACD3";
+	rename -uid "042B1272-4172-C262-EA2F-FDB58BF3F490";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "78FDA1BA-467B-BD69-8324-29B30AE3433B";
+	rename -uid "0DC91471-44EC-4125-AB5D-ABB8B79F8651";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "942ECFDA-4975-21C7-8A65-9F94339F4881";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7BA0E233-4980-B9E6-0E6D-83B44FC39547";
+	rename -uid "AD8021C7-4169-CD10-23B2-C79EE233319D";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "0CA0A48B-448B-0758-5062-D3B9AB7AD872";
 	setAttr ".g" yes;
@@ -6190,29 +6190,29 @@ createNode reference -n "zoeRigAnimRN";
 		"zoeRigAnimRN.placeHolderList[1085]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.scaleZ" 
 		"zoeRigAnimRN.placeHolderList[1086]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.translateX" 
-		"zoeRigAnimRN.placeHolderList[1087]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.translateX" 
-		"zoeRigAnimRN.placeHolderList[1088]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.translateY" 
-		"zoeRigAnimRN.placeHolderList[1089]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.translateY" 
-		"zoeRigAnimRN.placeHolderList[1090]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.translateZ" 
-		"zoeRigAnimRN.placeHolderList[1091]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.translateZ" 
-		"zoeRigAnimRN.placeHolderList[1092]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.rotateX" 
-		"zoeRigAnimRN.placeHolderList[1093]" ""
+		"zoeRigAnimRN.placeHolderList[1087]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.rotateX" 
-		"zoeRigAnimRN.placeHolderList[1094]" ""
+		"zoeRigAnimRN.placeHolderList[1088]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.rotateY" 
-		"zoeRigAnimRN.placeHolderList[1095]" ""
+		"zoeRigAnimRN.placeHolderList[1089]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.rotateY" 
-		"zoeRigAnimRN.placeHolderList[1096]" ""
+		"zoeRigAnimRN.placeHolderList[1090]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.rotateZ" 
-		"zoeRigAnimRN.placeHolderList[1097]" ""
+		"zoeRigAnimRN.placeHolderList[1091]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.rotateZ" 
+		"zoeRigAnimRN.placeHolderList[1092]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.translateX" 
+		"zoeRigAnimRN.placeHolderList[1093]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.translateX" 
+		"zoeRigAnimRN.placeHolderList[1094]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.translateY" 
+		"zoeRigAnimRN.placeHolderList[1095]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.translateY" 
+		"zoeRigAnimRN.placeHolderList[1096]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.translateZ" 
+		"zoeRigAnimRN.placeHolderList[1097]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.translateZ" 
 		"zoeRigAnimRN.placeHolderList[1098]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal.rotateOrder" 
 		"zoeRigAnimRN.placeHolderList[1099]" ""
@@ -6236,29 +6236,29 @@ createNode reference -n "zoeRigAnimRN";
 		"zoeRigAnimRN.placeHolderList[1108]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.scaleZ" 
 		"zoeRigAnimRN.placeHolderList[1109]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.translateX" 
-		"zoeRigAnimRN.placeHolderList[1110]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.translateX" 
-		"zoeRigAnimRN.placeHolderList[1111]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.translateY" 
-		"zoeRigAnimRN.placeHolderList[1112]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.translateY" 
-		"zoeRigAnimRN.placeHolderList[1113]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.translateZ" 
-		"zoeRigAnimRN.placeHolderList[1114]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.translateZ" 
-		"zoeRigAnimRN.placeHolderList[1115]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.rotateX" 
-		"zoeRigAnimRN.placeHolderList[1116]" ""
+		"zoeRigAnimRN.placeHolderList[1110]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.rotateX" 
-		"zoeRigAnimRN.placeHolderList[1117]" ""
+		"zoeRigAnimRN.placeHolderList[1111]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.rotateY" 
-		"zoeRigAnimRN.placeHolderList[1118]" ""
+		"zoeRigAnimRN.placeHolderList[1112]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.rotateY" 
-		"zoeRigAnimRN.placeHolderList[1119]" ""
+		"zoeRigAnimRN.placeHolderList[1113]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.rotateZ" 
-		"zoeRigAnimRN.placeHolderList[1120]" ""
+		"zoeRigAnimRN.placeHolderList[1114]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.rotateZ" 
+		"zoeRigAnimRN.placeHolderList[1115]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.translateX" 
+		"zoeRigAnimRN.placeHolderList[1116]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.translateX" 
+		"zoeRigAnimRN.placeHolderList[1117]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.translateY" 
+		"zoeRigAnimRN.placeHolderList[1118]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.translateY" 
+		"zoeRigAnimRN.placeHolderList[1119]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.translateZ" 
+		"zoeRigAnimRN.placeHolderList[1120]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.translateZ" 
 		"zoeRigAnimRN.placeHolderList[1121]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger3Metacarpal|zoeRigAnim:LeftFinger3Proximal|zoeRigAnim:LeftFinger3Medial.rotateOrder" 
 		"zoeRigAnimRN.placeHolderList[1122]" ""
@@ -6558,29 +6558,29 @@ createNode reference -n "zoeRigAnimRN";
 		"zoeRigAnimRN.placeHolderList[1269]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.scaleZ" 
 		"zoeRigAnimRN.placeHolderList[1270]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.translateX" 
-		"zoeRigAnimRN.placeHolderList[1271]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.translateX" 
-		"zoeRigAnimRN.placeHolderList[1272]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.translateY" 
-		"zoeRigAnimRN.placeHolderList[1273]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.translateY" 
-		"zoeRigAnimRN.placeHolderList[1274]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.translateZ" 
-		"zoeRigAnimRN.placeHolderList[1275]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.translateZ" 
-		"zoeRigAnimRN.placeHolderList[1276]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.rotateX" 
-		"zoeRigAnimRN.placeHolderList[1277]" ""
+		"zoeRigAnimRN.placeHolderList[1271]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.rotateX" 
-		"zoeRigAnimRN.placeHolderList[1278]" ""
+		"zoeRigAnimRN.placeHolderList[1272]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.rotateY" 
-		"zoeRigAnimRN.placeHolderList[1279]" ""
+		"zoeRigAnimRN.placeHolderList[1273]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.rotateY" 
-		"zoeRigAnimRN.placeHolderList[1280]" ""
+		"zoeRigAnimRN.placeHolderList[1274]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.rotateZ" 
-		"zoeRigAnimRN.placeHolderList[1281]" ""
+		"zoeRigAnimRN.placeHolderList[1275]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.rotateZ" 
+		"zoeRigAnimRN.placeHolderList[1276]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.translateX" 
+		"zoeRigAnimRN.placeHolderList[1277]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.translateX" 
+		"zoeRigAnimRN.placeHolderList[1278]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.translateY" 
+		"zoeRigAnimRN.placeHolderList[1279]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.translateY" 
+		"zoeRigAnimRN.placeHolderList[1280]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.translateZ" 
+		"zoeRigAnimRN.placeHolderList[1281]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.translateZ" 
 		"zoeRigAnimRN.placeHolderList[1282]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal.rotateOrder" 
 		"zoeRigAnimRN.placeHolderList[1283]" ""
@@ -6604,29 +6604,29 @@ createNode reference -n "zoeRigAnimRN";
 		"zoeRigAnimRN.placeHolderList[1292]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.scaleZ" 
 		"zoeRigAnimRN.placeHolderList[1293]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.translateX" 
-		"zoeRigAnimRN.placeHolderList[1294]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.translateX" 
-		"zoeRigAnimRN.placeHolderList[1295]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.translateY" 
-		"zoeRigAnimRN.placeHolderList[1296]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.translateY" 
-		"zoeRigAnimRN.placeHolderList[1297]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.translateZ" 
-		"zoeRigAnimRN.placeHolderList[1298]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.translateZ" 
-		"zoeRigAnimRN.placeHolderList[1299]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.rotateX" 
-		"zoeRigAnimRN.placeHolderList[1300]" ""
+		"zoeRigAnimRN.placeHolderList[1294]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.rotateX" 
-		"zoeRigAnimRN.placeHolderList[1301]" ""
+		"zoeRigAnimRN.placeHolderList[1295]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.rotateY" 
-		"zoeRigAnimRN.placeHolderList[1302]" ""
+		"zoeRigAnimRN.placeHolderList[1296]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.rotateY" 
-		"zoeRigAnimRN.placeHolderList[1303]" ""
+		"zoeRigAnimRN.placeHolderList[1297]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.rotateZ" 
-		"zoeRigAnimRN.placeHolderList[1304]" ""
+		"zoeRigAnimRN.placeHolderList[1298]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.rotateZ" 
+		"zoeRigAnimRN.placeHolderList[1299]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.translateX" 
+		"zoeRigAnimRN.placeHolderList[1300]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.translateX" 
+		"zoeRigAnimRN.placeHolderList[1301]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.translateY" 
+		"zoeRigAnimRN.placeHolderList[1302]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.translateY" 
+		"zoeRigAnimRN.placeHolderList[1303]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.translateZ" 
+		"zoeRigAnimRN.placeHolderList[1304]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.translateZ" 
 		"zoeRigAnimRN.placeHolderList[1305]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:LeftShoulder|zoeRigAnim:LeftArm|zoeRigAnim:LeftForeArm|zoeRigAnim:LeftHand|zoeRigAnim:LeftFinger5Metacarpal|zoeRigAnim:LeftFinger5Proximal|zoeRigAnim:LeftFinger5Medial.rotateOrder" 
 		"zoeRigAnimRN.placeHolderList[1306]" ""
@@ -6760,29 +6760,29 @@ createNode reference -n "zoeRigAnimRN";
 		"zoeRigAnimRN.placeHolderList[1370]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.Character" 
 		"zoeRigAnimRN.placeHolderList[1371]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.rotateX" 
-		"zoeRigAnimRN.placeHolderList[1372]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.rotateX" 
-		"zoeRigAnimRN.placeHolderList[1373]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.rotateY" 
-		"zoeRigAnimRN.placeHolderList[1374]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.rotateY" 
-		"zoeRigAnimRN.placeHolderList[1375]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.rotateZ" 
-		"zoeRigAnimRN.placeHolderList[1376]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.rotateZ" 
-		"zoeRigAnimRN.placeHolderList[1377]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.translateX" 
-		"zoeRigAnimRN.placeHolderList[1378]" ""
+		"zoeRigAnimRN.placeHolderList[1372]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.translateX" 
-		"zoeRigAnimRN.placeHolderList[1379]" ""
+		"zoeRigAnimRN.placeHolderList[1373]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.translateY" 
-		"zoeRigAnimRN.placeHolderList[1380]" ""
+		"zoeRigAnimRN.placeHolderList[1374]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.translateY" 
-		"zoeRigAnimRN.placeHolderList[1381]" ""
+		"zoeRigAnimRN.placeHolderList[1375]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.translateZ" 
-		"zoeRigAnimRN.placeHolderList[1382]" ""
+		"zoeRigAnimRN.placeHolderList[1376]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.translateZ" 
+		"zoeRigAnimRN.placeHolderList[1377]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.rotateX" 
+		"zoeRigAnimRN.placeHolderList[1378]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.rotateX" 
+		"zoeRigAnimRN.placeHolderList[1379]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.rotateY" 
+		"zoeRigAnimRN.placeHolderList[1380]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.rotateY" 
+		"zoeRigAnimRN.placeHolderList[1381]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.rotateZ" 
+		"zoeRigAnimRN.placeHolderList[1382]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.rotateZ" 
 		"zoeRigAnimRN.placeHolderList[1383]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head.parentMatrix" 
 		"zoeRigAnimRN.placeHolderList[1384]" ""
@@ -6900,35 +6900,35 @@ createNode reference -n "zoeRigAnimRN";
 		"zoeRigAnimRN.placeHolderList[1440]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.scaleZ" 
 		"zoeRigAnimRN.placeHolderList[1441]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.rotateOrder" 
-		"zoeRigAnimRN.placeHolderList[1442]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.visibility" 
-		"zoeRigAnimRN.placeHolderList[1443]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.visibility" 
-		"zoeRigAnimRN.placeHolderList[1444]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.translateX" 
-		"zoeRigAnimRN.placeHolderList[1445]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.translateX" 
-		"zoeRigAnimRN.placeHolderList[1446]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.translateY" 
-		"zoeRigAnimRN.placeHolderList[1447]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.translateY" 
-		"zoeRigAnimRN.placeHolderList[1448]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.translateZ" 
-		"zoeRigAnimRN.placeHolderList[1449]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.translateZ" 
-		"zoeRigAnimRN.placeHolderList[1450]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.rotateX" 
-		"zoeRigAnimRN.placeHolderList[1451]" ""
+		"zoeRigAnimRN.placeHolderList[1442]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.rotateX" 
-		"zoeRigAnimRN.placeHolderList[1452]" ""
+		"zoeRigAnimRN.placeHolderList[1443]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.rotateY" 
-		"zoeRigAnimRN.placeHolderList[1453]" ""
+		"zoeRigAnimRN.placeHolderList[1444]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.rotateY" 
-		"zoeRigAnimRN.placeHolderList[1454]" ""
+		"zoeRigAnimRN.placeHolderList[1445]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.rotateZ" 
-		"zoeRigAnimRN.placeHolderList[1455]" ""
+		"zoeRigAnimRN.placeHolderList[1446]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.rotateZ" 
+		"zoeRigAnimRN.placeHolderList[1447]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.rotateOrder" 
+		"zoeRigAnimRN.placeHolderList[1448]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.visibility" 
+		"zoeRigAnimRN.placeHolderList[1449]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.visibility" 
+		"zoeRigAnimRN.placeHolderList[1450]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.translateX" 
+		"zoeRigAnimRN.placeHolderList[1451]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.translateX" 
+		"zoeRigAnimRN.placeHolderList[1452]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.translateY" 
+		"zoeRigAnimRN.placeHolderList[1453]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.translateY" 
+		"zoeRigAnimRN.placeHolderList[1454]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.translateZ" 
+		"zoeRigAnimRN.placeHolderList[1455]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03.translateZ" 
 		"zoeRigAnimRN.placeHolderList[1456]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.scaleX" 
 		"zoeRigAnimRN.placeHolderList[1457]" ""
@@ -6942,35 +6942,35 @@ createNode reference -n "zoeRigAnimRN";
 		"zoeRigAnimRN.placeHolderList[1461]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.scaleZ" 
 		"zoeRigAnimRN.placeHolderList[1462]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.rotateOrder" 
-		"zoeRigAnimRN.placeHolderList[1463]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.visibility" 
-		"zoeRigAnimRN.placeHolderList[1464]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.visibility" 
-		"zoeRigAnimRN.placeHolderList[1465]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.translateX" 
-		"zoeRigAnimRN.placeHolderList[1466]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.translateX" 
-		"zoeRigAnimRN.placeHolderList[1467]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.translateY" 
-		"zoeRigAnimRN.placeHolderList[1468]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.translateY" 
-		"zoeRigAnimRN.placeHolderList[1469]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.translateZ" 
-		"zoeRigAnimRN.placeHolderList[1470]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.translateZ" 
-		"zoeRigAnimRN.placeHolderList[1471]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.rotateX" 
-		"zoeRigAnimRN.placeHolderList[1472]" ""
+		"zoeRigAnimRN.placeHolderList[1463]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.rotateX" 
-		"zoeRigAnimRN.placeHolderList[1473]" ""
+		"zoeRigAnimRN.placeHolderList[1464]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.rotateY" 
-		"zoeRigAnimRN.placeHolderList[1474]" ""
+		"zoeRigAnimRN.placeHolderList[1465]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.rotateY" 
-		"zoeRigAnimRN.placeHolderList[1475]" ""
+		"zoeRigAnimRN.placeHolderList[1466]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.rotateZ" 
-		"zoeRigAnimRN.placeHolderList[1476]" ""
+		"zoeRigAnimRN.placeHolderList[1467]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.rotateZ" 
+		"zoeRigAnimRN.placeHolderList[1468]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.rotateOrder" 
+		"zoeRigAnimRN.placeHolderList[1469]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.visibility" 
+		"zoeRigAnimRN.placeHolderList[1470]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.visibility" 
+		"zoeRigAnimRN.placeHolderList[1471]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.translateX" 
+		"zoeRigAnimRN.placeHolderList[1472]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.translateX" 
+		"zoeRigAnimRN.placeHolderList[1473]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.translateY" 
+		"zoeRigAnimRN.placeHolderList[1474]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.translateY" 
+		"zoeRigAnimRN.placeHolderList[1475]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.translateZ" 
+		"zoeRigAnimRN.placeHolderList[1476]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:LeftHair01|zoeRigAnim:LeftHair02|zoeRigAnim:LeftHair03|zoeRigAnim:LeftHair04.translateZ" 
 		"zoeRigAnimRN.placeHolderList[1477]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01.scaleX" 
 		"zoeRigAnimRN.placeHolderList[1478]" ""
@@ -7110,35 +7110,35 @@ createNode reference -n "zoeRigAnimRN";
 		"zoeRigAnimRN.placeHolderList[1545]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.scaleZ" 
 		"zoeRigAnimRN.placeHolderList[1546]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.rotateOrder" 
-		"zoeRigAnimRN.placeHolderList[1547]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.visibility" 
-		"zoeRigAnimRN.placeHolderList[1548]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.visibility" 
-		"zoeRigAnimRN.placeHolderList[1549]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.translateX" 
-		"zoeRigAnimRN.placeHolderList[1550]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.translateX" 
-		"zoeRigAnimRN.placeHolderList[1551]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.translateY" 
-		"zoeRigAnimRN.placeHolderList[1552]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.translateY" 
-		"zoeRigAnimRN.placeHolderList[1553]" ""
-		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.translateZ" 
-		"zoeRigAnimRN.placeHolderList[1554]" ""
-		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.translateZ" 
-		"zoeRigAnimRN.placeHolderList[1555]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.rotateX" 
-		"zoeRigAnimRN.placeHolderList[1556]" ""
+		"zoeRigAnimRN.placeHolderList[1547]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.rotateX" 
-		"zoeRigAnimRN.placeHolderList[1557]" ""
+		"zoeRigAnimRN.placeHolderList[1548]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.rotateY" 
-		"zoeRigAnimRN.placeHolderList[1558]" ""
+		"zoeRigAnimRN.placeHolderList[1549]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.rotateY" 
-		"zoeRigAnimRN.placeHolderList[1559]" ""
+		"zoeRigAnimRN.placeHolderList[1550]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.rotateZ" 
-		"zoeRigAnimRN.placeHolderList[1560]" ""
+		"zoeRigAnimRN.placeHolderList[1551]" ""
 		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.rotateZ" 
+		"zoeRigAnimRN.placeHolderList[1552]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.rotateOrder" 
+		"zoeRigAnimRN.placeHolderList[1553]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.visibility" 
+		"zoeRigAnimRN.placeHolderList[1554]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.visibility" 
+		"zoeRigAnimRN.placeHolderList[1555]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.translateX" 
+		"zoeRigAnimRN.placeHolderList[1556]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.translateX" 
+		"zoeRigAnimRN.placeHolderList[1557]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.translateY" 
+		"zoeRigAnimRN.placeHolderList[1558]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.translateY" 
+		"zoeRigAnimRN.placeHolderList[1559]" ""
+		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.translateZ" 
+		"zoeRigAnimRN.placeHolderList[1560]" ""
+		5 4 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:Neck|zoeRigAnim:Head|zoeRigAnim:RightHair01|zoeRigAnim:RightHair02|zoeRigAnim:RightHair03|zoeRigAnim:RightHair04.translateZ" 
 		"zoeRigAnimRN.placeHolderList[1561]" ""
 		5 3 "zoeRigAnimRN" "|zoeRigAnim:zoe_grp|zoeRigAnim:jnt_grp|zoeRigAnim:Root|zoeRigAnim:Hips|zoeRigAnim:Spine1|zoeRigAnim:Spine2|zoeRigAnim:Spine3|zoeRigAnim:Spine4|zoeRigAnim:RightShoulder.inverseScale" 
 		"zoeRigAnimRN.placeHolderList[1562]" ""
@@ -8946,18 +8946,18 @@ createNode HIKState2SK -n "HIKState2SK1";
 	setAttr ".LeftUpLegRx" 7.7028076215791694;
 	setAttr ".LeftUpLegRy" 11.07619347863678;
 	setAttr ".LeftUpLegRz" 52.197840616843209;
-	setAttr ".LeftLegTx" 4.7126716125944768e-05;
-	setAttr ".LeftLegTy" -30.605613047796595;
-	setAttr ".LeftLegTz" 2.1355580411608344e-05;
-	setAttr ".LeftLegRx" 0.023108099133769346;
-	setAttr ".LeftLegRy" 0.10555541351801029;
-	setAttr ".LeftLegRz" -59.724089991267228;
-	setAttr ".LeftFootTx" -1.0921716533173829;
-	setAttr ".LeftFootTy" -34.653843509848016;
-	setAttr ".LeftFootTz" -0.063957726719753083;
-	setAttr ".LeftFootRx" 1.2130392201448283;
-	setAttr ".LeftFootRy" 0.0016757238147733567;
-	setAttr ".LeftFootRz" -0.021357060965067232;
+	setAttr ".LeftLegTx" 4.7126716111733913e-05;
+	setAttr ".LeftLegTy" -30.605613047796588;
+	setAttr ".LeftLegTz" 2.1355580404502916e-05;
+	setAttr ".LeftLegRx" 0.023108099133801744;
+	setAttr ".LeftLegRy" 0.10555541351794365;
+	setAttr ".LeftLegRz" -59.724089991267256;
+	setAttr ".LeftFootTx" -1.0921716533173802;
+	setAttr ".LeftFootTy" -34.653843509848024;
+	setAttr ".LeftFootTz" -0.06395772671974953;
+	setAttr ".LeftFootRx" 1.2130392201448186;
+	setAttr ".LeftFootRy" 0.001675723814779271;
+	setAttr ".LeftFootRz" -0.021357060965069188;
 	setAttr ".RightUpLegTx" -11.085577964782715;
 	setAttr ".RightUpLegTy" 1.5097542274133957e-06;
 	setAttr ".RightUpLegTz" -3.5032209938501424e-06;
@@ -9022,8 +9022,8 @@ createNode HIKState2SK -n "HIKState2SK1";
 	setAttr ".HeadRx" 4.4513742803419536;
 	setAttr ".HeadRy" 2.6575117250016929;
 	setAttr ".HeadRz" -7.5802073593566917;
-	setAttr ".LeftToeBaseTx" 1.128585260090631e-05;
-	setAttr ".LeftToeBaseTy" -16.018334546869475;
+	setAttr ".LeftToeBaseTx" 1.1285852593800882e-05;
+	setAttr ".LeftToeBaseTy" -16.018334546869465;
 	setAttr ".LeftToeBaseTz" 4.6289660505219175;
 	setAttr ".RightToeBaseTx" 1.2025708585383654e-05;
 	setAttr ".RightToeBaseTy" -16.018339337162359;
@@ -9652,7 +9652,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 990\n            -height 706\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1187\n            -height 706\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
 		+ "            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n"
 		+ "            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
@@ -9680,8 +9680,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
 		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
 		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 990\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 990\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1187\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1187\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -10386,9 +10386,8 @@ createNode animCurveTA -n "zoe_Ctrl_LeftToeBase_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 14 ".ktv[0:13]"  0 0 0.3 0 5 -8.9195740618001106e-06 7 -1.2337294767195877e-06
 		 11 -8.6006938885470752e-06 15 -6.5054130117134045e-06 26 -6.8877718148543377e-06
-		 30 -8.2885497738872538e-06 35 -8.4695300017051395e-06 40 -1.1468715766124259e-05
-		 44 -8.9103924365456615e-06 47 -8.9705553509003513e-06 96 -4.9400238930306604e-06
-		 160.25 0;
+		 30 -8.2885497738872538e-06 35 -8.4695300017051395e-06 40 -1.146871576612426e-05 44 -8.9103924365456615e-06
+		 47 -8.9705553509003513e-06 96 -4.9400238930306604e-06 160.25 0;
 createNode animCurveTA -n "zoe_Ctrl_RightUpLeg_rotateZ";
 	rename -uid "7D377643-4B01-F24C-715A-8FBCC2EC680C";
 	setAttr ".tan" 5;
@@ -10568,7 +10567,7 @@ createNode animCurveTA -n "zoe_Ctrl_LeftArm_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
 	setAttr -s 30 ".ktv[0:29]"  1 67.972766627771293 5 75.656990646316899
-		 12 83.68362947091228 20 80.099297850907348 26 72.887450577418349 30 79.895300394895798
+		 12 83.683629470912294 20 80.099297850907348 26 72.887450577418349 30 79.895300394895798
 		 34 87.887861875426808 37 60.958691668114149 40 38.645129464407255 44 18.599004850435719
 		 48 3.1076400579577763 59 -31.152614690398106 63 -52.034712955050338 70 -73.579098508764247
 		 78 -70.703613470499405 81 -68.936474432352767 85 -60.779100230339083 88 -61.704698203994283
@@ -10611,7 +10610,7 @@ createNode animCurveTA -n "zoe_Ctrl_LeftArm_rotateY";
 		 12 39.093469770289275 20 41.328576032560271 26 44.83568202878859 30 43.598743542879568
 		 34 43.280982921136605 37 51.130220272829206 40 67.779178254246148 44 73.329482975439745
 		 48 69.493187647236667 59 70.90515597550224 63 69.693327232764702 70 55.787409843561292
-		 78 55.356882617692399 81 55.909643391285911 85 50.343696006491442 92 48.363142417080674
+		 78 55.356882617692399 81 55.909643391285911 85 50.343696006491442 92 48.363142417080681
 		 99 45.786430636365296 105 51.660349568793073 109 65.26923462900784 115 72.965547492038525
 		 134 74.074441574095715 138 72.640233942534906 143 57.331682981897401 146 50.608395652826466
 		 149 40.796310456951225 155 44.460035505905864 160 47.100519962634905;
@@ -10782,7 +10781,7 @@ createNode animCurveTA -n "zoe_Ctrl_LeftShoulder_rotateZ";
 	setAttr ".tan" 10;
 	setAttr ".wgt" no;
 	setAttr -s 30 ".ktv[0:29]"  1 -7.7503399504668393e-13 5 -1.1066175236076413e-12
-		 12 -9.5927103074139944e-13 20 -7.8053796224641841e-13 26 -7.7672804556539159e-13
+		 12 -9.5927103074139964e-13 20 -7.8053796224641841e-13 26 -7.7672804556539159e-13
 		 30 -1.1837344299019245e-11 34 0 37 -6.3897391215600827e-13 40 4.6260618125848877e-06
 		 44 1.3824762421702611e-05 48 7.7030534469765154e-06 59 1.0622159791282903e-05 63 1.5287116692371258e-05
 		 70 6.4212580776033993e-06 78 5.3256325294524418e-06 81 5.3256325294524418e-06 85 -6.7134124517917551e-06
@@ -10803,7 +10802,7 @@ createNode animCurveTA -n "zoe_Ctrl_LeftShoulder_rotateY";
 	setAttr -s 30 ".ktv[0:29]"  1 2.7946458759816764e-06 5 3.3344307565477753e-06
 		 12 3.1011731785905246e-06 20 2.8002340872002462e-06 26 2.7962578045913311e-06 30 1.0894609413973584e-05
 		 34 5.7827718427799776e-06 37 2.5326021315005972e-06 40 1.0964767924844775e-05 44 1.6420572488474661e-05
-		 48 1.6794930441937139e-05 59 -1.2856296702611555e-05 63 4.7724770759527244e-06 70 1.4630189025746035e-05
+		 48 1.6794930441937139e-05 59 -1.2856296702611556e-05 63 4.7724770759527244e-06 70 1.4630189025746035e-05
 		 78 1.1506334892583723e-05 81 1.1506334892583723e-05 85 -8.2034909291772195e-06 88 0
 		 92 -1.8363958156819657e-05 99 -1.8003633541323082e-05 105 1.0185681814732323e-05
 		 109 1.2734268199327868e-05 115 1.1589877949260757e-05 134 1.0491182009290233e-05
@@ -10823,7 +10822,7 @@ createNode animCurveTA -n "zoe_Ctrl_LeftShoulder_rotateX";
 		 12 -3.5446057543696945e-05 20 -3.2006357876419083e-05 26 -3.1960909417384726e-05
 		 30 -0.00012452414939935971 34 -6.6096425996578425e-05 37 -2.8947354990751708e-05
 		 40 -4.9515507951380254e-05 44 -5.3973404048990663e-05 48 -4.8001868582088744e-05
-		 59 2.6360185795706265e-05 63 4.0824502919677644e-05 70 -6.1688636411424912e-05 78 -6.858701433816237e-05
+		 59 2.6360185795706269e-05 63 4.0824502919677644e-05 70 -6.1688636411424912e-05 78 -6.858701433816237e-05
 		 81 -6.858701433816237e-05 85 -5.7019349220021056e-05 88 -6.0846026965707072e-05 92 -4.9503638937824209e-05
 		 99 -4.9472113858052106e-05 105 -6.7944592206174858e-05 109 -6.864888979424074e-05
 		 115 -7.0848064473355972e-05 134 -5.9905284849098664e-05 138 -6.6524101516487845e-05
@@ -11480,9 +11479,9 @@ createNode animCurveTA -n "zoe_Ctrl_LeftWristEffector_rotateX";
 	rename -uid "2573055A-4BAE-83BA-95D5-A1BE8DD61436";
 	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 -4.2324132771817338 12 -1.8608924146541952
-		 20 -1.8932149257227493 59 -109.50853908531639 63 -82.468576805769231 109 -72.30525637085745
-		 115 41.322297448787793 134 48.501758962764505;
+	setAttr -s 8 ".ktv[0:7]"  1 -4.2324132781138317 12 -1.8608924050882159
+		 20 -1.8932149209800186 59 -109.50853697545688 63 -82.468576902104061 109 -72.305256371257187
+		 115 41.322298580650312 134 48.501759264371238;
 	setAttr -s 8 ".kit[0:7]"  10 2 2 2 2 2 2 2;
 	setAttr -s 8 ".kot[0:7]"  10 5 5 5 5 5 5 5;
 	setAttr ".roti" 5;
@@ -11490,17 +11489,17 @@ createNode animCurveTA -n "zoe_Ctrl_LeftWristEffector_rotateY";
 	rename -uid "8ADA0B0F-4C72-A7E1-7893-97A6B5FFD357";
 	setAttr ".tan" 10;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 -13.868449883515416 12 -12.620591218136815
-		 20 -13.008461961880933 59 64.55131488252465 63 64.058558406232308 109 57.817863972113066
-		 115 116.87474787585587 134 129.80259541691436;
+	setAttr -s 8 ".ktv[0:7]"  1 -13.868449870924971 12 -12.620591264694852
+		 20 -13.008461987478013 59 64.551315066405436 63 64.05855841732189 109 57.817863956957588
+		 115 116.87474751685448 134 129.80259531132535;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "zoe_Ctrl_LeftWristEffector_rotateZ";
 	rename -uid "7A29998D-410B-A5CF-A14E-4CBD3359A0E0";
 	setAttr ".tan" 10;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 -42.022681052343941 12 -39.384912784940312
-		 20 -36.958989455287544 59 -71.031658296240195 63 -41.547221766650715 109 107.44279960629908
-		 115 83.80360630709535 134 98.821984940865875;
+	setAttr -s 8 ".ktv[0:7]"  1 -42.022681016096804 12 -39.384912930909557
+		 20 -36.958989528324729 59 -71.031656478602258 63 -41.547221846885499 109 107.44279958866808
+		 115 83.80360723779846 134 98.821985159096158;
 	setAttr ".roti" 5;
 createNode animCurveTL -n "zoe_Ctrl_LeftWristEffector_translateZ";
 	rename -uid "60E70087-4558-CAD2-0C90-31B2E9DB60FD";
@@ -11532,9 +11531,9 @@ createNode animCurveTA -n "zoe_Ctrl_LeftElbowEffector_rotateX";
 	rename -uid "1CB1705D-447C-CDBE-8D9D-ABAB72B875A0";
 	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 -4.7746591797831366 12 -35.143727535922068
-		 20 -38.590008147661578 59 -76.374544566097313 63 -80.204867760775727 109 -83.421616274101581
-		 115 -81.777485468393266 134 -77.187121891550348;
+	setAttr -s 8 ".ktv[0:7]"  1 -4.7746591794679123 12 -35.143727523426726
+		 20 -38.590008150551974 59 -76.374544440385037 63 -80.204867871783449 109 -83.421616136877432
+		 115 -81.777485581000974 134 -77.18712201504249;
 	setAttr -s 8 ".kit[0:7]"  10 2 2 2 2 2 2 2;
 	setAttr -s 8 ".kot[0:7]"  10 5 5 5 5 5 5 5;
 	setAttr ".roti" 5;
@@ -11542,17 +11541,17 @@ createNode animCurveTA -n "zoe_Ctrl_LeftElbowEffector_rotateY";
 	rename -uid "C6DC64A4-4128-BFE7-59CD-268B680B41E7";
 	setAttr ".tan" 10;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 -67.426625938376546 12 -64.125673110604069
-		 20 -63.56401950461872 59 25.178304544622712 63 34.121065144614178 109 20.714050394834135
-		 115 18.414254017663623 134 7.6528420086787081;
+	setAttr -s 8 ".ktv[0:7]"  1 -67.426625938658219 12 -64.125673087454274
+		 20 -63.564019508437255 59 25.178304353396452 63 34.121065306692159 109 20.714050232898195
+		 115 18.414254152332433 134 7.6528421481605884;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "zoe_Ctrl_LeftElbowEffector_rotateZ";
 	rename -uid "E3889EE5-4FFA-C22D-8B1B-249BADD0D14B";
 	setAttr ".tan" 10;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 -53.646814335430768 12 -27.129473850407557
-		 20 -21.690512895661364 59 86.798265530193859 63 80.849261806549876 109 80.022562459428613
-		 115 81.93932795499218 134 87.886903622806287;
+	setAttr -s 8 ".ktv[0:7]"  1 -53.646814335940157 12 -27.129473847168853
+		 20 -21.690512895344863 59 86.79826536196758 63 80.849261919970132 109 80.022562333613692
+		 115 81.939328068046393 134 87.886903776051668;
 	setAttr ".roti" 5;
 createNode animCurveTL -n "zoe_Ctrl_LeftElbowEffector_translateZ";
 	rename -uid "5B9B1C41-46A5-ABC8-B075-5E9BDFCEF2AF";
@@ -11585,9 +11584,9 @@ createNode animCurveTA -n "zoe_Ctrl_LeftShoulderEffector_rotateX";
 	rename -uid "4A18C461-4D0D-6703-2035-EC9B931817BD";
 	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 -3.3432115379524836 12 18.019321902539783
-		 20 26.78746188603796 59 128.77374100395966 63 114.96562674096235 109 109.30917812967213
-		 115 118.10379891154655 134 128.30940088002745;
+	setAttr -s 8 ".ktv[0:7]"  1 -3.3432115379182528 12 18.019322049347355
+		 20 26.787461788866672 59 128.77374141565497 63 114.96562629982206 109 109.30917782227353
+		 115 118.10379947374699 134 128.30940063131663;
 	setAttr -s 8 ".kit[0:7]"  10 2 2 2 2 2 2 2;
 	setAttr -s 8 ".kot[0:7]"  10 5 5 5 5 5 5 5;
 	setAttr ".roti" 5;
@@ -11595,17 +11594,17 @@ createNode animCurveTA -n "zoe_Ctrl_LeftShoulderEffector_rotateY";
 	rename -uid "7889BD80-47F9-DC9F-2D05-5783CA2EFF36";
 	setAttr ".tan" 10;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 67.526071106321766 12 67.403542785096391
-		 20 66.389639905431295 59 124.84231927885975 63 130.46747038966254 109 139.10113979088467
-		 115 128.01046219231412 134 126.81997487825608;
+	setAttr -s 8 ".ktv[0:7]"  1 67.526071106350116 12 67.403542825850593
+		 20 66.389639886973782 59 124.84231939373385 63 130.46747033454108 109 139.10113980433931
+		 115 128.01046226691159 134 126.81997482576234;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "zoe_Ctrl_LeftShoulderEffector_rotateZ";
 	rename -uid "571460D0-4DB2-D42A-A393-FD937804960D";
 	setAttr ".tan" 10;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 54.582363178813587 12 81.560147690501708
-		 20 89.255338082263464 59 137.15451052044006 63 130.00890314455765 109 117.90537717101797
-		 115 126.0831592742949 134 126.92385697573654;
+	setAttr -s 8 ".ktv[0:7]"  1 54.582363178867453 12 81.560147884213379
+		 20 89.255337956624828 59 137.15451090712014 63 130.00890275115404 109 117.90537688576174
+		 115 126.08315980556424 134 126.9238567244856;
 	setAttr ".roti" 5;
 createNode animCurveTL -n "zoe_Ctrl_LeftShoulderEffector_translateZ";
 	rename -uid "5EACC370-4686-7306-C159-10A7981B1472";
@@ -12053,7 +12052,7 @@ createNode animCurveTA -n "LeftHair03_rotate_hair_inputBX";
 		 24 -6.0619669706315209 27 6.5475923815335975 29 -18.064237300608362 33 -6.653623345093874
 		 35 -12.695648346122939 37 -14.230747362064211 40 -13.010204282434085 45 -8.1784035721597235
 		 47 -14.27070567772153 50 -24.152444578381125 54 2.8235498543282525 57 -15.99538649465371
-		 60 -25.843148317408151 64 -12.977653029720791 69 0.35523496517227554 74 -11.278929456770658
+		 60 -25.843148317408154 64 -12.977653029720791 69 0.3552349651722756 74 -11.278929456770658
 		 77 -10.022189311601185 81 -13.523101525222273 85 -27.849721284226987 89 -12.425442943904814
 		 93 -8.9245342762332829 96 -1.7021364654236226 98 -13.870088075504889 102 -11.513301884955483
 		 106 -4.8884523905451243 109 -10.247890657600404 114 -5.1304818360247264 116 -3.4364849423920165
@@ -12895,7 +12894,7 @@ createNode animCurveTA -n "LeftHair04_rotate_hair_inputBZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
 	setAttr -s 92 ".ktv[0:91]"  1 -7.602258222930911 5 2.0053321662616108
-		 8 15.887572311373885 12 12.442156807086885 16 5.0437370889132023 20 28.469351324877522
+		 8 15.887572311373885 12 12.442156807086885 16 5.0437370889132023 20 28.469351324877525
 		 22 25.568530177497717 26 28.242629610810123 29 29.908178275292141 32 32.821953019872716
 		 35 -7.7245211105050853 40 8.0612068740089828 43 4.939648103927456 47 29.62142959277417
 		 50 -12.892000727655555 53 41.908733646920638 57 -0.15030359941207683 60 -7.019582733933003
@@ -13115,7 +13114,7 @@ createNode animCurveTA -n "RightHair04_rotate_hair_inputBY";
 	setAttr -s 94 ".ktv[0:93]"  1 22.601366826377841 5 16.265759914518267
 		 8 16.615070680089687 12 11.513234660387516 16 2.7749932294824387 20 -1.1269636914348722
 		 22 -5.4730780611382128 26 7.6128980767393308 29 24.983727011337933 32 42.81543257011424
-		 35 21.776856889838836 37 4.936779217920912 40 5.1903456718823424 43 20.010742845897401
+		 35 21.776856889838836 37 4.9367792179209129 40 5.1903456718823424 43 20.010742845897401
 		 47 24.169181052745177 50 19.183762537148962 53 14.923274463298192 57 9.085294515466801
 		 60 2.2927181539472237 64 21.792911919563856 67 17.84495439133104 69 22.601 74 16.265759914518267
 		 81 -0.18658289975861012 85 2.7749932294824387 89 -1.1269636914348722 91 -5.4730780611382128
@@ -15836,15 +15835,15 @@ createNode animBlendNodeBoolean -n "LeftShin_visibility_hair";
 createNode animBlendNodeAdditiveDL -n "LeftShin_translateX_hair";
 	rename -uid "53248CBB-47F9-569A-8AAE-689F84C781D4";
 	setAttr ".dp[0]" -type "string" "zoeRigAnim:LeftShin.translateX";
-	setAttr ".o" 4.7126716125944768e-05;
+	setAttr ".o" 4.7126716111733913e-05;
 createNode animBlendNodeAdditiveDL -n "LeftShin_translateY_hair";
 	rename -uid "C4BDCFBA-4E42-ED3E-C17E-EAA47206FA07";
 	setAttr ".dp[0]" -type "string" "zoeRigAnim:LeftShin.translateY";
-	setAttr ".o" -30.605613047796595;
+	setAttr ".o" -30.605613047796588;
 createNode animBlendNodeAdditiveDL -n "LeftShin_translateZ_hair";
 	rename -uid "71B86F99-4C7C-4A00-E762-5789476D5F0D";
 	setAttr ".dp[0]" -type "string" "zoeRigAnim:LeftShin.translateZ";
-	setAttr ".o" 2.1355580411608344e-05;
+	setAttr ".o" 2.1355580404502916e-05;
 createNode animBlendNodeAdditiveRotation -n "LeftShin_rotate_hair";
 	rename -uid "36E02F83-4637-9063-FEF9-78A752C9D67B";
 	setAttr -s 3 ".dp";
@@ -16351,7 +16350,7 @@ createNode animBlendNodeAdditiveRotation -n "LeftForeArm_rotate_hair";
 	setAttr ".dp[0]" -type "string" "zoeRigAnim:LeftForeArm.rotateX";
 	setAttr ".dp[1]" -type "string" "zoeRigAnim:LeftForeArm.rotateY";
 	setAttr ".dp[2]" -type "string" "zoeRigAnim:LeftForeArm.rotateZ";
-	setAttr ".o" -type "double3" -0.018679936153914264 -0.0044592838795916882 -11.925397683531806 ;
+	setAttr ".o" -type "double3" -0.018679936153914264 -0.0044592838795916891 -11.925397683531806 ;
 createNode animBlendNodeAdditiveScale -n "LeftForeArm_scaleX_hair";
 	rename -uid "5E7FA14D-4B67-C61A-E674-12A71E3292DE";
 	setAttr ".dp[0]" -type "string" "zoeRigAnim:LeftForeArm.scaleX";
@@ -17072,14 +17071,14 @@ createNode animCurveTA -n "LeftThigh_rotate_hair_inputAY";
 	setAttr ".tan" 2;
 	setAttr ".wgt" no;
 	setAttr -s 160 ".ktv[0:159]"  1 11.07619347863678 2 11.078756789297934
-		 3 11.082757865919641 4 11.084302366793851 5 11.088157673962051 6 11.083507689618907
+		 3 11.082757865919641 4 11.084302366793851 5 11.088157673962051 6 11.083507689618909
 		 7 11.076441211739732 8 11.076067491547505 9 11.079732070938244 10 11.079041412224857
 		 11 11.079350588381859 12 11.079174842964475 13 11.081949056428384 14 11.081289153761588
 		 15 11.080925024055505 16 11.083074716643482 17 11.08619993707363 18 11.088815906862488
-		 19 11.096312286239245 20 11.100247428111043 21 11.10613994245797 22 11.112802510452923
+		 19 11.096312286239245 20 11.100247428111045 21 11.106139942457972 22 11.112802510452923
 		 23 11.115352064683162 24 11.119868220045355 25 11.121664623171206 26 11.12333904209892
 		 27 11.115894754630444 28 11.099477990062251 29 11.086832444087054 30 11.079353812059647
-		 31 11.047840855277119 32 10.981980970787744 33 10.908318400329353 34 10.845746628076524
+		 31 11.047840855277119 32 10.981980970787744 33 10.908318400329355 34 10.845746628076524
 		 35 10.825080738383274 36 10.799924231521684 37 10.747436501104231 38 10.692995739000668
 		 39 10.655924218223536 40 10.638531941941842 41 10.666845862815981 42 10.747307625227023
 		 43 10.875859524828766 44 10.960430575581666 45 10.92767413379196 46 10.863919298241063
@@ -17102,13 +17101,13 @@ createNode animCurveTA -n "LeftThigh_rotate_hair_inputAY";
 		 111 10.950722504265615 112 10.953145485222691 113 10.956054568266872 114 10.959530921977217
 		 115 10.963377958953702 116 10.964314302564441 117 10.969036641880018 118 10.970639258612323
 		 119 10.976032902126931 120 10.978273704233818 121 10.980824110591231 122 10.983490208873329
-		 123 10.986407910690625 124 10.989449384526427 125 10.992628182035704 126 10.999214839191724
+		 123 10.986407910690627 124 10.989449384526427 125 10.992628182035704 126 10.999214839191724
 		 127 11.00253333299464 128 11.005866645097624 129 11.009102962202331 130 11.012359630180452
 		 131 11.015481799924551 132 11.018539548216715 133 11.021368479315621 134 11.024066664483268
-		 135 11.026547872231347 136 11.032189204213822 137 11.034103633760061 138 11.035757829411478
+		 135 11.026547872231349 136 11.032189204213822 137 11.034103633760061 138 11.035757829411478
 		 139 11.040470896933689 140 11.044860692241986 141 11.045295792876409 142 11.048826585060585
-		 143 11.051853909677838 144 11.054387231810344 145 11.056304819440676 146 11.057695428251172
-		 147 11.062050213806897 148 11.062123102002589 149 11.065143665778457 150 11.067434703010134
+		 143 11.05185390967784 144 11.054387231810344 145 11.056304819440676 146 11.057695428251172
+		 147 11.062050213806897 148 11.062123102002589 149 11.065143665778457 150 11.067434703010136
 		 151 11.068947041641666 152 11.069756539704134 153 11.073323409384734 154 11.07240135581136
 		 155 11.074233373034865 156 11.075147995610488 157 11.075115265083005 158 11.077706632856248
 		 159 11.075667642765529 160 11.076210420470998;
@@ -17127,20 +17126,20 @@ createNode animCurveTA -n "LeftThigh_rotate_hair_inputAZ";
 	setAttr ".tan" 2;
 	setAttr ".wgt" no;
 	setAttr -s 160 ".ktv[0:159]"  1 52.197840616843209 2 52.242822332634987
-		 3 52.34258356318508 4 52.443456204429175 5 52.487942785240769 6 52.631948471712505
+		 3 52.342583563185087 4 52.443456204429175 5 52.487942785240769 6 52.631948471712505
 		 7 52.777061267412989 8 52.642415903492086 9 52.34430063684875 10 52.048343723390701
 		 11 51.91358894819102 12 51.923977468727792 13 51.945227727018342 14 51.968204533224608
 		 15 51.978659169763233 16 51.985221727415812 17 52.004517940088896 18 52.034354001197116
 		 19 52.069207132979244 20 52.110166070249683 21 52.15164762529141 22 52.191303310099862
 		 23 52.228499847735463 24 52.257423378545717 25 52.277330414876836 26 52.284132125711231
-		 27 52.28346437196565 28 52.2819903686961 29 52.278772609504287 30 52.278087736726448
+		 27 52.283464371965657 28 52.2819903686961 29 52.278772609504287 30 52.278087736726455
 		 31 52.275150047935874 32 52.288982372607308 33 52.333083527848579 34 52.391851870782332
-		 35 52.444016011108545 36 52.464189442514311 37 52.539042952236713 38 52.715717789951
+		 35 52.444016011108552 36 52.464189442514311 37 52.539042952236713 38 52.715717789951
 		 39 52.892519236720993 40 52.974403100790653 41 52.603881795057895 42 51.921325971156612
 		 43 51.566860310165247 44 51.578365128459495 45 51.573780172673523 46 51.566517310051402
-		 47 51.563647173845787 48 51.567326909510165 49 51.569498033814583 50 51.573380808543284
-		 51 51.575734263508728 52 51.579775630812136 53 51.585515806773408 54 51.589728077185967
-		 55 51.595623221250861 56 51.599988742519983 57 51.606002220030376 58 51.612114700589316
+		 47 51.563647173845787 48 51.567326909510165 49 51.569498033814583 50 51.573380808543291
+		 51 51.575734263508735 52 51.579775630812136 53 51.585515806773408 54 51.589728077185967
+		 55 51.595623221250861 56 51.59998874251999 57 51.606002220030383 58 51.612114700589316
 		 59 51.619868502028346 60 51.626067988201292 61 51.632323557793647 62 51.640224174712962
 		 63 51.646568124834644 64 51.654558470012304 65 51.660953295772501 66 51.66900199262448
 		 67 51.677077486876605 68 51.685164514074941 69 51.6916610947398 70 51.699757609525612
@@ -17148,23 +17147,23 @@ createNode animCurveTA -n "LeftThigh_rotate_hair_inputAZ";
 		 75 51.738710497911121 76 51.745137127333756 77 51.753180855692278 78 51.759590823154348
 		 79 51.767580353000987 80 51.773900891998174 81 51.7801743949477 82 51.786391563403292
 		 83 51.792574393885722 84 51.797024760403751 85 51.803088081269159 86 51.807414273658182
-		 87 51.813312199805566 88 51.817478477911891 89 51.819946285613945 90 51.823955507220631
+		 87 51.813312199805566 88 51.817478477911891 89 51.819946285613952 90 51.823955507220639
 		 91 51.826208789471615 92 51.82836333387214 93 51.830427893680742 94 51.832378820984275
-		 95 51.832540122726456 96 51.83426306958448 97 51.834317464080357 98 51.834479594635084
-		 99 51.836400030480348 100 51.838439067267636 101 51.840552175235686 102 51.842762351693729
+		 95 51.832540122726456 96 51.83426306958448 97 51.834317464080364 98 51.834479594635084
+		 99 51.836400030480355 100 51.838439067267636 101 51.840552175235686 102 51.842762351693736
 		 103 51.845068568565502 104 51.849143010370454 105 51.853276814847575 106 51.857503264225947
-		 107 51.86181024193781 108 51.867840574225596 109 51.872295772638381 110 51.878488418582279
+		 107 51.86181024193781 108 51.867840574225603 109 51.872295772638381 110 51.878488418582279
 		 111 51.884734932994441 112 51.891059719488489 113 51.897428970212587 114 51.90386327919142
-		 115 51.910353293202959 116 51.918565193236347 117 51.925151727403751 118 51.933463154689811
+		 115 51.910353293202959 116 51.918565193236354 117 51.925151727403751 118 51.933463154689811
 		 119 51.940148009660106 120 51.948532326226868 121 51.956955950924552 122 51.96539855070484
-		 123 51.973897199760103 124 51.982421575474881 125 51.990946503294467 126 51.997827385959475
+		 123 51.97389719976011 124 51.982421575474881 125 51.990946503294467 126 51.997827385959475
 		 127 52.006388533829231 128 52.014971331251672 129 52.023564134425925 130 52.032156903411703
-		 131 52.040772545221508 132 52.04935077759486 133 52.057933557937432 134 52.066507749325567
+		 131 52.040772545221508 132 52.04935077759486 133 52.057933557937432 134 52.066507749325574
 		 135 52.075080164820903 136 52.081923262553317 137 52.090451604199409 138 52.098944517929887
 		 139 52.105733910953361 140 52.112464395285897 141 52.120868613448948 142 52.127522470386957
-		 143 52.134133510837103 144 52.140696834780513 145 52.147201384956659 146 52.153650502356101
+		 143 52.134133510837103 144 52.14069683478052 145 52.147201384956659 146 52.153650502356101
 		 147 52.158331079378321 148 52.164645160556638 149 52.169200194039355 150 52.173666750707838
-		 151 52.178043111985339 152 52.182334811558022 153 52.184847920569503 154 52.188966465882785
+		 151 52.178043111985339 152 52.182334811558022 153 52.184847920569503 154 52.188966465882793
 		 155 52.191276734521971 156 52.193495408179324 157 52.195593961959148 158 52.195884565666262
 		 159 52.197789035050661 160 52.197834362028182;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
@@ -17187,7 +17186,7 @@ createNode animCurveTA -n "LeftShin_rotate_hair_inputAX";
 		 11 0.036276046873081974 12 0.036387027251148542 13 0.032717317885676694 14 0.033317391470856925
 		 15 0.033630435432182956 16 0.032305808535715429 17 0.032029148045112706 18 0.034188627377814695
 		 19 0.031587500073398486 20 0.034140794694119826 21 0.034496811647724737 22 0.033670777014232302
-		 23 0.037168567932174039 24 0.036943722438116028 25 0.038332361290853975 26 0.037557134087385834
+		 23 0.037168567932174046 24 0.036943722438116028 25 0.038332361290853975 26 0.037557134087385834
 		 27 0.037275606867039575 28 0.0367452784863877 29 0.031539898457405638 30 0.03130670450719672
 		 31 0.033655029341423205 32 0.031801958099240961 33 0.028444559273967645 34 0.030530462542113248
 		 35 0.029842185781880356 36 0.029266806430413083 37 0.022914031081258075 38 0.020519509179569191
@@ -17195,19 +17194,19 @@ createNode animCurveTA -n "LeftShin_rotate_hair_inputAX";
 		 43 0.0092917695663606442 44 0.007702616650788024 45 -0.0086356734379993833 46 -0.035405727491548043
 		 47 -0.049892819616673169 48 -0.046767664892999453 49 -0.048207670841767913 50 -0.046775881472511285
 		 51 -0.049831668990912244 52 -0.049870337774473451 53 -0.046899817738709833 54 -0.048404183977815499
-		 55 -0.046688626766865686 56 -0.049384441575582083 57 -0.048838554074743051 58 -0.048812677850791845
+		 55 -0.046688626766865693 56 -0.049384441575582083 57 -0.048838554074743051 58 -0.048812677850791845
 		 59 -0.045409227913152654 60 -0.046215007959683287 61 -0.047423757601886767 62 -0.04512970195648569
 		 63 -0.047017052443656289 64 -0.045290233716962842 65 -0.047577774370221378 66 -0.046220189068152867
-		 67 -0.0450013660231511 68 -0.043866352198989753 69 -0.046644930365409586 70 -0.045574045643935523
+		 67 -0.045001366023151107 68 -0.043866352198989753 69 -0.046644930365409586 70 -0.045574045643935523
 		 71 -0.044475757532655667 72 -0.043241122187983393 73 -0.045860686691154499 74 -0.044339262347225517
 		 75 -0.04265708915479776 76 -0.04462113898010131 77 -0.042395765855308895 78 -0.043803127921299617
 		 79 -0.040893118408685231 80 -0.041499619717985173 81 -0.0416959230490552 82 -0.041382961340366432
-		 83 -0.040551965469249336 84 -0.043091313829974151 85 -0.041077466434088834 86 -0.042389641183756717
+		 83 -0.040551965469249336 84 -0.043091313829974151 85 -0.041077466434088834 86 -0.042389641183756724
 		 87 -0.039027510876650719 88 -0.038877169967614547 89 -0.042031366826345964 90 -0.040337088032735502
 		 91 -0.041756205536402566 92 -0.042278547631083477 93 -0.041937166409321276 94 -0.040524708917867622
 		 95 -0.042150766668311183 96 -0.038613885284009733 97 -0.039142309815518646 98 -0.040674927071016935
 		 99 -0.03908756440029354 100 -0.038483174762291746 101 -0.03872178323057849 102 -0.039835088846997158
-		 103 -0.041766924737200853 104 -0.040518050101840196 105 -0.040056878164480628 106 -0.040289881582738954
+		 103 -0.04176692473720086 104 -0.040518050101840196 105 -0.040056878164480628 106 -0.040289881582738954
 		 107 -0.041204593800084857 108 -0.038689444642772852 109 -0.040985955531459929 110 -0.039742198030194936
 		 111 -0.039071320627200916 112 -0.038949781208542603 113 -0.039305874929539318 114 -0.040240361277036826
 		 115 -0.041511142185127393 116 -0.039065236670303503 117 -0.041233378214065787 118 -0.03943946024088462
@@ -17217,8 +17216,8 @@ createNode animCurveTA -n "LeftShin_rotate_hair_inputAX";
 		 131 -0.041459887808141256 132 -0.041069646708855198 133 -0.040436358272009053 134 -0.039675925694680925
 		 135 -0.038719166624195125 136 -0.04174422057661141 137 -0.040215863531648605 138 -0.038397937344902738
 		 139 -0.040513129331195268 140 -0.04229524270890498 141 -0.039259875465710643 142 -0.040178059731348484
-		 143 -0.040601197187248743 144 -0.040504637223789879 145 -0.039824807356176252 146 -0.038588301910905495
-		 147 -0.041211475896617202 148 -0.038663846862264914 149 -0.039933844473781559 150 -0.040464692604301751
+		 143 -0.040601197187248743 144 -0.040504637223789879 145 -0.039824807356176259 146 -0.038588301910905495
+		 147 -0.041211475896617202 148 -0.038663846862264914 149 -0.039933844473781566 150 -0.040464692604301751
 		 151 -0.040227653100249734 152 -0.039294603058772762 153 -0.041971811314339136 154 -0.039300419953298527
 		 155 -0.040274465289997001 156 -0.040319939355503459 157 -0.03940052699496055 158 -0.041991700011661678
 		 159 -0.039082169142673297 160 -0.039624895026328148;
@@ -17236,16 +17235,16 @@ createNode animCurveTA -n "LeftShin_rotate_hair_inputAY";
 	rename -uid "176BBA13-4C3A-D84A-8B53-FEA9557BCA23";
 	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 160 ".ktv[0:159]"  1 0.10555541351801029 2 0.10533656150727409
+	setAttr -s 160 ".ktv[0:159]"  1 0.10555541351801029 2 0.10533656150727411
 		 3 0.10518248650832336 4 0.10559195506925954 5 0.10508829490325571 6 0.10419726750517923
 		 7 0.1057744583658653 8 0.10647688481027026 9 0.1065273927984408 10 0.10747015930321288
 		 11 0.10780797234632342 12 0.1075916460985 13 0.1064744299837062 14 0.10603207908725935
 		 15 0.10585281233920726 16 0.10567004849525491 17 0.10576852298968915 18 0.10634103625199744
-		 19 0.10613737193808902 20 0.10684937049460126 21 0.10719334033226201 22 0.10729989412447537
+		 19 0.10613737193808902 20 0.10684937049460126 21 0.10719334033226202 22 0.10729989412447537
 		 23 0.10812754640717712 24 0.10827907008867003 25 0.10862372181132203 26 0.10853251694602842
 		 27 0.10818463248410291 28 0.10742008172510185 29 0.10580283071980534 30 0.10542866606318911
-		 31 0.10588295651345533 32 0.10570698652243488 33 0.10537812783775245 34 0.10604196684495669
-		 35 0.10630669522417587 36 0.10658059731956335 37 0.10587468462074386 38 0.10586574552527774
+		 31 0.10588295651345533 32 0.10570698652243489 33 0.10537812783775245 34 0.10604196684495669
+		 35 0.10630669522417587 36 0.10658059731956335 37 0.10587468462074387 38 0.10586574552527774
 		 39 0.10506758596404013 40 0.10532967286122913 41 0.10363014930110098 42 0.10070948753148669
 		 43 0.098182626211151813 44 0.09673519856598628 45 0.14261913956519151 46 0.22842607824284264
 		 47 0.27463046907325983 48 0.27518005894566244 49 0.2749554571640741 50 0.27521804465102223
@@ -17253,7 +17252,7 @@ createNode animCurveTA -n "LeftShin_rotate_hair_inputAY";
 		 55 0.27547230868211564 56 0.27507750998877906 57 0.27522445591820122 58 0.27530408725834221
 		 59 0.27597597495093507 60 0.27590075938927128 61 0.2757657618656566 62 0.27624492221580499
 		 63 0.27602971294661188 64 0.27639720623658148 65 0.2760918109265853 66 0.27642361080392619
-		 67 0.27673141237049237 68 0.27701474762025013 69 0.27662626615718316 70 0.27690691722171845
+		 67 0.27673141237049237 68 0.27701474762025013 69 0.27662626615718322 70 0.27690691722171845
 		 71 0.2771957448712023 72 0.27748645750652629 73 0.27713118161340078 74 0.27747796536714719
 		 75 0.27786657624205213 76 0.27762266571606514 77 0.27809228307547051 78 0.27793613431173486
 		 79 0.27851355286594059 80 0.27850086941775204 81 0.2785308927954338 82 0.27865695029331339
@@ -17263,20 +17262,20 @@ createNode animCurveTA -n "LeftShin_rotate_hair_inputAY";
 		 95 0.27911147667378333 96 0.27971402845277443 97 0.27961876697197124 98 0.27935450812870161
 		 99 0.27962154841017367 100 0.27974410560600876 101 0.27968941446160023 102 0.27950067744885571
 		 103 0.27917343161326252 104 0.27938372172249576 105 0.27946201186476255 106 0.27941656073613957
-		 107 0.27928103575421642 108 0.27969666845377228 109 0.27931366500610522 110 0.27951736744320621
+		 107 0.27928103575421648 108 0.27969666845377228 109 0.27931366500610522 110 0.27951736744320621
 		 111 0.27962410405437838 112 0.27965800427542437 113 0.27959197804182528 114 0.27942734813655806
-		 115 0.27920812649222732 116 0.27963740191907954 117 0.27925893155129544 118 0.27955991555142129
+		 115 0.27920812649222732 116 0.27963740191907954 117 0.2792589315512955 118 0.27955991555142129
 		 119 0.27908761819346417 120 0.2792949478538676 121 0.27941921838499961 122 0.2795536241972591
-		 123 0.27964438354745214 124 0.27970837736397436 125 0.27974622521013254 126 0.27908410717810289
+		 123 0.27964438354745214 124 0.27970837736397436 125 0.27974622521013254 126 0.27908410717810295
 		 127 0.27908460922815304 128 0.27910232765478032 129 0.27915496219697189 130 0.2791692884943045
 		 131 0.27923081655069748 132 0.27929968765476937 133 0.27940427160867809 134 0.27952734588758021
 		 135 0.27968794227452398 136 0.27918172291052923 137 0.27943372550581308 138 0.27974645560897221
-		 139 0.27938088659506943 140 0.2790889741318921 141 0.27959341395258752 142 0.27945314460741316
+		 139 0.27938088659506943 140 0.2790889741318921 141 0.27959341395258752 142 0.27945314460741322
 		 143 0.27936143986216455 144 0.27938542363976082 145 0.27949597844967877 146 0.27972557333845505
 		 147 0.27925820812896318 148 0.27971061408204778 149 0.27948523294776234 150 0.27939502309500858
 		 151 0.2794418913122626 152 0.27958933476992959 153 0.27913071212724927 154 0.27959425882558436
 		 155 0.27943851297456324 156 0.27941779567783986 157 0.27958152300896716 158 0.27913407511816757
-		 159 0.27962964650056399 160 0.27954219319742574;
+		 159 0.27962964650056404 160 0.27954219319742574;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
@@ -17351,36 +17350,36 @@ createNode animCurveTA -n "LeftFoot_rotateX";
 		 7 5.9094896137729673 8 5.0331688664280945 9 3.4345637479879616 10 1.8993264806506851
 		 11 1.2130313138592628 12 1.2130031354530917 13 1.2130108176254648 14 1.2129966889855825
 		 15 1.2130094169047776 16 1.2687563478200299 17 1.4216650799770774 18 1.6500818593328286
-		 19 1.932483906484227 20 2.24724422516223 21 2.5728260945948582 22 2.8876019875442624
+		 19 1.932483906484227 20 2.2472442251622304 21 2.5728260945948582 22 2.8876019875442624
 		 23 3.17003049700129 24 3.3984659041690248 25 3.5513443518057657 26 3.6071117201415119
 		 27 3.2330168008551157 28 2.4100525687635121 29 1.5870959127168411 30 1.2130083848764639
 		 31 1.2129918898904555 32 1.2129984999050287 33 1.2130063731507763 34 1.2130099904414908
 		 35 1.2130060422229845 36 1.6324923821194979 37 2.6327269028630016 38 3.8265479516096326
 		 39 4.8267987318652921 40 5.2462561311874083 41 4.9428214424726029 42 4.218437601698235
-		 43 3.3521073131529961 44 2.6227227988625552 45 2.0048194342616328 46 1.452309034906236
+		 43 3.3521073131529961 44 2.6227227988625557 45 2.0048194342616328 46 1.452309034906236
 		 47 1.2130486288978408 48 1.2181372512303934 49 1.2331029117134675 50 1.2575456540414773
 		 51 1.2910080278535569 52 1.3331413174088753 53 1.383464201264208 54 1.4415767716068766
-		 55 1.5070412374428284 56 1.5794608153278187 57 1.6584084616284021 58 1.7434252429128401
+		 55 1.5070412374428286 56 1.5794608153278187 57 1.6584084616284021 58 1.7434252429128401
 		 59 1.834145640201253 60 1.9301277820338496 61 2.0309281416194653 62 2.1361899790601786
 		 63 2.245403519516886 64 2.3582353326129097 65 2.4741798224162297 66 2.5928887641471614
-		 67 2.7139035456185501 68 2.8368017252675801 69 2.9612050859724666 70 3.0866147033224896
+		 67 2.7139035456185505 68 2.8368017252675801 69 2.9612050859724666 70 3.0866147033224896
 		 71 3.2126710871398361 72 3.3389706787327467 73 3.4650449523664286 74 3.5904746866540638
 		 75 3.714839812605724 76 3.8377390518776888 77 3.958759958329765 78 4.0774542547499024
 		 79 4.193417403634573 80 4.3062224989935469 81 4.4154623416092056 82 4.5207043637531363
 		 83 4.6215104441142962 84 4.7175000967349865 85 4.8082079595479588 86 4.8932533168082148
-		 87 4.972176307068092 88 5.0445759291407173 89 5.1100570977965756 90 5.1681556080831603
+		 87 4.972176307068092 88 5.0445759291407173 89 5.1100570977965756 90 5.1681556080831612
 		 91 5.2184759966921339 92 5.2606072102047721 93 5.2941028277116775 94 5.3185265158974699
 		 95 5.3335122041930703 96 5.3385963667542224 97 5.3366022594760798 98 5.3306487169941601
 		 99 5.3208964570385788 100 5.307360183770478 101 5.2902057597410499 102 5.2695043530751136
-		 103 5.2452972086467753 104 5.2177134293384659 105 5.1868891303457207 106 5.1528996077863392
+		 103 5.2452972086467753 104 5.2177134293384659 105 5.1868891303457207 106 5.15289960778634
 		 107 5.1157849964839883 108 5.0757251367256178 109 5.0327516725699937 110 4.9869564326366165
-		 111 4.9384531964677203 112 4.8873697627718977 113 4.8337445518732993 114 4.7776964678366287
-		 115 4.7193298040305249 116 4.6587221876384914 117 4.5959757781899153 118 4.531170510028554
+		 111 4.9384531964677212 112 4.8873697627718986 113 4.8337445518732993 114 4.7776964678366296
+		 115 4.7193298040305249 116 4.6587221876384923 117 4.5959757781899153 118 4.531170510028554
 		 119 4.464443948711164 120 4.3958465589782305 121 4.3254849555768384 122 4.2534492489934141
 		 123 4.1798509664827774 124 4.1047426581998518 125 4.0282899911080499 126 3.9505231468416788
 		 127 3.8715540726859881 128 3.791505355901625 129 3.7104533923314897 130 3.628479314330856
-		 131 3.545654639073077 132 3.4621294950912955 133 3.3780026863164756 134 3.2933096109359399
-		 135 3.2081856867889345 136 3.1227173233352259 137 3.0369974834249178 138 2.9511027039586675
+		 131 3.545654639073077 132 3.4621294950912955 133 3.378002686316476 134 3.2933096109359399
+		 135 3.2081856867889345 136 3.1227173233352263 137 3.0369974834249178 138 2.9511027039586675
 		 139 2.8651692188079787 140 2.7792582211597732 141 2.693476990508811 142 2.6079068547176036
 		 143 2.5226448525203335 144 2.4378155398401335 145 2.3534787490619165 146 2.2697451937327973
 		 147 2.1866830850893111 148 2.1044174482175091 149 2.0230513724634021 150 1.9426332709064882
@@ -17401,8 +17400,8 @@ createNode animCurveTA -n "LeftFoot_rotateY";
 	rename -uid "2920D5A4-408B-764A-CBC3-3E9FA66A7119";
 	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 160 ".ktv[0:159]"  1 0.0016757238147733567 2 0.0015640322954116345
-		 3 0.0013417699883953268 4 0.0011022783997145674 5 0.0010084063550868127 6 0.00050361712861309743
+	setAttr -s 160 ".ktv[0:159]"  1 0.0016757238147733569 2 0.0015640322954116345
+		 3 0.0013417699883953268 4 0.0011022783997145676 5 0.0010084063550868127 6 0.00050361712861309743
 		 7 0 8 0.00027920676867501816 9 0.00090115432723289989 10 0.0015361435464236843 11 0.0018050042880537391
 		 12 0.001803687736022903 13 0.001772951558202903 14 0.0017677013018631085 15 0.0017507558730984062
 		 16 0.0017256992519232631 17 0.0016650305162324904 18 0.0015601964546752612 19 0.0014510039751762633
@@ -17417,11 +17416,11 @@ createNode animCurveTA -n "LeftFoot_rotateY";
 		 52 0.0030779348936658202 53 0.0030309456523268264 54 0.0030040923282978254 55 0.0029493966364502575
 		 56 0.0028863035235571137 57 0.0028407094494881983 58 0.0027723587656024026 59 0.0026923087537921407
 		 60 0.0026318863189682827 61 0.0025675491418617035 62 0.002493783081408255 63 0.0023877307712238251
-		 64 0.00231890790264355 65 0.0022390711636544915 66 0.0021432925231481066 67 0.0020527420794892982
-		 68 0.0019663852185387641 69 0.0018776679144985561 70 0.0017855922038446713 71 0.0016827678005390378
+		 64 0.00231890790264355 65 0.0022390711636544919 66 0.0021432925231481066 67 0.0020527420794892982
+		 68 0.0019663852185387645 69 0.0018776679144985561 70 0.0017855922038446713 71 0.001682767800539038
 		 72 0.0016021741137706479 73 0.0015091478527094607 74 0.0014183176002400856 75 0.0013284178420690741
-		 76 0.0012341743840011271 77 0.0011435201648077383 78 0.0010670899752963049 79 0.00098054090411351541
-		 80 0.0008846056060399333 81 0.00082161737291810109 82 0.00073622108136354265 83 0.00067081066790143705
+		 76 0.0012341743840011271 77 0.0011435201648077385 78 0.0010670899752963049 79 0.00098054090411351541
+		 80 0.0008846056060399333 81 0.0008216173729181012 82 0.00073622108136354265 83 0.00067081066790143705
 		 84 0.00059733695816123283 85 0.00051112467750814459 86 0.00045554379043624769 87 0.00040134794210927566
 		 88 0.00034346427955317079 89 0.00028946683866996984 90 0.00026579485833725378 91 0.00022128438234325702
 		 92 0.00019561925244925357 93 0.00017255501581599515 94 0.00015177490064042154 95 0.0001307091740429466
@@ -17430,17 +17429,17 @@ createNode animCurveTA -n "LeftFoot_rotateY";
 		 103 0.00018544552133045793 104 0.00020658717379874972 105 0.00022017244511247531
 		 106 0.00024671173707178923 107 0.00025649331380940191 108 0.00027779649330233932
 		 109 0.0003061941834833781 110 0.00031745113950143829 111 0.00035871916233992792 112 0.00037868403456259021
-		 113 0.000412169582868732 114 0.00043615141371809555 115 0.00046955946202313393 116 0.00049835306278710493
-		 117 0.000527288509249007 118 0.0005634201368947409 119 0.00058911243633471991 120 0.0006211133631730993
+		 113 0.000412169582868732 114 0.00043615141371809561 115 0.00046955946202313393 116 0.00049835306278710493
+		 117 0.000527288509249007 118 0.00056342013689474101 119 0.00058911243633471991 120 0.0006211133631730993
 		 121 0.00065812111731346429 122 0.00069754097602435928 123 0.00073483745010215391
-		 124 0.00076909833509297698 125 0.0007971755312530742 126 0.00083090219923353267 127 0.00087301731472028208
+		 124 0.00076909833509297709 125 0.0007971755312530742 126 0.00083090219923353267 127 0.00087301731472028208
 		 128 0.00091003722820090841 129 0.0009392174208822145 130 0.00098010148588465753 131 0.0010094824964266814
 		 132 0.0010452176222466465 133 0.0010788368869782978 134 0.0011275693036605647 135 0.0011601643889335306
-		 136 0.0011836076805281004 137 0.0012267717723648149 138 0.001262915355839154 139 0.0012940376644206013
+		 136 0.0011836076805281006 137 0.0012267717723648149 138 0.001262915355839154 139 0.0012940376644206013
 		 140 0.0013131416165879479 141 0.001354167051605004 142 0.0013798692615176382 143 0.0014100981081675995
 		 144 0.0014338547704917752 145 0.001462716420347175 146 0.0014785896795887199 147 0.0015120819005105121
 		 148 0.0015291587651931396 149 0.0015592666257275227 150 0.001574803912931068 151 0.0015963874004446502
-		 152 0.0016071380250776224 153 0.0016298648729873681 154 0.0016263954354278362 155 0.0016409430461921026
+		 152 0.0016071380250776224 153 0.0016298648729873683 154 0.0016263954354278362 155 0.0016409430461921026
 		 156 0.0016598245009307865 157 0.0016600351893577916 158 0.0016680883768655629 159 0.0016619620302587045
 		 160 0.001669068646083088;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
@@ -17461,15 +17460,15 @@ createNode animCurveTA -n "LeftFoot_rotateZ";
 		 3 -0.020247757374144915 4 -0.019494982487559261 5 -0.01916424373029994 6 -0.016934099384806976
 		 7 -0.01473789497359332 8 -0.016069665432771302 9 -0.019013048894614821 10 -0.021995450421479351
 		 11 -0.023355568827121316 12 -0.023248158847425076 13 -0.022990182127948719 14 -0.022736356088425679
-		 15 -0.022646628438328598 16 -0.022584630184734937 17 -0.022440593303464453 18 -0.022228559923458357
+		 15 -0.022646628438328598 16 -0.022584630184734941 17 -0.022440593303464453 18 -0.022228559923458357
 		 19 -0.021935857429005376 20 -0.021645907280686744 21 -0.021348203475396059 22 -0.02105750637080641
 		 23 -0.020785526720621231 24 -0.020579503200169661 25 -0.020427566037476776 26 -0.020393993617627507
-		 27 -0.020548040894650482 28 -0.020884212417685909 29 -0.021265961301760408 30 -0.021449991700171089
+		 27 -0.020548040894650486 28 -0.020884212417685909 29 -0.021265961301760408 30 -0.021449991700171089
 		 31 -0.021488394874207527 32 -0.021593168085311292 33 -0.021720523597779505 34 -0.021829256513023483
 		 35 -0.021868269857628613 36 -0.021310706829640372 37 -0.019967870788707397 38 -0.01839735907488484
-		 39 -0.01706448321110314 40 -0.016504483344616606 41 -0.017162836639174121 42 -0.018573416227402832
+		 39 -0.01706448321110314 40 -0.016504483344616606 41 -0.017162836639174121 42 -0.018573416227402835
 		 43 -0.02001579803775673 44 -0.020686971975422047 45 -0.026059652896356856 46 -0.036095241631348127
-		 47 -0.041485404042796999 48 -0.041447413593525127 49 -0.041416986974375833 50 -0.041339157824547591
+		 47 -0.041485404042796999 48 -0.041447413593525127 49 -0.041416986974375833 50 -0.041339157824547598
 		 51 -0.041241477955310551 52 -0.041099820870572422 53 -0.040942135649186882 54 -0.040773188338800323
 		 55 -0.040553575790545061 56 -0.04032918298315892 57 -0.040090331646515938 58 -0.039837344768077598
 		 59 -0.039558895697433212 60 -0.039260222268109206 61 -0.038941850478442279 62 -0.038611323244020702
@@ -17485,17 +17484,17 @@ createNode animCurveTA -n "LeftFoot_rotateZ";
 		 99 -0.028799845536609515 100 -0.028759825746082594 101 -0.028701426596587951 102 -0.028666012890886508
 		 103 -0.028581095415615921 104 -0.028507472691534742 105 -0.028430847816764804 106 -0.028332945795836031
 		 107 -0.028237002332311075 108 -0.028153406406819063 109 -0.028021864743368523 110 -0.027905288397096682
-		 111 -0.027789261906809391 112 -0.02765386673665016 113 -0.027521309112105378 114 -0.02737923307388412
+		 111 -0.027789261906809391 112 -0.02765386673665016 113 -0.027521309112105381 114 -0.02737923307388412
 		 115 -0.027228297738402192 116 -0.027060352964919633 117 -0.026928036993776425 118 -0.026768268839603371
 		 119 -0.026609349198668641 120 -0.026440665068163928 121 -0.026295601046228238 122 -0.026110806470495629
 		 123 -0.025927709211960134 124 -0.025752206636218643 125 -0.025586027460343139 126 -0.025417302714576335
 		 127 -0.025229268405752018 128 -0.02505387889930482 129 -0.024872137850043181 130 -0.02471166306971416
 		 131 -0.024535079476896308 132 -0.024351540642162269 133 -0.024178959314275932 134 -0.02399845927759077
-		 135 -0.023840359152558138 136 -0.023676679436144245 137 -0.023535511943161926 138 -0.023340604708662904
+		 135 -0.023840359152558138 136 -0.023676679436144248 137 -0.023535511943161926 138 -0.023340604708662904
 		 139 -0.023220966361751812 140 -0.023061693539386568 141 -0.022906914886055684 142 -0.022743064590386594
 		 143 -0.022626910333800546 144 -0.022479253158863965 145 -0.022371446533316942 146 -0.022227317862763586
 		 147 -0.022131952994919973 148 -0.022020320161240538 149 -0.021913430292463291 150 -0.02181431995208663
-		 151 -0.021727485940257304 152 -0.021650176210496874 153 -0.021567544318221603 154 -0.021509776843453728
+		 151 -0.021727485940257307 152 -0.021650176210496874 153 -0.021567544318221603 154 -0.021509776843453728
 		 155 -0.021468249613022732 156 -0.021437453925478762 157 -0.021383509039913276 158 -0.02137441107559919
 		 159 -0.021356762860845393 160 -0.021350981135693826;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
@@ -17569,16 +17568,16 @@ createNode animCurveTA -n "RightThigh_rotate_hair_inputAY";
 	setAttr ".wgt" no;
 	setAttr -s 160 ".ktv[0:159]"  1 -13.129690564116897 2 -13.129690564116897
 		 3 -13.129692312954775 4 -13.129692312954775 5 -13.139183975231171 6 -13.139152716492006
-		 7 -13.128968829106825 8 -13.129022088431901 9 -13.129040152357767 10 -13.129019692573543
+		 7 -13.128968829106825 8 -13.129022088431903 9 -13.129040152357767 10 -13.129019692573543
 		 11 -13.128639191486993 12 -13.12866587685247 13 -13.12866587685247 14 -13.128639191486993
 		 15 -13.128637818426373 16 -13.128639257477085 17 -13.12866587685247 18 -13.128639191486993
 		 19 -13.128637818426373 20 -13.12865238983311 21 -13.128641030301711 22 -13.12865238983311
-		 23 -13.12865238983311 24 -13.128641030301711 25 -13.128628784358334 26 -13.128659265326046
+		 23 -13.12865238983311 24 -13.128641030301711 25 -13.128628784358336 26 -13.128659265326046
 		 27 -13.128664701768782 28 -13.128660054659754 29 -13.128660054659754 30 -13.128664701768782
 		 31 -13.128628718368889 32 -13.128660054659754 33 -13.128659265326046 34 -13.128659265326046
-		 35 -13.129777461793184 36 -13.129764430200046 37 -13.129777461793184 38 -13.129763710675041
-		 39 -13.129777461793184 40 -13.129777461793184 41 -13.129777461793184 42 -13.129808763308864
-		 43 -13.129771959223625 44 -13.129777461793184 45 -13.129771576497051 46 -13.129771576497051
+		 35 -13.129777461793186 36 -13.129764430200046 37 -13.129777461793186 38 -13.129763710675041
+		 39 -13.129777461793186 40 -13.129777461793186 41 -13.129777461793186 42 -13.129808763308864
+		 43 -13.129771959223625 44 -13.129777461793186 45 -13.129771576497051 46 -13.129771576497051
 		 47 -13.129771576497051 48 -13.129771576497051 49 -13.129771576497051 50 -13.129771576497051
 		 51 -13.129771576497051 52 -13.129771576497051 53 -13.129771576497051 54 -13.129771576497051
 		 55 -13.129771576497051 56 -13.129771576497051 57 -13.129771576497051 58 -13.129771576497051
@@ -17590,10 +17589,10 @@ createNode animCurveTA -n "RightThigh_rotate_hair_inputAY";
 		 79 -13.129771576497051 80 -13.129771576497051 81 -13.129771576497051 82 -13.129771576497051
 		 83 -13.129771576497051 84 -13.129771576497051 85 -13.129771576497051 86 -13.129771576497051
 		 87 -13.129771576497051 88 -13.129771576497051 89 -13.129771576497051 90 -13.129771576497051
-		 91 -13.129771576497051 92 -13.129763129766662 93 -13.129763783231986 94 -13.129763783231986
-		 95 -13.129763783231986 96 -13.129763783231986 97 -13.129763783231986 98 -13.129763783231986
-		 99 -13.129763783231986 100 -13.129763783231986 101 -13.129763783231986 102 -13.129763783231986
-		 103 -13.129763783231986 104 -13.129763783231986 105 -13.129763783231986 106 -13.129779199851532
+		 91 -13.129771576497051 92 -13.129763129766662 93 -13.129763783231988 94 -13.129763783231988
+		 95 -13.129763783231988 96 -13.129763783231988 97 -13.129763783231988 98 -13.129763783231988
+		 99 -13.129763783231988 100 -13.129763783231988 101 -13.129763783231988 102 -13.129763783231988
+		 103 -13.129763783231988 104 -13.129763783231988 105 -13.129763783231988 106 -13.129779199851532
 		 107 -13.129779199851532 108 -13.129779199851532 109 -13.129779199851532 110 -13.12978672887607
 		 111 -13.129779787255101 112 -13.129779199851532 113 -13.129779199851532 114 -13.129779199851532
 		 115 -13.129777329671976 116 -13.129779199851532 117 -13.129779199851532 118 -13.129779199851532
@@ -17678,7 +17677,7 @@ createNode animCurveTA -n "RightShin_rotate_hair_inputAX";
 	setAttr ".tan" 2;
 	setAttr ".wgt" no;
 	setAttr -s 160 ".ktv[0:159]"  1 0.03486657128574723 2 0.043545460373358914
-		 3 0.058150786873621914 4 0.061271911300156572 5 0.022170995337938045 6 0.0056081720603417453
+		 3 0.058150786873621914 4 0.061271911300156572 5 0.022170995337938048 6 0.0056081720603417453
 		 7 0.02947516601386508 8 0.023573929659749276 9 0.017962701732403087 10 0.022254713346587938
 		 11 0.023252665618021424 12 0.02305689413852419 13 0.022664318337538722 14 0.02218630918683219
 		 15 0.021762816026097167 16 0.021446795664554315 17 0.021264855897409229 18 0.021306196019739387
@@ -17687,31 +17686,31 @@ createNode animCurveTA -n "RightShin_rotate_hair_inputAX";
 		 27 -0.021729413611661121 28 -0.031162860707673087 29 -0.040388998928210899 30 -0.049079355670665264
 		 31 -0.056877421215653097 32 -0.06354798635729246 33 -0.068684099129530857 34 -0.072006529911086525
 		 35 -0.072795047291872028 36 -0.070208045143814582 37 -0.063245928392783951 38 -0.052887601675007639
-		 39 -0.040276463008190246 40 -0.026459271510113312 41 -0.012526202850611155 42 0.00029949989458592118
-		 43 0.010997774378168393 44 0.018235216668628224 45 0.020784597992784856 46 0.020781065008591913
-		 47 0.020781065008591913 48 0.020784597992784856 49 0.020784597992784856 50 0.020784597992784856
-		 51 0.020781065008591913 52 0.020784597992784856 53 0.020784597992784856 54 0.020784597992784856
+		 39 -0.040276463008190252 40 -0.026459271510113316 41 -0.012526202850611155 42 0.00029949989458592118
+		 43 0.010997774378168393 44 0.018235216668628224 45 0.020784597992784856 46 0.020781065008591917
+		 47 0.020781065008591917 48 0.020784597992784856 49 0.020784597992784856 50 0.020784597992784856
+		 51 0.020781065008591917 52 0.020784597992784856 53 0.020784597992784856 54 0.020784597992784856
 		 55 0.020784597992784856 56 0.020784597992784856 57 0.020784597992784856 58 0.020784597992784856
-		 59 0.020782795551734193 60 0.020782795551734193 61 0.020781065008591913 62 0.020784597992784856
-		 63 0.020782795551734193 64 0.020782795551734193 65 0.020784597992784856 66 0.020781065008591913
-		 67 0.020784270276230081 68 0.020784270276230081 69 0.020787418102428987 70 0.020781065008591913
-		 71 0.020782795551734193 72 0.020781065008591913 73 0.020784597992784856 74 0.020784270276230081
+		 59 0.020782795551734193 60 0.020782795551734193 61 0.020781065008591917 62 0.020784597992784856
+		 63 0.020782795551734193 64 0.020782795551734193 65 0.020784597992784856 66 0.020781065008591917
+		 67 0.020784270276230081 68 0.020784270276230081 69 0.020787418102428987 70 0.020781065008591917
+		 71 0.020782795551734193 72 0.020781065008591917 73 0.020784597992784856 74 0.020784270276230081
 		 75 0.020787418102428987 76 0.020784270276230081 77 0.020784270276230081 78 0.020784270276230081
 		 79 0.020787418102428987 80 0.020784270276230081 81 0.020787418102428987 82 0.020784270276230081
 		 83 0.020784270276230081 84 0.020784270276230081 85 0.020787418102428987 86 0.020787418102428987
 		 87 0.020787418102428987 88 0.020783696772259639 89 0.020783696772259639 90 0.020784270276230081
 		 91 0.020783696772259639 92 0.020791079485592695 93 0.020792976825612274 94 0.02079477926643223
-		 95 0.020792976825612274 96 0.020797341991527305 97 0.02079477926643223 98 0.020792976825612274
+		 95 0.020792976825612274 96 0.020797341991527309 97 0.02079477926643223 98 0.020792976825612274
 		 99 0.020792976825612274 100 0.02079477926643223 101 0.02079477926643223 102 0.020792976825612274
 		 103 0.02079477926643223 104 0.02079477926643223 105 0.02079477926643223 106 0.020784404714274941
-		 107 0.020793683040262852 108 0.020819435273104314 109 0.02084229707258926 110 0.02091508909317424
+		 107 0.020793683040262852 108 0.020819435273104314 109 0.020842297072589264 110 0.02091508909317424
 		 111 0.020986165126373288 112 0.02106393623434195 113 0.021147284490745804 114 0.021273325619985076
 		 115 0.021410950603308714 116 0.021510210127147534 117 0.021665722294496967 118 0.021817771357508245
 		 119 0.021983182736629768 120 0.022146228626766004 121 0.022321854644978739 122 0.02252286664574573
 		 123 0.022713501248960405 124 0.022907028637021879 125 0.023112778972991369 126 0.023327609662009453
-		 127 0.023547997880325942 128 0.02375966865866511 129 0.023978758149808665 130 0.024221489723907499
-		 131 0.024444841459339877 132 0.024661871923679291 133 0.024885778125842539 134 0.025130792690211661
-		 135 0.025367393325769816 136 0.025589622089875298 137 0.02580731392800811 138 0.026038057837471974
+		 127 0.023547997880325942 128 0.02375966865866511 129 0.023978758149808668 130 0.024221489723907499
+		 131 0.024444841459339881 132 0.024661871923679291 133 0.024885778125842539 134 0.025130792690211661
+		 135 0.025367393325769819 136 0.025589622089875298 137 0.02580731392800811 138 0.026038057837471974
 		 139 0.026260378878559747 140 0.026463039511618512 141 0.026698216194537886 142 0.026900948120871192
 		 143 0.027095445157433447 144 0.027306543297115304 145 0.027491999011197615 146 0.027679729649588179
 		 147 0.027861333244929773 148 0.028009076601641706 149 0.028159812631152126 150 0.028318439423054627
@@ -17735,41 +17734,41 @@ createNode animCurveTA -n "RightShin_rotate_hair_inputAY";
 	setAttr -s 160 ".ktv[0:159]"  1 -0.10739732808443257 2 -0.081418666891263564
 		 3 -0.038088313313156243 4 -0.029191359545684432 5 -0.10465984142301769 6 -0.13697375302035542
 		 7 -0.10329361759014771 8 -0.10307727626381526 9 -0.10327629115266322 10 -0.10407080224116705
-		 11 -0.10080274078917897 12 -0.10075008633831922 13 -0.10065249579873399 14 -0.10049974587369345
+		 11 -0.10080274078917897 12 -0.10075008633831922 13 -0.100652495798734 14 -0.10049974587369345
 		 15 -0.10036149698697636 16 -0.10019450570852308 17 -0.10003475694223897 18 -0.099948362289575807
 		 19 -0.09987273921452372 20 -0.099803668853646776 21 -0.10326705953357224 22 -0.11300508428290239
 		 23 -0.12803696709367043 24 -0.14745078768262232 25 -0.17023592474366395 26 -0.19543289206631537
 		 27 -0.22209832063143295 28 -0.249269050435967 29 -0.27596797414214558 30 -0.30121632903455098
 		 31 -0.32406234622881419 32 -0.34352695811650796 33 -0.3586237590867794 34 -0.36839842512525273
-		 35 -0.37269515089827204 36 -0.36505884338197098 37 -0.34432341731625754 38 -0.31377925902353954
+		 35 -0.3726951508982721 36 -0.36505884338197098 37 -0.34432341731625754 38 -0.31377925902353954
 		 39 -0.27672377893827266 40 -0.23640318178653105 41 -0.19613496673313718 42 -0.15913324667002171
-		 43 -0.12870977716824766 44 -0.10805752574546101 45 -0.10038689643474215 46 -0.10038496625616848
-		 47 -0.10038496625616848 48 -0.10038689643474215 49 -0.10038689643474215 50 -0.10038689643474215
-		 51 -0.10038496625616848 52 -0.10038689643474215 53 -0.10038689643474215 54 -0.10038689643474215
-		 55 -0.10038689643474215 56 -0.10038689643474215 57 -0.10038689643474215 58 -0.10038689643474215
-		 59 -0.10039122729248015 60 -0.10039122729248015 61 -0.10038496625616848 62 -0.10038689643474215
-		 63 -0.10039122729248015 64 -0.10039122729248015 65 -0.10038689643474215 66 -0.10038496625616848
+		 43 -0.12870977716824766 44 -0.10805752574546101 45 -0.10038689643474216 46 -0.10038496625616848
+		 47 -0.10038496625616848 48 -0.10038689643474216 49 -0.10038689643474216 50 -0.10038689643474216
+		 51 -0.10038496625616848 52 -0.10038689643474216 53 -0.10038689643474216 54 -0.10038689643474216
+		 55 -0.10038689643474216 56 -0.10038689643474216 57 -0.10038689643474216 58 -0.10038689643474216
+		 59 -0.10039122729248015 60 -0.10039122729248015 61 -0.10038496625616848 62 -0.10038689643474216
+		 63 -0.10039122729248015 64 -0.10039122729248015 65 -0.10038689643474216 66 -0.10038496625616848
 		 67 -0.10038768386341908 68 -0.10038768386341908 69 -0.1003843975215587 70 -0.10038496625616848
-		 71 -0.10039122729248015 72 -0.10038496625616848 73 -0.10038689643474215 74 -0.10038768386341908
+		 71 -0.10039122729248015 72 -0.10038496625616848 73 -0.10038689643474216 74 -0.10038768386341908
 		 75 -0.1003843975215587 76 -0.10038768386341908 77 -0.10038768386341908 78 -0.10038768386341908
 		 79 -0.1003843975215587 80 -0.10038768386341908 81 -0.1003843975215587 82 -0.10038768386341908
 		 83 -0.10038768386341908 84 -0.10038768386341908 85 -0.1003843975215587 86 -0.1003843975215587
 		 87 -0.1003843975215587 88 -0.1003890618636069 89 -0.1003890618636069 90 -0.10038768386341908
 		 91 -0.1003890618636069 92 -0.10039565425129164 93 -0.10039350504981934 94 -0.10038917419196816
-		 95 -0.10039350504981934 96 -0.100384881338176 97 -0.10038917419196816 98 -0.10039350504981934
+		 95 -0.10039350504981934 96 -0.10038488133817601 97 -0.10038917419196816 98 -0.10039350504981934
 		 99 -0.10039350504981934 100 -0.10038917419196816 101 -0.10038917419196816 102 -0.10039350504981934
-		 103 -0.10038917419196816 104 -0.10038917419196816 105 -0.10038917419196816 106 -0.10040263471488689
-		 107 -0.10040413923205491 108 -0.10040937998316754 109 -0.10041970102049011 110 -0.10045491849330475
+		 103 -0.10038917419196816 104 -0.10038917419196816 105 -0.10038917419196816 106 -0.1004026347148869
+		 107 -0.10040413923205491 108 -0.10040937998316754 109 -0.10041970102049011 110 -0.10045491849330476
 		 111 -0.10048120263438105 112 -0.10052751440257565 113 -0.10057082416241331 114 -0.10062517122431026
 		 115 -0.1006856072162766 116 -0.10074263305367212 117 -0.10081949621362454 118 -0.10088888843444677
 		 119 -0.10096148701151864 120 -0.10105314885905074 121 -0.10113224020471462 122 -0.1012262269481705
-		 123 -0.10132003351551129 124 -0.10140370882475674 125 -0.10150879247850052 126 -0.10160536309829138
+		 123 -0.10132003351551129 124 -0.10140370882475674 125 -0.10150879247850052 126 -0.10160536309829139
 		 127 -0.10170956684093045 128 -0.10181325628721907 129 -0.10191677728826412 130 -0.10203751774933904
 		 131 -0.10213050448811035 132 -0.10223952201862396 133 -0.10236225120793872 134 -0.10247805460560253
-		 135 -0.10259400399701341 136 -0.1026868035073828 137 -0.10280167880586674 138 -0.10290099554619037
+		 135 -0.10259400399701341 136 -0.1026868035073828 137 -0.10280167880586676 138 -0.10290099554619037
 		 139 -0.10301200588112942 140 -0.10311540970880984 141 -0.10322546095769707 142 -0.10332924305274602
 		 143 -0.103416181931675 144 -0.10351027934887039 145 -0.10360370350174347 146 -0.10369220057462782
-		 147 -0.10376968536423786 148 -0.10385191110302631 149 -0.10393542245810551 150 -0.10400776486141851
+		 147 -0.10376968536423786 148 -0.10385191110302633 149 -0.10393542245810551 150 -0.10400776486141851
 		 151 -0.10407257338635387 152 -0.10413845405379334 153 -0.10418139464125147 154 -0.1042130156473861
 		 155 -0.10427150536442562 156 -0.1042982292056943 157 -0.10432601640779612 158 -0.10434740176024203
 		 159 -0.10435299772229659 160 -0.10739517829442333;
@@ -17844,22 +17843,22 @@ createNode animCurveTA -n "RightFoot_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 160 ".ktv[0:159]"  1 -0.23982661504830849 2 -0.18618452644174632
 		 3 0.015394371479150026 4 0.42586584582155096 5 1.1061232160779213 6 1.7733304975191269
-		 7 2.022852516831978 8 1.4706286653163838 9 0.30129621373643284 10 -0.75408337937618408
+		 7 2.022852516831978 8 1.470628665316384 9 0.30129621373643284 10 -0.75408337937618408
 		 11 -0.96448427897476374 12 -0.315759323883953 13 0.65224544419970309 14 1.8392592944093797
-		 15 3.1450136724893305 16 4.4693344783876388 17 5.7119158175458598 18 6.7725347894290646
+		 15 3.1450136724893305 16 4.4693344783876388 17 5.7119158175458606 18 6.7725347894290646
 		 19 7.5509417223100197 20 7.946893428387706 21 8.0505519468893141 22 8.0287850004727925
 		 23 7.8966190682271247 24 7.669041475666746 25 7.3609439731761928 26 6.9873446096537881
 		 27 6.5632145266754307 28 6.1035253047259017 29 5.6232191545328192 30 5.1373129582262607
 		 31 4.6607102200312998 32 4.2084252973407006 33 3.7954216887255265 34 3.436656416914611
 		 35 3.1471216218940343 36 2.8933722380244076 37 2.6367125779362883 38 2.3840737063018387
 		 39 2.1424619971390317 40 1.9189078474094237 41 1.720328731946106 42 1.5537298233412806
-		 43 1.4260809478326559 44 1.3443766734847862 45 1.3155972641162634 46 1.3127995778514323
+		 43 1.4260809478326562 44 1.3443766734847862 45 1.3155972641162634 46 1.3127995778514323
 		 47 1.3045664051145012 48 1.2910804740832258 49 1.2725102677734685 50 1.2490354636412793
 		 51 1.2208473551271619 52 1.1881531550851732 53 1.151107202401076 54 1.1099028146238741
 		 55 1.0647255891443783 56 1.0157721536570323 57 0.96321479897544149 58 0.90724030365555119
 		 59 0.84802803077936117 60 0.78577334616601657 61 0.72064525398910695 62 0.65285197111126647
 		 63 0.5825507980050274 64 0.50996224844668547 65 0.43525212950556136 66 0.3585767789564534
-		 67 0.28017132082143337 68 0.20017822864348889 69 0.11881005029554889 70 0.036238855151889349
+		 67 0.28017132082143342 68 0.20017822864348889 69 0.11881005029554889 70 0.036238855151889349
 		 71 -0.04734168974397434 72 -0.1317632119353416 73 -0.21681460443321468 74 -0.30234890214770083
 		 75 -0.38815848528905739 76 -0.47405773882353325 77 -0.55985472623482957 78 -0.64537638575496148
 		 79 -0.73044455309610978 80 -0.81486537693196293 81 -0.89846263992219089 82 -0.98102903178479972
@@ -17871,16 +17870,16 @@ createNode animCurveTA -n "RightFoot_rotateX";
 		 103 -2.1532855166431304 104 -2.1667993873452289 105 -2.1750268320168775 106 -2.1778071408575785
 		 107 -2.1758453734819021 108 -2.1700477501468765 109 -2.1605361252036359 110 -2.1474968562270829
 		 111 -2.1310329973300055 112 -2.1113430682293193 113 -2.0885672298566731 114 -2.0628332862461924
-		 115 -2.0342794801555764 116 -2.0030715746220622 117 -1.969343074920197 118 -1.9332598229478679
+		 115 -2.0342794801555764 116 -2.0030715746220626 117 -1.969343074920197 118 -1.9332598229478679
 		 119 -1.8949646666499387 120 -1.8545904769952146 121 -1.8123159492376335 122 -1.7682368048835146
-		 123 -1.7225745179645822 124 -1.6754050839997539 125 -1.6269213022243814 126 -1.5772430859402302
+		 123 -1.7225745179645822 124 -1.6754050839997539 125 -1.6269213022243814 126 -1.5772430859402304
 		 127 -1.5265484415931212 128 -1.4749919110395937 129 -1.4226375628989254 130 -1.369734009771997
 		 131 -1.3163280374362341 132 -1.2627105557678124 133 -1.2088878566195054 134 -1.1550936579780262
 		 135 -1.1014349478968037 136 -1.0480720429692698 137 -0.99515801991218922 138 -0.94283311463989938
 		 139 -0.89123522968555846 140 -0.84052522076503966 141 -0.79087425834467173 142 -0.74236048328205995
 		 143 -0.69522386954940907 144 -0.64951529084578297 145 -0.60547855678057994 146 -0.56318075344175933
 		 147 -0.52282490901175338 148 -0.48451100705727046 149 -0.44843724537332447 150 -0.41472968148680806
-		 151 -0.38349970540285411 152 -0.35495539703767465 153 -0.32921859215396615 154 -0.30642621968563194
+		 151 -0.38349970540285411 152 -0.35495539703767465 153 -0.32921859215396621 154 -0.30642621968563194
 		 155 -0.28673783302838995 156 -0.27029206401724631 157 -0.25725256600538704 158 -0.24776156855753714
 		 159 -0.24194185991432079 160 -0.23997119157337252;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
@@ -17900,25 +17899,25 @@ createNode animCurveTA -n "RightFoot_rotateY";
 	setAttr -s 160 ".ktv[0:159]"  1 -0.001943136426705784 2 -0.0017888575750037541
 		 3 -0.0016501611812032655 4 -0.0019872379979881116 5 -0.0030808985069456151 6 -0.0032333658573296181
 		 7 -0.0022670273872395655 8 -0.0037907733317637405 9 -0.0072873377975012097 10 -0.011249316937911112
-		 11 -0.013941557841689201 12 -0.013595027797382923 13 -0.012686612200381975 14 -0.01139682821142041
+		 11 -0.013941557841689201 12 -0.013595027797382923 13 -0.012686612200381977 14 -0.01139682821142041
 		 15 -0.0098589513874748919 16 -0.0082651206286769533 17 -0.0067416573187686762 18 -0.0054545531035306129
 		 19 -0.004552618410843901 20 -0.0042164133458306502 21 -0.0040542181317809022 22 -0.0035897103076915696
-		 23 -0.0028968602241692403 24 -0.0019932284646948257 25 -0.00096139425908720185 26 0.00013093778766257508
+		 23 -0.0028968602241692407 24 -0.0019932284646948257 25 -0.00096139425908720185 26 0.00013093778766257508
 		 27 0.0012486495694022564 28 0.0023421643347931822 29 0.0033647744377301955 30 0.0042692949142116897
-		 31 0.0050404240932174311 32 0.0056598603139600377 33 0.00608361801341373 34 0.0062964529683775996
+		 31 0.005040424093217432 32 0.0056598603139600377 33 0.00608361801341373 34 0.0062964529683775996
 		 35 0.0063307026505016687 36 0.0061711463213469826 37 0.0059568208913641941 38 0.0057026174167334126
-		 39 0.0054729721566864412 40 0.0052449200821297103 41 0.0050641419649386267 42 0.0049192762883848206
-		 43 0.0048283427429692749 44 0.0047656969089409223 45 0.0047337235260231673 46 0.0047282521676898521
+		 39 0.005472972156686442 40 0.0052449200821297103 41 0.0050641419649386267 42 0.0049192762883848206
+		 43 0.0048283427429692749 44 0.0047656969089409232 45 0.0047337235260231673 46 0.0047282521676898521
 		 47 0.0047219286474756757 48 0.0047084676222599398 49 0.0046835281097710587 50 0.0046670459433062255
-		 51 0.0046337495480986597 52 0.0045980218461467584 53 0.004557085225241681 54 0.0045163366806408138
+		 51 0.0046337495480986597 52 0.0045980218461467593 53 0.004557085225241681 54 0.0045163366806408138
 		 55 0.0044670229039649196 56 0.0044148094847204587 57 0.0043542905777338176 58 0.0042945279333184219
 		 59 0.0042315457861346302 60 0.0041637368611135376 61 0.004087894757796022 62 0.0040130071596299454
-		 63 0.0039351989555394071 64 0.0038526574396590906 65 0.0037621453407659356 66 0.0036708918845115043
+		 63 0.003935198955539408 64 0.0038526574396590906 65 0.0037621453407659356 66 0.0036708918845115043
 		 67 0.0035775967851062341 68 0.0034883870902454057 69 0.0033845378298701882 70 0.0032871379436234553
 		 71 0.003190722068808364 72 0.0030795483514859646 73 0.0029750616831761023 74 0.0028703850515469061
 		 75 0.0027571694040726363 76 0.0026497054520576296 77 0.0025379707214995373 78 0.0024238997774066774
 		 79 0.002305827054053574 80 0.0021929548146285703 81 0.002074802927790503 82 0.0019612491926857198
-		 83 0.0018432318677182168 84 0.0017231133333425429 85 0.0016021204707080505 86 0.0014852194604547011
+		 83 0.0018432318677182168 84 0.0017231133333425431 85 0.0016021204707080505 86 0.0014852194604547014
 		 87 0.0013671649555923281 88 0.0012566235979225352 89 0.0011376943152783647 90 0.0010179552605565441
 		 91 0.00090514949489524572 92 0.00079035262972228801 93 0.00067767910768287091 94 0.00055821475082771708
 		 95 0.00045033061084977645 96 0.00032910382876889799 97 0.00022462296160933793 98 0.00012152813738823563
@@ -17959,7 +17958,7 @@ createNode animCurveTA -n "RightFoot_rotateZ";
 	setAttr -s 160 ".ktv[0:159]"  1 0.022090228107966889 2 0.019016632333414604
 		 3 0.013742414677444702 4 0.012164852593688958 5 0.020211814134615834 6 0.022487994004518248
 		 7 0.019806592636272317 8 0.013784812981590991 9 0.0049145805517515975 10 0.0020669386448571138
-		 11 0.0083171707284696392 12 0.00845449058200929 13 0.0090486950452138872 14 0.010080047638161421
+		 11 0.0083171707284696392 12 0.0084544905820092917 13 0.0090486950452138872 14 0.010080047638161421
 		 15 0.011416126936495368 16 0.013041851647308785 17 0.014755615378962916 18 0.016287770080537989
 		 19 0.017445436811273033 20 0.017954864578848123 21 0.018570814686810242 22 0.020294053461379611
 		 23 0.023003875096738843 24 0.026473481434246691 25 0.030566478144717527 26 0.035028095240531305
@@ -17967,36 +17966,36 @@ createNode animCurveTA -n "RightFoot_rotateZ";
 		 31 0.057564688989642919 32 0.060905503542517156 33 0.06347653284692073 34 0.065132596254847921
 		 35 0.065123815086548437 36 0.064354595491172437 37 0.062353339946631725 38 0.059398720201825628
 		 39 0.055828392357992543 40 0.051975269687311212 41 0.048103236727527685 42 0.044570507342001485
-		 43 0.041636173946072934 44 0.039688012067789449 45 0.039099883437218284 46 0.039108726119533498
+		 43 0.041636173946072941 44 0.039688012067789449 45 0.039099883437218284 46 0.039108726119533498
 		 47 0.039106918542536506 48 0.039099378788342645 49 0.039109067106474257 50 0.03910280254602061
 		 51 0.039103643733369511 52 0.039099733301338958 53 0.039098326782400404 54 0.039084235294718314
-		 55 0.039089990024156654 56 0.039081653031151672 57 0.039089915961116654 58 0.039079888369914675
+		 55 0.039089990024156654 56 0.039081653031151679 57 0.039089915961116654 58 0.039079888369914675
 		 59 0.039071497692094725 60 0.039063987454948768 61 0.039069361244669525 62 0.039063537496518086
 		 63 0.039060326975942999 64 0.039054286471318651 65 0.039055998628606009 66 0.039059857450754201
-		 67 0.039049928578332768 68 0.039045265975553682 69 0.039041035510697118 70 0.039043540844994992
-		 71 0.039042374175300688 72 0.039052397230904548 73 0.039049629777610152 74 0.039035979321533347
+		 67 0.039049928578332768 68 0.039045265975553682 69 0.039041035510697125 70 0.039043540844994999
+		 71 0.039042374175300688 72 0.039052397230904548 73 0.039049629777610159 74 0.039035979321533347
 		 75 0.039034707632460759 76 0.039037125244323317 77 0.0390417393664238 78 0.039039085865302622
 		 79 0.039036494362300715 80 0.039043170206560701 81 0.039044915058372077 82 0.039050797109311558
 		 83 0.03905007975737014 84 0.039055282800830426 85 0.03906051808292739 86 0.03906413878567816
-		 87 0.039058452623140547 88 0.039077919794224682 89 0.039083271422881614 90 0.039082678312776273
+		 87 0.039058452623140553 88 0.039077919794224682 89 0.039083271422881614 90 0.039082678312776273
 		 91 0.039090407984177636 92 0.039103206994038457 93 0.039105000691600778 94 0.039115073434017454
 		 95 0.039118654693198106 96 0.039123609441615408 97 0.03913694114148928 98 0.039144315735355123
 		 99 0.039146587430676595 100 0.0391487207962865 101 0.039161584042355368 102 0.039177634537612263
 		 103 0.039178663053982717 104 0.039181035008396058 105 0.039195946419461156 106 0.039180877355162798
 		 107 0.039183147528959912 108 0.039205156235389324 109 0.039255967785288545 110 0.039277494616365073
 		 111 0.03933544474659615 112 0.039399978056004821 113 0.039490362082887316 114 0.039558240480512069
-		 115 0.039640248165811742 116 0.039763702498589973 117 0.039858643226374217 118 0.03998015579573224
-		 119 0.040099763304187019 120 0.040244876787141233 121 0.040386479185902664 122 0.040513714860946591
-		 123 0.040666332503836257 124 0.040828228912509944 125 0.040986070397858135 126 0.041150356344080478
+		 115 0.039640248165811742 116 0.039763702498589973 117 0.039858643226374224 118 0.03998015579573224
+		 119 0.040099763304187019 120 0.040244876787141233 121 0.040386479185902671 122 0.040513714860946591
+		 123 0.040666332503836264 124 0.040828228912509944 125 0.040986070397858135 126 0.041150356344080478
 		 127 0.041300948143978014 128 0.041485055476573197 129 0.041657346788740446 130 0.041812996604788884
 		 131 0.042008142038330032 132 0.042191182422008089 133 0.042362293121436717 134 0.042526052478507367
 		 135 0.042688491413894046 136 0.042883821190914849 137 0.043053470489920656 138 0.043230369409703193
-		 139 0.043402275852827021 140 0.04358873963952746 141 0.043736099196265851 142 0.043900890221816528
-		 143 0.044065707483571755 144 0.044197699101123575 145 0.044342019141473045 146 0.044484561389556247
+		 139 0.043402275852827021 140 0.04358873963952746 141 0.043736099196265858 142 0.043900890221816528
+		 143 0.044065707483571762 144 0.044197699101123575 145 0.044342019141473045 146 0.044484561389556247
 		 147 0.04462007910719 148 0.044757748771807056 149 0.044883566195478265 150 0.044975854888506132
-		 151 0.045085788265816149 152 0.045168508090717173 153 0.045280634258794972 154 0.045337603748478714
+		 151 0.045085788265816149 152 0.045168508090717173 153 0.045280634258794979 154 0.045337603748478714
 		 155 0.045397278225953228 156 0.04545904378292389 157 0.045498110854570929 158 0.04554642673481249
-		 159 0.04556624306205851 160 0.039304356710229776;
+		 159 0.045566243062058517 160 0.039304356710229776;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
@@ -18023,32 +18022,32 @@ createNode animCurveTA -n "Spine1_rotate_hair_inputAX";
 		 35 0.54372267393531537 36 0.6714937895608819 37 0.80180455439262133 38 0.92271451197092913
 		 39 1.0217944527806591 40 1.0865403379401963 41 1.1288036591657049 42 1.1686421862236775
 		 43 1.2062195409272134 44 1.2417696565109029 45 1.2752153318704234 46 1.3066977845400523
-		 47 1.3363128255410039 48 1.3640683637047226 49 1.390178583521815 50 1.4145094614635354
+		 47 1.3363128255410039 48 1.3640683637047226 49 1.390178583521815 50 1.4145094614635356
 		 51 1.4373851668933388 52 1.458573958496125 53 1.4781204747464876 54 1.4962824831970134
-		 55 1.512968065866918 56 1.5281916637243256 57 1.5420749609471904 58 1.5545059904954515
-		 59 1.5657460283811624 60 1.5756909981196565 61 1.5843244031010824 62 1.5918386298998268
-		 63 1.5981542325936873 64 1.6035286636295607 65 1.6077434353698694 66 1.6110580216848791
+		 55 1.512968065866918 56 1.5281916637243258 57 1.5420749609471904 58 1.5545059904954515
+		 59 1.5657460283811624 60 1.5756909981196565 61 1.5843244031010826 62 1.5918386298998268
+		 63 1.5981542325936873 64 1.6035286636295609 65 1.6077434353698694 66 1.6110580216848791
 		 67 1.6135880890352234 68 1.6152534569500516 69 1.6161445598209296 70 1.6164533388801583
-		 71 1.6115901594548023 72 1.5979781880330264 73 1.5769085325868633 74 1.5496031069024465
+		 71 1.6115901594548023 72 1.5979781880330264 73 1.5769085325868635 74 1.5496031069024467
 		 75 1.5173207237106081 76 1.4814595916185995 77 1.4432816597606337 78 1.4040653472783995
 		 79 1.3651312794513222 80 1.32765134955657 81 1.2932896214165173 82 1.2629743469714281
-		 83 1.238177638820454 84 1.220214669124184 85 1.2104719704514064 86 1.2050441832840333
+		 83 1.238177638820454 84 1.220214669124184 85 1.2104719704514064 86 1.2050441832840335
 		 87 1.1992665034186549 88 1.193552589489691 89 1.1880963875531407 90 1.1830220787573564
 		 91 1.1786199021555344 92 1.1752373087175223 93 1.1722844122434477 94 1.1690582511736858
 		 95 1.165668920664374 96 1.1621595453338081 97 1.1620139140764016 98 1.1685763806899938
-		 99 1.1804735890026432 100 1.1968919680068311 101 1.2169148951686399 102 1.2395538069493195
-		 103 1.2638228313854678 104 1.2887126650811978 105 1.3130636669361133 106 1.3363241834557213
+		 99 1.1804735890026432 100 1.1968919680068311 101 1.2169148951686399 102 1.2395538069493197
+		 103 1.2638228313854678 104 1.2887126650811978 105 1.3130636669361133 106 1.3363241834557216
 		 107 1.3582632703178108 108 1.379684382607312 109 1.4006092933069361 110 1.4217108760670787
-		 111 1.4433269728955347 112 1.4659383309614742 113 1.4899546921365316 114 1.5157057131532305
+		 111 1.4433269728955347 112 1.4659383309614742 113 1.4899546921365316 114 1.5157057131532308
 		 115 1.5439426742064799 116 1.5715740328441341 117 1.5962795019619063 118 1.6186079048347548
 		 119 1.6395138594902616 120 1.6596062255665192 121 1.6796938399849597 122 1.7006849960611345
 		 123 1.7232622596352494 124 1.7481682859104297 125 1.7761929348030208 126 1.8081074172438605
 		 127 1.8446592819423648 128 1.8866466447712782 129 1.9349140094220303 130 1.9900075203205994
-		 131 2.0529442315825053 132 2.1243688822748212 133 2.2050784908653651 134 2.2959393523185749
+		 131 2.0529442315825053 132 2.1243688822748212 133 2.2050784908653656 134 2.2959393523185749
 		 135 2.3975198135927722 136 2.5107780576226824 137 2.6365065872150049 138 2.7752243810087203
 		 139 2.9279540095334471 140 3.0954490181752474 141 3.398056658590713 142 3.7528164726219533
 		 143 3.8554787607200804 144 3.685363737058609 145 3.438725155470177 146 3.1344688830245633
-		 147 2.7915158694445958 148 2.4300585537956758 149 2.0699108298245066 150 1.7313142719696903
+		 147 2.7915158694445958 148 2.4300585537956758 149 2.0699108298245066 150 1.7313142719696906
 		 151 1.4424107990125363 152 1.2277920709539842 153 1.1120701671398137 154 1.0574360497704409
 		 155 0.99542652113765695 156 0.83729394404925328 157 0.58348505340691514 158 0.30941775220001555
 		 159 0.089935974766409285 160 0.00012974735886661578;
@@ -18068,7 +18067,7 @@ createNode animCurveTA -n "Spine1_rotate_hair_inputAY";
 	setAttr ".wgt" no;
 	setAttr -s 160 ".ktv[0:159]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
 		 11 0 12 0 13 0 14 0 15 0 16 0.0082633829625396466 17 0.030377540343405753 18 0.062328075224938675
-		 19 0.10010105114932781 20 0.1396802950663541 21 0.17705059011837992 22 0.20819767269038988
+		 19 0.10010105114932782 20 0.1396802950663541 21 0.17705059011837992 22 0.20819767269038988
 		 23 0.22910513917738856 24 0.23576409336080506 25 0.22416435223441331 26 0.19030101567011398
 		 27 0.13018520270561995 28 0.039830448155713995 29 -0.084735383995965655 30 -0.24746670161601778
 		 31 -0.62054665819919907 32 -1.3080402343600814 33 -2.211929745228816 34 -3.2348762602169283
@@ -18085,21 +18084,21 @@ createNode animCurveTA -n "Spine1_rotate_hair_inputAY";
 		 75 -14.597250716360815 76 -14.57009884163144 77 -14.539694302503491 78 -14.506574740561815
 		 79 -14.471294343274145 80 -14.434354924026112 81 -14.396253001043233 82 -14.357550946346906
 		 83 -14.318764578520961 84 -14.280380209645967 85 -14.242957861855505 86 -14.204440897030533
-		 87 -14.163802389566948 88 -14.122723390143632 89 -14.083062590080075 90 -14.046687024457508
-		 91 -14.01532724445743 92 -13.990879324512813 93 -13.969227683187933 94 -13.945682422069742
+		 87 -14.163802389566948 88 -14.122723390143632 89 -14.083062590080077 90 -14.046687024457508
+		 91 -14.01532724445743 92 -13.990879324512814 93 -13.969227683187933 94 -13.945682422069742
 		 95 -13.920808952684613 96 -13.895224310215275 97 -13.869691386896518 98 -13.845055856402761
 		 99 -13.821944914714056 100 -13.800951113421297 101 -13.782642680840208 102 -13.767662448423829
 		 103 -13.756533547659638 104 -13.749990710339757 105 -13.748506552962015 106 -13.758695987567615
-		 107 -13.784341371198405 108 -13.821894775387035 109 -13.868047633366547 110 -13.919257308393021
-		 111 -13.972044917465896 112 -14.023016679844897 113 -14.068612198087555 114 -14.105437537243635
+		 107 -13.784341371198407 108 -13.821894775387035 109 -13.868047633366547 110 -13.919257308393021
+		 111 -13.972044917465896 112 -14.023016679844897 113 -14.068612198087557 114 -14.105437537243635
 		 115 -14.130023230995588 116 -14.144149120027036 117 -14.152230349018206 118 -14.154522395056988
 		 119 -14.151316040896246 120 -14.143030840697202 121 -14.129933520959108 122 -14.112355525496074
 		 123 -14.090603208095487 124 -14.065012893551947 125 -14.035910763318459 126 -14.003598664545013
 		 127 -13.968456106029473 128 -13.930778900437534 129 -13.890851861190466 130 -13.849079632559759
-		 131 -13.805719084412011 132 -13.761170165583167 133 -13.715704073056747 134 -13.669652817523852
-		 135 -13.623375883220325 136 -13.577221050668696 137 -13.531495378767053 138 -13.486582995233576
-		 139 -13.442798259694962 140 -13.400491567314509 141 -13.23772069817073 142 -12.828556460290423
-		 143 -12.166361949172572 144 -11.343096518256923 145 -10.44255089907792 146 -9.4460384397157604
+		 131 -13.805719084412011 132 -13.761170165583167 133 -13.715704073056747 134 -13.669652817523854
+		 135 -13.623375883220325 136 -13.577221050668697 137 -13.531495378767053 138 -13.486582995233576
+		 139 -13.442798259694964 140 -13.400491567314509 141 -13.23772069817073 142 -12.828556460290423
+		 143 -12.166361949172574 144 -11.343096518256925 145 -10.44255089907792 146 -9.4460384397157604
 		 147 -8.3348020828750737 148 -7.0900847568512386 149 -5.6932179656130986 150 -4.3379597309101481
 		 151 -3.1427869192205025 152 -1.9773841800692926 153 -0.93412056332861748 154 -0.24732200406139776
 		 155 0 156 0 157 0 158 0 159 0 160 0;
@@ -18127,7 +18126,7 @@ createNode animCurveTA -n "Spine1_rotate_hair_inputAZ";
 		 39 5.6872233962021088 40 5.7440988464688774 41 5.8005153557162075 42 5.8618056868338124
 		 43 5.9275466284394636 44 5.9972709236192223 45 6.0705173662025214 46 6.146846348218685
 		 47 6.2257850443599354 48 6.3068396783207881 49 6.3895608040128407 50 6.4734713701694968
-		 51 6.5580647430929613 52 6.6428846866137778 53 6.727448507832178 54 6.8112708204799874
+		 51 6.5580647430929613 52 6.6428846866137778 53 6.7274485078321788 54 6.8112708204799874
 		 55 6.8938492118897683 56 6.974701691552708 57 7.0533271261581012 58 7.1292642662524015
 		 59 7.2019702598023745 60 7.2709825632766689 61 7.3357810569106139 62 7.3959027830353579
 		 63 7.4508152713126865 64 7.500027383021675 65 7.5430710212372665 66 7.5793985379442939
@@ -18137,7 +18136,7 @@ createNode animCurveTA -n "Spine1_rotate_hair_inputAZ";
 		 79 7.924394252770389 80 7.9640768645432036 81 8.0000104622679515 82 8.0307233231001298
 		 83 8.0547333572492636 84 8.0705157589563665 85 8.0766140743448478 86 8.0769228449079176
 		 87 8.0765051102986707 88 8.0756159039754536 89 8.0745159293860205 90 8.0735333956513546
-		 91 8.0728972011399733 92 8.0729139214803993 93 8.0722044641106336 94 8.0701783562981753
+		 91 8.0728972011399733 92 8.0729139214803993 93 8.0722044641106354 94 8.0701783562981753
 		 95 8.0682125268794369 96 8.067563497342686 97 8.0629974597830216 98 8.0491273218266031
 		 99 8.027329725134468 100 7.9988829951194864 101 7.96516229432555 102 7.9274545416513531
 		 103 7.8870969955013654 104 7.84540664975178 105 7.803701246639382 106 7.7626435406242331
@@ -18145,8 +18144,8 @@ createNode animCurveTA -n "Spine1_rotate_hair_inputAZ";
 		 111 7.5599832721193669 112 7.519146986259643 113 7.4779387891601417 114 7.4362575402589535
 		 115 7.3939906100930344 116 7.3527852667044744 117 7.3141083301983105 118 7.2775744326952143
 		 119 7.2427971163550637 120 7.2094458215933663 121 7.177121474125487 122 7.1454562496192908
-		 123 7.1140677998825259 124 7.0826124929644942 125 7.0506734823963608 126 7.0179320543224799
-		 127 6.9839998367070875 128 6.9485349716987868 129 6.9111342017410564 130 6.8714925070343078
+		 123 7.1140677998825268 124 7.0826124929644942 125 7.0506734823963608 126 7.0179320543224799
+		 127 6.9839998367070883 128 6.9485349716987868 129 6.9111342017410564 130 6.8714925070343078
 		 131 6.8292193124553027 132 6.7839885956628994 133 6.735429811526024 134 6.683180560901941
 		 135 6.6269206358990216 136 6.5662947403694689 137 6.5009265137971068 138 6.430512252464232
 		 139 6.3546830909720118 140 6.2730618017816511 141 6.1287757706080628 142 5.9216104162823777
@@ -18168,12 +18167,12 @@ createNode animCurveTA -n "LeftArm_rotate_hair_inputAX";
 	rename -uid "5A6F4E1C-42DE-116E-1957-C2999691EF7F";
 	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 160 ".ktv[0:159]"  1 -28.411052876458616 2 -28.163060756316323
+	setAttr -s 160 ".ktv[0:159]"  1 -28.411052876458616 2 -28.163060756316327
 		 3 -27.973832592163067 4 -27.825897069869775 5 -27.681664781120588 6 -27.501923745041186
-		 7 -27.297721069990402 8 -27.093146185579659 9 -26.908016258207414 10 -26.759487811696747
+		 7 -27.297721069990402 8 -27.093146185579659 9 -26.908016258207414 10 -26.759487811696751
 		 11 -26.662830997192533 12 -26.633435424247985 13 -26.672433812200918 14 -26.76014910198823
-		 15 -26.882953882961576 16 -27.028357426549054 17 -27.183975314093004 18 -27.33692573834287
-		 19 -27.473461574401359 20 -27.578310428422192 21 -27.680479299235596 22 -27.809636193546961
+		 15 -26.882953882961576 16 -27.028357426549054 17 -27.183975314093008 18 -27.33692573834287
+		 19 -27.473461574401362 20 -27.578310428422192 21 -27.680479299235596 22 -27.809636193546961
 		 23 -27.945701037882021 24 -28.056495096141919 25 -28.096684253668119 26 -28.010210378639417
 		 27 -27.482370864612122 28 -26.565360568733077 29 -25.766301402511854 30 -25.601987571026772
 		 31 -25.544790316479769 32 -25.577362006145336 33 -26.983523938251174 34 -31.084403071806022
@@ -18184,7 +18183,7 @@ createNode animCurveTA -n "LeftArm_rotate_hair_inputAX";
 		 51 -59.399780342734999 52 -59.146811197864977 53 -58.955066716792402 54 -58.850809704873683
 		 55 -58.856549851855945 56 -58.98906557737763 57 -59.260156016869175 58 -59.67527430954673
 		 59 -60.234564339553245 60 -61.786607090481034 61 -64.471000276623457 62 -67.164095736805209
-		 63 -68.765132142631359 64 -69.312291416312618 65 -69.683476873173163 66 -70.03629913209474
+		 63 -68.765132142631359 64 -69.312291416312632 65 -69.683476873173163 66 -70.03629913209474
 		 67 -70.455128738663987 68 -70.95331972081398 69 -71.491305254820702 70 -72.008861484202086
 		 71 -72.33426315097995 72 -72.356066930553254 73 -72.173351366259197 74 -71.827500881574721
 		 75 -71.394764886417391 76 -70.99931900670444 77 -70.719196820163447 78 -70.611918174063646
@@ -18224,7 +18223,7 @@ createNode animCurveTA -n "LeftArm_rotate_hair_inputAY";
 	setAttr ".tan" 2;
 	setAttr ".wgt" no;
 	setAttr -s 160 ".ktv[0:159]"  1 37.810340194352811 2 37.217128237261214
-		 3 36.639463865745576 4 36.147914718106954 5 35.792965360920519 6 35.533023545193295
+		 3 36.639463865745576 4 36.147914718106954 5 35.792965360920526 6 35.533023545193295
 		 7 35.304219537750683 8 35.112675859577813 9 34.960668818354286 10 34.850427642860801
 		 11 34.782064342984668 12 34.756465448748344 13 34.771998351790835 14 34.821484431290926
 		 15 34.897404485553551 16 34.993887623650657 17 35.105188510559827 18 35.22622481202005
@@ -18233,15 +18232,15 @@ createNode animCurveTA -n "LeftArm_rotate_hair_inputAY";
 		 27 37.149954695982053 28 37.67347593862069 29 38.085965120623932 30 38.247904459677457
 		 31 38.635976499685626 32 39.449989144777554 33 40.177351293110014 34 40.0933955246376
 		 35 36.597607122935521 36 26.707681461463675 37 12.6803443450098 38 1.92545220710832
-		 39 -6.9522058250951186 40 -15.074937230747324 41 -22.439078889150561 42 -28.616612874803351
+		 39 -6.9522058250951195 40 -15.074937230747324 41 -22.439078889150561 42 -28.616612874803351
 		 43 -33.197600058611748 44 -36.286860232206919 45 -37.388532988582433 46 -36.673339027834054
 		 47 -35.430855744590524 48 -34.757754941246176 49 -35.606177383087818 50 -36.310478778528065
-		 51 -36.871463419523806 52 -37.29724582694103 53 -37.598803005974823 54 -37.786639625818154
+		 51 -36.871463419523806 52 -37.29724582694103 53 -37.59880300597483 54 -37.786639625818154
 		 55 -37.867331626416842 56 -37.838837139672634 57 -37.689025258563454 58 -37.391117866809545
 		 59 -36.901859479725708 60 -34.87348725013436 61 -30.689411722503145 62 -25.419799449116297
 		 63 -20.91230132901158 64 -17.828844427573401 65 -15.187759166935731 66 -13.106234457803195
 		 67 -11.600318966737856 68 -10.605547897079518 69 -9.9815861793964373 70 -9.5338390052295079
-		 71 -9.1405036029010081 72 -8.7515239455709253 73 -8.4421965747688485 74 -8.099447081114409
+		 71 -9.1405036029010081 72 -8.7515239455709253 73 -8.4421965747688485 74 -8.0994470811144108
 		 75 -7.7089231022818945 76 -7.3767502438390675 77 -7.0663369057795373 78 -6.689591752671423
 		 79 -5.5043057125348778 80 -3.4747512957551945 81 -1.927318305942016 82 -1.3710778661338794
 		 83 -1.0910023234799944 84 -0.93211131044789219 85 -0.74841639063550103 86 -0.22664484867328069
@@ -18252,16 +18251,16 @@ createNode animCurveTA -n "LeftArm_rotate_hair_inputAY";
 		 103 -23.109890831151887 104 -25.753038264342639 105 -28.326834805358612 106 -31.547825800834342
 		 107 -35.350562151601189 108 -38.48594723054569 109 -39.680373923103609 110 -39.587279510581617
 		 111 -39.949385407689924 112 -40.738921595010133 113 -41.612322420572482 114 -42.094193917194374
-		 115 -41.63812555223079 116 -42.148056371297621 117 -42.650548390017477 118 -43.135229700728495
+		 115 -41.638125552230797 116 -42.148056371297621 117 -42.650548390017477 118 -43.135229700728495
 		 119 -43.594063657852068 120 -44.021985643932219 121 -44.415163468096274 122 -44.770980379814823
 		 123 -45.088665326692627 124 -45.367820395548108 125 -45.608580558082934 126 -45.812561879027101
-		 127 -45.981282756161939 128 -46.116563923533484 129 -46.220694955305788 130 -46.296022966411577
+		 127 -45.981282756161939 128 -46.116563923533491 129 -46.220694955305788 130 -46.296022966411577
 		 131 -46.34491980388124 132 -46.37078703395472 133 -46.376168446808336 134 -46.364731506369054
 		 135 -46.247450951044755 136 -45.983878939001386 137 -45.663072044809702 138 -45.396857182440989
 		 139 -45.555294075155295 140 -47.476840843556992 141 -52.410663053850833 142 -59.70336403063245
 		 143 -66.312611107457556 144 -67.59453715254304 145 -64.600362999330684 146 -62.175655681756865
 		 147 -63.981555875467379 148 -67.857406117916653 149 -66.340608293669121 150 -53.290617072232614
-		 151 -28.544014981938417 152 1.0761822410923882 153 21.631573418371488 154 32.609849319025258
+		 151 -28.544014981938421 152 1.0761822410923882 153 21.631573418371488 154 32.609849319025258
 		 155 37.980000733301885 156 39.278024168883 157 39.44912345834328 158 38.919342799713633
 		 159 38.168417288970886 160 37.810272122536297;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
@@ -18285,7 +18284,7 @@ createNode animCurveTA -n "LeftArm_rotate_hair_inputAZ";
 		 15 -80.755779265078175 16 -80.329631192263335 17 -79.7917976637397 18 -79.179258721434351
 		 19 -78.52795102574062 20 -77.875507553192136 21 -76.99118648542688 22 -75.786153080000318
 		 23 -74.493472000967088 24 -73.336224815251953 25 -72.519435754282185 26 -72.239291644152175
-		 27 -72.917403635342936 28 -74.46775008989853 29 -76.3505967930476 30 -78.053435595020957
+		 27 -72.917403635342936 28 -74.46775008989853 29 -76.350596793047615 30 -78.053435595020957
 		 31 -80.306930278637267 32 -83.133466500229062 33 -84.975010835333521 34 -84.204538830112526
 		 35 -77.506619016299808 36 -63.120532628380033 37 -44.402515289304638 38 -27.727028219828487
 		 39 -12.422718676875622 40 0.29271064588006679 41 10.283196353999179 42 18.347212677811584
@@ -18294,7 +18293,7 @@ createNode animCurveTA -n "LeftArm_rotate_hair_inputAZ";
 		 51 33.505746711685177 52 34.856986710966538 53 36.241366260041879 54 37.631453182508793
 		 55 38.995933104944349 56 40.296859934270842 57 41.488477832135885 58 42.514786521006236
 		 59 43.308363321125107 60 42.96789391152177 61 40.957540379145968 62 37.944797608983968
-		 63 35.620657541236511 64 34.90426438253288 65 35.002729204715031 66 35.860772534059087
+		 63 35.620657541236511 64 34.90426438253288 65 35.002729204715038 66 35.860772534059087
 		 67 37.288202448811951 68 38.998563956923078 69 40.627620402958811 70 41.76143060732889
 		 71 42.30182199762374 72 42.421797138647825 73 42.269269198029633 74 41.81232141305135
 		 75 41.113915658145196 76 40.353311596479962 77 39.577462470279876 78 38.787489250858236
@@ -18308,16 +18307,16 @@ createNode animCurveTA -n "LeftArm_rotate_hair_inputAZ";
 		 107 65.390482810562062 108 64.626737940528983 109 62.779425543007036 110 60.394366034456802
 		 111 58.531827162933652 112 57.255146798466498 113 56.344839614696589 114 55.473204439989182
 		 115 54.250696500358039 116 54.237716138676248 117 54.284270410656141 118 54.373808245460104
-		 119 54.492329796929312 120 54.628797718291565 121 54.773680865532661 122 54.918846694073153
+		 119 54.492329796929319 120 54.628797718291565 121 54.773680865532668 122 54.918846694073153
 		 123 55.05803080632257 124 55.185599638921488 125 55.296600759951609 126 55.387389363619356
 		 127 55.454398681578134 128 55.494420756372321 129 55.504711877649392 130 55.482530266028732
-		 131 55.425336411338954 132 55.331333355136238 133 55.198228827481628 134 55.024677066142189
+		 131 55.425336411338954 132 55.331333355136238 133 55.198228827481628 134 55.024677066142196
 		 135 54.802924636633804 136 54.507638693750309 137 54.112400394589045 138 53.581162437918444
-		 139 52.218617522356347 140 49.72429569743376 141 46.886456289090184 142 44.696572365346952
+		 139 52.218617522356347 140 49.724295697433767 141 46.886456289090184 142 44.696572365346952
 		 143 43.521093405483469 144 43.227925524392553 145 43.695362011345026 146 42.41162573783285
 		 147 35.982123908683434 148 28.640925815639509 149 21.956561553534577 150 9.455917741947788
-		 151 -13.833442411219567 152 -41.921717834469348 153 -61.293539573476735 154 -71.565542854216176
-		 155 -76.679242243701452 156 -75.831129003075418 157 -74.364412916432499 158 -72.515012995500115
+		 151 -13.833442411219567 152 -41.921717834469348 153 -61.293539573476735 154 -71.56554285421619
+		 155 -76.679242243701466 156 -75.831129003075418 157 -74.364412916432499 158 -72.515012995500115
 		 159 -70.540786408477587 160 -68.792490711579987;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
@@ -18335,17 +18334,17 @@ createNode animCurveTA -n "LeftForeArm_rotate_hair_inputAX";
 	setAttr ".wgt" no;
 	setAttr -s 160 ".ktv[0:159]"  1 -0.018679936153914264 2 0.079231306979914332
 		 3 0.13023946598107217 4 0.12428865896912468 5 0.076495840927785955 6 0.0086838074441677373
-		 7 -0.07027780634004617 8 -0.14836494297205904 9 -0.21896759215249467 10 -0.27763120591875884
+		 7 -0.07027780634004617 8 -0.14836494297205904 9 -0.2189675921524947 10 -0.27763120591875884
 		 11 -0.32426767631189463 12 -0.35978583062358704 13 -0.38948636857440377 14 -0.41496681374194699
-		 15 -0.43241010395406554 16 -0.43726374236108079 17 -0.42620890843712539 18 -0.39696406664419875
+		 15 -0.43241010395406554 16 -0.43726374236108079 17 -0.42620890843712544 18 -0.39696406664419875
 		 19 -0.34916741728045697 20 -0.28597473265576739 21 -0.17704864460468395 22 -0.040264554817098827
 		 23 0.064389729949169028 24 0.11142653870840899 25 0.11596522225043543 26 0.11249037223754016
-		 27 0.11187262193645639 28 0.032627663057632011 29 -0.21448711290421194 30 -0.59913040365112158
+		 27 0.1118726219364564 28 0.032627663057632011 29 -0.21448711290421194 30 -0.59913040365112158
 		 31 -1.02964453595885 32 -1.5476028858690107 33 -2.2455956563863002 34 -3.2567589102716656
-		 35 -4.9921562876038932 36 -7.1710907054117508 37 -8.7548006226369228 38 -9.3204107700899179
+		 35 -4.9921562876038941 36 -7.1710907054117508 37 -8.7548006226369228 38 -9.3204107700899179
 		 39 -9.3757804050360907 40 -9.3880005033480476 41 -9.5015018614224545 42 -9.5840261422729451
 		 43 -9.6470202129851579 44 -9.6976834688192355 45 -9.7330188194435827 46 -9.7369300395103693
-		 47 -9.7157544492855017 48 -9.7007675841891103 49 -9.7030847609748871 50 -9.7093193321927433
+		 47 -9.7157544492855017 48 -9.7007675841891103 49 -9.7030847609748871 50 -9.7093193321927451
 		 51 -9.7178472255014761 52 -9.726936634935976 53 -9.7353236694973333 54 -9.7418273018263069
 		 55 -9.7452822491619937 56 -9.7457648293006045 57 -9.7431124922210177 58 -9.7384599644779666
 		 59 -9.7329499399264758 60 -9.7433375894363241 61 -9.7640350450659028 62 -9.7627360923231521
@@ -18353,9 +18352,9 @@ createNode animCurveTA -n "LeftForeArm_rotate_hair_inputAX";
 		 67 -8.9999249849418508 68 -8.7458332849473397 69 -8.4958211315194152 70 -8.2717219684233481
 		 71 -8.0763998143794424 72 -7.9095822990183491 73 -7.7230542753434932 74 -7.5664305809276726
 		 75 -7.4519782834831485 76 -7.3295248206260943 77 -7.2031788196877216 78 -7.0936952489139609
-		 79 -7.0121029998518791 80 -7.0002129853513209 81 -7.1033322397911665 82 -7.3618804315563793
+		 79 -7.0121029998518791 80 -7.0002129853513217 81 -7.1033322397911665 82 -7.3618804315563793
 		 83 -7.7261716058107419 84 -8.0661058007242357 85 -8.3518196701918956 86 -8.4641503967236105
-		 87 -8.2954588982072988 88 -8.3492004686743844 89 -8.2462907069403339 90 -8.1259622756712329
+		 87 -8.2954588982073005 88 -8.3492004686743844 89 -8.2462907069403339 90 -8.1259622756712329
 		 91 -7.9030691611272843 92 -7.6765511342545896 93 -7.3813861340471636 94 -7.0495049253888338
 		 95 -6.6957562695895678 96 -6.323393135575385 97 -5.9530253745750947 98 -5.5869590822939283
 		 99 -5.2383661723438459 100 -4.8450307886173301 101 -4.3870752929839538 102 -3.9469009043129382
@@ -18364,7 +18363,7 @@ createNode animCurveTA -n "LeftForeArm_rotate_hair_inputAX";
 		 111 -7.6873500910659267 112 -7.9703919467051465 113 -8.1690218749771866 114 -8.2907290709705848
 		 115 -8.3445641180464083 116 -8.35831234289161 117 -8.3560852503925229 118 -8.339611904282286
 		 119 -8.3105832550458203 120 -8.2703576002038179 121 -8.220443669716726 122 -8.1625406499401283
-		 123 -8.0980282760534248 124 -8.0285287376964494 125 -7.9558804138191732 126 -7.8814993000795885
+		 123 -8.0980282760534266 124 -8.0285287376964494 125 -7.9558804138191732 126 -7.8814993000795885
 		 127 -7.8070943691995209 128 -7.7344406245695829 129 -7.6652974007329222 130 -7.6014895432371734
 		 131 -7.5449523480875591 132 -7.4972204631849317 133 -7.4604011277041575 134 -7.4361096545757457
 		 135 -7.5148659097638628 136 -7.7070656934397537 137 -7.8949865967376338 138 -7.9662907335196378
@@ -18373,7 +18372,7 @@ createNode animCurveTA -n "LeftForeArm_rotate_hair_inputAX";
 		 147 -2.352278447157004 148 -3.0173679957283861 149 -3.2766861408415444 150 -2.8607312438042358
 		 151 -2.3194556012853531 152 -1.7357173583051497 153 -1.1847901943070978 154 -0.72193681834552437
 		 155 -0.37782979354900004 156 -0.13547311012599736 157 0.024125211736176461 158 0.097008904857146791
-		 159 0.081756131935514967 160 -0.018737876383449502;
+		 159 0.081756131935514981 160 -0.018737876383449502;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
@@ -18388,11 +18387,11 @@ createNode animCurveTA -n "LeftForeArm_rotate_hair_inputAY";
 	rename -uid "E544C71A-4485-38EB-5E56-FAA4D9DAB103";
 	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr -s 160 ".ktv[0:159]"  1 -0.0044592838795916882 2 0.55650199133444778
+	setAttr -s 160 ".ktv[0:159]"  1 -0.0044592838795916891 2 0.55650199133444778
 		 3 1.1625754908107064 4 1.6972936184539811 5 2.0432538734902725 6 2.205615122444649
 		 7 2.2829982000093323 8 2.2998716001973256 9 2.2819672757603646 10 2.2550460743988707
 		 11 2.2453023924693229 12 2.2784220628529894 13 2.3691955003454996 14 2.5018137418323447
-		 15 2.6563179350317427 16 2.8124905276783485 17 2.9499931533768406 18 3.0479979444501262
+		 15 2.6563179350317427 16 2.812490527678349 17 2.9499931533768406 18 3.0479979444501262
 		 19 3.0854239256206371 20 3.0410817707996149 21 2.8136904006508838 22 2.3855718210318777
 		 23 1.8658052435249528 24 1.3706086370541684 25 1.0167859245199518 26 0.91781452505347128
 		 27 1.2571966098044813 28 1.9907092612394011 29 2.8742077372740655 30 3.6586391610622511
@@ -18400,34 +18399,34 @@ createNode animCurveTA -n "LeftForeArm_rotate_hair_inputAY";
 		 35 5.8635367265577987 36 5.1811810941307694 37 4.1158737153324898 38 3.4828683197062404
 		 39 3.2190053860384782 40 2.9988469784458456 41 2.7037501520924123 42 2.4433171387896682
 		 43 2.1810569970147551 44 1.87947395752575 45 1.4530801066252577 46 0.95047402317312368
-		 47 0.53273926372021796 48 0.35545720350551707 49 0.37497195509412007 50 0.4405737286683738
-		 51 0.54450981232121176 52 0.67890802232331826 53 0.83603570641680691 54 1.0080573192550688
-		 55 1.1867057558293965 56 1.363942604903092 57 1.5312595911172537 58 1.6803762382380985
+		 47 0.53273926372021796 48 0.35545720350551707 49 0.37497195509412007 50 0.44057372866837385
+		 51 0.54450981232121187 52 0.67890802232331826 53 0.83603570641680691 54 1.0080573192550688
+		 55 1.1867057558293965 56 1.363942604903092 57 1.531259591117254 58 1.6803762382380985
 		 59 1.802852711963252 60 1.8288711660273471 61 1.775674458778417 62 1.7659256643440033
 		 63 1.9221869868654426 64 2.2609105928351871 65 2.6877974340837545 66 3.1570646419203623
 		 67 3.6242363261150392 68 4.0482286407761361 69 4.3927488667889714 70 4.6241032683668051
-		 71 4.7497172768729357 72 4.8120002194774045 73 4.8161929467644251 74 4.7903790630641963
+		 71 4.7497172768729357 72 4.8120002194774054 73 4.8161929467644251 74 4.7903790630641963
 		 75 4.7528342743256884 76 4.7064213030115445 77 4.6659361916434605 78 4.649766143702629
 		 79 4.6528092930376701 80 4.6564469787405391 81 4.6521242103559377 82 4.6324278328373589
 		 83 4.5984779578688446 84 4.5491668816237496 85 4.5168597392040768 86 4.4867430161025208
 		 87 4.4391162312795176 88 4.5163073661620219 89 4.627200636519885 90 4.7742976154873551
-		 91 4.9318615871903715 92 5.1106033865842653 93 5.2874693697879174 94 5.4599666058880274
+		 91 4.9318615871903724 92 5.1106033865842653 93 5.2874693697879174 94 5.4599666058880274
 		 95 5.6199314911975113 96 5.7585616510361923 97 5.8724230254454639 98 5.9565912311136957
 		 99 6.0103044296246315 100 6.0338601793001141 101 6.0180680269688258 102 5.9645984852243998
 		 103 5.8927941511450133 104 5.8339077556440522 105 5.8203616625289687 106 5.893851064062793
-		 107 5.9377766498490612 108 5.8089458244862247 109 5.5805618826715628 110 5.3623960793868317
+		 107 5.9377766498490612 108 5.8089458244862255 109 5.5805618826715628 110 5.3623960793868317
 		 111 5.1273312953028629 112 4.9027703363517601 113 4.7134187168850419 114 4.5801946136406766
 		 115 4.5208979095306443 116 4.511178323094704 117 4.5156590121492446 118 4.5327950801826375
 		 119 4.5611238003049914 120 4.5989078803159984 121 4.6444607303041847 122 4.6962045876113265
 		 123 4.7523615117223192 124 4.8114122596731557 125 4.8718867981707854 126 4.9323083437637782
-		 127 4.9912782564892844 128 5.0476063543693135 129 5.1001495812603723 130 5.1477675544001809
+		 127 4.9912782564892844 128 5.0476063543693135 129 5.1001495812603732 130 5.1477675544001809
 		 131 5.1894511893345037 132 5.2242117154157324 133 5.2511491379367881 134 5.2691912660911751
 		 135 5.2159747736283801 136 5.0786260958266505 137 4.9353914205369067 138 4.8780227217230738
 		 139 4.8873632553313575 140 4.9077357300215638 141 4.9816378966624857 142 5.1453165023866791
-		 143 5.4032503587889211 144 5.7745083393562178 145 5.6987022841402579 146 5.3177370661566119
-		 147 5.4048773477370453 148 5.7096620494775658 149 5.7790393136667841 150 5.5913303052875731
+		 143 5.4032503587889211 144 5.7745083393562187 145 5.6987022841402579 146 5.3177370661566119
+		 147 5.4048773477370453 148 5.7096620494775658 149 5.779039313666785 150 5.5913303052875731
 		 151 5.2972318602691599 152 4.8911741523752239 153 4.3862094576941111 154 3.8160991401396105
-		 155 3.2296742879667915 156 2.6266854091226906 157 1.9821550335452591 158 1.315627935756793
+		 155 3.2296742879667919 156 2.6266854091226906 157 1.9821550335452591 158 1.315627935756793
 		 159 0.6469472464994831 160 -0.0044634709445109397;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
@@ -18446,20 +18445,20 @@ createNode animCurveTA -n "LeftForeArm_rotate_hair_inputAZ";
 	setAttr -s 160 ".ktv[0:159]"  1 -11.925397683531806 2 -9.3728809409620499
 		 3 -6.7563019966043054 4 -4.2678622049692292 5 -2.0956012576273926 6 -0.083268771489626289
 		 7 1.9857704552869482 8 4.005048593159751 9 5.8739797987865625 10 7.4868580645134388
-		 11 8.7409705663042256 12 9.5308170600125219 13 9.8959621403844107 14 9.9632783038558834
+		 11 8.7409705663042256 12 9.5308170600125219 13 9.8959621403844125 14 9.9632783038558834
 		 15 9.7628513876802856 16 9.3233500052538023 17 8.6748714266458791 18 7.8462899250300095
 		 19 6.8660778960764119 20 5.7656286300293429 21 3.9933121301244716 22 1.3561776131866741
-		 23 -1.5871334033565494 24 -4.272408526021044 25 -6.138326179725758 26 -6.6210863921402909
+		 23 -1.5871334033565494 24 -4.272408526021044 25 -6.1383261797257589 26 -6.6210863921402909
 		 27 -4.6959364439681144 28 -0.52252026781045091 29 4.6849165875197185 30 9.7103860848139636
 		 31 13.889009781519793 32 17.979746860577205 33 22.90885045671028 34 29.601343088648441
 		 35 40.68967240909361 36 54.416812928583241 37 65.088112355664109 38 69.787483212718726
-		 39 71.341032658030841 40 72.586635743430747 41 74.426718961251268 42 76.017351417683983
+		 39 71.341032658030841 40 72.586635743430747 41 74.426718961251268 42 76.017351417683997
 		 43 77.588324434577999 44 79.369430477374308 45 81.906095861816894 46 84.914032678737016
 		 47 87.378400256717313 48 88.285028225031141 49 87.900937263107025 50 87.205772266503331
 		 51 86.255747980259187 52 85.107114906462684 53 83.815764971422212 54 82.437796285900276
 		 55 81.029611039968543 56 79.647112491425702 57 78.346718297578519 58 77.184454434358614
 		 59 76.216417564738563 60 75.884930132427399 61 76.125312980396899 62 76.23374849313187
-		 63 75.506262649481371 64 73.826366474984354 65 71.682432701933323 66 69.277700960926083
+		 63 75.506262649481371 64 73.826366474984368 65 71.682432701933323 66 69.277700960926083
 		 67 66.815498882132687 68 64.497720572327992 69 62.524827127072889 70 61.097445725547885
 		 71 60.199015090975408 72 59.630154302949364 73 59.322935580511214 74 59.199656243953655
 		 75 59.186541066946297 76 59.215990161066614 77 59.215557464027732 78 59.110647457399551
@@ -18475,7 +18474,7 @@ createNode animCurveTA -n "LeftForeArm_rotate_hair_inputAZ";
 		 115 61.898815727366433 116 61.988267134236409 117 61.956950069519536 118 61.817332570113848
 		 119 61.581780524969304 120 61.262839480092943 121 60.872952095647904 122 60.424588680554095
 		 123 59.930271853801322 124 59.402424046652385 125 58.853425454143476 126 58.295732994033798
-		 127 57.74180159147636 128 57.204065253249603 129 56.694835154904517 130 56.226507364377177
+		 127 57.74180159147636 128 57.204065253249603 129 56.694835154904517 130 56.226507364377184
 		 131 55.811405952691373 132 55.461952677984243 133 55.190433006275654 134 55.009317766052554
 		 135 55.567629320124283 136 56.951034695359404 137 58.326208179494721 138 58.857522769399445
 		 139 58.898304003951097 140 58.968083483714913 141 58.47983855073673 142 56.847464413592341
@@ -18502,16 +18501,16 @@ createNode animCurveTA -n "LeftHand_rotate_hair_inputAX";
 		 3 56.754390451645435 4 56.777715055637259 5 56.723376095920287 6 56.475365951880114
 		 7 55.971610409738204 8 55.283314140471887 9 54.511665055656145 10 53.783420622146345
 		 11 53.240223855406093 12 53.025200383835738 13 53.022141564370173 14 53.03295078369564
-		 15 53.072475568407214 16 53.151752576539039 17 53.273282027879425 18 53.428879615874003
+		 15 53.072475568407214 16 53.151752576539039 17 53.273282027879425 18 53.42887961587401
 		 19 53.601693334501974 20 53.771114121392955 21 54.000349779641745 22 54.299076856069256
 		 23 54.569407727311813 24 54.708074994236256 25 54.590380620272732 26 54.045301879911669
 		 27 52.5665911285014 28 50.018669911223355 29 46.78180767683245 30 43.327948008362611
-		 31 39.594747285813689 32 33.976080573525323 33 26.492805626178509 34 18.658669108407128
+		 31 39.594747285813696 32 33.976080573525323 33 26.492805626178509 34 18.658669108407128
 		 35 8.1698467255356668 36 -6.0698013407822993 37 -13.952004660290831 38 -7.5722009475064818
 		 39 -0.82479455319330097 40 -3.1705868209472441 41 -7.8465668014146681 42 -12.71072123520455
 		 43 -17.211136806355501 44 -20.749916697469903 45 -21.123370233625383 46 -17.685648148630921
 		 47 -12.96776930444646 48 -10.194123178425118 49 -9.7286557957349551 50 -9.724052565538619
-		 51 -10.105056149411951 52 -10.795378548750771 53 -11.71846037251033 54 -12.798152811029754
+		 51 -10.105056149411951 52 -10.795378548750771 53 -11.71846037251033 54 -12.798152811029755
 		 55 -13.958932690010188 56 -15.127028651287647 57 -16.230662530442601 58 -17.200742469104192
 		 59 -17.971049181424654 60 -19.657402764118217 61 -22.602739662233361 62 -25.517869213997862
 		 63 -27.07719045933155 64 -27.40251945388119 65 -27.54071567397596 66 -27.589111884553979
@@ -18525,13 +18524,13 @@ createNode animCurveTA -n "LeftHand_rotate_hair_inputAX";
 		 95 12.054940403510509 96 15.113625305047536 97 18.264738141984378 98 21.276996766310052
 		 99 23.927545337097186 100 27.128630518531516 101 31.335620624606086 102 35.679921149912829
 		 103 39.395479712491124 104 41.716762810080539 105 41.578471333534985 106 35.759293137903896
-		 107 22.828093396565343 108 7.7679502295640006 109 -2.8086866222093629 110 -8.3077774340922588
+		 107 22.828093396565343 108 7.7679502295640006 109 -2.8086866222093629 110 -8.3077774340922605
 		 111 -12.180516263389729 112 -14.994782893697311 113 -17.252319284040347 114 -19.269452267297499
 		 115 -21.181452500758319 116 -22.896965439271213 117 -24.290011373090998 118 -25.378216553407768
 		 119 -26.185090135153825 120 -26.738125601151445 121 -27.067080336768594 122 -27.203065636155653
-		 123 -27.177909821263917 124 -27.02339799155536 125 -26.770973044656497 126 -26.451486791042818
-		 127 -26.094882726611331 128 -25.72998792701673 129 -25.384585836134011 130 -25.085328892187945
-		 131 -24.857872259248072 132 -24.727258194684595 133 -24.718233326463629 134 -24.855827857544103
+		 123 -27.177909821263917 124 -27.02339799155536 125 -26.7709730446565 126 -26.451486791042818
+		 127 -26.094882726611331 128 -25.72998792701673 129 -25.384585836134011 130 -25.085328892187949
+		 131 -24.857872259248072 132 -24.727258194684595 133 -24.718233326463629 134 -24.855827857544107
 		 135 -24.043000145754178 136 -21.915951508545152 137 -19.681563597235225 138 -18.643831230599961
 		 139 -18.643768709973592 140 -18.643705102318737 141 -18.643658286789222 142 -18.6436946285849
 		 143 -18.643721661543864 144 -15.528004234700092 145 -8.4749228885034 146 -0.046803932154342323
@@ -18569,9 +18568,9 @@ createNode animCurveTA -n "LeftHand_rotate_hair_inputAY";
 		 51 57.651015591410065 52 57.549541674023047 53 57.376736599924492 54 57.126741418624093
 		 55 56.796708273699274 56 56.388212237489078 57 55.908673854405258 58 55.371963240890331
 		 59 54.798647087232823 60 53.728086084403493 61 52.335473315027983 62 51.480445620521401
-		 63 51.757927576733806 64 53.007582456521405 65 54.68673707883783 66 56.669347525878401
+		 63 51.757927576733806 64 53.007582456521405 65 54.686737078837837 66 56.669347525878401
 		 67 58.814703683023609 68 60.949603639360198 69 62.875345130292644 70 64.391197501781349
-		 71 66.096256429861626 72 68.442884426060644 73 71.012633367747483 74 73.37094674551777
+		 71 66.096256429861626 72 68.442884426060658 73 71.012633367747483 74 73.37094674551777
 		 75 75.089446899227283 76 75.768268409735171 77 75.041089087535724 78 72.564629215336495
 		 79 64.036610532463285 80 48.029818963566555 81 28.265314046638707 82 4.0698594579396765
 		 83 -24.144827513553345 84 -50.146576269788802 85 -68.62224521836103 86 -73.739967887152261
@@ -18584,13 +18583,13 @@ createNode animCurveTA -n "LeftHand_rotate_hair_inputAY";
 		 111 36.627628994957725 112 45.692415351529263 113 53.49215668202531 114 59.383148818813041
 		 115 62.787429488787744 116 64.562879545305847 117 65.969086520461673 118 67.036609693685946
 		 119 67.795658591437345 120 68.277352489177645 121 68.51426603398437 122 68.540509523769984
-		 123 68.391485332616398 124 68.103461141905754 125 67.713290671475306 126 67.257774850380443
+		 123 68.391485332616398 124 68.103461141905768 125 67.71329067147532 126 67.257774850380443
 		 127 66.773845821419286 128 66.29810449536933 129 65.866983522486095 130 65.516721006888829
 		 131 65.283610542805462 132 65.204072310363046 133 65.31470213240199 134 65.652812443668481
 		 135 67.095031358116927 136 69.564509024773486 137 71.792878360713985 138 72.747199798871193
 		 139 72.782166822352565 140 72.865566926106496 141 72.965035138557738 142 73.048362674468052
-		 143 73.083319922033056 144 54.947705973568119 145 20.322626276072743 146 -1.3503294655446383
-		 147 1.7445143664314422 148 10.249765125387208 149 11.451979392384954 150 5.7889969545216715
+		 143 73.083319922033056 144 54.947705973568119 145 20.322626276072747 146 -1.3503294655446383
+		 147 1.7445143664314422 148 10.249765125387208 149 11.451979392384954 150 5.7889969545216724
 		 151 -1.347828892933288 152 -8.9311921021901597 153 -16.113799620165956 154 -22.116469831294367
 		 155 -26.097660000243938 156 -26.959820174724584 157 -24.917967576687836 158 -21.093726612903996
 		 159 -16.718740244130743 160 -13.108803577258515;
@@ -18624,24 +18623,24 @@ createNode animCurveTA -n "LeftHand_rotate_hair_inputAZ";
 		 51 13.699167052795529 52 14.210697403933004 53 14.759204254557474 54 15.288373596745718
 		 55 15.741008508912921 56 16.057034421607767 57 16.171997718813135 58 16.015509410239755
 		 59 15.510558987771201 60 13.671040338894301 61 10.456025147646789 62 7.1791090491739578
-		 63 5.226751984677894 64 5.0809938382821302 65 5.9254914638900908 66 7.3129469058274816
+		 63 5.226751984677894 64 5.0809938382821302 65 5.9254914638900917 66 7.3129469058274816
 		 67 8.8035220169850046 68 9.9793157188472854 69 10.4437794651154 70 9.8046645922459561
 		 71 7.9870210396858825 72 5.456923288947535 73 2.6216983705257575 74 -0.12999728509713718
 		 75 -2.4698143260641161 76 -4.1682097532656082 77 -5.1112815048272129 78 -5.2971374662212671
 		 79 -3.4008644796711192 80 -2.0752901624192512 81 -3.1691643021142308 82 -4.8066904033769369
 		 83 -5.7174960043923209 84 -4.8574011438624094 85 -4.729832321080786 86 -5.3169463213495272
 		 87 -5.6788545630423446 88 -6.3314126168601508 89 -6.0018195876714309 90 -5.2375840859611937
-		 91 -4.3747218906313865 92 -3.7482013840357196 93 -3.1548618916252344 94 -2.2136258976754366
+		 91 -4.3747218906313865 92 -3.7482013840357196 93 -3.1548618916252349 94 -2.2136258976754366
 		 95 -0.98823158081355289 96 0.45798065870247634 97 2.0542330580184682 98 3.7129274229304556
 		 99 5.3202313215901214 100 5.831787878456395 101 4.8172660900403788 102 3.2009074977258698
 		 103 2.1782641282137591 104 3.0867280342636256 105 6.8075229887019288 106 15.193394874607062
-		 107 22.722322046209683 108 24.557530745242122 109 22.93973867632462 110 21.044588894915602
+		 107 22.722322046209687 108 24.557530745242122 109 22.93973867632462 110 21.044588894915606
 		 111 19.201572030521472 112 17.849515314040069 113 17.083455708144417 114 16.747846552534035
 		 115 16.598315720122102 116 16.419111066110727 117 16.163929014150391 118 15.867846847743438
 		 119 15.555836779110606 120 15.244100761879677 121 14.941551589840421 122 14.651421799965096
 		 123 14.373068036483749 124 14.103428439196648 125 13.838252855213616 126 13.573420822700394
 		 127 13.305502725560494 128 13.032145636918456 129 12.752433692795009 130 12.466675266559678
-		 131 12.175929332062596 132 11.881535331877259 133 11.58443477451752 134 11.283885750370358
+		 131 12.175929332062596 132 11.881535331877259 133 11.584434774517522 134 11.283885750370358
 		 135 10.339518088984207 136 8.8481200160162583 137 7.6774850745125809 138 7.2354722758107854
 		 139 7.2354360956178994 140 7.2353811175871208 141 7.2353696265440499 142 7.235436269411065
 		 143 7.2354532905442559 144 10.183004323546573 145 16.535238459142555 146 17.561617612875057
@@ -18665,27 +18664,27 @@ createNode animCurveTA -n "RightArm_rotate_hair_inputAX";
 	setAttr ".wgt" no;
 	setAttr -s 160 ".ktv[0:159]"  1 -48.098503263645675 2 -48.029428566265182
 		 3 -47.855817029209362 4 -47.628772592421214 5 -47.400331677724544 6 -47.258661698933587
-		 7 -47.222517426488949 8 -47.176288711854063 9 -47.079768131295985 10 -47.004705309471213
+		 7 -47.222517426488949 8 -47.17628871185407 9 -47.079768131295985 10 -47.004705309471213
 		 11 -46.918529850245619 12 -46.83212839714281 13 -46.756606384356758 14 -46.703121420382594
 		 15 -46.682783830689907 16 -46.69321182715813 17 -46.721977546976838 18 -46.765280220961927
-		 19 -46.819335229606509 20 -46.880309387287795 21 -46.944490177812504 22 -47.008018241361995
+		 19 -46.819335229606516 20 -46.880309387287795 21 -46.944490177812504 22 -47.008018241361995
 		 23 -47.067154093535954 24 -47.118090066952853 25 -47.157016421027755 26 -47.180341481821259
 		 27 -47.184208244563223 28 -47.165000864208587 29 -47.119023710424436 30 -47.042679743150259
 		 31 -46.924595628192776 32 -46.782174649805455 33 -46.653339111042811 34 -46.572085347455193
-		 35 -46.534593695686901 36 -46.513851319541082 37 -46.503827362314382 38 -46.498537606746652
-		 39 -46.49322076672879 40 -46.484753195769009 41 -46.473450353374687 42 -46.46166800966386
+		 35 -46.534593695686901 36 -46.513851319541082 37 -46.503827362314382 38 -46.498537606746659
+		 39 -46.49322076672879 40 -46.484753195769009 41 -46.473450353374687 42 -46.461668009663867
 		 43 -46.449427529721298 44 -46.436775752447588 45 -46.423844320614862 46 -46.410691532189816
 		 47 -46.397379965032592 48 -46.383943320662766 49 -46.370494418841595 50 -46.357050469181154
 		 51 -46.343663559320298 52 -46.330482426582904 53 -46.317499339212596 54 -46.304779797641842
 		 55 -46.292367164281714 56 -46.280359164888182 57 -46.268736564318999 58 -46.257676116546371
-		 59 -46.247126706070958 60 -46.237216765179262 61 -46.227971314143041 62 -46.219432876168533
-		 63 -46.211689311960164 64 -46.204776586432928 65 -46.19879970428196 66 -46.193745582906892
+		 59 -46.247126706070958 60 -46.237216765179269 61 -46.227971314143041 62 -46.219432876168533
+		 63 -46.211689311960164 64 -46.204776586432928 65 -46.198799704281967 66 -46.193745582906892
 		 67 -46.189698754162421 68 -46.186759976249363 69 -46.184933496610206 70 -46.184331331365676
 		 71 -46.184495747568498 72 -46.184996129065297 73 -46.185771708360392 74 -46.186780924179423
 		 75 -46.187959996245354 76 -46.189248763870751 77 -46.19063743007294 78 -46.19203952230994
 		 79 -46.193431734693611 80 -46.194731852795798 81 -46.195910711697302 82 -46.1969455932947
 		 83 -46.197753651145547 84 -46.198301497067462 85 -46.198562172925826 86 -46.198675195712433
-		 87 -46.198877758890916 88 -46.199069596069279 89 -46.199247283068985 90 -46.199360069818574
+		 87 -46.198877758890916 88 -46.199069596069286 89 -46.199247283068985 90 -46.199360069818574
 		 91 -46.19943294302039 92 -46.199352217658685 93 -46.199929528942384 94 -46.201351655382773
 		 95 -46.202722625851052 96 -46.203235378044795 97 -46.20308026739449 98 -46.202906778431995
 		 99 -46.202842543541486 100 -46.202905075487486 101 -46.20307706113784 102 -46.203415863224464
@@ -18694,8 +18693,8 @@ createNode animCurveTA -n "RightArm_rotate_hair_inputAX";
 		 111 -46.221682340581914 112 -46.224497634882198 113 -46.226889644089468 114 -46.22869377770175
 		 115 -46.229681414430914 116 -46.230330736014047 117 -46.231026126636195 118 -46.231715329570427
 		 119 -46.232300166224164 120 -46.232708908978424 121 -46.232867556762216 122 -46.232576204920548
-		 123 -46.231768492610442 124 -46.230413934324979 125 -46.228384978870452 126 -46.225570719375597
-		 127 -46.221827134576579 128 -46.217138780027575 129 -46.211351594088718 130 -46.204371874921911
+		 123 -46.231768492610442 124 -46.230413934324986 125 -46.228384978870452 126 -46.225570719375597
+		 127 -46.221827134576579 128 -46.217138780027575 129 -46.211351594088725 130 -46.204371874921911
 		 131 -46.196114097496512 132 -46.186440713400991 133 -46.175269056679404 134 -46.162491337885875
 		 135 -46.148021663201682 136 -46.131710529541614 137 -46.113448026951218 138 -46.093205052958055
 		 139 -46.070790120899325 140 -46.046116285533266 141 -45.998729844176516 142 -45.943219514362518
@@ -18720,14 +18719,14 @@ createNode animCurveTA -n "RightArm_rotate_hair_inputAY";
 	setAttr ".wgt" no;
 	setAttr -s 160 ".ktv[0:159]"  1 -29.965974407850869 2 -29.818170579092413
 		 3 -29.447184944316682 4 -28.96313195325833 5 -28.477648336743314 6 -28.195908208285122
-		 7 -28.137861339994505 8 -28.025662644131611 9 -27.797389838225367 10 -27.637450863342433
+		 7 -28.137861339994508 8 -28.025662644131611 9 -27.797389838225371 10 -27.637450863342433
 		 11 -27.454072007287426 12 -27.270425868748237 13 -27.110230493562742 14 -26.996813975818821
 		 15 -26.953777497762559 16 -26.971615149492557 17 -27.020614858939464 18 -27.094361496870182
 		 19 -27.186157418563429 20 -27.289292183933831 21 -27.397630713790175 22 -27.504516524337426
-		 23 -27.60361819436935 24 -27.68866498544153 25 -27.753143923971027 26 -27.791440606595756
+		 23 -27.603618194369353 24 -27.68866498544153 25 -27.753143923971027 26 -27.791440606595756
 		 27 -27.797034357756186 28 -27.763955543952342 29 -27.686315277591891 30 -27.557784459479873
 		 31 -27.4041638112001 32 -27.29247813368529 33 -27.275817120333368 34 -27.402951632928179
-		 35 -27.702679095070504 36 -28.137106358039286 37 -28.640805688786024 38 -29.137706441759473
+		 35 -27.702679095070508 36 -28.137106358039286 37 -28.640805688786024 38 -29.137706441759473
 		 39 -29.540907859085724 40 -29.758242195072611 41 -29.848099641821474 42 -29.931406167433174
 		 43 -30.008097852818427 44 -30.078338038165981 45 -30.142520336402164 46 -30.20084559378515
 		 47 -30.25347436940968 48 -30.300661104777024 49 -30.342717363255769 50 -30.379795954277149
@@ -18779,16 +18778,16 @@ createNode animCurveTA -n "RightArm_rotate_hair_inputAZ";
 		 11 73.385566875530401 12 73.901317345786012 13 74.33586269474894 14 74.6314753304449
 		 15 74.74435488049771 16 74.711340068534184 17 74.625152738640978 18 74.500834157691045
 		 19 74.360719670402005 20 74.214180458064988 21 74.081866000109088 22 73.9832397527002
-		 23 73.933005090070736 24 73.952725226925239 25 74.045968783308666 26 74.236457890463498
+		 23 73.933005090070736 24 73.952725226925239 25 74.045968783308666 26 74.236457890463512
 		 27 74.534417940785332 28 74.950160011316555 29 75.493158944906185 30 76.167257958066756
 		 31 77.059031634259185 32 78.115348626166082 33 79.141218067081894 34 79.937276451426754
 		 35 80.506726333285869 36 80.930640888357175 37 81.137546774967362 38 81.111086085020858
-		 39 80.93418624279019 40 80.835912292928313 41 80.873620338070509 42 80.922638015953652
+		 39 80.93418624279019 40 80.835912292928313 41 80.873620338070523 42 80.922638015953652
 		 43 80.977227903180975 44 81.042870444123224 45 81.118322276178603 46 81.204797735802188
 		 47 81.299262520483012 48 81.403070750408176 49 81.517574444863712 50 81.640589139744904
 		 51 81.76912580764612 52 81.901743548077661 53 82.042026639081371 54 82.187416446873968
 		 55 82.331988655836852 56 82.478448871658983 57 82.624445437598425 58 82.769742565895285
-		 59 82.909437619475199 60 83.044594624763675 61 83.173424041186436 62 83.294108398980768
+		 59 82.909437619475213 60 83.044594624763675 61 83.173424041186436 62 83.294108398980768
 		 63 83.407145109494522 64 83.508663633692578 65 83.59370726768536 66 83.672444737731198
 		 67 83.731989786437111 68 83.775144109627163 69 83.806836582781131 70 83.815515466395581
 		 71 83.817712846433409 72 83.82274549601857 73 83.832489296574323 74 83.8457977620062
@@ -18807,7 +18806,7 @@ createNode animCurveTA -n "RightArm_rotate_hair_inputAZ";
 		 123 83.988631132776689 124 84.0142635899699 125 84.051097654011912 126 84.098177465054746
 		 127 84.160752173839199 128 84.236867965299481 129 84.325217896480794 130 84.430048883299946
 		 131 84.548295417081661 132 84.684993490416034 133 84.839455549386216 134 85.013519016577192
-		 135 85.200142149980138 136 85.407340879148634 137 85.632645871076832 138 85.875346664075181
+		 135 85.200142149980138 136 85.407340879148649 137 85.632645871076832 138 85.875346664075181
 		 139 86.139319823963717 140 86.418237121804793 141 86.929014383339165 142 87.442164709780414
 		 143 87.392577784683454 144 86.743329672933314 145 85.819716359064799 146 84.668047083321085
 		 147 83.333617909518679 148 81.855835176875587 149 80.278094384442667 150 78.350492517365495
@@ -18833,17 +18832,17 @@ createNode animCurveTA -n "RightForeArm_rotate_hair_inputAX";
 		 7 0.0085802089687041956 8 -0.06973850889642183 9 -0.2443530273573255 10 -0.31017370482503959
 		 11 -0.38877147997495309 12 -0.47090100208296665 13 -0.54470473164532363 14 -0.59748277143862039
 		 15 -0.61800285263552168 16 -0.61432496023627203 17 -0.60533250331702426 18 -0.59292767460437368
-		 19 -0.57994474409123098 20 -0.56789801803461815 21 -0.55868302025424066 22 -0.55514004886987689
+		 19 -0.57994474409123098 20 -0.56789801803461826 21 -0.55868302025424066 22 -0.55514004886987689
 		 23 -0.55882593582321205 24 -0.57260515698134784 25 -0.59701990065977883 26 -0.63549092226749715
 		 27 -0.69005185643156264 28 -0.76341737621859929 29 -0.85786261023820098 30 -0.97599725826395312
 		 31 -1.10138725258604 32 -1.1940252061372703 33 -1.2260989382658083 34 -1.1702026339523728
 		 35 -1.0106493675452917 36 -0.77644236692680091 37 -0.51748441905863973 38 -0.28538097239812249
 		 39 -0.12246189266507183 40 -0.04951234912254808 41 -0.025360412956824716 42 -0.0050729961371809591
-		 43 0.012100873529935798 44 0.026179095625360076 45 0.037817225889610825 46 0.047151582906865205
+		 43 0.012100873529935798 44 0.026179095625360079 45 0.037817225889610825 46 0.047151582906865205
 		 47 0.0547026597307066 48 0.060594062536544334 49 0.065122192260789233 50 0.068320682774221875
 		 51 0.070549814240718933 52 0.072002967543686611 53 0.072514956367522726 54 0.072338534321854775
 		 55 0.07159419822711606 56 0.070225800073391603 57 0.068416916015543588 58 0.066064547572804264
-		 59 0.063415564237809668 60 0.060464414376313953 61 0.057335720343435669 62 0.054007391883091851
+		 59 0.063415564237809668 60 0.060464414376313953 61 0.057335720343435669 62 0.054007391883091858
 		 63 0.050627559582177004 64 0.047296948807537535 65 0.044441694304235439 66 0.041468759607134857
 		 67 0.039136528869797238 68 0.037449427231033297 69 0.035967804530797433 70 0.035636442976877368
 		 71 0.034985134045768619 72 0.033252548377773201 73 0.030326814547805985 74 0.026374594387314192
@@ -18856,18 +18855,18 @@ createNode animCurveTA -n "RightForeArm_rotate_hair_inputAX";
 		 99 -0.23840307247318077 100 -0.24157012796631416 101 -0.24398020072213655 102 -0.24526079455663929
 		 103 -0.24588411380091921 104 -0.24510654120060185 105 -0.24301679986014338 106 -0.23870582046760389
 		 107 -0.23070281737289161 108 -0.21956292487349585 109 -0.20711775582351943 110 -0.19331677955880675
-		 111 -0.18026115462954209 112 -0.16761572037887154 113 -0.15673950673389755 114 -0.14778262401115522
+		 111 -0.18026115462954209 112 -0.16761572037887154 113 -0.15673950673389758 114 -0.14778262401115522
 		 115 -0.14236156676044787 116 -0.13899782250247827 117 -0.13644548783931307 118 -0.13471890269551651
 		 119 -0.13408685516513008 120 -0.13436406852318894 121 -0.13589041614986916 122 -0.13878137885131411
 		 123 -0.14296085047018456 124 -0.14839538511326353 125 -0.15574952624471294 126 -0.16463457124222788
-		 127 -0.17568874569990339 128 -0.18899195085457929 129 -0.20422013065294733 130 -0.22188356563054026
+		 127 -0.17568874569990342 128 -0.18899195085457929 129 -0.20422013065294733 130 -0.22188356563054026
 		 131 -0.24215457085827205 132 -0.26544358510440602 133 -0.29188369515236917 134 -0.32187958732758593
 		 135 -0.35487415933569555 136 -0.39200139008550255 137 -0.43309619647891229 138 -0.47839651625442176
-		 139 -0.52865092882874809 140 -0.58326892248983153 141 -0.70580770103546719 142 -0.89191155701356573
+		 139 -0.52865092882874809 140 -0.58326892248983164 141 -0.70580770103546719 142 -0.89191155701356573
 		 143 -1.0316314405586624 144 -1.0824120583940777 145 -1.0896575395472237 146 -1.0663079289384814
 		 147 -1.0262429666672277 148 -0.98231342190044391 149 -0.94731400027010859 150 -0.82389850209549487
 		 151 -0.58802030094879465 152 -0.3598905426982863 153 -0.074177159252086691 154 0.1159448456572104
-		 155 0.040940645878869503 156 0.017171469384282736 157 0.0030680203693648541 158 -0.0032474742899228559
+		 155 0.040940645878869503 156 0.017171469384282736 157 0.0030680203693648541 158 -0.0032474742899228563
 		 159 -0.0048890292676397077 160 -0.0050299946508317941;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
@@ -18884,13 +18883,13 @@ createNode animCurveTA -n "RightForeArm_rotate_hair_inputAY";
 	setAttr ".tan" 2;
 	setAttr ".wgt" no;
 	setAttr -s 160 ".ktv[0:159]"  1 0.0040840208381293557 2 -0.33127122462769631
-		 3 -0.99689241291515374 4 -1.6936260772218779 5 -2.2748802100236127 6 -2.3289134977808428
+		 3 -0.99689241291515374 4 -1.6936260772218779 5 -2.2748802100236127 6 -2.3289134977808432
 		 7 -2.1339430434147442 8 -2.4532558509048568 9 -2.9672533355333308 10 -3.1236037596234585
 		 11 -3.2931773488103397 12 -3.4544622006886629 13 -3.5881847496938617 14 -3.6783343345499486
 		 15 -3.7121842155713738 16 -3.706174805044625 17 -3.6913302297263479 18 -3.6706751358590015
 		 19 -3.6488144049646398 20 -3.6283445011869397 21 -3.6124618489704714 22 -3.6063166462369893
 		 23 -3.6127462424073196 24 -3.6363224691029674 25 -3.6775381076961944 26 -3.740608347870336
-		 27 -3.8266287770977581 28 -3.9365991265378 29 -4.0693511734132617 30 -4.2234992662986182
+		 27 -3.8266287770977581 28 -3.9365991265378 29 -4.0693511734132617 30 -4.223499266298619
 		 31 -4.3745741865856624 32 -4.4786578384583189 33 -4.5135059067542933 34 -4.4525333753399519
 		 35 -4.266380971208414 36 -3.955412359527525 37 -3.5399778742014201 38 -3.0663951162042018
 		 39 -2.6288458035392179 40 -2.3788237584817442 41 -2.2835081357797025 42 -2.1967262919769404
@@ -18907,17 +18906,17 @@ createNode animCurveTA -n "RightForeArm_rotate_hair_inputAY";
 		 83 -2.3664442176250042 84 -2.4067336638182564 85 -2.4460501203776834 86 -2.4839461480195686
 		 87 -2.5201258668533399 88 -2.5538774062789571 89 -2.5835546050044114 90 -2.6090989561510218
 		 91 -2.6289656314042351 92 -2.6420128881781828 93 -2.6909827400530468 94 -2.7844112812105011
-		 95 -2.875913593774452 96 -2.9218224958238306 97 -2.932700506784494 98 -2.9438117700818398
+		 95 -2.8759135937744524 96 -2.9218224958238306 97 -2.932700506784494 98 -2.9438117700818398
 		 99 -2.9523208797259546 100 -2.9602947005867439 101 -2.9663805374824119 102 -2.9695611050758437
 		 103 -2.9711384030450936 104 -2.9691976350685549 105 -2.9639628704055339 106 -2.9531043204632819
-		 107 -2.9328900265303899 108 -2.9043699919734109 109 -2.8716973935673242 110 -2.8346906555015523
-		 111 -2.7989659070273762 112 -2.7633506343635559 113 -2.7320498418728771 114 -2.7058653006185511
-		 115 -2.6897305521592112 116 -2.6795679693840673 117 -2.67182250188957 118 -2.6666083119619821
-		 119 -2.6646846409960583 120 -2.6655416644611662 121 -2.6702299827907225 122 -2.6789364182247262
+		 107 -2.9328900265303903 108 -2.9043699919734109 109 -2.8716973935673242 110 -2.8346906555015523
+		 111 -2.7989659070273762 112 -2.7633506343635559 113 -2.7320498418728776 114 -2.7058653006185511
+		 115 -2.6897305521592116 116 -2.6795679693840673 117 -2.67182250188957 118 -2.6666083119619821
+		 119 -2.6646846409960583 120 -2.6655416644611667 121 -2.6702299827907225 122 -2.6789364182247262
 		 123 -2.6914196610654457 124 -2.7077140192834466 125 -2.7292195158925274 126 -2.7548363862577294
 		 127 -2.7861220245507217 128 -2.8228435810410564 129 -2.8639540035805502 130 -2.9103325090203107
 		 131 -2.9617590408459469 132 -3.0190126140138123 133 -3.0815952740224102 134 -3.1499290741983628
-		 135 -3.2220296897222656 136 -3.299783940764403 137 -3.3819724303074579 138 -3.4685160558219512
+		 135 -3.2220296897222656 136 -3.2997839407644034 137 -3.3819724303074579 138 -3.4685160558219512
 		 139 -3.5599008115081077 140 -3.6544717301639023 141 -3.8507608937445101 142 -4.1151213055339051
 		 143 -4.2919989516688473 144 -4.3524424008597382 145 -4.3609122914232925 146 -4.3334900510464989
 		 147 -4.2854904347374356 148 -4.231391836915523 149 -4.1872149613549157 150 -4.0226734820153682
@@ -18943,21 +18942,21 @@ createNode animCurveTA -n "RightForeArm_rotate_hair_inputAZ";
 		 7 -0.21368482327849717 8 -2.0846330167569738 9 -5.1753751072161993 10 -6.1412698287309402
 		 11 -7.2060855233182943 12 -8.2367399355314355 13 -9.10662730822804 14 -9.7005824225447839
 		 15 -9.9265701457601416 16 -9.8869129228724564 17 -9.7880825497444857 18 -9.6503262042109643
-		 19 -9.5063926836854939 20 -9.3692656769943419 21 -9.2650673166151414 22 -9.2247265195046388
+		 19 -9.5063926836854939 20 -9.3692656769943437 21 -9.2650673166151414 22 -9.2247265195046388
 		 23 -9.2672692321469583 24 -9.4240952494858448 25 -9.6962184236058437 26 -10.116896757229403
-		 27 -10.697340446869498 28 -11.449123092421875 29 -12.378097004575727 30 -13.484520425808029
+		 27 -10.697340446869498 28 -11.449123092421877 29 -12.378097004575727 30 -13.484520425808029
 		 31 -14.601911856524922 32 -15.397985490149839 33 -15.666223926231115 34 -15.194833935250596
 		 35 -13.799413439882604 36 -11.580887079447303 37 -8.7906205138624891 38 -5.7871643776609902
 		 39 -3.1280468524408089 40 -1.645564163076894 41 -1.0856433533412639 42 -0.5791416848122366
 		 43 -0.11606476032106043 44 0.29412868486668309 45 0.6555427284929265 46 0.96630260600479423
 		 47 1.2328001503728609 48 1.4532996999745147 49 1.6265327701278953 50 1.7570020906164725
 		 51 1.8506563072762736 52 1.9117699533103807 53 1.9342785797155668 54 1.9247133223322446
-		 55 1.8929979541833912 56 1.8365359983213141 57 1.7603222980926343 58 1.6651689514152754
-		 59 1.5606091760226648 60 1.447294692099435 61 1.3285286207366243 62 1.20772804253627
-		 63 1.0863383821311459 64 0.97111361962549858 65 0.87366818603699603 66 0.77442523906897054
+		 55 1.8929979541833912 56 1.8365359983213141 57 1.7603222980926345 58 1.6651689514152754
+		 59 1.560609176022665 60 1.447294692099435 61 1.3285286207366243 62 1.20772804253627
+		 63 1.0863383821311459 64 0.97111361962549858 65 0.87366818603699614 66 0.77442523906897054
 		 67 0.69866782543750428 68 0.64261055941003375 69 0.59689509545460817 70 0.58545835762561593
-		 71 0.56510675752965678 72 0.51075299172984479 73 0.41993849156981711 74 0.29849280625618729
-		 75 0.15162574150720592 76 -0.018812922270629435 77 -0.20858621182105028 78 -0.40905623320009482
+		 71 0.56510675752965678 72 0.51075299172984479 73 0.41993849156981711 74 0.29849280625618735
+		 75 0.15162574150720592 76 -0.018812922270629435 77 -0.2085862118210503 78 -0.40905623320009482
 		 79 -0.63284789099896754 80 -0.86157666271378042 81 -1.0968177267780195 82 -1.3350464338241814
 		 83 -1.5729369748132185 84 -1.8098387445435644 85 -2.0413247686538942 86 -2.2659107384816921
 		 87 -2.4802266697564543 88 -2.6805066118069387 89 -2.8574205659652159 90 -3.0098889143254999
@@ -18967,15 +18966,15 @@ createNode animCurveTA -n "RightForeArm_rotate_hair_inputAZ";
 		 103 -5.1994864401106122 104 -5.1875966253935779 105 -5.1560525911180628 106 -5.0894777861006295
 		 107 -4.9655296746348201 108 -4.7907086380224273 109 -4.5916363111293386 110 -4.3667767299376807
 		 111 -4.1500302501356003 112 -3.9351565693050565 113 -3.7469298178573562 114 -3.5892332983860435
-		 115 -3.4925262101046846 116 -3.4318776114565464 117 -3.385125346759871 118 -3.3540400436860631
-		 119 -3.3420204425047197 120 -3.3479405633881596 121 -3.3757936048542674 122 -3.4275566102650927
+		 115 -3.492526210104685 116 -3.4318776114565464 117 -3.385125346759871 118 -3.3540400436860631
+		 119 -3.3420204425047197 120 -3.3479405633881596 121 -3.3757936048542678 122 -3.4275566102650927
 		 123 -3.5022706562336516 124 -3.6008401490376798 125 -3.7295683430945612 126 -3.8838562866487614
 		 127 -4.0733603611062223 128 -4.2949808293805782 129 -4.5442834530644536 130 -4.827971152704162
-		 131 -5.1419311390277658 132 -5.4933680896765988 133 -5.880443539660992 134 -6.3057757123838076
+		 131 -5.1419311390277658 132 -5.4933680896765997 133 -5.880443539660992 134 -6.3057757123838076
 		 135 -6.7567301407199087 136 -7.2470894214182433 137 -7.770730637601007 138 -8.3268669328542604
 		 139 -8.921335211638576 140 -9.5430105902557543 141 -10.861437880488484 142 -12.702913463642359
-		 143 -13.987009274249516 144 -14.437066062426258 145 -14.499922258089184 146 -14.294512377766329
-		 147 -13.939167042909979 148 -13.542740466806688 149 -13.221630186635812 150 -12.049309761431394
+		 143 -13.987009274249518 144 -14.437066062426258 145 -14.499922258089184 146 -14.294512377766329
+		 147 -13.939167042909979 148 -13.542740466806688 149 -13.221630186635812 150 -12.049309761431395
 		 151 -9.5958313200727687 152 -6.8244958251833312 153 -2.1764914853304491 154 5.2106525006921549
 		 155 10.702953019389295 156 11.430286260203449 157 11.822902861000816 158 11.989837170756225
 		 159 12.031982686428645 160 12.036887748867034;
@@ -18999,10 +18998,10 @@ createNode animCurveTA -n "RightHand_rotate_hair_inputAX";
 		 11 64.387043690266694 12 64.323689827752418 13 64.257829351168908 14 64.206244914641331
 		 15 64.185193900464895 16 64.195369223790209 17 64.223407742029437 18 64.266287351354421
 		 19 64.319921215254482 20 64.381867640442877 21 64.449782577844843 22 64.520884162111699
-		 23 64.594365334210323 24 64.669382574430884 25 64.747141475594375 26 64.827664098442185
+		 23 64.594365334210323 24 64.669382574430884 25 64.74714147559439 26 64.827664098442185
 		 27 64.911849668089673 28 65.000239253094293 29 65.093201373968043 30 65.189971748370411
 		 31 65.334604221771642 32 65.550529352731743 33 65.787828066766863 34 65.981403095624174
-		 35 66.103288629099609 36 66.117016735575689 37 65.955605919991712 38 65.61486508644343
+		 35 66.103288629099623 36 66.117016735575689 37 65.955605919991712 38 65.61486508644343
 		 39 65.196145208590124 40 64.920717967248422 41 64.807703904989665 42 64.699555434722342
 		 43 64.595870254857871 44 64.499196690218767 45 64.409441549523493 46 64.328026685010855
 		 47 64.254232682406951 48 64.189087372144115 49 64.133324349221056 50 64.086573140711081
@@ -19020,16 +19019,16 @@ createNode animCurveTA -n "RightHand_rotate_hair_inputAX";
 		 95 65.369379720910146 96 65.432966346083319 97 65.448528823503651 98 65.465656365836338
 		 99 65.480650098238343 100 65.495537536816627 101 65.50857577882519 102 65.518330124349944
 		 103 65.526014390741338 104 65.529185906819876 105 65.527857553244544 106 65.518581979418443
-		 107 65.496636159395834 108 65.463855862325261 109 65.425285895191664 110 65.381255162885438
+		 107 65.496636159395834 108 65.463855862325275 109 65.425285895191664 110 65.381255162885438
 		 111 65.338399886893711 112 65.296278170249295 113 65.260093348650656 114 65.231316603616008
 		 115 65.216389500550818 116 65.209461898204964 117 65.20525127563883 118 65.204000448441846
-		 119 65.206783288061473 120 65.213171166993206 121 65.224395711429366 122 65.24088821017817
+		 119 65.206783288061473 120 65.21317116699322 121 65.224395711429366 122 65.24088821017817
 		 123 65.262443536811887 124 65.289064325733108 125 65.322450073255069 126 65.361461183072564
 		 127 65.407495679548362 128 65.460491693763203 129 65.519041354779759 130 65.583928482208321
 		 131 65.65477241377053 132 65.731826932556729 133 65.814362077302221 134 65.902217157387653
 		 135 65.993047889657632 136 66.087864238143524 137 66.184892481318869 138 66.283054421695738
 		 139 66.381942711698997 140 66.479100257094188 141 66.655380240561513 142 66.826804185660166
-		 143 66.85400575014063 144 66.761033082081681 145 66.608992160621554 146 66.415346543690944
+		 143 66.85400575014063 144 66.761033082081681 145 66.608992160621568 146 66.415346543690944
 		 147 66.19166388845322 148 65.945080993560438 149 65.677477359023641 150 65.368819882244679
 		 151 65.048139222027288 152 64.758838829641078 153 64.571219828253476 154 64.055725583159173
 		 155 63.339388813310237 156 63.230102300317014 157 63.174651727720359 158 63.156576130642136
@@ -19053,21 +19052,21 @@ createNode animCurveTA -n "RightHand_rotate_hair_inputAY";
 		 7 2.7179372342647694 8 5.0109025180397877 9 8.8567687032447608 10 10.329017525635647
 		 11 11.962284004167467 12 13.550156970498085 13 14.894991291232367 14 15.819114295301048
 		 15 16.168587801829521 16 16.059328467320238 17 15.762630046490473 18 15.311391852067265
-		 19 14.75122921477795 20 14.110450753519329 21 13.424162242379039 22 12.741585988921551
+		 19 14.75122921477795 20 14.110450753519329 21 13.42416224237904 22 12.741585988921553
 		 23 12.095554500829296 24 11.533803006811448 25 11.073096861361364 26 10.762613237551651
-		 27 10.629706255525775 28 10.70366054632618 29 11.002336626669836 30 11.543688544110102
+		 27 10.629706255525777 28 10.70366054632618 29 11.002336626669836 30 11.543688544110102
 		 31 11.758747628795804 32 11.087847152480821 33 9.6208610926402898 34 7.4289398126651545
-		 35 4.1343393300418008 36 -0.38316789099641946 37 -5.5765686610686753 38 -10.755097146383395
+		 35 4.1343393300418008 36 -0.38316789099641946 37 -5.5765686610686762 38 -10.755097146383395
 		 39 -15.049268992703604 40 -17.413154107314025 41 -18.418899118178864 42 -19.355383346045588
 		 43 -20.232708239413117 44 -21.041320651080071 45 -21.787425817412903 46 -22.469294631732168
 		 47 -23.094049303428335 48 -23.66024837946539 49 -24.167173611359512 50 -24.619665824708381
 		 51 -25.022938120352929 52 -25.382443791580712 53 -25.691569746234613 54 -25.957392061421569
 		 55 -26.18780534167853 56 -26.381426473634765 57 -26.542315839818439 58 -26.670436135993313
 		 59 -26.774094755300069 60 -26.855398486285797 61 -26.915971609859806 62 -26.957674372856314
-		 63 -26.982791712167558 64 -26.996141303179161 65 -27.010332281653081 66 -27.003208632480593
-		 67 -27.000128994071638 68 -26.996975817251098 69 -26.982951073706236 70 -26.982658512134531
+		 63 -26.982791712167558 64 -26.996141303179161 65 -27.010332281653085 66 -27.003208632480593
+		 67 -27.000128994071638 68 -26.996975817251098 69 -26.982951073706239 70 -26.982658512134535
 		 71 -26.969115196381857 72 -26.935250956342731 73 -26.873732345410851 74 -26.788614790916398
-		 75 -26.682118825188887 76 -26.55383476228852 77 -26.404759680304622 78 -26.240632323434298
+		 75 -26.682118825188891 76 -26.55383476228852 77 -26.404759680304622 78 -26.240632323434298
 		 79 -26.046482103053812 80 -25.838339470326904 81 -25.609997252296751 82 -25.363532168874055
 		 83 -25.099893380308565 84 -24.81546335506825 85 -24.512694132431712 86 -24.203782079448654
 		 87 -23.904589651193788 88 -23.622227775744005 89 -23.370690145706316 90 -23.153873172755141
@@ -19078,7 +19077,7 @@ createNode animCurveTA -n "RightHand_rotate_hair_inputAY";
 		 107 -19.280949480470806 108 -19.412996540710381 109 -19.581987786069906 110 -19.784388330902697
 		 111 -19.977959424406603 112 -20.165975943248657 113 -20.316666398917231 114 -20.421182776422452
 		 115 -20.44242166305866 116 -20.416036431639522 117 -20.374971489096414 118 -20.317514764168024
-		 119 -20.237648402375537 120 -20.137406622431445 121 -20.009066687022024 122 -19.849733073194955
+		 119 -20.237648402375537 120 -20.137406622431445 121 -20.009066687022028 122 -19.849733073194955
 		 123 -19.659551205927151 124 -19.437540046247484 125 -19.17233705773511 126 -18.870103175351488
 		 127 -18.518157704012538 128 -18.116755490050796 129 -17.670662264229303 130 -17.17153690638731
 		 131 -16.619226100564223 132 -16.005541193300004 133 -15.330551037723964 134 -14.58883583858808
@@ -19086,7 +19085,7 @@ createNode animCurveTA -n "RightHand_rotate_hair_inputAY";
 		 139 -9.8926216249215511 140 -8.7387780629068601 141 -6.2979976724120181 142 -2.6842731824495001
 		 143 0.23802983700796729 144 1.9812017800625648 145 3.3494959605610641 146 4.5097122656098847
 		 147 5.6301539605730033 148 6.8679200636394606 149 8.3838773551611254 150 9.1256878464990674
-		 151 8.5541281346511813 152 7.6939804953896953 153 2.7998833877075939 154 -7.2196530279937949
+		 151 8.5541281346511813 152 7.6939804953896953 153 2.7998833877075944 154 -7.2196530279937949
 		 155 -14.388655569506042 156 -15.169779006490433 157 -15.416183209090931 158 -15.34479381349219
 		 159 -15.164021689463139 160 -15.070701324721337;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
@@ -19109,11 +19108,11 @@ createNode animCurveTA -n "RightHand_rotate_hair_inputAZ";
 		 11 33.894001462010642 12 35.296917133489856 13 36.48266600957264 14 37.295661559102591
 		 15 37.603058506584325 16 37.511646842051995 17 37.266000550905673 18 36.896037476733319
 		 19 36.443717690222925 20 35.934663516953378 21 35.400834425493962 22 34.887596295757923
-		 23 34.424723168575014 24 34.056125621069455 25 33.796241041195117 26 33.690305260158475
+		 23 34.424723168575014 24 34.056125621069462 25 33.796241041195117 26 33.690305260158475
 		 27 33.762764651577434 28 34.040039120706801 29 34.537673623934914 30 35.271353795296939
 		 31 35.847021312179891 32 35.797967239480208 33 35.087168878234323 34 33.6616323130064
 		 35 31.226317841355229 36 27.750982045637318 37 23.668977739179923 38 19.547041205019536
-		 39 16.110541722028213 40 14.236294639191303 41 13.471989650021689 42 12.767190320429474
+		 39 16.110541722028213 40 14.236294639191305 41 13.471989650021689 42 12.767190320429476
 		 43 12.112312961122329 44 11.516061765339467 45 10.972598662098902 46 10.483358475275532
 		 47 10.041619436505973 48 9.6485637721187452 49 9.3047475593497619 50 9.0056994672855346
 		 51 8.7462888193955415 52 8.5216631537182117 53 8.3377705726235423 54 8.1880680826265984
@@ -19122,19 +19121,19 @@ createNode animCurveTA -n "RightHand_rotate_hair_inputAZ";
 		 63 7.8383438602136639 64 7.8631092522239081 65 7.8813712378737284 66 7.9135777828227445
 		 67 7.9362923172564033 68 7.9533756358825682 69 7.9748214353371116 70 7.977946064530272
 		 71 7.9891363312848407 72 8.0164072006478264 73 8.0664789018351097 74 8.1357219971037011
-		 75 8.2219813188824631 76 8.3257180016758294 77 8.4459799756024569 78 8.5774008820640795
+		 75 8.2219813188824631 76 8.3257180016758294 77 8.4459799756024569 78 8.5774008820640812
 		 79 8.7340124671913433 80 8.9008379070198256 81 9.0836750901498107 82 9.2807122728387039
 		 83 9.4910173535452049 84 9.7179748935963399 85 9.9593241688105376 86 10.205059829770406
 		 87 10.442687721991245 88 10.666940256415888 89 10.866273090646029 90 11.038582354710243
 		 91 11.172999651807284 92 11.260543585062264 93 11.597341277932134 94 12.254083417241919
 		 95 12.911378508808541 96 13.246129127517881 97 13.333613039190858 98 13.441701524895251
-		 99 13.548810944364266 100 13.66542720101784 101 13.779594767614535 102 13.882046497878999
-		 103 13.977796438257949 104 14.051529099383004 105 14.101354498588822 106 14.108104874584908
+		 99 13.548810944364266 100 13.66542720101784 101 13.779594767614537 102 13.882046497878999
+		 103 13.977796438257949 104 14.051529099383004 105 14.101354498588824 106 14.108104874584908
 		 107 14.046395885878017 108 13.925741817332662 109 13.775295287418979 110 13.596307997982771
 		 111 13.426367942684584 112 13.260424002739871 113 13.12613815817441 114 13.029864484101029
 		 115 13.004224978925725 116 13.017841927283046 117 13.043292243874546 118 13.082016742402381
 		 119 13.139532136588731 120 13.214026038990697 121 13.312499483216719 122 13.43759117202846
-		 123 13.589140095480046 124 13.767986673739738 125 13.98474811210432 126 14.233500128635413
+		 123 13.589140095480047 124 13.767986673739738 125 13.98474811210432 126 14.233500128635415
 		 127 14.526180983506942 128 14.862464044698722 129 15.237838603961569 130 15.660212849964299
 		 131 16.129519501788323 132 16.653582333019582 133 17.232371716185305 134 17.870819739979524
 		 135 18.558378798238518 136 19.31159314295839 137 20.125092012354195 138 21.001347949038369
@@ -19142,7 +19141,7 @@ createNode animCurveTA -n "RightHand_rotate_hair_inputAZ";
 		 143 30.462323315510776 144 31.62957577801112 145 32.389787225279029 146 32.891597572272609
 		 147 33.285653301954014 148 33.711627924430616 149 34.312974917082705 150 34.133238633221865
 		 151 32.708614575362922 152 31.009089424275583 153 26.268242829736494 154 17.545736594507702
-		 155 11.303434577104493 156 10.492018473077264 157 10.043103866134629 158 9.8424111185287231
+		 155 11.303434577104493 156 10.492018473077266 157 10.043103866134629 158 9.8424111185287231
 		 159 9.7846715688091166 160 9.7762134911162804;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
@@ -19168,11 +19167,11 @@ createNode animCurveTA -n "Head_rotate_hair_inputAX";
 		 27 -14.767128453096078 28 -17.940365121239154 29 -24.059949249981152 30 -27.846727159331703
 		 31 -28.928978177330634 32 -29.555308413129463 33 -29.815021339852773 34 -29.78531646040809
 		 35 -29.520626845681331 36 -29.128506900004982 37 -28.694682783498678 38 -28.253226043500515
-		 39 -27.833765686666961 40 -27.462008336721688 41 -27.13252612537638 42 -26.828047691168319
+		 39 -27.833765686666961 40 -27.462008336721691 41 -27.13252612537638 42 -26.828047691168319
 		 43 -26.553892222252969 44 -26.31471241251543 45 -26.109711712830546 46 -25.930988825871612
-		 47 -25.772367267873999 48 -25.630308322238729 49 -25.499622209686262 50 -25.378081880744958
-		 51 -25.259604504523676 52 -25.140718945294875 53 -25.017477781342798 54 -24.885255161457518
-		 55 -24.741996653054716 56 -24.593838161892695 57 -24.444890061901958 58 -24.281232878348021
+		 47 -25.772367267874003 48 -25.630308322238729 49 -25.499622209686262 50 -25.378081880744958
+		 51 -25.259604504523676 52 -25.140718945294878 53 -25.017477781342798 54 -24.885255161457518
+		 55 -24.741996653054716 56 -24.593838161892695 57 -24.444890061901958 58 -24.281232878348025
 		 59 -24.089460330421286 60 -23.856194331323209 61 -23.567705236813058 62 -23.210934604501247
 		 63 -22.773001607104536 64 -22.146078591886489 65 -21.305789158190507 66 -20.362016119582524
 		 67 -19.429966502090046 68 -18.620401811317468 69 -18.050007227744423 70 -17.831388175162957
@@ -19190,14 +19189,14 @@ createNode animCurveTA -n "Head_rotate_hair_inputAX";
 		 115 -20.618797527097893 116 -20.63996303308236 117 -20.666276328963448 118 -20.696802256223229
 		 119 -20.732909518058744 120 -20.773887150755659 121 -20.820088186647542 122 -20.872065982971026
 		 123 -20.930051591600222 124 -20.994239734571906 125 -21.064742859346342 126 -21.142073278195429
-		 127 -21.226944617826877 128 -21.319400753224784 129 -21.419008237358231 130 -21.52724344796572
-		 131 -21.679835727711822 132 -21.905525922751131 133 -22.190927365458286 134 -22.52365022369208
+		 127 -21.226944617826877 128 -21.319400753224784 129 -21.419008237358231 130 -21.527243447965724
+		 131 -21.679835727711822 132 -21.905525922751131 133 -22.19092736545829 134 -22.523650223692083
 		 135 -22.890584726204956 136 -23.278747296159132 137 -23.675967242938889 138 -24.069549041227017
-		 139 -24.445152111470165 140 -24.790878561406711 141 -24.98288063667999 142 -24.860534077587552
+		 139 -24.445152111470165 140 -24.790878561406714 141 -24.98288063667999 142 -24.860534077587552
 		 143 -24.348008139734205 144 -23.356528456178598 145 -21.941839421023786 146 -20.378760909910206
 		 147 -18.53884283284733 148 -16.33706263809588 149 -14.200573924150259 150 -12.1177929120556
 		 151 -9.9484379887248551 152 -7.8063175326878413 153 -5.1977772361778092 154 -2.3090371757758543
-		 155 -0.30972290651344681 156 0.78909027928391406 157 1.7946297267612485 158 2.7265875468569916
+		 155 -0.30972290651344681 156 0.78909027928391418 157 1.7946297267612485 158 2.7265875468569916
 		 159 3.6049130896739521 160 4.4518196209621008;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
@@ -19218,8 +19217,8 @@ createNode animCurveTA -n "Head_rotate_hair_inputAY";
 		 7 2.828038839854575 8 3.01781490743558 9 3.3389324405946552 10 3.6322752470952935
 		 11 3.6918756455284223 12 2.6638424124897284 13 0.86883363129892588 14 -0.14326044714993613
 		 15 -0.24554709719402362 16 -0.34884408000768036 17 -0.44960228791163576 18 -0.54286640720689938
-		 19 -0.62403911705488102 20 -0.6882760752968663 21 -0.72997535057424812 22 -0.74958526169001538
-		 23 -0.75117946080678688 24 -0.73868088553926581 25 -0.71605644374958866 26 -0.68700049915192718
+		 19 -0.62403911705488102 20 -0.6882760752968663 21 -0.72997535057424812 22 -0.74958526169001549
+		 23 -0.75117946080678688 24 -0.73868088553926592 25 -0.71605644374958866 26 -0.68700049915192718
 		 27 -0.6552902632370905 28 -4.761714003864479 29 -13.031267143734091 30 -18.382643119765497
 		 31 -19.06100883102151 32 -19.294387415241594 33 -19.205480093196318 34 -18.93336028117897
 		 35 -18.47790412286335 36 -17.787660085575478 37 -16.957635012639507 38 -16.116920093830707
@@ -19227,7 +19226,7 @@ createNode animCurveTA -n "Head_rotate_hair_inputAY";
 		 43 -14.131749966987295 44 -13.934842476007852 45 -13.769023459458934 46 -13.623861287295028
 		 47 -13.493351913451873 48 -13.371998757059581 49 -13.253790679795831 50 -13.134044578822911
 		 51 -13.006705784551322 52 -12.866555880013786 53 -12.708483035023972 54 -12.527094653312448
-		 55 -12.318213814779098 56 -12.03640758757998 57 -11.663027505951728 58 -11.229901942060458
+		 55 -12.318213814779098 56 -12.036407587579982 57 -11.663027505951728 58 -11.22990194206046
 		 59 -10.769836922175022 60 -10.315749130493494 61 -9.9005664401954903 62 -9.557124872878239
 		 63 -9.3185892252288109 64 -9.1439892394951929 65 -8.9811004968363406 66 -8.8404895492455502
 		 67 -8.7287390837351353 68 -8.6469105593930742 69 -8.5922685303810855 70 -8.5613539009557442
@@ -19240,19 +19239,19 @@ createNode animCurveTA -n "Head_rotate_hair_inputAY";
 		 95 -9.5145078589772023 96 -9.4331812073683174 97 -9.3155624481071158 98 -9.2015891664045864
 		 99 -9.0921856093851208 100 -8.9881110090623046 101 -8.8900057343899448 102 -8.7988053364002852
 		 103 -8.7154832315640789 104 -8.6408735295835388 105 -8.5758588955065065 106 -8.5172371081901055
-		 107 -8.4610272608258601 108 -8.4069526746307854 109 -8.3545018434640976 110 -8.3037791235925908
+		 107 -8.4610272608258619 108 -8.4069526746307854 109 -8.3545018434640994 110 -8.3037791235925908
 		 111 -8.2541513863136124 112 -8.2053597863160377 113 -8.1573001668912717 114 -8.1095317466883277
 		 115 -8.0615953612905749 116 -8.0206148422550694 117 -7.9931028046536863 118 -7.9779720311042928
 		 119 -7.9738553988264957 120 -7.9795887775239844 121 -7.9940544601073036 122 -8.0159499918666146
-		 123 -8.0440373576093176 124 -8.077376615215984 125 -8.1145559622289429 126 -8.1544725644433242
+		 123 -8.0440373576093176 124 -8.077376615215984 125 -8.1145559622289447 126 -8.1544725644433242
 		 127 -8.1959220337307706 128 -8.237871230681046 129 -8.2789572090292545 130 -8.3180909837815982
 		 131 -8.3832187721337572 132 -8.4968885728150507 133 -8.6500116678286787 134 -8.8333010794081677
 		 135 -9.0377041027196867 136 -9.2531892186865559 137 -9.4695828070284467 138 -9.676961727640462
 		 139 -9.8636746473707451 140 -10.018556374080205 141 -10.164290889649335 142 -10.259913393558934
 		 143 -10.206695552643708 144 -8.8843971405063762 145 -6.468856081465999 146 -4.7568821278898152
 		 147 -3.6583505704655876 148 -2.2321392000066553 149 -0.88035690296951707 150 -0.04836916399579444
-		 151 0.29838009357068462 152 0.51041670020935526 153 1.4063974420282768 154 2.8521062404972959
-		 155 3.6509585518990795 156 3.5869670395983206 157 3.3639008318655095 158 3.07215605380043
+		 151 0.29838009357068468 152 0.51041670020935526 153 1.406397442028277 154 2.8521062404972959
+		 155 3.6509585518990795 156 3.5869670395983206 157 3.3639008318655095 158 3.0721560538004304
 		 159 2.8049296414430378 160 2.6573870590587108;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
@@ -19283,30 +19282,30 @@ createNode animCurveTA -n "Head_rotate_hair_inputAZ";
 		 47 3.2915986669547883 48 3.5130282537385642 49 3.729912154534794 50 3.938294931213361
 		 51 4.1301545623949902 52 4.3001467986063906 53 4.442369557073552 54 4.5507307109157926
 		 55 4.6211666611488704 56 4.6288695120908923 57 4.5658154208077955 58 4.4444528874409519
-		 59 4.2787683427514107 60 4.082662112392331 61 3.8695114298146658 62 3.6519466429385474
+		 59 4.2787683427514116 60 4.082662112392331 61 3.8695114298146658 62 3.6519466429385474
 		 63 3.4415671669434276 64 3.1592978294667082 65 2.7630769813797516 66 2.3092343058587281
 		 67 1.853555186153657 68 1.4472551972015029 69 1.1401314283968902 70 0.98178602668291015
 		 71 0.90199793728982913 72 0.80026725686542566 73 0.67985951095670061 74 0.54374550419341816
 		 75 0.39534374607242034 76 0.23779272634673101 77 0.074370193989866273 78 -0.091732888104340604
 		 79 -0.25744870894329247 80 -0.41937982835179199 81 -0.57438073396460565 82 -0.70479595900290404
 		 83 -0.79217044070917764 84 -0.83204175928573676 85 -0.81989276008863554 86 -0.75547702526298732
-		 87 -0.67564773358502184 88 -0.63552346062257192 89 -0.64008270418395574 90 -0.66157339701984219
+		 87 -0.67564773358502184 88 -0.63552346062257192 89 -0.64008270418395574 90 -0.6615733970198423
 		 91 -0.70344332344585603 92 -0.77024541186342221 93 -0.84603201409821316 94 -0.9056627087699145
-		 95 -0.93814359237267675 96 -0.93264180406593089 97 -0.89398505369041981 98 -0.83827900899875551
-		 99 -0.77198195176652051 100 -0.70052044612735886 101 -0.63094542648222951 102 -0.56862400187885553
+		 95 -0.93814359237267675 96 -0.93264180406593089 97 -0.89398505369041981 98 -0.83827900899875563
+		 99 -0.77198195176652051 100 -0.70052044612735898 101 -0.63094542648222951 102 -0.56862400187885553
 		 103 -0.52000246773920633 104 -0.49095892794842333 105 -0.48776951961194381 106 -0.49692598758448236
 		 107 -0.5017723008097098 108 -0.50412043179074273 109 -0.50501243795835282 110 -0.50536044231836752
 		 111 -0.5070720977156562 112 -0.51183066307823033 113 -0.5200596347692199 114 -0.53358165174186234
 		 115 -0.55412139928450799 116 -0.57119786748353518 117 -0.57359236694508264 118 -0.56288401891347106
 		 119 -0.54086431236490662 120 -0.50847353523556649 121 -0.4670111733670283 122 -0.41779278210282006
-		 123 -0.36216077290140397 124 -0.30141766394046521 125 -0.23670121000532859 126 -0.1694684186794275
+		 123 -0.36216077290140403 124 -0.30141766394046521 125 -0.23670121000532859 126 -0.1694684186794275
 		 127 -0.10096783555725286 128 -0.032359247994999278 129 0.034708948695066896 130 0.099142971860422036
 		 131 0.15046964179845304 132 0.1793589993473732 133 0.18747392028225554 134 0.1757435170752481
 		 135 0.1451233867681965 136 0.095914046471859055 137 0.02759277223233382 138 -0.060488843358020516
 		 139 -0.1705371194303813 140 -0.30474398125644503 141 -0.4710821676226507 142 -0.77212322541900025
 		 143 -1.3422831399799635 144 -2.6770913632732718 145 -4.4540108725865206 146 -5.7375089010413536
-		 147 -6.3684382009102727 148 -6.6864079862155137 149 -6.8655943986932702 150 -6.7024330442292888
-		 151 -6.1919114884893576 152 -5.9200735482229243 153 -6.3564840855393445 154 -7.1168002388953067
+		 147 -6.3684382009102727 148 -6.6864079862155137 149 -6.865594398693271 150 -6.7024330442292888
+		 151 -6.1919114884893585 152 -5.9200735482229243 153 -6.3564840855393445 154 -7.1168002388953067
 		 155 -7.57591675175735 156 -7.6747696364509226 157 -7.7242961325752901 158 -7.7228623185532381
 		 159 -7.6730491278093442 160 -7.5803165762636322;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
@@ -19502,7 +19501,7 @@ createNode animCurveTA -n "LeftShoulder_rotate_hair_inputAY";
 		 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0
 		 28 0 29 6.445295359316156e-05 30 7.3481469881110634e-05 31 6.7781959968241638e-05
 		 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0 45 0 46 0 47 0 48 0
-		 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 -6.6619848559747717e-05 58 -7.5590612859451176e-05
+		 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 -6.661984855974773e-05 58 -7.5590612859451176e-05
 		 59 -7.3727687161601797e-05 60 -7.4013636328900675e-05 61 -7.8528771380416076e-05
 		 62 -8.3654434330300806e-05 63 -8.4569033315316038e-05 64 -7.8461842279513666e-05
 		 65 -6.9182244193525741e-05 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0
@@ -19529,16 +19528,16 @@ createNode animCurveTA -n "LeftShoulder_rotate_hair_inputAZ";
 	setAttr -s 160 ".ktv[0:159]"  1 4.9999989849930317 2 4.9999947479935658
 		 3 4.9999966957804336 4 4.9999990560690843 5 4.9999962311329025 6 4.9999958829312066
 		 7 4.9999984701316951 8 4.999988791261563 9 4.9999890353691221 10 4.9999978105122498
-		 11 4.9999950854917978 12 4.9999935619610598 13 4.9999937947089643 14 4.9999949799232173
+		 11 4.9999950854917987 12 4.9999935619610598 13 4.9999937947089643 14 4.9999949799232173
 		 15 4.9999921006426664 16 4.9999822553870077 17 4.9999960446362133 18 4.9999946488525833
 		 19 4.9999954465702352 20 4.9999893850732606 21 4.9999992502309363 22 4.9999871802925853
 		 23 4.9999943455128211 24 4.9999890408147571 25 4.9999956576689657 26 4.9999992942686369
 		 27 4.9999921147973616 28 4.9999971366119516 29 4.9999930231035341 30 4.9999918631336442
 		 31 4.9999917020218572 32 4.999994545259189 33 4.9999906544139501 34 4.9999930322069472
-		 35 4.9999921812161059 36 5.0000046094339599 37 4.999989013757248 38 4.9999923573736842
-		 39 5.0000040219530195 40 5.0000005655701489 41 4.9999979656033329 42 4.9999964140439266
+		 35 4.9999921812161059 36 5.0000046094339599 37 4.9999890137572489 38 4.9999923573736842
+		 39 5.0000040219530195 40 5.0000005655701498 41 4.9999979656033329 42 4.9999964140439266
 		 43 5.0000074431069734 44 5.0000094722036676 45 5.0000052735943044 46 5.000002652294433
-		 47 4.9999980957759496 48 5.0000084353119627 49 5.0000027021568032 50 5.0000024509261811
+		 47 4.9999980957759504 48 5.0000084353119627 49 5.0000027021568032 50 5.0000024509261811
 		 51 5.0000011784170892 52 5.0000089235622251 53 5.0000110781139329 54 5.0000022509859114
 		 55 5.0000045273523277 56 5.0000116973427851 57 5.0000088891993872 58 4.9999981108192015
 		 59 5.0000109157972608 60 5.0000109832658008 61 5.0000166676121278 62 5.0000187887959502
@@ -19548,7 +19547,7 @@ createNode animCurveTA -n "LeftShoulder_rotate_hair_inputAZ";
 		 75 4.999997408859894 76 5.000000225989834 77 5.0000002698628085 78 5.0000030719209496
 		 79 5.0000057461043053 80 4.999997338232709 81 5.0000008581996784 82 4.9999968809226276
 		 83 4.9999932475192583 84 4.9999894964386229 85 4.999989966074029 86 4.9999901067494505
-		 87 4.9999909299842962 88 4.9999887927579039 89 4.999992505675424 90 4.999983432945835
+		 87 4.9999909299842971 88 4.9999887927579039 89 4.999992505675424 90 4.999983432945835
 		 91 4.9999889835374649 92 4.9999866118081737 93 4.9999846369393035 94 4.9999835481794559
 		 95 4.9999893553516506 96 4.99998153476401 97 4.9999936317256282 98 4.9999779421241373
 		 99 4.9999833140082748 100 4.9999822414980217 101 4.9999886441014638 102 4.999987636963346
@@ -19562,7 +19561,7 @@ createNode animCurveTA -n "LeftShoulder_rotate_hair_inputAZ";
 		 131 5.0000061922575183 132 5.0000119941228212 133 5.0000118364403212 134 5.0000087201440842
 		 135 5.0000112952063276 136 5.0000052238322734 137 5.0000040269255255 138 5.0000068845471253
 		 139 5.0000024508674636 140 4.9999973175394965 141 5.0000033955899399 142 5.0000083391254009
-		 143 5.0000016080643661 144 5.0000049440211685 145 4.9999906941888987 146 4.9999992106152069
+		 143 5.0000016080643661 144 5.0000049440211685 145 4.9999906941888987 146 4.9999992106152078
 		 147 4.9999935413277896 148 4.9999903125883822 149 4.9999934736409282 150 4.9999986313127387
 		 151 4.9999956693015104 152 5.0000004069976862 153 4.999985091606673 154 4.9999930255922171
 		 155 5.0000031205830942 156 4.9999994623612993 157 4.9999984201914129 158 4.9999938221637468
@@ -19637,7 +19636,7 @@ createNode animCurveTA -n "RightShoulder_rotate_hair_inputAZ";
 		 11 -4.9999853895304609 12 -4.9999873861548112 13 -4.9999837434600334 14 -4.9999777675957473
 		 15 -4.9999875118262933 16 -4.9999823755734552 17 -4.9999817248857585 18 -4.999984188240826
 		 19 -4.9999882087189915 20 -4.9999807658977149 21 -4.9999842965525119 22 -4.9999883928909918
-		 23 -4.9999816962366435 24 -4.9999890847280284 25 -4.99997667171926 26 -4.9999730155422402
+		 23 -4.9999816962366435 24 -4.9999890847280284 25 -4.9999766717192609 26 -4.9999730155422402
 		 27 -4.9999796772048981 28 -4.999992855299042 29 -4.9999851145854866 30 -4.9999912530051294
 		 31 -4.9999759915516604 32 -4.9999848353148311 33 -4.99997511582961 34 -4.9999735640939358
 		 35 -4.9999811423826079 36 -4.9999845844520765 37 -4.999982952795361 38 -4.9999910996334469
@@ -19658,18 +19657,18 @@ createNode animCurveTA -n "RightShoulder_rotate_hair_inputAZ";
 		 95 -4.9999855363869123 96 -4.9999858209002301 97 -4.9999852689180555 98 -4.9999861333911957
 		 99 -4.9999888617329784 100 -4.9999825069083386 101 -4.9999782094674261 102 -4.9999825336315746
 		 103 -4.9999856911737117 104 -4.9999765014660147 105 -4.9999894380178462 106 -4.9999804846742286
-		 107 -4.9999800885163355 108 -4.9999769196489812 109 -4.9999851340332606 110 -4.9999763193070992
+		 107 -4.9999800885163364 108 -4.9999769196489812 109 -4.9999851340332606 110 -4.9999763193070992
 		 111 -4.999981978816316 112 -4.9999801148060676 113 -4.9999905452593012 114 -4.9999852819573318
 		 115 -4.9999785613507965 116 -4.9999885359300782 117 -4.9999765048117091 118 -4.9999864912992091
-		 119 -4.9999863912543914 120 -4.9999813580654449 121 -4.9999809998901927 122 -4.9999821084613139
+		 119 -4.9999863912543914 120 -4.9999813580654457 121 -4.9999809998901927 122 -4.9999821084613139
 		 123 -4.9999810652866961 124 -4.9999801582454335 125 -4.9999856199944306 126 -4.9999806024505329
 		 127 -4.9999825539978193 128 -4.9999809492444793 129 -4.9999788833854852 130 -4.9999757357980803
 		 131 -4.999984048520016 132 -4.9999807023660825 133 -4.9999832930656387 134 -4.9999836066231191
 		 135 -4.9999808538136019 136 -4.9999877285938803 137 -4.999976025155922 138 -4.9999829846775183
 		 139 -4.9999838559157919 140 -4.9999807182352471 141 -4.9999816382341695 142 -4.9999872831496761
-		 143 -4.9999869034006199 144 -4.9999807347116105 145 -4.9999823969767236 146 -4.9999805008654663
+		 143 -4.9999869034006208 144 -4.9999807347116105 145 -4.9999823969767236 146 -4.9999805008654663
 		 147 -4.9999863776406288 148 -4.9999763195214237 149 -4.9999839343141996 150 -4.9999747171593674
-		 151 -4.9999832126560477 152 -4.9999830689408631 153 -4.9999830705574997 154 -4.9999752952219607
+		 151 -4.9999832126560477 152 -4.9999830689408631 153 -4.9999830705574997 154 -4.9999752952219616
 		 155 -4.9999826232898563 156 -4.9999772463906336 157 -4.9999769256842042 158 -4.9999725137980899
 		 159 -4.9999794452714337 160 -4.9999867015749313;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
@@ -19687,7 +19686,7 @@ createNode animCurveTA -n "Neck_rotate_hair_inputAX";
 	setAttr ".tan" 2;
 	setAttr ".wgt" no;
 	setAttr -s 160 ".ktv[0:159]"  1 2.403187395852179 2 1.1281576701206597
-		 3 -0.25320855355910971 4 -1.7345687433170665 5 -3.3107818955734842 6 -4.9745431165196905
+		 3 -0.25320855355910971 4 -1.7345687433170665 5 -3.3107818955734842 6 -4.9745431165196914
 		 7 -6.722074073509698 8 -9.373141147183139 9 -12.918632884041124 10 -16.107224905530874
 		 11 -17.6888945373795 12 -18.056610100099849 13 -18.372098067917513 14 -18.56673020912546
 		 15 -18.639277674584214 16 -18.624931587450472 17 -18.54597205532453 18 -18.410964895076091
@@ -19700,7 +19699,7 @@ createNode animCurveTA -n "Neck_rotate_hair_inputAX";
 		 43 -27.267503004234086 44 -27.109783288792215 45 -26.983020278786245 46 -26.878833831598147
 		 47 -26.79435758734655 48 -26.724175754090151 49 -26.665078198650786 50 -26.610248154284616
 		 51 -26.558013157465933 52 -26.503239538051144 53 -26.441793316529143 54 -26.370356694408876
-		 55 -26.282531230220137 56 -26.191818473262529 57 -26.100054477731288 58 -25.992048837003253
+		 55 -26.282531230220137 56 -26.191818473262529 57 -26.100054477731288 58 -25.992048837003257
 		 59 -25.851665958980444 60 -25.662321789509733 61 -25.408322350083303 62 -25.074191942615538
 		 63 -24.645051569991498 64 -24.008042247621805 65 -23.137082037230538 66 -22.153838709168429
 		 67 -21.175656928001924 68 -20.3253268184388 69 -19.720510879445129 70 -19.483020164472766
@@ -19709,23 +19708,23 @@ createNode animCurveTA -n "Neck_rotate_hair_inputAX";
 		 79 -19.831650508158244 80 -19.949011243665421 81 -20.085602893443209 82 -20.245824449395538
 		 83 -20.442413066701182 84 -20.691515360036448 85 -21.005647438378464 86 -21.323936618117457
 		 87 -21.578316774640886 88 -21.777529413573095 89 -21.923285190738479 90 -22.016349174920951
-		 91 -22.058289370211039 92 -22.052754297445983 93 -22.020987853419062 94 -21.985375661047744
+		 91 -22.058289370211039 92 -22.052754297445983 93 -22.020987853419065 94 -21.985375661047744
 		 95 -21.946291601101159 96 -21.907865845559332 97 -21.871497291472338 98 -21.839133716447812
 		 99 -21.811485461947434 100 -21.788894286638985 101 -21.772773194617915 102 -21.763056259214622
 		 103 -21.760090712842455 104 -21.764154358364475 105 -21.775183735362635 106 -21.79219929958839
 		 107 -21.813162892072143 108 -21.837590774740494 109 -21.864901974002649 110 -21.892605370913785
 		 111 -21.921875196403956 112 -21.951682747265412 113 -21.979751213612616 114 -22.006583765254035
-		 115 -22.031144998909216 116 -22.057094118904786 117 -22.086605134710773 118 -22.121020426227705
+		 115 -22.03114499890922 116 -22.057094118904786 117 -22.086605134710773 118 -22.121020426227705
 		 119 -22.159823913688072 120 -22.204008609081697 121 -22.253831357932508 122 -22.309368762194048
 		 123 -22.370849483252268 124 -22.438602119881967 125 -22.513013286503934 126 -22.594152507402729
 		 127 -22.681828101463132 128 -22.776591198672929 129 -22.879525223473937 130 -22.989502531565389
 		 131 -23.137573461315412 132 -23.344978895054993 133 -23.601094316382859 134 -23.894639702682902
 		 135 -24.214863316312005 136 -24.551081020959398 137 -24.891596510074553 138 -25.224761905710004
 		 139 -25.540777524389281 140 -25.826945352630599 141 -25.959999057009725 142 -25.772145692115853
-		 143 -25.184576542810582 144 -24.236610168174625 145 -22.993517361789461 146 -21.548281010588767
+		 143 -25.184576542810586 144 -24.236610168174625 145 -22.993517361789461 146 -21.548281010588767
 		 147 -19.814363623189859 148 -17.793166983357022 149 -15.823808510988735 150 -13.870149586948203
 		 151 -11.812011018194619 152 -9.7405371948455635 153 -7.1899431604814783 154 -4.3640663017859387
-		 155 -2.3935859155528765 156 -1.2890626729300441 157 -0.26982088041492708 158 0.6760138456931164
+		 155 -2.3935859155528765 156 -1.2890626729300441 157 -0.26982088041492713 158 0.67601384569311651
 		 159 1.5622789205801726 160 2.4026938779261195;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
@@ -19744,7 +19743,7 @@ createNode animCurveTA -n "Neck_rotate_hair_inputAY";
 	setAttr -s 160 ".ktv[0:159]"  1 8.4339168251622194 2 8.440461515160024
 		 3 8.410872995709008 4 8.3596438920275737 5 8.3008206086654734 6 8.2478327721451912
 		 7 8.2135343791657398 8 8.190869335453506 9 8.1875825212282045 10 8.1867140834049152
-		 11 8.1024854638174162 12 7.1153325981971109 13 5.4279171070784233 14 4.4694572435086721
+		 11 8.1024854638174162 12 7.1153325981971118 13 5.4279171070784233 14 4.4694572435086721
 		 15 4.3587011020530824 16 4.2539181423139869 17 4.1526928284872815 18 4.0598006280717795
 		 19 3.9799869211383996 20 3.9177850871161954 21 3.8787113759479439 22 3.860814134819234
 		 23 3.8573604141861417 24 3.8616368018422924 25 3.867100925325937 26 3.8672054518114827
@@ -19754,11 +19753,11 @@ createNode animCurveTA -n "Neck_rotate_hair_inputAY";
 		 39 -10.970722684974266 40 -10.332385275174461 41 -9.8948868275164852 42 -9.4872241798114381
 		 43 -9.1118229517500762 44 -8.7712311376909238 45 -8.461440283772605 46 -8.1738167871574898
 		 47 -7.9039761232239725 48 -7.6470419174386528 49 -7.3986365166736103 50 -7.1538600274466217
-		 51 -6.9088246841242382 52 -6.6593023775294329 53 -6.4011110455047433 54 -6.130507596086554
+		 51 -6.9088246841242391 52 -6.6593023775294329 53 -6.4011110455047433 54 -6.130507596086554
 		 55 -5.8429114018394603 56 -5.5015525916331542 57 -5.0893435479191504 58 -4.6341381011119172
 		 59 -4.1636591849105846 60 -3.7058412335131381 61 -3.2890275425292121 62 -2.9419049114437228
 		 63 -2.6931542380080451 64 -2.5119632886115961 65 -2.3539699008589996 66 -2.2266643904566328
-		 67 -2.1326216028902865 68 -2.0714771382781909 69 -2.0397186163848384 70 -2.0337534665917829
+		 67 -2.1326216028902865 68 -2.0714771382781914 69 -2.0397186163848384 70 -2.0337534665917829
 		 71 -2.0502043610411373 72 -2.0855333832406009 73 -2.1373837537448206 74 -2.2034951070368605
 		 75 -2.2811962538831727 76 -2.368497141638453 77 -2.4629999216908076 78 -2.5625510715511122
 		 79 -2.6647240668612695 80 -2.7675114289646827 81 -2.8685094066891139 82 -2.989953572385565
@@ -19770,15 +19769,15 @@ createNode animCurveTA -n "Neck_rotate_hair_inputAY";
 		 103 -3.293026440406551 104 -3.1992124076866197 105 -3.1290048005328681 106 -3.0724389625606809
 		 107 -3.0173564318070429 108 -2.9637414976241185 109 -2.9120928838786448 110 -2.8620379533240823
 		 111 -2.8142049402957499 112 -2.7684648523172735 113 -2.7249286707269138 114 -2.6838711026852611
-		 115 -2.6453078357091555 116 -2.6128833041468389 117 -2.5894276515320964 118 -2.5743622087849567
+		 115 -2.645307835709156 116 -2.6128833041468389 117 -2.5894276515320964 118 -2.5743622087849567
 		 119 -2.5668710383969491 120 -2.5664483432101255 121 -2.5723932889212251 122 -2.5840816299510223
 		 123 -2.6009061173741626 124 -2.6219319235112217 125 -2.6468551656426111 126 -2.6748397184643156
-		 127 -2.7051982255297649 128 -2.7372446552912626 129 -2.77062396374173 130 -2.8044699856831481
+		 127 -2.7051982255297649 128 -2.737244655291263 129 -2.77062396374173 130 -2.8044699856831481
 		 131 -2.8800026007338175 132 -3.0301554326032054 133 -3.2430354669947552 134 -3.5064493337562008
 		 135 -3.8077904001830007 136 -4.1348052800278055 137 -4.4744959699089097 138 -4.8129341992144594
 		 139 -5.1370540196937036 140 -5.4321819595811194 141 -5.7014935106927647 142 -5.9121875534443582
 		 143 -5.9973781225453173 144 -4.9474354932442468 145 -2.8609232019824113 146 -1.3284977202578487
-		 147 -0.14932459045665961 148 1.5253405254039778 149 3.1265410759563617 150 4.3028255068455579
+		 147 -0.14932459045665963 148 1.5253405254039778 149 3.1265410759563617 150 4.3028255068455579
 		 151 5.1308263284679194 152 5.711766569803169 153 6.6949361050238041 154 8.0511122078037776
 		 155 8.8005689567496415 156 8.8151798859772956 157 8.7011785343300847 158 8.5441106841650498
 		 159 8.4276241391129112 160 8.4337124150648481;
@@ -19800,13 +19799,13 @@ createNode animCurveTA -n "Neck_rotate_hair_inputAZ";
 		 3 -1.0231414702911081 4 -0.88482919728682663 5 -0.76366301656511204 6 -0.66583677672830788
 		 7 -0.60006320479888975 8 -0.68608536988691504 9 -0.94197089965696079 10 -1.2089200478220699
 		 11 -1.2999582287227951 12 -0.61937696957297605 13 0.60464784023409246 14 1.2928639154365733
-		 15 1.3481967300137647 16 1.4007775741236856 17 1.4416459390134106 18 1.4698614563775347
+		 15 1.3481967300137647 16 1.4007775741236856 17 1.4416459390134106 18 1.469861456377535
 		 19 1.4839537630363615 20 1.4835272242509996 21 1.4675502664507285 22 1.4351101096568359
 		 23 1.3862012588413539 24 1.3206908829919308 25 1.2377538316115633 26 1.1369003466982313
 		 27 1.0169597791604228 28 3.5527541814875145 29 10.069570149123967 30 14.887510166641468
 		 31 15.288582345739639 32 15.2717123929843 33 15.006618640421573 34 14.687525003114093
 		 35 14.438440169744082 36 14.173824753139787 37 13.827094462531081 38 13.46882573244123
-		 39 13.170582655016679 40 13.002639068944175 41 12.936420596179683 42 12.899188215494705
+		 39 13.17058265501668 40 13.002639068944175 41 12.936420596179683 42 12.899188215494705
 		 43 12.895528802102614 44 12.93029053354778 45 12.998112389972638 46 13.086243387276175
 		 47 13.187529859092921 48 13.294627198703514 49 13.401279548364128 50 13.498928056270131
 		 51 13.582343504077206 52 13.644420122314829 53 13.678678309089939 54 13.679108156758074
@@ -19857,37 +19856,37 @@ createNode animCurveTA -n "Spine2_rotate_hair_inputAX";
 		 12 1.4047095065547743 13 1.4776915265126984 14 1.5293047514764606 15 1.5488818671135838
 		 16 1.5347531035022699 17 1.4949950515059547 18 1.4335412273243069 19 1.3543462212240636
 		 20 1.2613485746087323 21 1.158500600332351 22 1.0497414289689173 23 0.93901912580160996
-		 24 0.83026470556284437 25 0.72743363443117937 26 0.63446414332250989 27 0.55529736824981868
+		 24 0.83026470556284437 25 0.72743363443117937 26 0.63446414332251 27 0.55529736824981868
 		 28 0.49386055150379188 29 0.45412062973991141 30 0.43998447976086602 31 0.43991730865978068
 		 32 0.43981387870254002 33 0.43976274720507008 34 0.43975727247439522 35 0.43975283206617621
 		 36 0.43975276194146318 37 0.43975120924553207 38 0.4397414486413877 39 0.43974449016758366
-		 40 0.43973787134595133 41 0.43974114042390483 42 0.4397361988113529 43 0.43973857529426369
-		 44 0.4397418980217222 45 0.43973879223215118 46 0.43974453098844996 47 0.43973798904915523
+		 40 0.43973787134595138 41 0.43974114042390483 42 0.4397361988113529 43 0.43973857529426369
+		 44 0.43974189802172226 45 0.43973879223215118 46 0.43974453098844996 47 0.43973798904915523
 		 48 0.43974337407039671 49 0.43974049565883211 50 0.43974218958524092 51 0.4397413217281787
 		 52 0.43973854468387563 53 0.43973850452207458 54 0.43974041135457226 55 0.43973862783208989
-		 56 0.4397402035798097 57 0.43974091321305797 58 0.43974685098312355 59 0.43973883597214825
+		 56 0.4397402035798097 57 0.43974091321305797 58 0.43974685098312355 59 0.4397388359721483
 		 60 0.43973898698207392 61 0.43974471518536001 62 0.43973652723373691 63 0.43973820181882839
 		 64 0.43974397632661294 65 0.43974130618026269 66 0.43974667422946878 67 0.43973799502920397
 		 68 0.43973864075065194 69 0.43974775835509428 70 0.43974061335521414 71 0.43974191147586889
 		 72 0.43977139534444704 73 0.43979330638734687 74 0.4398396711286926 75 0.43988655751231331
-		 76 0.43994221017940077 77 0.44000501007694909 78 0.44006460213403542 79 0.4401375661676426
-		 80 0.44021739639975938 81 0.44029566175718804 82 0.44036719681187841 83 0.44044497440811226
-		 84 0.44051837562343427 85 0.44059171162371413 86 0.44065849736468499 87 0.44072506719281856
+		 76 0.43994221017940077 77 0.44000501007694914 78 0.44006460213403548 79 0.4401375661676426
+		 80 0.44021739639975938 81 0.44029566175718804 82 0.44036719681187841 83 0.44044497440811231
+		 84 0.44051837562343427 85 0.44059171162371413 86 0.44065849736468504 87 0.44072506719281856
 		 88 0.44076686647048868 89 0.44081337713007746 90 0.44084507133580475 91 0.44087365091264286
 		 92 0.44088082192300626 93 0.44102634352503856 94 0.44136028974306168 95 0.44170360632548444
 		 96 0.44186371585159873 97 0.44186706741310994 98 0.4418606928150125 99 0.44186387325654919
 		 100 0.44186203229992116 101 0.44185905142358323 102 0.44186190298547651 103 0.44186743511649434
 		 104 0.44186729863617308 105 0.44186635527644186 106 0.441859263547285 107 0.4418636740314501
 		 108 0.44185599372165535 109 0.44186157174994806 110 0.44186613317242551 111 0.44185899314123966
-		 112 0.44185357795539115 113 0.44186707419781235 114 0.44186262884789029 115 0.44186069749094559
-		 116 0.44185775599882748 117 0.44185841932171299 118 0.44186155641519115 119 0.44186336982523511
+		 112 0.44185357795539121 113 0.44186707419781235 114 0.44186262884789029 115 0.44186069749094559
+		 116 0.44185775599882748 117 0.44185841932171299 118 0.4418615564151912 119 0.44186336982523511
 		 120 0.44185414779268561 121 0.44185896622020138 122 0.44186476400758984 123 0.44186357782169128
 		 124 0.44185966252589637 125 0.4418624690685572 126 0.44185394735103456 127 0.44185589515104179
 		 128 0.44186335135971599 129 0.44185654699435828 130 0.44186037605226242 131 0.4418619455831887
 		 132 0.44185517096805721 133 0.4418581469362019 134 0.44185637727818772 135 0.44185913793397774
-		 136 0.4418550112056272 137 0.44185708117113864 138 0.44185199881078197 139 0.44184927814965091
+		 136 0.4418550112056272 137 0.4418570811711387 138 0.44185199881078197 139 0.44184927814965091
 		 140 0.4418629444034114 141 0.44185168734473879 142 0.44186039206572364 143 0.44185810646676293
-		 144 0.44185898558404435 145 0.44185982064078416 146 0.44186176672555555 147 0.44185508784297339
+		 144 0.44185898558404435 145 0.44185982064078422 146 0.44186176672555555 147 0.44185508784297339
 		 148 0.44184307178858784 149 0.44183760619815415 150 0.44183448522949964 151 0.44183119856411601
 		 152 0.44181810004745448 153 0.32722543640062113 154 0.11450613090427218 155 0 156 0
 		 157 0 158 0 159 0 160 0;
@@ -19910,7 +19909,7 @@ createNode animCurveTA -n "Spine2_rotate_hair_inputAY";
 		 19 0.016917239497950185 20 0.025002470591130289 21 0.03394416324131258 22 0.043399554020580544
 		 23 0.053025752407493708 24 0.062480186873094257 25 0.071420237383906945 26 0.079503132501705043
 		 27 0.086386432688686066 28 0.091727465766843735 29 0.09518303400934483 30 0.09641180163339369
-		 31 0.08134715867490358 32 0.048205003321325157 33 0.01506365244484395 34 0 35 0 36 0
+		 31 0.08134715867490358 32 0.048205003321325164 33 0.01506365244484395 34 0 35 0 36 0
 		 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0
 		 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0
 		 71 0.0014243678599481955 72 0.0054991860049893029 73 0.011979922034267823 74 0.020577659551179354
@@ -19932,7 +19931,7 @@ createNode animCurveTA -n "Spine2_rotate_hair_inputAY";
 		 135 0.42809773980506771 136 0.42809364258874827 137 0.42809626114208948 138 0.42810053957063959
 		 139 0.42810235177204536 140 0.42809325008177096 141 0.42809909657745504 142 0.42809565575185088
 		 143 0.42809464841000433 144 0.42809756291952361 145 0.42809992980918693 146 0.42809770845079947
-		 147 0.42809517422194321 148 0.42809911326781624 149 0.42809684317814956 150 0.4281005834838999
+		 147 0.42809517422194321 148 0.42809911326781624 149 0.42809684317814961 150 0.4281005834838999
 		 151 0.42810050795721954 152 0.42810298585317741 153 0.31710870790871465 154 0.11098642163016184
 		 155 0 156 0 157 0 158 0 159 0 160 0;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
@@ -19960,17 +19959,17 @@ createNode animCurveTA -n "Spine2_rotate_hair_inputAZ";
 		 70 0 71 -0.00010779070372508184 72 -0.00041585151823527074 73 -0.0009036014872293907
 		 74 -0.0015528811254003044 75 -0.0023443507186102072 76 -0.0032531903993664279 77 -0.0042652060736880224
 		 78 -0.0053568929849130715 79 -0.0065086958900277105 80 -0.0077001656555239139 81 -0.0089136226946583876
-		 82 -0.01012332591368258 83 -0.01131391726951921 84 -0.012465513283595639 85 -0.013558522893001001
+		 82 -0.01012332591368258 83 -0.01131391726951921 84 -0.012465513283595639 85 -0.013558522893001003
 		 86 -0.014568004316573202 87 -0.015477737732737858 88 -0.016268065585422164 89 -0.016918029151772793
 		 90 -0.017405387694064935 91 -0.017716530567035402 92 -0.017822093007113824 93 -0.020084057486238243
 		 94 -0.025065216340489412 95 -0.03004396897152925 96 -0.032304805110958366 97 -0.032306555603450603
 		 98 -0.03230514708227776 99 -0.032305859538184059 100 -0.032304091455166502 101 -0.032305110381616986
 		 102 -0.032307240886492339 103 -0.032306407310644977 104 -0.032307417206356735 105 -0.032307229551580378
-		 106 -0.032305386511433741 107 -0.032307318865886205 108 -0.032305651177645403 109 -0.032305519429272345
+		 106 -0.032305386511433741 107 -0.032307318865886205 108 -0.032305651177645403 109 -0.032305519429272352
 		 110 -0.032308306923925931 111 -0.032307123103438092 112 -0.032305023207384403 113 -0.032307191614909053
 		 114 -0.032310190095856096 115 -0.032305459354553097 116 -0.032306945394080404 117 -0.032305710782802033
 		 118 -0.032308376768666575 119 -0.03230945299511781 120 -0.032305036153267679 121 -0.032306461084309623
-		 122 -0.032309856050275011 123 -0.032308007167435843 124 -0.032307383777800562 125 -0.03230866949333195
+		 122 -0.032309856050275011 123 -0.032308007167435843 124 -0.032307383777800562 125 -0.032308669493331957
 		 126 -0.032307576192817315 127 -0.032308784894989818 128 -0.03230794847920606 129 -0.032307022812126614
 		 130 -0.032308974344704637 131 -0.032309870759448168 132 -0.032307404874293816 133 -0.032308472678965007
 		 134 -0.032308969637934858 135 -0.032308961880992033 136 -0.032308819327179793 137 -0.03230906760470513
@@ -20005,28 +20004,28 @@ createNode animCurveTA -n "Spine3_rotate_hair_inputAX";
 		 36 0.44105659708565809 37 0.44112823818719593 38 0.4412097006126523 39 0.44127765467531782
 		 40 0.44129850031142304 41 0.44129137959949277 42 0.44129737706718647 43 0.4412959014768455
 		 44 0.44129797813258864 45 0.44129193574760556 46 0.44129598878831511 47 0.44130259337944816
-		 48 0.44129978669719894 49 0.44129539871127349 50 0.44129696835133309 51 0.44129766007743659
-		 52 0.44129493257834829 53 0.44130661684056893 54 0.44130110416784823 55 0.44130221834768196
+		 48 0.44129978669719899 49 0.44129539871127349 50 0.44129696835133309 51 0.44129766007743659
+		 52 0.44129493257834834 53 0.44130661684056893 54 0.44130110416784829 55 0.44130221834768196
 		 56 0.44130064947815167 57 0.44129750802050161 58 0.44129463936355795 59 0.4413032001943758
 		 60 0.4412971759894756 61 0.44129552820738766 62 0.44130043122326096 63 0.44130871872378141
 		 64 0.44130314119021818 65 0.44130286687788345 66 0.44130350747077529 67 0.44129995404959693
 		 68 0.44130943187832644 69 0.44129543400236904 70 0.44129554665764892 71 0.44130634575794897
-		 72 0.44132355362175613 73 0.44135808839675361 74 0.44140039160854772 75 0.44144974361084749
-		 76 0.44151413775961901 77 0.44158256849230532 78 0.44165266920350449 79 0.4417395842503028
+		 72 0.44132355362175618 73 0.44135808839675361 74 0.44140039160854772 75 0.44144974361084749
+		 76 0.44151413775961906 77 0.44158256849230532 78 0.44165266920350449 79 0.4417395842503028
 		 80 0.44182298381427698 81 0.44190422842654037 82 0.44198529859666175 83 0.44207517198830359
-		 84 0.44215516796631521 85 0.44223922932683823 86 0.4423073641027585 87 0.4423766033328167
-		 88 0.44244269424638372 89 0.44248240675291384 90 0.44252277589600841 91 0.44253917984642127
-		 92 0.442550532900291 93 0.4427101394771083 94 0.44307076391187344 95 0.44345276491654417
+		 84 0.44215516796631527 85 0.44223922932683823 86 0.4423073641027585 87 0.4423766033328167
+		 88 0.44244269424638372 89 0.44248240675291384 90 0.44252277589600847 91 0.44253917984642127
+		 92 0.442550532900291 93 0.44271013947710836 94 0.44307076391187344 95 0.44345276491654417
 		 96 0.44362757794665908 97 0.44362280317573172 98 0.44362421952811426 99 0.44362388739581643
-		 100 0.44362089608910282 101 0.44362585207611449 102 0.44362295194692358 103 0.44361901096537282
+		 100 0.44362089608910288 101 0.44362585207611449 102 0.44362295194692358 103 0.44361901096537282
 		 104 0.44362096037935067 105 0.44362387615234805 106 0.44362496892544567 107 0.4436235121441357
 		 108 0.44363177473701071 109 0.44362450166535977 110 0.44362229080867754 111 0.44362897098131943
-		 112 0.44362721962456625 113 0.44361750496181074 114 0.44362168080313669 115 0.44362803054624322
+		 112 0.44362721962456625 113 0.44361750496181074 114 0.44362168080313669 115 0.44362803054624328
 		 116 0.44361951576799907 117 0.44362211834908777 118 0.44361628836540518 119 0.4436190461682748
 		 120 0.44362188315475753 121 0.44362739050349825 122 0.44361664668260375 123 0.44361779745435453
 		 124 0.4436253234519773 125 0.44361743171259499 126 0.44362051606251651 127 0.44361735411320341
-		 128 0.44361058814292642 129 0.44362656913335469 130 0.44361653705288068 131 0.44361853021540704
-		 132 0.44362161828826835 133 0.443616295590467 134 0.44361924945645692 135 0.4436196661241763
+		 128 0.44361058814292648 129 0.44362656913335469 130 0.44361653705288068 131 0.44361853021540704
+		 132 0.44362161828826835 133 0.443616295590467 134 0.44361924945645698 135 0.4436196661241763
 		 136 0.44362545400727504 137 0.44361515448873634 138 0.44361922333926374 139 0.44362387699214073
 		 140 0.44361859630661526 141 0.44361808992749513 142 0.44362030640293715 143 0.44362011281967867
 		 144 0.44361153228184808 145 0.44360513578240035 146 0.4436008153689433 147 0.44360731454120006
@@ -20050,21 +20049,21 @@ createNode animCurveTA -n "Spine3_rotate_hair_inputAY";
 	setAttr -s 160 ".ktv[0:159]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
 		 11 0 12 0 13 0 14 0 15 0 16 0.0030141677825870493 17 0.011491571728910717 18 0.024592418543979651
 		 19 0.041475384182863055 20 0.061299296111365177 21 0.083223197793518486 22 0.10640647573488733
-		 23 0.1300087059341796 24 0.15318960221420763 25 0.17510910965854082 26 0.19492709770356614
-		 27 0.21180421247167033 28 0.22489915350616982 29 0.2333727853282099 30 0.23638352165821969
+		 23 0.13000870593417962 24 0.15318960221420763 25 0.17510910965854082 26 0.19492709770356614
+		 27 0.21180421247167036 28 0.22489915350616982 29 0.2333727853282099 30 0.23638352165821969
 		 31 0.24051423376202333 32 0.24960276048859323 33 0.25869017001117467 34 0.26282003178219027
 		 35 0.26523877344982622 36 0.2712872271189905 37 0.27914832197812295 38 0.28700845461599295
 		 39 0.29305429100261776 40 0.29547610995221657 41 0.29547853757162917 42 0.29547859362311629
 		 43 0.29547715803304536 44 0.29547704828017102 45 0.295481060639326 46 0.2954786644681982
-		 47 0.29547637529823584 48 0.29547385297728829 49 0.29547907679161295 50 0.29547639521873126
+		 47 0.29547637529823584 48 0.29547385297728829 49 0.29547907679161295 50 0.29547639521873131
 		 51 0.29547834932325184 52 0.29547498042948028 53 0.29547377654093493 54 0.29547341394740834
 		 55 0.29547354726144798 56 0.29547345094497263 57 0.29547893606315928 58 0.29547403245974674
 		 59 0.29547351289297563 60 0.29547577882288278 61 0.29547920685555318 62 0.29547440702950595
-		 63 0.29547283286786319 64 0.29547271631715288 65 0.29547599513639594 66 0.29547052833778747
+		 63 0.29547283286786319 64 0.29547271631715288 65 0.295475995136396 66 0.29547052833778747
 		 67 0.29548155964740697 68 0.29547263225023934 69 0.29547518452619298 70 0.29547324303960121
 		 71 0.29689260567246833 72 0.30096647790847419 73 0.30743522757749092 74 0.31603390891377059
 		 75 0.3264912132264457 76 0.33854357692401288 77 0.35193556509825469 78 0.36638144537980472
-		 79 0.38162336211713849 80 0.39739848098539238 81 0.41344914729058857 82 0.42948722119774124
+		 79 0.38162336211713849 80 0.39739848098539243 81 0.41344914729058857 82 0.4294872211977413
 		 83 0.44525981279067167 84 0.46050249637083895 85 0.47495476738744713 86 0.48833846407739373
 		 87 0.5003966664396079 88 0.51084791396628815 89 0.5194481654754427 90 0.52591278829179999
 		 91 0.52999692623003025 92 0.53141707715710096 93 0.56139790106453669 94 0.62735329469121681
@@ -20073,9 +20072,9 @@ createNode animCurveTA -n "Spine3_rotate_hair_inputAY";
 		 103 0.72329275450985764 104 0.72329626919070811 105 0.7232934416880521 106 0.72329210018034717
 		 107 0.72329348171683283 108 0.72328921370508581 109 0.72329301677550206 110 0.72329008735771028
 		 111 0.72329392452387331 112 0.72328879468222984 113 0.72329509255306867 114 0.72329601658476661
-		 115 0.72329170633387241 116 0.72329389425803003 117 0.72329540103062429 118 0.72329826292858934
+		 115 0.72329170633387241 116 0.72329389425803003 117 0.7232954010306244 118 0.72329826292858934
 		 119 0.72329804462526792 120 0.72329040566564817 121 0.72328763313102384 122 0.72329908915862906
-		 123 0.72329434621274669 124 0.72329401984882857 125 0.72329705661588606 126 0.72329529189490649
+		 123 0.72329434621274669 124 0.72329401984882857 125 0.72329705661588617 126 0.72329529189490649
 		 127 0.72329764888203685 128 0.72329698127602882 129 0.7232922700788883 130 0.72329720167827827
 		 131 0.72329826490890303 132 0.72329418936956869 133 0.72329794207211917 134 0.72329828673159935
 		 135 0.7232985063770736 136 0.72329393677084597 137 0.72329375551228614 138 0.72329569904507884
@@ -20101,11 +20100,11 @@ createNode animCurveTA -n "Spine3_rotate_hair_inputAZ";
 	setAttr -s 160 ".ktv[0:159]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
 		 11 0 12 0 13 0 14 0 15 0 16 -0.0029309556794828362 17 -0.011186513716145293 18 -0.023968263836034079
 		 19 -0.040482444136540098 20 -0.059934205424663864 21 -0.081523064435115117 22 -0.10443893184331658
-		 23 -0.12786022568344016 24 -0.15095372830895243 25 -0.1728730934503015 26 -0.19275831252736506
+		 23 -0.12786022568344019 24 -0.15095372830895243 25 -0.1728730934503015 26 -0.19275831252736506
 		 27 -0.20974251734026877 28 -0.22295430353397147 29 -0.23151688120255165 30 -0.23456392394778403
 		 31 -0.23866268740681876 32 -0.24768006144378438 33 -0.25669625269054569 34 -0.26079300091645002
 		 35 -0.26319459626039277 36 -0.26919746799430816 37 -0.27699777562631372 38 -0.28479790063343896
-		 39 -0.29080220169760068 40 -0.29320143819689753 41 -0.2932016219570634 42 -0.29320073429997967
+		 39 -0.29080220169760074 40 -0.29320143819689753 41 -0.2932016219570634 42 -0.29320073429997973
 		 43 -0.29320240894475191 44 -0.29320136968573934 45 -0.29320155243449203 46 -0.29320301271593979
 		 47 -0.29320179327453449 48 -0.29320261860733576 49 -0.29320174066440657 50 -0.29320385915440617
 		 51 -0.29320218722234404 52 -0.29319917580591232 53 -0.29320191140030055 54 -0.29320064602668594
@@ -20120,7 +20119,7 @@ createNode animCurveTA -n "Spine3_rotate_hair_inputAZ";
 		 87 -0.31024962686989938 88 -0.31112191263971295 89 -0.31183600360971375 90 -0.31237581331621728
 		 91 -0.31271249943563045 92 -0.31283187861165324 93 -0.31532509206818221 94 -0.32081220726087845
 		 95 -0.32630122630668978 96 -0.32879241878772797 97 -0.32879272355469419 98 -0.32879149109555622
-		 99 -0.32879331636779785 100 -0.32879225652242289 101 -0.3287933217222555 102 -0.32879237366001907
+		 99 -0.32879331636779785 100 -0.32879225652242289 101 -0.3287933217222555 102 -0.32879237366001912
 		 103 -0.32879267784214616 104 -0.32879329395270673 105 -0.32879279154289365 106 -0.32879291045732095
 		 107 -0.32879206924958948 108 -0.32879405853857102 109 -0.32879440781083119 110 -0.32879263311066709
 		 111 -0.32879127478358805 112 -0.32879458064171291 113 -0.32879338965993754 114 -0.32879240846389202
@@ -20129,7 +20128,7 @@ createNode animCurveTA -n "Spine3_rotate_hair_inputAZ";
 		 123 -0.32879315505218676 124 -0.32879435803767121 125 -0.32879332679021789 126 -0.32879280715527415
 		 127 -0.32879274870996378 128 -0.3287929883650737 129 -0.32879426603706857 130 -0.3287936081966133
 		 131 -0.32879222494750715 132 -0.32879314965329409 133 -0.32879301884898682 134 -0.32879260470360605
-		 135 -0.3287936236020168 136 -0.32879472982540581 137 -0.32879297780838596 138 -0.32879357666066922
+		 135 -0.32879362360201686 136 -0.32879472982540581 137 -0.32879297780838596 138 -0.32879357666066922
 		 139 -0.32879490848906151 140 -0.32879337244223289 141 -0.32879385006831985 142 -0.32879236127761463
 		 143 -0.32879562014724206 144 -0.32879417532347582 145 -0.3287964188110909 146 -0.32879720619057745
 		 147 -0.32879518156205134 148 -0.32879403877179253 149 -0.3287916392893161 150 -0.32879260518083808
@@ -20152,29 +20151,29 @@ createNode animCurveTA -n "Spine4_rotate_hair_inputAX";
 	setAttr -s 160 ".ktv[0:159]"  1 0 2 0.080989712845117606 3 0.2834354855393823
 		 4 0.54662940495104329 5 0.80981035661944289 6 1.0122708093422081 7 1.0932566524768246
 		 8 1.1128289417044501 9 1.164448261358429 10 1.2374243296933214 11 1.3210779714612262
-		 12 1.4047411624550536 13 1.4777247443369748 14 1.5293318849856556 15 1.5489127089560171
+		 12 1.4047411624550536 13 1.4777247443369748 14 1.5293318849856556 15 1.5489127089560173
 		 16 1.5347772206602628 17 1.4950103130517356 18 1.4335664244923871 19 1.3543661733862566
 		 20 1.2613772764682274 21 1.1585356378925682 22 1.0497654143894677 23 0.93905045635197359
 		 24 0.83030759684519151 25 0.72747469643783502 26 0.63449618089158522 27 0.55533632548476441
-		 28 0.49390968559844223 29 0.45416471892106886 30 0.44004337796666471 31 0.43995591495400704
+		 28 0.49390968559844223 29 0.45416471892106886 30 0.44004337796666471 31 0.4399559149540071
 		 32 0.43982911960583837 33 0.43976592033335987 34 0.43975598388882331 35 0.43974929335538576
-		 36 0.43975572393895895 37 0.43976291839721032 38 0.43976359357245548 39 0.43976459342347213
-		 40 0.43977397296114762 41 0.43977443903212798 42 0.4397673545317638 43 0.43977251288611163
+		 36 0.43975572393895895 37 0.43976291839721032 38 0.43976359357245548 39 0.43976459342347218
+		 40 0.43977397296114767 41 0.43977443903212798 42 0.4397673545317638 43 0.43977251288611163
 		 44 0.43977046114895474 45 0.43977220651423166 46 0.43976692057522765 47 0.43976780313827152
 		 48 0.4397652666690347 49 0.43977039025034648 50 0.43977606726134877 51 0.4397788230694834
-		 52 0.43977174576130412 53 0.43976471084718183 54 0.43975978238643659 55 0.43976176062237521
+		 52 0.43977174576130412 53 0.43976471084718183 54 0.43975978238643659 55 0.43976176062237526
 		 56 0.43976143733827372 57 0.43976599770233382 58 0.43976326993793047 59 0.43976798255507898
 		 60 0.43976453868058768 61 0.43976662752046797 62 0.43976373428450127 63 0.43976125291534401
 		 64 0.4397590113031925 65 0.43976082384702786 66 0.43975873554469169 67 0.43976600290536594
-		 68 0.43974989604569742 69 0.43975770857815377 70 0.43976267831004773 71 0.4397633402630623
-		 72 0.43976200246552799 73 0.43976236397870316 74 0.4397603410320946 75 0.43976371151678784
-		 76 0.43976205078934827 77 0.43976602569799728 78 0.43976889575217376 79 0.43977208772495163
+		 68 0.43974989604569747 69 0.43975770857815377 70 0.43976267831004773 71 0.4397633402630623
+		 72 0.43976200246552799 73 0.43976236397870316 74 0.43976034103209466 75 0.43976371151678784
+		 76 0.43976205078934832 77 0.43976602569799733 78 0.43976889575217376 79 0.43977208772495163
 		 80 0.43976971065276915 81 0.43977416266914571 82 0.4397818621160674 83 0.43978819115052314
-		 84 0.43979188186646673 85 0.43979216045058606 86 0.43979716471526664 87 0.43980057127048167
+		 84 0.43979188186646678 85 0.43979216045058606 86 0.43979716471526664 87 0.43980057127048167
 		 88 0.43980078222987767 89 0.43981053659849717 90 0.43981026795013167 91 0.43981024341060432
-		 92 0.43981240760805068 93 0.43981790260573816 94 0.43985301794479958 95 0.4398903763620361
+		 92 0.43981240760805074 93 0.43981790260573816 94 0.43985301794479958 95 0.4398903763620361
 		 96 0.4399075641088338 97 0.4399086607396514 98 0.43990924052170982 99 0.43991118332651713
-		 100 0.43991299746242174 101 0.43990844697770309 102 0.43991239039367852 103 0.43991660391074006
+		 100 0.43991299746242174 101 0.43990844697770309 102 0.43991239039367852 103 0.43991660391074011
 		 104 0.43991380413801495 105 0.43991128172349381 106 0.43991417958630502 107 0.43991031827323251
 		 108 0.43990486772097714 109 0.43991120172335818 110 0.43991473735225367 111 0.43990334071563159
 		 112 0.43990591176607574 113 0.43991213362501946 114 0.43991123324407272 115 0.43991512719267278
@@ -20182,7 +20181,7 @@ createNode animCurveTA -n "Spine4_rotate_hair_inputAX";
 		 120 0.43991128121801848 121 0.43991050240100243 122 0.43991212579770395 123 0.43991540772160898
 		 124 0.43991220617281729 125 0.43991625615064395 126 0.43991737237423179 127 0.43991036167747327
 		 128 0.43991567296700312 129 0.43990647779174796 130 0.43991172876109819 131 0.43991026257588911
-		 132 0.43991076083709513 133 0.43991879727394861 134 0.43991061652964292 135 0.43990590262868118
+		 132 0.43991076083709513 133 0.43991879727394861 134 0.43991061652964297 135 0.43990590262868123
 		 136 0.43990612994035105 137 0.43991472236120877 138 0.43991056532458478 139 0.43991341744026807
 		 140 0.43990435475323869 141 0.43991729549273845 142 0.43991488297386788 143 0.43991380506795374
 		 144 0.43991772544463648 145 0.43992303787213594 146 0.43993013827308619 147 0.43992562187107315
@@ -20212,7 +20211,7 @@ createNode animCurveTA -n "Spine4_rotate_hair_inputAY";
 		 31 0.066119800262751757 32 0.03918207260137304 33 0.012244592663114295 34 0 35 0
 		 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0
 		 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0
-		 70 0 71 0.0014125684136658161 72 0.0054906471399197238 73 0.011958010217246757 74 0.020549397098489287
+		 70 0 71 0.0014125684136658161 72 0.0054906471399197238 73 0.011958010217246759 74 0.020549397098489287
 		 75 0.03100008632431802 76 0.043045613291213813 77 0.056413273082671717 78 0.070852392972755349
 		 79 0.086081402010388747 80 0.10185295116882098 81 0.1178821237125776 82 0.13391212537132371
 		 83 0.14967340241280458 84 0.16490910361604411 85 0.179344217505223 86 0.19272078764616685
@@ -20220,19 +20219,19 @@ createNode animCurveTA -n "Spine4_rotate_hair_inputAY";
 		 91 0.23434769509416795 92 0.23576311112928461 93 0.26572222234243909 94 0.33163183463369217
 		 95 0.39753914988883776 96 0.42750141863840935 97 0.42750091611859958 98 0.42750095210960865
 		 99 0.42749948121939391 100 0.42749890567655907 101 0.42749734623676999 102 0.42749890646104793
-		 103 0.42749731666668117 104 0.42749520732907803 105 0.42749832559474721 106 0.42749781032482781
+		 103 0.42749731666668117 104 0.42749520732907803 105 0.42749832559474726 106 0.42749781032482786
 		 107 0.42750191680420013 108 0.42750013913559681 109 0.42750077125524649 110 0.42749898515791601
-		 111 0.42750134601359829 112 0.42750193986369756 113 0.42750040056993549 114 0.42750138711741947
+		 111 0.42750134601359835 112 0.42750193986369756 113 0.42750040056993549 114 0.42750138711741947
 		 115 0.42749944248035959 116 0.42749480664863537 117 0.42749915824216822 118 0.42750169165418711
 		 119 0.42749894399995469 120 0.42749928777215063 121 0.42750288492722205 122 0.42749892472825179
 		 123 0.42749927857933645 124 0.42749922858101125 125 0.4274993851250577 126 0.42749923084974584
 		 127 0.42750162961905358 128 0.4274995080535306 129 0.42750533322476553 130 0.42750256313018437
-		 131 0.42750139279816984 132 0.42750280719895678 133 0.42749911966248116 134 0.42750284588473098
-		 135 0.4275046387095639 136 0.42750659179162409 137 0.42750402989884534 138 0.42750242270244221
+		 131 0.4275013927981699 132 0.42750280719895678 133 0.42749911966248116 134 0.42750284588473098
+		 135 0.4275046387095639 136 0.42750659179162415 137 0.42750402989884534 138 0.42750242270244221
 		 139 0.42750196698413689 140 0.4275028954425743 141 0.42750264702416335 142 0.42750279051505385
-		 143 0.42750123270701168 144 0.42749794742554098 145 0.42748861744793593 146 0.42748371822981118
+		 143 0.42750123270701168 144 0.42749794742554098 145 0.42748861744793598 146 0.42748371822981124
 		 147 0.42748313442392627 148 0.4274884689022207 149 0.42748952799213036 150 0.4274902021821696
-		 151 0.42748890325123434 152 0.4274891403501378 153 -0.20709662172348453 154 -1.3855814848121129
+		 151 0.42748890325123434 152 0.4274891403501378 153 -0.20709662172348456 154 -1.3855814848121129
 		 155 -2.0201455276788107 156 -1.8100510091248321 157 -1.3090560631649752 158 -0.71109248177451556
 		 159 -0.21009555211713632 160 0;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
@@ -20250,14 +20249,14 @@ createNode animCurveTA -n "Spine4_rotate_hair_inputAZ";
 	setAttr ".tan" 2;
 	setAttr ".wgt" no;
 	setAttr -s 160 ".ktv[0:159]"  1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0
-		 11 0 12 0 13 0 14 0 15 0 16 -0.002363960979087581 17 -0.0090186703102327556 18 -0.019310922536664658
-		 19 -0.032589009528707129 20 -0.048200868434683457 21 -0.065492618501789363 22 -0.083806840464325058
+		 11 0 12 0 13 0 14 0 15 0 16 -0.002363960979087581 17 -0.0090186703102327556 18 -0.019310922536664662
+		 19 -0.032589009528707129 20 -0.048200868434683464 21 -0.065492618501789363 22 -0.083806840464325058
 		 23 -0.10248360565996781 24 -0.12085654044435508 25 -0.13825791480643154 26 -0.1540131954429412
 		 27 -0.16744730228726551 28 -0.1778820269249656 29 -0.1846393455047794 30 -0.18704052713251715
 		 31 -0.15781703841857714 32 -0.09352070408474214 33 -0.029225988955142539 34 0 35 0
 		 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0
 		 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0
-		 70 0 71 -0.00012803508137225743 72 -0.00049676093152551987 73 -0.0010865478987889222
+		 70 0 71 -0.00012803508137225743 72 -0.00049676093152551998 73 -0.0010865478987889222
 		 74 -0.0018644047075690267 75 -0.0028195264696167189 76 -0.0039136722934335804 77 -0.005131450959588617
 		 78 -0.0064437282807331756 79 -0.0078305982273723148 80 -0.0092629000632669552 81 -0.01072195680246681
 		 82 -0.012179638292298281 83 -0.013613682758608992 84 -0.014998434148284914 85 -0.016312648086289509
@@ -20269,15 +20268,15 @@ createNode animCurveTA -n "Spine4_rotate_hair_inputAZ";
 		 106 -0.038886527453333743 107 -0.0388856729893697 108 -0.038886478261734393 109 -0.038884917272423908
 		 110 -0.038885259538551431 111 -0.038886546834598072 112 -0.038885284393744016 113 -0.038885252791931203
 		 114 -0.038885926174300534 115 -0.038886182592660912 116 -0.038886486144750237 117 -0.038885895076879111
-		 118 -0.038884629526010794 119 -0.038885580280578126 120 -0.038886326521140109 121 -0.038884519268238188
+		 118 -0.038884629526010794 119 -0.038885580280578126 120 -0.038886326521140116 121 -0.038884519268238195
 		 122 -0.038886178576991622 123 -0.038887030646825596 124 -0.038886558742551321 125 -0.03888605903528472
 		 126 -0.038887205476509284 127 -0.038885372294693216 128 -0.038886054860744465 129 -0.038884799983803738
 		 130 -0.038885342483237342 131 -0.03888483057966996 132 -0.038885641316881471 133 -0.038886347229532728
-		 134 -0.038886351697818192 135 -0.038885225442983312 136 -0.038883670703124394 137 -0.038886374010030131
+		 134 -0.038886351697818199 135 -0.038885225442983312 136 -0.038883670703124394 137 -0.038886374010030131
 		 138 -0.038884813603201701 139 -0.038884163953351245 140 -0.038884210775998754 141 -0.038885010982790548
 		 142 -0.03888571409604253 143 -0.038884504491056057 144 -0.038884998210519869 145 -0.038882314942783151
-		 146 -0.038881757615149247 147 -0.038882985666503431 148 -0.03888366725071845 149 -0.038885700601693211
-		 150 -0.038885884690861995 151 -0.038886713148659005 152 -0.038887173821900274 153 0.019263820505638966
+		 146 -0.038881757615149247 147 -0.038882985666503431 148 -0.038883667250718457 149 -0.038885700601693211
+		 150 -0.038885884690861995 151 -0.038886713148659012 152 -0.038887173821900274 153 0.019263820505638966
 		 154 0.13394646390441009 155 0.19928533416931596 156 0.17856667777303223 157 0.12915231230655588
 		 158 0.070161105627976464 159 0.020729908687852842 160 0;
 	setAttr -s 160 ".kot[0:159]"  5 5 5 5 5 5 5 5 
@@ -20361,8 +20360,8 @@ connectAttr "zoeRigAnimRN.phl[404]" "zoe.Hips";
 connectAttr "zoeRigAnimRN.phl[405]" "HIKState2SK1.HipsPGX";
 connectAttr "zoeRigAnimRN.phl[406]" "HIKState2SK1.HipsPreR";
 connectAttr "zoeRigAnimRN.phl[407]" "HIKState2SK1.HipsSC";
-connectAttr "zoeRigAnimRN.phl[408]" "Hips_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[409]" "HIKState2SK1.HipsROrder";
+connectAttr "zoeRigAnimRN.phl[408]" "HIKState2SK1.HipsROrder";
+connectAttr "zoeRigAnimRN.phl[409]" "Hips_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[410]" "HIKState2SK1.HipsPostR";
 connectAttr "zoeRigAnimRN.phl[411]" "hair.dsm" -na;
 connectAttr "Hips_translateX_hair.o" "zoeRigAnimRN.phl[412]";
@@ -20391,8 +20390,8 @@ connectAttr "zoeRigAnimRN.phl[434]" "zoe.LeftUpLeg";
 connectAttr "zoeRigAnimRN.phl[435]" "HIKState2SK1.LeftUpLegPGX";
 connectAttr "zoeRigAnimRN.phl[436]" "HIKState2SK1.LeftUpLegPreR";
 connectAttr "zoeRigAnimRN.phl[437]" "HIKState2SK1.LeftUpLegSC";
-connectAttr "zoeRigAnimRN.phl[438]" "LeftThigh_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[439]" "HIKState2SK1.LeftUpLegROrder";
+connectAttr "zoeRigAnimRN.phl[438]" "HIKState2SK1.LeftUpLegROrder";
+connectAttr "zoeRigAnimRN.phl[439]" "LeftThigh_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[440]" "HIKState2SK1.LeftUpLegPostR";
 connectAttr "zoeRigAnimRN.phl[441]" "hair.dsm" -na;
 connectAttr "LeftThigh_translateX_hair.o" "zoeRigAnimRN.phl[442]";
@@ -20421,8 +20420,8 @@ connectAttr "zoeRigAnimRN.phl[464]" "zoe.LeftLeg";
 connectAttr "zoeRigAnimRN.phl[465]" "HIKState2SK1.LeftLegPGX";
 connectAttr "zoeRigAnimRN.phl[466]" "HIKState2SK1.LeftLegPreR";
 connectAttr "zoeRigAnimRN.phl[467]" "HIKState2SK1.LeftLegSC";
-connectAttr "zoeRigAnimRN.phl[468]" "LeftShin_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[469]" "HIKState2SK1.LeftLegROrder";
+connectAttr "zoeRigAnimRN.phl[468]" "HIKState2SK1.LeftLegROrder";
+connectAttr "zoeRigAnimRN.phl[469]" "LeftShin_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[470]" "HIKState2SK1.LeftLegPostR";
 connectAttr "zoeRigAnimRN.phl[471]" "hair.dsm" -na;
 connectAttr "LeftShin_translateX_hair.o" "zoeRigAnimRN.phl[472]";
@@ -20506,8 +20505,8 @@ connectAttr "zoeRigAnimRN.phl[549]" "zoe.RightUpLeg";
 connectAttr "zoeRigAnimRN.phl[550]" "HIKState2SK1.RightUpLegPGX";
 connectAttr "zoeRigAnimRN.phl[551]" "HIKState2SK1.RightUpLegPreR";
 connectAttr "zoeRigAnimRN.phl[552]" "HIKState2SK1.RightUpLegSC";
-connectAttr "zoeRigAnimRN.phl[553]" "RightThigh_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[554]" "HIKState2SK1.RightUpLegROrder";
+connectAttr "zoeRigAnimRN.phl[553]" "HIKState2SK1.RightUpLegROrder";
+connectAttr "zoeRigAnimRN.phl[554]" "RightThigh_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[555]" "HIKState2SK1.RightUpLegPostR";
 connectAttr "zoeRigAnimRN.phl[556]" "hair.dsm" -na;
 connectAttr "RightThigh_translateX_hair.o" "zoeRigAnimRN.phl[557]";
@@ -20536,8 +20535,8 @@ connectAttr "zoeRigAnimRN.phl[579]" "zoe.RightLeg";
 connectAttr "zoeRigAnimRN.phl[580]" "HIKState2SK1.RightLegPGX";
 connectAttr "zoeRigAnimRN.phl[581]" "HIKState2SK1.RightLegPreR";
 connectAttr "zoeRigAnimRN.phl[582]" "HIKState2SK1.RightLegSC";
-connectAttr "zoeRigAnimRN.phl[583]" "RightShin_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[584]" "HIKState2SK1.RightLegROrder";
+connectAttr "zoeRigAnimRN.phl[583]" "HIKState2SK1.RightLegROrder";
+connectAttr "zoeRigAnimRN.phl[584]" "RightShin_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[585]" "HIKState2SK1.RightLegPostR";
 connectAttr "zoeRigAnimRN.phl[586]" "hair.dsm" -na;
 connectAttr "RightShin_translateX_hair.o" "zoeRigAnimRN.phl[587]";
@@ -20621,8 +20620,8 @@ connectAttr "zoeRigAnimRN.phl[664]" "zoe.Spine";
 connectAttr "zoeRigAnimRN.phl[665]" "HIKState2SK1.SpinePGX";
 connectAttr "zoeRigAnimRN.phl[666]" "HIKState2SK1.SpinePreR";
 connectAttr "zoeRigAnimRN.phl[667]" "HIKState2SK1.SpineSC";
-connectAttr "zoeRigAnimRN.phl[668]" "Spine1_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[669]" "HIKState2SK1.SpineROrder";
+connectAttr "zoeRigAnimRN.phl[668]" "HIKState2SK1.SpineROrder";
+connectAttr "zoeRigAnimRN.phl[669]" "Spine1_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[670]" "HIKState2SK1.SpinePostR";
 connectAttr "zoeRigAnimRN.phl[671]" "hair.dsm" -na;
 connectAttr "Spine1_translateX_hair.o" "zoeRigAnimRN.phl[672]";
@@ -20651,8 +20650,8 @@ connectAttr "zoeRigAnimRN.phl[694]" "zoe.Spine1";
 connectAttr "zoeRigAnimRN.phl[695]" "HIKState2SK1.Spine1PGX";
 connectAttr "zoeRigAnimRN.phl[696]" "HIKState2SK1.Spine1PreR";
 connectAttr "zoeRigAnimRN.phl[697]" "HIKState2SK1.Spine1SC";
-connectAttr "zoeRigAnimRN.phl[698]" "Spine2_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[699]" "HIKState2SK1.Spine1ROrder";
+connectAttr "zoeRigAnimRN.phl[698]" "HIKState2SK1.Spine1ROrder";
+connectAttr "zoeRigAnimRN.phl[699]" "Spine2_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[700]" "HIKState2SK1.Spine1PostR";
 connectAttr "zoeRigAnimRN.phl[701]" "hair.dsm" -na;
 connectAttr "Spine2_translateX_hair.o" "zoeRigAnimRN.phl[702]";
@@ -20681,8 +20680,8 @@ connectAttr "zoeRigAnimRN.phl[724]" "zoe.Spine2";
 connectAttr "zoeRigAnimRN.phl[725]" "HIKState2SK1.Spine2PGX";
 connectAttr "zoeRigAnimRN.phl[726]" "HIKState2SK1.Spine2PreR";
 connectAttr "zoeRigAnimRN.phl[727]" "HIKState2SK1.Spine2SC";
-connectAttr "zoeRigAnimRN.phl[728]" "Spine3_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[729]" "HIKState2SK1.Spine2ROrder";
+connectAttr "zoeRigAnimRN.phl[728]" "HIKState2SK1.Spine2ROrder";
+connectAttr "zoeRigAnimRN.phl[729]" "Spine3_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[730]" "HIKState2SK1.Spine2PostR";
 connectAttr "zoeRigAnimRN.phl[731]" "hair.dsm" -na;
 connectAttr "Spine3_translateX_hair.o" "zoeRigAnimRN.phl[732]";
@@ -20711,8 +20710,8 @@ connectAttr "zoeRigAnimRN.phl[754]" "zoe.Spine3";
 connectAttr "zoeRigAnimRN.phl[755]" "HIKState2SK1.Spine3PGX";
 connectAttr "zoeRigAnimRN.phl[756]" "HIKState2SK1.Spine3PreR";
 connectAttr "zoeRigAnimRN.phl[757]" "HIKState2SK1.Spine3SC";
-connectAttr "zoeRigAnimRN.phl[758]" "Spine4_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[759]" "HIKState2SK1.Spine3ROrder";
+connectAttr "zoeRigAnimRN.phl[758]" "HIKState2SK1.Spine3ROrder";
+connectAttr "zoeRigAnimRN.phl[759]" "Spine4_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[760]" "HIKState2SK1.Spine3PostR";
 connectAttr "zoeRigAnimRN.phl[761]" "hair.dsm" -na;
 connectAttr "Spine4_translateX_hair.o" "zoeRigAnimRN.phl[762]";
@@ -20741,8 +20740,8 @@ connectAttr "zoeRigAnimRN.phl[784]" "zoe.LeftShoulder";
 connectAttr "zoeRigAnimRN.phl[785]" "HIKState2SK1.LeftShoulderPGX";
 connectAttr "zoeRigAnimRN.phl[786]" "HIKState2SK1.LeftShoulderPreR";
 connectAttr "zoeRigAnimRN.phl[787]" "HIKState2SK1.LeftShoulderSC";
-connectAttr "zoeRigAnimRN.phl[788]" "LeftShoulder_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[789]" "HIKState2SK1.LeftShoulderROrder";
+connectAttr "zoeRigAnimRN.phl[788]" "HIKState2SK1.LeftShoulderROrder";
+connectAttr "zoeRigAnimRN.phl[789]" "LeftShoulder_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[790]" "HIKState2SK1.LeftShoulderPostR";
 connectAttr "zoeRigAnimRN.phl[791]" "hair.dsm" -na;
 connectAttr "LeftShoulder_translateX_hair.o" "zoeRigAnimRN.phl[792]";
@@ -20771,8 +20770,8 @@ connectAttr "zoeRigAnimRN.phl[814]" "zoe.LeftArm";
 connectAttr "zoeRigAnimRN.phl[815]" "HIKState2SK1.LeftArmPGX";
 connectAttr "zoeRigAnimRN.phl[816]" "HIKState2SK1.LeftArmPreR";
 connectAttr "zoeRigAnimRN.phl[817]" "HIKState2SK1.LeftArmSC";
-connectAttr "zoeRigAnimRN.phl[818]" "LeftArm_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[819]" "HIKState2SK1.LeftArmROrder";
+connectAttr "zoeRigAnimRN.phl[818]" "HIKState2SK1.LeftArmROrder";
+connectAttr "zoeRigAnimRN.phl[819]" "LeftArm_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[820]" "HIKState2SK1.LeftArmPostR";
 connectAttr "zoeRigAnimRN.phl[821]" "hair.dsm" -na;
 connectAttr "LeftArm_translateX_hair.o" "zoeRigAnimRN.phl[822]";
@@ -20801,8 +20800,8 @@ connectAttr "zoeRigAnimRN.phl[844]" "zoe.LeftForeArm";
 connectAttr "zoeRigAnimRN.phl[845]" "HIKState2SK1.LeftForeArmPGX";
 connectAttr "zoeRigAnimRN.phl[846]" "HIKState2SK1.LeftForeArmPreR";
 connectAttr "zoeRigAnimRN.phl[847]" "HIKState2SK1.LeftForeArmSC";
-connectAttr "zoeRigAnimRN.phl[848]" "LeftForeArm_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[849]" "HIKState2SK1.LeftForeArmROrder";
+connectAttr "zoeRigAnimRN.phl[848]" "HIKState2SK1.LeftForeArmROrder";
+connectAttr "zoeRigAnimRN.phl[849]" "LeftForeArm_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[850]" "HIKState2SK1.LeftForeArmPostR";
 connectAttr "zoeRigAnimRN.phl[851]" "hair.dsm" -na;
 connectAttr "LeftForeArm_translateX_hair.o" "zoeRigAnimRN.phl[852]";
@@ -20831,8 +20830,8 @@ connectAttr "zoeRigAnimRN.phl[874]" "zoe.LeftHand";
 connectAttr "zoeRigAnimRN.phl[875]" "HIKState2SK1.LeftHandPGX";
 connectAttr "zoeRigAnimRN.phl[876]" "HIKState2SK1.LeftHandPreR";
 connectAttr "zoeRigAnimRN.phl[877]" "HIKState2SK1.LeftHandSC";
-connectAttr "zoeRigAnimRN.phl[878]" "LeftHand_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[879]" "HIKState2SK1.LeftHandROrder";
+connectAttr "zoeRigAnimRN.phl[878]" "HIKState2SK1.LeftHandROrder";
+connectAttr "zoeRigAnimRN.phl[879]" "LeftHand_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[880]" "HIKState2SK1.LeftHandPostR";
 connectAttr "zoeRigAnimRN.phl[881]" "hair.dsm" -na;
 connectAttr "LeftHand_translateX_hair.o" "zoeRigAnimRN.phl[882]";
@@ -21044,17 +21043,17 @@ connectAttr "LeftFinger3Proximal_scaleY_hair.o" "zoeRigAnimRN.phl[1084]";
 connectAttr "zoeRigAnimRN.phl[1085]" "hair.dsm" -na;
 connectAttr "LeftFinger3Proximal_scaleZ_hair.o" "zoeRigAnimRN.phl[1086]";
 connectAttr "zoeRigAnimRN.phl[1087]" "hair.dsm" -na;
-connectAttr "LeftFinger3Proximal_translateX_hair.o" "zoeRigAnimRN.phl[1088]";
+connectAttr "LeftFinger3Proximal_rotate_hair.ox" "zoeRigAnimRN.phl[1088]";
 connectAttr "zoeRigAnimRN.phl[1089]" "hair.dsm" -na;
-connectAttr "LeftFinger3Proximal_translateY_hair.o" "zoeRigAnimRN.phl[1090]";
+connectAttr "LeftFinger3Proximal_rotate_hair.oy" "zoeRigAnimRN.phl[1090]";
 connectAttr "zoeRigAnimRN.phl[1091]" "hair.dsm" -na;
-connectAttr "LeftFinger3Proximal_translateZ_hair.o" "zoeRigAnimRN.phl[1092]";
+connectAttr "LeftFinger3Proximal_rotate_hair.oz" "zoeRigAnimRN.phl[1092]";
 connectAttr "zoeRigAnimRN.phl[1093]" "hair.dsm" -na;
-connectAttr "LeftFinger3Proximal_rotate_hair.ox" "zoeRigAnimRN.phl[1094]";
+connectAttr "LeftFinger3Proximal_translateX_hair.o" "zoeRigAnimRN.phl[1094]";
 connectAttr "zoeRigAnimRN.phl[1095]" "hair.dsm" -na;
-connectAttr "LeftFinger3Proximal_rotate_hair.oy" "zoeRigAnimRN.phl[1096]";
+connectAttr "LeftFinger3Proximal_translateY_hair.o" "zoeRigAnimRN.phl[1096]";
 connectAttr "zoeRigAnimRN.phl[1097]" "hair.dsm" -na;
-connectAttr "LeftFinger3Proximal_rotate_hair.oz" "zoeRigAnimRN.phl[1098]";
+connectAttr "LeftFinger3Proximal_translateZ_hair.o" "zoeRigAnimRN.phl[1098]";
 connectAttr "zoeRigAnimRN.phl[1099]" "LeftFinger3Proximal_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[1100]" "hair.dsm" -na;
 connectAttr "LeftFinger3Proximal_visibility_hair.o" "zoeRigAnimRN.phl[1101]";
@@ -21067,17 +21066,17 @@ connectAttr "LeftFinger3Medial_scaleY_hair.o" "zoeRigAnimRN.phl[1107]";
 connectAttr "zoeRigAnimRN.phl[1108]" "hair.dsm" -na;
 connectAttr "LeftFinger3Medial_scaleZ_hair.o" "zoeRigAnimRN.phl[1109]";
 connectAttr "zoeRigAnimRN.phl[1110]" "hair.dsm" -na;
-connectAttr "LeftFinger3Medial_translateX_hair.o" "zoeRigAnimRN.phl[1111]";
+connectAttr "LeftFinger3Medial_rotate_hair.ox" "zoeRigAnimRN.phl[1111]";
 connectAttr "zoeRigAnimRN.phl[1112]" "hair.dsm" -na;
-connectAttr "LeftFinger3Medial_translateY_hair.o" "zoeRigAnimRN.phl[1113]";
+connectAttr "LeftFinger3Medial_rotate_hair.oy" "zoeRigAnimRN.phl[1113]";
 connectAttr "zoeRigAnimRN.phl[1114]" "hair.dsm" -na;
-connectAttr "LeftFinger3Medial_translateZ_hair.o" "zoeRigAnimRN.phl[1115]";
+connectAttr "LeftFinger3Medial_rotate_hair.oz" "zoeRigAnimRN.phl[1115]";
 connectAttr "zoeRigAnimRN.phl[1116]" "hair.dsm" -na;
-connectAttr "LeftFinger3Medial_rotate_hair.ox" "zoeRigAnimRN.phl[1117]";
+connectAttr "LeftFinger3Medial_translateX_hair.o" "zoeRigAnimRN.phl[1117]";
 connectAttr "zoeRigAnimRN.phl[1118]" "hair.dsm" -na;
-connectAttr "LeftFinger3Medial_rotate_hair.oy" "zoeRigAnimRN.phl[1119]";
+connectAttr "LeftFinger3Medial_translateY_hair.o" "zoeRigAnimRN.phl[1119]";
 connectAttr "zoeRigAnimRN.phl[1120]" "hair.dsm" -na;
-connectAttr "LeftFinger3Medial_rotate_hair.oz" "zoeRigAnimRN.phl[1121]";
+connectAttr "LeftFinger3Medial_translateZ_hair.o" "zoeRigAnimRN.phl[1121]";
 connectAttr "zoeRigAnimRN.phl[1122]" "LeftFinger3Medial_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[1123]" "hair.dsm" -na;
 connectAttr "LeftFinger3Medial_visibility_hair.o" "zoeRigAnimRN.phl[1124]";
@@ -21230,17 +21229,17 @@ connectAttr "LeftFinger5Proximal_scaleY_hair.o" "zoeRigAnimRN.phl[1268]";
 connectAttr "zoeRigAnimRN.phl[1269]" "hair.dsm" -na;
 connectAttr "LeftFinger5Proximal_scaleZ_hair.o" "zoeRigAnimRN.phl[1270]";
 connectAttr "zoeRigAnimRN.phl[1271]" "hair.dsm" -na;
-connectAttr "LeftFinger5Proximal_translateX_hair.o" "zoeRigAnimRN.phl[1272]";
+connectAttr "LeftFinger5Proximal_rotate_hair.ox" "zoeRigAnimRN.phl[1272]";
 connectAttr "zoeRigAnimRN.phl[1273]" "hair.dsm" -na;
-connectAttr "LeftFinger5Proximal_translateY_hair.o" "zoeRigAnimRN.phl[1274]";
+connectAttr "LeftFinger5Proximal_rotate_hair.oy" "zoeRigAnimRN.phl[1274]";
 connectAttr "zoeRigAnimRN.phl[1275]" "hair.dsm" -na;
-connectAttr "LeftFinger5Proximal_translateZ_hair.o" "zoeRigAnimRN.phl[1276]";
+connectAttr "LeftFinger5Proximal_rotate_hair.oz" "zoeRigAnimRN.phl[1276]";
 connectAttr "zoeRigAnimRN.phl[1277]" "hair.dsm" -na;
-connectAttr "LeftFinger5Proximal_rotate_hair.ox" "zoeRigAnimRN.phl[1278]";
+connectAttr "LeftFinger5Proximal_translateX_hair.o" "zoeRigAnimRN.phl[1278]";
 connectAttr "zoeRigAnimRN.phl[1279]" "hair.dsm" -na;
-connectAttr "LeftFinger5Proximal_rotate_hair.oy" "zoeRigAnimRN.phl[1280]";
+connectAttr "LeftFinger5Proximal_translateY_hair.o" "zoeRigAnimRN.phl[1280]";
 connectAttr "zoeRigAnimRN.phl[1281]" "hair.dsm" -na;
-connectAttr "LeftFinger5Proximal_rotate_hair.oz" "zoeRigAnimRN.phl[1282]";
+connectAttr "LeftFinger5Proximal_translateZ_hair.o" "zoeRigAnimRN.phl[1282]";
 connectAttr "zoeRigAnimRN.phl[1283]" "LeftFinger5Proximal_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[1284]" "hair.dsm" -na;
 connectAttr "LeftFinger5Proximal_visibility_hair.o" "zoeRigAnimRN.phl[1285]";
@@ -21253,17 +21252,17 @@ connectAttr "LeftFinger5Medial_scaleY_hair.o" "zoeRigAnimRN.phl[1291]";
 connectAttr "zoeRigAnimRN.phl[1292]" "hair.dsm" -na;
 connectAttr "LeftFinger5Medial_scaleZ_hair.o" "zoeRigAnimRN.phl[1293]";
 connectAttr "zoeRigAnimRN.phl[1294]" "hair.dsm" -na;
-connectAttr "LeftFinger5Medial_translateX_hair.o" "zoeRigAnimRN.phl[1295]";
+connectAttr "LeftFinger5Medial_rotate_hair.ox" "zoeRigAnimRN.phl[1295]";
 connectAttr "zoeRigAnimRN.phl[1296]" "hair.dsm" -na;
-connectAttr "LeftFinger5Medial_translateY_hair.o" "zoeRigAnimRN.phl[1297]";
+connectAttr "LeftFinger5Medial_rotate_hair.oy" "zoeRigAnimRN.phl[1297]";
 connectAttr "zoeRigAnimRN.phl[1298]" "hair.dsm" -na;
-connectAttr "LeftFinger5Medial_translateZ_hair.o" "zoeRigAnimRN.phl[1299]";
+connectAttr "LeftFinger5Medial_rotate_hair.oz" "zoeRigAnimRN.phl[1299]";
 connectAttr "zoeRigAnimRN.phl[1300]" "hair.dsm" -na;
-connectAttr "LeftFinger5Medial_rotate_hair.ox" "zoeRigAnimRN.phl[1301]";
+connectAttr "LeftFinger5Medial_translateX_hair.o" "zoeRigAnimRN.phl[1301]";
 connectAttr "zoeRigAnimRN.phl[1302]" "hair.dsm" -na;
-connectAttr "LeftFinger5Medial_rotate_hair.oy" "zoeRigAnimRN.phl[1303]";
+connectAttr "LeftFinger5Medial_translateY_hair.o" "zoeRigAnimRN.phl[1303]";
 connectAttr "zoeRigAnimRN.phl[1304]" "hair.dsm" -na;
-connectAttr "LeftFinger5Medial_rotate_hair.oz" "zoeRigAnimRN.phl[1305]";
+connectAttr "LeftFinger5Medial_translateZ_hair.o" "zoeRigAnimRN.phl[1305]";
 connectAttr "zoeRigAnimRN.phl[1306]" "LeftFinger5Medial_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[1307]" "hair.dsm" -na;
 connectAttr "LeftFinger5Medial_visibility_hair.o" "zoeRigAnimRN.phl[1308]";
@@ -21303,8 +21302,8 @@ connectAttr "zoeRigAnimRN.phl[1341]" "zoe.Neck";
 connectAttr "zoeRigAnimRN.phl[1342]" "HIKState2SK1.NeckPGX";
 connectAttr "zoeRigAnimRN.phl[1343]" "HIKState2SK1.NeckPreR";
 connectAttr "zoeRigAnimRN.phl[1344]" "HIKState2SK1.NeckSC";
-connectAttr "zoeRigAnimRN.phl[1345]" "Neck_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[1346]" "HIKState2SK1.NeckROrder";
+connectAttr "zoeRigAnimRN.phl[1345]" "HIKState2SK1.NeckROrder";
+connectAttr "zoeRigAnimRN.phl[1346]" "Neck_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[1347]" "HIKState2SK1.NeckPostR";
 connectAttr "zoeRigAnimRN.phl[1348]" "hair.dsm" -na;
 connectAttr "Neck_translateX_hair.o" "zoeRigAnimRN.phl[1349]";
@@ -21331,22 +21330,22 @@ connectAttr "zoeRigAnimRN.phl[1369]" "hair.dsm" -na;
 connectAttr "Head_scaleZ_hair.o" "zoeRigAnimRN.phl[1370]";
 connectAttr "zoeRigAnimRN.phl[1371]" "zoe.Head";
 connectAttr "zoeRigAnimRN.phl[1372]" "hair.dsm" -na;
-connectAttr "Head_rotate_hair.ox" "zoeRigAnimRN.phl[1373]";
+connectAttr "Head_translateX_hair.o" "zoeRigAnimRN.phl[1373]";
 connectAttr "zoeRigAnimRN.phl[1374]" "hair.dsm" -na;
-connectAttr "Head_rotate_hair.oy" "zoeRigAnimRN.phl[1375]";
+connectAttr "Head_translateY_hair.o" "zoeRigAnimRN.phl[1375]";
 connectAttr "zoeRigAnimRN.phl[1376]" "hair.dsm" -na;
-connectAttr "Head_rotate_hair.oz" "zoeRigAnimRN.phl[1377]";
+connectAttr "Head_translateZ_hair.o" "zoeRigAnimRN.phl[1377]";
 connectAttr "zoeRigAnimRN.phl[1378]" "hair.dsm" -na;
-connectAttr "Head_translateX_hair.o" "zoeRigAnimRN.phl[1379]";
+connectAttr "Head_rotate_hair.ox" "zoeRigAnimRN.phl[1379]";
 connectAttr "zoeRigAnimRN.phl[1380]" "hair.dsm" -na;
-connectAttr "Head_translateY_hair.o" "zoeRigAnimRN.phl[1381]";
+connectAttr "Head_rotate_hair.oy" "zoeRigAnimRN.phl[1381]";
 connectAttr "zoeRigAnimRN.phl[1382]" "hair.dsm" -na;
-connectAttr "Head_translateZ_hair.o" "zoeRigAnimRN.phl[1383]";
+connectAttr "Head_rotate_hair.oz" "zoeRigAnimRN.phl[1383]";
 connectAttr "zoeRigAnimRN.phl[1384]" "HIKState2SK1.HeadPGX";
 connectAttr "zoeRigAnimRN.phl[1385]" "HIKState2SK1.HeadPreR";
 connectAttr "zoeRigAnimRN.phl[1386]" "HIKState2SK1.HeadSC";
-connectAttr "zoeRigAnimRN.phl[1387]" "Head_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[1388]" "HIKState2SK1.HeadROrder";
+connectAttr "zoeRigAnimRN.phl[1387]" "HIKState2SK1.HeadROrder";
+connectAttr "zoeRigAnimRN.phl[1388]" "Head_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[1389]" "HIKState2SK1.HeadPostR";
 connectAttr "zoeRigAnimRN.phl[1390]" "hair.dsm" -na;
 connectAttr "Head_visibility_hair.o" "zoeRigAnimRN.phl[1391]";
@@ -21400,42 +21399,42 @@ connectAttr "zoeRigAnimRN.phl[1438]" "hair.dsm" -na;
 connectAttr "LeftHair03_scaleY_hair.o" "zoeRigAnimRN.phl[1439]";
 connectAttr "zoeRigAnimRN.phl[1440]" "hair.dsm" -na;
 connectAttr "LeftHair03_scaleZ_hair.o" "zoeRigAnimRN.phl[1441]";
-connectAttr "zoeRigAnimRN.phl[1442]" "LeftHair03_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[1443]" "hair.dsm" -na;
-connectAttr "LeftHair03_visibility_hair.o" "zoeRigAnimRN.phl[1444]";
-connectAttr "zoeRigAnimRN.phl[1445]" "hair.dsm" -na;
-connectAttr "LeftHair03_translateX_hair.o" "zoeRigAnimRN.phl[1446]";
-connectAttr "zoeRigAnimRN.phl[1447]" "hair.dsm" -na;
-connectAttr "LeftHair03_translateY_hair.o" "zoeRigAnimRN.phl[1448]";
+connectAttr "zoeRigAnimRN.phl[1442]" "hair.dsm" -na;
+connectAttr "LeftHair03_rotate_hair.ox" "zoeRigAnimRN.phl[1443]";
+connectAttr "zoeRigAnimRN.phl[1444]" "hair.dsm" -na;
+connectAttr "LeftHair03_rotate_hair.oy" "zoeRigAnimRN.phl[1445]";
+connectAttr "zoeRigAnimRN.phl[1446]" "hair.dsm" -na;
+connectAttr "LeftHair03_rotate_hair.oz" "zoeRigAnimRN.phl[1447]";
+connectAttr "zoeRigAnimRN.phl[1448]" "LeftHair03_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[1449]" "hair.dsm" -na;
-connectAttr "LeftHair03_translateZ_hair.o" "zoeRigAnimRN.phl[1450]";
+connectAttr "LeftHair03_visibility_hair.o" "zoeRigAnimRN.phl[1450]";
 connectAttr "zoeRigAnimRN.phl[1451]" "hair.dsm" -na;
-connectAttr "LeftHair03_rotate_hair.ox" "zoeRigAnimRN.phl[1452]";
+connectAttr "LeftHair03_translateX_hair.o" "zoeRigAnimRN.phl[1452]";
 connectAttr "zoeRigAnimRN.phl[1453]" "hair.dsm" -na;
-connectAttr "LeftHair03_rotate_hair.oy" "zoeRigAnimRN.phl[1454]";
+connectAttr "LeftHair03_translateY_hair.o" "zoeRigAnimRN.phl[1454]";
 connectAttr "zoeRigAnimRN.phl[1455]" "hair.dsm" -na;
-connectAttr "LeftHair03_rotate_hair.oz" "zoeRigAnimRN.phl[1456]";
+connectAttr "LeftHair03_translateZ_hair.o" "zoeRigAnimRN.phl[1456]";
 connectAttr "zoeRigAnimRN.phl[1457]" "hair.dsm" -na;
 connectAttr "LeftHair04_scaleX_hair.o" "zoeRigAnimRN.phl[1458]";
 connectAttr "zoeRigAnimRN.phl[1459]" "hair.dsm" -na;
 connectAttr "LeftHair04_scaleY_hair.o" "zoeRigAnimRN.phl[1460]";
 connectAttr "zoeRigAnimRN.phl[1461]" "hair.dsm" -na;
 connectAttr "LeftHair04_scaleZ_hair.o" "zoeRigAnimRN.phl[1462]";
-connectAttr "zoeRigAnimRN.phl[1463]" "LeftHair04_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[1464]" "hair.dsm" -na;
-connectAttr "LeftHair04_visibility_hair.o" "zoeRigAnimRN.phl[1465]";
-connectAttr "zoeRigAnimRN.phl[1466]" "hair.dsm" -na;
-connectAttr "LeftHair04_translateX_hair.o" "zoeRigAnimRN.phl[1467]";
-connectAttr "zoeRigAnimRN.phl[1468]" "hair.dsm" -na;
-connectAttr "LeftHair04_translateY_hair.o" "zoeRigAnimRN.phl[1469]";
+connectAttr "zoeRigAnimRN.phl[1463]" "hair.dsm" -na;
+connectAttr "LeftHair04_rotate_hair.ox" "zoeRigAnimRN.phl[1464]";
+connectAttr "zoeRigAnimRN.phl[1465]" "hair.dsm" -na;
+connectAttr "LeftHair04_rotate_hair.oy" "zoeRigAnimRN.phl[1466]";
+connectAttr "zoeRigAnimRN.phl[1467]" "hair.dsm" -na;
+connectAttr "LeftHair04_rotate_hair.oz" "zoeRigAnimRN.phl[1468]";
+connectAttr "zoeRigAnimRN.phl[1469]" "LeftHair04_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[1470]" "hair.dsm" -na;
-connectAttr "LeftHair04_translateZ_hair.o" "zoeRigAnimRN.phl[1471]";
+connectAttr "LeftHair04_visibility_hair.o" "zoeRigAnimRN.phl[1471]";
 connectAttr "zoeRigAnimRN.phl[1472]" "hair.dsm" -na;
-connectAttr "LeftHair04_rotate_hair.ox" "zoeRigAnimRN.phl[1473]";
+connectAttr "LeftHair04_translateX_hair.o" "zoeRigAnimRN.phl[1473]";
 connectAttr "zoeRigAnimRN.phl[1474]" "hair.dsm" -na;
-connectAttr "LeftHair04_rotate_hair.oy" "zoeRigAnimRN.phl[1475]";
+connectAttr "LeftHair04_translateY_hair.o" "zoeRigAnimRN.phl[1475]";
 connectAttr "zoeRigAnimRN.phl[1476]" "hair.dsm" -na;
-connectAttr "LeftHair04_rotate_hair.oz" "zoeRigAnimRN.phl[1477]";
+connectAttr "LeftHair04_translateZ_hair.o" "zoeRigAnimRN.phl[1477]";
 connectAttr "zoeRigAnimRN.phl[1478]" "hair.dsm" -na;
 connectAttr "RightHair01_scaleX_hair.o" "zoeRigAnimRN.phl[1479]";
 connectAttr "zoeRigAnimRN.phl[1480]" "hair.dsm" -na;
@@ -21505,21 +21504,21 @@ connectAttr "zoeRigAnimRN.phl[1543]" "hair.dsm" -na;
 connectAttr "RightHair04_scaleY_hair.o" "zoeRigAnimRN.phl[1544]";
 connectAttr "zoeRigAnimRN.phl[1545]" "hair.dsm" -na;
 connectAttr "RightHair04_scaleZ_hair.o" "zoeRigAnimRN.phl[1546]";
-connectAttr "zoeRigAnimRN.phl[1547]" "RightHair04_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[1548]" "hair.dsm" -na;
-connectAttr "RightHair04_visibility_hair.o" "zoeRigAnimRN.phl[1549]";
-connectAttr "zoeRigAnimRN.phl[1550]" "hair.dsm" -na;
-connectAttr "RightHair04_translateX_hair.o" "zoeRigAnimRN.phl[1551]";
-connectAttr "zoeRigAnimRN.phl[1552]" "hair.dsm" -na;
-connectAttr "RightHair04_translateY_hair.o" "zoeRigAnimRN.phl[1553]";
+connectAttr "zoeRigAnimRN.phl[1547]" "hair.dsm" -na;
+connectAttr "RightHair04_rotate_hair.ox" "zoeRigAnimRN.phl[1548]";
+connectAttr "zoeRigAnimRN.phl[1549]" "hair.dsm" -na;
+connectAttr "RightHair04_rotate_hair.oy" "zoeRigAnimRN.phl[1550]";
+connectAttr "zoeRigAnimRN.phl[1551]" "hair.dsm" -na;
+connectAttr "RightHair04_rotate_hair.oz" "zoeRigAnimRN.phl[1552]";
+connectAttr "zoeRigAnimRN.phl[1553]" "RightHair04_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[1554]" "hair.dsm" -na;
-connectAttr "RightHair04_translateZ_hair.o" "zoeRigAnimRN.phl[1555]";
+connectAttr "RightHair04_visibility_hair.o" "zoeRigAnimRN.phl[1555]";
 connectAttr "zoeRigAnimRN.phl[1556]" "hair.dsm" -na;
-connectAttr "RightHair04_rotate_hair.ox" "zoeRigAnimRN.phl[1557]";
+connectAttr "RightHair04_translateX_hair.o" "zoeRigAnimRN.phl[1557]";
 connectAttr "zoeRigAnimRN.phl[1558]" "hair.dsm" -na;
-connectAttr "RightHair04_rotate_hair.oy" "zoeRigAnimRN.phl[1559]";
+connectAttr "RightHair04_translateY_hair.o" "zoeRigAnimRN.phl[1559]";
 connectAttr "zoeRigAnimRN.phl[1560]" "hair.dsm" -na;
-connectAttr "RightHair04_rotate_hair.oz" "zoeRigAnimRN.phl[1561]";
+connectAttr "RightHair04_translateZ_hair.o" "zoeRigAnimRN.phl[1561]";
 connectAttr "zoeRigAnimRN.phl[1562]" "HIKState2SK1.RightShoulderIS";
 connectAttr "zoeRigAnimRN.phl[1563]" "hair.dsm" -na;
 connectAttr "RightShoulder_scaleX_hair.o" "zoeRigAnimRN.phl[1564]";
@@ -21531,8 +21530,8 @@ connectAttr "zoeRigAnimRN.phl[1569]" "zoe.RightShoulder";
 connectAttr "zoeRigAnimRN.phl[1570]" "HIKState2SK1.RightShoulderPGX";
 connectAttr "zoeRigAnimRN.phl[1571]" "HIKState2SK1.RightShoulderPreR";
 connectAttr "zoeRigAnimRN.phl[1572]" "HIKState2SK1.RightShoulderSC";
-connectAttr "zoeRigAnimRN.phl[1573]" "RightShoulder_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[1574]" "HIKState2SK1.RightShoulderROrder";
+connectAttr "zoeRigAnimRN.phl[1573]" "HIKState2SK1.RightShoulderROrder";
+connectAttr "zoeRigAnimRN.phl[1574]" "RightShoulder_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[1575]" "HIKState2SK1.RightShoulderPostR";
 connectAttr "zoeRigAnimRN.phl[1576]" "hair.dsm" -na;
 connectAttr "RightShoulder_translateX_hair.o" "zoeRigAnimRN.phl[1577]";
@@ -21561,8 +21560,8 @@ connectAttr "zoeRigAnimRN.phl[1599]" "zoe.RightArm";
 connectAttr "zoeRigAnimRN.phl[1600]" "HIKState2SK1.RightArmPGX";
 connectAttr "zoeRigAnimRN.phl[1601]" "HIKState2SK1.RightArmPreR";
 connectAttr "zoeRigAnimRN.phl[1602]" "HIKState2SK1.RightArmSC";
-connectAttr "zoeRigAnimRN.phl[1603]" "RightArm_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[1604]" "HIKState2SK1.RightArmROrder";
+connectAttr "zoeRigAnimRN.phl[1603]" "HIKState2SK1.RightArmROrder";
+connectAttr "zoeRigAnimRN.phl[1604]" "RightArm_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[1605]" "HIKState2SK1.RightArmPostR";
 connectAttr "zoeRigAnimRN.phl[1606]" "hair.dsm" -na;
 connectAttr "RightArm_translateX_hair.o" "zoeRigAnimRN.phl[1607]";
@@ -21591,8 +21590,8 @@ connectAttr "zoeRigAnimRN.phl[1629]" "zoe.RightForeArm";
 connectAttr "zoeRigAnimRN.phl[1630]" "HIKState2SK1.RightForeArmPGX";
 connectAttr "zoeRigAnimRN.phl[1631]" "HIKState2SK1.RightForeArmPreR";
 connectAttr "zoeRigAnimRN.phl[1632]" "HIKState2SK1.RightForeArmSC";
-connectAttr "zoeRigAnimRN.phl[1633]" "RightForeArm_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[1634]" "HIKState2SK1.RightForeArmROrder";
+connectAttr "zoeRigAnimRN.phl[1633]" "HIKState2SK1.RightForeArmROrder";
+connectAttr "zoeRigAnimRN.phl[1634]" "RightForeArm_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[1635]" "HIKState2SK1.RightForeArmPostR";
 connectAttr "zoeRigAnimRN.phl[1636]" "hair.dsm" -na;
 connectAttr "RightForeArm_translateX_hair.o" "zoeRigAnimRN.phl[1637]";
@@ -21621,8 +21620,8 @@ connectAttr "zoeRigAnimRN.phl[1659]" "zoe.RightHand";
 connectAttr "zoeRigAnimRN.phl[1660]" "HIKState2SK1.RightHandPGX";
 connectAttr "zoeRigAnimRN.phl[1661]" "HIKState2SK1.RightHandPreR";
 connectAttr "zoeRigAnimRN.phl[1662]" "HIKState2SK1.RightHandSC";
-connectAttr "zoeRigAnimRN.phl[1663]" "RightHand_rotate_hair.ro";
-connectAttr "zoeRigAnimRN.phl[1664]" "HIKState2SK1.RightHandROrder";
+connectAttr "zoeRigAnimRN.phl[1663]" "HIKState2SK1.RightHandROrder";
+connectAttr "zoeRigAnimRN.phl[1664]" "RightHand_rotate_hair.ro";
 connectAttr "zoeRigAnimRN.phl[1665]" "HIKState2SK1.RightHandPostR";
 connectAttr "zoeRigAnimRN.phl[1666]" "hair.dsm" -na;
 connectAttr "RightHand_translateX_hair.o" "zoeRigAnimRN.phl[1667]";
