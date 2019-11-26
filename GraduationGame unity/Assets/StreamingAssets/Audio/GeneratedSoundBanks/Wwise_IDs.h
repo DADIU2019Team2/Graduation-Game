@@ -26,6 +26,7 @@ namespace AK
         static const AkUniqueID CRUSHER_IDLE = 3878901180U;
         static const AkUniqueID DAMAGED_PLATFORMS = 624837759U;
         static const AkUniqueID DEATH_RAY = 977466704U;
+        static const AkUniqueID DEATH_SAW = 507840475U;
         static const AkUniqueID DIALOGUE_ANGRY = 2801479097U;
         static const AkUniqueID DIALOGUE_HAPPY = 2714452976U;
         static const AkUniqueID DOOR_CLOSES = 900426207U;
@@ -43,6 +44,7 @@ namespace AK
         static const AkUniqueID LEVEL_START = 352576276U;
         static const AkUniqueID LEVER_SOUND = 3308622827U;
         static const AkUniqueID NORMAL_PLATFORMS = 4182768561U;
+        static const AkUniqueID OUCH = 3978972604U;
         static const AkUniqueID PLAY_AMBIENCE_Z1 = 1001479278U;
         static const AkUniqueID PLAY_AMBIENCE_Z2 = 1001479277U;
         static const AkUniqueID PLAY_AMBIENCE_Z3 = 1001479276U;
