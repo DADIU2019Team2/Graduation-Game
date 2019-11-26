@@ -259,6 +259,7 @@ public class GameManager : MonoBehaviour
     private void DoResetObjects()
     {
         var objectsToBeReset = FindObjectsOfType<MonoBehaviour>().OfType<IOnSceneReset>();
+        //var objectsToBeReset = Resources.FindObjectsOfTypeAll<MonoBehaviour>().OfType<IOnSceneReset>(); doesn't work properly (gives null references in moving platforms)
         foreach (IOnSceneReset obj in objectsToBeReset)
         {
             obj.OnResetLevel();
