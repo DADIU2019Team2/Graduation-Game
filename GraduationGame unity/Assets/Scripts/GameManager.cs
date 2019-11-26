@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
             case GameStateScriptableObject.GameState.levelStart:
                 if (callOnce)
                 {
+                    Time.timeScale = 1;
                     timerForLoadNextScene = 0;
                     transitionFader.SetAlpha(1);
                     callOnce = false;
@@ -86,7 +87,7 @@ public class GameManager : MonoBehaviour
                 if (startIncrementingLevelStart)
                 {
                     waitTimer += Time.deltaTime;
-                    Debug.Log("Time:" + waitTimer);
+                    //Debug.Log("Time:" + waitTimer);
                     if (waitTimer > waitInLevelStart)
                     {
                         waitTimer = 0f;
@@ -142,14 +143,15 @@ public class GameManager : MonoBehaviour
                 “Reload” scene and fade back into level-start state. 
                 Zoe and camerashould be returned to most recent checkpoint met, rather than at the initial position at start of the level */
                 break;
-            case GameStateScriptableObject.GameState.cinematic:
 
+            case GameStateScriptableObject.GameState.cinematic:
                 playerMovementController.TransitionToState(PlayerStates.NoInput);
                 //Need to implement input blocking here.
 
                 /*(No player control at all until they end)
                  – except skipping dialogue by tapping and swiping to skip to next player-controllable state. */
                 break;
+
             case GameStateScriptableObject.GameState.levelComplete:
                 if (callOnce)
                 {
@@ -207,12 +209,31 @@ public class GameManager : MonoBehaviour
         return gameState;
     }
 
-    public static void ChangeGameState(GameStateScriptableObject.GameState desiredGameState)
+    private static void ChangeGameState(GameStateScriptableObject.GameState desiredGameState)
     {
         gameState = desiredGameState;
         if (GameStateChangeEvent != null)
             GameStateChangeEvent(desiredGameState);
         callOnce = true;
+    }
+
+    public static bool RequestGameStateChange(GameStateScriptableObject.GameState desiredGamestate)
+    {
+        //do some stuff to make a gameState relation matrix....
+        switch (gameState)
+        {
+            case GameStateScriptableObject.GameState.mainGameplayLoop:
+                ChangeGameState(desiredGamestate);
+                return true;
+                break;
+            case GameStateScriptableObject.GameState.cinematic:
+                ChangeGameState(desiredGamestate);
+                return true;
+                break;
+            default:
+                return false;
+                break;
+        }
     }
     private void DoFade(bool fadeIn)
     {
@@ -238,6 +259,7 @@ public class GameManager : MonoBehaviour
     private void DoResetObjects()
     {
         var objectsToBeReset = FindObjectsOfType<MonoBehaviour>().OfType<IOnSceneReset>();
+        //var objectsToBeReset = Resources.FindObjectsOfTypeAll<MonoBehaviour>().OfType<IOnSceneReset>(); doesn't work properly (gives null references in moving platforms)
         foreach (IOnSceneReset obj in objectsToBeReset)
         {
             obj.OnResetLevel();

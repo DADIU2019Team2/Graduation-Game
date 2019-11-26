@@ -20,6 +20,16 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
     public delegate void OnZoeTakeDamageDelegate();
     public event OnZoeTakeDamageDelegate zoeTakeDamageEvent;
     public VoidEvent DeathVoidEvent;
+    public bool hasDied;
+
+    private enum PlayerRespawnDirection
+    {
+        Right, Left
+    }
+    [SerializeField]
+    private PlayerRespawnDirection respawnRunDirection;
+
+
     private void Awake()
     {
         currentSpawnPosition = transform.parent.position;
@@ -35,16 +45,14 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
     {
         Debug.Log(damage + " damage taken");
         playerStats.subtractHealth(damage);
-        if(zoeTakeDamageEvent != null)
+        if (zoeTakeDamageEvent != null)
             zoeTakeDamageEvent();
         if (playerStats.getCurrentHealth() <= 0)
         {
-
-            //Play Death Particle
-            deathParticles.Play();
-            isDead = true;
-            AkSoundEngine.SetState("Dead_or_Alive", "Dead");
-            Die();
+            if (!isDead)
+            {
+                Die();
+            }
         }
     }
 
@@ -57,8 +65,13 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
     {
         Debug.Log("git gud");
         //despawn meshes
+        deathParticles.Play();
+        isDead = true;
+        AkSoundEngine.SetState("Dead_or_Alive", "Dead");
         DeathVoidEvent.Raise();
-        GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelLoss);
+        isDead = true;
+        //GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelLoss);
+        GameManager.RequestGameStateChange(GameStateScriptableObject.GameState.levelLoss);
     }
 
     public void OnResetLevel()
@@ -72,7 +85,9 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
         playerStats.resetStamina();
         isDead = false;
 
-        if(CheckpointManager.GetCurerntCheckpoint() != Vector3.zero)
+        KinematicTestController.runningRight = respawnRunDirection == PlayerRespawnDirection.Right ? 1 : -1; //-1 is running left, 1 is running right.
+
+        if (CheckpointManager.GetCurerntCheckpoint() != Vector3.zero)
         {
             Debug.Log(CheckpointManager.GetCurerntCheckpoint());
             GetComponentInParent<KinematicTestController>().Motor.SetPosition(CheckpointManager.GetCurerntCheckpoint());
@@ -89,9 +104,19 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
         playerStats.resetHealth();
         playerStats.resetStamina();
     }
-    
+
     public void ChangeSkin(int skinIndex)
     {
         playerStats.SetCurrentZoeRecolor(skinIndex);
+    }
+
+    public void SetRespawnDirectionToLeft()
+    {
+        respawnRunDirection = PlayerRespawnDirection.Left;
+    }
+
+    public void SetRespawnDirectionToRight()
+    {
+        respawnRunDirection = PlayerRespawnDirection.Right;
     }
 }
