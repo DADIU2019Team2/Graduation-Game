@@ -49,7 +49,7 @@ public class AnimationSwitcher : MonoBehaviour
         _isRightFootInFront = IsRightFootInFront();
         animator.SetBool("rightFootInFront", _isRightFootInFront);
         animator.SetFloat("fallBlend", fallTime);
-        
+
         //On Landing
         if ((characterController.Motor.GroundingStatus.IsStableOnGround &&
              !characterController.Motor.LastGroundingStatus.IsStableOnGround) ||
@@ -64,93 +64,93 @@ public class AnimationSwitcher : MonoBehaviour
                 animator.SetBool(param.name, false);
             }
         }
-        
-        
+
+
         else
         {
             //handle interaction states
             switch (characterController.CurrentCharacterState)
             {
                 case PlayerStates.Idling:
-                {
-                    //set idle loop
-                    animator.SetBool("isStanding", true);
-                    break;
-                }
+                    {
+                        //set idle loop
+                        animator.SetBool("isStanding", true);
+                        break;
+                    }
                 case PlayerStates.NoInput:
-                {
-                    //set idle loop
-                    animator.SetBool("isIdling", true);
-                    break;
-                }
+                    {
+                        //set idle loop
+                        animator.SetBool("isIdling", true);
+                        break;
+                    }
                 case PlayerStates.CinematicIdle:
-                {
-                    //set idle loop
-                    animator.SetBool("isStanding", true);
-                    break;
-                }
+                    {
+                        //set idle loop
+                        animator.SetBool("isStanding", true);
+                        break;
+                    }
                 case PlayerStates.Sliding:
-                {
-                    //set roll animation
-                    slideTime = characterController.GetSlideNormalizedTime();
-                    animator.SetFloat("slideBlend",slideTime);
-                    animator.SetBool("isSliding", true);
-                    if (characterController.JumpingThisFrame())
                     {
-                        // set jump anim
-                        animator.SetTrigger("slideJump");
-                    }
+                        //set roll animation
+                        slideTime = characterController.GetSlideNormalizedTime();
+                        animator.SetFloat("slideBlend", slideTime);
+                        animator.SetBool("isSliding", true);
+                        if (characterController.JumpingThisFrame())
+                        {
+                            // set jump anim
+                            animator.SetTrigger("slideJump");
+                        }
 
-                    break;
-                }
+                        break;
+                    }
                 case PlayerStates.Running:
-                {
-                    animator.SetBool("isStanding", false);
-                    animator.SetBool("onLedge?", false);
-                    animator.ResetTrigger("ledgeDetected");
-                    animator.SetBool("isFalling", false);
+                    {
+                        animator.SetBool("isStanding", false);
+                        animator.SetBool("onLedge?", false);
+                        animator.ResetTrigger("ledgeDetected");
+                        animator.SetBool("isFalling", false);
 
-                    animator.ResetTrigger("jump");
-                    animator.SetBool("inAir", true);
-                    // set fall anim
+                        animator.ResetTrigger("jump");
+                        animator.SetBool("inAir", true);
+                        // set fall anim
 
 
-                    break;
-                }
+                        break;
+                    }
                 case PlayerStates.LedgeGrabbing:
-                {
-                    //set ledge grab
-                    animator.SetBool("onLedge?", true);
-                    //animator.SetBool("inAir", true);
-                    break;
-                }
+                    {
+                        //set ledge grab
+                        animator.SetBool("onLedge?", true);
+                        //animator.SetBool("inAir", true);
+                        break;
+                    }
                 case PlayerStates.Tired:
-                {
-                    //set wallkick
-                    if (characterController.GetLedgeForward())
                     {
-                        animator.SetBool("inAir", true);
-                        animator.SetBool("onLedge?", false);
-                    }
-                    else
-                    {
-                        animator.SetBool("inAir", true);
-                        animator.SetBool("onLedge?", false);
-                    }
+                        //set wallkick
+                        if (characterController.GetLedgeForward())
+                        {
+                            animator.SetBool("inAir", true);
+                            animator.SetBool("onLedge?", false);
+                        }
+                        else
+                        {
+                            animator.SetBool("inAir", true);
+                            animator.SetBool("onLedge?", false);
+                        }
 
-                    break;
-                }
+                        break;
+                    }
                 case PlayerStates.Falling:
-                {
-                    //set falling again
-                    animator.SetBool("isFalling", true);
-                    break;
-                }
+                    {
+                        //set falling again
+                        animator.SetBool("isFalling", true);
+                        break;
+                    }
             }
         }
     }
 
-    
+
     //now only projects down and with a smaller radius than Zoe's capsule, meaning it should mostly only collide with floor. Some edge cases still exist
     private bool PredictAboutToLand(float deltaTime, out Vector3 predictedPosition)
     {
@@ -200,7 +200,7 @@ public class AnimationSwitcher : MonoBehaviour
         int step = 1;
         do
         {
-            float weight = Mathf.Lerp(startWeight, desiredWeight, step / (float) fadeTimeInFrames);
+            float weight = Mathf.Lerp(startWeight, desiredWeight, step / (float)fadeTimeInFrames);
             animator.SetLayerWeight(interactionLayerIndex, weight);
             yield return new WaitForSeconds(0f);
             step++;

@@ -37,7 +37,14 @@ public class AnimationLayerSwitcher : MonoBehaviour
     private void Update()
     {
         //General in air stuff
-        if (!characterController.Motor.GroundingStatus.FoundAnyGround && characterController.Motor.BaseVelocity.y < 0)
+        if (!characterController.Motor.GroundingStatus.FoundAnyGround && characterController.Motor.BaseVelocity.y > 0)
+        {
+            fallTime = 0f;
+            animator.SetFloat("fallBlend", fallTime);
+            
+        }
+
+            if (!characterController.Motor.GroundingStatus.FoundAnyGround && characterController.Motor.BaseVelocity.y < 0)
         {
             fallTime += Time.deltaTime;
             animator.SetFloat("fallBlend", fallTime);
@@ -91,10 +98,15 @@ public class AnimationLayerSwitcher : MonoBehaviour
         if (characterController.Motor.GroundingStatus.IsStableOnGround &&
              !characterController.Motor.LastGroundingStatus.IsStableOnGround)
         {
-            fallTime = 0f;
+            fallTime = 1.0f;
             animator.SetFloat("fallBlend", fallTime);
             animator.SetBool("inAir", false);
             animator.SetBool("isFalling", false);
+            animator.SetTrigger("FallingGroundDetected");
+        }
+        else
+        {
+            animator.ResetTrigger("FallingGroundDetected");
         }
         if (characterController.CurrentCharacterState != PlayerStates.Idling)
         {
@@ -189,7 +201,7 @@ public class AnimationLayerSwitcher : MonoBehaviour
                 //set ledge grab
                 animator.SetBool("onLedge?", true);
                 animator.SetBool("inAir", false);
-                fallTime = 0f;
+                fallTime = 1.0f;
                 animator.SetFloat("fallBlend", fallTime);
                 animator.ResetTrigger("hitWall");
                 break;
