@@ -108,7 +108,7 @@ public class InputManager : MonoBehaviour
                         }
                         if (GameManager.GetGameState() == GameStateScriptableObject.GameState.cinematic)
                         {
-                            onSwipeInCinematicEvent.Raise();
+                            //onSwipeInCinematicEvent.Raise();
                         }
 
                     }
