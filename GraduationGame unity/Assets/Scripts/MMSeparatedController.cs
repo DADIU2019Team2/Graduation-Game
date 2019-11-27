@@ -32,14 +32,14 @@ public class MMSeparatedController : MonoBehaviour
         animator.CrossFadeInFixedTime(toPlay.Value, crossFadeTime, 0, toPlay.Key / 30f);
         current = toPlay.Value;
     }
-    
+
     private bool IsFrameTooClose(int frame, float threshold)
     {
         float currentAnimTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
         AnimLookup aLookup = poseData.GetAnimationAtFrame(frame);
         return (aLookup.Value == current && Mathf.Abs((aLookup.Key / 30f) - currentAnimTime) < threshold);
     }
-    
+
     public void StartMotionMatching()
     {
         if (isMotionMatchingRunning) return;
@@ -51,7 +51,7 @@ public class MMSeparatedController : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1f/poseRefreshRate);
+            yield return new WaitForSeconds(1f / poseRefreshRate);
         }
     }
 
@@ -62,13 +62,14 @@ public class MMSeparatedController : MonoBehaviour
         [ReadOnly] public NativeArray<float3> predictedTrajectory;
         [ReadOnly] public NativeArray<float> trajectoryWeights;
         public NativeArray<float> result;
-        
+
         public void Execute(int index)
         {
             int chunkLength = predictedTrajectory.Length;
-            for (int j = 0; j < predictedTrajectory.Length; j++)
+            for (int j = 0; j < chunkLength; j++)
             {
-                result[index] += math.distancesq(predictedTrajectory[j], trajectoryFlatArray[index * chunkLength + j]) * trajectoryWeights[j];
+                result[index] += math.distancesq(predictedTrajectory[j], trajectoryFlatArray[index * chunkLength + j]) *
+                                 trajectoryWeights[j];
             }
         }
     }
@@ -78,12 +79,13 @@ public class MMSeparatedController : MonoBehaviour
     {
         [ReadOnly] public NativeArray<float> results;
         public NativeArray<int> indices;
+
         public void Execute()
         {
             int k = 0;
             for (int i = 0; i < results.Length; i++)
             {
-                if(k < indices.Length-1) //indices not full
+                if (k < indices.Length - 1) //indices not full
                 {
                     if (results[i] > results[indices[k]])
                     {
@@ -107,20 +109,16 @@ public class MMSeparatedController : MonoBehaviour
                                 break;
                             }
                         }
+
                         k++;
                     }
                 }
                 else
                 {
-                    if (results[i] > results[indices[k]])
-                    {
-                        //result higher than last element in sorted array
-                        continue;
-                    }
-                    else
+                    if (results[i] <= results[indices[k]])
                     {
                         //sort stuff
-                        for (int j = k-1; j >= 0; j--)
+                        for (int j = k - 1; j >= 0; j--)
                         {
                             if (results[i] < results[indices[j]])
                             {
@@ -137,26 +135,76 @@ public class MMSeparatedController : MonoBehaviour
             }
         }
     }
-    
+
     [BurstCompile]
     public struct PoseCostJob : IJobParallelFor
     {
-
+        [ReadOnly] public NativeArray<float3> bestPoseArray;
+        [ReadOnly] public NativeArray<float3> currentPose;
+        [ReadOnly] public NativeArray<float> poseWeights;
         public NativeArray<float> result;
+
         public void Execute(int index)
         {
-            
+            int chunkLength = currentPose.Length;
+            for (int j = 0; j < chunkLength; j++)
+            {
+                result[index] += math.distancesq(currentPose[j], bestPoseArray[index * chunkLength + j]) *
+                                 poseWeights[j];
+            }
         }
     }
-    
+
     [BurstCompile]
     public struct AnimationSelectionJob : IJob
     {
+        [ReadOnly] public NativeArray<float> results;
+        [ReadOnly] public NativeArray<int> indices;
+        public NativeArray<int> selectedIndex;
         public void Execute()
         {
-            
+            float best = float.MaxValue;
+            for (int i = 0; i < results.Length; i++)
+            {
+                if (results[i] < best)
+                    selectedIndex[0] = indices[i];
+            }
         }
     }
+
+    private float3[] BuildTrajectoryArray()
+    {
+        int cL = trajPoints * 2; //8
+        float3[] trajArr = new float3[poseData.Length * cL];
+
+        for (int i = 0; i < poseData.Length; i++)
+        {
+            for (int j = 0; j < trajPoints; j++)
+            {
+                trajArr[(i * cL) + j] = poseData.frameInfo[i].trajectoryInfo.trajectoryPoints[j];
+                trajArr[(i * cL) + trajPoints + j] = poseData.frameInfo[i].trajectoryInfo.trajectoryForwards[j];
+            }
+        }
+
+        return trajArr;
+    }
+
+    private float3[] BuildBestPoseArray(NativeArray<int> indices)
+    {
+        int cL = 2 * boneCount;
+        float3[] poseArr = new float3[cL * indices.Length];
+        for (int i = 0; i < indices.Length; i++)
+        {
+            for (int j = 0; j < boneCount; j++)
+            {
+                poseArr[(i * cL) + j] = poseData.frameInfo[indices[i]].pose.jointPositions[j];
+                poseArr[(i * cL) + boneCount + j] = poseData.frameInfo[indices[i]].pose.jointPositions[j];
+            }
+        }
+
+        return poseArr;
+    }
+
 
     private float3[] CreateDesiredChunk(int size) // not dynamic
     {
