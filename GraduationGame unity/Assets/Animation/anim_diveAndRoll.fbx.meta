@@ -4,11 +4,11 @@ ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
   - first:
-      74: -8440137064687722849
-    second: divejump_Anticipation
+      74: -6124088757188651697
+    second: diveRoll
   - first:
-      74: 6883946611126278369
-    second: diveJump
+      74: 2843385674066558741
+    second: diveRoll1
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -20,7 +20,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
-    motionNodeName: jnt_grp/Root
+    motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
       copied configuration does not match position in animation file:\n\t'Head' :
@@ -28,13 +28,13 @@ ModelImporter:
       bone rotation in copied configuration does not match rotation in animation file:\n\t'Spine2'
       : rotation error = 16.862766 deg\n"
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Dive' has import animation warnings that might
-      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
-      retargeting quality.\n\t'Spine2' is inbetween humanoid transforms and has rotation
-      animation that will be discarded.\n\nClip 'diveJump1' has import animation warnings
-      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'Spine2' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n"
+    animationImportWarnings: "\nClip 'diveRoll' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Spine2' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\nClip 'diveRoll1' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Spine2' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -48,11 +48,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: divejump_Anticipation
-      takeName: Dive
-      internalID: -8440137064687722849
+      name: diveRoll
+      takeName: diveRoll
+      internalID: -6124088757188651697
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 39
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -61,10 +61,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 1
+      loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 1
+      keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -77,14 +77,14 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: diveJump
-      takeName: diveJump1
-      internalID: 6883946611126278369
-      firstFrame: 46
+      name: diveRoll1
+      takeName: diveRoll1
+      internalID: 2843385674066558741
+      firstFrame: 39
       lastFrame: 56
       wrapMode: 0
       orientationOffsetY: 0
-      level: 0
+      level: -0.29
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
