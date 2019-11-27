@@ -7,7 +7,7 @@ public class Language : ScriptableObject
 {
     //public string ShowCurrentLanguage; //only for show not actually used
     public enum LocalazationLanguage { Key = 0, English = 2, Dansk = 1 };
-    [SerializeField] private static LocalazationLanguage currentLanguage;
+    [SerializeField] private LocalazationLanguage currentLanguage;
 
     public delegate void OnLangugeChangeDelegate(LocalazationLanguage lang);
     public event OnLangugeChangeDelegate languageChangeEvent;
