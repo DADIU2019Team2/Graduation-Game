@@ -3,8 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using MiniGame2.Events;
 
+//public enum CoolZoneTimeScaleResetType { ResetToOne, ResetToInitial}
 
-public enum CoolZoneTimeScaleResetType { ResetToOne, ResetToInitial}
+[System.Flags]
+public enum CoolZoneSettings
+{
+    UsesTimeScale,
+    ResetsToInitialTimeScale,
+    //ResetsTimeScaleToOne,
+    UsesParticles,
+    UsesCameraZoom
+}
 
 public class CoolZone : MonoBehaviour
 {
@@ -12,12 +21,16 @@ public class CoolZone : MonoBehaviour
     [SerializeField] private VoidEvent exitedCoolZone;
 
     [Header("CoolZone properties")]
-    public CoolZoneTimeScaleResetType timeScaleResetType;
+    //public CoolZoneTimeScaleResetType timeScaleResetType;
     [SerializeField] private float desiredTimeScale;
     public float timeToFullCoolness;
     public float timeBackToNormalness;
+    public ParticleSystem particleSystemToPlay;
 
-    float initialTimeScale;
+    [EnumFlags]
+    public CoolZoneSettings settings;
+
+    private float initialTimeScale;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,11 +42,22 @@ public class CoolZone : MonoBehaviour
         initialTimeScale = Time.timeScale;
         float tempTimeScale = initialTimeScale;
 
+        if (settings.HasFlag(CoolZoneSettings.UsesParticles))
+        {
+            //instantiate particles
+        }
+
+        if (settings.HasFlag(CoolZoneSettings.UsesTimeScale)) //Time Scale
+        {
+            FloatNumberLerper(tempTimeScale, desiredTimeScale, timeToFullCoolness); 
+        }
+        
         if (enteredCoolZone != null)
-            enteredCoolZone.Raise();
+            if(settings.HasFlag(CoolZoneSettings.UsesCameraZoom)) // Use Camera
+                enteredCoolZone.Raise();
+
 
         //sets temp timescale to desired timescale over timetofullcoolness
-        FloatNumberLerper(tempTimeScale, desiredTimeScale, timeToFullCoolness); 
     }
 
     private void OnTriggerExit(Collider other)
@@ -46,18 +70,20 @@ public class CoolZone : MonoBehaviour
         float returnTimeScale = 0;
         float tempTimeScale = Time.timeScale;
 
-        switch (timeScaleResetType)
-        {
-            case CoolZoneTimeScaleResetType.ResetToOne:
-                returnTimeScale = 1;
-                break;
-            case CoolZoneTimeScaleResetType.ResetToInitial:
-                returnTimeScale = initialTimeScale;
-                break;
-            default:
-                Debug.LogError("TimescaleResetType entered default state, this shouldn't happen! Click to review code");
-                break;
-        }
+        //switch (timeScaleResetType)
+        //{
+        //    case CoolZoneTimeScaleResetType.ResetToOne:
+        //        returnTimeScale = 1;
+        //        break;
+        //    case CoolZoneTimeScaleResetType.ResetToInitial:
+        //        returnTimeScale = initialTimeScale;
+        //        break;
+        //    default:
+        //        Debug.LogError("TimescaleResetType entered default state, this shouldn't happen! Click to review code");
+        //        break;
+        //}
+
+
     }
 
     public IEnumerator FloatNumberLerper(float floatToLerp, float desiredOutcome, float lerpTime)
@@ -71,5 +97,20 @@ public class CoolZone : MonoBehaviour
             yield return new WaitForSeconds(0);
             stepSize += stepSize;
         }
+    }
+
+    List<int> ReturnSelectedCoolZoneSettingsElements()
+    {
+
+        List<int> selectedElements = new List<int>();
+        for (int i = 0; i < System.Enum.GetValues(typeof(CoolZoneSettings)).Length; i++)
+        {
+            int layer = 1 << i;
+            if (((int)settings & layer) != 0)
+            {
+                selectedElements.Add(i);
+            }
+        }
+        return selectedElements;
     }
 }

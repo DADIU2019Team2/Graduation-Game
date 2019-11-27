@@ -389,6 +389,81 @@ public static class ExtensionMethods
 
     #endregion
 
+    #region ToEnum
+
+    public static T ToEnum<T>(string val, T defaultValue) where T : struct, System.IConvertible
+    {
+        if (!typeof(T).IsEnum) throw new System.ArgumentException("T must be an enumerated type");
+
+        try
+        {
+            T result = (T)System.Enum.Parse(typeof(T), val, true);
+            return result;
+        }
+        catch
+        {
+            return defaultValue;
+        }
+    }
+
+    public static T ToEnum<T>(int val, T defaultValue) where T : struct, System.IConvertible
+    {
+        if (!typeof(T).IsEnum) throw new System.ArgumentException("T must be an enumerated type");
+
+        object obj = val;
+        if (System.Enum.IsDefined(typeof(T), obj))
+        {
+            return (T)obj;
+        }
+        else
+        {
+            return defaultValue;
+        }
+    }
+
+    public static T ToEnum<T>(object val, T defaultValue) where T : struct, System.IConvertible
+    {
+        return ToEnum<T>(System.Convert.ToString(val), defaultValue);
+    }
+
+    public static T ToEnum<T>(string val) where T : struct, System.IConvertible
+    {
+        return ToEnum<T>(val, default(T));
+    }
+
+    public static T ToEnum<T>(int val) where T : struct, System.IConvertible
+    {
+        return ToEnum<T>(val, default(T));
+    }
+
+    public static T ToEnum<T>(object val) where T : struct, System.IConvertible
+    {
+        return ToEnum<T>(System.Convert.ToString(val), default(T));
+    }
+
+    public static System.Enum ToEnumOfType(System.Type enumType, object value)
+    {
+        return System.Enum.Parse(enumType, System.Convert.ToString(value), true) as System.Enum;
+    }
+
+    public static bool TryToEnum<T>(object val, out T result) where T : struct, System.IConvertible
+    {
+        if (!typeof(T).IsEnum) throw new System.ArgumentException("T must be an enumerated type");
+
+        try
+        {
+            result = (T)System.Enum.Parse(typeof(T), System.Convert.ToString(val), true);
+            return true;
+        }
+        catch
+        {
+            result = default(T);
+            return false;
+        }
+    }
+
+    #endregion
+
     public static T[] SubArray<T>(this T[] data, int index, int length)
     {
         T[] result = new T[length];

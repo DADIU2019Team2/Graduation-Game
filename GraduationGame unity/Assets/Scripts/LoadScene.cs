@@ -59,10 +59,8 @@ public class LoadScene : MonoBehaviour
             Debug.Log("!Load Progress: " + loadProgress.progress);
             yield return new WaitForEndOfFrame();
            
-
-            }
-            Debug.Log("Done");
         }
+        Debug.Log("Done");
     }
 
 
