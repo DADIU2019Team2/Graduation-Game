@@ -8,6 +8,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	556439219	Play_Zone3_Music			\Default Work Unit\Music\Play_Zone3_Music	
 	624837759	Damaged_Platforms			\Default Work Unit\SFX\Damaged_Platforms	
 	697318835	Slides			\Default Work Unit\Movement\Slides	
+	794689400	Other_Lazer			\Default Work Unit\SFX\Other_Lazer	
 	900426207	Door_Closes			\Default Work Unit\SFX\Door_Closes	
 	977466704	Death_Ray			\Default Work Unit\SFX\Death_Ray	
 	1001479275	Play_Ambience_Z4			\Default Work Unit\Ambience\Play_Ambience_Z4	
@@ -18,9 +19,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	1050974708	Alien_Door_Open			\Default Work Unit\SFX\Alien_Door_Open	
 	1196263023	Stop_Lazer_Med			\Default Work Unit\Stop_Events\Stop_Lazer_Med	
 	1427760111	BossMusic			\Default Work Unit\Music\BossMusic	
-	1456018130	Stop_Crystal_Door_Hum			\Default Work Unit\Stop_Events\Stop_Crystal_Door_Hum	
 	1462703573	Play_New_Metal_Ftstp_Loop			\Default Work Unit\Movement\Play_New_Metal_Ftstp_Loop	
 	1472838051	Lazer_Small			\Default Work Unit\SFX\Lazer_Small	
+	1522595433	Credits_Music			\Default Work Unit\Music\Credits_Music	
 	1532948175	Stop_Lazer_Big			\Default Work Unit\Stop_Events\Stop_Lazer_Big	
 	1739986920	Checkpoint_Crystal			\Default Work Unit\CelebrationSound\Checkpoint_Crystal	
 	1777268324	Lazer_Med			\Default Work Unit\SFX\Lazer_Med	
@@ -40,26 +41,25 @@ Event	ID	Name			Wwise Object Path	Notes
 	2674413038	Stop_Machines			\Default Work Unit\Stop_Events\Stop_Machines	
 	2714452976	Dialogue_Happy			\Default Work Unit\Music\Dialogue_Happy	
 	2801479097	Dialogue_Angry			\Default Work Unit\Music\Dialogue_Angry	
-	2805448725	Stop_Crusher_Idle			\Default Work Unit\Stop_Events\Stop_Crusher_Idle	
 	2828692239	Stop_Ball_Platform_Damaged			\Default Work Unit\Stop_Events\Stop_Ball_Platform_Damaged	
 	2917121896	Electricity			\Default Work Unit\SFX\Electricity	
 	2967932086	Lazer_Wall			\Default Work Unit\SFX\Lazer_Wall	
 	2988481851	Stop_Lazer_Wall			\Default Work Unit\Stop_Events\Stop_Lazer_Wall	
-	3004230381	Stop_Alien_Crystal_Hum			\Default Work Unit\Stop_Events\Stop_Alien_Crystal_Hum	
 	3058963576	Stop_Death_Saw			\Default Work Unit\Stop_Events\Stop_Death_Saw	
 	3086540886	StopAll			\Default Work Unit\StopAll	
 	3303975224	Play_Zone4_Music			\Default Work Unit\Music\Play_Zone4_Music	
 	3308622827	Lever_Sound			\Default Work Unit\SFX\Lever_Sound	
 	3352547351	Lazer_Wall_Power_Down			\Default Work Unit\SFX\Lazer_Wall_Power_Down	
 	3364702632	Stop_Door			\Default Work Unit\Stop_Events\Stop_Door	
-	3384205992	Stop_Alien_Door			\Default Work Unit\Stop_Events\Stop_Alien_Door	
 	3419686739	Jump_Land			\Default Work Unit\Movement\Jump_Land	
 	3584129722	Play_Zone2_Music			\Default Work Unit\Music\Play_Zone2_Music	
 	3641971009	Alien_Death_Trap			\Default Work Unit\SFX\Alien_Death_Trap	
 	3736098925	Level_Complete			\Default Work Unit\CelebrationSound\Level_Complete	
-	3878901180	Crusher_Idle			\Default Work Unit\SFX\Crusher_Idle	
+	3831005960	Crusher_Impact			\Default Work Unit\SFX\Crusher_Impact	
+	3838804977	Crusher_Movement			\Default Work Unit\SFX\Crusher_Movement	
 	3978972604	Ouch			\Default Work Unit\Movement\Ouch	
 	3996256281	Ambience_Outside			\Default Work Unit\Ambience\Ambience_Outside	
+	4055567060	Menu_Music			\Default Work Unit\Music\Menu_Music	
 	4098982749	Play_Zone1_Music			\Default Work Unit\Music\Play_Zone1_Music	
 	4182768561	Normal_Platforms			\Default Work Unit\SFX\Normal_Platforms	
 	4186947444	Jump_Takeoff			\Default Work Unit\Movement\Jump_Takeoff	
@@ -75,6 +75,8 @@ State	ID	Name	State Group			Notes
 	831766780	Zone1	Zones			
 	831766782	Zone3	Zones			
 	831766783	Zone2	Zones			
+	2201105581	Credits	Zones			
+	2607556080	Menu	Zones			
 	2714452976	Dialogue_Happy	Zones			
 	2801479097	Dialogue_Angry	Zones			
 	3736098925	Level_Complete	Zones			
@@ -107,13 +109,14 @@ Effect plug-ins	ID	Name	Type				Notes
 	1028273034	Wwise_Parametric_EQ_(Custom)	Wwise Parametric EQ			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
-	705150058	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Spiky_Machine_Impact\Spiky_Machine_Silence\Wwise Silence	
+	705150058	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Crusher_Impact\Crusher_Silence\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	7699699	Z1_Ascending_Metal	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z1_Ascending_Metal_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Ascending_Metal		251281
 	11716284	Death_Saw	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Death_Saw_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Death_Saw		42469
 	22842696	Z4_Rising_Thingy	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z4_Rising_Thingy_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Rising_Thingy		310032
 	25731778	Z4_Metal_Pad	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z4_Metal_Pad_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Metal_Pad		318301
+	27614219	Credits_Music	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Credits_Music_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Credits\Credits_Music\Credits_Music		1271116
 	32006921	Z2_Happy_Bass	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z2_Nasal_Bass_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Happy_Bass		286347
 	39273287	Slide_3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Slide_3_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Slide_With_Effect\Slide\Slide_3		15925
 	40096853	Grab4	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Grab4_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Grabs_With_SFXs\Grabs\Grab4		6683
@@ -122,7 +125,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	71967050	Z3_Happy_Drumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z3_Drumz_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Happy_Drumz		275668
 	76766429	Z4AngryBass	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z4AngryBass_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4AngryBass		349166
 	78088031	Z3_Dist_Synth_Melodic_Pattern	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z3_Dist_Synth_Melodic_Pattern_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dist_Synth_Melodic_Pattern		266102
-	84951733	Transition_1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Transition_1_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Transition_1\Transition_1		72427
 	116201991	Z3AngryBass	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z3AngryBass_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3AngryBass		253539
 	145167596	Z2_Hero_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z2_Hero_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Hero_Arp		292814
 	154154251	Robot_Appearence	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Robot_Appearence_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Other\Robot_Appearence		105252
@@ -132,7 +134,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	179692943	Z4_Flyde_Chords	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z4_Flyde_Chords_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Flyde_Chords		319335
 	184652951	Damaged_Platform_1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Damaged_Platform_1_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Damaged_Platforms\Damaged_Platform_1		166876
 	188704187	Z1_Dist_Klaver	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z1_Dist_Klaver_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Dist_Klaver		255182
+	195294057	Other_Lazer	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Other_Lazer_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Other_Lazer		82629
 	202632354	Alien_Crystal_Hum	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Alien_Crystal_Hum_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Alien_Crystal_Hum		39590
+	219396124	Crusher_Movement	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Crusher_Movement_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Crusher_Movement		75670
 	223409866	Jump_Takeoff_SFX	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Jump_Takeoff_SFX_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jump_Takeoff_SFX		10559
 	233328267	Ball_Platform	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Ball_Platform_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Ball_Platform		37703
 	237847310	Z3AngryArp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z3AngryArp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3AngryArp		463534
@@ -147,7 +151,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	286271245	Normal_Platform1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Normal_Platform1_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Normal_Platforms\Normal_Platform1		158816
 	310333641	Z3AngryDrumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z3AngryDrumz_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3AngryDrumz		282770
 	338611492	Zoe_Ouch1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Zoe_Ouch1_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Ouch\Zoe_Ouch1		3293
-	340231492	Transition_2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Transition_2_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Transition_2\Transition_2		71699
 	344618435	Z2AngryBass	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z2AngryBass_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2AngryBass		305260
 	361501470	Outside Ambience	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Ambience_Z0_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambience\Outside Ambience		379861
 	368246845	Alien_Door_Open	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Stone_Door_Open_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Alien_Door_Open		32453
@@ -168,7 +171,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	503665789	Z4_Happy_Synth_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z4_Noisy_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Happy_Synth_Arp		326437
 	515939369	Alien_Door	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Stone_Door_Hum_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Alien_Door		135716
 	523264904	Ambience_Z2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Ambience_Z2_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambience\Ambience_Z2		432543
-	537809517	Spiky_Machine_Impact_Sound	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Spiky_Machine_Impact_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Spiky_Machine_Impact\Spiky_Machine_Impact_Sound		27293
 	541793192	Grab1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Grab1_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Grabs_With_SFXs\Grabs\Grab1		6553
 	569405528	Z4_Happy_Drumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z4_Kick_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Happy_Drumz		324954
 	578611982	Electricity	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Electricity_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Electricity		108226
@@ -178,6 +180,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	614726966	Grab2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Grab2_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Grabs_With_SFXs\Grabs\Grab2		5641
 	663008857	Z3_Dist_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z3_Dist_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dist_Arp		269964
 	667781877	Death_Ray	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Death_Ray_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Death_Ray		229255
+	703764844	Menu_Music	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Menu_Music_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Menu\Menu_Music\Menu_Music		1044806
 	787556428	Ambience_Z3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Ambience_Z3_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambience\Ambience_Z3		460910
 	794154597	Robo_Foreshadowing	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Robo_Foreshadowing_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Robo_Foreshadowing		320940
 	795860753	Lazer_Wall_Power_Down	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Lazer_Wall_Power_Down_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Lazer_Wall_Power_Down		53383
@@ -185,22 +188,21 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	814161298	Z1_Hope_Synth	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z1_Hope_Synth_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Hope_Synth		268414
 	823110564	Z2AngryHarm	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z2AngryHarm_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2AngryHarm		281606
 	843076094	Z2AngryDrumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z2AngryDrumz_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2AngryDrumz		303075
-	849700586	Transition_3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Transition_3_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Transition_3\Transition_3		68288
 	849860119	Normal_Platform3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Normal_Platform3_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Normal_Platforms\Normal_Platform3		161711
 	855185368	Z3_Happy_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z3_Happy_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Happy_Arp		276666
 	859322015	Z1_Hatter_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z1_Hatter_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Hatter_Arp		295974
 	860562003	Zoe_Ouch3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Zoe_Ouch3_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Ouch\Zoe_Ouch3		4661
 	869369574	Z4AngryDrumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z4AngryDrumz_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4AngryDrumz		347862
+	890435580	Crusher_Impact	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Crusher_Impact_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Crusher_Impact\Crusher_Impact		12650
 	900936792	Ambience_Z4	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Ambience_Z4_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambience\Ambience_Z4		468215
-	915143470	Level_Start	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Level_Start_Ny_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Celebration_Sounds\Level_Start		1065052
+	915143470	Level_Start	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Level_Start_Ny_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Celebration_Sounds\Level_Start		129432
 	916545742	BossMusic	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\BossMusic_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\BossMusic\BossMusic\BossMusic		374415
 	929568375	New_Metal_Ftstp_Loop	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\New_Metal_Ftstp_Loop_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\New_Metal_Ftstp_Loop		70602
 	931153672	Slide_2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Slide_2_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Slide_With_Effect\Slide\Slide_2		14458
 	932720973	Normal_Platform2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Normal_Platform2_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Normal_Platforms\Normal_Platform2		163533
 	932977649	Z1AngryDrum	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z1AngryDrum_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1AngryDrum		274121
 	935462027	Z1_Metal_Pad	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z1_Metal_Pad_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Metal_Pad		250813
-	942213560	Crusher_Idle	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Crusher_Idle_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Crusher_Idle		28605
-	950514078	Checkpoint_Warmer	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Checkpoint_Warmer_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Celebration_Sounds\Checkpoint_Warmer		617464
+	950514078	Checkpoint_Warmer	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Checkpoint_Warmer_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Celebration_Sounds\Checkpoint_Warmer		75177
 	962088313	Z1AngryArp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z1AngryArp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1AngryArp		341556
 	962265329	Z3_Rising_Metal	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z3_Rising_Metal_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Rising_Metal		231681
 	962384121	Lazer_Big	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Lazer_Big_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Lazer_Big		70244
@@ -209,7 +211,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	973236722	Jump_Land_SFX	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Jump_Land_SFX_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jump_Land_SFX		10057
 	979311821	Ball_Platform_Damaged	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Ball_Platform_Damaged_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Ball_Platform_Damaged		42264
 	979909387	Z4_Dist_Klaver	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z4_Dist_Klaver_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Dist_Klaver		312096
-	992312086	Level_Complete	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Level_Complete_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Celebration_Sounds\Level_Complete		504064
+	992312086	Level_Complete	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Level_Complete_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Celebration_Sounds\Level_Complete		67117
 	1010279705	Z3_Happy_Bassline	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Z3_Dist_Bassline_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Happy_Bassline		245574
 	1011899773	DialogMusicHappy	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\DialogMusicHappy_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Dialogue_Happy\DialogMusicHappy\DialogMusicHappy		542668
 	1021751483	Damaged_Platform_4	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Mac\SFX\Platform_4_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Damaged_Platforms\Damaged_Platform_4		181099
