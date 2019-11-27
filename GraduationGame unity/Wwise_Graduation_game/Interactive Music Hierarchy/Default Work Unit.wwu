@@ -4750,20 +4750,20 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Level_Complete" ID="{BCF1D584-C784-4CB6-8D59-44DFE5EE0736}" ShortID="316016657">
+										<MusicTrack Name="Level_Complete" ID="{1489A881-DA71-42B9-8B42-47C3ADC0EDA7}" ShortID="1027358304">
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Level_Complete" ID="{C90972E6-7386-4EC5-AEB4-F45ABA132772}" ShortID="142217505">
+												<AudioFileSource Name="Level_Complete" ID="{C2244104-F1F0-453B-9AE3-BED0E29CDA80}" ShortID="69704432">
 													<Language>SFX</Language>
 													<AudioFile>Level_Complete.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
-												<MusicTransition Name="Root" ID="{DBB38C16-B3E8-4E2B-B97D-390881466FBA}">
+												<MusicTransition Name="Root" ID="{7579CE3B-82AE-437C-884A-84A473B067A4}">
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
@@ -4771,15 +4771,15 @@
 												</MusicTransition>
 											</TransitionList>
 											<SequenceList>
-												<MusicTrackSequence Name="" ID="{B364B65F-1AF3-42D1-BB35-F780E3CEC48F}">
+												<MusicTrackSequence Name="" ID="{9E95AC28-F634-4AD6-8995-90182BE83E1B}">
 													<ClipList>
-														<MusicClip Name="Level_Complete" ID="{986E7624-75C7-41E8-94F3-153040BABF56}">
+														<MusicClip Name="Level_Complete" ID="{8E8BE269-1A1D-445C-A67D-F8BA2B6866DF}">
 															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="4714.28571428571"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="2857.14285714286"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
 																<Property Name="FadeOutMode" Type="int16" Value="0"/>
 															</PropertyList>
-															<AudioSourceRef Name="Level_Complete" ID="{C90972E6-7386-4EC5-AEB4-F45ABA132772}"/>
+															<AudioSourceRef Name="Level_Complete" ID="{C2244104-F1F0-453B-9AE3-BED0E29CDA80}"/>
 														</MusicClip>
 													</ClipList>
 												</MusicTrackSequence>
@@ -4791,7 +4791,7 @@
 										<MusicCue Name="Exit Cue" ID="{8C1DFA30-F860-43B3-B42D-F18F35095C91}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="4714.28571428571"/>
+												<Property Name="TimeMs" Type="Real64" Value="2857.14285714286"/>
 											</PropertyList>
 										</MusicCue>
 									</CueList>
@@ -5099,9 +5099,9 @@
 							<ChildrenList>
 								<MusicTransition Name="Transition" ID="{A3542E31-DCF5-4DDE-8F32-B26631F5129E}">
 									<PropertyList>
-										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
-										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+										<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+										<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
 									</PropertyList>
 									<TransitionInfo>
 										<SourceFadeOut>
