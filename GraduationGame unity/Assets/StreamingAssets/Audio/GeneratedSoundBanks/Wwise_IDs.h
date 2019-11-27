@@ -33,6 +33,7 @@ namespace AK
         static const AkUniqueID DIALOGUE_HAPPY = 2714452976U;
         static const AkUniqueID DOOR_CLOSES = 900426207U;
         static const AkUniqueID DOOR_OPENING = 2589897592U;
+        static const AkUniqueID DRILL = 2168413864U;
         static const AkUniqueID ELECTRICITY = 2917121896U;
         static const AkUniqueID GRABS = 238897438U;
         static const AkUniqueID JUMP_LAND = 3419686739U;
