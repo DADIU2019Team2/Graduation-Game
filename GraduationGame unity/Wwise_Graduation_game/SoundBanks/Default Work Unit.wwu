@@ -4,16 +4,17 @@
 		<WorkUnit Name="Default Work Unit" ID="{1A221942-89C0-4B0D-BEF9-F0F6D1C95982}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{FE580F8D-BBFF-404A-AA7A-E59B199A4834}">
-					<Comment> </Comment>
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_New_Metal_Ftstp_Loop" ID="{1BFE632C-5F1F-402B-8C5F-A939656413BE}" WorkUnitID="{34B92B84-4DD4-498D-8D44-61282ABE4319}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Lazer_Wall" ID="{784A0815-962E-40B1-80B4-94890BD34AEA}" WorkUnitID="{DABE7279-F4A5-4EF9-A197-72905B161148}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Damaged_Platforms" ID="{ED1766F7-E1AC-40CB-A75E-31E8C79B95F7}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Roll_SFX" ID="{0967EB2A-02C5-4148-9BC5-CF52481A1360}" WorkUnitID="{34B92B84-4DD4-498D-8D44-61282ABE4319}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Ambience_Z4" ID="{BE4567A5-D75F-4156-8543-35ED4C626C9D}" WorkUnitID="{ECD93438-89ED-4F02-B5C0-88BAEB343066}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Damaged_Platforms" ID="{9241886E-5BA2-4158-937C-64E92E2B3ED2}" WorkUnitID="{DABE7279-F4A5-4EF9-A197-72905B161148}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Crusher_Movement" ID="{5B2EC50D-42A9-416D-B3EE-4B8A4163E859}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Death_Saw" ID="{CBC7CF92-8B40-416D-86B9-25D5D033DE28}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Alien_Platforms" ID="{836C739E-E750-41EC-9A24-A0FF586C376A}" WorkUnitID="{DABE7279-F4A5-4EF9-A197-72905B161148}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Level_Complete" ID="{2F4BE230-AF4A-4299-B1D4-460F6D7DF625}" WorkUnitID="{52D068B1-1C5B-4B11-9F00-6E5315226880}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Jump_Takeoff" ID="{8BA33C28-C9F3-42EC-A67A-DAAAC0C42D9B}" WorkUnitID="{34B92B84-4DD4-498D-8D44-61282ABE4319}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Lazer_Med" ID="{5CFBD5EF-9237-433F-9F56-E432D4E7975B}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Ambience_Z3" ID="{3D4EA5E2-F1F6-435E-8399-29F8A9AB5715}" WorkUnitID="{ECD93438-89ED-4F02-B5C0-88BAEB343066}" Filter="7" Origin="Manual"/>
@@ -40,6 +41,7 @@
 						<ObjectRef Name="Stop_Death_Ray" ID="{7EA5F8D8-A6C6-4899-9462-16D567BCFB54}" WorkUnitID="{DABE7279-F4A5-4EF9-A197-72905B161148}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="StopAll" ID="{882E4C6E-3091-48C6-9327-163269101349}" WorkUnitID="{4948A3B8-CE28-48A8-BAD5-AE38D8DAE02B}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Machines" ID="{CE11D14F-076B-48F2-A7C3-FDCF771ECFE7}" WorkUnitID="{DABE7279-F4A5-4EF9-A197-72905B161148}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Drill" ID="{830083FB-C9B4-492D-9B15-9B4DEE762D94}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Checkpoint_Crystal" ID="{935B77B5-07AA-4933-A540-9522BF447840}" WorkUnitID="{52D068B1-1C5B-4B11-9F00-6E5315226880}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Robot_Appearence" ID="{F6F38557-5413-4948-ABFB-578E08336A56}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Platform_Pillar_Damaged" ID="{E8BA3E3E-2D6C-495A-B8F0-3384DB8AE559}" WorkUnitID="{DABE7279-F4A5-4EF9-A197-72905B161148}" Filter="7" Origin="Manual"/>
@@ -65,7 +67,6 @@
 						<ObjectRef Name="Death_Ray" ID="{8E9C3026-81C6-4DE1-8048-C912CA7744E9}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Alien_Platform_Pillar" ID="{8C5BA525-80B8-4DFD-A610-FDB65B084385}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Door_Closes" ID="{CB2081D4-0B84-4E09-B6F6-27F2A1CCFA69}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Level_Complete" ID="{33F26545-6F2F-4E19-825D-CAF3854F80A1}" WorkUnitID="{52D068B1-1C5B-4B11-9F00-6E5315226880}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Lazer_Small" ID="{DCE07BF8-1DC5-4EC3-B6DF-3EDFFCD6CD71}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Lazer_Big" ID="{50DE7AB8-C05C-4EE3-B2C8-C7C23D5269CA}" WorkUnitID="{337E4270-CA7E-43B7-9124-4B5ED6520621}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Ambience_Outside" ID="{F23B3AE8-223F-4EF8-82A0-950C98BA5ABB}" WorkUnitID="{ECD93438-89ED-4F02-B5C0-88BAEB343066}" Filter="7" Origin="Manual"/>

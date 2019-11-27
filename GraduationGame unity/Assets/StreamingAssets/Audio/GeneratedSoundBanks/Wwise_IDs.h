@@ -33,6 +33,7 @@ namespace AK
         static const AkUniqueID DIALOGUE_HAPPY = 2714452976U;
         static const AkUniqueID DOOR_CLOSES = 900426207U;
         static const AkUniqueID DOOR_OPENING = 2589897592U;
+        static const AkUniqueID DRILL = 2168413864U;
         static const AkUniqueID ELECTRICITY = 2917121896U;
         static const AkUniqueID GRABS = 238897438U;
         static const AkUniqueID JUMP_LAND = 3419686739U;
@@ -59,6 +60,7 @@ namespace AK
         static const AkUniqueID PLAY_ZONE3_MUSIC = 556439219U;
         static const AkUniqueID PLAY_ZONE4_MUSIC = 3303975224U;
         static const AkUniqueID ROBOT_APPEARENCE = 2187783824U;
+        static const AkUniqueID ROLL_SFX = 2520750572U;
         static const AkUniqueID SLIDES = 697318835U;
         static const AkUniqueID STOP_ALIEN_PLATFORM_PILLAR = 2176568168U;
         static const AkUniqueID STOP_ALIEN_PLATFORMS = 123461200U;
