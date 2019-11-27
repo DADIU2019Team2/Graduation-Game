@@ -94,7 +94,7 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
             case AIStates.Idling:
             {
                 MaxStableMoveSpeed = 0f;
-                
+
                 break;
             }
             case AIStates.Chasing:
@@ -265,7 +265,6 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
     public void OnMovementHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
         ref HitStabilityReport hitStabilityReport)
     {
-        
     }
 
     public void ProcessHitStabilityReport(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
@@ -292,19 +291,28 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
                           forward * _lookAheadDistance;
         Vector3 dir = (castEnd - castStart);
         Physics.Raycast(castStart, dir.normalized, out var groundHit, dir.magnitude + 0.2f);
-        Physics.Raycast(castStart - up * (Motor.Capsule.height / 2f), transform.forward * _lookAheadDistance,
-            out var spikeHit, _lookAheadDistance);
+        /*Physics.Raycast(castStart - up * (Motor.Capsule.height / 2f), transform.forward * _lookAheadDistance,
+            out var spikeHit, _lookAheadDistance);*/
+        Vector3 p1 = copTransform.position + copTransform.up * (Motor.Capsule.radius - 0.1f);
+        Vector3 p2 = copTransform.position + copTransform.up * (Motor.Capsule.height - Motor.Capsule.radius + 0.1f);
+        Physics.CapsuleCast(p1, p2, Motor.Capsule.radius, forward, out var spikeHit, _lookAheadDistance);
         return groundHit.collider == null || (spikeHit.collider != null && spikeHit.collider.CompareTag("Spike"));
     }
 
     private bool LookForPlayer()
     {
         Transform copTransform = transform;
+
+        Vector3 p1 = copTransform.position + copTransform.up * Motor.Capsule.radius;
+        Vector3 p2 = copTransform.position + copTransform.up * (Motor.Capsule.height - Motor.Capsule.radius);
         Vector3 castStart = copTransform.position + copTransform.up * (Motor.Capsule.height / 2f);
         Vector3 forward = copTransform.forward;
-        
-        Physics.Raycast(castStart, forward * settings.searchRange, out var forwardHit, settings.searchRange);
-        Physics.Raycast(castStart, -forward * settings.searchRange, out var backHit, settings.searchRange);
+        int mask = LayerMask.GetMask("Don'tRender");
+        mask = ~mask;
+        Physics.CapsuleCast(p1, p2, Motor.Capsule.radius, forward, out var forwardHit, settings.searchRange, mask);
+        Physics.CapsuleCast(p1, p2, Motor.Capsule.radius, -forward, out var backHit, settings.searchRange, mask);
+        //Physics.Raycast(castStart, forward * settings.searchRange, out var forwardHit, settings.searchRange, mask);
+        //Physics.Raycast(castStart, -forward * settings.searchRange, out var backHit, settings.searchRange, mask);
         return ((forwardHit.collider != null && forwardHit.collider.CompareTag("Player")) ||
                 (backHit.collider != null && backHit.collider.CompareTag("Player")));
     }

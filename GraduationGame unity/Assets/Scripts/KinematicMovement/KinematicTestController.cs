@@ -77,7 +77,7 @@ namespace KinematicTest.controller
         private float lastTurn = 0f;
 
         private bool _hitWallThisFrame;
-        
+
         // Jumping
         private bool AllowDoubleJump;
         private bool AllowJumpingWhenSliding;
@@ -230,7 +230,7 @@ namespace KinematicTest.controller
                 {
                     stopped = true;
                     rampingDown = false;
-                    
+
                     MaxAirMoveSpeed = settings.idleAirMoveSpeed;
                     MaxStableMoveSpeed = 0f;
                     curveStep = 0f;
@@ -263,7 +263,7 @@ namespace KinematicTest.controller
                     dropGravity = settings.slideDropGravityMultiplier;
                     fallGravity = settings.slideFallGravityMultiplier;
                     hangTimeVelocityThreshold = settings.slideHangTimeVelocityThreshold;
-                    
+
                     if (!_isCrouching)
                     {
                         _isCrouching = true;
@@ -335,13 +335,12 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.Sliding:
                 {
-                    
                     riseGravity = settings.riseGravityMultiplier;
                     hangGravity = settings.hangGravityMultiplier;
                     dropGravity = settings.dropGravityMultiplier;
                     fallGravity = settings.fallGravityMultiplier;
                     hangTimeVelocityThreshold = settings.hangTimeVelocityThreshold;
-                    
+
                     Motor.SetCapsuleDimensions(0.5f, 2f, 1f);
                     _isCrouching = false;
                     _isStoppedSliding = true;
@@ -397,7 +396,6 @@ namespace KinematicTest.controller
             if (inputs.slideDown && CurrentCharacterState == PlayerStates.Running &&
                 Motor.GroundingStatus.FoundAnyGround)
             {
-                
                 TransitionToState(PlayerStates.Sliding);
             }
 
@@ -424,6 +422,7 @@ namespace KinematicTest.controller
                     curveStep = 1 - curveStep;
                     rampingDown = true;
                 }
+
                 lastTurn = Time.time;
 
                 //isRunningRight = !isRunningRight;
@@ -501,6 +500,17 @@ namespace KinematicTest.controller
         /// </summary>
         public void BeforeCharacterUpdate(float deltaTime)
         {
+            Collider[] colliders = new Collider[8];
+            var alma = Motor.CharacterCollisionsOverlap(transform.position, transform.rotation, colliders);
+            if (alma > 0 &&
+                GameManager.GetGameState() == GameStateScriptableObject.GameState.mainGameplayLoop)
+            {
+                foreach (var results in colliders)
+                {
+                    CheckVariousDMGThings(results);
+                }
+            }
+            
             switch (CurrentCharacterState)
             {
                 case PlayerStates.NoInput:
@@ -515,14 +525,13 @@ namespace KinematicTest.controller
                         _slidingThisFrame = false;
                         _wasSlidingLastFrame = false;
                     }
-                    
+
                     if (_slidingThisFrame && !_wasSlidingLastFrame)
                     {
                         _wasSlidingLastFrame = true;
                     }
 
-                    
-                    
+
                     _timeSinceStartedSliding += deltaTime;
                     if (settings.decelerateWhileSliding)
                     {
@@ -542,7 +551,7 @@ namespace KinematicTest.controller
                     break;
                 }
             }
-            
+
             if (_justTookDamage)
             {
                 canTakeDamage = false;
@@ -657,7 +666,7 @@ namespace KinematicTest.controller
                         {
                             velocity = Mathf.Min(settings.slideMoveSpeed, currentVelocity.magnitude);
                         }
-                        
+
                         break;
                     }
                 }
@@ -949,7 +958,6 @@ namespace KinematicTest.controller
                 {
                     case PlayerStates.Idling:
                     {
-                        
                         break;
                     }
                     case PlayerStates.NoInput:
@@ -963,7 +971,6 @@ namespace KinematicTest.controller
                     }
                     case PlayerStates.Sliding:
                     {
-                        
                         if (!_isStoppedSliding && _timeSinceStartedSliding > settings.slideDuration)
                         {
                             _shouldBeCrouching = false;
@@ -996,7 +1003,6 @@ namespace KinematicTest.controller
                     }
                     case PlayerStates.LedgeGrabbing:
                     {
-                        
                         if (canFallFromLedgeAfterDelay && timeAtLastGrab + timeBeforeFallFromLedge <= Time.time)
                         {
                             timeAtLastGrab = Time.time;
@@ -1018,7 +1024,6 @@ namespace KinematicTest.controller
                 teleporting = false;
                 if (runningRight != (int) ledgeGrabbed.gameObject.GetComponent<LedgeGrabPoint>().zoeShouldBeFacing)
                 {
-                    
                     runningRight *= -1;
                     curveStep = 0;
                     forward = false;
@@ -1043,33 +1048,35 @@ namespace KinematicTest.controller
 
         private void CheckVariousDMGThings(Collider hitCollider)
         {
-            if (canTakeDamage)
+            if (hitCollider == null || !canTakeDamage || hitCollider.CompareTag("Wall") || hitCollider.CompareTag("Ledge") || hitCollider.CompareTag("Player"))
+                return;
+            
+            Debug.Log("overlap tag: " + hitCollider.tag);
+            if (hitCollider.CompareTag("Spike"))
             {
-                //Debug.Log("can take damge");
-                if (hitCollider.CompareTag("Spike"))
-                {
-                    int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
-                    SpikeDamageEvent.Raise(damage);
-                    _justTookDamage = true;
-                }
-                if (hitCollider.CompareTag("Cop"))
-                {
-                    int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
-                    CopDamageEvent.Raise(damage);
-                    _justTookDamage = true;
-                }
+                int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
+                SpikeDamageEvent.Raise(damage);
+                _justTookDamage = true;
+            }
+            else if (hitCollider.CompareTag("Cop"))
+            {
+                int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
+                CopDamageEvent.Raise(damage);
+                _justTookDamage = true;
             }
         }
+
         public void OnGroundHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
             ref HitStabilityReport hitStabilityReport)
         {
             CheckVariousDMGThings(hitCollider);
-            
+
             if (CurrentCharacterState == PlayerStates.Idling)
             {
                 bool foundWall = false;
-                Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position+Vector3.up*0.75f, new Vector3(1.2f, 0.5f, 0.5f));
-                
+                Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position + Vector3.up * 0.75f,
+                    new Vector3(1.2f, 0.5f, 0.5f));
+
                 foreach (Collider item in hitColliders)
                 {
                     if (item.CompareTag("Wall"))
@@ -1077,6 +1084,7 @@ namespace KinematicTest.controller
                         foundWall = true;
                     }
                 }
+
                 if (foundWall == false)
                 {
                     TransitionToState(PlayerStates.Running);
@@ -1084,6 +1092,7 @@ namespace KinematicTest.controller
                 }
             }
         }
+
         public void OnMovementHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
             ref HitStabilityReport hitStabilityReport)
         {
@@ -1120,7 +1129,6 @@ namespace KinematicTest.controller
             if (hitCollider.CompareTag("Wall") && CurrentCharacterState != PlayerStates.Idling &&
                 Motor.GroundingStatus.IsStableOnGround && !rampingDown)
             {
-
                 //if (rampingDown)
                 //{
                 //    curveStep = 0;
@@ -1132,13 +1140,13 @@ namespace KinematicTest.controller
                 {
                     if (Time.time > lastTurn + turningToIdleGrace)
                     {
-
                         TransitionToState(PlayerStates.Idling);
                         Debug.Log("Going To Idle");
                         _hitWallThisFrame = true;
                     }
                 }
             }
+
             if (hitCollider.CompareTag("MovingPlatform"))
             {
                 MovingPlatform movingPlatform = hitCollider.gameObject.GetComponent<MovingPlatform>();
@@ -1147,11 +1155,13 @@ namespace KinematicTest.controller
                     movingPlatform.activatePlatform();
                 }
             }
+
             if (hitCollider.CompareTag("FallingPlatform"))
             {
                 FallingPlatforms fallingPlatform = hitCollider.gameObject.GetComponent<FallingPlatforms>();
                 fallingPlatform.startFallingPlatform();
             }
+
             CheckVariousDMGThings(hitCollider);
         }
 

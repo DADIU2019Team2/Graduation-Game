@@ -7,7 +7,7 @@ public class LoadScene : MonoBehaviour
 {
     public void loadNextScene()
     {
-        if(getCurrentScene() + 1 < SceneManager.sceneCountInBuildSettings)
+        if (getCurrentScene() + 1 < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(getCurrentScene() + 1);
         }
@@ -29,16 +29,21 @@ public class LoadScene : MonoBehaviour
         }
     }
 
+    public void LoadScene1Async()
+    {
+        SceneManager.LoadSceneAsync(1);
+    }
+
 
     public void loadPreviousScene()
     {
-        if(getCurrentScene() - 1 > 0)
+        if (getCurrentScene() - 1 > 0)
         {
             SceneManager.LoadScene(getCurrentScene() - 1);
         }
         else
         {
-            SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings-1);
+            SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
         }
     }
 
@@ -61,7 +66,7 @@ public class LoadScene : MonoBehaviour
 
     public void LoadSceneFromMainMenu(int level)
     {
-        SceneManager.LoadScene(level+LoadOnStartup.mainMenuIndex);
+        SceneManager.LoadScene(level + LoadOnStartup.mainMenuIndex);
     }
 
 
