@@ -8,20 +8,21 @@ using MiniGame2.Events;
 [System.Flags]
 public enum CoolZoneSettings
 {
-    UsesTimeScale,
-    ResetsToInitialTimeScale,
+    //None = 0,
+    UsesTimeScale = 1,
+    ResetsToInitialTimeScale = 2,
     //ResetsTimeScaleToOne,
-    UsesParticles,
-    UsesCameraZoom
+    UsesParticles = 4,
+    UsesCameraZoom = 8
 }
 
 public class CoolZone : MonoBehaviour
 {
+    [Header("Related events")]
     [SerializeField] private VoidEvent enteredCoolZone;
     [SerializeField] private VoidEvent exitedCoolZone;
 
     [Header("CoolZone properties")]
-    //public CoolZoneTimeScaleResetType timeScaleResetType;
     [SerializeField] private float desiredTimeScale;
     public float timeToFullCoolness;
     public float timeBackToNormalness;
@@ -30,14 +31,34 @@ public class CoolZone : MonoBehaviour
     [EnumFlags]
     public CoolZoneSettings settings;
 
+    [Header("Trigger on for objects with tag")]
+    public string tagToLookFor = "Player";
+
     private float initialTimeScale;
+    private Coroutine lastRoutine;
+
+    /*private void Start()
+    {
+        Debug.Log("Settings = "+ settings.ToString());
+        //people say online that this method is more effecient than HasFlag but i think HasFlag is easier to work with, and it's not like it's hugely ineffecient
+        //if((settings & CoolZoneSettings.UsesTimeScale | CoolZoneSettings.ResetsToInitialTimeScale) == (CoolZoneSettings.UsesTimeScale | CoolZoneSettings.ResetsToInitialTimeScale))
+        //{
+        //    Debug.Log("Settings is true!!!!");
+        //}
+        Debug.Log("settings is = " + settings.HasFlag(CoolZoneSettings.UsesTimeScale | CoolZoneSettings.UsesCameraZoom));
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
         //start CoolZone
+        if (other.CompareTag(tagToLookFor))
+        {
+            StartCoolZone();
+            Debug.Log("Started CoolZone!");
+        }
     }
 
-    private void StartCoolZone(bool ShouldEffectCamera)
+    private void StartCoolZone()
     {
         initialTimeScale = Time.timeScale;
         float tempTimeScale = initialTimeScale;
@@ -45,57 +66,91 @@ public class CoolZone : MonoBehaviour
         if (settings.HasFlag(CoolZoneSettings.UsesParticles))
         {
             //instantiate particles
+            throw new System.NotImplementedException();
         }
 
         if (settings.HasFlag(CoolZoneSettings.UsesTimeScale)) //Time Scale
         {
-            FloatNumberLerper(tempTimeScale, desiredTimeScale, timeToFullCoolness); 
+            //sets timescale to desired timescale over timetofullcoolness
+            StopTimeScaleLerp();
+            Debug.Log("temp timescale = " + tempTimeScale + "   Desired timescale = " + desiredTimeScale + "   duration = " + timeToFullCoolness);
+            StartCoroutine(TimeScaleLerper(tempTimeScale, desiredTimeScale, timeToFullCoolness));
+            Debug.Log("Time should  slow down now...");
         }
         
         if (enteredCoolZone != null)
             if(settings.HasFlag(CoolZoneSettings.UsesCameraZoom)) // Use Camera
                 enteredCoolZone.Raise();
-
-
-        //sets temp timescale to desired timescale over timetofullcoolness
     }
 
     private void OnTriggerExit(Collider other)
     {
-        //Stop CoolZone
+        if (other.CompareTag(tagToLookFor))
+        {
+            stopCoolZone();
+            Debug.Log("Stopped CoolZone!");
+        }
     }
 
     private void stopCoolZone()
     {
-        float returnTimeScale = 0;
         float tempTimeScale = Time.timeScale;
 
-        //switch (timeScaleResetType)
-        //{
-        //    case CoolZoneTimeScaleResetType.ResetToOne:
-        //        returnTimeScale = 1;
-        //        break;
-        //    case CoolZoneTimeScaleResetType.ResetToInitial:
-        //        returnTimeScale = initialTimeScale;
-        //        break;
-        //    default:
-        //        Debug.LogError("TimescaleResetType entered default state, this shouldn't happen! Click to review code");
-        //        break;
-        //}
+        if (settings.HasFlag(CoolZoneSettings.ResetsToInitialTimeScale | CoolZoneSettings.UsesTimeScale))
+        {
+            //sets timescale to initial timescale over timeBackToNormalness
+            StopTimeScaleLerp();
+            StartCoroutine(TimeScaleLerper(tempTimeScale, initialTimeScale, timeBackToNormalness));
+        }
+        else if(!settings.HasFlag(CoolZoneSettings.ResetsToInitialTimeScale | CoolZoneSettings.UsesTimeScale))
+        {
+            StopTimeScaleLerp();
+            StartCoroutine(TimeScaleLerper(tempTimeScale, 1f, timeBackToNormalness));
+        }
 
+        if (settings.HasFlag(CoolZoneSettings.UsesParticles))
+        {
+            throw new System.NotImplementedException();
+        }
 
+        if (exitedCoolZone != null)
+        {
+            if (settings.HasFlag(CoolZoneSettings.UsesCameraZoom))
+            {
+                exitedCoolZone.Raise();
+            }
+        }
     }
 
-    public IEnumerator FloatNumberLerper(float floatToLerp, float desiredOutcome, float lerpTime)
+    void StopTimeScaleLerp()
+    {
+        if (lastRoutine != null)
+            StopCoroutine(lastRoutine);
+        Time.timeScale = 1;
+    }
+
+    public IEnumerator TimeScaleLerper(float floatToLerp, float desiredOutcome, float lerpTime)
     {
         float initialValue = floatToLerp;
-        float stepSize = (desiredOutcome - initialValue) / lerpTime;
+        float stepSize = (Mathf.Abs((desiredOutcome - initialValue)) / lerpTime); //* Time.fixedDeltaTime;
+        float dirToStep = desiredOutcome - initialValue;
+        float stairs = initialValue;
+        Debug.Log("Initial stepsize: " + stepSize);
         while (floatToLerp != desiredOutcome)
         {
+            floatToLerp = Mathf.Lerp(initialValue, desiredOutcome, stairs);
+            Time.timeScale = floatToLerp;
+            //Debug.Log("Float to lerp = " + floatToLerp);
 
-            floatToLerp = Mathf.Lerp(initialValue, desiredOutcome, stepSize * Time.deltaTime);
-            yield return new WaitForSeconds(0);
-            stepSize += stepSize;
+            yield return new WaitForSecondsRealtime(0);
+
+            if(dirToStep > 0)
+                stairs += stepSize * Time.fixedDeltaTime;
+            else
+            {
+                stairs -= stepSize * Time.fixedDeltaTime;
+            }
+            //Debug.Log("Step size: " + stepSize);
         }
     }
 
