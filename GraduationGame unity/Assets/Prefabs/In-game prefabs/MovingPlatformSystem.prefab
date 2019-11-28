@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 392940777459386194}
   - component: {fileID: 8553}
+  - component: {fileID: 7082287900863753609}
   m_Layer: 0
   m_Name: MovingPlatformSystem
   m_TagString: Untagged
@@ -189,9 +190,31 @@ MonoBehaviour:
   startSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 609cb2792ba5dc04291d86d7ff1a3a48,
+    WwiseObjectReference: {fileID: 11400000, guid: 275afa3a7e92840eab6671550cc14662,
       type: 2}
   akEventToPostOnReachingPosition: 
+--- !u!114 &7082287900863753609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392940777459386195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92c541c6e483e42a5930a7d73f8c1774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &392940778589647488
 GameObject:
   m_ObjectHideFlags: 0
