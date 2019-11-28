@@ -142,6 +142,7 @@ public class AnimationLayerSwitcher : MonoBehaviour
 
                 //set idle loop
                 animator.SetBool("isStanding", true);
+                    animator.SetTrigger("cinematicMoment");
                 break;
             }
             case PlayerStates.NoInput:
