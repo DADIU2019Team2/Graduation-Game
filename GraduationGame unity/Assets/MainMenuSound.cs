@@ -9,6 +9,6 @@ public class MainMenuSound : MonoBehaviour
     {
         AkSoundEngine.RegisterGameObj(gameObject);
         AkSoundEngine.SetState("Zones", "Menu");
-        AkSoundEngine.PostEvent("Menu", gameObject);
+        AkSoundEngine.PostEvent("Menu_Music", gameObject);
     }
 }
