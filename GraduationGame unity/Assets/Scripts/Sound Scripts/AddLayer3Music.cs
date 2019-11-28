@@ -17,5 +17,9 @@ private bool IsInCollider = false;
         AkSoundEngine.SetRTPCValue("Happy_Synth", 5);
         AkSoundEngine.SetRTPCValue("Happy_Bass", 5);
         AkSoundEngine.SetRTPCValue("Happy_Drumz", 5);
+        AkSoundEngine.SetRTPCValue("Music_Layers_Z1", 0);
+        AkSoundEngine.SetRTPCValue("Music_Layers_Z2", 0);
+        AkSoundEngine.SetRTPCValue("Music_Layers_Z3", 0);
+        AkSoundEngine.SetRTPCValue("Music_Layers_Z4", 0);
     }
 }
