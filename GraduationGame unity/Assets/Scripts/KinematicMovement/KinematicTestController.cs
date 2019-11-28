@@ -492,6 +492,7 @@ namespace KinematicTest.controller
             {
                 TransitionToState(PlayerStates.Idling);
             }
+            //Debug.LogWarning("Post input time is " + Time.time);
         }
 
         /// <summary>
@@ -1051,7 +1052,7 @@ namespace KinematicTest.controller
             if (hitCollider == null || !canTakeDamage || hitCollider.CompareTag("Wall") || hitCollider.CompareTag("Ledge") || hitCollider.CompareTag("Player"))
                 return;
             
-            Debug.Log("overlap tag: " + hitCollider.tag);
+           // Debug.Log("overlap tag: " + hitCollider.tag);
             if (hitCollider.CompareTag("Spike"))
             {
                 int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
