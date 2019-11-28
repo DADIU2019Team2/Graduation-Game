@@ -27,6 +27,6 @@ public class TriggerBroadcastToFungus : MonoBehaviour, IOnSceneReset
 
     public void OnResetLevel()
     {
-        wasMessageSent = false;
+        //wasMessageSent = false;
     }
 }
