@@ -5,11 +5,6 @@
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
 					<PropertyList>
-						<Property Name="BusVolume" Type="Real64">
-							<ValueList>
-								<Value>12</Value>
-							</ValueList>
-						</Property>
 						<Property Name="Volume" Type="Real64">
 							<RTPCList>
 								<RTPC Name="" ID="{D9C33B19-0FFB-4576-A4FC-07C1528343BC}" ShortID="403337730">
@@ -95,7 +90,13 @@
 										</DuckItem>
 									</DuckingList>
 								</Bus>
-								<Bus Name="Ambience" ID="{A65F1364-30FE-4925-B6DC-397231C59F6B}"/>
+								<Bus Name="Ambience" ID="{A65F1364-30FE-4925-B6DC-397231C59F6B}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<ObjectRef Name="Dual_Filters_Narrow_Bandwidth" ID="{A24607C6-04E1-4D41-B513-28C0914D138D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+								</Bus>
 							</ChildrenList>
 						</Bus>
 						<Bus Name="Music" ID="{29E19E7A-9FB0-4372-9D66-8A6584CF0F58}">

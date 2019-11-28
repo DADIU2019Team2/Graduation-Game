@@ -18,13 +18,10 @@ private bool IsInCollider = false;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag != "Player" || IsInCollider) { return; }
-        AkSoundEngine.SetRTPCValue("Happy_Drumz", 5);
-        AkSoundEngine.SetRTPCValue("Happy_Bass", 5);
-        AkSoundEngine.SetRTPCValue("Happy_Synth", 5);
-        AkSoundEngine.SetRTPCValue("Music_Layer_Z1", 4);
-        AkSoundEngine.SetRTPCValue("Music_Layer_Z2", 4);
-        AkSoundEngine.SetRTPCValue("Music_Layer_Z3", 4);
-        AkSoundEngine.SetRTPCValue("Music_Layer_Z4", 4);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z1", 4, gameObject, 3000);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z2", 4, gameObject, 3000);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z3", 4, gameObject, 3000);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z4", 4, gameObject, 3000);
     }
 }
     

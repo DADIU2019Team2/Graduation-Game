@@ -6,6 +6,9 @@
 				<Event Name="Saw" ID="{35E0AE0A-240F-4C7A-9D84-ACBF0F85C5CA}">
 					<ChildrenList>
 						<Action Name="" ID="{63DAE47A-7540-4DF9-ABE1-CBF3E3F1E924}" ShortID="388915968">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Saw" ID="{C253C8AC-E7AA-4A6D-8DE0-D9D55A35D53E}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
@@ -40,6 +43,9 @@
 				<Event Name="Electricity" ID="{07B84FFB-DF69-4B47-A5DD-4B13B64279A6}">
 					<ChildrenList>
 						<Action Name="" ID="{69CDC6E5-B976-4B43-8B8F-327294BE6042}" ShortID="556501628">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Electricity" ID="{32F1115D-894E-44E0-94CC-2CB8B4E9524D}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
@@ -119,6 +125,9 @@
 				<Event Name="Platform_Pillar_Damaged" ID="{0B6E0311-8366-4F3C-8456-51DE5E8409C6}">
 					<ChildrenList>
 						<Action Name="" ID="{A0DACCF4-C06E-40EA-90D8-5642D89DC961}" ShortID="1005306374">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Platform_Pillar_Damaged" ID="{CA8EBC55-EB65-45E3-98CD-31E2AA537A2A}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
@@ -153,6 +162,9 @@
 				<Event Name="Ball_Platform_Damaged" ID="{67274C19-DB4D-463A-9423-2718D36DFA8C}">
 					<ChildrenList>
 						<Action Name="" ID="{E0CCF459-A19F-483C-A00A-5C542600456E}" ShortID="502473498">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Ball_Platform_Damaged" ID="{29341B66-1FA3-41F1-AE64-4AA22A372746}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
@@ -187,6 +199,9 @@
 				<Event Name="Ball_Platform" ID="{557EDDD9-6F9C-4979-8E12-70029808E553}">
 					<ChildrenList>
 						<Action Name="" ID="{C2963658-99B3-494F-9331-F6E5F849D2F7}" ShortID="775484539">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Ball_Platform" ID="{EF296AEF-19BB-4D4B-95E4-48ABB6AB61C8}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
@@ -221,6 +236,9 @@
 				<Event Name="Lazer_Wall_Power_Down" ID="{C155A593-B010-4D90-8E54-AC00943D5339}">
 					<ChildrenList>
 						<Action Name="" ID="{15FC4338-91F6-4813-943C-B0431A4277E4}" ShortID="266379914">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Lazer_Wall_Power_Down" ID="{2E9B4FFE-D5EA-4070-BEBF-41CEA21A14F5}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
@@ -232,6 +250,9 @@
 				<Event Name="Lazer_Wall" ID="{6C9F5CEB-56EF-4CF0-8D96-05AB8AF624D6}">
 					<ChildrenList>
 						<Action Name="" ID="{A23D8710-912E-41B9-9ADE-B8D6FC47B7B4}" ShortID="669411605">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Lazer_Wall" ID="{CB33FFBF-14A8-4D9F-B379-194AF4884304}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
@@ -253,6 +274,9 @@
 				<Event Name="Alien_Platform_Pillar" ID="{8C5BA525-80B8-4DFD-A610-FDB65B084385}">
 					<ChildrenList>
 						<Action Name="" ID="{D7FC280B-299E-4310-BA6C-B3F1A8E68677}" ShortID="697932768">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Alien_Platform_Pillar" ID="{D5B6907D-D7C0-402C-B34B-F7062DEA2FBE}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
@@ -284,88 +308,12 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Crusher_Idle" ID="{47C33E17-5F5D-42D1-91EF-6621ADC3A0C8}">
-					<ChildrenList>
-						<Action Name="" ID="{0C889C94-B487-42F8-8C12-A4E39A022EF5}" ShortID="250671467">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Crusher_Idle" ID="{1C639154-FB9E-489F-9658-76429EA128BE}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{63BCB120-6331-4F8B-8390-D27C5E58000A}" ShortID="140728440">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="36"/>
-								<Property Name="SeekPercent" Type="Real64" Value="50">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{3054C626-B4E5-4B77-B4C7-88426182D2CC}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="40"/>
-													<Property Name="Min" Type="Real64" Value="-40"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Crusher_Idle" ID="{1C639154-FB9E-489F-9658-76429EA128BE}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Crystal_Door_Hum" ID="{68F228A9-403C-472B-95F2-1EEAE208CAF0}">
-					<ChildrenList>
-						<Action Name="" ID="{D236A9BE-5565-4FFD-9E67-B59A9AEAC28D}" ShortID="333171559">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Crystal_Door_Hum" ID="{C671D9AC-FE91-4AFC-9582-BD5F2021AFA7}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{74F1A8F9-B6F3-45DA-ACD1-F01EBA8C1F24}" ShortID="725696063">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="36"/>
-								<Property Name="SeekPercent" Type="Real64" Value="50">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{1F6F5D3D-FC81-44DB-BD6D-0B4B0A6B9E82}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="40"/>
-													<Property Name="Min" Type="Real64" Value="-40"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Crystal_Door_Hum" ID="{C671D9AC-FE91-4AFC-9582-BD5F2021AFA7}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Crystal_Door_Open" ID="{9A245332-B126-4CC0-B1D9-41A4B49358BA}">
-					<ChildrenList>
-						<Action Name="" ID="{0AC7E36A-EF6D-4DBB-9328-237D4DC1FB01}" ShortID="393824060">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Crystal_Door_Open" ID="{01A43730-700A-469E-B430-8A519D3D6B27}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Alien_Death_Trap" ID="{98E9CA5F-475E-4B81-B531-5DD3F8629354}">
 					<ChildrenList>
 						<Action Name="" ID="{B3D09BEF-88F8-49CB-ABD7-DC9C2C68355B}" ShortID="160387499">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Alien_Death_Trap" ID="{17CF7D43-923D-47A2-868A-25F057DD5B10}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
@@ -400,6 +348,9 @@
 				<Event Name="Alien_Door_Open" ID="{13390F14-DF91-49D5-B050-7C1FF78A2403}">
 					<ChildrenList>
 						<Action Name="" ID="{BD4CBDEB-950B-4618-BCB6-38FC5C480DF4}" ShortID="813512106">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Alien_Door_Open" ID="{7ED771EB-30FB-4B3A-B6BE-2C261BDD2576}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
@@ -411,6 +362,9 @@
 				<Event Name="Alien_Door" ID="{8A1BFBB9-EB30-4B40-B055-989F77C4C671}">
 					<ChildrenList>
 						<Action Name="" ID="{A2449693-36CA-44EC-ABEF-9BE9FAE1F75A}" ShortID="140426943">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Alien_Door" ID="{2167FE49-7625-4C3A-9658-7A9A9A9B2ACF}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
@@ -479,6 +433,9 @@
 				<Event Name="Sentinel_Lazer" ID="{E6808DF9-3AA5-45D6-AAFC-7FB7D10437BA}">
 					<ChildrenList>
 						<Action Name="" ID="{E7009477-8307-46E6-A3B4-336F91D5B244}" ShortID="184763627">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Sentinel_Lazer" ID="{C0AD2A14-D04B-4E1D-A581-518B49901588}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
@@ -524,43 +481,12 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Spike_Lazer_Pyramid_Cone" ID="{8F10ABBF-BAF2-4B5F-88DB-96A8EE08BDFA}">
-					<ChildrenList>
-						<Action Name="" ID="{342CD9A9-D571-47BC-B664-AC1D5E00C571}" ShortID="824519185">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Spike_Lazer_Pyramid_Cone" ID="{4C839FBA-4118-44FD-AF99-B967637B0BA6}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{39574A48-1763-4024-8572-657CF5E3BF27}" ShortID="512939721">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="36"/>
-								<Property Name="SeekPercent" Type="Real64" Value="50">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{4A7B551D-E808-406C-B70A-CCA3F04B2DA7}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="40"/>
-													<Property Name="Min" Type="Real64" Value="-40"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Spike_Lazer_Pyramid_Cone" ID="{4C839FBA-4118-44FD-AF99-B967637B0BA6}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Alien_Platforms" ID="{ED52D294-2C80-4260-89AC-C876877496BF}">
 					<ChildrenList>
 						<Action Name="" ID="{58B65172-78B2-42C6-96DC-14E995C31204}" ShortID="1014841229">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Alien_Platforms" ID="{32728F1B-6D63-47A8-B616-16065792CD81}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
@@ -629,6 +555,9 @@
 				<Event Name="Machines" ID="{CE4B0348-3522-4E8C-AA5B-478F25EB5AF2}">
 					<ChildrenList>
 						<Action Name="" ID="{78C01FB0-62FB-4F11-A95F-FD25E62A1F7B}" ShortID="181596758">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Machines" ID="{4643D5D3-2033-4C5E-ACEC-2737CDA4AF16}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
@@ -663,6 +592,9 @@
 				<Event Name="Normal_Platforms" ID="{D5A44E0D-6B3E-45D8-AAD6-D77AD9A6ED1B}">
 					<ChildrenList>
 						<Action Name="" ID="{98263A3F-99DF-4790-8FCF-9E151C36513E}" ShortID="865712377">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Normal_Platforms" ID="{BB6BA9E7-9924-4150-B203-70DB06177922}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
@@ -805,27 +737,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Spiky_Machine_Impact" ID="{473E286A-2FF2-4CE7-AD70-B71E9F62F487}">
-					<ChildrenList>
-						<Action Name="" ID="{0DE801AC-8ABA-427A-BCE2-D8225B61BF8A}" ShortID="935894143">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Spiky_Machine_Impact" ID="{16711FF7-8780-4AA3-A430-CD343AB646A5}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{B7208A47-3C94-4D94-8CA7-39A9400A31CC}" ShortID="161566648">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Machines" ID="{4643D5D3-2033-4C5E-ACEC-2737CDA4AF16}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Lever_Sound" ID="{F253400D-5F87-4638-ABE9-95B17318D9FD}">
 					<ChildrenList>
 						<Action Name="" ID="{82636FB2-6E43-42B0-B0F0-AF9F92EB0CC4}" ShortID="143512664">
@@ -840,6 +751,15 @@
 				<Event Name="Door_Opening" ID="{E4E13D96-E552-4797-AF9D-70C4DE246E0C}">
 					<ChildrenList>
 						<Action Name="" ID="{353EB567-120A-4824-B2AD-C5E110CF52E9}" ShortID="745557141">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C4CA3346-205E-4881-850D-BFE8574C77D4}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Door_opening" ID="{34339217-0F1A-4D95-A8D9-3262BD0E8C5A}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
@@ -854,6 +774,102 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Gate_Impact" ID="{463A4396-2920-441B-AE6E-71F407957081}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Crusher_Impact" ID="{7AABDDDC-5570-4EFA-B6EA-D55CFE49D071}">
+					<ChildrenList>
+						<Action Name="" ID="{40C1E61A-870D-46FF-9575-57B7B7C021C7}" ShortID="71923815">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Crusher_Impact" ID="{16711FF7-8780-4AA3-A430-CD343AB646A5}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Crusher_Movement" ID="{5B2EC50D-42A9-416D-B3EE-4B8A4163E859}">
+					<ChildrenList>
+						<Action Name="" ID="{8F58D5C9-2A83-4353-9477-68B731F1CD4A}" ShortID="344760617">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Crusher_Movement" ID="{18957C82-238E-4F49-9773-A8E1332F8545}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{104CC650-657F-4DDA-B4F5-666617E56232}" ShortID="1019726295">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{24B56668-D011-4050-8AA2-CBDE076FDF56}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="40"/>
+													<Property Name="Min" Type="Real64" Value="-40"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Crusher_Movement" ID="{18957C82-238E-4F49-9773-A8E1332F8545}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Other_Lazer" ID="{A845809C-778E-4C20-BD35-6A08D6691B02}">
+					<ChildrenList>
+						<Action Name="" ID="{EFB31668-C262-4C0D-AF50-3A8309B13ADB}" ShortID="150352079">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Other_Lazer" ID="{BC3833F8-73CD-4679-9885-5A4F6A1F1DD1}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F34B47DD-A4DF-4D60-8659-F9507C738DAA}" ShortID="861370335">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64" Value="50">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{3DE59574-2EC5-4640-8F5A-8DF6AB213E1F}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="40"/>
+													<Property Name="Min" Type="Real64" Value="-40"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Other_Lazer" ID="{BC3833F8-73CD-4679-9885-5A4F6A1F1DD1}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Drill" ID="{830083FB-C9B4-492D-9B15-9B4DEE762D94}">
+					<ChildrenList>
+						<Action Name="" ID="{3C3CAF97-1189-4FBD-B9E5-CCADE7DA28C3}" ShortID="823920203">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Drill" ID="{6F96DF12-53B3-402D-9216-9D9714C89628}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
