@@ -19,6 +19,7 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
 
     public delegate void OnZoeTakeDamageDelegate();
     public event OnZoeTakeDamageDelegate zoeTakeDamageEvent;
+    public VoidEvent cameraShakeOnDeath;
     public VoidEvent DeathVoidEvent;
     public bool hasDied;
 
@@ -73,6 +74,7 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
         isDead = true;
         //GameManager.ChangeGameState(GameStateScriptableObject.GameState.levelLoss);
         GameManager.RequestGameStateChange(GameStateScriptableObject.GameState.levelLoss);
+        cameraShakeOnDeath.Raise();
     }
 
     public void OnResetLevel()
