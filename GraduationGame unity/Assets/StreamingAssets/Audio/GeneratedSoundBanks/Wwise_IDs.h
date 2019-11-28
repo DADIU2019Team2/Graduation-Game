@@ -29,12 +29,11 @@ namespace AK
         static const AkUniqueID DAMAGED_PLATFORMS = 624837759U;
         static const AkUniqueID DEATH_RAY = 977466704U;
         static const AkUniqueID DEATH_SAW = 507840475U;
-        static const AkUniqueID DIALOGUE_ANGRY = 2801479097U;
-        static const AkUniqueID DIALOGUE_HAPPY = 2714452976U;
         static const AkUniqueID DOOR_CLOSES = 900426207U;
         static const AkUniqueID DOOR_OPENING = 2589897592U;
         static const AkUniqueID DRILL = 2168413864U;
         static const AkUniqueID ELECTRICITY = 2917121896U;
+        static const AkUniqueID EXPLOSION = 13776098U;
         static const AkUniqueID GRABS = 238897438U;
         static const AkUniqueID JUMP_LAND = 3419686739U;
         static const AkUniqueID JUMP_TAKEOFF = 4186947444U;
@@ -102,8 +101,6 @@ namespace AK
             {
                 static const AkUniqueID BOSSFIGHT = 580146960U;
                 static const AkUniqueID CREDITS = 2201105581U;
-                static const AkUniqueID DIALOGUE_ANGRY = 2801479097U;
-                static const AkUniqueID DIALOGUE_HAPPY = 2714452976U;
                 static const AkUniqueID LEVEL_COMPLETE = 3736098925U;
                 static const AkUniqueID MENU = 2607556080U;
                 static const AkUniqueID ZONE1 = 831766780U;
