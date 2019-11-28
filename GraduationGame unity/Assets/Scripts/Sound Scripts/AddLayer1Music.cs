@@ -20,6 +20,10 @@ private bool IsInCollider = false;
     {
         if (other.tag != "Player" || IsInCollider) { return; }
         AkSoundEngine.SetRTPCValue("Happy_Drumz", 2);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z1", 0);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z2", 0);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z3", 0);
+        AkSoundEngine.SetRTPCValue("Music_Layer_Z4", 0);
     }
 }
     
