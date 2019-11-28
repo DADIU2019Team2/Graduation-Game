@@ -30,6 +30,7 @@ public class InputManager : MonoBehaviour
     private static SwipeType mostRecentSwipeType;
     private float timeDragged;
     public FloatVariable maxDragTime;
+    bool touchStarted = false;
 
     private string intoTextString;
 
@@ -62,9 +63,11 @@ public class InputManager : MonoBehaviour
         return 180 - angle;
     }
 
+    
 
     void Update()
     {
+        //Debug.Log("Width " + Screen.width + "height " + Screen.height);
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -73,8 +76,47 @@ public class InputManager : MonoBehaviour
                 case TouchPhase.Began:
                     initPosition = touch.position;
                     isDragging = true;
+                    touchStarted = true;
                     break;
                 case TouchPhase.Canceled:
+                    isDragging = false;
+                    break;
+                case TouchPhase.Moved:
+                    endPosition = touch.position;
+                    swipeDirection = (endPosition - initPosition);
+                    if (swipeDirection.magnitude > Screen.width/10f && touchStarted)//50f)
+                    {
+                        Debug.LogWarning("Time at swipe : " + Time.time);
+                        touchStarted = false;
+                        swipeAngle = Vector2.SignedAngle(Vector2.right, swipeDirection);
+                        if (swipeAngle < 0)
+                        {
+                            swipeAngle = swipeAngle + 360;
+                        }
+                        isFacingRight = CharacterMovement.GetIsFacingRight();
+                        mostRecentSwipeType = SwipeTypeOfAngle(swipeAngle, isFacingRight);
+                        string mostRecentInput = mostRecentSwipeType == SwipeType.swipeDown ? "Down" : mostRecentSwipeType == SwipeType.swipeBackwards ? "Backwards" :
+                         mostRecentSwipeType == SwipeType.swipeForwardUp ? "Forward" : "Unknown input";
+                        if (inputText != null)
+                        {
+                            inputText.text = (intoTextString + mostRecentInput + " " + swipeAngle);
+                        }
+                        //Might have to make this a switch-case:
+                        if (GameManager.GetGameState() == GameStateScriptableObject.GameState.mainGameplayLoop)
+                        {
+                            onSwipeEvent.Raise();
+                        }
+                        if (GameManager.GetGameState() == GameStateScriptableObject.GameState.cinematic)
+                        {
+                            //onSwipeInCinematicEvent.Raise();
+                        }
+
+                    }
+                    else if (timeDragged < 0.125f)
+                    {
+                        onClickEvent.Raise();
+                    }
+
                     isDragging = false;
                     break;
                 case TouchPhase.Ended:
@@ -106,7 +148,7 @@ public class InputManager : MonoBehaviour
                         }
 
                     }
-                    else if (timeDragged < 0.125f)
+                    if (timeDragged < 0.125f)
                     {
                         onClickEvent.Raise();
                     }
