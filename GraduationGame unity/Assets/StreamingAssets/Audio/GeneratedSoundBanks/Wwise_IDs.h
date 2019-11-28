@@ -23,7 +23,9 @@ namespace AK
         static const AkUniqueID BALL_PLATFORM_DAMAGED = 2557453060U;
         static const AkUniqueID BOSSMUSIC = 1427760111U;
         static const AkUniqueID CHECKPOINT_CRYSTAL = 1739986920U;
-        static const AkUniqueID CRUSHER_IDLE = 3878901180U;
+        static const AkUniqueID CREDITS_MUSIC = 1522595433U;
+        static const AkUniqueID CRUSHER_IMPACT = 3831005960U;
+        static const AkUniqueID CRUSHER_MOVEMENT = 3838804977U;
         static const AkUniqueID DAMAGED_PLATFORMS = 624837759U;
         static const AkUniqueID DEATH_RAY = 977466704U;
         static const AkUniqueID DEATH_SAW = 507840475U;
@@ -31,6 +33,7 @@ namespace AK
         static const AkUniqueID DIALOGUE_HAPPY = 2714452976U;
         static const AkUniqueID DOOR_CLOSES = 900426207U;
         static const AkUniqueID DOOR_OPENING = 2589897592U;
+        static const AkUniqueID DRILL = 2168413864U;
         static const AkUniqueID ELECTRICITY = 2917121896U;
         static const AkUniqueID GRABS = 238897438U;
         static const AkUniqueID JUMP_LAND = 3419686739U;
@@ -43,7 +46,9 @@ namespace AK
         static const AkUniqueID LEVEL_COMPLETE = 3736098925U;
         static const AkUniqueID LEVEL_START = 352576276U;
         static const AkUniqueID LEVER_SOUND = 3308622827U;
+        static const AkUniqueID MENU_MUSIC = 4055567060U;
         static const AkUniqueID NORMAL_PLATFORMS = 4182768561U;
+        static const AkUniqueID OTHER_LAZER = 794689400U;
         static const AkUniqueID OUCH = 3978972604U;
         static const AkUniqueID PLAY_AMBIENCE_Z1 = 1001479278U;
         static const AkUniqueID PLAY_AMBIENCE_Z2 = 1001479277U;
@@ -55,15 +60,12 @@ namespace AK
         static const AkUniqueID PLAY_ZONE3_MUSIC = 556439219U;
         static const AkUniqueID PLAY_ZONE4_MUSIC = 3303975224U;
         static const AkUniqueID ROBOT_APPEARENCE = 2187783824U;
+        static const AkUniqueID ROLL_SFX = 2520750572U;
         static const AkUniqueID SLIDES = 697318835U;
-        static const AkUniqueID STOP_ALIEN_CRYSTAL_HUM = 3004230381U;
-        static const AkUniqueID STOP_ALIEN_DOOR = 3384205992U;
         static const AkUniqueID STOP_ALIEN_PLATFORM_PILLAR = 2176568168U;
         static const AkUniqueID STOP_ALIEN_PLATFORMS = 123461200U;
         static const AkUniqueID STOP_BALL_PLATFORM = 2364261975U;
         static const AkUniqueID STOP_BALL_PLATFORM_DAMAGED = 2828692239U;
-        static const AkUniqueID STOP_CRUSHER_IDLE = 2805448725U;
-        static const AkUniqueID STOP_CRYSTAL_DOOR_HUM = 1456018130U;
         static const AkUniqueID STOP_DAMAGED_PLATFORMS = 1039048512U;
         static const AkUniqueID STOP_DEATH_RAY = 2589440491U;
         static const AkUniqueID STOP_DEATH_SAW = 3058963576U;
@@ -99,9 +101,11 @@ namespace AK
             namespace STATE
             {
                 static const AkUniqueID BOSSFIGHT = 580146960U;
+                static const AkUniqueID CREDITS = 2201105581U;
                 static const AkUniqueID DIALOGUE_ANGRY = 2801479097U;
                 static const AkUniqueID DIALOGUE_HAPPY = 2714452976U;
                 static const AkUniqueID LEVEL_COMPLETE = 3736098925U;
+                static const AkUniqueID MENU = 2607556080U;
                 static const AkUniqueID ZONE1 = 831766780U;
                 static const AkUniqueID ZONE2 = 831766783U;
                 static const AkUniqueID ZONE3 = 831766782U;

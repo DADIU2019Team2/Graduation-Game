@@ -9,7 +9,7 @@ public class LoadScreenText : MonoBehaviour
     public string baseString = "Loading";
     private string dot = ".";
     private int amountOfDots;
-    public float timeLimit = 1f;
+    public float timeLimit = 0.5f;
     private float timer;
 
     private void Start()
