@@ -18,7 +18,7 @@ public class CameraShake : MonoBehaviour
             StopCoroutine(currentShakeCoroutine);
         }
 
-        currentShakeCoroutine = Shake(properties);
+        currentShakeCoroutine = Shake(settings);
         StartCoroutine(currentShakeCoroutine);
     }
 
@@ -32,6 +32,8 @@ public class CameraShake : MonoBehaviour
 
     IEnumerator Shake(CameraShakeSettings settings)
     {
+        Debug.Log("Shaking");
+        Debug.Log("strength " + settings.strength);
         float completionPercent = 0;
         float movePercent = 0;
 
@@ -43,12 +45,16 @@ public class CameraShake : MonoBehaviour
 
         Quaternion targetRotation = Quaternion.identity;
         Quaternion previousRotation = Quaternion.identity;
-
+        Debug.Log("TIME " + Time.timeScale);
         do
         {
+            Debug.Log("TIME " + Time.timeScale);
             if (movePercent >= 1 || completionPercent == 0)
             {
                 float dampingFactor = DampingCurve(completionPercent, settings.dampingPercent);
+
+                Debug.Log("completionPercent " + completionPercent);
+                Debug.Log("dampingPercent " + settings.dampingPercent);
                 float noiseAngle = (Random.value - .5f) * Mathf.PI;
                 angle_radians += Mathf.PI + noiseAngle * settings.noisePercent;
                 currentWaypoint = new Vector3(Mathf.Cos(angle_radians), Mathf.Sin(angle_radians)) *
