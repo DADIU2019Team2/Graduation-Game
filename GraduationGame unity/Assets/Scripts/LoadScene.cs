@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LoadScene : MonoBehaviour
 {
+    [Tooltip("The UI image that functions as a loading bar")]
+    [SerializeField] private Image loadProgressBar;
+
     public void loadNextScene()
     {
         if (getCurrentScene() + 1 < SceneManager.sceneCountInBuildSettings)
@@ -32,6 +36,26 @@ public class LoadScene : MonoBehaviour
     public void LoadScene1Async()
     {
         SceneManager.LoadSceneAsync(1);
+    }
+
+
+    public void StartLoadSceneAsyncWithProgressBar(int sceneIndex)
+    {
+        StartCoroutine(LoadSceneAsyncWithProgress(sceneIndex));
+    }
+    IEnumerator LoadSceneAsyncWithProgress(int sceneIndex)
+    {
+        AsyncOperation loadProgress = SceneManager.LoadSceneAsync(sceneIndex);
+
+        while(loadProgress.progress < 1)
+        {
+            //do the progess bar fill stuff
+            if(loadProgressBar != null)
+            {
+                loadProgressBar.fillAmount = loadProgress.progress;
+            }
+            yield return new WaitForEndOfFrame();
+        }
     }
 
 

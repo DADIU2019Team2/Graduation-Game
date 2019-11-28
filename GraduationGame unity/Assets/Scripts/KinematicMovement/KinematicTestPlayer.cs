@@ -120,6 +120,7 @@ namespace KinematicTest.player
                     break;
             }
             Character.SetInputs(ref characterInputs);
+            Debug.LogWarning("Setting swipe input at time " + Time.time);
 
         }
 
