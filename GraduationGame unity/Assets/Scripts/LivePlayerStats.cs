@@ -21,6 +21,7 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
     public event OnZoeTakeDamageDelegate zoeTakeDamageEvent;
     public VoidEvent cameraShakeOnDeath;
     public VoidEvent DeathVoidEvent;
+    public VoidEvent damageShakeEvent;
     public bool hasDied;
 
     private enum PlayerRespawnDirection
@@ -55,6 +56,10 @@ public class LivePlayerStats : MonoBehaviour, IOnSceneReset
             {
                 Die();
             }
+        }
+        else
+        {
+            damageShakeEvent.Raise();
         }
     }
 
