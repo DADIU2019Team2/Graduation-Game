@@ -191,7 +191,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 4219221ac0890d4bbef9f0f6d1c95982
     GuidInternal: 
-    m_lastTime: -8586266595444775808
+    m_lastTime: -8586265740474775808
     List:
     - name: Main
       guid: 8d0f58feffbb4a40aa7ae59b199a4834
@@ -331,7 +331,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: b8a3484928cea848bad5ae38d8dae02b
     GuidInternal: 
-    m_lastTime: -8586266597054775808
+    m_lastTime: -8586265740474775808
     List:
     - name: StopAll
       guid: 6e4c2e889130c6489327163269101349
@@ -467,7 +467,7 @@ MonoBehaviour:
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 3631f1d8df531f488aa67fbe67e566e8
     GuidInternal: 
-    m_lastTime: -8586266614984775808
+    m_lastTime: -8586265740474775808
     List:
     - name: BossMusic
       guid: 3e2f12219ad59749970d91be5fe8b5b4
@@ -497,34 +497,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 80
       minDuration: 80
-    - name: Dialogue_Angry
-      guid: 188b95bcb71d0f4593661cb7ea96009f
-      id: 2801479097
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Music
-        ObjectType: 12
-      - ElementName: Dialogue_Angry
-        ObjectType: 3
-      Path: Default Work Unit/Music/Dialogue_Angry
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Dialogue_Happy
-      guid: 061e6c5e83079046b4ed0025ea02da00
-      id: 2714452976
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Music
-        ObjectType: 12
-      - ElementName: Dialogue_Happy
-        ObjectType: 3
-      Path: Default Work Unit/Music/Dialogue_Happy
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: Menu_Music
       guid: 165b89c31731904698b7e47654570543
       id: 4055567060
@@ -595,11 +567,25 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Zones_Music
+      guid: 48398d9c9535214fa0f53d3d49b397c3
+      id: 2294038358
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Zones_Music
+        ObjectType: 3
+      Path: Default Work Unit/Music/Zones_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events/SFX.wwu
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 70427e337ecab74391244b5ed6520621
     GuidInternal: 
-    m_lastTime: -8586266595454775808
+    m_lastTime: -8586265745404775808
     List:
     - name: Alien_Crystal_Hum
       guid: 7ec1b424b5419249be4371acb3f812f7
@@ -714,7 +700,7 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Crusher_Impact
-      guid: dcddab7a7055fa4eb6ead55cfe49d071
+      guid: 23d345008cb35a4283d5815f11cf0fb8
       id: 3831005960
       PathAndIcons:
       - ElementName: Default Work Unit
@@ -725,10 +711,10 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/SFX/Crusher_Impact
       maxAttenuation: 30
-      maxDuration: 1.856562
-      minDuration: 1.856562
+      maxDuration: 0.856562
+      minDuration: 0.856562
     - name: Crusher_Movement
-      guid: 0dc52e5ba9426d41b3ee4b8a4163e859
+      guid: cf2e92db941bb14b91d16dcb091f52d5
       id: 3838804977
       PathAndIcons:
       - ElementName: Default Work Unit
@@ -822,7 +808,7 @@ MonoBehaviour:
       - ElementName: Drill
         ObjectType: 3
       Path: Default Work Unit/SFX/Drill
-      maxAttenuation: 100
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Electricity
@@ -1008,7 +994,7 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Sentinel_Lazer
-      guid: f98d80e6a53ad645aafc7fb7d10437ba
+      guid: fe82fba99e316449a1641138a70d046c
       id: 168295360
       PathAndIcons:
       - ElementName: Default Work Unit
@@ -1025,7 +1011,7 @@ MonoBehaviour:
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 7972bedaa5f4f94ea19772905b161148
     GuidInternal: 
-    m_lastTime: -8586266595454775808
+    m_lastTime: -8586265750704775808
     List:
     - name: Stop_Alien_Death_Trap
       guid: 547be385766d044b85cc8d7ebf3f79fa
@@ -1094,6 +1080,34 @@ MonoBehaviour:
       - ElementName: Stop_Ball_Platform_Damaged
         ObjectType: 3
       Path: Default Work Unit/Stop_Events/Stop_Ball_Platform_Damaged
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Boss_Music
+      guid: b41b71c48271e147a21f952bc479ad45
+      id: 1365336475
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Events
+        ObjectType: 12
+      - ElementName: Stop_Boss_Music
+        ObjectType: 3
+      Path: Default Work Unit/Stop_Events/Stop_Boss_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Crusher_Movement
+      guid: 2534997f839dff4eb2978860cc5fcf0d
+      id: 908305764
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Events
+        ObjectType: 12
+      - ElementName: Stop_Crusher_Movement
+        ObjectType: 3
+      Path: Default Work Unit/Stop_Events/Stop_Crusher_Movement
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1234,9 +1248,9 @@ MonoBehaviour:
       - ElementName: Stop_Machines
         ObjectType: 3
       Path: Default Work Unit/Stop_Events/Stop_Machines
-      maxAttenuation: 30
-      maxDuration: 1.856562
-      minDuration: 1.856562
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_Normal_Platforms
       guid: 1ea48060ac551a45bab0649b9d0deaaa
       id: 2590299724
@@ -1307,6 +1321,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Z4_Music
+      guid: 09e497a1e732eb4d9dc5df7ee937a446
+      id: 2475844034
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Events
+        ObjectType: 12
+      - ElementName: Stop_Z4_Music
+        ObjectType: 3
+      Path: Default Work Unit/Stop_Events/Stop_Z4_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -1346,7 +1374,7 @@ MonoBehaviour:
     ParentPhysicalPath: Game Parameters/Default Work Unit.wwu
     guid: 6c11d9cd8155bb4ab9311b942d719fd8
     GuidInternal: 
-    m_lastTime: -8586266595444775808
+    m_lastTime: -8586265888144775808
     List:
     - name: Angry_Music_Layer
       guid: e2ed46a941e4e04191813bf56ebac714
@@ -1491,7 +1519,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 6dd5ac529c349441bea23ed61995e31b
     GuidInternal: 
-    m_lastTime: -8586266595444775808
+    m_lastTime: -8586265811524775808
     List:
     - name: Dead_or_Alive
       guid: 0b5c99a6f92db04d8a37ef970ed19de4
@@ -1545,18 +1573,6 @@ MonoBehaviour:
         id: 2201105581
         PathAndIcons:
         - ElementName: Credits
-          ObjectType: 8
-      - name: Dialogue_Angry
-        guid: 09be03782a5d3c4db8468d9feb9d2354
-        id: 2801479097
-        PathAndIcons:
-        - ElementName: Dialogue_Angry
-          ObjectType: 8
-      - name: Dialogue_Happy
-        guid: 99b3feb40a07af45a589cf01d74c56d7
-        id: 2714452976
-        PathAndIcons:
-        - ElementName: Dialogue_Happy
           ObjectType: 8
       - name: Level_Complete
         guid: 51570bbecc5cb44d8b7e9b4ad4dd7adc
@@ -1654,5 +1670,6 @@ MonoBehaviour:
   - /Wwise_Graduation_game/Events/Default Work Unit
   - /Wwise_Graduation_game/Events/Default Work Unit/Ambience
   - /Wwise_Graduation_game/Events/Default Work Unit/SFX
+  - /Wwise_Graduation_game/Events/Default Work Unit/Stop_Events
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
