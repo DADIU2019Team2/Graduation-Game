@@ -96,6 +96,7 @@ namespace KinematicTest.controller
         private float desiredJumpHeight;
         private float JumpPreGroundingGraceTime = 0f;
         private float JumpPostGroundingGraceTime = 0f;
+        private bool playedJumpParticleThisJump = false;
 
         // Air movement
         private float MaxAirMoveSpeed;
@@ -226,6 +227,7 @@ namespace KinematicTest.controller
             {
                 case PlayerStates.Running:
                 {
+                    runParticle.Play();
                     MaxAirMoveSpeed = settings.maxAirMoveSpeed;
                     MaxStableMoveSpeed = settings.maxMoveSpeed;
                     JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.jumpHeight * settings.baseGravity *
@@ -254,6 +256,7 @@ namespace KinematicTest.controller
                 }
                 case PlayerStates.Sliding:
                 {
+                    runParticle.Stop();
                     _slidingThisFrame = true;
                     canChangedirection = false;
                     _isStoppedSliding = false;
@@ -495,9 +498,14 @@ namespace KinematicTest.controller
                 if (CurrentCharacterState == PlayerStates.Running || CurrentCharacterState == PlayerStates.Sliding)
                 {
                     Debug.Log("Playing Jump Particle");
-                    jumpParticle.Play();
+                    if (!playedJumpParticleThisJump)
+                    {
+                        jumpParticle.Play();
+                        playedJumpParticleThisJump = true;
+                    }
                     runParticle.Stop();
                     //runParticle.Clear();
+                    settings.jumpShakeEvent.Raise();
                 }
             }
 
@@ -1199,12 +1207,13 @@ namespace KinematicTest.controller
 
         protected void OnLanded()
         {
+            playedJumpParticleThisJump = false;
             _JustLanded = true;
             landSound.Post(gameObject);
             canChangedirection = true;
             jumpInitiated = false;
             Debug.Log("Landed");
-
+            settings.landingShakeEvent.Raise();
             if (CurrentCharacterState == PlayerStates.Idling || CurrentCharacterState == PlayerStates.Falling ||
                 CurrentCharacterState == PlayerStates.Tired)
             {
