@@ -17,7 +17,8 @@ public class SmoothPlayerCamFollow : MonoBehaviour
     [Header("Camera properties")]
     [Tooltip("The speed at which the camera rotates with... around 1.5 seems to be good")] [SerializeField]
     private float rotationSpeed = 1.5f;
-    [SerializeField] private float smoothTime = 0.1f;
+    [SerializeField] private float XSmoothTime = 0.1f;
+    [SerializeField] private float YSmoothTime = 0.7f;
 
     [SerializeField] private Vector3 localOffSet;
     [SerializeField] private float maxDistToLookAtPoint = 5f;
@@ -39,6 +40,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
     private Vector3 worldOffset;
     private Vector3 localPosInfrontOfPlayer;
     private Vector3 camVelocity;
+    private Vector3 yVelocity;
     private float zoomOutTimer;
     private float zoomOutLerp;
 
@@ -72,9 +74,9 @@ public class SmoothPlayerCamFollow : MonoBehaviour
         if (zoomOutTimer >= zoomOutAfterSeconds)
         {
             zoomOutLerp += Time.deltaTime;
-            var alma = zoomOutLerp / zoomOutDuration;
-            var korte = Mathf.Clamp(alma, 0f, 1f);
-            var actualZoomOut = Mathf.Lerp(0f, stopZoomOutDistance, korte);
+            var normalizedZoom = zoomOutLerp / zoomOutDuration;
+            var clampedZoom = Mathf.Clamp(normalizedZoom, 0f, 1f);
+            var actualZoomOut = Mathf.Lerp(0f, stopZoomOutDistance, clampedZoom);
             worldOffset.z = localOffSet.z - actualZoomOut;
         }
 
@@ -84,11 +86,20 @@ public class SmoothPlayerCamFollow : MonoBehaviour
         //if(distToDesiredPos > 0.1)
         //{
         //}
-        
+
+        Vector3 desiredSmoothY = new Vector3(0, tempDesiredPos.y, 0);
+        Vector3 smoothedY = Vector3.SmoothDamp(new Vector3(0, transform.position.y, 0), desiredSmoothY,
+            ref yVelocity, YSmoothTime);
         //Do seperate smoothing speperate x and y
 
-        transform.position = Vector3.SmoothDamp(transform.position, tempDesiredPos,
-            ref camVelocity, smoothTime);
+        Vector3 desiredSmoothX = new Vector3(tempDesiredPos.x, 0, 0);
+        Vector3 smoothedX = Vector3.SmoothDamp(new Vector3(transform.position.x, 0, 0), desiredSmoothX,
+            ref camVelocity, XSmoothTime);
+
+        Vector3 camDesiredPosition = smoothedX + smoothedY;
+        camDesiredPosition.z = tempDesiredPos.z;
+
+        transform.position = camDesiredPosition;
     }
 
     Vector3 DesiredCamPos()
