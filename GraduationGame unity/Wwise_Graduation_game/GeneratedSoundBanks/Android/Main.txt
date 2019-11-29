@@ -10,6 +10,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	697318835	Slides			\Default Work Unit\Movement\Slides	
 	794689400	Other_Lazer			\Default Work Unit\SFX\Other_Lazer	
 	900426207	Door_Closes			\Default Work Unit\SFX\Door_Closes	
+	908305764	Stop_Crusher_Movement			\Default Work Unit\Stop_Events\Stop_Crusher_Movement	
 	977466704	Death_Ray			\Default Work Unit\SFX\Death_Ray	
 	1001479275	Play_Ambience_Z4			\Default Work Unit\Ambience\Play_Ambience_Z4	
 	1001479276	Play_Ambience_Z3			\Default Work Unit\Ambience\Play_Ambience_Z3	
@@ -40,7 +41,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	2589440491	Stop_Death_Ray			\Default Work Unit\Stop_Events\Stop_Death_Ray	
 	2589897592	Door_Opening			\Default Work Unit\SFX\Door_Opening	
 	2590299724	Stop_Normal_Platforms			\Default Work Unit\Stop_Events\Stop_Normal_Platforms	
-	2674413038	Stop_Machines			\Default Work Unit\Stop_Events\Stop_Machines	
 	2828692239	Stop_Ball_Platform_Damaged			\Default Work Unit\Stop_Events\Stop_Ball_Platform_Damaged	
 	2917121896	Electricity			\Default Work Unit\SFX\Electricity	
 	2967932086	Lazer_Wall			\Default Work Unit\SFX\Lazer_Wall	
@@ -107,9 +107,6 @@ Effect plug-ins	ID	Name	Type				Notes
 	508227036	Wwise_Peak_Limiter_(Custom)	Wwise Peak Limiter			
 	603110791	Wwise_Parametric_EQ_(Custom)	Wwise Parametric EQ			
 	1028273034	Wwise_Parametric_EQ_(Custom)	Wwise Parametric EQ			
-
-Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
-	705150058	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Crusher_Impact\Crusher_Silence\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	7699699	Z1_Ascending_Metal	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Ascending_Metal_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Ascending_Metal		251281
@@ -195,7 +192,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	859322015	Z1_Hatter_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Hatter_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Hatter_Arp		295974
 	860562003	Zoe_Ouch3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Zoe_Ouch3_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Ouch\Zoe_Ouch3		4661
 	869369574	Z4AngryDrumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4AngryDrumz_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4AngryDrumz		347862
-	890435580	Crusher_Impact	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Crusher_Impact_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Crusher_Impact\Crusher_Impact		12650
+	890435580	Crusher_Impact	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Crusher_Impact_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Crusher_Impact		12650
 	900936792	Ambience_Z4	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Ambience_Z4_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambience\Ambience_Z4		468215
 	915143470	Level_Start	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Level_Start_Ny_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Celebration_Sounds\Level_Start		129432
 	916545742	BossMusic	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\BossMusic_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\BossMusic\BossMusic\BossMusic		374415
