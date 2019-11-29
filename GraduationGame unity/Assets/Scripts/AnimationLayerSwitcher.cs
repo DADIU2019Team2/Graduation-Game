@@ -160,7 +160,7 @@ public class AnimationLayerSwitcher : MonoBehaviour
             case PlayerStates.Sliding:
             {
                 //set roll animation
-                slideTime = characterController.GetSlideNormalizedTime();
+                slideTime = Mathf.Clamp(characterController.GetSlideNormalizedTime(),0f,1f);
                 animator.SetFloat("slideBlend", slideTime);
                 animator.SetBool("isSliding", true);
                 if (characterController.JumpingThisFrame())
