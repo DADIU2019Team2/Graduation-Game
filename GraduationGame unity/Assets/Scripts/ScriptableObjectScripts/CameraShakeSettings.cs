@@ -6,6 +6,8 @@ using UnityEngine;
 public class CameraShakeSettings : ScriptableObject
 {
     public float angle;
+    public float angleX;
+    public float angleY;
     public float strength;
     public float maxSpeed;
     public float minSpeed;
