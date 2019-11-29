@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using MiniGame2.Events;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -39,6 +40,7 @@ public class PlayerControllerSettings : ScriptableObject
     public AnimationCurve rampUpCurve;
     [Tooltip("Curve to modify deceleration")]
     public AnimationCurve rampDownCurve;
+    public VoidEvent landingShakeEvent;
     
     
     //public Transform groundedTransform;
@@ -54,6 +56,7 @@ public class PlayerControllerSettings : ScriptableObject
     public float JumpPreGroundingGraceTime;
     [Tooltip("Coyote time in seconds")]
     public float JumpPostGroundingGraceTime;
+    public VoidEvent jumpShakeEvent;
     
     
     [Header("Idle Jumping Settings")]
@@ -95,6 +98,7 @@ public class PlayerControllerSettings : ScriptableObject
 
     [Header("Damage")] [Tooltip("Invincibility time in seconds")]
     public float invincibilityTime;
+    public VoidEvent damageShakeEvent;
     
     [Header("Misc")]
     [Tooltip("Toggle to allow midair direction changes")]

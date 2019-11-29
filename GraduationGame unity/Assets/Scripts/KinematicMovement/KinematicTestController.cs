@@ -498,6 +498,7 @@ namespace KinematicTest.controller
                     jumpParticle.Play();
                     runParticle.Stop();
                     //runParticle.Clear();
+                    settings.jumpShakeEvent.Raise();
                 }
             }
 
@@ -1204,7 +1205,7 @@ namespace KinematicTest.controller
             canChangedirection = true;
             jumpInitiated = false;
             Debug.Log("Landed");
-
+            settings.landingShakeEvent.Raise();
             if (CurrentCharacterState == PlayerStates.Idling || CurrentCharacterState == PlayerStates.Falling ||
                 CurrentCharacterState == PlayerStates.Tired)
             {

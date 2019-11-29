@@ -18,7 +18,7 @@ public class CameraShake : MonoBehaviour
             StopCoroutine(currentShakeCoroutine);
         }
 
-        currentShakeCoroutine = Shake(settings);
+        currentShakeCoroutine = Shake(properties);
         StartCoroutine(currentShakeCoroutine);
     }
 
