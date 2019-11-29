@@ -64,6 +64,7 @@ namespace AK
         static const AkUniqueID STOP_ALIEN_PLATFORMS = 123461200U;
         static const AkUniqueID STOP_BALL_PLATFORM = 2364261975U;
         static const AkUniqueID STOP_BALL_PLATFORM_DAMAGED = 2828692239U;
+        static const AkUniqueID STOP_BOSS_MUSIC = 1365336475U;
         static const AkUniqueID STOP_CRUSHER_MOVEMENT = 908305764U;
         static const AkUniqueID STOP_DAMAGED_PLATFORMS = 1039048512U;
         static const AkUniqueID STOP_DEATH_RAY = 2589440491U;
@@ -75,8 +76,9 @@ namespace AK
         static const AkUniqueID STOP_LAZER_WALL = 2988481851U;
         static const AkUniqueID STOP_NORMAL_PLATFORMS = 2590299724U;
         static const AkUniqueID STOP_PLATFORM_PILLAR_DAMAGED = 2388799556U;
-        static const AkUniqueID STOP_SENTINEL_LAZER = 1979601577U;
+        static const AkUniqueID STOP_Z4_MUSIC = 2475844034U;
         static const AkUniqueID STOPALL = 3086540886U;
+        static const AkUniqueID ZONES_MUSIC = 2294038358U;
     } // namespace EVENTS
 
     namespace STATES
