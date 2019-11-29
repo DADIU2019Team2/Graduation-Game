@@ -103,4 +103,6 @@ public class PlayerControllerSettings : ScriptableObject
     public bool AllowDoubleJump;
     [Tooltip("Unused")]
     public bool AllowJumpingWhenSliding;
+
+    
 }
