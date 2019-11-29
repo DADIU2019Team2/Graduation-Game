@@ -82,6 +82,7 @@ public class InputManager : MonoBehaviour
                     isDragging = false;
                     break;
                 case TouchPhase.Moved:
+                /*
                     endPosition = touch.position;
                     swipeDirection = (endPosition - initPosition);
                     if (swipeDirection.magnitude > Screen.width/10f && touchStarted)//50f)
@@ -118,6 +119,7 @@ public class InputManager : MonoBehaviour
                     }
 
                     isDragging = false;
+                    */
                     break;
                 case TouchPhase.Ended:
                     endPosition = touch.position;
@@ -144,7 +146,7 @@ public class InputManager : MonoBehaviour
                         }
                         if (GameManager.GetGameState() == GameStateScriptableObject.GameState.cinematic)
                         {
-                            onSwipeInCinematicEvent.Raise();
+                            //onSwipeInCinematicEvent.Raise();
                         }
 
                     }
