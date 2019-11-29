@@ -136,6 +136,10 @@ namespace KinematicTest.controller
         // Settings
         public PlayerControllerSettings settings;
 
+        //Particles
+        public ParticleSystem jumpParticle;
+        public ParticleSystem runParticle;
+
         // Debug stuff
         public PlayerStates CurrentCharacterState;
         public WorldForward CurrentWorldForward;
@@ -155,6 +159,8 @@ namespace KinematicTest.controller
         private float _timeSinceDamageTaken;
         private bool canTakeDamage = true;
         private float damageResetTimer;
+
+        
 
         void Init()
         {
@@ -486,6 +492,13 @@ namespace KinematicTest.controller
                     TransitionToState(PlayerStates.Tired);
                     jumpFromWallRequested = true;
                 }
+                if (CurrentCharacterState == PlayerStates.Running || CurrentCharacterState == PlayerStates.Sliding)
+                {
+                    Debug.Log("Playing Jump Particle");
+                    jumpParticle.Play();
+                    runParticle.Stop();
+                    //runParticle.Clear();
+                }
             }
 
             if (inputs.stopDown)
@@ -595,9 +608,14 @@ namespace KinematicTest.controller
         /// </summary>
         public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)
         {
+            
             Vector3 targetMovementVelocity = Vector3.zero;
             if (Motor.GroundingStatus.IsStableOnGround)
             {
+                if (!runParticle.isPlaying)
+                {
+                    runParticle.Play();
+                }
                 Gravity = riseGravity * baseGravity;
                 // Reorient source velocity on current ground slope (this is because we don't want our smoothing to cause any velocity losses in slope changes)
                 currentVelocity =
@@ -1215,7 +1233,10 @@ namespace KinematicTest.controller
                 lastVelocityBeforeJump = Motor.Velocity;
                 canChangedirection = false;
             }
-
+            if (runParticle.isPlaying)
+            {
+               runParticle.Stop();
+            }
             Debug.Log("Left ground");
         }
 
