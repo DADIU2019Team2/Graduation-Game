@@ -29,11 +29,11 @@ public class TrackSelectorGradiuationGames : MonoBehaviour
 
     public void ResetCam(GameObject cam)
     {
+        cam.GetComponent<CinemachineDollyCart>().m_Position = 0;
         cam.GetComponent<CinemachineDollyCart>().enabled = false;
         cam.GetComponent<PlayableDirector>().enabled = false;
         InitialPositionContainer initialTransform = cam.GetComponent<InitialPositionContainer>();
         cam.transform.SetPositionAndRotation(initialTransform.initialPosition, initialTransform.InitialRotation); //should reset the cam properly
-        cam.GetComponent<CinemachineDollyCart>().m_Position = 0;
         cam.GetComponent<PlayableDirector>().initialTime = 0;
     }
 
@@ -54,16 +54,16 @@ public class TrackSelectorGradiuationGames : MonoBehaviour
             item.GetComponent<PlayableDirector>().time = 0;
             if (item.GetComponent<CinemachineDollyCart>() != null)
             {
-            item.GetComponent<CinemachineDollyCart>().enabled = false;
             item.GetComponent<CinemachineDollyCart>().m_Position = 0;
+            item.GetComponent<CinemachineDollyCart>().enabled = false;
             }
             item.GetComponent<PlayableDirector>().enabled = false;
             item.GetComponent<CinemachineVirtualCamera>().Priority = 0;
         }
+        cam.GetComponent<CinemachineDollyCart>().enabled = true;
         cam.GetComponent<CinemachineDollyCart>().m_Position = 0;
         cam.GetComponent<CinemachineVirtualCamera>().Priority = 11;
         cam.GetComponent<CinemachineVirtualCamera>().enabled = true;
-        cam.GetComponent<CinemachineDollyCart>().enabled = true;
         cam.GetComponent<PlayableDirector>().enabled = true;
 
         
