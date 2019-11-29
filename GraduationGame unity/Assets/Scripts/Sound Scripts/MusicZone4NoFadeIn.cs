@@ -15,11 +15,9 @@ public class MusicZone4NoFadeIn : MonoBehaviour
         
         AkSoundEngine.SetState("Zones", "Zone4");
 
+        AkSoundEngine.PostEvent("Zones_Music", gameObject);
+
         AkSoundEngine.PostEvent("Level_Start", gameObject);
-        
-        AkSoundEngine.PostEvent("Play_Zone4_Music", gameObject);
-        
-        AkSoundEngine.SetRTPCValue("Happy_Drumz", 2);
 
         AkSoundEngine.PostEvent("Play_Ambience_Z4", gameObject);
     }

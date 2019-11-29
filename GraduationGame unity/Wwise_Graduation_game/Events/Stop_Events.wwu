@@ -305,6 +305,34 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_Z4_Music" ID="{A197E409-32E7-4DEB-9DC5-DF7EE937A446}">
+					<ChildrenList>
+						<Action Name="" ID="{28867067-91D9-441B-B6D8-17E82FEFFB71}" ShortID="887029306">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Z4_Music_Layers_Playlist" ID="{54637011-86DB-4E7F-8F77-B74FA7D9E880}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Boss_Music" ID="{C4711BB4-7182-47E1-A21F-952BC479AD45}">
+					<ChildrenList>
+						<Action Name="" ID="{A8FA4D9E-6F50-402D-8582-CD9F435A9223}" ShortID="252256317">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BossMusic" ID="{5E524876-A6F7-4A42-96A3-62477E1AB43D}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
