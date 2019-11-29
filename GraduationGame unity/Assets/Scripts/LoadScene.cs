@@ -43,19 +43,24 @@ public class LoadScene : MonoBehaviour
     {
         StartCoroutine(LoadSceneAsyncWithProgress(sceneIndex));
     }
+
     IEnumerator LoadSceneAsyncWithProgress(int sceneIndex)
     {
         AsyncOperation loadProgress = SceneManager.LoadSceneAsync(sceneIndex);
 
-        while(loadProgress.progress < 1)
+        
+        while(!loadProgress.isDone)
         {
             //do the progess bar fill stuff
-            if(loadProgressBar != null)
-            {
-                loadProgressBar.fillAmount = loadProgress.progress;
-            }
+            //if(loadProgressBar != null)
+            //{
+            //    loadProgressBar.fillAmount = loadProgress.progress;
+            //}
+            Debug.Log("!Load Progress: " + loadProgress.progress);
             yield return new WaitForEndOfFrame();
+           
         }
+        Debug.Log("Done");
     }
 
 
