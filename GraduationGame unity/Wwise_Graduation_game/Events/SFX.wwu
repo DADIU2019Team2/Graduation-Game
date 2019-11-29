@@ -779,54 +779,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Crusher_Impact" ID="{7AABDDDC-5570-4EFA-B6EA-D55CFE49D071}">
-					<ChildrenList>
-						<Action Name="" ID="{40C1E61A-870D-46FF-9575-57B7B7C021C7}" ShortID="71923815">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Crusher_Impact" ID="{16711FF7-8780-4AA3-A430-CD343AB646A5}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Crusher_Movement" ID="{5B2EC50D-42A9-416D-B3EE-4B8A4163E859}">
-					<ChildrenList>
-						<Action Name="" ID="{8F58D5C9-2A83-4353-9477-68B731F1CD4A}" ShortID="344760617">
-							<PropertyList>
-								<Property Name="FadeTime" Type="Real64" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Crusher_Movement" ID="{18957C82-238E-4F49-9773-A8E1332F8545}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{104CC650-657F-4DDA-B4F5-666617E56232}" ShortID="1019726295">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="36"/>
-								<Property Name="SeekPercent" Type="Real64">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{24B56668-D011-4050-8AA2-CBDE076FDF56}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="40"/>
-													<Property Name="Min" Type="Real64" Value="-40"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Crusher_Movement" ID="{18957C82-238E-4F49-9773-A8E1332F8545}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Other_Lazer" ID="{A845809C-778E-4C20-BD35-6A08D6691B02}">
 					<ChildrenList>
 						<Action Name="" ID="{EFB31668-C262-4C0D-AF50-3A8309B13ADB}" ShortID="150352079">
@@ -870,6 +822,28 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Drill" ID="{6F96DF12-53B3-402D-9216-9D9714C89628}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Crusher_Impact" ID="{0045D323-B38C-425A-83D5-815F11CF0FB8}">
+					<ChildrenList>
+						<Action Name="" ID="{7E2F9DD4-BEA8-42C6-9B15-B9954364FF44}" ShortID="51189933">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Crusher_Impact" ID="{87A3C083-84EE-49A6-84B4-34AC148E95C8}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Crusher_Movement" ID="{DB922ECF-1B94-4BB1-91D1-6DCB091F52D5}">
+					<ChildrenList>
+						<Action Name="" ID="{4E209605-FFE7-47F3-96C9-105AB8FC8375}" ShortID="647582363">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Crusher_Movement" ID="{18957C82-238E-4F49-9773-A8E1332F8545}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
