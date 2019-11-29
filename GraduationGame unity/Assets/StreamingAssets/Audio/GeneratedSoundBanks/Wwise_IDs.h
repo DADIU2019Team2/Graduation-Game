@@ -29,8 +29,6 @@ namespace AK
         static const AkUniqueID DAMAGED_PLATFORMS = 624837759U;
         static const AkUniqueID DEATH_RAY = 977466704U;
         static const AkUniqueID DEATH_SAW = 507840475U;
-        static const AkUniqueID DIALOGUE_ANGRY = 2801479097U;
-        static const AkUniqueID DIALOGUE_HAPPY = 2714452976U;
         static const AkUniqueID DOOR_CLOSES = 900426207U;
         static const AkUniqueID DOOR_OPENING = 2589897592U;
         static const AkUniqueID DRILL = 2168413864U;
@@ -66,6 +64,7 @@ namespace AK
         static const AkUniqueID STOP_ALIEN_PLATFORMS = 123461200U;
         static const AkUniqueID STOP_BALL_PLATFORM = 2364261975U;
         static const AkUniqueID STOP_BALL_PLATFORM_DAMAGED = 2828692239U;
+        static const AkUniqueID STOP_CRUSHER_MOVEMENT = 908305764U;
         static const AkUniqueID STOP_DAMAGED_PLATFORMS = 1039048512U;
         static const AkUniqueID STOP_DEATH_RAY = 2589440491U;
         static const AkUniqueID STOP_DEATH_SAW = 3058963576U;
@@ -74,7 +73,6 @@ namespace AK
         static const AkUniqueID STOP_LAZER_MED = 1196263023U;
         static const AkUniqueID STOP_LAZER_SMALL = 133929472U;
         static const AkUniqueID STOP_LAZER_WALL = 2988481851U;
-        static const AkUniqueID STOP_MACHINES = 2674413038U;
         static const AkUniqueID STOP_NORMAL_PLATFORMS = 2590299724U;
         static const AkUniqueID STOP_PLATFORM_PILLAR_DAMAGED = 2388799556U;
         static const AkUniqueID STOP_SENTINEL_LAZER = 1979601577U;
@@ -102,8 +100,6 @@ namespace AK
             {
                 static const AkUniqueID BOSSFIGHT = 580146960U;
                 static const AkUniqueID CREDITS = 2201105581U;
-                static const AkUniqueID DIALOGUE_ANGRY = 2801479097U;
-                static const AkUniqueID DIALOGUE_HAPPY = 2714452976U;
                 static const AkUniqueID LEVEL_COMPLETE = 3736098925U;
                 static const AkUniqueID MENU = 2607556080U;
                 static const AkUniqueID ZONE1 = 831766780U;
