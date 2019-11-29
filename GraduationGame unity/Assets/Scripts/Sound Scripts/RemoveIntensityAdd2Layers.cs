@@ -17,6 +17,7 @@ void OnTriggerEnter (Collider other)
     AkSoundEngine.SetRTPCValue("Angry_Music_Layer", 0);
     AkSoundEngine.SetRTPCValue("Happy_Drumz", 5);
     AkSoundEngine.SetRTPCValue("Happy_Bass", 5);
+    AkSoundEngine.SetRTPCValue("Happy_Synth", 0);
     
 }
 
