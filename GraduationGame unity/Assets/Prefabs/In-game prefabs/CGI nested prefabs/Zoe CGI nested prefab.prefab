@@ -140,6 +140,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mesh: {fileID: 1991551343171912972}
   scarf: {fileID: 9137305420583934476}
+--- !u!114 &583391666588083544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061076023035667676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2acb41c5534a2840935ccc1ded9dcc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterController: {fileID: 0}
+  animator: {fileID: 4921083781489621941}
+  predictionTime: 0.1
+  zoeRoot: {fileID: 1671306488769873081}
+  fadeTimeInFrames: 1
+  normalJumpRatio: 2
+  backflipRatio: 1
+  cheatGainerRatio: 1
 --- !u!114 &1361089579501361998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,26 +189,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: MiniGame2.Events.UnityIntEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &583391666588083544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061076023035667676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2acb41c5534a2840935ccc1ded9dcc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterController: {fileID: 0}
-  animator: {fileID: 4921083781489621941}
-  predictionTime: 0.1
-  zoeRoot: {fileID: 1671306488769873081}
-  fadeTimeInFrames: 1
-  normalJumpRatio: 2
-  backflipRatio: 1
-  cheatGainerRatio: 1
 --- !u!1001 &157595241779983920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -953,7 +953,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: fcdd696e50cdcab4aa29d0fd6ed9cb28, type: 2}
+      objectReference: {fileID: 9100000, guid: 4395471f881847c41a4599ed4b5e581a, type: 2}
     - target: {fileID: -6057140222963153312, guid: 329a7e5eb6197174f8fea5b37ad3afdb,
         type: 3}
       propertyPath: m_ApplyRootMotion
