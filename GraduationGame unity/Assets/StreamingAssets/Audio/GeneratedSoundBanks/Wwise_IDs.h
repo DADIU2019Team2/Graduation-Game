@@ -100,8 +100,6 @@ namespace AK
             {
                 static const AkUniqueID BOSSFIGHT = 580146960U;
                 static const AkUniqueID CREDITS = 2201105581U;
-                static const AkUniqueID DIALOGUE_ANGRY = 2801479097U;
-                static const AkUniqueID DIALOGUE_HAPPY = 2714452976U;
                 static const AkUniqueID LEVEL_COMPLETE = 3736098925U;
                 static const AkUniqueID MENU = 2607556080U;
                 static const AkUniqueID ZONE1 = 831766780U;
