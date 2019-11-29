@@ -34,17 +34,20 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: FallingGroundDetected
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 1
   serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.3181818
-  m_HasExitTime: 1
+  m_TransitionDuration: 0
+  m_TransitionOffset: 1.1538463
+  m_ExitTime: 1.0000002
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -159,7 +162,6 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
-  - {fileID: -1727879064246392780}
   - {fileID: -3167422138813453073}
   - {fileID: -1216971079032227733}
   m_StateMachineBehaviours: []
@@ -233,7 +235,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: slidejump_02
-  m_Speed: 1
+  m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -9036651543164648924}
@@ -245,7 +247,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 1
+  m_TimeParameterActive: 0
   m_Motion: {fileID: -1816032958284323178, guid: 68f766e590a9f3242a3fe63048fa3f1f,
     type: 3}
   m_Tag: 
@@ -2423,28 +2425,6 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
---- !u!1101 &-1727879064246392780
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions: []
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 8678911350325593259}
-  m_Solo: 0
-  m_Mute: 1
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.25000006
-  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -5013,7 +4993,7 @@ AnimatorStateMachine:
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: -30, y: 160, z: 0}
   m_ExitPosition: {x: 510, y: 110, z: 0}
-  m_ParentStateMachinePosition: {x: 710, y: 10, z: 0}
+  m_ParentStateMachinePosition: {x: 810, y: 720, z: 0}
   m_DefaultState: {fileID: -7173760188543235164}
 --- !u!1102 &6618098737688511184
 AnimatorState:
@@ -5947,9 +5927,9 @@ AnimatorStateMachine:
   - {fileID: -1038165417207589045}
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: -5935543014480835525}
-    second: []
   - first: {fileID: -1861324689789072525}
+    second: []
+  - first: {fileID: -5935543014480835525}
     second: []
   - first: {fileID: 6609565276898230334}
     second:
