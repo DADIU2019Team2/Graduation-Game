@@ -24,6 +24,7 @@ private bool IsInCollider = false;
         AkSoundEngine.SetRTPCValue("Music_Layer_Z2", 0);
         AkSoundEngine.SetRTPCValue("Music_Layer_Z3", 0);
         AkSoundEngine.SetRTPCValue("Music_Layer_Z4", 0);
+       
     }
 }
     
