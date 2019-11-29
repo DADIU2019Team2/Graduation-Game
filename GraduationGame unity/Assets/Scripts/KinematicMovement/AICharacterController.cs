@@ -22,7 +22,7 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
     [Space(10)] public KinematicCharacterMotor Motor;
 
     public AISettings settings;
-
+    public Animator animator;
     private float MaxStableMoveSpeed;
     private float StableMovementSharpness;
     private float OrientationSharpness;
@@ -40,6 +40,9 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
     private bool isActive;
     public AIStates CurrentAIState;
 
+    private bool stoppedForAWhile;
+
+    private float _stopTimer;
     //Player Damage
     public IntVariable damage;
 
@@ -94,12 +97,13 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
             case AIStates.Idling:
             {
                 MaxStableMoveSpeed = 0f;
-
+                animator.SetBool("idling",true);
                 break;
             }
             case AIStates.Chasing:
             {
                 MaxStableMoveSpeed = settings.MaxStableMoveSpeed;
+                animator.SetBool("isChasing",true);
                 break;
             }
         }
@@ -111,10 +115,12 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
         {
             case AIStates.Idling:
             {
+                animator.SetBool("idling",false);
                 break;
             }
             case AIStates.Chasing:
             {
+                animator.SetBool("isChasing",false);
                 break;
             }
         }
@@ -228,6 +234,7 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
     public void BeforeCharacterUpdate(float deltaTime)
     {
         if (GameManager.GetGameState() != GameStateScriptableObject.GameState.mainGameplayLoop) return;
+
         if (!isActive)
         {
             if (CurrentAIState != AIStates.Idling)
@@ -241,6 +248,23 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
         {
             _avoidObstacles = AvoidObstacles();
             TransitionToState(_avoidObstacles ? AIStates.Idling : AIStates.Chasing);
+
+            if (Mathf.Approximately(Motor.Velocity.magnitude, 0f) && CurrentAIState == AIStates.Chasing)
+            {
+                _stopTimer += deltaTime;
+
+
+                if (_stopTimer >= 0.1f)
+                {
+                    stoppedForAWhile = true;
+                }
+            }
+
+            if (stoppedForAWhile)
+            {
+                isActive=false;
+                stoppedForAWhile = false;
+            }
         }
     }
 

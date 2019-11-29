@@ -233,10 +233,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerToFollow: {fileID: 0}
   charMotor: {fileID: 0}
-  smoothTime: 0.1
   rotationSpeed: 0.5
+  XSmoothTime: 0.1
+  YSmoothTime: 0.15
   localOffSet: {x: 0, y: 2, z: -9.89}
   maxDistToLookAtPoint: 5
   stopZoomOutDistance: 5
   zoomOutAfterSeconds: 2
   zoomOutDuration: 2
+  deadZoneXLeft: 0
+  deadZoneXRight: 0
+  deadZoneYTop: 0.69
+  deadZoneYBot: 0
