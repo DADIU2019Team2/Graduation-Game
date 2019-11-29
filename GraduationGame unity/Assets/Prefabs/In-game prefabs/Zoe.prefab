@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 561386183475680734}
   - component: {fileID: 7000194563354543299}
   - component: {fileID: 6906147582193115034}
-  - component: {fileID: 6973565534241992903}
+  - component: {fileID: 6040881924180595884}
   m_Layer: 12
   m_Name: Zoe
   m_TagString: Player
@@ -207,7 +207,7 @@ MonoBehaviour:
   rootJoint: {fileID: 3254934087477259663}
   trajectoryPoints: []
   trajectoryForwards: []
---- !u!114 &6973565534241992903
+--- !u!114 &6040881924180595884
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7061101915596454357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58374a0123b143241a9e674a9b1c5dac, type: 3}
+  m_Script: {fileID: 11500000, guid: 853ff07d9053ee345ab929e7e13f66ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   poseData: {fileID: 11400000, guid: 8ccdfc65f29cf4d4e8f1ada5fffa51e5, type: 2}
@@ -225,26 +225,26 @@ MonoBehaviour:
   poseRefreshRate: 3
   crossFadeTime: 0.3
   isMotionMatchingRunning: 0
-  applyRootMotion: 0
+  bestTrajectoryAmount: 10
+  banThreshold: 0.3
+  trajWeights:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  poseWeights:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
   bestIndex: 0
-  ignoreTag: 0
-  trajectoryToPoseRatio: 0.5
-  weights:
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  isDefault: 1
+  current: 
 --- !u!1001 &3325513009486544416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -491,12 +491,12 @@ PrefabInstance:
         type: 3}
       propertyPath: mmAnimatorController
       value: 
-      objectReference: {fileID: 6973565534241992903}
+      objectReference: {fileID: 0}
     - target: {fileID: 4921083781489621941, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: mmAnimatorController
       value: 
-      objectReference: {fileID: 6973565534241992903}
+      objectReference: {fileID: 0}
     - target: {fileID: 3080796817555412687, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -541,7 +541,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mmAnimatorController
       value: 
-      objectReference: {fileID: 6973565534241992903}
+      objectReference: {fileID: 0}
     - target: {fileID: 5098929951345463636, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: characterController
@@ -556,7 +556,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mmAnimatorController
       value: 
-      objectReference: {fileID: 6973565534241992903}
+      objectReference: {fileID: 0}
     - target: {fileID: 5098929951345463636, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: characterController
@@ -576,7 +576,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mmAnimatorController
       value: 
-      objectReference: {fileID: 6973565534241992903}
+      objectReference: {fileID: 0}
     - target: {fileID: 5098929951345463636, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: characterController
@@ -591,7 +591,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mmAnimatorController
       value: 
-      objectReference: {fileID: 6973565534241992903}
+      objectReference: {fileID: 0}
     - target: {fileID: 5098929951345463636, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: characterController
@@ -606,7 +606,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mmAnimatorController
       value: 
-      objectReference: {fileID: 6973565534241992903}
+      objectReference: {fileID: 0}
     - target: {fileID: 5098929951345463636, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: characterController
@@ -621,7 +621,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mmAnimatorController
       value: 
-      objectReference: {fileID: 6973565534241992903}
+      objectReference: {fileID: 0}
     - target: {fileID: 5098929951345463636, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: characterController
@@ -636,7 +636,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mmAnimatorController
       value: 
-      objectReference: {fileID: 6973565534241992903}
+      objectReference: {fileID: 0}
     - target: {fileID: 5098929951345463636, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: characterController
@@ -651,12 +651,12 @@ PrefabInstance:
         type: 3}
       propertyPath: mmAnimatorController
       value: 
-      objectReference: {fileID: 6973565534241992903}
+      objectReference: {fileID: 0}
     - target: {fileID: 5098929951345463636, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: mmAnimatorController
       value: 
-      objectReference: {fileID: 6973565534241992903}
+      objectReference: {fileID: 0}
     - target: {fileID: 5098929951345463636, guid: c56af13980f30264faf082e0a0414ff6,
         type: 3}
       propertyPath: characterController
