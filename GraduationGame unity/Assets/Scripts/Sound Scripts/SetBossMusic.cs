@@ -17,9 +17,9 @@ private bool IsInCollider = false;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag != "Player" || IsInCollider) { return; }
-        AkSoundEngine.SetState("Zones", "BossFight");
-        AkSoundEngine.PostEvent("BossMusic", gameObject);
-       
+
+        AkSoundEngine.SetState("Zones", "BossFight");
+        
     }
 }
     

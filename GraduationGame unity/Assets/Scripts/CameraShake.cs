@@ -18,7 +18,7 @@ public class CameraShake : MonoBehaviour
             StopCoroutine(currentShakeCoroutine);
         }
 
-        currentShakeCoroutine = Shake(settings);
+        currentShakeCoroutine = Shake(properties);
         StartCoroutine(currentShakeCoroutine);
     }
 
@@ -38,6 +38,9 @@ public class CameraShake : MonoBehaviour
         float movePercent = 0;
 
         float angle_radians = settings.angle * Mathf.Deg2Rad - Mathf.PI;
+        float angle_radiansX = settings.angleX * Mathf.Deg2Rad - Mathf.PI;
+        float angle_radiansY = settings.angleY * Mathf.Deg2Rad - Mathf.PI;
+
         Vector3 previousWaypoint = Vector3.zero;
         Vector3 currentWaypoint = Vector3.zero;
         float moveDistance = 0;
@@ -56,8 +59,11 @@ public class CameraShake : MonoBehaviour
                 Debug.Log("completionPercent " + completionPercent);
                 Debug.Log("dampingPercent " + settings.dampingPercent);
                 float noiseAngle = (Random.value - .5f) * Mathf.PI;
-                angle_radians += Mathf.PI + noiseAngle * settings.noisePercent;
-                currentWaypoint = new Vector3(Mathf.Cos(angle_radians), Mathf.Sin(angle_radians)) *
+                angle_radians +=  (Mathf.PI + noiseAngle) * settings.noisePercent;
+                angle_radiansX += (Mathf.PI + noiseAngle) * settings.noisePercent;
+                angle_radiansY += (Mathf.PI + noiseAngle) * settings.noisePercent;
+
+                currentWaypoint = new Vector3(Mathf.Cos(angle_radiansX), Mathf.Sin(angle_radiansY)) *
                                   settings.strength * dampingFactor;
                 previousWaypoint = transform.localPosition;
                 moveDistance = Vector3.Distance(currentWaypoint, previousWaypoint);
