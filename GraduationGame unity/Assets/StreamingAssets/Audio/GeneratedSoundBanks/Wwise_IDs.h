@@ -29,8 +29,6 @@ namespace AK
         static const AkUniqueID DAMAGED_PLATFORMS = 624837759U;
         static const AkUniqueID DEATH_RAY = 977466704U;
         static const AkUniqueID DEATH_SAW = 507840475U;
-        static const AkUniqueID DIALOGUE_ANGRY = 2801479097U;
-        static const AkUniqueID DIALOGUE_HAPPY = 2714452976U;
         static const AkUniqueID DOOR_CLOSES = 900426207U;
         static const AkUniqueID DOOR_OPENING = 2589897592U;
         static const AkUniqueID DRILL = 2168413864U;
