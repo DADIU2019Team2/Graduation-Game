@@ -430,20 +430,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Sentinel_Lazer" ID="{E6808DF9-3AA5-45D6-AAFC-7FB7D10437BA}">
-					<ChildrenList>
-						<Action Name="" ID="{E7009477-8307-46E6-A3B4-336F91D5B244}" ShortID="184763627">
-							<PropertyList>
-								<Property Name="FadeTime" Type="Real64" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Sentinel_Lazer" ID="{C0AD2A14-D04B-4E1D-A581-518B49901588}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Alien_Crystal_Hum" ID="{24B4C17E-41B5-4992-BE43-71ACB3F812F7}">
 					<ChildrenList>
 						<Action Name="" ID="{E29F0522-E3B6-40E6-9E73-D991FFA2D7BF}" ShortID="108946132">
@@ -827,23 +813,34 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Crusher_Impact" ID="{0045D323-B38C-425A-83D5-815F11CF0FB8}">
-					<ChildrenList>
-						<Action Name="" ID="{7E2F9DD4-BEA8-42C6-9B15-B9954364FF44}" ShortID="51189933">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Crusher_Impact" ID="{87A3C083-84EE-49A6-84B4-34AC148E95C8}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Crusher_Movement" ID="{DB922ECF-1B94-4BB1-91D1-6DCB091F52D5}">
 					<ChildrenList>
 						<Action Name="" ID="{4E209605-FFE7-47F3-96C9-105AB8FC8375}" ShortID="647582363">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Crusher_Movement" ID="{18957C82-238E-4F49-9773-A8E1332F8545}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Sentinel_Lazer" ID="{A9FB82FE-319E-4964-A164-1138A70D046C}">
+					<ChildrenList>
+						<Action Name="" ID="{72E2FED2-56D8-41D6-BC53-49E6B68DE0BD}" ShortID="460535464">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sentinel_Lazer" ID="{C0AD2A14-D04B-4E1D-A581-518B49901588}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Crusher_Impact" ID="{AF39F963-CFC6-45D5-B4AA-CC7BDF0510E7}">
+					<ChildrenList>
+						<Action Name="" ID="{91C15EF2-D6CD-4C93-83CE-94A5D383314F}" ShortID="520810442">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Crusher_Impact_1" ID="{3712BC27-C5A7-4C88-899E-34D1BE131233}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
