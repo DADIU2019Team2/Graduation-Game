@@ -497,7 +497,7 @@ namespace KinematicTest.controller
                     Debug.Log("Playing Jump Particle");
                     jumpParticle.Play();
                     runParticle.Stop();
-                    runParticle.Clear();
+                    //runParticle.Clear();
                 }
             }
 
@@ -608,13 +608,14 @@ namespace KinematicTest.controller
         /// </summary>
         public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)
         {
-            if (!runParticle.isPlaying)
-            {
-                runParticle.Play();
-            }
+            
             Vector3 targetMovementVelocity = Vector3.zero;
             if (Motor.GroundingStatus.IsStableOnGround)
             {
+                if (!runParticle.isPlaying)
+                {
+                    runParticle.Play();
+                }
                 Gravity = riseGravity * baseGravity;
                 // Reorient source velocity on current ground slope (this is because we don't want our smoothing to cause any velocity losses in slope changes)
                 currentVelocity =
