@@ -12,7 +12,7 @@ public class MMSeparatedController : MonoBehaviour
     public MMMotionData poseData;
     public MotionMatchable predictor;
     public Animator animator;
-    [Range(1, 60)] public int poseRefreshRate = 2;
+    [Range(1, 60)] public int poseRefreshRate = 3;
     [Range(0f, 1f)] public float crossFadeTime = 0.3f;
     public bool isMotionMatchingRunning;
     private NativeArray<float3> trajectoryNativeArray;
