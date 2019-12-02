@@ -9,6 +9,8 @@ public class LoadOnStartup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Screen.SetResolution(1480,720,true);
+        Screen.sleepTimeout= SleepTimeout.NeverSleep;
         mainMenuIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
         SaveLoad.Load();
         Time.timeScale = 1;
