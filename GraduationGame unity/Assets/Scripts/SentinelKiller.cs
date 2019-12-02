@@ -7,17 +7,25 @@ using Random = UnityEngine.Random;
 public class SentinelKiller : MonoBehaviour, IOnSceneReset
 {
     public GameObject sentinelLeft;
+    public GameObject sentinelLaserLeft;
     public GameObject sentinelRight;
+    public GameObject sentinelLaserRight;
+    public Transform sentinelLeftPlatform;
+    public Transform sentinelRightPlatform;
+    
     public GameObject sentinelBrokenLeft;
     public GameObject sentinelBrokenRight;
     public float distance;
     public float killDistance;
-    public Vector3 explosionPoint;
+    [Range(0,100f)] public float explosionPower;
+    public float explosionRadius;
+    public float upwardsForce;
     private Vector3[] localPartPositions;
     private Rigidbody[] leftPartTransforms;
     private Rigidbody[] rightPartTransforms;
     private Vector3 force;
     private bool isDead;
+    private Color gizmoColor;
     private void Awake()
     {
         //save local positions of parts;
@@ -33,7 +41,7 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
     // Start is called before the first frame update
     private void Update()
     {
-        distance = Vector3.Distance(sentinelLeft.transform.position, sentinelRight.transform.position);
+        distance = Vector3.Distance(sentinelLeftPlatform.position, sentinelRightPlatform.position);
         if (distance < killDistance && !isDead)
         {
             Die();
@@ -43,19 +51,22 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
     private void Die()
     {
         isDead = true;
-        sentinelBrokenLeft.transform.position = sentinelLeft.transform.position;
-        sentinelBrokenRight.transform.position = sentinelRight.transform.position;
+        sentinelBrokenLeft.transform.position = sentinelLeftPlatform.position;
+        sentinelBrokenRight.transform.position = sentinelRightPlatform.position;
         sentinelLeft.SetActive(false);
         sentinelRight.SetActive(false);
+        sentinelLaserLeft.SetActive(false);
+        sentinelLaserRight.SetActive(false);
+        
         sentinelBrokenLeft.SetActive(true);
         sentinelBrokenRight.SetActive(true);
         
-        
+        var position = transform.position;
         //add force
         for (int i = 0; i < leftPartTransforms.Length; i++)
         {
-            leftPartTransforms[i].AddExplosionForce(10000f,explosionPoint,100f);
-            rightPartTransforms[i].AddExplosionForce(10000f,explosionPoint,100f);
+            leftPartTransforms[i].AddExplosionForce(explosionPower,position,explosionRadius,upwardsForce);
+            rightPartTransforms[i].AddExplosionForce(explosionPower,position,explosionRadius,upwardsForce);
         }
         
         
@@ -64,21 +75,32 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
 
     public void OnResetLevel()
     {
-        isDead = false;
-        sentinelBrokenLeft.transform.position = sentinelLeft.transform.position;
-        sentinelBrokenRight.transform.position = sentinelRight.transform.position;
         sentinelLeft.SetActive(true);
         sentinelRight.SetActive(true);
+        sentinelLaserLeft.SetActive(true);
+        sentinelLaserRight.SetActive(true);
+        
+        sentinelBrokenLeft.transform.position = sentinelLeftPlatform.position;
+        sentinelBrokenRight.transform.position = sentinelRightPlatform.position;
         sentinelBrokenLeft.SetActive(false);
         sentinelBrokenRight.SetActive(false);
         for (int i = 0; i < leftPartTransforms.Length; i++)
         {
+            
+            leftPartTransforms[i].ResetInertiaTensor();
+            rightPartTransforms[i].ResetInertiaTensor();
             leftPartTransforms[i].transform.localPosition = localPartPositions[i];
             leftPartTransforms[i].transform.rotation = Quaternion.identity;
             rightPartTransforms[i].transform.localPosition = localPartPositions[i];
             rightPartTransforms[i].transform.rotation = Quaternion.identity;
-            leftPartTransforms[i].ResetInertiaTensor();
-            rightPartTransforms[i].ResetInertiaTensor();
         }
+        
+        isDead = false;
+    }
+    
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position,explosionRadius);
     }
 }
