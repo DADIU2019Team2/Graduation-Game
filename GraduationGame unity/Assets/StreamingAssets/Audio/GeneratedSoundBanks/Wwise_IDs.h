@@ -15,9 +15,6 @@ namespace AK
     {
         static const AkUniqueID ALIEN_CRYSTAL_HUM = 1839766762U;
         static const AkUniqueID ALIEN_DEATH_TRAP = 3641971009U;
-        static const AkUniqueID ALIEN_DOOR = 2127960809U;
-        static const AkUniqueID ALIEN_DOOR_OPEN = 1050974708U;
-        static const AkUniqueID ALIEN_PLATFORM_PILLAR = 41605727U;
         static const AkUniqueID AMBIENCE_OUTSIDE = 3996256281U;
         static const AkUniqueID BALL_PLATFORM = 1848730664U;
         static const AkUniqueID BALL_PLATFORM_DAMAGED = 2557453060U;
@@ -32,7 +29,6 @@ namespace AK
         static const AkUniqueID DOOR_CLOSES = 900426207U;
         static const AkUniqueID DOOR_OPENING = 2589897592U;
         static const AkUniqueID DRILL = 2168413864U;
-        static const AkUniqueID ELECTRICITY = 2917121896U;
         static const AkUniqueID GRABS = 238897438U;
         static const AkUniqueID JUMP_LAND = 3419686739U;
         static const AkUniqueID JUMP_TAKEOFF = 4186947444U;
@@ -67,8 +63,6 @@ namespace AK
         static const AkUniqueID STOP_BOSS_MUSIC = 1365336475U;
         static const AkUniqueID STOP_CRUSHER_MOVEMENT = 908305764U;
         static const AkUniqueID STOP_DAMAGED_PLATFORMS = 1039048512U;
-        static const AkUniqueID STOP_DEATH_RAY = 2589440491U;
-        static const AkUniqueID STOP_DEATH_SAW = 3058963576U;
         static const AkUniqueID STOP_DOOR = 3364702632U;
         static const AkUniqueID STOP_LAZER_BIG = 1532948175U;
         static const AkUniqueID STOP_LAZER_MED = 1196263023U;
