@@ -12,7 +12,8 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
     public GameObject sentinelLaserRight;
     public Transform sentinelLeftPlatform;
     public Transform sentinelRightPlatform;
-    
+    public GameObject explosionObject;
+    private ParticleSystem[] particles;
     public GameObject sentinelBrokenLeft;
     public GameObject sentinelBrokenRight;
     public float distance;
@@ -36,6 +37,8 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
         {
             localPartPositions[i] = leftPartTransforms[i].transform.localPosition;
         }
+
+        particles = explosionObject.GetComponentsInChildren<ParticleSystem>();
     }
 
     // Start is called before the first frame update
@@ -68,6 +71,11 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
             leftPartTransforms[i].AddExplosionForce(explosionPower,position,explosionRadius,upwardsForce);
             rightPartTransforms[i].AddExplosionForce(explosionPower,position,explosionRadius,upwardsForce);
         }
+
+        for (int i = 0; i < particles.Length; i++)
+        {
+            particles[i].Play();
+        }
         
         
         
@@ -93,6 +101,12 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
             leftPartTransforms[i].transform.rotation = Quaternion.identity;
             rightPartTransforms[i].transform.localPosition = localPartPositions[i];
             rightPartTransforms[i].transform.rotation = Quaternion.identity;
+        }
+        
+        for (int i = 0; i < particles.Length; i++)
+        {
+            particles[i].Stop();
+            particles[i].Clear();
         }
         
         isDead = false;

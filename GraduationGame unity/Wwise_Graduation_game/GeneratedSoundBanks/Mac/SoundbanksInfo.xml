@@ -23,9 +23,6 @@
 			<IncludedEvents>
 				<Event Id="1839766762" Name="Alien_Crystal_Hum" ObjectPath="\Events\Default Work Unit\SFX\Alien_Crystal_Hum" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="3641971009" Name="Alien_Death_Trap" ObjectPath="\Events\Default Work Unit\SFX\Alien_Death_Trap" MaxAttenuation="30.000000" DurationType="Infinite"/>
-				<Event Id="2127960809" Name="Alien_Door" ObjectPath="\Events\Default Work Unit\SFX\Alien_Door" MaxAttenuation="30.000000" DurationType="Infinite"/>
-				<Event Id="1050974708" Name="Alien_Door_Open" ObjectPath="\Events\Default Work Unit\SFX\Alien_Door_Open" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="3.057718" DurationMax="3.057718"/>
-				<Event Id="41605727" Name="Alien_Platform_Pillar" ObjectPath="\Events\Default Work Unit\SFX\Alien_Platform_Pillar" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="3996256281" Name="Ambience_Outside" ObjectPath="\Events\Default Work Unit\Ambience\Ambience_Outside" DurationType="Infinite"/>
 				<Event Id="1848730664" Name="Ball_Platform" ObjectPath="\Events\Default Work Unit\SFX\Ball_Platform" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="2557453060" Name="Ball_Platform_Damaged" ObjectPath="\Events\Default Work Unit\SFX\Ball_Platform_Damaged" MaxAttenuation="30.000000" DurationType="Infinite"/>
@@ -40,7 +37,6 @@
 				<Event Id="900426207" Name="Door_Closes" ObjectPath="\Events\Default Work Unit\SFX\Door_Closes" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="2.378414" DurationMax="2.378414"/>
 				<Event Id="2589897592" Name="Door_Opening" ObjectPath="\Events\Default Work Unit\SFX\Door_Opening" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="4.000000" DurationMax="4.000000"/>
 				<Event Id="2168413864" Name="Drill" ObjectPath="\Events\Default Work Unit\SFX\Drill" MaxAttenuation="30.000000" DurationType="Infinite"/>
-				<Event Id="2917121896" Name="Electricity" ObjectPath="\Events\Default Work Unit\SFX\Electricity" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="238897438" Name="Grabs" ObjectPath="\Events\Default Work Unit\Movement\Grabs" DurationType="OneShot" DurationMin="3.625011" DurationMax="3.625011"/>
 				<Event Id="3419686739" Name="Jump_Land" ObjectPath="\Events\Default Work Unit\Movement\Jump_Land" DurationType="OneShot" DurationMin="0.750000" DurationMax="0.750000"/>
 				<Event Id="4186947444" Name="Jump_Takeoff" ObjectPath="\Events\Default Work Unit\Movement\Jump_Takeoff" DurationType="OneShot" DurationMin="0.750000" DurationMax="0.750000"/>
@@ -75,8 +71,6 @@
 				<Event Id="1365336475" Name="Stop_Boss_Music" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Boss_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="908305764" Name="Stop_Crusher_Movement" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Crusher_Movement" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1039048512" Name="Stop_Damaged_Platforms" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Damaged_Platforms" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2589440491" Name="Stop_Death_Ray" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Death_Ray" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3058963576" Name="Stop_Death_Saw" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Death_Saw" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3364702632" Name="Stop_Door" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Door" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1532948175" Name="Stop_Lazer_Big" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Lazer_Big" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1196263023" Name="Stop_Lazer_Med" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Lazer_Med" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
@@ -253,10 +247,6 @@
 					<ShortName>Ambience_Z0.wav</ShortName>
 					<Path>SFX/Ambience_Z0_9B96ECC7.wem</Path>
 				</File>
-				<File Id="368246845" Language="SFX">
-					<ShortName>Stone_Door_Open.wav</ShortName>
-					<Path>SFX/Stone_Door_Open_6296B0F9.wem</Path>
-				</File>
 				<File Id="376925067" Language="SFX">
 					<ShortName>Ambience_Z1.wav</ShortName>
 					<Path>SFX/Ambience_Z1_9B96ECC7.wem</Path>
@@ -276,10 +266,6 @@
 				<File Id="410136948" Language="SFX">
 					<ShortName>Z2_Metal_Pad.wav</ShortName>
 					<Path>SFX/Z2_Metal_Pad_3EBA1927.wem</Path>
-				</File>
-				<File Id="440112324" Language="SFX">
-					<ShortName>Alien_Platform_Pillar.wav</ShortName>
-					<Path>SFX/Alien_Platform_Pillar_9B96ECC7.wem</Path>
 				</File>
 				<File Id="444060050" Language="SFX">
 					<ShortName>Lever_Sound.wav</ShortName>
@@ -321,10 +307,6 @@
 					<ShortName>Z4_Noisy_Arp.wav</ShortName>
 					<Path>SFX/Z4_Noisy_Arp_3EBA1927.wem</Path>
 				</File>
-				<File Id="515939369" Language="SFX">
-					<ShortName>Stone_Door_Hum.wav</ShortName>
-					<Path>SFX/Stone_Door_Hum_9B96ECC7.wem</Path>
-				</File>
 				<File Id="523264904" Language="SFX">
 					<ShortName>Ambience_Z2.wav</ShortName>
 					<Path>SFX/Ambience_Z2_9B96ECC7.wem</Path>
@@ -336,10 +318,6 @@
 				<File Id="569405528" Language="SFX">
 					<ShortName>Z4_Kick.wav</ShortName>
 					<Path>SFX/Z4_Kick_3EBA1927.wem</Path>
-				</File>
-				<File Id="578611982" Language="SFX">
-					<ShortName>Electricity.wav</ShortName>
-					<Path>SFX/Electricity_9B96ECC7.wem</Path>
 				</File>
 				<File Id="593156668" Language="SFX">
 					<ShortName>Z2_Dist_Synth.wav</ShortName>
