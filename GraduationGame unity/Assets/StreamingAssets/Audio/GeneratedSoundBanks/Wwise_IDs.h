@@ -16,9 +16,6 @@ namespace AK
         static const AkUniqueID ALIEN_CRYSTAL_HUM = 1839766762U;
         static const AkUniqueID ALIEN_DEATH_TRAP = 3641971009U;
         static const AkUniqueID ALIEN_PLATFORMS = 2755703943U;
-        static const AkUniqueID AMBIENCE_OUTSIDE = 3996256281U;
-        static const AkUniqueID BALL_PLATFORM = 1848730664U;
-        static const AkUniqueID BALL_PLATFORM_DAMAGED = 2557453060U;
         static const AkUniqueID BOSSMUSIC = 1427760111U;
         static const AkUniqueID CHECKPOINT_CRYSTAL = 1739986920U;
         static const AkUniqueID CREDITS_MUSIC = 1522595433U;
@@ -30,6 +27,7 @@ namespace AK
         static const AkUniqueID DOOR_CLOSES = 900426207U;
         static const AkUniqueID DOOR_OPENING = 2589897592U;
         static const AkUniqueID DRILL = 2168413864U;
+        static const AkUniqueID EXPLOSION = 13776098U;
         static const AkUniqueID GRABS = 238897438U;
         static const AkUniqueID JUMP_LAND = 3419686739U;
         static const AkUniqueID JUMP_TAKEOFF = 4186947444U;
@@ -59,8 +57,6 @@ namespace AK
         static const AkUniqueID SENTINEL_LAZER = 168295360U;
         static const AkUniqueID STOP_ALIEN_PLATFORM_PILLAR = 2176568168U;
         static const AkUniqueID STOP_ALIEN_PLATFORMS = 123461200U;
-        static const AkUniqueID STOP_BALL_PLATFORM = 2364261975U;
-        static const AkUniqueID STOP_BALL_PLATFORM_DAMAGED = 2828692239U;
         static const AkUniqueID STOP_BOSS_MUSIC = 1365336475U;
         static const AkUniqueID STOP_CRUSHER_MOVEMENT = 908305764U;
         static const AkUniqueID STOP_DAMAGED_PLATFORMS = 1039048512U;
