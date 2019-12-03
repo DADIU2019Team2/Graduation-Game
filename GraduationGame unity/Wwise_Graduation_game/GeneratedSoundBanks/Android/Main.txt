@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	123461200	Stop_Alien_Platforms			\Default Work Unit\Stop_Events\Stop_Alien_Platforms	
 	133929472	Stop_Lazer_Small			\Default Work Unit\Stop_Events\Stop_Lazer_Small	
+	168295360	Sentinel_Lazer			\Default Work Unit\SFX\Sentinel_Lazer	
 	238897438	Grabs			\Default Work Unit\Movement\Grabs	
 	352576276	Level_Start			\Default Work Unit\CelebrationSound\Level_Start	
 	507840475	Death_Saw			\Default Work Unit\SFX\Death_Saw	
@@ -27,18 +28,19 @@ Event	ID	Name			Wwise Object Path	Notes
 	1777268324	Lazer_Med			\Default Work Unit\SFX\Lazer_Med	
 	1839766762	Alien_Crystal_Hum			\Default Work Unit\SFX\Alien_Crystal_Hum	
 	1848730664	Ball_Platform			\Default Work Unit\SFX\Ball_Platform	
+	1979601577	Stop_Sentinel_Lazer			\Default Work Unit\Stop_Events\Stop_Sentinel_Lazer	
 	2168413864	Drill			\Default Work Unit\SFX\Drill	
 	2176568168	Stop_Alien_Platform_Pillar			\Default Work Unit\Stop_Events\Stop_Alien_Platform_Pillar	
 	2187783824	Robot_Appearence			\Default Work Unit\SFX\Robot_Appearence	
 	2294038358	Zones_Music			\Default Work Unit\Music\Zones_Music	
 	2364261975	Stop_Ball_Platform			\Default Work Unit\Stop_Events\Stop_Ball_Platform	
 	2381409572	Lazer_Big			\Default Work Unit\SFX\Lazer_Big	
-	2388799556	Stop_Platform_Pillar_Damaged			\Default Work Unit\Stop_Events\Stop_Platform_Pillar_Damaged	
 	2475844034	Stop_Z4_Music			\Default Work Unit\Stop_Events\Stop_Z4_Music	
 	2520750572	Roll_SFX			\Default Work Unit\Movement\Roll_SFX	
 	2557453060	Ball_Platform_Damaged			\Default Work Unit\SFX\Ball_Platform_Damaged	
 	2589897592	Door_Opening			\Default Work Unit\SFX\Door_Opening	
 	2590299724	Stop_Normal_Platforms			\Default Work Unit\Stop_Events\Stop_Normal_Platforms	
+	2755703943	Alien_Platforms			\Default Work Unit\SFX\Alien_Platforms	
 	2828692239	Stop_Ball_Platform_Damaged			\Default Work Unit\Stop_Events\Stop_Ball_Platform_Damaged	
 	2967932086	Lazer_Wall			\Default Work Unit\SFX\Lazer_Wall	
 	2988481851	Stop_Lazer_Wall			\Default Work Unit\Stop_Events\Stop_Lazer_Wall	
@@ -82,11 +84,9 @@ Custom State	ID	Name	State Group	Owner		Notes
 	17567335	Dead	Dead_or_Alive	\Interactive Music Hierarchy\Default Work Unit\Music		
 	37960415	Dead	Dead_or_Alive	\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist		
 	145353343	Dead	Dead_or_Alive	\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist		
-	941464526	Dead	Dead_or_Alive	\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist		
 	1027459869	Dead	Dead_or_Alive	\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	1022520457	Music_Layer_Z4			\Default Work Unit\Musical_Layers\Music_Layer_Z4	
 	1022520460	Music_Layer_Z1			\Default Work Unit\Musical_Layers\Music_Layer_Z1	
 	1022520462	Music_Layer_Z3			\Default Work Unit\Musical_Layers\Music_Layer_Z3	
 	1022520463	Music_Layer_Z2			\Default Work Unit\Musical_Layers\Music_Layer_Z2	
@@ -108,8 +108,6 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	7699699	Z1_Ascending_Metal	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Ascending_Metal_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Ascending_Metal		251281
 	11716284	Death_Saw	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Death_Saw_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Death_Saw		42469
-	22842696	Z4_Rising_Thingy	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Rising_Thingy_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Rising_Thingy		310032
-	25731778	Z4_Metal_Pad	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Metal_Pad_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Metal_Pad		318301
 	27614219	Credits_Music	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Credits_Music_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Credits\Credits_Music\Credits_Music		1271116
 	32006921	Z2_Happy_Bass	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Nasal_Bass_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Happy_Bass		286347
 	39273287	Slide_3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Slide_3_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Slide_With_Effect\Slide\Slide_3		15925
@@ -118,20 +116,23 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	45666109	Lazer_Small	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Lazer_Small_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Lazer_Small		22037
 	69704432	Level_Complete	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Level_Complete_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Level_Complete\CompleteSound\Level_Complete		49585
 	71967050	Z3_Happy_Drumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Drumz_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Happy_Drumz		275668
-	76766429	Z4AngryBass	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4AngryBass_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4AngryBass		349166
 	78088031	Z3_Dist_Synth_Melodic_Pattern	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Dist_Synth_Melodic_Pattern_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dist_Synth_Melodic_Pattern		266102
 	116201991	Z3AngryBass	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3AngryBass_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3AngryBass		253539
+	132090060	Z4_Flyde_Chords	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Flyde_Chords_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Flyde_Chords		319335
 	145167596	Z2_Hero_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Hero_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Hero_Arp		292814
 	154154251	Robot_Appearence	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Robot_Appearence_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Other\Robot_Appearence		105252
 	154960993	Z3_Dist_Synth_Harm2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Dist_Synth_Harm2_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dist_Synth_Harm2		236817
 	177260311	Gate_Impact	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Gate_Impact_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Gate_Impact		28802
-	179692943	Z4_Flyde_Chords	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Flyde_Chords_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Flyde_Chords		319335
 	184652951	Damaged_Platform_1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Damaged_Platform_1_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Damaged_Platforms\Damaged_Platform_1		166876
 	188704187	Z1_Dist_Klaver	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Dist_Klaver_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Dist_Klaver		255182
 	195294057	Other_Lazer	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Other_Lazer_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Other_Lazer		82629
+	196371876	Alien_Platform_2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Alien_Platform_2_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Alien_Platforms\Alien_Platform_2		30414
 	202632354	Alien_Crystal_Hum	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Alien_Crystal_Hum_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Alien_Crystal_Hum		39590
+	214839292	Z4HappyDrumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4HappyDrumz_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4HappyDrumz		324666
 	219396124	Crusher_Movement	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Crusher_Movement_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Crusher_Movement		75670
+	220725716	Alien_Platform_3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Alien_Platform_3_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Alien_Platforms\Alien_Platform_3		34493
 	223409866	Jump_Takeoff_SFX	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Takeoff_SFX_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jump_Takeoff_SFX		10559
+	230751886	Z4_Rising_Thingy	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Rising_Thingy_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Rising_Thingy		310032
 	233328267	Ball_Platform	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Ball_Platform_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Ball_Platform		37703
 	237847310	Z3AngryArp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3AngryArp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3AngryArp		463534
 	240221581	Z2_Sub_Kicks	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Sub_Kicks_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Sub_Kicks		243413
@@ -147,6 +148,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	338611492	Zoe_Ouch1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Zoe_Ouch1_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Ouch\Zoe_Ouch1		3293
 	344618435	Z2AngryBass	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2AngryBass_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2AngryBass		305260
 	361501470	Outside Ambience	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Ambience_Z0_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambience\Outside Ambience		379861
+	364808119	Alien_Platform_1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Alien_Platform_1_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Alien_Platforms\Alien_Platform_1		30115
 	376925067	Ambience_Z1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Ambience_Z1_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambience\Ambience_Z1		230217
 	380512742	Lazer_Wall	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Lazer_Wall_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Lazer_Wall		165418
 	392065144	Normal_Platform4	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Normal_Platform4_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Normal_Platforms\Normal_Platform4		165605
@@ -157,18 +159,18 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	456080129	Z1_Happy_Drumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Metal_Drums_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Happy_Drumz		275431
 	457553409	Lazer_Med	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Lazer_Med_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Lazer_Med		48057
 	459329517	Damaged_Platform_3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Platform_3_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Damaged_Platforms\Damaged_Platform_3		178745
-	462863095	Z4_Happy_Bass	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Nasal_Bass_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Happy_Bass		315070
 	466662975	Drill	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Drill_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Drill		28245
 	497726209	Z2HappyDrumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2HappyDrumz_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2HappyDrumz		289697
 	502746704	Door_opening	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Door_opening_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Door_opening		60002
-	503665789	Z4_Happy_Synth_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Noisy_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Happy_Synth_Arp		326437
+	522163128	Z4HappyBass	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4HappyBass_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4HappyBass		311338
 	523264904	Ambience_Z2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Ambience_Z2_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambience\Ambience_Z2		432543
+	533883544	Z4_Metal_Pad	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Metal_Pad_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Metal_Pad		318301
 	541793192	Grab1	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Grab1_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Grabs_With_SFXs\Grabs\Grab1		6553
-	569405528	Z4_Happy_Drumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Kick_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Happy_Drumz		324954
 	593156668	Z2_Happy_Synth	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Dist_Synth_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Happy_Synth		281441
 	593785112	Z3_Sub_Kicks	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Sub_Kicks_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Sub_Kicks		181152
 	614478671	Z3_Metal_Pad	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Metal_Pad_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Metal_Pad		230178
 	614726966	Grab2	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Grab2_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Grabs_With_SFXs\Grabs\Grab2		5641
+	659298647	Alien_Platform_4	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Alien_Platform_4_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Alien_Platforms\Alien_Platform_4		64388
 	663008857	Z3_Dist_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Dist_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dist_Arp		269964
 	667781877	Death_Ray	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Death_Ray_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Death_Ray		229255
 	679990203	Roll_SFX	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Roll_SFX_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Roll_SFX		11494
@@ -176,15 +178,15 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	787556428	Ambience_Z3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Ambience_Z3_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambience\Ambience_Z3		460910
 	794154597	Robo_Foreshadowing	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Robo_Foreshadowing_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Robo_Foreshadowing		320940
 	795860753	Lazer_Wall_Power_Down	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Lazer_Wall_Power_Down_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Lazer_Wall_Power_Down		53383
-	805816692	Z4AngryArp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4AngryArp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4AngryArp		333695
 	814161298	Z1_Hope_Synth	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Hope_Synth_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Hope_Synth		268414
 	823110564	Z2AngryHarm	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2AngryHarm_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2AngryHarm		281606
+	828773102	Z4HappyArp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4HappyArp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4HappyArp		326715
 	843076094	Z2AngryDrumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2AngryDrumz_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2AngryDrumz		303075
 	849860119	Normal_Platform3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Normal_Platform3_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Normal_Platforms\Normal_Platform3		161711
 	855185368	Z3_Happy_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Happy_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Happy_Arp		276666
 	859322015	Z1_Hatter_Arp	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z1_Hatter_Arp_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z1_Music_Layers_Playlist\Z1_Music_Layers\Z1_Hatter_Arp		295974
 	860562003	Zoe_Ouch3	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Zoe_Ouch3_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Ouch\Zoe_Ouch3		4661
-	869369574	Z4AngryDrumz	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4AngryDrumz_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4AngryDrumz		347862
+	878316333	Z4_Dist_Klaver	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Dist_Klaver_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Dist_Klaver		312096
 	890435580	Crusher_Impact	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Crusher_Impact_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Crusher_Impact_1\Crusher_Impact		12650
 	900936792	Ambience_Z4	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Ambience_Z4_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambience\Ambience_Z4		468215
 	915143470	Level_Start	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Level_Start_Ny_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Celebration_Sounds\Level_Start		129432
@@ -202,10 +204,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	967073618	UDidIt	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\UDidIt_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Grabs_With_SFXs\UDidIt		46138
 	973236722	Jump_Land_SFX	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Jump_Land_SFX_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Jump_Land_SFX		10057
 	979311821	Ball_Platform_Damaged	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Ball_Platform_Damaged_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Ball_Platform_Damaged		42264
-	979909387	Z4_Dist_Klaver	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z4_Dist_Klaver_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z4_Music_Layers_Playlist\Z4_Music_Layers\Z4_Dist_Klaver		312096
 	1010279705	Z3_Happy_Bassline	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Dist_Bassline_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Happy_Bassline		245574
 	1021751483	Damaged_Platform_4	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Platform_4_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Emitters\Damaged_Platforms\Damaged_Platform_4		181099
 	1023093752	Slide_SFX	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Slide_SFX_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Motion\Slide_With_Effect\Slides_SFX\Slide_SFX		57478
 	1048347315	Z3_Dusty_Snare	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z3_Dusty_Snare_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z3_Music_Layers_Playlist\Z3_Music_Layers\Z3_Dusty_Snare		246051
+	1061942958	Sentinel_Lazer	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Robot_Lazer_9B96ECC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Other\Sentinel_Lazer		242860
 	1067738165	Z2_Dist_Klaver	Y:\Documents\GitHub\Graduation-Game\GraduationGame unity\Wwise_Graduation_game\.cache\Android\SFX\Z2_Dist_Klaver_3EBA1927.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Z2_Music_Layers_Playlist\Z2_Music_Layers\Z2_Dist_Klaver		261677
 
