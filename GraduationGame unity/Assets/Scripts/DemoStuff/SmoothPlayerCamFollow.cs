@@ -19,6 +19,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
     private float rotationSpeed = 1.5f;
     [SerializeField] private float XSmoothTime = 0.1f;
     [SerializeField] private float YSmoothTime = 0.7f;
+    [SerializeField] private float zoomResetSmoothTime = .3f;
 
     [SerializeField] private Vector3 localOffSet;
     [SerializeField] private float maxDistToLookAtPoint = 5f;
@@ -41,6 +42,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
     private Vector3 localPosInfrontOfPlayer;
     private Vector3 camVelocity;
     private Vector3 yVelocity;
+    private Vector3 zVelocity;
     private float zoomOutTimer;
     private float zoomOutLerp;
 
@@ -95,6 +97,10 @@ public class SmoothPlayerCamFollow : MonoBehaviour
         Vector3 desiredSmoothX = new Vector3(tempDesiredPos.x, 0, 0);
         Vector3 smoothedX = Vector3.SmoothDamp(new Vector3(transform.position.x, 0, 0), desiredSmoothX,
             ref camVelocity, XSmoothTime);
+
+        Vector3 desiredSmoothedZ = new Vector3(0, 0, tempDesiredPos.z);
+        Vector3 smoothedZ = Vector3.SmoothDamp(new Vector3(0, 0, transform.position.z), desiredSmoothedZ,
+            ref zVelocity, zoomResetSmoothTime);
 
         Vector3 camDesiredPosition = smoothedX + smoothedY;
         camDesiredPosition.z = tempDesiredPos.z;
