@@ -18,7 +18,7 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
     public GameObject sentinelBrokenRight;
     public float distance;
     public float killDistance;
-    [Range(0,100f)] public float explosionPower;
+    [Range(0, 100f)] public float explosionPower;
     public float explosionRadius;
     public float upwardsForce;
     private Vector3[] localPartPositions;
@@ -27,6 +27,7 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
     private Vector3 force;
     private bool isDead;
     private Color gizmoColor;
+
     private void Awake()
     {
         //save local positions of parts;
@@ -60,25 +61,30 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
         sentinelRight.SetActive(false);
         sentinelLaserLeft.SetActive(false);
         sentinelLaserRight.SetActive(false);
-        
+
         sentinelBrokenLeft.SetActive(true);
         sentinelBrokenRight.SetActive(true);
-        
+
         var position = transform.position;
         //add force
         for (int i = 0; i < leftPartTransforms.Length; i++)
         {
-            leftPartTransforms[i].AddExplosionForce(explosionPower,position,explosionRadius,upwardsForce);
-            rightPartTransforms[i].AddExplosionForce(explosionPower,position,explosionRadius,upwardsForce);
+            leftPartTransforms[i].AddExplosionForce(explosionPower, position, explosionRadius, upwardsForce);
+            rightPartTransforms[i].AddExplosionForce(explosionPower, position, explosionRadius, upwardsForce);
         }
 
         for (int i = 0; i < particles.Length; i++)
         {
             particles[i].Play();
         }
-        
-        
-        
+
+        StartCoroutine(EndTheGame(5f));
+    }
+
+    public IEnumerator EndTheGame(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        GameManager.RequestGameStateChange(GameStateScriptableObject.GameState.levelComplete);
     }
 
     public void OnResetLevel()
@@ -87,14 +93,13 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
         sentinelRight.SetActive(true);
         sentinelLaserLeft.SetActive(true);
         sentinelLaserRight.SetActive(true);
-        
+
         sentinelBrokenLeft.transform.position = sentinelLeftPlatform.position;
         sentinelBrokenRight.transform.position = sentinelRightPlatform.position;
         sentinelBrokenLeft.SetActive(false);
         sentinelBrokenRight.SetActive(false);
         for (int i = 0; i < leftPartTransforms.Length; i++)
         {
-            
             leftPartTransforms[i].ResetInertiaTensor();
             rightPartTransforms[i].ResetInertiaTensor();
             leftPartTransforms[i].transform.localPosition = localPartPositions[i];
@@ -102,19 +107,19 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
             rightPartTransforms[i].transform.localPosition = localPartPositions[i];
             rightPartTransforms[i].transform.rotation = Quaternion.identity;
         }
-        
+
         for (int i = 0; i < particles.Length; i++)
         {
             particles[i].Stop();
             particles[i].Clear();
         }
-        
+
         isDead = false;
     }
-    
+
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(transform.position,explosionRadius);
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
 }
