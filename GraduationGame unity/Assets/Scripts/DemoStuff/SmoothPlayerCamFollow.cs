@@ -19,6 +19,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
     private float rotationSpeed = 1.5f;
     [SerializeField] private float XSmoothTime = 0.1f;
     [SerializeField] private float YSmoothTime = 0.7f;
+    [SerializeField] private float zoomResetSmoothTime = .3f;
 
     [SerializeField] private Vector3 localOffSet;
     [SerializeField] private float maxDistToLookAtPoint = 5f;
@@ -41,6 +42,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
     private Vector3 localPosInfrontOfPlayer;
     private Vector3 camVelocity;
     private Vector3 yVelocity;
+    private Vector3 zVelocity;
     private float zoomOutTimer;
     private float zoomOutLerp;
 
@@ -83,21 +85,21 @@ public class SmoothPlayerCamFollow : MonoBehaviour
         Vector3 tempDesiredPos = DesiredCamPos();
         float distToDesiredPos = (tempDesiredPos - transform.position).magnitude;
 
-        //if(distToDesiredPos > 0.1)
-        //{
-        //}
-
+        //Do seperate smoothing speperate x and y and Z
         Vector3 desiredSmoothY = new Vector3(0, tempDesiredPos.y, 0);
         Vector3 smoothedY = Vector3.SmoothDamp(new Vector3(0, transform.position.y, 0), desiredSmoothY,
             ref yVelocity, YSmoothTime);
-        //Do seperate smoothing speperate x and y
 
         Vector3 desiredSmoothX = new Vector3(tempDesiredPos.x, 0, 0);
         Vector3 smoothedX = Vector3.SmoothDamp(new Vector3(transform.position.x, 0, 0), desiredSmoothX,
             ref camVelocity, XSmoothTime);
 
-        Vector3 camDesiredPosition = smoothedX + smoothedY;
-        camDesiredPosition.z = tempDesiredPos.z;
+        Vector3 desiredSmoothedZ = new Vector3(0, 0, tempDesiredPos.z);
+        Vector3 smoothedZ = Vector3.SmoothDamp(new Vector3(0, 0, transform.position.z), desiredSmoothedZ,
+            ref zVelocity, zoomResetSmoothTime);
+
+        Vector3 camDesiredPosition = smoothedX + smoothedY + smoothedZ;
+        //camDesiredPosition.z = tempDesiredPos.z;
 
         transform.position = camDesiredPosition;
     }
@@ -105,8 +107,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
     Vector3 DesiredCamPos()
     {
         bool wasChanged = false;
-        Vector3 oldDesiredPos = new Vector3();
-        oldDesiredPos = transform.position;
+        Vector3 oldDesiredPos = transform.position;
         newdesiredPos = oldDesiredPos;
 
         xDiff = (playerToFollow.position.x + localOffSet.x) - (transform.position.x + localOffSet.x);
@@ -144,7 +145,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
             currentMoveDir = ZoeMoveDir.down;
         }
 
-        newdesiredPos.z = playerToFollow.position.z + localOffSet.z;
+        newdesiredPos.z = playerToFollow.position.z + worldOffset.z;
 
         if (wasChanged)
             return newdesiredPos;
