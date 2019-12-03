@@ -3160,161 +3160,6 @@
 								<ActiveSource Name="Other_Lazer" ID="{064AE47F-BFFB-465A-ABB5-21A427113762}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Drill" ID="{6F96DF12-53B3-402D-9216-9D9714C89628}" ShortID="575303391">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="MaxSoundPerInstance" Type="int16">
-									<ValueList>
-										<Value>2</Value>
-									</ValueList>
-								</Property>
-								<Property Name="OverridePositioning" Type="bool" Value="True"/>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-880</Value>
-									</ValueList>
-								</Property>
-								<Property Name="UseMaxSoundPerInstance" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-23</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<Custom>
-										<Attenuation Name="Attenuation (Custom)" ID="{74EFDB99-75D9-461D-B592-142AE9637511}" ShortID="38006661">
-											<CurveUsageInfoList>
-												<VolumeDryUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-														<Curve Name="VolumeDry" ID="{DFB5D387-EF45-4972-A580-CD9C4928F156}">
-															<PropertyList>
-																<Property Name="Flags" Type="int32" Value="3"/>
-															</PropertyList>
-															<PointList>
-																<Point>
-																	<XPos>0</XPos>
-																	<YPos>0</YPos>
-																	<Flags>5</Flags>
-																</Point>
-																<Point>
-																	<XPos>3.01588</XPos>
-																	<YPos>-0.23164</YPos>
-																	<Flags>0</Flags>
-																</Point>
-																<Point>
-																	<XPos>7.46032</XPos>
-																	<YPos>-1.29144</YPos>
-																	<Flags>0</Flags>
-																</Point>
-																<Point>
-																	<XPos>12.38095</XPos>
-																	<YPos>-3.99145</YPos>
-																	<Flags>0</Flags>
-																</Point>
-																<Point>
-																	<XPos>16.3502</XPos>
-																	<YPos>-8.67311</YPos>
-																	<Flags>0</Flags>
-																</Point>
-																<Point>
-																	<XPos>20.16073</XPos>
-																	<YPos>-200</YPos>
-																	<Flags>0</Flags>
-																</Point>
-																<Point>
-																	<XPos>71.26984</XPos>
-																	<YPos>-200</YPos>
-																	<Flags>0</Flags>
-																</Point>
-																<Point>
-																	<XPos>100</XPos>
-																	<YPos>-200</YPos>
-																	<Flags>37</Flags>
-																</Point>
-															</PointList>
-														</Curve>
-													</CurveUsageInfo>
-												</VolumeDryUsage>
-												<VolumeWetGameUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-												</VolumeWetGameUsage>
-												<VolumeWetUserUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-												</VolumeWetUserUsage>
-												<LowPassFilterUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-														<Curve Name="LowPassFilter" ID="{EF70AB8B-5AFE-4DB6-A495-40215C71D1D6}">
-															<PropertyList>
-																<Property Name="Flags" Type="int32" Value="65537"/>
-															</PropertyList>
-															<PointList>
-																<Point>
-																	<XPos>0</XPos>
-																	<YPos>0</YPos>
-																	<Flags>5</Flags>
-																</Point>
-																<Point>
-																	<XPos>2.85714</XPos>
-																	<YPos>29</YPos>
-																	<Flags>0</Flags>
-																</Point>
-																<Point>
-																	<XPos>7.46032</XPos>
-																	<YPos>41</YPos>
-																	<Flags>0</Flags>
-																</Point>
-																<Point>
-																	<XPos>17.30159</XPos>
-																	<YPos>53</YPos>
-																	<Flags>0</Flags>
-																</Point>
-																<Point>
-																	<XPos>100</XPos>
-																	<YPos>100</YPos>
-																	<Flags>37</Flags>
-																</Point>
-															</PointList>
-														</Curve>
-													</CurveUsageInfo>
-												</LowPassFilterUsage>
-												<HighPassFilterUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-												</HighPassFilterUsage>
-												<SpreadUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-												</SpreadUsage>
-												<FocusUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-												</FocusUsage>
-											</CurveUsageInfoList>
-										</Attenuation>
-									</Custom>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Drill" ID="{948BDC39-72A1-4508-BA28-F86995C38E1A}" ShortID="466662975">
-									<Language>SFX</Language>
-									<AudioFile>Drill.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Drill" ID="{948BDC39-72A1-4508-BA28-F86995C38E1A}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<RandomSequenceContainer Name="Crusher_Impact_1" ID="{3712BC27-C5A7-4C88-899E-34D1BE131233}" ShortID="1016620596">
 							<PropertyList>
 								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
@@ -3409,6 +3254,38 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<Sound Name="Drill" ID="{40C8AAB0-A235-4BF5-8516-3230E9DF9520}" ShortID="113209228">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>26</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-14</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Drill" ID="{565D8396-4363-4B93-A129-12B064810179}" ShortID="345546692">
+									<Language>SFX</Language>
+									<AudioFile>Drill.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Drill" ID="{565D8396-4363-4B93-A129-12B064810179}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<PositioningInfo>
 						<Position Name="" ID="{1FD7CF63-A61A-47AD-82B7-3039D3380ABB}"/>
