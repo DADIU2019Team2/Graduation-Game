@@ -8,7 +8,7 @@ public class DrillSound : MonoBehaviour
     void Start()
     {
         AkSoundEngine.RegisterGameObj(gameObject);
-        //AkSoundEngine.PostEvent("Drill", gameObject);
+        AkSoundEngine.PostEvent("Drill", gameObject);
     }
 
 }
