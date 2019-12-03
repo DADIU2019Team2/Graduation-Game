@@ -522,6 +522,7 @@ namespace KinematicTest.controller
         /// </summary>
         public void BeforeCharacterUpdate(float deltaTime)
         {
+            _hitWallThisFrame = false;
             Collider[] colliders = new Collider[8];
             var alma = Motor.CharacterCollisionsOverlap(transform.position, transform.rotation, colliders);
             if (alma > 0 &&
@@ -1160,6 +1161,8 @@ namespace KinematicTest.controller
             if (hitCollider.CompareTag("Wall") && CurrentCharacterState != PlayerStates.Idling &&
                 Motor.GroundingStatus.IsStableOnGround && !rampingDown)
             {
+                
+
                 //if (rampingDown)
                 //{
                 //    curveStep = 0;
