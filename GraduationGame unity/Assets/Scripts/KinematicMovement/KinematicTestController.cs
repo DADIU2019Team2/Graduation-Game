@@ -863,6 +863,10 @@ namespace KinematicTest.controller
                     if (currentVelocity.y < -hangTimeVelocityThreshold)
                         Gravity = fallGravity * baseGravity;
                 }
+                else if (CurrentCharacterState == PlayerStates.Running)
+                {
+                    TransitionToState(PlayerStates.Tired);
+                }
 
                 if (CurrentCharacterState == PlayerStates.LedgeGrabbing)
                 {
@@ -1127,7 +1131,7 @@ namespace KinematicTest.controller
             if (hitCollider.CompareTag("Ledge") && Time.time > (timeAtLastLedgeGrab + graceTimeBeforeHangAgain)
             ) // && hitNormal.y == 0 && Mathf.Sign(hitNormal.x) == -Mathf.Sign(runningRight))
             {
-                if (CurrentCharacterState == PlayerStates.Sliding)
+                if (CurrentCharacterState == PlayerStates.Sliding || CurrentCharacterState == PlayerStates.Tired)
                 {
                     ledgeGrabbed = hitCollider.gameObject;
                     Motor.ZoeAttachedRigidbody = hitCollider.gameObject.GetComponentInParent<Rigidbody>();
