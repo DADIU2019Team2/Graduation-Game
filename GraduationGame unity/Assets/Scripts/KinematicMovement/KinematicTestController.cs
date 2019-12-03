@@ -864,10 +864,13 @@ namespace KinematicTest.controller
                     if (currentVelocity.y < -hangTimeVelocityThreshold)
                         Gravity = fallGravity * baseGravity;
                 }
-                else if (CurrentCharacterState == PlayerStates.Running)
+                
+                
+                // This is the code that makes you not stand on ledges, also it breaks coyote time
+                /*else if (CurrentCharacterState == PlayerStates.Running)
                 {
                     TransitionToState(PlayerStates.Tired);
-                }
+                }*/
 
                 if (CurrentCharacterState == PlayerStates.LedgeGrabbing)
                 {
