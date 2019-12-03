@@ -19,6 +19,8 @@ private bool IsInCollider = false;
         if (other.tag != "Player" || IsInCollider) { return; }
         AkSoundEngine.SetState("Zones", "Zone4");
         AkSoundEngine.SetRTPCValue("Happy_Drumz", 5);
+        AkSoundEngine.SetRTPCValue("Happy_Bass", 5);
+        AkSoundEngine.SetRTPCValue("Happy_Synth", 5);
        
     }
 }

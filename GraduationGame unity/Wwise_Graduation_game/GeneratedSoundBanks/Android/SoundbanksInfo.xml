@@ -23,6 +23,7 @@
 			<IncludedEvents>
 				<Event Id="1839766762" Name="Alien_Crystal_Hum" ObjectPath="\Events\Default Work Unit\SFX\Alien_Crystal_Hum" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="3641971009" Name="Alien_Death_Trap" ObjectPath="\Events\Default Work Unit\SFX\Alien_Death_Trap" MaxAttenuation="30.000000" DurationType="Infinite"/>
+				<Event Id="2755703943" Name="Alien_Platforms" ObjectPath="\Events\Default Work Unit\SFX\Alien_Platforms" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="3996256281" Name="Ambience_Outside" ObjectPath="\Events\Default Work Unit\Ambience\Ambience_Outside" DurationType="Infinite"/>
 				<Event Id="1848730664" Name="Ball_Platform" ObjectPath="\Events\Default Work Unit\SFX\Ball_Platform" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="2557453060" Name="Ball_Platform_Damaged" ObjectPath="\Events\Default Work Unit\SFX\Ball_Platform_Damaged" MaxAttenuation="30.000000" DurationType="Infinite"/>
@@ -36,7 +37,7 @@
 				<Event Id="507840475" Name="Death_Saw" ObjectPath="\Events\Default Work Unit\SFX\Death_Saw" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="900426207" Name="Door_Closes" ObjectPath="\Events\Default Work Unit\SFX\Door_Closes" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="2.378414" DurationMax="2.378414"/>
 				<Event Id="2589897592" Name="Door_Opening" ObjectPath="\Events\Default Work Unit\SFX\Door_Opening" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="4.000000" DurationMax="4.000000"/>
-				<Event Id="2168413864" Name="Drill" ObjectPath="\Events\Default Work Unit\SFX\Drill" MaxAttenuation="30.000000" DurationType="Infinite"/>
+				<Event Id="2168413864" Name="Drill" ObjectPath="\Events\Default Work Unit\SFX\Drill" MaxAttenuation="100.000000" DurationType="Infinite"/>
 				<Event Id="238897438" Name="Grabs" ObjectPath="\Events\Default Work Unit\Movement\Grabs" DurationType="OneShot" DurationMin="3.625011" DurationMax="3.625011"/>
 				<Event Id="3419686739" Name="Jump_Land" ObjectPath="\Events\Default Work Unit\Movement\Jump_Land" DurationType="OneShot" DurationMin="0.750000" DurationMax="0.750000"/>
 				<Event Id="4186947444" Name="Jump_Takeoff" ObjectPath="\Events\Default Work Unit\Movement\Jump_Takeoff" DurationType="OneShot" DurationMin="0.750000" DurationMax="0.750000"/>
@@ -63,7 +64,7 @@
 				<Event Id="3303975224" Name="Play_Zone4_Music" ObjectPath="\Events\Default Work Unit\Music\Play_Zone4_Music" DurationType="Infinite"/>
 				<Event Id="2187783824" Name="Robot_Appearence" ObjectPath="\Events\Default Work Unit\SFX\Robot_Appearence" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="4.863542" DurationMax="4.863542"/>
 				<Event Id="2520750572" Name="Roll_SFX" ObjectPath="\Events\Default Work Unit\Movement\Roll_SFX" DurationType="OneShot" DurationMin="0.843741" DurationMax="0.843741"/>
-				<Event Id="697318835" Name="Slides" ObjectPath="\Events\Default Work Unit\Movement\Slides" DurationType="OneShot" DurationMin="4.719371" DurationMax="5.612310"/>
+				<Event Id="168295360" Name="Sentinel_Lazer" ObjectPath="\Events\Default Work Unit\SFX\Sentinel_Lazer" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="2176568168" Name="Stop_Alien_Platform_Pillar" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Alien_Platform_Pillar" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="123461200" Name="Stop_Alien_Platforms" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Alien_Platforms" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2364261975" Name="Stop_Ball_Platform" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Ball_Platform" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
@@ -77,7 +78,7 @@
 				<Event Id="133929472" Name="Stop_Lazer_Small" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Lazer_Small" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2988481851" Name="Stop_Lazer_Wall" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Lazer_Wall" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2590299724" Name="Stop_Normal_Platforms" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Normal_Platforms" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2388799556" Name="Stop_Platform_Pillar_Damaged" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Platform_Pillar_Damaged" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1979601577" Name="Stop_Sentinel_Lazer" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Sentinel_Lazer" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2475844034" Name="Stop_Z4_Music" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Z4_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3086540886" Name="StopAll" ObjectPath="\Events\Default Work Unit\StopAll" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2294038358" Name="Zones_Music" ObjectPath="\Events\Default Work Unit\Music\Zones_Music" DurationType="Infinite"/>
@@ -91,14 +92,6 @@
 					<ShortName>Death_Saw.wav</ShortName>
 					<Path>SFX/Death_Saw_9B96ECC7.wem</Path>
 				</File>
-				<File Id="22842696" Language="SFX">
-					<ShortName>Z4_Rising_Thingy.wav</ShortName>
-					<Path>SFX/Z4_Rising_Thingy_3EBA1927.wem</Path>
-				</File>
-				<File Id="25731778" Language="SFX">
-					<ShortName>Z4_Metal_Pad.wav</ShortName>
-					<Path>SFX/Z4_Metal_Pad_3EBA1927.wem</Path>
-				</File>
 				<File Id="27614219" Language="SFX">
 					<ShortName>Credits_Music.wav</ShortName>
 					<Path>SFX/Credits_Music_3EBA1927.wem</Path>
@@ -106,10 +99,6 @@
 				<File Id="32006921" Language="SFX">
 					<ShortName>Z2_Nasal_Bass.wav</ShortName>
 					<Path>SFX/Z2_Nasal_Bass_3EBA1927.wem</Path>
-				</File>
-				<File Id="39273287" Language="SFX">
-					<ShortName>Slide_3.wav</ShortName>
-					<Path>SFX/Slide_3_6296B0F9.wem</Path>
 				</File>
 				<File Id="40096853" Language="SFX">
 					<ShortName>Grab4.wav</ShortName>
@@ -131,10 +120,6 @@
 					<ShortName>Z3_Drumz.wav</ShortName>
 					<Path>SFX/Z3_Drumz_3EBA1927.wem</Path>
 				</File>
-				<File Id="76766429" Language="SFX">
-					<ShortName>Z4AngryBass.wav</ShortName>
-					<Path>SFX/Z4AngryBass_3EBA1927.wem</Path>
-				</File>
 				<File Id="78088031" Language="SFX">
 					<ShortName>Z3_Dist_Synth_Melodic_Pattern.wav</ShortName>
 					<Path>SFX/Z3_Dist_Synth_Melodic_Pattern_3EBA1927.wem</Path>
@@ -142,6 +127,10 @@
 				<File Id="116201991" Language="SFX">
 					<ShortName>Z3AngryBass.wav</ShortName>
 					<Path>SFX/Z3AngryBass_3EBA1927.wem</Path>
+				</File>
+				<File Id="132090060" Language="SFX">
+					<ShortName>Z4_Flyde_Chords.wav</ShortName>
+					<Path>SFX/Z4_Flyde_Chords_3EBA1927.wem</Path>
 				</File>
 				<File Id="145167596" Language="SFX">
 					<ShortName>Z2_Hero_Arp.wav</ShortName>
@@ -159,10 +148,6 @@
 					<ShortName>Gate_Impact.wav</ShortName>
 					<Path>SFX/Gate_Impact_6296B0F9.wem</Path>
 				</File>
-				<File Id="179692943" Language="SFX">
-					<ShortName>Z4_Flyde_Chords.wav</ShortName>
-					<Path>SFX/Z4_Flyde_Chords_3EBA1927.wem</Path>
-				</File>
 				<File Id="184652951" Language="SFX">
 					<ShortName>Damaged_Platform_1.wav</ShortName>
 					<Path>SFX/Damaged_Platform_1_9B96ECC7.wem</Path>
@@ -175,17 +160,33 @@
 					<ShortName>Other_Lazer.wav</ShortName>
 					<Path>SFX/Other_Lazer_9B96ECC7.wem</Path>
 				</File>
+				<File Id="196371876" Language="SFX">
+					<ShortName>Alien_Platform_2.wav</ShortName>
+					<Path>SFX/Alien_Platform_2_9B96ECC7.wem</Path>
+				</File>
 				<File Id="202632354" Language="SFX">
 					<ShortName>Alien_Crystal_Hum.wav</ShortName>
 					<Path>SFX/Alien_Crystal_Hum_9B96ECC7.wem</Path>
+				</File>
+				<File Id="214839292" Language="SFX">
+					<ShortName>Z4HappyDrumz.wav</ShortName>
+					<Path>SFX/Z4HappyDrumz_3EBA1927.wem</Path>
 				</File>
 				<File Id="219396124" Language="SFX">
 					<ShortName>Crusher_Movement.wav</ShortName>
 					<Path>SFX/Crusher_Movement_6296B0F9.wem</Path>
 				</File>
+				<File Id="220725716" Language="SFX">
+					<ShortName>Alien_Platform_3.wav</ShortName>
+					<Path>SFX/Alien_Platform_3_9B96ECC7.wem</Path>
+				</File>
 				<File Id="223409866" Language="SFX">
 					<ShortName>Jump_Takeoff_SFX.wav</ShortName>
 					<Path>SFX/Jump_Takeoff_SFX_6296B0F9.wem</Path>
+				</File>
+				<File Id="230751886" Language="SFX">
+					<ShortName>Z4_Rising_Thingy.wav</ShortName>
+					<Path>SFX/Z4_Rising_Thingy_3EBA1927.wem</Path>
 				</File>
 				<File Id="233328267" Language="SFX">
 					<ShortName>Ball_Platform.wav</ShortName>
@@ -223,10 +224,6 @@
 					<ShortName>Grab3.wav</ShortName>
 					<Path>SFX/Grab3_6296B0F9.wem</Path>
 				</File>
-				<File Id="283942315" Language="SFX">
-					<ShortName>Slide_1.wav</ShortName>
-					<Path>SFX/Slide_1_6296B0F9.wem</Path>
-				</File>
 				<File Id="286271245" Language="SFX">
 					<ShortName>Normal_Platform1.wav</ShortName>
 					<Path>SFX/Normal_Platform1_9B96ECC7.wem</Path>
@@ -246,6 +243,10 @@
 				<File Id="361501470" Language="SFX">
 					<ShortName>Ambience_Z0.wav</ShortName>
 					<Path>SFX/Ambience_Z0_9B96ECC7.wem</Path>
+				</File>
+				<File Id="364808119" Language="SFX">
+					<ShortName>Alien_Platform_1.wav</ShortName>
+					<Path>SFX/Alien_Platform_1_9B96ECC7.wem</Path>
 				</File>
 				<File Id="376925067" Language="SFX">
 					<ShortName>Ambience_Z1.wav</ShortName>
@@ -287,10 +288,6 @@
 					<ShortName>Platform_3.wav</ShortName>
 					<Path>SFX/Platform_3_9B96ECC7.wem</Path>
 				</File>
-				<File Id="462863095" Language="SFX">
-					<ShortName>Z4_Nasal_Bass.wav</ShortName>
-					<Path>SFX/Z4_Nasal_Bass_3EBA1927.wem</Path>
-				</File>
 				<File Id="466662975" Language="SFX">
 					<ShortName>Drill.wav</ShortName>
 					<Path>SFX/Drill_9B96ECC7.wem</Path>
@@ -303,21 +300,21 @@
 					<ShortName>Door_opening.wav</ShortName>
 					<Path>SFX/Door_opening_6296B0F9.wem</Path>
 				</File>
-				<File Id="503665789" Language="SFX">
-					<ShortName>Z4_Noisy_Arp.wav</ShortName>
-					<Path>SFX/Z4_Noisy_Arp_3EBA1927.wem</Path>
+				<File Id="522163128" Language="SFX">
+					<ShortName>Z4HappyBass.wav</ShortName>
+					<Path>SFX/Z4HappyBass_3EBA1927.wem</Path>
 				</File>
 				<File Id="523264904" Language="SFX">
 					<ShortName>Ambience_Z2.wav</ShortName>
 					<Path>SFX/Ambience_Z2_9B96ECC7.wem</Path>
 				</File>
+				<File Id="533883544" Language="SFX">
+					<ShortName>Z4_Metal_Pad.wav</ShortName>
+					<Path>SFX/Z4_Metal_Pad_3EBA1927.wem</Path>
+				</File>
 				<File Id="541793192" Language="SFX">
 					<ShortName>Grab1.wav</ShortName>
 					<Path>SFX/Grab1_6296B0F9.wem</Path>
-				</File>
-				<File Id="569405528" Language="SFX">
-					<ShortName>Z4_Kick.wav</ShortName>
-					<Path>SFX/Z4_Kick_3EBA1927.wem</Path>
 				</File>
 				<File Id="593156668" Language="SFX">
 					<ShortName>Z2_Dist_Synth.wav</ShortName>
@@ -334,6 +331,10 @@
 				<File Id="614726966" Language="SFX">
 					<ShortName>Grab2.wav</ShortName>
 					<Path>SFX/Grab2_6296B0F9.wem</Path>
+				</File>
+				<File Id="659298647" Language="SFX">
+					<ShortName>Alien_Platform_4.wav</ShortName>
+					<Path>SFX/Alien_Platform_4_9B96ECC7.wem</Path>
 				</File>
 				<File Id="663008857" Language="SFX">
 					<ShortName>Z3_Dist_Arp.wav</ShortName>
@@ -363,10 +364,6 @@
 					<ShortName>Lazer_Wall_Power_Down.wav</ShortName>
 					<Path>SFX/Lazer_Wall_Power_Down_6296B0F9.wem</Path>
 				</File>
-				<File Id="805816692" Language="SFX">
-					<ShortName>Z4AngryArp.wav</ShortName>
-					<Path>SFX/Z4AngryArp_3EBA1927.wem</Path>
-				</File>
 				<File Id="814161298" Language="SFX">
 					<ShortName>Z1_Hope_Synth.wav</ShortName>
 					<Path>SFX/Z1_Hope_Synth_3EBA1927.wem</Path>
@@ -374,6 +371,10 @@
 				<File Id="823110564" Language="SFX">
 					<ShortName>Z2AngryHarm.wav</ShortName>
 					<Path>SFX/Z2AngryHarm_3EBA1927.wem</Path>
+				</File>
+				<File Id="828773102" Language="SFX">
+					<ShortName>Z4HappyArp.wav</ShortName>
+					<Path>SFX/Z4HappyArp_3EBA1927.wem</Path>
 				</File>
 				<File Id="843076094" Language="SFX">
 					<ShortName>Z2AngryDrumz.wav</ShortName>
@@ -395,9 +396,9 @@
 					<ShortName>Zoe_Ouch3.wav</ShortName>
 					<Path>SFX/Zoe_Ouch3_6296B0F9.wem</Path>
 				</File>
-				<File Id="869369574" Language="SFX">
-					<ShortName>Z4AngryDrumz.wav</ShortName>
-					<Path>SFX/Z4AngryDrumz_3EBA1927.wem</Path>
+				<File Id="878316333" Language="SFX">
+					<ShortName>Z4_Dist_Klaver.wav</ShortName>
+					<Path>SFX/Z4_Dist_Klaver_3EBA1927.wem</Path>
 				</File>
 				<File Id="890435580" Language="SFX">
 					<ShortName>Crusher_Impact.wav</ShortName>
@@ -418,10 +419,6 @@
 				<File Id="929568375" Language="SFX">
 					<ShortName>New_Metal_Ftstp_Loop.wav</ShortName>
 					<Path>SFX/New_Metal_Ftstp_Loop_9B96ECC7.wem</Path>
-				</File>
-				<File Id="931153672" Language="SFX">
-					<ShortName>Slide_2.wav</ShortName>
-					<Path>SFX/Slide_2_6296B0F9.wem</Path>
 				</File>
 				<File Id="932720973" Language="SFX">
 					<ShortName>Normal_Platform2.wav</ShortName>
@@ -467,10 +464,6 @@
 					<ShortName>Ball_Platform_Damaged.wav</ShortName>
 					<Path>SFX/Ball_Platform_Damaged_9B96ECC7.wem</Path>
 				</File>
-				<File Id="979909387" Language="SFX">
-					<ShortName>Z4_Dist_Klaver.wav</ShortName>
-					<Path>SFX/Z4_Dist_Klaver_3EBA1927.wem</Path>
-				</File>
 				<File Id="1010279705" Language="SFX">
 					<ShortName>Z3_Dist_Bassline.wav</ShortName>
 					<Path>SFX/Z3_Dist_Bassline_3EBA1927.wem</Path>
@@ -479,13 +472,13 @@
 					<ShortName>Platform_4.wav</ShortName>
 					<Path>SFX/Platform_4_9B96ECC7.wem</Path>
 				</File>
-				<File Id="1023093752" Language="SFX">
-					<ShortName>Slide_SFX.wav</ShortName>
-					<Path>SFX/Slide_SFX_6296B0F9.wem</Path>
-				</File>
 				<File Id="1048347315" Language="SFX">
 					<ShortName>Z3_Dusty_Snare.wav</ShortName>
 					<Path>SFX/Z3_Dusty_Snare_3EBA1927.wem</Path>
+				</File>
+				<File Id="1061942958" Language="SFX">
+					<ShortName>Robot_Lazer.wav</ShortName>
+					<Path>SFX/Robot_Lazer_9B96ECC7.wem</Path>
 				</File>
 				<File Id="1067738165" Language="SFX">
 					<ShortName>Z2_Dist_Klaver.wav</ShortName>

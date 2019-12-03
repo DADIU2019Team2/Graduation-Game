@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID ALIEN_CRYSTAL_HUM = 1839766762U;
         static const AkUniqueID ALIEN_DEATH_TRAP = 3641971009U;
+        static const AkUniqueID ALIEN_PLATFORMS = 2755703943U;
         static const AkUniqueID AMBIENCE_OUTSIDE = 3996256281U;
         static const AkUniqueID BALL_PLATFORM = 1848730664U;
         static const AkUniqueID BALL_PLATFORM_DAMAGED = 2557453060U;
@@ -55,7 +56,7 @@ namespace AK
         static const AkUniqueID PLAY_ZONE4_MUSIC = 3303975224U;
         static const AkUniqueID ROBOT_APPEARENCE = 2187783824U;
         static const AkUniqueID ROLL_SFX = 2520750572U;
-        static const AkUniqueID SLIDES = 697318835U;
+        static const AkUniqueID SENTINEL_LAZER = 168295360U;
         static const AkUniqueID STOP_ALIEN_PLATFORM_PILLAR = 2176568168U;
         static const AkUniqueID STOP_ALIEN_PLATFORMS = 123461200U;
         static const AkUniqueID STOP_BALL_PLATFORM = 2364261975U;
@@ -69,7 +70,7 @@ namespace AK
         static const AkUniqueID STOP_LAZER_SMALL = 133929472U;
         static const AkUniqueID STOP_LAZER_WALL = 2988481851U;
         static const AkUniqueID STOP_NORMAL_PLATFORMS = 2590299724U;
-        static const AkUniqueID STOP_PLATFORM_PILLAR_DAMAGED = 2388799556U;
+        static const AkUniqueID STOP_SENTINEL_LAZER = 1979601577U;
         static const AkUniqueID STOP_Z4_MUSIC = 2475844034U;
         static const AkUniqueID STOPALL = 3086540886U;
         static const AkUniqueID ZONES_MUSIC = 2294038358U;

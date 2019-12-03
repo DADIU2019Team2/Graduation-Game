@@ -1139,14 +1139,30 @@
 						</Sound>
 						<Sound Name="Sentinel_Lazer" ID="{C0AD2A14-D04B-4E1D-A581-518B49901588}" ShortID="56452876">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Objects" ID="{D15F0187-7C97-468C-B661-AFF4655367AB}" WorkUnitID="{FCB3A258-772C-4658-9880-AF2A3ADA4627}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
 								</Reference>
@@ -2352,7 +2368,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>2</Value>
+										<Value>-1</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2712,7 +2728,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>5</Value>
+										<Value>-2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2755,7 +2771,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>2</Value>
+										<Value>-2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2808,7 +2824,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>1</Value>
+										<Value>-7</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -3082,6 +3098,11 @@
 										<Value>True</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3149,6 +3170,7 @@
 										<Value>2</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
 										<Value>-880</Value>
@@ -3161,7 +3183,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-29</Value>
+										<Value>-13</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -3188,22 +3210,22 @@
 																	<Flags>0</Flags>
 																</Point>
 																<Point>
-																	<XPos>18.88889</XPos>
-																	<YPos>-0.96609</YPos>
+																	<XPos>17.61905</XPos>
+																	<YPos>-1.29144</YPos>
 																	<Flags>0</Flags>
 																</Point>
 																<Point>
-																	<XPos>28.88889</XPos>
-																	<YPos>-2.9684</YPos>
+																	<XPos>26.8254</XPos>
+																	<YPos>-3.29621</YPos>
 																	<Flags>0</Flags>
 																</Point>
 																<Point>
-																	<XPos>37.62005</XPos>
-																	<YPos>-7.65006</YPos>
+																	<XPos>33.6518</XPos>
+																	<YPos>-8.82962</YPos>
 																	<Flags>0</Flags>
 																</Point>
 																<Point>
-																	<XPos>49.36608</XPos>
+																	<XPos>38.88989</XPos>
 																	<YPos>-200</YPos>
 																	<Flags>0</Flags>
 																</Point>

@@ -522,6 +522,7 @@ namespace KinematicTest.controller
         /// </summary>
         public void BeforeCharacterUpdate(float deltaTime)
         {
+            _hitWallThisFrame = false;
             Collider[] colliders = new Collider[8];
             var alma = Motor.CharacterCollisionsOverlap(transform.position, transform.rotation, colliders);
             if (alma > 0 &&
@@ -863,6 +864,10 @@ namespace KinematicTest.controller
                     if (currentVelocity.y < -hangTimeVelocityThreshold)
                         Gravity = fallGravity * baseGravity;
                 }
+                else if (CurrentCharacterState == PlayerStates.Running)
+                {
+                    TransitionToState(PlayerStates.Tired);
+                }
 
                 if (CurrentCharacterState == PlayerStates.LedgeGrabbing)
                 {
@@ -1127,7 +1132,7 @@ namespace KinematicTest.controller
             if (hitCollider.CompareTag("Ledge") && Time.time > (timeAtLastLedgeGrab + graceTimeBeforeHangAgain)
             ) // && hitNormal.y == 0 && Mathf.Sign(hitNormal.x) == -Mathf.Sign(runningRight))
             {
-                if (CurrentCharacterState == PlayerStates.Sliding)
+                if (CurrentCharacterState == PlayerStates.Sliding || CurrentCharacterState == PlayerStates.Tired)
                 {
                     ledgeGrabbed = hitCollider.gameObject;
                     Motor.ZoeAttachedRigidbody = hitCollider.gameObject.GetComponentInParent<Rigidbody>();
@@ -1156,6 +1161,8 @@ namespace KinematicTest.controller
             if (hitCollider.CompareTag("Wall") && CurrentCharacterState != PlayerStates.Idling &&
                 Motor.GroundingStatus.IsStableOnGround && !rampingDown)
             {
+                
+
                 //if (rampingDown)
                 //{
                 //    curveStep = 0;

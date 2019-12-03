@@ -19,6 +19,7 @@ private bool IsInCollider = false;
         if (other.tag != "Player" || IsInCollider) { return; }
 
         AkSoundEngine.SetState("Zones", "BossFight");
+       
         
     }
 }
