@@ -1368,7 +1368,7 @@
 									<PropertyList>
 										<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
 										<Property Name="FilterTypeBand2" Type="int32" Value="0"/>
-										<Property Name="FrequencyBand1" Type="Real32" Value="304"/>
+										<Property Name="FrequencyBand1" Type="Real32" Value="58"/>
 										<Property Name="FrequencyBand2" Type="Real32" Value="7818"/>
 										<Property Name="GainBand1" Type="Real32" Value="3"/>
 										<Property Name="OnOffBand3" Type="bool" Value="False"/>
@@ -3395,6 +3395,25 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Drill" ID="{565D8396-4363-4B93-A129-12B064810179}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ExplosionSound" ID="{95D8736E-E23F-464C-9AF7-AC2634FE24C5}" ShortID="871161801">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ExplosionSound" ID="{E3AF343A-21EA-4AAE-901A-CBD4A0DDB0F8}" ShortID="713682867">
+									<Language>SFX</Language>
+									<AudioFile>ExplosionSound.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ExplosionSound" ID="{E3AF343A-21EA-4AAE-901A-CBD4A0DDB0F8}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

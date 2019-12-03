@@ -27,6 +27,7 @@ namespace AK
         static const AkUniqueID DOOR_CLOSES = 900426207U;
         static const AkUniqueID DOOR_OPENING = 2589897592U;
         static const AkUniqueID DRILL = 2168413864U;
+        static const AkUniqueID EXPLOSION = 13776098U;
         static const AkUniqueID GRABS = 238897438U;
         static const AkUniqueID JUMP_LAND = 3419686739U;
         static const AkUniqueID JUMP_TAKEOFF = 4186947444U;
