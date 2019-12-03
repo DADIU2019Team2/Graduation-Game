@@ -57,7 +57,6 @@ namespace AK
         static const AkUniqueID ROBOT_APPEARENCE = 2187783824U;
         static const AkUniqueID ROLL_SFX = 2520750572U;
         static const AkUniqueID SENTINEL_LAZER = 168295360U;
-        static const AkUniqueID SLIDES = 697318835U;
         static const AkUniqueID STOP_ALIEN_PLATFORM_PILLAR = 2176568168U;
         static const AkUniqueID STOP_ALIEN_PLATFORMS = 123461200U;
         static const AkUniqueID STOP_BALL_PLATFORM = 2364261975U;
