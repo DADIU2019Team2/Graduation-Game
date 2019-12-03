@@ -24,9 +24,6 @@
 				<Event Id="1839766762" Name="Alien_Crystal_Hum" ObjectPath="\Events\Default Work Unit\SFX\Alien_Crystal_Hum" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="3641971009" Name="Alien_Death_Trap" ObjectPath="\Events\Default Work Unit\SFX\Alien_Death_Trap" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="2755703943" Name="Alien_Platforms" ObjectPath="\Events\Default Work Unit\SFX\Alien_Platforms" MaxAttenuation="30.000000" DurationType="Infinite"/>
-				<Event Id="3996256281" Name="Ambience_Outside" ObjectPath="\Events\Default Work Unit\Ambience\Ambience_Outside" DurationType="Infinite"/>
-				<Event Id="1848730664" Name="Ball_Platform" ObjectPath="\Events\Default Work Unit\SFX\Ball_Platform" MaxAttenuation="30.000000" DurationType="Infinite"/>
-				<Event Id="2557453060" Name="Ball_Platform_Damaged" ObjectPath="\Events\Default Work Unit\SFX\Ball_Platform_Damaged" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="1427760111" Name="BossMusic" ObjectPath="\Events\Default Work Unit\Music\BossMusic" DurationType="Infinite"/>
 				<Event Id="1739986920" Name="Checkpoint_Crystal" ObjectPath="\Events\Default Work Unit\CelebrationSound\Checkpoint_Crystal" DurationType="OneShot" DurationMin="3.500000" DurationMax="3.500000"/>
 				<Event Id="1522595433" Name="Credits_Music" ObjectPath="\Events\Default Work Unit\Music\Credits_Music" DurationType="OneShot" DurationMin="80.000000" DurationMax="80.000000"/>
@@ -37,7 +34,7 @@
 				<Event Id="507840475" Name="Death_Saw" ObjectPath="\Events\Default Work Unit\SFX\Death_Saw" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="900426207" Name="Door_Closes" ObjectPath="\Events\Default Work Unit\SFX\Door_Closes" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="2.378414" DurationMax="2.378414"/>
 				<Event Id="2589897592" Name="Door_Opening" ObjectPath="\Events\Default Work Unit\SFX\Door_Opening" MaxAttenuation="30.000000" DurationType="OneShot" DurationMin="4.000000" DurationMax="4.000000"/>
-				<Event Id="2168413864" Name="Drill" ObjectPath="\Events\Default Work Unit\SFX\Drill" MaxAttenuation="100.000000" DurationType="Infinite"/>
+				<Event Id="2168413864" Name="Drill" ObjectPath="\Events\Default Work Unit\SFX\Drill" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="238897438" Name="Grabs" ObjectPath="\Events\Default Work Unit\Movement\Grabs" DurationType="OneShot" DurationMin="3.625011" DurationMax="3.625011"/>
 				<Event Id="3419686739" Name="Jump_Land" ObjectPath="\Events\Default Work Unit\Movement\Jump_Land" DurationType="OneShot" DurationMin="0.750000" DurationMax="0.750000"/>
 				<Event Id="4186947444" Name="Jump_Takeoff" ObjectPath="\Events\Default Work Unit\Movement\Jump_Takeoff" DurationType="OneShot" DurationMin="0.750000" DurationMax="0.750000"/>
@@ -67,8 +64,6 @@
 				<Event Id="168295360" Name="Sentinel_Lazer" ObjectPath="\Events\Default Work Unit\SFX\Sentinel_Lazer" MaxAttenuation="30.000000" DurationType="Infinite"/>
 				<Event Id="2176568168" Name="Stop_Alien_Platform_Pillar" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Alien_Platform_Pillar" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="123461200" Name="Stop_Alien_Platforms" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Alien_Platforms" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2364261975" Name="Stop_Ball_Platform" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Ball_Platform" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2828692239" Name="Stop_Ball_Platform_Damaged" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Ball_Platform_Damaged" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1365336475" Name="Stop_Boss_Music" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Boss_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="908305764" Name="Stop_Crusher_Movement" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Crusher_Movement" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1039048512" Name="Stop_Damaged_Platforms" ObjectPath="\Events\Default Work Unit\Stop_Events\Stop_Damaged_Platforms" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
@@ -188,10 +183,6 @@
 					<ShortName>Z4_Rising_Thingy.wav</ShortName>
 					<Path>SFX/Z4_Rising_Thingy_3EBA1927.wem</Path>
 				</File>
-				<File Id="233328267" Language="SFX">
-					<ShortName>Ball_Platform.wav</ShortName>
-					<Path>SFX/Ball_Platform_9B96ECC7.wem</Path>
-				</File>
 				<File Id="237847310" Language="SFX">
 					<ShortName>Z3AngryArp.wav</ShortName>
 					<Path>SFX/Z3AngryArp_3EBA1927.wem</Path>
@@ -240,9 +231,9 @@
 					<ShortName>Z2AngryBass.wav</ShortName>
 					<Path>SFX/Z2AngryBass_3EBA1927.wem</Path>
 				</File>
-				<File Id="361501470" Language="SFX">
-					<ShortName>Ambience_Z0.wav</ShortName>
-					<Path>SFX/Ambience_Z0_9B96ECC7.wem</Path>
+				<File Id="345546692" Language="SFX">
+					<ShortName>Drill.wav</ShortName>
+					<Path>SFX/Drill_9B96ECC7.wem</Path>
 				</File>
 				<File Id="364808119" Language="SFX">
 					<ShortName>Alien_Platform_1.wav</ShortName>
@@ -287,10 +278,6 @@
 				<File Id="459329517" Language="SFX">
 					<ShortName>Platform_3.wav</ShortName>
 					<Path>SFX/Platform_3_9B96ECC7.wem</Path>
-				</File>
-				<File Id="466662975" Language="SFX">
-					<ShortName>Drill.wav</ShortName>
-					<Path>SFX/Drill_9B96ECC7.wem</Path>
 				</File>
 				<File Id="497726209" Language="SFX">
 					<ShortName>Z2HappyDrumz.wav</ShortName>
@@ -459,10 +446,6 @@
 				<File Id="973236722" Language="SFX">
 					<ShortName>Jump_Land_SFX.wav</ShortName>
 					<Path>SFX/Jump_Land_SFX_6296B0F9.wem</Path>
-				</File>
-				<File Id="979311821" Language="SFX">
-					<ShortName>Ball_Platform_Damaged.wav</ShortName>
-					<Path>SFX/Ball_Platform_Damaged_9B96ECC7.wem</Path>
 				</File>
 				<File Id="1010279705" Language="SFX">
 					<ShortName>Z3_Dist_Bassline.wav</ShortName>
