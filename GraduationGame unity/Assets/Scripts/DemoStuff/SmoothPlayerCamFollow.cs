@@ -105,8 +105,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
     Vector3 DesiredCamPos()
     {
         bool wasChanged = false;
-        Vector3 oldDesiredPos = new Vector3();
-        oldDesiredPos = transform.position;
+        Vector3 oldDesiredPos = transform.position;
         newdesiredPos = oldDesiredPos;
 
         xDiff = (playerToFollow.position.x + localOffSet.x) - (transform.position.x + localOffSet.x);
@@ -144,7 +143,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
             currentMoveDir = ZoeMoveDir.down;
         }
 
-        newdesiredPos.z = playerToFollow.position.z + localOffSet.z;
+        newdesiredPos.z = playerToFollow.position.z + worldOffset.z;
 
         if (wasChanged)
             return newdesiredPos;
