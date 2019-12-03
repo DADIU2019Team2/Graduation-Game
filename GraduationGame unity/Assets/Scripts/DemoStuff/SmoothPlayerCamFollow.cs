@@ -85,14 +85,10 @@ public class SmoothPlayerCamFollow : MonoBehaviour
         Vector3 tempDesiredPos = DesiredCamPos();
         float distToDesiredPos = (tempDesiredPos - transform.position).magnitude;
 
-        //if(distToDesiredPos > 0.1)
-        //{
-        //}
-
+        //Do seperate smoothing speperate x and y and Z
         Vector3 desiredSmoothY = new Vector3(0, tempDesiredPos.y, 0);
         Vector3 smoothedY = Vector3.SmoothDamp(new Vector3(0, transform.position.y, 0), desiredSmoothY,
             ref yVelocity, YSmoothTime);
-        //Do seperate smoothing speperate x and y
 
         Vector3 desiredSmoothX = new Vector3(tempDesiredPos.x, 0, 0);
         Vector3 smoothedX = Vector3.SmoothDamp(new Vector3(transform.position.x, 0, 0), desiredSmoothX,
@@ -102,8 +98,8 @@ public class SmoothPlayerCamFollow : MonoBehaviour
         Vector3 smoothedZ = Vector3.SmoothDamp(new Vector3(0, 0, transform.position.z), desiredSmoothedZ,
             ref zVelocity, zoomResetSmoothTime);
 
-        Vector3 camDesiredPosition = smoothedX + smoothedY;
-        camDesiredPosition.z = tempDesiredPos.z;
+        Vector3 camDesiredPosition = smoothedX + smoothedY + smoothedZ;
+        //camDesiredPosition.z = tempDesiredPos.z;
 
         transform.position = camDesiredPosition;
     }
