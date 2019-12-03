@@ -184,14 +184,14 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: a9fbbffd6d82f84e923dba695a2fda43
     GuidInternal: 
-    m_lastTime: -8586263180284775808
+    m_lastTime: -8586262432824775808
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4219221ac0890d4bbef9f0f6d1c95982
     GuidInternal: 
-    m_lastTime: -8586263180284775808
+    m_lastTime: -8586262411984775808
     List:
     - name: Main
       guid: 8d0f58feffbb4a40aa7ae59b199a4834
@@ -283,7 +283,7 @@ MonoBehaviour:
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: b168d0525b1c114b9f006e5315226880
     GuidInternal: 
-    m_lastTime: -8586267403844775808
+    m_lastTime: -8586262432824775808
     List:
     - name: Checkpoint_Crystal
       guid: b5775b93aa073349a5409522bf447840
@@ -349,7 +349,7 @@ MonoBehaviour:
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 842bb934d44d8d498d4461282abe4319
     GuidInternal: 
-    m_lastTime: -8586267463644775808
+    m_lastTime: -8586262432824775808
     List:
     - name: Grabs
       guid: bc1fc8f6b4df3d4ca3ded15a4a5e4aae
@@ -467,7 +467,7 @@ MonoBehaviour:
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 3631f1d8df531f488aa67fbe67e566e8
     GuidInternal: 
-    m_lastTime: -8586265740474775808
+    m_lastTime: -8586262391234775808
     List:
     - name: BossMusic
       guid: 3e2f12219ad59749970d91be5fe8b5b4
@@ -585,7 +585,7 @@ MonoBehaviour:
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 70427e337ecab74391244b5ed6520621
     GuidInternal: 
-    m_lastTime: -8586265688014775808
+    m_lastTime: -8586262411984775808
     List:
     - name: Alien_Crystal_Hum
       guid: 7ec1b424b5419249be4371acb3f812f7
@@ -668,7 +668,7 @@ MonoBehaviour:
       - ElementName: Alien_Platforms
         ObjectType: 3
       Path: Default Work Unit/SFX/Alien_Platforms
-      maxAttenuation: 0
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
     - name: Ball_Platform
@@ -1004,14 +1004,14 @@ MonoBehaviour:
       - ElementName: Sentinel_Lazer
         ObjectType: 3
       Path: Default Work Unit/SFX/Sentinel_Lazer
-      maxAttenuation: 0
+      maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
   - PhysicalPath: Events/Stop_Events.wwu
     ParentPhysicalPath: Events/Default Work Unit.wwu
     guid: 7972bedaa5f4f94ea19772905b161148
     GuidInternal: 
-    m_lastTime: -8586265750704775808
+    m_lastTime: -8586262391234775808
     List:
     - name: Stop_Alien_Death_Trap
       guid: 547be385766d044b85cc8d7ebf3f79fa
@@ -1137,8 +1137,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/Stop_Events/Stop_Death_Ray
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_Death_Saw
       guid: e5f492096e05d44db53d31a71d8d0058
       id: 3058963576
@@ -1151,8 +1151,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/Stop_Events/Stop_Death_Saw
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_Door
       guid: 449f794a982e9f49bb70886d267f12d3
       id: 3364702632
@@ -1291,8 +1291,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/Stop_Events/Stop_Platform_Pillar_Damaged
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_Saw
       guid: bea00e2480825a45bad717244f184b82
       id: 170285335
@@ -1374,7 +1374,7 @@ MonoBehaviour:
     ParentPhysicalPath: Game Parameters/Default Work Unit.wwu
     guid: 6c11d9cd8155bb4ab9311b942d719fd8
     GuidInternal: 
-    m_lastTime: -8586265888144775808
+    m_lastTime: -8586262432824775808
     List:
     - name: Angry_Music_Layer
       guid: e2ed46a941e4e04191813bf56ebac714
@@ -1519,7 +1519,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 6dd5ac529c349441bea23ed61995e31b
     GuidInternal: 
-    m_lastTime: -8586265811524775808
+    m_lastTime: -8586262432814775808
     List:
     - name: Dead_or_Alive
       guid: 0b5c99a6f92db04d8a37ef970ed19de4
@@ -1668,8 +1668,6 @@ MonoBehaviour:
   - /Wwise_Graduation_game
   - /Wwise_Graduation_game/Events
   - /Wwise_Graduation_game/Events/Default Work Unit
-  - /Wwise_Graduation_game/Events/Default Work Unit/Ambience
-  - /Wwise_Graduation_game/Events/Default Work Unit/SFX
   - /Wwise_Graduation_game/Events/Default Work Unit/Stop_Events
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

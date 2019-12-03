@@ -6,9 +6,10 @@
 				<MusicSwitchContainer Name="Music" ID="{4A2A0596-816D-4FD7-9F64-914C3C785CBF}" ShortID="666188830">
 					<PropertyList>
 						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-3</Value>
+								<Value>-2</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -110,6 +111,14 @@
 					</ReferenceList>
 					<ChildrenList>
 						<MusicPlaylistContainer Name="Z1_Music_Layers_Playlist" ID="{C989FC0E-833F-4B8D-A463-E4CB2AA4CE71}" ShortID="318514684">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
@@ -1211,6 +1220,14 @@
 							</Playlist>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="Z2_Music_Layers_Playlist" ID="{2874BA3A-11C7-425B-9FD2-0A1BCA423C71}" ShortID="979812348">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
@@ -2349,6 +2366,12 @@
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="Z3_Music_Layers_Playlist" ID="{C7A07A7D-B427-4FE8-9977-12E9F62B83A1}" ShortID="48885270">
 							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-1</Value>
@@ -3596,855 +3619,6 @@
 								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
-						<MusicPlaylistContainer Name="Z4_Music_Layers_Playlist" ID="{54637011-86DB-4E7F-8F77-B74FA7D9E880}" ShortID="114648861">
-							<PropertyList>
-								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
-								<Property Name="MaxSoundPerInstance" Type="int16">
-									<ValueList>
-										<Value>1</Value>
-									</ValueList>
-								</Property>
-								<Property Name="UseMaxSoundPerInstance" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicSegment Name="Z4_Music_Layers" ID="{3DE1D81B-763D-4645-8F2A-66D69F221E2C}" ShortID="442894495">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="22553.6105032823"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<MusicTrack Name="Z4_Dist_Klaver" ID="{AC3538C6-8981-475C-81AA-2FDA8BE6D792}" ShortID="996557172">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<RTPCList>
-														<RTPC Name="" ID="{9A2DD27F-DF9A-42BB-AB03-DFC9769DD1C2}" ShortID="433651121">
-															<ReferenceList>
-																<Reference Name="ControlInput">
-																	<ObjectRef Name="Music_Layer_Z4" ID="{28F430D6-17B1-4553-A19F-A537DE7CD1B4}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
-																</Reference>
-															</ReferenceList>
-															<Curve Name="" ID="{7EB60AAF-3160-4E28-BFB3-261A6A632D40}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>5</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>6</XPos>
-																		<YPos>0</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>10</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</RTPC>
-													</RTPCList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Z4_Dist_Klaver" ID="{33E73EF1-47CE-49CC-91CF-8449438A23D1}" ShortID="979909387">
-													<Language>SFX</Language>
-													<AudioFile>Z4_Dist_Klaver.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{F62ADF8E-720C-496F-8AC4-67C2C579AC9A}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<SequenceList>
-												<MusicTrackSequence Name="" ID="{F0061ADF-A2F5-4610-8E26-F02797F8E294}">
-													<ClipList>
-														<MusicClip Name="Z4_Dist_Klaver" ID="{42C54D6E-817E-4122-8A2F-1F5E7300CA6B}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Z4_Dist_Klaver" ID="{33E73EF1-47CE-49CC-91CF-8449438A23D1}"/>
-														</MusicClip>
-													</ClipList>
-												</MusicTrackSequence>
-											</SequenceList>
-										</MusicTrack>
-										<MusicTrack Name="Z4_Flyde_Chords" ID="{A0F0B9F2-66CB-4A9C-9F15-B1258642CB7E}" ShortID="457209411">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<RTPCList>
-														<RTPC Name="" ID="{F1637583-E7F1-4D21-870F-F262F1708FAE}" ShortID="952952423">
-															<ReferenceList>
-																<Reference Name="ControlInput">
-																	<ObjectRef Name="Music_Layer_Z4" ID="{28F430D6-17B1-4553-A19F-A537DE7CD1B4}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
-																</Reference>
-															</ReferenceList>
-															<Curve Name="" ID="{DE5F1C43-C111-4775-9316-34C0032A437C}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>4</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>5</XPos>
-																		<YPos>0</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>10</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</RTPC>
-													</RTPCList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Z4_Flyde_Chords" ID="{3780D215-3D00-4A46-BE18-64012C3FBAA1}" ShortID="179692943">
-													<Language>SFX</Language>
-													<AudioFile>Z4_Flyde_Chords.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{27599E0D-EB0C-479C-B391-90825FD7A8A2}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<SequenceList>
-												<MusicTrackSequence Name="" ID="{1A5CA879-164B-4806-AD52-89F21DA26BEA}">
-													<ClipList>
-														<MusicClip Name="Z4_Flyde_Chords" ID="{6AB05F27-1E5E-43FA-AF0C-5C5A31D9531A}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Z4_Flyde_Chords" ID="{3780D215-3D00-4A46-BE18-64012C3FBAA1}"/>
-														</MusicClip>
-													</ClipList>
-												</MusicTrackSequence>
-											</SequenceList>
-										</MusicTrack>
-										<MusicTrack Name="Z4_Happy_Drumz" ID="{1FFB79F5-02DF-4F98-A691-8F019EC4F727}" ShortID="152007742">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<RTPCList>
-														<RTPC Name="" ID="{B5489F9F-00A6-4DD0-8FC5-E3E526933FB5}" ShortID="600060087">
-															<ReferenceList>
-																<Reference Name="ControlInput">
-																	<ObjectRef Name="Happy_Drumz" ID="{891475D9-5DA4-412F-819E-4B4C57B205E3}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
-																</Reference>
-															</ReferenceList>
-															<Curve Name="" ID="{7152C2E5-BADE-4F56-B9EF-43DA2C547094}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>1</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>2</XPos>
-																		<YPos>0</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>10</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</RTPC>
-													</RTPCList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Z4_Kick" ID="{262FA24D-09CB-4F7D-B6D7-2FED04C448E6}" ShortID="569405528">
-													<Language>SFX</Language>
-													<AudioFile>Z4_Kick.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{EC039B9D-DE1F-4058-9F14-EAD168712DE1}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<SequenceList>
-												<MusicTrackSequence Name="" ID="{3F98AEA8-68E8-455C-ABF4-FA8A13F036DB}">
-													<ClipList>
-														<MusicClip Name="Z4_Kick" ID="{3949A5A4-A283-4667-9186-ECDD01DF98F2}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Z4_Kick" ID="{262FA24D-09CB-4F7D-B6D7-2FED04C448E6}"/>
-														</MusicClip>
-													</ClipList>
-												</MusicTrackSequence>
-											</SequenceList>
-										</MusicTrack>
-										<MusicTrack Name="Z4_Metal_Pad" ID="{4075A6EA-AB8C-456F-9B2C-D83ACD946E33}" ShortID="286238443">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<RTPCList>
-														<RTPC Name="" ID="{F6D8E63A-7856-4BED-A816-4A9EE05995F6}" ShortID="499355876">
-															<ReferenceList>
-																<Reference Name="ControlInput">
-																	<ObjectRef Name="Music_Layer_Z4" ID="{28F430D6-17B1-4553-A19F-A537DE7CD1B4}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
-																</Reference>
-															</ReferenceList>
-															<Curve Name="" ID="{86EA3490-4FA8-4CAF-A606-99F32777B48F}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>2.99896</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>4</XPos>
-																		<YPos>0</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>10</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</RTPC>
-													</RTPCList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Z4_Metal_Pad" ID="{07B37089-99EA-4EA9-B21D-524B997181F5}" ShortID="25731778">
-													<Language>SFX</Language>
-													<AudioFile>Z4_Metal_Pad.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{5FEA11D5-9521-4023-80D4-2C669F34F557}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<SequenceList>
-												<MusicTrackSequence Name="" ID="{F17F0F0B-E858-43F0-81AB-C87DA6894152}">
-													<ClipList>
-														<MusicClip Name="Z4_Metal_Pad" ID="{7C9F909E-153D-4B09-B0CD-2CD5887911AE}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Z4_Metal_Pad" ID="{07B37089-99EA-4EA9-B21D-524B997181F5}"/>
-														</MusicClip>
-													</ClipList>
-												</MusicTrackSequence>
-											</SequenceList>
-										</MusicTrack>
-										<MusicTrack Name="Z4_Happy_Bass" ID="{5867353D-39B9-460E-8034-D6DE88475559}" ShortID="879754995">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<RTPCList>
-														<RTPC Name="" ID="{3FEA54CB-9904-4C54-8417-A097A85DBD1A}" ShortID="634334316">
-															<ReferenceList>
-																<Reference Name="ControlInput">
-																	<ObjectRef Name="Happy_Bass" ID="{5A1AA697-FE07-4AB3-AA71-D2B5FB728F1B}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
-																</Reference>
-															</ReferenceList>
-															<Curve Name="" ID="{D4C48B20-DDA6-4102-97BD-3DA28EB610B3}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>2</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>3</XPos>
-																		<YPos>0</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>10</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</RTPC>
-													</RTPCList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Z4_Nasal_Bass" ID="{9B6B2625-4667-4EEF-93F2-FBF7406541B9}" ShortID="462863095">
-													<Language>SFX</Language>
-													<AudioFile>Z4_Nasal_Bass.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{776BE2CF-E014-4DD4-B492-8227B5A1151F}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<SequenceList>
-												<MusicTrackSequence Name="" ID="{25CD00FA-0EBA-4440-BEBC-A384307BA943}">
-													<ClipList>
-														<MusicClip Name="Z4_Nasal_Bass" ID="{2A2975C5-1A17-4AC9-AA81-6455934652FB}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Z4_Nasal_Bass" ID="{9B6B2625-4667-4EEF-93F2-FBF7406541B9}"/>
-														</MusicClip>
-													</ClipList>
-												</MusicTrackSequence>
-											</SequenceList>
-										</MusicTrack>
-										<MusicTrack Name="Z4_Happy_Synth_Arp" ID="{1A166287-0B12-4220-842E-3E5896DBC261}" ShortID="417837649">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<RTPCList>
-														<RTPC Name="" ID="{C38F994F-3E27-47BF-8013-74A47F197415}" ShortID="731748247">
-															<ReferenceList>
-																<Reference Name="ControlInput">
-																	<ObjectRef Name="Happy_Synth" ID="{4FC53ECF-4E35-4D98-8A31-3229A017E543}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
-																</Reference>
-															</ReferenceList>
-															<Curve Name="" ID="{089BB1C4-437A-42BD-8B76-7CB82B14309E}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>3</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>4</XPos>
-																		<YPos>0</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>10</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</RTPC>
-													</RTPCList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Z4_Noisy_Arp" ID="{92B93A70-54A6-4E48-BD8F-CBB28C86AAF0}" ShortID="503665789">
-													<Language>SFX</Language>
-													<AudioFile>Z4_Noisy_Arp.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{05AA702D-F51B-40DF-BA51-66C9C4D1F77F}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<SequenceList>
-												<MusicTrackSequence Name="" ID="{DCFC126E-0ACC-4A4F-85B1-0F94B928AA4B}">
-													<ClipList>
-														<MusicClip Name="Z4_Noisy_Arp" ID="{5E95BC34-068F-4266-9DA7-25E756BFC29D}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Z4_Noisy_Arp" ID="{92B93A70-54A6-4E48-BD8F-CBB28C86AAF0}"/>
-														</MusicClip>
-													</ClipList>
-												</MusicTrackSequence>
-											</SequenceList>
-										</MusicTrack>
-										<MusicTrack Name="Z4_Rising_Thingy" ID="{89996F06-919B-40F6-914C-E4B4E7C9AC4C}" ShortID="833835133">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<RTPCList>
-														<RTPC Name="" ID="{8350E937-BF3B-4B9F-BFD4-5282809651CC}" ShortID="505379919">
-															<ReferenceList>
-																<Reference Name="ControlInput">
-																	<ObjectRef Name="Music_Layer_Z4" ID="{28F430D6-17B1-4553-A19F-A537DE7CD1B4}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
-																</Reference>
-															</ReferenceList>
-															<Curve Name="" ID="{ADD2AE04-6BA0-4FFF-9E03-8B8FB674C366}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>6</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>7</XPos>
-																		<YPos>0</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>10</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</RTPC>
-													</RTPCList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Z4_Rising_Thingy" ID="{11C0B46D-F029-4230-9318-DC2EC6D64FF1}" ShortID="22842696">
-													<Language>SFX</Language>
-													<AudioFile>Z4_Rising_Thingy.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{A281BC42-4CC7-4C77-8704-E696CC54306A}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<SequenceList>
-												<MusicTrackSequence Name="" ID="{3E6D0605-93F2-49CE-8D01-FB3075837F0D}">
-													<ClipList>
-														<MusicClip Name="Z4_Rising_Thingy" ID="{1A39E450-ACA1-42C5-AF0C-190C8C961B28}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Z4_Rising_Thingy" ID="{11C0B46D-F029-4230-9318-DC2EC6D64FF1}"/>
-														</MusicClip>
-													</ClipList>
-												</MusicTrackSequence>
-											</SequenceList>
-										</MusicTrack>
-										<MusicTrack Name="Z4AngryArp" ID="{2AAF71A2-DA67-42F9-9B69-CC2A4CA53FD5}" ShortID="307965143">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<RTPCList>
-														<RTPC Name="" ID="{B3580E62-5739-4462-A78F-C28D4BB88DE7}" ShortID="344143680">
-															<ReferenceList>
-																<Reference Name="ControlInput">
-																	<ObjectRef Name="Angry_Music_Layer" ID="{A946EDE2-E441-41E0-9181-3BF56EBAC714}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
-																</Reference>
-															</ReferenceList>
-															<Curve Name="" ID="{0D5B8F51-9560-4B3F-84DC-9C460A10CF51}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>3</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>4</XPos>
-																		<YPos>-5</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>10</XPos>
-																		<YPos>-5</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</RTPC>
-													</RTPCList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Z4AngryArp" ID="{D40934ED-CC88-4CFD-821B-5FB67C20437A}" ShortID="805816692">
-													<Language>SFX</Language>
-													<AudioFile>Z4AngryArp.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{6DDE60E7-451E-47A1-B14C-AA079D990C65}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<SequenceList>
-												<MusicTrackSequence Name="" ID="{36905665-C8D3-4DB0-B8F2-EA13B082B508}">
-													<ClipList>
-														<MusicClip Name="Z4AngryArp" ID="{59703FFB-1B91-46EB-BCD5-127FDB035887}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="20007.6870748299"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Z4AngryArp" ID="{D40934ED-CC88-4CFD-821B-5FB67C20437A}"/>
-														</MusicClip>
-													</ClipList>
-												</MusicTrackSequence>
-											</SequenceList>
-										</MusicTrack>
-										<MusicTrack Name="Z4AngryBass" ID="{5A0AD689-E0FE-496F-BD15-CCFAEF6354E2}" ShortID="285904575">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<RTPCList>
-														<RTPC Name="" ID="{50E276F9-9347-4193-BE10-2C83C43318C8}" ShortID="186585971">
-															<ReferenceList>
-																<Reference Name="ControlInput">
-																	<ObjectRef Name="Angry_Music_Layer" ID="{A946EDE2-E441-41E0-9181-3BF56EBAC714}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
-																</Reference>
-															</ReferenceList>
-															<Curve Name="" ID="{FC902782-52B6-4779-A217-0A650ADE8E4C}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>2</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>3</XPos>
-																		<YPos>-5</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>10</XPos>
-																		<YPos>-5</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</RTPC>
-													</RTPCList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Z4AngryBass" ID="{7FE1692F-110B-4AFE-A6F2-A9078C3EDBE8}" ShortID="76766429">
-													<Language>SFX</Language>
-													<AudioFile>Z4AngryBass.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{193D8648-2E54-4D77-969B-117482478469}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<SequenceList>
-												<MusicTrackSequence Name="" ID="{AEEADD35-09B1-4121-B03B-83309BCF381C}">
-													<ClipList>
-														<MusicClip Name="Z4AngryBass" ID="{175FC0E9-88B5-4F9C-968F-119849D8681D}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Z4AngryBass" ID="{7FE1692F-110B-4AFE-A6F2-A9078C3EDBE8}"/>
-														</MusicClip>
-													</ClipList>
-												</MusicTrackSequence>
-											</SequenceList>
-										</MusicTrack>
-										<MusicTrack Name="Z4AngryDrumz" ID="{8B7B19B6-27B6-483C-8B00-6750D7AF2737}" ShortID="382133124">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<RTPCList>
-														<RTPC Name="" ID="{494F08F8-46E8-4D9B-8EE1-201CFF48C396}" ShortID="14904285">
-															<ReferenceList>
-																<Reference Name="ControlInput">
-																	<ObjectRef Name="Angry_Music_Layer" ID="{A946EDE2-E441-41E0-9181-3BF56EBAC714}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
-																</Reference>
-															</ReferenceList>
-															<Curve Name="" ID="{BBAA04B9-F247-42C1-914D-E55ACC7EC929}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>1</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>2</XPos>
-																		<YPos>-5</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>10</XPos>
-																		<YPos>-5</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</RTPC>
-													</RTPCList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Z4AngryDrumz" ID="{721E6A5E-A222-4F60-B422-2E64F757DFC7}" ShortID="869369574">
-													<Language>SFX</Language>
-													<AudioFile>Z4AngryDrumz.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{0C751185-358B-4504-9295-1438602D20C4}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<SequenceList>
-												<MusicTrackSequence Name="" ID="{14054B95-14C8-4A17-8E22-D56D781D99AE}">
-													<ClipList>
-														<MusicClip Name="Z4AngryDrumz" ID="{8DC639A6-CB71-47CF-BA27-F57CA638FD6F}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Z4AngryDrumz" ID="{721E6A5E-A222-4F60-B422-2E64F757DFC7}"/>
-														</MusicClip>
-													</ClipList>
-												</MusicTrackSequence>
-											</SequenceList>
-										</MusicTrack>
-									</ChildrenList>
-									<CueList>
-										<MusicCue Name="Entry Cue" ID="{D833B8A7-0553-4C08-A8B1-5D4190651635}"/>
-										<MusicCue Name="Exit Cue" ID="{71430F3B-0FB5-41BD-B62F-9AA3563D51C1}">
-											<PropertyList>
-												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="20000"/>
-											</PropertyList>
-										</MusicCue>
-									</CueList>
-								</MusicSegment>
-							</ChildrenList>
-							<StateInfo>
-								<StateGroupList>
-									<StateGroupInfo>
-										<StateGroupRef Name="Dead_or_Alive" ID="{A6995C0B-2DF9-4DB0-8A37-EF970ED19DE4}"/>
-									</StateGroupInfo>
-								</StateGroupList>
-								<CustomStateList>
-									<CustomState>
-										<StateRef Name="Dead" ID="{88A84DB9-3DBC-4474-982E-8141AD08D4AB}"/>
-										<CustomState Name="" ID="{131A30DD-A189-4D6F-A58C-713108890633}" ShortID="941464526">
-											<PropertyList>
-												<Property Name="Lowpass" Type="int16" Value="25"/>
-											</PropertyList>
-										</CustomState>
-									</CustomState>
-									<CustomState>
-										<StateRef Name="Alive" ID="{82039F13-E292-4905-AFEC-6145032AE0A3}"/>
-										<CustomState Name="" ID="{7A104F6F-7312-419C-B3B5-4E302E7017E9}" ShortID="593985593"/>
-									</CustomState>
-								</CustomStateList>
-							</StateInfo>
-							<TransitionList>
-								<MusicTransition Name="Root" ID="{897EF601-81CC-47DB-B0BF-E899B9B16777}">
-									<PropertyList>
-										<Property Name="IsFolder" Type="bool" Value="True"/>
-									</PropertyList>
-									<ChildrenList>
-										<MusicTransition Name="Transition" ID="{9A26FE46-2E7E-4B62-8B74-702E4A0CAB2A}">
-											<TransitionInfo/>
-										</MusicTransition>
-									</ChildrenList>
-									<TransitionInfo/>
-								</MusicTransition>
-							</TransitionList>
-							<Playlist>
-								<MusicPlaylistItem Name="" ID="{EB4E3806-5292-4660-9C0E-9D6F116A7543}" ShortID="789680139">
-									<PropertyList>
-										<Property Name="LoopCount" Type="int16" Value="0"/>
-									</PropertyList>
-									<ChildrenList>
-										<MusicPlaylistItem Name="" ID="{FBC4318D-F1A7-4176-890E-F9F73B1C5A9E}" ShortID="596377164">
-											<PropertyList>
-												<Property Name="LoopCount" Type="int16" Value="0"/>
-												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-											</PropertyList>
-											<SegmentRef Name="Z4_Music_Layers" ID="{3DE1D81B-763D-4645-8F2A-66D69F221E2C}"/>
-										</MusicPlaylistItem>
-									</ChildrenList>
-								</MusicPlaylistItem>
-							</Playlist>
-						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="Dialogue_Happy" ID="{1DFF47FA-BEF2-44F7-A5F0-9048B789BC2D}" ShortID="1066850689">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -4646,6 +3820,19 @@
 							</Playlist>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="BossMusic" ID="{5E524876-A6F7-4A42-96A3-62477E1AB43D}" ShortID="87472587">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
@@ -4843,6 +4030,12 @@
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="Menu" ID="{E18F22BD-DA7E-470C-9CE9-DE671F1DF1CD}" ShortID="213073440">
 							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>6</Value>
@@ -4950,6 +4143,12 @@
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="Credits" ID="{D4681B08-7EBD-4A1B-A852-93EB0E1EA15D}" ShortID="533694853">
 							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>1</Value>
@@ -5046,6 +4245,637 @@
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<SegmentRef Name="Credits_Music" ID="{7C4D63B9-376E-4B86-97FF-C904F46C1449}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="Z4_Music_Layers_Playlist" ID="{7C49FE58-7442-44D8-9952-84E2E33F662E}" ShortID="406797332">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Z4_Music_Layers" ID="{F6A59F2F-8FFA-4D5E-A1E0-03EF8259769F}" ShortID="391306897">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="20382.932166302"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{487484B8-E6B0-4018-9D43-0D84C0369DCA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Z4HappyArp" ID="{40C2D86C-47F3-4FBF-8B8C-556CC5500F4F}" ShortID="778442840">
+											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{60EAE9CC-53A4-4A9C-B954-625E877A4B35}" ShortID="967754422">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Happy_Synth" ID="{4FC53ECF-4E35-4D98-8A31-3229A017E543}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{725DE987-90CC-4223-B4CA-F7EA4CD50B38}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2</XPos>
+																		<YPos>-0.63198</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Z4HappyArp" ID="{9F3D7B3A-110B-4FD7-ABD8-714910BD006B}" ShortID="828773102">
+													<Language>SFX</Language>
+													<AudioFile>Z4HappyArp.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{EB892E6E-AD0E-4CE3-A4E3-31C521D39D5D}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{4F9F7761-151D-4E28-B204-AB6B0CE54A33}">
+													<ClipList>
+														<MusicClip Name="Z4HappyArp" ID="{8805B543-BD2F-4C61-9555-1022ECF6C195}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Z4HappyArp" ID="{9F3D7B3A-110B-4FD7-ABD8-714910BD006B}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="Z4HappyBass" ID="{ED22A76D-5D75-4D73-A7D2-EB5D3D23ABF5}" ShortID="1035828892">
+											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{CE41D759-BE5F-469E-8BFE-2138D1A64E21}" ShortID="1004374602">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Happy_Bass" ID="{5A1AA697-FE07-4AB3-AA71-D2B5FB728F1B}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{8E3A51A3-220C-482E-928E-06E7978A007C}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Z4HappyBass" ID="{DB35C5BD-E55D-41A8-905D-04EB72A61439}" ShortID="522163128">
+													<Language>SFX</Language>
+													<AudioFile>Z4HappyBass.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{05CE55E9-F5A7-4BB7-A107-026E10AAC65A}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{25C37665-B0F5-4267-92C1-7FCB4461BFF3}">
+													<ClipList>
+														<MusicClip Name="Z4HappyBass" ID="{19B89585-B448-467C-9195-6620F4158AA7}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Z4HappyBass" ID="{DB35C5BD-E55D-41A8-905D-04EB72A61439}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="Z4HappyDrumz" ID="{DA78442F-676B-4C37-BA57-D3FE1163636F}" ShortID="761260572">
+											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{D52EED01-EA58-4C09-83CD-F705D155EDF2}" ShortID="776760389">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Happy_Drumz" ID="{891475D9-5DA4-412F-819E-4B4C57B205E3}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{1E269C34-69A3-4432-9873-0295084E38F8}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Z4HappyDrumz" ID="{D7DC0A08-9E51-446D-A8C1-4E62DD054F7A}" ShortID="214839292">
+													<Language>SFX</Language>
+													<AudioFile>Z4HappyDrumz.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{6AB7B75E-F555-4B58-A7C0-54F44B3198D8}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{6676569A-FF21-42F4-B68B-2ED4322B7095}">
+													<ClipList>
+														<MusicClip Name="Z4HappyDrumz" ID="{789E05F9-BBE3-473B-840B-C7232982B46B}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Z4HappyDrumz" ID="{D7DC0A08-9E51-446D-A8C1-4E62DD054F7A}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="Z4_Dist_Klaver" ID="{6EF80B99-537F-404F-A3AB-5B3233BC2FFF}" ShortID="1053708689">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{BB64AECB-C8A9-4995-B62B-FE2E872B2616}" ShortID="659093102">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Happy_Synth" ID="{4FC53ECF-4E35-4D98-8A31-3229A017E543}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{EAF952D4-7DB4-4F3D-99C1-DACFE6771021}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Z4_Dist_Klaver" ID="{47DA75C4-D6FF-4BB0-B130-44CB407C5807}" ShortID="878316333">
+													<Language>SFX</Language>
+													<AudioFile>Z4_Dist_Klaver.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{2667FCB6-0B5B-49D4-8827-33A34C8A9730}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{F18232CC-BA32-4324-8590-A769B8027E19}">
+													<ClipList>
+														<MusicClip Name="Z4_Dist_Klaver" ID="{D934B29F-1E2C-4F97-ADD6-F309873E6225}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Z4_Dist_Klaver" ID="{47DA75C4-D6FF-4BB0-B130-44CB407C5807}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="Z4_Flyde_Chords" ID="{5F6632BD-8657-4E06-B0C7-6EC20A5C826E}" ShortID="1059664590">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{5664465C-3F53-4637-934C-C63E89B8F783}" ShortID="940575333">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Happy_Bass" ID="{5A1AA697-FE07-4AB3-AA71-D2B5FB728F1B}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{8B82DD29-30E5-4BF9-9A81-6891C45C8C10}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2</XPos>
+																		<YPos>-0.15374</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Z4_Flyde_Chords" ID="{B591F61F-DF67-42F7-84FD-EA4ED22E1D96}" ShortID="132090060">
+													<Language>SFX</Language>
+													<AudioFile>Z4_Flyde_Chords.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{92470196-BCCB-4A4E-AE69-AA7EBC724559}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{68EA642D-FD9A-4FFB-B7A1-D6298D4D311B}">
+													<ClipList>
+														<MusicClip Name="Z4_Flyde_Chords" ID="{30201853-59BD-4A96-AF37-A7C341C1715D}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Z4_Flyde_Chords" ID="{B591F61F-DF67-42F7-84FD-EA4ED22E1D96}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="Z4_Metal_Pad" ID="{6099DAE8-9AF7-4F31-9C6E-03087012F63A}" ShortID="876935023">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{38E984D5-F493-4B06-9E42-55CD3983C398}" ShortID="775712230">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Happy_Drumz" ID="{891475D9-5DA4-412F-819E-4B4C57B205E3}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{CB5755D7-BECE-4B40-A55C-9F5BFD681F27}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Z4_Metal_Pad" ID="{2A277491-2072-49A1-993E-CEC6936E946B}" ShortID="533883544">
+													<Language>SFX</Language>
+													<AudioFile>Z4_Metal_Pad.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{02FEDE26-3DAD-42A7-83DD-144A8D818B8D}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{BB287635-BA0E-49DB-958E-50CDAB903857}">
+													<ClipList>
+														<MusicClip Name="Z4_Metal_Pad" ID="{BE5E5EDE-F175-4EB3-B241-8912F5CE8FF7}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Z4_Metal_Pad" ID="{2A277491-2072-49A1-993E-CEC6936E946B}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="Z4_Rising_Thingy" ID="{D3799485-0CE3-47F0-9EB8-4270E4E71938}" ShortID="554776847">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{7609005D-379B-4BAE-8C3B-AFAB2F66A288}" ShortID="139725936">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Happy_Synth" ID="{4FC53ECF-4E35-4D98-8A31-3229A017E543}" WorkUnitID="{CDD9116C-5581-4ABB-B931-1B942D719FD8}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{D1B6EB0E-E45E-4D5E-8014-CD8E1034C411}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FDBFFBA9-826D-4EF8-923D-BA695A2FDA43}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Z4_Rising_Thingy" ID="{5293C89D-6889-4CA3-AB30-7FEA1A5B1B27}" ShortID="230751886">
+													<Language>SFX</Language>
+													<AudioFile>Z4_Rising_Thingy.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{62087EB6-9F6A-483C-B3ED-20CEA4FE598F}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{9CFF5062-AD7F-4A38-8C2E-38DD11EA3ED3}">
+													<ClipList>
+														<MusicClip Name="Z4_Rising_Thingy" ID="{D25D6668-B653-4A3D-9DF6-C87E6DEEE328}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="20000"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Z4_Rising_Thingy" ID="{5293C89D-6889-4CA3-AB30-7FEA1A5B1B27}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{E93AF800-8ED4-4EFB-99A3-F446FAD22BB7}"/>
+										<MusicCue Name="Exit Cue" ID="{BDCD8BF0-ECF1-4BBD-B5B0-39F8917B0594}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="20000"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{AA0BA476-344C-493A-A412-888AD8888145}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{7ED44D69-EB4B-451A-8485-EE7E6345A3DA}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{53529828-2E4A-4044-B0EE-9CA1B4CECC75}" ShortID="959831850">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{FF7D2704-098D-4AFC-BA58-C969F84B890D}" ShortID="433447584">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Z4_Music_Layers" ID="{F6A59F2F-8FFA-4D5E-A1E0-03EF8259769F}"/>
 										</MusicPlaylistItem>
 									</ChildrenList>
 								</MusicPlaylistItem>
@@ -5315,7 +5145,6 @@
 								</MusicTransition>
 								<MusicTransition Name="Transition" ID="{90F8EDCF-E5D4-4A5D-B329-7AEFFD42D173}">
 									<PropertyList>
-										<Property Name="DestinationContextType" Type="int16" Value="2"/>
 										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 										<Property Name="EnableTransitionFadeIn" Type="bool" Value="True"/>
@@ -5324,9 +5153,6 @@
 										<Property Name="SourceContextType" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="DestinationContextObject">
-											<ObjectRef Name="Z4_Music_Layers_Playlist" ID="{54637011-86DB-4E7F-8F77-B74FA7D9E880}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
-										</Reference>
 										<Reference Name="SourceContextObject">
 											<ObjectRef Name="Z3_Music_Layers_Playlist" ID="{C7A07A7D-B427-4FE8-9977-12E9F62B83A1}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
 										</Reference>
@@ -5374,14 +5200,10 @@
 										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
-										<Property Name="SourceContextType" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="DestinationContextObject">
 											<ObjectRef Name="Z1_Music_Layers_Playlist" ID="{C989FC0E-833F-4B8D-A463-E4CB2AA4CE71}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
-										</Reference>
-										<Reference Name="SourceContextObject">
-											<ObjectRef Name="Z4_Music_Layers_Playlist" ID="{54637011-86DB-4E7F-8F77-B74FA7D9E880}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
 										</Reference>
 									</ReferenceList>
 									<TransitionInfo>
@@ -5410,14 +5232,10 @@
 										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
-										<Property Name="SourceContextType" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="DestinationContextObject">
 											<ObjectRef Name="Z2_Music_Layers_Playlist" ID="{2874BA3A-11C7-425B-9FD2-0A1BCA423C71}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
-										</Reference>
-										<Reference Name="SourceContextObject">
-											<ObjectRef Name="Z4_Music_Layers_Playlist" ID="{54637011-86DB-4E7F-8F77-B74FA7D9E880}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
 										</Reference>
 									</ReferenceList>
 									<TransitionInfo>
@@ -5446,14 +5264,10 @@
 										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
-										<Property Name="SourceContextType" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="DestinationContextObject">
 											<ObjectRef Name="Z3_Music_Layers_Playlist" ID="{C7A07A7D-B427-4FE8-9977-12E9F62B83A1}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
-										</Reference>
-										<Reference Name="SourceContextObject">
-											<ObjectRef Name="Z4_Music_Layers_Playlist" ID="{54637011-86DB-4E7F-8F77-B74FA7D9E880}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
 										</Reference>
 									</ReferenceList>
 									<TransitionInfo>
@@ -5586,16 +5400,12 @@
 								</MusicTransition>
 								<MusicTransition Name="Transition" ID="{FB743159-3AD9-41CC-8B69-B58C6BC569CE}">
 									<PropertyList>
-										<Property Name="DestinationContextType" Type="int16" Value="2"/>
 										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 										<Property Name="SourceContextType" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="DestinationContextObject">
-											<ObjectRef Name="Z4_Music_Layers_Playlist" ID="{54637011-86DB-4E7F-8F77-B74FA7D9E880}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
-										</Reference>
 										<Reference Name="SourceContextObject">
 											<ObjectRef Name="Z2_Music_Layers_Playlist" ID="{2874BA3A-11C7-425B-9FD2-0A1BCA423C71}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
 										</Reference>
@@ -5658,16 +5468,12 @@
 								</MusicTransition>
 								<MusicTransition Name="Transition" ID="{02BB5C1A-5317-4D4D-9C75-A45D9BDCEC93}">
 									<PropertyList>
-										<Property Name="DestinationContextType" Type="int16" Value="2"/>
 										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 										<Property Name="SourceContextType" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="DestinationContextObject">
-											<ObjectRef Name="Z4_Music_Layers_Playlist" ID="{54637011-86DB-4E7F-8F77-B74FA7D9E880}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
-										</Reference>
 										<Reference Name="SourceContextObject">
 											<ObjectRef Name="Z1_Music_Layers_Playlist" ID="{C989FC0E-833F-4B8D-A463-E4CB2AA4CE71}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
 										</Reference>
@@ -5778,14 +5584,10 @@
 										<Property Name="DestinationContextType" Type="int16" Value="2"/>
 										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
-										<Property Name="SourceContextType" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="DestinationContextObject">
 											<ObjectRef Name="Level_Complete" ID="{25DCDA03-0AE5-49DE-A9DB-8FA648A12431}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
-										</Reference>
-										<Reference Name="SourceContextObject">
-											<ObjectRef Name="Z4_Music_Layers_Playlist" ID="{54637011-86DB-4E7F-8F77-B74FA7D9E880}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
 										</Reference>
 									</ReferenceList>
 									<TransitionInfo>
@@ -5806,14 +5608,10 @@
 										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
-										<Property Name="SourceContextType" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="DestinationContextObject">
 											<ObjectRef Name="BossMusic" ID="{5E524876-A6F7-4A42-96A3-62477E1AB43D}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
-										</Reference>
-										<Reference Name="SourceContextObject">
-											<ObjectRef Name="Z4_Music_Layers_Playlist" ID="{54637011-86DB-4E7F-8F77-B74FA7D9E880}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
 										</Reference>
 									</ReferenceList>
 									<TransitionInfo>
@@ -5838,16 +5636,12 @@
 								</MusicTransition>
 								<MusicTransition Name="Transition" ID="{5D8A7DB6-1DAE-470F-8F21-67B26A03D04A}">
 									<PropertyList>
-										<Property Name="DestinationContextType" Type="int16" Value="2"/>
 										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 										<Property Name="SourceContextType" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="DestinationContextObject">
-											<ObjectRef Name="Z4_Music_Layers_Playlist" ID="{54637011-86DB-4E7F-8F77-B74FA7D9E880}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
-										</Reference>
 										<Reference Name="SourceContextObject">
 											<ObjectRef Name="BossMusic" ID="{5E524876-A6F7-4A42-96A3-62477E1AB43D}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}"/>
 										</Reference>
@@ -5901,7 +5695,7 @@
 								<PathElementRef Name="Zone4" ID="{FF76E3B7-12EC-456B-88CD-184476F87DCD}"/>
 							</Path>
 							<AudioNodeInfo>
-								<AudioNodeRef Name="Z4_Music_Layers_Playlist" ID="{54637011-86DB-4E7F-8F77-B74FA7D9E880}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}" Platform="Linked"/>
+								<AudioNodeRef Name="Z4_Music_Layers_Playlist" ID="{7C49FE58-7442-44D8-9952-84E2E33F662E}" WorkUnitID="{63C67F94-64FB-4448-A21C-CD4BD3AF0674}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
