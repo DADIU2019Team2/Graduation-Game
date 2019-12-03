@@ -48,16 +48,16 @@ public class CameraShake : MonoBehaviour
 
         Quaternion targetRotation = Quaternion.identity;
         Quaternion previousRotation = Quaternion.identity;
-        Debug.Log("TIME " + Time.timeScale);
+        //Debug.Log("TIME " + Time.timeScale);
         do
         {
-            Debug.Log("TIME " + Time.timeScale);
+            //Debug.Log("TIME " + Time.timeScale);
             if (movePercent >= 1 || completionPercent == 0)
             {
                 float dampingFactor = DampingCurve(completionPercent, settings.dampingPercent);
 
-                Debug.Log("completionPercent " + completionPercent);
-                Debug.Log("dampingPercent " + settings.dampingPercent);
+                //Debug.Log("completionPercent " + completionPercent);
+                //Debug.Log("dampingPercent " + settings.dampingPercent);
                 float noiseAngle = (Random.value - .5f) * Mathf.PI;
                 angle_radians +=  (Mathf.PI + noiseAngle) * settings.noisePercent;
                 angle_radiansX += (Mathf.PI + noiseAngle) * settings.noisePercent;
