@@ -11,6 +11,12 @@ public class RaiseOnSpace : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.LogError("Raising an event for debug! Check: " + gameObject.name);
+            eventToRaise.Raise();
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            Debug.LogError("Raising an event for debug! Check: " + gameObject.name);
             eventToRaise.Raise();
         }
     }
