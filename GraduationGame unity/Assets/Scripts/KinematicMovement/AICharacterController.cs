@@ -92,6 +92,8 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
 
     private void OnStateEnter(AIStates state, AIStates fromState)
     {
+        if (animator == null)
+            return;
         switch (state)
         {
             case AIStates.Idling:
@@ -111,6 +113,8 @@ public class AICharacterController : MonoBehaviour, ICharacterController, IOnSce
 
     private void OnStateExit(AIStates state, AIStates toState)
     {
+        if (animator == null)
+            return;
         switch (state)
         {
             case AIStates.Idling:
