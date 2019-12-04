@@ -34,6 +34,7 @@ public class MMSeparatedController : MonoBehaviour
     public int unBanMask;
     public int prevBanRange;
     public int nextBanRange;
+    public int banSeconds;
     private void Awake()
     {
         trajPoints = poseData.config.trajectoryTimePoints.Count;
@@ -99,7 +100,7 @@ public class MMSeparatedController : MonoBehaviour
                 banTagArray = banArray,
                 unbanLayer = unBanMask
             };
-            
+            NativeArray<int> tagm = new NativeArray<int>(poseData.Length, Allocator.TempJob);
             TrajectoryCostJob trajJob = new TrajectoryCostJob
             {
                 trajectoryFlatArray = trajectoryNativeArray,
@@ -107,8 +108,12 @@ public class MMSeparatedController : MonoBehaviour
                 trajectoryWeights = trajWeightNativeArray,
                 banFrames = banArray,
                 banMask = unBanMask,
-                result = trajResult
+                result = trajResult,
+                btm = tagm,
             };
+
+          
+            
 
             NativeArray<int> poseIndices = new NativeArray<int>(bestTrajectoryAmount, Allocator.TempJob);
             SortTrajectoryJob sortJob = new SortTrajectoryJob
@@ -116,12 +121,21 @@ public class MMSeparatedController : MonoBehaviour
                 results = trajResult,
                 indices = poseIndices
             };
-
-            JobHandle unbanHandle = unbanJob.Schedule(banArray.Length, 32);
-            JobHandle trajHandle = trajJob.Schedule(trajResult.Length, 8,unbanHandle);
+            
+            JobHandle trajHandle = trajJob.Schedule(trajResult.Length, 8);
             JobHandle sortHandle = sortJob.Schedule(trajHandle);
             sortHandle.Complete();
+            JobHandle unbanHandle = unbanJob.Schedule(banArray.Length, 32);
+            unbanHandle.Complete();
+            //if (animPhaseIndex % poseRefreshRate == 0)
+            //{
+            //    foreach (var alma in tagm)
+            //    {
+            //        Debug.Log("ban multip: " + alma);
+            //    }
+            //}
 
+            tagm.Dispose();
             trajResult.Dispose();
 
             NativeArray<float3> bestPoses = new NativeArray<float3>(BuildBestPoseArray(poseIndices),Allocator.TempJob);
@@ -175,7 +189,7 @@ public class MMSeparatedController : MonoBehaviour
             }
 
             animPhaseIndex++;
-            animPhaseIndex %= poseRefreshRate;
+            animPhaseIndex %= (banSeconds * poseRefreshRate);
             unBanMask = (1 << animPhaseIndex);
             
             yield return new WaitForSeconds(1f / poseRefreshRate);
@@ -191,13 +205,15 @@ public class MMSeparatedController : MonoBehaviour
         [ReadOnly] public NativeArray<int> banFrames;
         [ReadOnly] public int banMask;
         public NativeArray<float> result;
+        public NativeArray<int> btm;
 
         public void Execute(int index)
         {
             int chunkLength = predictedTrajectory.Length;
             
             int banTagMultiplier = ((banFrames[index] & banMask) >> 31) - (-(banFrames[index] & banMask) >> 31);
-            
+            btm[index] = banTagMultiplier;
+
             for (int j = 0; j < chunkLength; j++)
             {
                 result[index] += math.distancesq(predictedTrajectory[j], trajectoryFlatArray[index * chunkLength + j]) *
