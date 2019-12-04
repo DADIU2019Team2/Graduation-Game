@@ -5,6 +5,8 @@ using Fungus;
 
 public class DialogueManager : MonoBehaviour
 {
+    [SerializeField]
+    private Localization fungusLocalization;
     public void SkipAllDialogue()
     {
         if (GameManager.GetGameState() != GameStateScriptableObject.GameState.mainGameplayLoop)
@@ -12,6 +14,11 @@ public class DialogueManager : MonoBehaviour
             Flowchart.BroadcastFungusMessage("EndCinematicEarly");
             GameManager.DialogueEnd();
         }
+    }
+
+    public static void SetDialogueLanguage(Language.LocalazationLanguage language)
+    {
+
     }
 
     public void NextDialogueBox()
@@ -23,5 +30,6 @@ public class DialogueManager : MonoBehaviour
     {
         //Not implemented yet. Needs to interface with save-load. (level-finished)
     }
+
 
 }

@@ -53,6 +53,10 @@ public class Checkpoint : MonoBehaviour, IOnSceneReset
                 respawnFacingRightEvent.Raise();
             }
 
+            if (crystalAnimators[0] == null)
+            {
+                //Find crystal animator.
+            }
             foreach (Animator anim in crystalAnimators)
             {
                 anim.Play("checkPointEntry");
