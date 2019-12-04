@@ -168,7 +168,8 @@ public class AnimationLayerSwitcher : MonoBehaviour
                     // set jump anim
                     Debug.Log("slideJump");
                     animator.SetTrigger("slideJump");
-                }
+                        animator.SetBool("inAir", true);
+                    }
                 else
                 {
                     animator.ResetTrigger("slideJump");
