@@ -18,6 +18,7 @@ namespace KinematicTest.controller
         Falling,
         NoInput,
         CinematicIdle,
+        RunningOffLedge
     }
 
     public enum WorldForward
@@ -161,7 +162,6 @@ namespace KinematicTest.controller
         private bool canTakeDamage = true;
         private float damageResetTimer;
 
-        
 
         void Init()
         {
@@ -225,6 +225,15 @@ namespace KinematicTest.controller
         {
             switch (state)
             {
+                case PlayerStates.RunningOffLedge:
+                {
+                    timeAtLastLedgeGrab = Time.time;
+                    MaxAirMoveSpeed = settings.maxAirMoveSpeed;
+                    MaxStableMoveSpeed = settings.maxMoveSpeed;
+                    JumpSpeed = Mathf.Sqrt(2 * riseGravity * settings.jumpHeight * settings.baseGravity *
+                                           Motor.Capsule.height);
+                    break;
+                }
                 case PlayerStates.Running:
                 {
                     runParticle.Play();
@@ -495,7 +504,8 @@ namespace KinematicTest.controller
                     TransitionToState(PlayerStates.Tired);
                     jumpFromWallRequested = true;
                 }
-                if (CurrentCharacterState == PlayerStates.Running || CurrentCharacterState == PlayerStates.Sliding)
+
+                if (CurrentCharacterState == PlayerStates.Running || CurrentCharacterState == PlayerStates.Sliding || CurrentCharacterState == PlayerStates.RunningOffLedge)
                 {
                     Debug.Log("Playing Jump Particle");
                     if (!playedJumpParticleThisJump)
@@ -503,6 +513,7 @@ namespace KinematicTest.controller
                         jumpParticle.Play();
                         playedJumpParticleThisJump = true;
                     }
+
                     runParticle.Stop();
                     //runParticle.Clear();
                     settings.jumpShakeEvent.Raise();
@@ -513,6 +524,7 @@ namespace KinematicTest.controller
             {
                 TransitionToState(PlayerStates.Idling);
             }
+
             //Debug.LogWarning("Post input time is " + Time.time);
         }
 
@@ -533,7 +545,7 @@ namespace KinematicTest.controller
                     CheckVariousDMGThings(results);
                 }
             }
-            
+
             switch (CurrentCharacterState)
             {
                 case PlayerStates.NoInput:
@@ -617,7 +629,6 @@ namespace KinematicTest.controller
         /// </summary>
         public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)
         {
-            
             Vector3 targetMovementVelocity = Vector3.zero;
             if (Motor.GroundingStatus.IsStableOnGround)
             {
@@ -625,6 +636,7 @@ namespace KinematicTest.controller
                 {
                     runParticle.Play();
                 }
+
                 Gravity = riseGravity * baseGravity;
                 // Reorient source velocity on current ground slope (this is because we don't want our smoothing to cause any velocity losses in slope changes)
                 currentVelocity =
@@ -639,6 +651,7 @@ namespace KinematicTest.controller
 
                 switch (CurrentCharacterState)
                 {
+                    case PlayerStates.RunningOffLedge:
                     case PlayerStates.Running:
                     {
                         if (rampingDown)
@@ -725,6 +738,7 @@ namespace KinematicTest.controller
 
                     switch (CurrentCharacterState)
                     {
+                        case PlayerStates.RunningOffLedge:
                         case PlayerStates.Running:
                         {
                             if (canChangeMidAir)
@@ -864,13 +878,12 @@ namespace KinematicTest.controller
                     if (currentVelocity.y < -hangTimeVelocityThreshold)
                         Gravity = fallGravity * baseGravity;
                 }
-                
-                
-                // This is the code that makes you not stand on ledges, also it breaks coyote time
-                /*else if (CurrentCharacterState == PlayerStates.Running)
+
+
+                else if (CurrentCharacterState == PlayerStates.Running)
                 {
-                    TransitionToState(PlayerStates.Tired);
-                }*/
+                    TransitionToState(PlayerStates.RunningOffLedge);
+                }
 
                 if (CurrentCharacterState == PlayerStates.LedgeGrabbing)
                 {
@@ -1083,10 +1096,11 @@ namespace KinematicTest.controller
 
         private void CheckVariousDMGThings(Collider hitCollider)
         {
-            if (hitCollider == null || !canTakeDamage || hitCollider.CompareTag("Wall") || hitCollider.CompareTag("Ledge") || hitCollider.CompareTag("Player"))
+            if (hitCollider == null || !canTakeDamage || hitCollider.CompareTag("Wall") ||
+                hitCollider.CompareTag("Ledge") || hitCollider.CompareTag("Player"))
                 return;
-            
-           // Debug.Log("overlap tag: " + hitCollider.tag);
+
+            // Debug.Log("overlap tag: " + hitCollider.tag);
             if (hitCollider.CompareTag("Spike"))
             {
                 int damage = hitCollider.GetComponent<DamageOnImpact>().damage.myInt;
@@ -1135,7 +1149,7 @@ namespace KinematicTest.controller
             if (hitCollider.CompareTag("Ledge") && Time.time > (timeAtLastLedgeGrab + graceTimeBeforeHangAgain)
             ) // && hitNormal.y == 0 && Mathf.Sign(hitNormal.x) == -Mathf.Sign(runningRight))
             {
-                if (CurrentCharacterState == PlayerStates.Sliding || CurrentCharacterState == PlayerStates.Tired)
+                if (CurrentCharacterState == PlayerStates.Sliding || CurrentCharacterState == PlayerStates.Tired || CurrentCharacterState == PlayerStates.RunningOffLedge)
                 {
                     ledgeGrabbed = hitCollider.gameObject;
                     Motor.ZoeAttachedRigidbody = hitCollider.gameObject.GetComponentInParent<Rigidbody>();
@@ -1164,8 +1178,6 @@ namespace KinematicTest.controller
             if (hitCollider.CompareTag("Wall") && CurrentCharacterState != PlayerStates.Idling &&
                 Motor.GroundingStatus.IsStableOnGround && !rampingDown)
             {
-                
-
                 //if (rampingDown)
                 //{
                 //    curveStep = 0;
@@ -1225,7 +1237,7 @@ namespace KinematicTest.controller
             Debug.Log("Landed");
             settings.landingShakeEvent.Raise();
             if (CurrentCharacterState == PlayerStates.Idling || CurrentCharacterState == PlayerStates.Falling ||
-                CurrentCharacterState == PlayerStates.Tired)
+                CurrentCharacterState == PlayerStates.Tired  || CurrentCharacterState == PlayerStates.RunningOffLedge)
             {
                 stopped = false;
                 TransitionToState(PlayerStates.Running);
@@ -1252,10 +1264,12 @@ namespace KinematicTest.controller
                 lastVelocityBeforeJump = Motor.Velocity;
                 canChangedirection = false;
             }
+
             if (runParticle.isPlaying)
             {
-               runParticle.Stop();
+                runParticle.Stop();
             }
+
             Debug.Log("Left ground");
         }
 
