@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using KinematicCharacterController;
+using KinematicTest.controller;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class SentinelKiller : MonoBehaviour, IOnSceneReset
 {
+    public KinematicTestController controller;
     public GameObject sentinelLeft;
     public GameObject sentinelLaserLeft;
     public GameObject sentinelRight;
@@ -30,6 +33,10 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
 
     private void Awake()
     {
+        if (controller == null)
+        {
+            controller = FindObjectOfType<KinematicTestController>();
+        }
         //save local positions of parts;
         leftPartTransforms = sentinelBrokenLeft.GetComponentsInChildren<Rigidbody>();
         rightPartTransforms = sentinelBrokenRight.GetComponentsInChildren<Rigidbody>();
@@ -54,6 +61,7 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
 
     private void Die()
     {
+        controller.MakeInvulnerableForever();
         isDead = true;
         sentinelBrokenLeft.transform.position = sentinelLeftPlatform.position;
         sentinelBrokenRight.transform.position = sentinelRightPlatform.position;
