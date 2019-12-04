@@ -176,6 +176,7 @@ public class AnimationLayerSwitcher : MonoBehaviour
 
                 break;
             }
+            case PlayerStates.RunningOffLedge:
             case PlayerStates.Running:
             {
                 if (characterController.JumpingThisFrame())
