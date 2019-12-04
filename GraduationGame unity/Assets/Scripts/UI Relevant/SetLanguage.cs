@@ -9,20 +9,19 @@ public class SetLanguage : MonoBehaviour
     [SerializeField] private Language languageSystem;
     [SerializeField] private Language.LocalazationLanguage desiredLanguage;
     private Button button;
-
+    private DialogueManager dialogueManager;
 
 
     private void Start()
     {
-
+        dialogueManager = FindObjectOfType<DialogueManager>(); //Should make this an in-scene reference.
         button = GetComponent<Button>();
-
         button.onClick.AddListener(delegate { _SetLanguage(); });
     }
 
     void _SetLanguage()
     {
         languageSystem.SetLanguage(desiredLanguage);
-        DialogueManager.SetDialogueLanguage(desiredLanguage);
+        dialogueManager.SetDialogueLanguage(desiredLanguage);
     }
 }
