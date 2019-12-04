@@ -32,6 +32,8 @@ public class MMSeparatedController : MonoBehaviour
     public string current;
     public int animPhaseIndex;
     public int unBanMask;
+    public int prevBanRange;
+    public int nextBanRange;
     private void Awake()
     {
         trajPoints = poseData.config.trajectoryTimePoints.Count;
@@ -160,7 +162,7 @@ public class MMSeparatedController : MonoBehaviour
             {
                 PlayAtUniqueFrame(bestIndex);
                 
-                int[] banRange = poseData.GetStartAndLength(bestIndex, 5, 10);
+                int[] banRange = poseData.GetStartAndLength(bestIndex, prevBanRange, nextBanRange);
                 //Debug.Log(banRange[0] + " - " + banRange[1]);
                 NativeSlice<int> banSlice = new NativeSlice<int>(banArray, banRange[0], banRange[1]);
                 TagForBanJob tagForBanJob = new TagForBanJob
