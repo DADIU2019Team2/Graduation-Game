@@ -1369,5 +1369,11 @@ namespace KinematicTest.controller
         {
             return _ledgeGrabbedThisFrame;
         }
+
+        public void MakeInvulnerableForever()
+        {
+            damageResetTimer = 600f;
+            canTakeDamage = false;
+        }
     }
 }
