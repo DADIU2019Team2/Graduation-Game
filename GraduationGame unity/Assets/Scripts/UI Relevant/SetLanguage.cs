@@ -10,6 +10,8 @@ public class SetLanguage : MonoBehaviour
     [SerializeField] private Language.LocalazationLanguage desiredLanguage;
     private Button button;
 
+
+
     private void Start()
     {
 
@@ -21,5 +23,6 @@ public class SetLanguage : MonoBehaviour
     void _SetLanguage()
     {
         languageSystem.SetLanguage(desiredLanguage);
+        DialogueManager.SetDialogueLanguage(desiredLanguage);
     }
 }
