@@ -13,6 +13,10 @@ public class SkinSwapper : MonoBehaviour
 
     public PlayerStats playerStats;
 
+    private void Start()
+    {
+        SetSkinFromMainMenu(playerStats.selectedSkin);
+    }
 
     public void SwapSkins(int skinIndex)
     {
