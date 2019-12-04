@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3245,6 +3245,7 @@ GameObject:
   - component: {fileID: 492773965}
   - component: {fileID: 492773964}
   - component: {fileID: 492773963}
+  - component: {fileID: 492773968}
   m_Layer: 5
   m_Name: Level 4
   m_TagString: Untagged
@@ -3357,6 +3358,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1937796253}
+        m_MethodName: StopAllAkSounds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &492773966
@@ -3396,6 +3408,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492773961}
   m_CullTransparentMesh: 0
+--- !u!114 &492773968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492773961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ba049c12578aa45b9cd7b1102e096c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &493999348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4306,6 +4330,7 @@ GameObject:
   - component: {fileID: 585469068}
   - component: {fileID: 585469067}
   - component: {fileID: 585469066}
+  - component: {fileID: 585469069}
   m_Layer: 5
   m_Name: Continue Game
   m_TagString: Untagged
@@ -4387,6 +4412,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 585469069}
+        m_MethodName: StopAllAkSounds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &585469067
@@ -4426,6 +4462,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 585469064}
   m_CullTransparentMesh: 0
+--- !u!114 &585469069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585469064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ba049c12578aa45b9cd7b1102e096c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &591397833
 GameObject:
   m_ObjectHideFlags: 0
@@ -5627,6 +5675,7 @@ GameObject:
   - component: {fileID: 877086676}
   - component: {fileID: 877086675}
   - component: {fileID: 877086674}
+  - component: {fileID: 877086679}
   m_Layer: 5
   m_Name: Level 5
   m_TagString: Untagged
@@ -5739,6 +5788,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1937796253}
+        m_MethodName: StopAllAkSounds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &877086677
@@ -5778,6 +5838,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877086672}
   m_CullTransparentMesh: 0
+--- !u!114 &877086679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877086672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ba049c12578aa45b9cd7b1102e096c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &896426136
 GameObject:
   m_ObjectHideFlags: 0
@@ -9277,6 +9349,7 @@ GameObject:
   - component: {fileID: 1202716677}
   - component: {fileID: 1202716676}
   - component: {fileID: 1202716675}
+  - component: {fileID: 1202716680}
   m_Layer: 5
   m_Name: Level 1
   m_TagString: Untagged
@@ -9389,6 +9462,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1937796253}
+        m_MethodName: StopAllAkSounds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1202716678
@@ -9428,6 +9512,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202716673}
   m_CullTransparentMesh: 0
+--- !u!114 &1202716680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202716673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ba049c12578aa45b9cd7b1102e096c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1216608738
 GameObject:
   m_ObjectHideFlags: 0
@@ -9622,6 +9718,7 @@ GameObject:
   - component: {fileID: 1237479381}
   - component: {fileID: 1237479380}
   - component: {fileID: 1237479379}
+  - component: {fileID: 1237479384}
   m_Layer: 5
   m_Name: Level 3
   m_TagString: Untagged
@@ -9734,6 +9831,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1937796253}
+        m_MethodName: StopAllAkSounds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1237479382
@@ -9773,6 +9881,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237479377}
   m_CullTransparentMesh: 0
+--- !u!114 &1237479384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237479377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ba049c12578aa45b9cd7b1102e096c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1245228230 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6685324737192460228, guid: bb9e8ab2d358e094b8044eb2c95422d9,
@@ -10691,6 +10811,7 @@ GameObject:
   - component: {fileID: 1452458519}
   - component: {fileID: 1452458518}
   - component: {fileID: 1452458517}
+  - component: {fileID: 1452458522}
   m_Layer: 5
   m_Name: Level 2
   m_TagString: Untagged
@@ -10803,6 +10924,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1937796253}
+        m_MethodName: StopAllAkSounds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1452458520
@@ -10842,6 +10974,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452458515}
   m_CullTransparentMesh: 0
+--- !u!114 &1452458522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452458515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ba049c12578aa45b9cd7b1102e096c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1455925062
 GameObject:
   m_ObjectHideFlags: 0
@@ -12849,6 +12993,7 @@ GameObject:
   - component: {fileID: 1730264593}
   - component: {fileID: 1730264592}
   - component: {fileID: 1730264591}
+  - component: {fileID: 1730264595}
   - component: {fileID: 1730264590}
   m_Layer: 5
   m_Name: Level 1
@@ -12962,6 +13107,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1937796253}
+        m_MethodName: StopAllAkSounds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1730264593
@@ -13001,6 +13157,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730264588}
   m_CullTransparentMesh: 0
+--- !u!114 &1730264595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730264588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ba049c12578aa45b9cd7b1102e096c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1799018534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14930,6 +15098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1937796251}
   - component: {fileID: 1937796252}
+  - component: {fileID: 1937796253}
   m_Layer: 0
   m_Name: Stuff from Anders main menu
   m_TagString: Untagged
@@ -14972,6 +15141,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiToActivate: {fileID: 0}
   lightToActivate: {fileID: 0}
+--- !u!114 &1937796253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937796250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ba049c12578aa45b9cd7b1102e096c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1939726912
 GameObject:
   m_ObjectHideFlags: 0
@@ -15326,6 +15507,7 @@ GameObject:
   - component: {fileID: 1978603678}
   - component: {fileID: 1978603677}
   - component: {fileID: 1978603676}
+  - component: {fileID: 1978603681}
   m_Layer: 5
   m_Name: Level 2
   m_TagString: Untagged
@@ -15438,6 +15620,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1937796253}
+        m_MethodName: StopAllAkSounds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1978603679
@@ -15477,6 +15670,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978603674}
   m_CullTransparentMesh: 0
+--- !u!114 &1978603681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978603674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ba049c12578aa45b9cd7b1102e096c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1984060589
 GameObject:
   m_ObjectHideFlags: 0
@@ -17010,6 +17215,7 @@ GameObject:
   - component: {fileID: 2074767570}
   - component: {fileID: 2074767569}
   - component: {fileID: 2074767568}
+  - component: {fileID: 2074767571}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -17086,7 +17292,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2074767571}
+        m_MethodName: StopAllAkSounds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -17130,6 +17347,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074767566}
   m_CullTransparentMesh: 0
+--- !u!114 &2074767571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074767566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ba049c12578aa45b9cd7b1102e096c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2097082318
 GameObject:
   m_ObjectHideFlags: 0
