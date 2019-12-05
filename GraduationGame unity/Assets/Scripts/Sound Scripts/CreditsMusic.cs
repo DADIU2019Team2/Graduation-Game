@@ -5,11 +5,17 @@ using UnityEngine;
 public class CreditsMusic : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    public void PlayCreditsMusic()
     {
+        AkSoundEngine.StopAll();
         AkSoundEngine.RegisterGameObj(gameObject);
         AkSoundEngine.PostEvent("Credits_Music", gameObject);
     }
 
+    public void PlayAmbientSounds()
+    {
+        AkSoundEngine.RegisterGameObj(gameObject);
+        AkSoundEngine.PostEvent("Ambience_Outside", gameObject);
+    }
 
 }
