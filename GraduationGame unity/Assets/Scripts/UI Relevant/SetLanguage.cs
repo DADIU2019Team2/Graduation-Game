@@ -22,6 +22,9 @@ public class SetLanguage : MonoBehaviour
     void _SetLanguage()
     {
         languageSystem.SetLanguage(desiredLanguage);
+        if (dialogueManager != null)
+        {
         dialogueManager.SetDialogueLanguage(desiredLanguage);
+        }
     }
 }
