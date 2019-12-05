@@ -1205,6 +1205,11 @@
 						<Sound Name="Outside Ambience" ID="{AD2B20F6-0387-443D-BC55-00E31DE4C50D}" ShortID="792214543">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1334,7 +1339,7 @@
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
-								<Value>2</Value>
+								<Value>10</Value>
 							</ValueList>
 						</Property>
 						<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>

@@ -16,6 +16,7 @@ namespace AK
         static const AkUniqueID ALIEN_CRYSTAL_HUM = 1839766762U;
         static const AkUniqueID ALIEN_DEATH_TRAP = 3641971009U;
         static const AkUniqueID ALIEN_PLATFORMS = 2755703943U;
+        static const AkUniqueID AMBIENCE_OUTSIDE = 3996256281U;
         static const AkUniqueID BOSSMUSIC = 1427760111U;
         static const AkUniqueID CHECKPOINT_CRYSTAL = 1739986920U;
         static const AkUniqueID CREDITS_MUSIC = 1522595433U;

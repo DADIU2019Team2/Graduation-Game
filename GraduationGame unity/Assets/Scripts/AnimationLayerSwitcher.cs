@@ -95,18 +95,21 @@ public class AnimationLayerSwitcher : MonoBehaviour, IOnSceneReset
         }
 
         //On Landing
-        if (characterController.Motor.GroundingStatus.IsStableOnGround &&
+        if (GameManager.GetGameState() != GameStateScriptableObject.GameState.levelStart)
+        {
+            if ((characterController.Motor.GroundingStatus.IsStableOnGround || characterController.Motor.GroundingStatus.FoundAnyGround )&&
              !characterController.Motor.LastGroundingStatus.IsStableOnGround)
-        {
-            fallTime = 1.0f;
-            animator.SetFloat("fallBlend", fallTime);
-            animator.SetBool("inAir", false);
-            animator.SetBool("isFalling", false);
-            animator.SetTrigger("FallingGroundDetected");
-        }
-        else
-        {
-            animator.ResetTrigger("FallingGroundDetected");
+            {
+                fallTime = 1.0f;
+                animator.SetFloat("fallBlend", fallTime);
+                animator.SetBool("inAir", false);
+                animator.SetBool("isFalling", false);
+                animator.SetTrigger("FallingGroundDetected");
+            }       
+            else
+            {
+                animator.ResetTrigger("FallingGroundDetected");
+            }
         }
         if (characterController.CurrentCharacterState != PlayerStates.Idling)
         {
@@ -134,6 +137,8 @@ public class AnimationLayerSwitcher : MonoBehaviour, IOnSceneReset
                 {
                     Debug.Log("idleJump");
                     animator.SetTrigger("idleJump");
+                    animator.SetBool("inAir", true);
+
                 }
                 else
                 {
