@@ -7,8 +7,12 @@ using KinematicTest.controller;
 
 public class SmoothPlayerCamFollow : MonoBehaviour
 {
-    private enum ZoeMoveDir { idle, up, down, left, right}
-    private ZoeMoveDir currentMoveDir;
+    private enum CamFollowState { fullFollow, NoFollow}
+    private enum ZoeVerticalMoveDir { idle, up, down}
+    private enum ZoeHorizontalMoveDir { idle, left, right}
+    private CamFollowState currentFollowState;
+    private ZoeHorizontalMoveDir currentHorzontalMoveDir;
+    private ZoeVerticalMoveDir currentVerticalMoveDir;
 
     [Header("Other component references")]
     [SerializeField] private Transform playerToFollow;
@@ -51,7 +55,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
         if (Mathf.Approximately(zoomOutDuration,0f))
             zoomOutDuration = 0.1f;
         localPosInfrontOfPlayer = new Vector3(2, 0, 0); //update this dynamicly
-        currentMoveDir = ZoeMoveDir.idle;
+        currentVerticalMoveDir = ZoeVerticalMoveDir.idle;
     }
 
     private void LateUpdate()
@@ -66,8 +70,11 @@ public class SmoothPlayerCamFollow : MonoBehaviour
             zoomOutLerp = 0f;
         }
 
-        moveCam();
-        updateLookAt();
+        if(currentFollowState == CamFollowState.fullFollow)
+        {
+            moveCam();
+            updateLookAt();
+        }
     }
 
     void moveCam()
@@ -113,17 +120,17 @@ public class SmoothPlayerCamFollow : MonoBehaviour
         xDiff = (playerToFollow.position.x + localOffSet.x) - (transform.position.x + localOffSet.x);
         yDiff = (playerToFollow.position.y + localOffSet.y) - (transform.position.y + localOffSet.y);
 
-        if (xDiff > deadZoneXRight || CheckMoveDir(currentMoveDir))
+        if (xDiff > deadZoneXRight || CheckHorizontalMovedir(currentHorzontalMoveDir))
         {
             newdesiredPos.x = playerToFollow.position.x + localOffSet.x;
             wasChanged = true;
-            currentMoveDir = ZoeMoveDir.right;
+            currentHorzontalMoveDir = ZoeHorizontalMoveDir.right;
         }
-        if (xDiff < -deadZoneXLeft || CheckMoveDir(currentMoveDir))
+        if (xDiff < -deadZoneXLeft || CheckHorizontalMovedir(currentHorzontalMoveDir))
         {
             newdesiredPos.x = playerToFollow.position.x + localOffSet.x;
             wasChanged = true;
-            currentMoveDir = ZoeMoveDir.left;
+            currentHorzontalMoveDir = ZoeHorizontalMoveDir.left;
         }
 
         if (charMotor.GroundingStatus.FoundAnyGround)
@@ -131,18 +138,18 @@ public class SmoothPlayerCamFollow : MonoBehaviour
             newdesiredPos.y = playerToFollow.position.y + localOffSet.y;
             wasChanged = true;
         }
-        if (yDiff > deadZoneYTop || CheckMoveDir(currentMoveDir))
+        if (yDiff > deadZoneYTop || CheckVecticalMoveDir(currentVerticalMoveDir))
         {
             newdesiredPos.y = playerToFollow.position.y + localOffSet.y;
             wasChanged = true;
-            currentMoveDir = ZoeMoveDir.up;
+            currentVerticalMoveDir = ZoeVerticalMoveDir.up;
         }
 
-        if(yDiff < -deadZoneYBot || CheckMoveDir(currentMoveDir))
+        if(yDiff < -deadZoneYBot || CheckVecticalMoveDir(currentVerticalMoveDir))
         {
             newdesiredPos.y = playerToFollow.position.y + localOffSet.y;
             wasChanged = true;
-            currentMoveDir = ZoeMoveDir.down;
+            currentVerticalMoveDir = ZoeVerticalMoveDir.down;
         }
 
         newdesiredPos.z = playerToFollow.position.z + worldOffset.z;
@@ -153,33 +160,45 @@ public class SmoothPlayerCamFollow : MonoBehaviour
             return oldDesiredPos;
     }
 
-    bool CheckMoveDir(ZoeMoveDir dirToCheck)
+    bool CheckVecticalMoveDir(ZoeVerticalMoveDir dirToCheck)
     {
         switch (dirToCheck)
         {
-            case ZoeMoveDir.up:
+            case ZoeVerticalMoveDir.up:
                 if(charMotor.Velocity.y >= 0)
                 {
                     return true;
                 }
                 break;
-            case ZoeMoveDir.down:
+            case ZoeVerticalMoveDir.down:
                 if(charMotor.Velocity.y <= 0)
                 {
                     return true;
                 }
                 break;
-            case ZoeMoveDir.left:
+        }
+        return false;
+    }
+    bool CheckHorizontalMovedir(ZoeHorizontalMoveDir dirToCheck)
+    {
+        switch (dirToCheck)
+        {
+            case ZoeHorizontalMoveDir.idle:
+                return false;
+                break;
+            case ZoeHorizontalMoveDir.left:
                 if(charMotor.Velocity.x <= 0)
                 {
                     return true;
                 }
                 break;
-            case ZoeMoveDir.right:
+            case ZoeHorizontalMoveDir.right
                 if(charMotor.Velocity.x >= 0)
                 {
                     return true;
                 }
+                break;
+            default:
                 break;
         }
         return false;
@@ -264,5 +283,9 @@ public class SmoothPlayerCamFollow : MonoBehaviour
         Gizmos.DrawLine(botLeftCorner, botRightCorner);
         if(drawRight)
             Gizmos.DrawLine(botRightCorner, topRightCorner);
+    }
+    private void SetCamFollowstate(CamFollowState desiredState)
+    {
+        currentFollowState = desiredState;
     }
 }
