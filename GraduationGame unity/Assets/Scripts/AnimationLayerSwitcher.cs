@@ -5,7 +5,7 @@ using KinematicTest.controller;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class AnimationLayerSwitcher : MonoBehaviour
+public class AnimationLayerSwitcher : MonoBehaviour, IOnSceneReset
 {
     public KinematicTestController characterController;
 
@@ -142,7 +142,7 @@ public class AnimationLayerSwitcher : MonoBehaviour
 
                 //set idle loop
                 animator.SetBool("isStanding", true);
-                    animator.SetTrigger("cinematicMoment");
+                    //animator.SetTrigger("cinematicMoment");
                 break;
             }
             case PlayerStates.NoInput:
@@ -303,5 +303,29 @@ public class AnimationLayerSwitcher : MonoBehaviour
         if (r > normalJumpRatio)
             return 1;
         return 0;
+    }
+
+    public void OnResetLevel()
+    {
+        foreach (var item in animator.parameters)
+        {
+            switch (item.type)
+            {
+                case AnimatorControllerParameterType.Float:
+                    animator.SetFloat(item.ToString(),0);
+                    break;
+                case AnimatorControllerParameterType.Int:
+                    animator.SetInteger(item.ToString(), 0);
+                    break;
+                case AnimatorControllerParameterType.Bool:
+                    animator.SetBool(item.ToString(), false);
+                    break;
+                case AnimatorControllerParameterType.Trigger:
+                    animator.ResetTrigger(item.ToString());
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }
