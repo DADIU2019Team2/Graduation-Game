@@ -192,7 +192,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
                     return true;
                 }
                 break;
-            case ZoeHorizontalMoveDir.right
+            case ZoeHorizontalMoveDir.right:
                 if(charMotor.Velocity.x >= 0)
                 {
                     return true;
