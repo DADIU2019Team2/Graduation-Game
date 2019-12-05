@@ -2064,7 +2064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 208
+  itemId: 224
   indentLevel: 0
   storyText: ..I thought we were the only humans remaining.
   description: 
@@ -2091,7 +2091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 209
+  itemId: 225
   indentLevel: 0
   storyText: Seems like it.
   description: 
@@ -2118,7 +2118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 210
+  itemId: 226
   indentLevel: 0
   storyText: Is that a village down there?
   description: 
@@ -2145,7 +2145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 211
+  itemId: 227
   indentLevel: 0
   storyText: It's all about perspective.
   description: 
@@ -2172,7 +2172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 212
+  itemId: 228
   indentLevel: 0
   storyText: Beautiful.
   description: 
@@ -2199,7 +2199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 213
+  itemId: 229
   indentLevel: 0
   storyText: For once the city actually seems..
   description: 
@@ -2226,7 +2226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 214
+  itemId: 230
   indentLevel: 0
   storyText: Oh. Wow.
   description: 
@@ -3639,16 +3639,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: strangerRig
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: a75626400e03c4c4bac70b4a5781e56b,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 81c2dbc1ccf83fc42a84a26df7d84dc2, type: 2}
-    - target: {fileID: -6057140222963153312, guid: a75626400e03c4c4bac70b4a5781e56b,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a75626400e03c4c4bac70b4a5781e56b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3702,6 +3692,16 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a75626400e03c4c4bac70b4a5781e56b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: a75626400e03c4c4bac70b4a5781e56b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 81c2dbc1ccf83fc42a84a26df7d84dc2, type: 2}
+    - target: {fileID: -6057140222963153312, guid: a75626400e03c4c4bac70b4a5781e56b,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3191193535868091618, guid: a75626400e03c4c4bac70b4a5781e56b,
@@ -4757,8 +4757,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1966134706}
   - component: {fileID: 1966134705}
-  - component: {fileID: 1966134708}
   - component: {fileID: 1966134707}
+  - component: {fileID: 1966134708}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -4841,7 +4841,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1966134704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d017138160ee089478279b6b7bd57652, type: 3}
+  m_Script: {fileID: 11500000, guid: ac20a19b4b4d5b944aaea6fdc938fc28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1984060589
@@ -5126,6 +5126,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1238674769477425504, guid: acd7efc9f9290784f943677bc26823aa,
+        type: 3}
+      propertyPath: selectedCommands.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238674769477425504, guid: acd7efc9f9290784f943677bc26823aa,
+        type: 3}
+      propertyPath: selectedBlocks.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1238674768556565797, guid: acd7efc9f9290784f943677bc26823aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5179,16 +5189,6 @@ PrefabInstance:
     - target: {fileID: 1238674768556565797, guid: acd7efc9f9290784f943677bc26823aa,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1238674769477425504, guid: acd7efc9f9290784f943677bc26823aa,
-        type: 3}
-      propertyPath: selectedCommands.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1238674769477425504, guid: acd7efc9f9290784f943677bc26823aa,
-        type: 3}
-      propertyPath: selectedBlocks.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 730823775068988232, guid: acd7efc9f9290784f943677bc26823aa,
@@ -5317,6 +5317,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4c2f9936e23e22443934092c8bc274df,
         type: 3}
+    - target: {fileID: 5564779610231534956, guid: acd7efc9f9290784f943677bc26823aa,
+        type: 3}
+      propertyPath: itemId
+      value: 207
+      objectReference: {fileID: 0}
     - target: {fileID: 8782974127744228465, guid: acd7efc9f9290784f943677bc26823aa,
         type: 3}
       propertyPath: portrait
@@ -5327,11 +5332,6 @@ PrefabInstance:
         type: 3}
       propertyPath: storyText
       value: Dumb machines.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5564779610231534956, guid: acd7efc9f9290784f943677bc26823aa,
-        type: 3}
-      propertyPath: itemId
-      value: 207
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1363039940, guid: acd7efc9f9290784f943677bc26823aa, type: 3}
