@@ -7,8 +7,12 @@ using KinematicTest.controller;
 
 public class SmoothPlayerCamFollow : MonoBehaviour
 {
-    private enum ZoeMoveDir { idle, up, down, left, right}
-    private ZoeMoveDir currentMoveDir;
+    private enum CamFollowState { fullFollow, NoFollow}
+    private enum ZoeVerticalMoveDir { idle, up, down}
+    private enum ZoeHorizontalMoveDir { idle, left, right}
+    private CamFollowState currentFollowState;
+    private ZoeHorizontalMoveDir currentHorzontalMoveDir;
+    private ZoeVerticalMoveDir currentVerticalMoveDir;
 
     [Header("Other component references")]
     [SerializeField] private Transform playerToFollow;
@@ -20,6 +24,8 @@ public class SmoothPlayerCamFollow : MonoBehaviour
     [SerializeField] private float XSmoothTime = 0.1f;
     [SerializeField] private float YSmoothTime = 0.7f;
     [SerializeField] private float zoomResetSmoothTime = .3f;
+    public float lerpSmooth = 7f;
+    public bool useLerp = false;
 
     [SerializeField] private Vector3 localOffSet;
     [SerializeField] private float maxDistToLookAtPoint = 5f;
@@ -51,10 +57,10 @@ public class SmoothPlayerCamFollow : MonoBehaviour
         if (Mathf.Approximately(zoomOutDuration,0f))
             zoomOutDuration = 0.1f;
         localPosInfrontOfPlayer = new Vector3(2, 0, 0); //update this dynamicly
-        currentMoveDir = ZoeMoveDir.idle;
+        currentVerticalMoveDir = ZoeVerticalMoveDir.idle;
     }
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         if (Mathf.Approximately(charMotor.BaseVelocity.magnitude, 0f))
         {
@@ -66,8 +72,11 @@ public class SmoothPlayerCamFollow : MonoBehaviour
             zoomOutLerp = 0f;
         }
 
-        moveCam();
-        updateLookAt();
+        if(currentFollowState == CamFollowState.fullFollow)
+        {
+            moveCam();
+            updateLookAt();
+        }
     }
 
     void moveCam()
@@ -82,26 +91,31 @@ public class SmoothPlayerCamFollow : MonoBehaviour
             worldOffset.z = localOffSet.z - actualZoomOut;
         }
 
-        Vector3 tempDesiredPos = DesiredCamPos();
-        float distToDesiredPos = (tempDesiredPos - transform.position).magnitude;
+        if (!useLerp)
+        {
+            Vector3 tempDesiredPos = DesiredCamPos();
+            float distToDesiredPos = (tempDesiredPos - transform.position).magnitude;
 
-        //Do seperate smoothing speperate x and y and Z
-        Vector3 desiredSmoothY = new Vector3(0, tempDesiredPos.y, 0);
-        Vector3 smoothedY = Vector3.SmoothDamp(new Vector3(0, transform.position.y, 0), desiredSmoothY,
-            ref yVelocity, YSmoothTime);
+            Vector3 desiredSmoothY = new Vector3(0, tempDesiredPos.y, 0);
+            Vector3 smoothedY = Vector3.SmoothDamp(new Vector3(0, transform.position.y, 0), desiredSmoothY,
+                ref yVelocity, YSmoothTime);
 
-        Vector3 desiredSmoothX = new Vector3(tempDesiredPos.x, 0, 0);
-        Vector3 smoothedX = Vector3.SmoothDamp(new Vector3(transform.position.x, 0, 0), desiredSmoothX,
-            ref camVelocity, XSmoothTime);
+            Vector3 desiredSmoothX = new Vector3(tempDesiredPos.x, 0, 0);
+            Vector3 smoothedX = Vector3.SmoothDamp(new Vector3(transform.position.x, 0, 0), desiredSmoothX,
+                ref camVelocity, XSmoothTime);
 
-        Vector3 desiredSmoothedZ = new Vector3(0, 0, tempDesiredPos.z);
-        Vector3 smoothedZ = Vector3.SmoothDamp(new Vector3(0, 0, transform.position.z), desiredSmoothedZ,
-            ref zVelocity, zoomResetSmoothTime);
+            Vector3 desiredSmoothedZ = new Vector3(0, 0, tempDesiredPos.z);
+            Vector3 smoothedZ = Vector3.SmoothDamp(new Vector3(0, 0, transform.position.z), desiredSmoothedZ,
+                ref zVelocity, zoomResetSmoothTime);
 
-        Vector3 camDesiredPosition = smoothedX + smoothedY + smoothedZ;
-        //camDesiredPosition.z = tempDesiredPos.z;
+            Vector3 camDesiredPosition = smoothedX + smoothedY + smoothedZ;
 
-        transform.position = camDesiredPosition;
+            transform.position = camDesiredPosition;
+        }
+        else
+        {
+            transform.position = Vector3.Lerp(transform.position, DesiredCamPos(), lerpSmooth * Time.fixedDeltaTime);
+        }
     }
 
     Vector3 DesiredCamPos()
@@ -113,17 +127,17 @@ public class SmoothPlayerCamFollow : MonoBehaviour
         xDiff = (playerToFollow.position.x + localOffSet.x) - (transform.position.x + localOffSet.x);
         yDiff = (playerToFollow.position.y + localOffSet.y) - (transform.position.y + localOffSet.y);
 
-        if (xDiff > deadZoneXRight || CheckMoveDir(currentMoveDir))
+        if (xDiff > deadZoneXRight || CheckHorizontalMovedir(currentHorzontalMoveDir))
         {
             newdesiredPos.x = playerToFollow.position.x + localOffSet.x;
             wasChanged = true;
-            currentMoveDir = ZoeMoveDir.right;
+            currentHorzontalMoveDir = ZoeHorizontalMoveDir.right;
         }
-        if (xDiff < -deadZoneXLeft || CheckMoveDir(currentMoveDir))
+        if (xDiff < -deadZoneXLeft || CheckHorizontalMovedir(currentHorzontalMoveDir))
         {
             newdesiredPos.x = playerToFollow.position.x + localOffSet.x;
             wasChanged = true;
-            currentMoveDir = ZoeMoveDir.left;
+            currentHorzontalMoveDir = ZoeHorizontalMoveDir.left;
         }
 
         if (charMotor.GroundingStatus.FoundAnyGround)
@@ -131,18 +145,18 @@ public class SmoothPlayerCamFollow : MonoBehaviour
             newdesiredPos.y = playerToFollow.position.y + localOffSet.y;
             wasChanged = true;
         }
-        if (yDiff > deadZoneYTop || CheckMoveDir(currentMoveDir))
+        if (yDiff > deadZoneYTop || CheckVecticalMoveDir(currentVerticalMoveDir))
         {
             newdesiredPos.y = playerToFollow.position.y + localOffSet.y;
             wasChanged = true;
-            currentMoveDir = ZoeMoveDir.up;
+            currentVerticalMoveDir = ZoeVerticalMoveDir.up;
         }
 
-        if(yDiff < -deadZoneYBot || CheckMoveDir(currentMoveDir))
+        if(yDiff < -deadZoneYBot || CheckVecticalMoveDir(currentVerticalMoveDir))
         {
             newdesiredPos.y = playerToFollow.position.y + localOffSet.y;
             wasChanged = true;
-            currentMoveDir = ZoeMoveDir.down;
+            currentVerticalMoveDir = ZoeVerticalMoveDir.down;
         }
 
         newdesiredPos.z = playerToFollow.position.z + worldOffset.z;
@@ -153,33 +167,45 @@ public class SmoothPlayerCamFollow : MonoBehaviour
             return oldDesiredPos;
     }
 
-    bool CheckMoveDir(ZoeMoveDir dirToCheck)
+    bool CheckVecticalMoveDir(ZoeVerticalMoveDir dirToCheck)
     {
         switch (dirToCheck)
         {
-            case ZoeMoveDir.up:
+            case ZoeVerticalMoveDir.up:
                 if(charMotor.Velocity.y >= 0)
                 {
                     return true;
                 }
                 break;
-            case ZoeMoveDir.down:
+            case ZoeVerticalMoveDir.down:
                 if(charMotor.Velocity.y <= 0)
                 {
                     return true;
                 }
                 break;
-            case ZoeMoveDir.left:
+        }
+        return false;
+    }
+    bool CheckHorizontalMovedir(ZoeHorizontalMoveDir dirToCheck)
+    {
+        switch (dirToCheck)
+        {
+            case ZoeHorizontalMoveDir.idle:
+                return false;
+                break;
+            case ZoeHorizontalMoveDir.left:
                 if(charMotor.Velocity.x <= 0)
                 {
                     return true;
                 }
                 break;
-            case ZoeMoveDir.right:
+            case ZoeHorizontalMoveDir.right:
                 if(charMotor.Velocity.x >= 0)
                 {
                     return true;
                 }
+                break;
+            default:
                 break;
         }
         return false;
@@ -264,5 +290,9 @@ public class SmoothPlayerCamFollow : MonoBehaviour
         Gizmos.DrawLine(botLeftCorner, botRightCorner);
         if(drawRight)
             Gizmos.DrawLine(botRightCorner, topRightCorner);
+    }
+    private void SetCamFollowstate(CamFollowState desiredState)
+    {
+        currentFollowState = desiredState;
     }
 }
