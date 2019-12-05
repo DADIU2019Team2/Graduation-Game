@@ -4,10 +4,10 @@ using UnityEngine;
 using KinematicCharacterController;
 using KinematicTest.controller;
 
+public enum CamFollowState { fullFollow, NoFollow}
 
 public class SmoothPlayerCamFollow : MonoBehaviour
 {
-    private enum CamFollowState { fullFollow, NoFollow}
     private enum ZoeVerticalMoveDir { idle, up, down}
     private enum ZoeHorizontalMoveDir { idle, left, right}
     private CamFollowState currentFollowState;
@@ -291,7 +291,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
         if(drawRight)
             Gizmos.DrawLine(botRightCorner, topRightCorner);
     }
-    private void SetCamFollowstate(CamFollowState desiredState)
+    public void SetCamFollowstate(CamFollowState desiredState)
     {
         currentFollowState = desiredState;
     }
