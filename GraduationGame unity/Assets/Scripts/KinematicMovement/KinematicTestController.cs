@@ -505,19 +505,7 @@ namespace KinematicTest.controller
                     jumpFromWallRequested = true;
                 }
 
-                if (CurrentCharacterState == PlayerStates.Running || CurrentCharacterState == PlayerStates.Sliding || CurrentCharacterState == PlayerStates.RunningOffLedge)
-                {
-                    Debug.Log("Playing Jump Particle");
-                    if (!playedJumpParticleThisJump)
-                    {
-                        jumpParticle.Play();
-                        playedJumpParticleThisJump = true;
-                    }
-
-                    runParticle.Stop();
-                    //runParticle.Clear();
-                    settings.jumpShakeEvent.Raise();
-                }
+                
             }
 
             if (inputs.stopDown)
@@ -946,6 +934,19 @@ namespace KinematicTest.controller
                           _timeSinceLastAbleToJump <= JumpPostGroundingGraceTime)))
                     {
                         jumpInitiated = true;
+                        if (CurrentCharacterState == PlayerStates.Running || CurrentCharacterState == PlayerStates.Sliding || CurrentCharacterState == PlayerStates.RunningOffLedge)
+                        {
+                            Debug.Log("Playing Jump Particle");
+                            if (!playedJumpParticleThisJump)
+                            {
+                                jumpParticle.Play();
+                                playedJumpParticleThisJump = true;
+                            }
+
+                            runParticle.Stop();
+                            //runParticle.Clear();
+                            settings.jumpShakeEvent.Raise();
+                        }
                         jumpSound.Post(gameObject);
                         // Calculate jump direction before ungrounding
                         Vector3 jumpDirection = Motor.CharacterUp;
