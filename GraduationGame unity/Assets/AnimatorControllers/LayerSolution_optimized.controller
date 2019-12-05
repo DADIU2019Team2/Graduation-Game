@@ -964,6 +964,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: isNoInput
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isCinematicStanding
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -4612,31 +4615,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1101 &4406389336909681349
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: isCinematicStanding
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: -3615469465622896716}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 0
 --- !u!1102 &4466929406948853355
 AnimatorState:
   serializedVersion: 5
@@ -5037,6 +5015,31 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &5536946664017320834
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isCinematicStanding
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -3615469465622896716}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 0
 --- !u!1101 &5656571079346509289
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -6212,12 +6215,12 @@ AnimatorStateMachine:
   - {fileID: 5491490319953903568}
   - {fileID: -1755006743683761011}
   - {fileID: 3214972911704882729}
-  - {fileID: 4406389336909681349}
   - {fileID: -5552771831118630504}
   - {fileID: 693924708164254882}
   - {fileID: 8159241905208737976}
   - {fileID: -8832196527568109822}
   - {fileID: -1038165417207589045}
+  - {fileID: 5536946664017320834}
   m_EntryTransitions: []
   m_StateMachineTransitions:
   - first: {fileID: -1861324689789072525}
