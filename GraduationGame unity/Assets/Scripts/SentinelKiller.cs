@@ -30,9 +30,11 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
     private Vector3 force;
     private bool isDead;
     private Color gizmoColor;
+    private PlayerStats playerStats;
 
     private void Awake()
     {
+        playerStats = FindObjectOfType<LivePlayerStats>().playerStats;
         if (controller == null)
         {
             controller = FindObjectOfType<KinematicTestController>();
@@ -61,6 +63,10 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
 
     private void Die()
     {
+        if (playerStats.getCurrentHealth() <= 0)
+        {
+            return;
+        }
         controller.MakeInvulnerableForever();
         isDead = true;
         sentinelBrokenLeft.transform.position = sentinelLeftPlatform.position;
@@ -86,6 +92,8 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
             particles[i].Play();
         }
 
+        AkSoundEngine.RegisterGameObj(gameObject);
+        AkSoundEngine.PostEvent("Explosion", gameObject);
         StartCoroutine(EndTheGame(5f));
     }
 

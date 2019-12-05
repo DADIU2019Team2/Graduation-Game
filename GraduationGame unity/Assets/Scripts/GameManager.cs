@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Misc")]
     public KinematicTestController playerMovementController;
+    public SmoothPlayerCamFollow camFollow;
 
     public delegate void OnGameStateChangeDelegate(GameStateScriptableObject.GameState gameState);
     public static event OnGameStateChangeDelegate GameStateChangeEvent;
@@ -83,6 +84,7 @@ public class GameManager : MonoBehaviour
                     startIncrementingLevelStart = true;
                     playerStats.OnResetLevel();
                     playerMovementController.TransitionToState(PlayerStates.CinematicIdle);
+                    camFollow.SetCamFollowstate(CamFollowState.fullFollow);
                 }
                 if (startIncrementingLevelStart)
                 {
@@ -131,6 +133,7 @@ public class GameManager : MonoBehaviour
                     isSceneLoadTransition = false;
                     DoFade(false);
                     callOnce = false;
+                    camFollow.SetCamFollowstate(CamFollowState.NoFollow);
                 }
                 if (transitionFader.getAlpha() == 1) //faded to black
                 {
@@ -138,6 +141,7 @@ public class GameManager : MonoBehaviour
                     playerMovementController.TransitionToState(PlayerStates.CinematicIdle);
                     DoResetObjects();
                     ChangeGameState(GameStateScriptableObject.GameState.levelStart);
+                    camFollow.SetCamFollowstate(CamFollowState.fullFollow);
                 }
                 /*Fade to black, return all objects in scene to their initial states. 
                 “Reload” scene and fade back into level-start state. 
@@ -158,6 +162,7 @@ public class GameManager : MonoBehaviour
                     isSceneLoadTransition = false;
                     DoFade(false); //Fades to black
                     callOnce = false;
+                    camFollow.SetCamFollowstate(CamFollowState.NoFollow);
                 }
 
                 timerForLoadNextScene += Time.deltaTime;
