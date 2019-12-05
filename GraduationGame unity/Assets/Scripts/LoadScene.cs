@@ -60,7 +60,7 @@ public class LoadScene : MonoBehaviour
             //{
             //    loadProgressBar.fillAmount = loadProgress.progress;
             //}
-            Debug.Log("!Load Progress: " + loadProgress.progress);
+            Debug.LogWarning("!Load Progress: " + loadProgress.progress);
             yield return new WaitForEndOfFrame();
            
         }
