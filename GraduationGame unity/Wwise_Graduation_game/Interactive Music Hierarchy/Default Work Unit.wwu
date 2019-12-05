@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<MusicSwitchContainer Name="Music" ID="{4A2A0596-816D-4FD7-9F64-914C3C785CBF}" ShortID="666188830">
 					<PropertyList>
+						<Property Name="ContinuePlay" Type="bool" Value="False"/>
 						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 					</PropertyList>
@@ -1168,6 +1169,9 @@
 									<StateGroupInfo>
 										<StateGroupRef Name="Dead_or_Alive" ID="{A6995C0B-2DF9-4DB0-8A37-EF970ED19DE4}"/>
 									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="Zones" ID="{C03DD00A-A6D2-48D0-B31B-77C73D93E5C0}"/>
+									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
@@ -1179,8 +1183,40 @@
 										</CustomState>
 									</CustomState>
 									<CustomState>
+										<StateRef Name="Zone4" ID="{FF76E3B7-12EC-456B-88CD-184476F87DCD}"/>
+										<CustomState Name="" ID="{2F498D94-5C0F-45B1-9F1A-2069E6868E64}" ShortID="539315331"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone3" ID="{7935FD58-D1CC-46D6-86CD-05C26B460E10}"/>
+										<CustomState Name="" ID="{A105C4B3-52AE-4349-A008-D0A292027E6F}" ShortID="965192456"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone2" ID="{C3EBFAA1-8F44-4706-AC5E-EC1E154E5CDB}"/>
+										<CustomState Name="" ID="{573D01C0-FB35-4D30-8D7C-2ED30F353A8F}" ShortID="736118003"/>
+									</CustomState>
+									<CustomState>
 										<StateRef Name="Alive" ID="{82039F13-E292-4905-AFEC-6145032AE0A3}"/>
 										<CustomState Name="" ID="{C557875B-22F0-4437-A51C-A2470BCDD935}" ShortID="649850211"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone1" ID="{A79084B5-12A5-4A33-83C6-5BBF6B4D2972}"/>
+										<CustomState Name="" ID="{2A4A76F6-F406-42ED-A233-289942E7BC81}" ShortID="234436146"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Credits" ID="{0996A680-E387-4A8B-B6B6-EADD8F1D1E53}"/>
+										<CustomState Name="" ID="{D59DFC20-87B5-4834-B41A-89A253AD3D38}" ShortID="972912721"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="BossFight" ID="{F6FD7BB7-B09B-4B82-98E9-E8CFA23E5E94}"/>
+										<CustomState Name="" ID="{D2B42C01-6E13-4093-A6A8-2B41281D7635}" ShortID="5274551"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Level_Complete" ID="{BE0B5751-5CCC-4DB4-8B7E-9B4AD4DD7ADC}"/>
+										<CustomState Name="" ID="{6DAC89BA-AE49-4BDF-B4F8-1506336C5338}" ShortID="933010890"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Menu" ID="{64FB2D02-7394-4F05-BD76-61AAF03E36C9}"/>
+										<CustomState Name="" ID="{74400C8E-F360-4391-96A1-8B78598C9FF7}" ShortID="92676095"/>
 									</CustomState>
 								</CustomStateList>
 							</StateInfo>
@@ -2313,6 +2349,9 @@
 									<StateGroupInfo>
 										<StateGroupRef Name="Dead_or_Alive" ID="{A6995C0B-2DF9-4DB0-8A37-EF970ED19DE4}"/>
 									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="Zones" ID="{C03DD00A-A6D2-48D0-B31B-77C73D93E5C0}"/>
+									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
@@ -2324,8 +2363,40 @@
 										</CustomState>
 									</CustomState>
 									<CustomState>
+										<StateRef Name="Zone4" ID="{FF76E3B7-12EC-456B-88CD-184476F87DCD}"/>
+										<CustomState Name="" ID="{13B0FA59-DD79-41E1-9999-9DA460BAC3F9}" ShortID="20171415"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone3" ID="{7935FD58-D1CC-46D6-86CD-05C26B460E10}"/>
+										<CustomState Name="" ID="{3D86933C-83EF-45E4-85A6-34F98F4D21BC}" ShortID="250151031"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone2" ID="{C3EBFAA1-8F44-4706-AC5E-EC1E154E5CDB}"/>
+										<CustomState Name="" ID="{82D1A2DD-0F18-4C2F-96E5-42EE23BDDDF6}" ShortID="21999392"/>
+									</CustomState>
+									<CustomState>
 										<StateRef Name="Alive" ID="{82039F13-E292-4905-AFEC-6145032AE0A3}"/>
 										<CustomState Name="" ID="{77285CE0-CFC9-4575-A795-910D834535CB}" ShortID="191762079"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone1" ID="{A79084B5-12A5-4A33-83C6-5BBF6B4D2972}"/>
+										<CustomState Name="" ID="{D59CFE31-8C52-46BF-8CC5-C9DE9569915C}" ShortID="442245000"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Credits" ID="{0996A680-E387-4A8B-B6B6-EADD8F1D1E53}"/>
+										<CustomState Name="" ID="{98F28FBF-4137-45D9-8457-6B3A126A79D5}" ShortID="398551349"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="BossFight" ID="{F6FD7BB7-B09B-4B82-98E9-E8CFA23E5E94}"/>
+										<CustomState Name="" ID="{0664AC0C-0F58-4E99-835D-402F6B03B00F}" ShortID="582767220"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Level_Complete" ID="{BE0B5751-5CCC-4DB4-8B7E-9B4AD4DD7ADC}"/>
+										<CustomState Name="" ID="{615E8DB0-8B09-4D3E-953D-40E6626E911E}" ShortID="1044328339"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Menu" ID="{64FB2D02-7394-4F05-BD76-61AAF03E36C9}"/>
+										<CustomState Name="" ID="{ABE4FAAE-5981-4AF4-993F-53D9F421D25B}" ShortID="750227165"/>
 									</CustomState>
 								</CustomStateList>
 							</StateInfo>
@@ -3568,6 +3639,9 @@
 									<StateGroupInfo>
 										<StateGroupRef Name="Dead_or_Alive" ID="{A6995C0B-2DF9-4DB0-8A37-EF970ED19DE4}"/>
 									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="Zones" ID="{C03DD00A-A6D2-48D0-B31B-77C73D93E5C0}"/>
+									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
@@ -3579,8 +3653,40 @@
 										</CustomState>
 									</CustomState>
 									<CustomState>
+										<StateRef Name="Zone4" ID="{FF76E3B7-12EC-456B-88CD-184476F87DCD}"/>
+										<CustomState Name="" ID="{46FE5489-B3D5-4942-82D9-EDD2ECBF3E56}" ShortID="43930841"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone3" ID="{7935FD58-D1CC-46D6-86CD-05C26B460E10}"/>
+										<CustomState Name="" ID="{FAB02193-E509-4D46-84BA-495A84882F83}" ShortID="124715589"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone2" ID="{C3EBFAA1-8F44-4706-AC5E-EC1E154E5CDB}"/>
+										<CustomState Name="" ID="{A28A26AC-4734-42A8-8715-FFA21D6181EA}" ShortID="187457858"/>
+									</CustomState>
+									<CustomState>
 										<StateRef Name="Alive" ID="{82039F13-E292-4905-AFEC-6145032AE0A3}"/>
 										<CustomState Name="" ID="{782D0D98-4678-4D84-B8AE-B42D24883191}" ShortID="422549680"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone1" ID="{A79084B5-12A5-4A33-83C6-5BBF6B4D2972}"/>
+										<CustomState Name="" ID="{A6244318-7D80-4436-86CC-992E75ED7849}" ShortID="465614032"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Credits" ID="{0996A680-E387-4A8B-B6B6-EADD8F1D1E53}"/>
+										<CustomState Name="" ID="{E9181445-6BFB-4A3A-9D34-336EFB4927D7}" ShortID="350651947"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="BossFight" ID="{F6FD7BB7-B09B-4B82-98E9-E8CFA23E5E94}"/>
+										<CustomState Name="" ID="{CD4844C8-B59D-4772-9437-627D5CB23038}" ShortID="331787905"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Level_Complete" ID="{BE0B5751-5CCC-4DB4-8B7E-9B4AD4DD7ADC}"/>
+										<CustomState Name="" ID="{393D7CE4-6854-455B-858E-BF1A531A1967}" ShortID="519690594"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Menu" ID="{64FB2D02-7394-4F05-BD76-61AAF03E36C9}"/>
+										<CustomState Name="" ID="{CB017345-6247-4AD7-8A85-1C36C76A5CC2}" ShortID="208142147"/>
 									</CustomState>
 								</CustomStateList>
 							</StateInfo>
@@ -3897,6 +4003,27 @@
 									</CueList>
 								</MusicSegment>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Dead_or_Alive" ID="{A6995C0B-2DF9-4DB0-8A37-EF970ED19DE4}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Dead" ID="{88A84DB9-3DBC-4474-982E-8141AD08D4AB}"/>
+										<CustomState Name="" ID="{765B5E0C-9632-491E-A717-9BE7B7504EB9}" ShortID="880964317">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16" Value="25"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Alive" ID="{82039F13-E292-4905-AFEC-6145032AE0A3}"/>
+										<CustomState Name="" ID="{40CB476E-482C-4719-9818-0B7B213E3E51}" ShortID="54949911"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<TransitionList>
 								<MusicTransition Name="Root" ID="{D4BB6550-9C82-4E6C-B2E0-7E35B8F4221F}">
 									<PropertyList>
@@ -3997,6 +4124,47 @@
 									</CueList>
 								</MusicSegment>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Zones" ID="{C03DD00A-A6D2-48D0-B31B-77C73D93E5C0}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Zone4" ID="{FF76E3B7-12EC-456B-88CD-184476F87DCD}"/>
+										<CustomState Name="" ID="{2CB239D7-31D9-4844-837C-006CD7511ACF}" ShortID="321797422"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone3" ID="{7935FD58-D1CC-46D6-86CD-05C26B460E10}"/>
+										<CustomState Name="" ID="{7046B0F1-5904-474B-AAFA-959C9FAC673B}" ShortID="635508588"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone2" ID="{C3EBFAA1-8F44-4706-AC5E-EC1E154E5CDB}"/>
+										<CustomState Name="" ID="{C20C6D15-D327-4216-AF2D-D56E5AC4893D}" ShortID="237214901"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone1" ID="{A79084B5-12A5-4A33-83C6-5BBF6B4D2972}"/>
+										<CustomState Name="" ID="{731FEB9A-9A1A-47E3-B7E1-7DAEB50E9125}" ShortID="503455072"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Credits" ID="{0996A680-E387-4A8B-B6B6-EADD8F1D1E53}"/>
+										<CustomState Name="" ID="{0A54593F-39F2-4B04-9F75-99055871A6DD}" ShortID="550684087"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="BossFight" ID="{F6FD7BB7-B09B-4B82-98E9-E8CFA23E5E94}"/>
+										<CustomState Name="" ID="{E8DAC74C-2EED-42F9-ACBD-504DB8FDF18C}" ShortID="651563269"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Level_Complete" ID="{BE0B5751-5CCC-4DB4-8B7E-9B4AD4DD7ADC}"/>
+										<CustomState Name="" ID="{6ED79249-0D0D-4CE0-948F-984254D77C3F}" ShortID="443250500"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Menu" ID="{64FB2D02-7394-4F05-BD76-61AAF03E36C9}"/>
+										<CustomState Name="" ID="{B8141511-E229-4B86-BDF6-1FD41E053608}" ShortID="906719503"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<TransitionList>
 								<MusicTransition Name="Root" ID="{73074A0F-0A68-4611-AAB4-CFAA42C4E2DD}">
 									<PropertyList>
@@ -4106,6 +4274,47 @@
 									</CueList>
 								</MusicSegment>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Zones" ID="{C03DD00A-A6D2-48D0-B31B-77C73D93E5C0}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Zone4" ID="{FF76E3B7-12EC-456B-88CD-184476F87DCD}"/>
+										<CustomState Name="" ID="{8E878064-9EBD-40EB-B4E2-AB54CD0FD5C5}" ShortID="348012459"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone3" ID="{7935FD58-D1CC-46D6-86CD-05C26B460E10}"/>
+										<CustomState Name="" ID="{CE1B9489-C764-4AF5-B9A4-C49158FE9E08}" ShortID="153414100"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone2" ID="{C3EBFAA1-8F44-4706-AC5E-EC1E154E5CDB}"/>
+										<CustomState Name="" ID="{06D27CB8-CAD6-4020-A4DC-5915A5A0B1B6}" ShortID="602168483"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone1" ID="{A79084B5-12A5-4A33-83C6-5BBF6B4D2972}"/>
+										<CustomState Name="" ID="{C2EAF12B-FEF6-4561-81B0-C383074478AC}" ShortID="122958621"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Credits" ID="{0996A680-E387-4A8B-B6B6-EADD8F1D1E53}"/>
+										<CustomState Name="" ID="{80A199D5-5A39-4A46-9726-5B52B7E1D677}" ShortID="298872498"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="BossFight" ID="{F6FD7BB7-B09B-4B82-98E9-E8CFA23E5E94}"/>
+										<CustomState Name="" ID="{EE08D202-E2A0-40EB-9617-40D82522256A}" ShortID="716906531"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Level_Complete" ID="{BE0B5751-5CCC-4DB4-8B7E-9B4AD4DD7ADC}"/>
+										<CustomState Name="" ID="{0AACF611-B2CF-446A-81EF-3F1C6AACCACA}" ShortID="231568163"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Menu" ID="{64FB2D02-7394-4F05-BD76-61AAF03E36C9}"/>
+										<CustomState Name="" ID="{FAA0DFFF-C399-4E90-903C-F02B61775072}" ShortID="568332254"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<TransitionList>
 								<MusicTransition Name="Root" ID="{4494ECD3-4589-46C1-87C1-D2BEFAD877F4}">
 									<PropertyList>
@@ -4846,6 +5055,62 @@
 									</CueList>
 								</MusicSegment>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Dead_or_Alive" ID="{A6995C0B-2DF9-4DB0-8A37-EF970ED19DE4}"/>
+									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="Zones" ID="{C03DD00A-A6D2-48D0-B31B-77C73D93E5C0}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Dead" ID="{88A84DB9-3DBC-4474-982E-8141AD08D4AB}"/>
+										<CustomState Name="" ID="{13546FD3-FC66-40D9-A1A1-B0D5ADF975DE}" ShortID="1025701877">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16" Value="25"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone4" ID="{FF76E3B7-12EC-456B-88CD-184476F87DCD}"/>
+										<CustomState Name="" ID="{58249317-3E7B-4B52-AC16-7D3FAC09A841}" ShortID="151428422"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone3" ID="{7935FD58-D1CC-46D6-86CD-05C26B460E10}"/>
+										<CustomState Name="" ID="{C0747455-6A30-4E64-A1E3-F2FC454FE3CA}" ShortID="632328634"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone2" ID="{C3EBFAA1-8F44-4706-AC5E-EC1E154E5CDB}"/>
+										<CustomState Name="" ID="{98CDD2EF-D624-4CF6-BEA6-C1EF8B08074E}" ShortID="550602328"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Alive" ID="{82039F13-E292-4905-AFEC-6145032AE0A3}"/>
+										<CustomState Name="" ID="{3BDA6C4E-8423-477E-BB65-B277E815518D}" ShortID="446931913"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Zone1" ID="{A79084B5-12A5-4A33-83C6-5BBF6B4D2972}"/>
+										<CustomState Name="" ID="{E4567E80-FD00-4DB8-9AB2-50A320DD5B2F}" ShortID="56674245"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Credits" ID="{0996A680-E387-4A8B-B6B6-EADD8F1D1E53}"/>
+										<CustomState Name="" ID="{69295FE6-8715-4C0C-82F4-B5DC8EE3F615}" ShortID="166865552"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="BossFight" ID="{F6FD7BB7-B09B-4B82-98E9-E8CFA23E5E94}"/>
+										<CustomState Name="" ID="{B7173CFB-97A5-478F-A459-9BF3AFB69BE9}" ShortID="813749665"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Level_Complete" ID="{BE0B5751-5CCC-4DB4-8B7E-9B4AD4DD7ADC}"/>
+										<CustomState Name="" ID="{6E6BC423-418B-44F5-A1BC-F2E520014D3E}" ShortID="882630588"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Menu" ID="{64FB2D02-7394-4F05-BD76-61AAF03E36C9}"/>
+										<CustomState Name="" ID="{5E0EE5FC-1DE3-4964-82C9-D570C801F72C}" ShortID="1070500251"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<TransitionList>
 								<MusicTransition Name="Root" ID="{AA0BA476-344C-493A-A412-888AD8888145}">
 									<PropertyList>
@@ -5105,8 +5370,8 @@
 										<SourceFadeOut>
 											<MusicFade Name="Source Fade-out" ID="{6804EA07-1FEB-400D-8945-4F4F5165D64A}">
 												<PropertyList>
-													<Property Name="FadeOffset" Type="Real64" Value="0.3"/>
-													<Property Name="FadeTime" Type="Real64" Value="4"/>
+													<Property Name="FadeOffset" Type="Real64" Value="0.5"/>
+													<Property Name="FadeTime" Type="Real64" Value="2"/>
 													<Property Name="FadeType" Type="int16" Value="1"/>
 												</PropertyList>
 											</MusicFade>
@@ -5114,8 +5379,8 @@
 										<DestinationFadeIn>
 											<MusicFade Name="Destination Fade-in" ID="{E5CABB1B-375E-43C7-9E0F-46DEFA927BA2}">
 												<PropertyList>
-													<Property Name="FadeOffset" Type="Real64" Value="-0.6"/>
-													<Property Name="FadeTime" Type="Real64" Value="4"/>
+													<Property Name="FadeOffset" Type="Real64" Value="-0.5"/>
+													<Property Name="FadeTime" Type="Real64" Value="2"/>
 												</PropertyList>
 											</MusicFade>
 										</DestinationFadeIn>
