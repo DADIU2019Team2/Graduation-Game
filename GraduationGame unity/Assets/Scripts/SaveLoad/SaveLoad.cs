@@ -19,6 +19,7 @@ public class SaveLoad
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/savedGames.gd");
         Debug.Log(Application.persistentDataPath.ToString());
+        Debug.Log("Skin Index on save " + SaveLoad.saveGame.skinIndexUsed);
         bf.Serialize(file, SaveLoad.saveGame);
         file.Close();
     }
@@ -30,6 +31,7 @@ public class SaveLoad
             FileStream file = File.Open(Application.persistentDataPath + "/savedGames.gd", FileMode.Open);
             SaveLoad.saveGame = (GameSave)bf.Deserialize(file);
             GameSave.currentSave = SaveLoad.saveGame;
+            Debug.Log("Skin Index on load " + SaveLoad.saveGame.skinIndexUsed);
             Debug.Log(GameSave.currentSave + "current save?");
             file.Close();
         }
