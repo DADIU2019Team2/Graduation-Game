@@ -5,6 +5,7 @@ using MiniGame2.Events;
 using System.Linq;
 using KinematicTest.controller;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
     public static bool callOnce;
     private float transitionTime;
     private bool isSceneLoadTransition;
+    [SerializeField] private Image loadProgressBar;
 
     [Header("Check If Active")]// bad i know
     public GameObject optionsMenu;
@@ -159,7 +161,7 @@ public class GameManager : MonoBehaviour
             case GameStateScriptableObject.GameState.levelComplete:
                 if (callOnce)
                 {
-                    isSceneLoadTransition = false;
+                    isSceneLoadTransition = true;
                     DoFade(false); //Fades to black
                     callOnce = false;
                     camFollow.SetCamFollowstate(CamFollowState.NoFollow);
@@ -178,7 +180,8 @@ public class GameManager : MonoBehaviour
                         nextScene = 0;
                         //Should have this be the credits scene instead.
                     }
-                    SceneManager.LoadScene(nextScene);
+                    //SceneManager.LoadScene(nextScene);
+                    StartLoadSceneAsyncWithProgressBar(nextScene);
                 }
                 if (transitionFader.getAlpha() == 0)
                 {
@@ -291,5 +294,28 @@ public class GameManager : MonoBehaviour
     public static void DialogueStart()
     {
         GameManager.ChangeGameState(GameStateScriptableObject.GameState.cinematic);
+    }
+
+
+    private void StartLoadSceneAsyncWithProgressBar(int sceneIndex)
+    {
+        StartCoroutine(LoadSceneAsyncWithProgress(sceneIndex));
+    }
+
+    IEnumerator LoadSceneAsyncWithProgress(int sceneIndex)
+    {
+        AsyncOperation loadProgress = SceneManager.LoadSceneAsync(sceneIndex);
+        while (!loadProgress.isDone)
+        {
+            //do the progess bar fill stuff
+            if (loadProgressBar != null)
+            {
+                loadProgressBar.fillAmount = loadProgress.progress;
+            }
+            Debug.LogWarning("!Load Progress: " + loadProgress.progress);
+            yield return new WaitForEndOfFrame();
+
+        }
+        Debug.Log("Done");
     }
 }
