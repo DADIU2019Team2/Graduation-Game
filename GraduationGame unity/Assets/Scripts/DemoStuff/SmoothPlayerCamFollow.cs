@@ -60,7 +60,7 @@ public class SmoothPlayerCamFollow : MonoBehaviour
         currentVerticalMoveDir = ZoeVerticalMoveDir.idle;
     }
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         if (Mathf.Approximately(charMotor.BaseVelocity.magnitude, 0f))
         {
