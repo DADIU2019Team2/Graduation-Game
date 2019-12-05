@@ -137,6 +137,8 @@ public class AnimationLayerSwitcher : MonoBehaviour, IOnSceneReset
                 {
                     Debug.Log("idleJump");
                     animator.SetTrigger("idleJump");
+                    animator.SetBool("inAir", true);
+
                 }
                 else
                 {
