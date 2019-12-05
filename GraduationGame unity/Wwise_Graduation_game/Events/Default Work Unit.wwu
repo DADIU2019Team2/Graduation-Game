@@ -20,6 +20,17 @@
 				</Event>
 				<WorkUnit Name="Stop_Events" ID="{DABE7279-F4A5-4EF9-A197-72905B161148}" PersistMode="Reference"/>
 				<WorkUnit Name="CelebrationSound" ID="{52D068B1-1C5B-4B11-9F00-6E5315226880}" PersistMode="Reference"/>
+				<Event Name="Play_Outside_Ambience" ID="{6D45451B-156F-4F45-90C9-BA7BEBF762C2}">
+					<ChildrenList>
+						<Action Name="" ID="{31B96AD0-9870-403A-B9F8-523CB3FE5B02}" ShortID="689250486">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Outside Ambience" ID="{AD2B20F6-0387-443D-BC55-00E31DE4C50D}" WorkUnitID="{97EC0494-6D57-4B74-A9FF-C30BD2CA7E17}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
