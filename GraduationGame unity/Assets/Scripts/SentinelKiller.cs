@@ -21,7 +21,7 @@ public class SentinelKiller : MonoBehaviour, IOnSceneReset
     public GameObject sentinelBrokenRight;
     public float distance;
     public float killDistance;
-    [Range(0, 100f)] public float explosionPower;
+    [Range(0, 1000f)] public float explosionPower;
     public float explosionRadius;
     public float upwardsForce;
     private Vector3[] localPartPositions;
