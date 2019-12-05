@@ -6,7 +6,26 @@ using Fungus;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField]
-    private static Localization fungusLocalization;
+    private Localization fungusLocalization;
+    public Language language;
+
+    void Awake()
+    {
+        fungusLocalization = FindObjectOfType<Localization>();
+    }
+    void Start()
+    {
+        if (language.GetCurrentLanguage() == Language.LocalazationLanguage.Dansk)
+        {
+            fungusLocalization.SetActiveLanguage("DK", true);
+            Debug.Log(fungusLocalization.ActiveLanguage);
+        }
+        else if (language.GetCurrentLanguage() == Language.LocalazationLanguage.English)
+        {
+            fungusLocalization.SetActiveLanguage("EN", true);
+        }
+    }
+
     public void SkipAllDialogue()
     {
         if (GameManager.GetGameState() != GameStateScriptableObject.GameState.mainGameplayLoop)
@@ -16,11 +35,12 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public static void SetDialogueLanguage(Language.LocalazationLanguage language)
+    public void SetDialogueLanguage(Language.LocalazationLanguage language)
     {
         if (language == Language.LocalazationLanguage.Dansk)
         {
             fungusLocalization.SetActiveLanguage("DK", true);
+            Debug.Log(fungusLocalization.ActiveLanguage);
         }
         else if (language == Language.LocalazationLanguage.English)
         {
