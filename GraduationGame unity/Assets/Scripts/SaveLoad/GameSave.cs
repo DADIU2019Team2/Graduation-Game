@@ -20,7 +20,7 @@ public class GameSave
         {"skin2", false},
     };
     
-    public static int skinIndexUsed = 0;
+    public int skinIndexUsed;
 
 
    
@@ -41,7 +41,8 @@ public class GameSave
         currentSave = this;
         currentSave.lastCompletedLevel = 0;
         currentSave.isDoubleJumpUnlocked = false;
-        GameSave.skinIndexUsed = 0;
+        
+        currentSave.skinIndexUsed = LoadOnStartup.skinIndexLoad;
         currentSave.unlockables = new Dictionary<string, bool>()
         {
             //The things the player can unlock
