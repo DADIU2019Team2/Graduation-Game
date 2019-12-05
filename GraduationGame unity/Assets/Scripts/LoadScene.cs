@@ -37,6 +37,10 @@ public class LoadScene : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(1);
     }
+    public static void LoadSceneMainAsync()
+    {
+        SceneManager.LoadSceneAsync(0);
+    }
 
 
     public void StartLoadSceneAsyncWithProgressBar(int sceneIndex)
