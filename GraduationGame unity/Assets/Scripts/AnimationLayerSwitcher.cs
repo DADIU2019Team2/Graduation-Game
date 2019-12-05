@@ -105,6 +105,7 @@ public class AnimationLayerSwitcher : MonoBehaviour, IOnSceneReset
                 animator.SetBool("inAir", false);
                 animator.SetBool("isFalling", false);
                 animator.SetTrigger("FallingGroundDetected");
+                animator.ResetTrigger("ledgingThisFrame");
             }       
             else
             {
