@@ -97,7 +97,7 @@ public class AnimationLayerSwitcher : MonoBehaviour, IOnSceneReset
         //On Landing
         if (GameManager.GetGameState() != GameStateScriptableObject.GameState.levelStart)
         {
-            if (characterController.Motor.GroundingStatus.IsStableOnGround &&
+            if ((characterController.Motor.GroundingStatus.IsStableOnGround || characterController.Motor.GroundingStatus.FoundAnyGround )&&
              !characterController.Motor.LastGroundingStatus.IsStableOnGround)
             {
                 fallTime = 1.0f;
