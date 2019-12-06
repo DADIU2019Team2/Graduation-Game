@@ -274,7 +274,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //
+    //Called from optionsmenu-event:
     public void ResetGame()
     {
         Time.timeScale = originalTimescale;
